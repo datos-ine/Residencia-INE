@@ -1,0 +1,42 @@
+/*-- scss:defaults --*/
+
+// fonts
+@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+
+
+$font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
+$code-block-font-size: 0.9em;
+
+$link-color: #693ab8;
+
+$font-size-root: 1.2em;
+
+
+/*-- scss:rules --*/
+
+
+.reveal .title-top h2 {
+  color: #5c17d1;
+}
+
+.reveal .invert {
+  background-color: #5c17d1 !important;
+  color: #ffffff;
+}
+
+.reveal .custom-title {
+  color: #ffffff;
+  font-size: 2.6em;
+  position: absolute; 
+  left: 255px; 
+  top: 280px
+}
+
+.reveal .custom-subtitle {
+  color: #ffffff;
+  font-size: 1.8em;
+  position: absolute; 
+  left: 750px; 
+  top: 450px
+}

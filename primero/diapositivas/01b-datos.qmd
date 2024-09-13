@@ -1,0 +1,24 @@
+---
+title: "Bienvenidxs a Gestión de datos"
+subtitle: "Residencia de Epidemiología"
+format: 
+  revealjs:
+    self-contained: true
+    width: 1920
+    height: 1080
+    slide-number: true
+    transition: fade
+    theme: [simple, img/custom.scss]
+    logo: img/INE.gif
+    footer: "Instituto Nacional de Epidemiología"
+---
+
+```{r setup, include=F}
+#| label: setup
+#| include: false
+
+
+library(quarto)
+library(fontawesome)
+library(tidyverse)
+```

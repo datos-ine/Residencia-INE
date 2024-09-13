@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  title: "Residencia-INE"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    include-in-header: 
+      - text: |
+          <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    theme: 
+      light: [pulse, custom.scss]
+      dark: darkly
+    toc: true
+
+
+

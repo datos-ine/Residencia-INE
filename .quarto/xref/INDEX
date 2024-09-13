@@ -1,0 +1,38 @@
+{
+  "primero/diapositivas/00-bienvenida.qmd": {
+    "00-bienvenida.html": "fd91c0a0"
+  },
+  "primero/clases/01-introR.qmd": {
+    "01-introR.html": "9d4bb731"
+  },
+  "about.qmd": {
+    "about.html": "5ed03506"
+  },
+  "primero/diapositivas/01a-datos.qmd": {
+    "01a-datos.html": "5ba64dd2"
+  },
+  "primero/diapositivas/01b-datos.qmd": {
+    "01b-datos.html": "67c999a5"
+  },
+  "primero/diapositivas/01c-datos.qmd": {
+    "01c-datos.html": "ae714628"
+  },
+  "primero/diapositivas/02-analisis.qmd": {
+    "02-analisis.html": "0a02fdf3"
+  },
+  "index.qmd": {
+    "index.html": "6267c41d"
+  },
+  "primero/clases/02-introRStudio.qmd": {
+    "02-introRStudio.html": "2fd9f0bf"
+  },
+  "primero/clases/03-introTidy.qmd": {
+    "03-introTidy.html": "a531c88b"
+  },
+  "primero/recursos/02-lectura.qmd": {
+    "02-lectura.html": "dc382761"
+  },
+  "primero/clases/04-tipos.qmd": {
+    "04-tipos.html": "490b6592"
+  }
+}

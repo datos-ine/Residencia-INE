@@ -1,0 +1,15 @@
+{
+  "hash": "0b31e082367e69966c7e3b39f4845184",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Bienvenidxs a Gestión de datos\"\nsubtitle: \"Residencia de Epidemiología\"\nformat: \n  revealjs:\n    self-contained: true\n    width: 1920\n    height: 1080\n    slide-number: true\n    transition: fade\n    theme: [simple, img/custom.scss]\n    logo: img/INE.gif\n    footer: \"Instituto Nacional de Epidemiología\"\n---\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

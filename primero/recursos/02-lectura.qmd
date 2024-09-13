@@ -1,0 +1,108 @@
+---
+title:  "**Lectura de un archivo de datos de texto plano**"
+format:
+  html:
+    page-layout: full
+    include-in-header: 
+      - text: |
+          <link rel="icon" type="image/x-icon" href="favicon.ico">    
+    toc: true
+    toc-title: Contenidos
+    toc-location: left
+    toc_float: true
+    toc_collapsed: false
+    toc_depth: 4
+number_sections: true
+anchor_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, dpi = 300)
+```
+
+
+## Introducción
+
+Anteriormente dijimos que para leer o importar datos de un archivo de datos con texto plano separado por comas vamos a utilizar alguna de las funciones del paquete **readr** del tidyverse.
+
+Pero para saber cual es la función adecuada y para adaptar sus argumentos correctamente vamos a necesitar conocer la configuración del archivo de datos.
+
+En este paso a paso, mostraremos las etapas a ejecutar ante una situación de lectura.
+
+En primer lugar, es deseable que conozcamos previamente los archivos con los cuales trabajamos, o bien si son archivos de datos que se reciben de alguna fuente externa vengan acompañados de un diccionario de datos con especificaciones técnicas del propio archivo como de sus variables.
+
+Un ejemplo de esto es el detalle técnico de la tabla de datos que figura en el documento usuario de la **Encuesta Nacional de Factores de Riesgo** que vemos debajo:
+
+```{r,echo=F,  fig.align='center', out.width = "60%", dpi=300}
+knitr::include_graphics("img/02/enfr.PNG")
+```
+
+Esta información nos dice que el archivo es de texto plano, utiliza como delimitador de columna a la barra vertical, que la primera línea lleva los nombres de las variables y que la codificación (encoding) de los caracteres tiene el estándar UTF-8.
+
+En función de estos datos podríamos componer nuestra lectura de la siguiente forma:
+
+```{r, eval=F}
+enfr <- read_delim(file = "ENFR2013_base_usuario.txt", 
+                   delim = "|", 
+                   locale = locale(encoding = "UTF-8"))
+```
+
+Aunque es el estándar predeterminado, completamos el argumento del encoding a propósito para mostrar como se vincula cada parte de la función con la información del archivo de datos.
+
+Si no llegasemos a disponer de esta información es muy posible que debamos investigar el archivo que deseamos importar para saber sus características.
+
+En este documento utilizaremos el archivo **def2022.csv** con las defunciones del año 2022 producido por la DEIS.
+
+## Separador o delimitador de columnas
+
+La primera cosa que podemos hacer con un archivo de texto plano es abrirlo con un software tipo block de notas o con el mismo RStudio para saber cual es el caracter que utiliza como separador de columnas. 
+
+Cuando el archivo tiene extensión csv generalmente el separador puede ser coma o punto y coma. Pero recién vimos que la extensión puede ser txt y el separador, alguno de los caracteres habituales (espacio, tabulación, etc).
+
+Desde **RStudio**, cuando se pulsa el botón izquierdo del mouse sobre el archivo de datos que aparece en el panel *Files*, se abre una ventana emergente que nos ofrece la posibilidad de visualizarlo en el editor (*"View File"*). Si el archivo es muy pesado (mayor a 5 Mb) RStudio nos avisará que no lo puede hacer porque excede su capacidad, entonces deberemos hacerlo desde un programa similar al **Block de Notas** de Windows que trabaja con texto plano. 
+
+Veríamos algo así:
+
+```{r,echo=F,  fig.align='center', out.width = "90%", dpi=300}
+knitr::include_graphics("img/02/visor.PNG")
+```
+
+Podemos identificar claramente que el caracter que se repite como delimitador es la coma (,). Si hubiese datos numéricos con decimales, también es importante identificar cual es el separador de decimales (en los casos de delimitadores de columna con coma se utiliza el punto para los decimales).
+
+También se puede advertir que la primera línea corresponde a los nombres de las columnas (variables) de nuestra tabla de datos.
+
+Con esta información seleccionaremos como función de lectura a `read_csv()` que tiene estos valores de separadores como predeterminados.
+
+## Encoding
+
+Para conocer cual es la codificación del archivo podemos usar una función del paquete **readr**, llamada `guess_encoding()`.
+
+```{r, message=F, warning=FALSE}
+library(tidyverse)
+
+guess_encoding("datos/def2022.csv")
+```
+
+El resultado nos informa del estándar ISO-8859-1 con una confianza del 52 %. Existen muchos estandares como posibilidad en el mundo informático, aunque el predeterminado de RStudio es el UTF-8.
+
+A partir de tener esta información podemos configurar el argumento necesario para hacer una lectura correcta de los caracteres especiales que puede tener el archivo.
+
+```{r}
+def2022 <- read_csv("datos/def2022.csv", 
+                 locale = locale(encoding = "ISO-8859-1"))
+```
+La ejecución de la función nos confirma que se realizó usando:
+
+- la coma como delimitador. 
+- que se importaron 397115 filas y 28 columnas. 
+- detectó 20 variables de tipo character y 8 numéricas (double)
+
+Veamos 10 observaciones para verificar la lectura:
+
+```{r, echo=F, message=F, warning=F}
+def2022 |> 
+  slice(1:10)
+```
+
+Hacer coincidir el encoding del archivo con el definido en la lectura hace que los caracteres se importen adecuadamente y no tengamos inconvenientes con caracteres especiales como vocales acentuadas, eñes u otras situaciones.
+
