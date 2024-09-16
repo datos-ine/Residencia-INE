@@ -1,0 +1,160 @@
+---
+title: "**Gestión de datos**"
+format:
+  html:
+    page-layout: full
+    toc: true
+    toc-title: Contenidos
+    toc-location: left
+    toc_float: true
+    toc_collapsed: false
+    toc_depth: 4
+    include-in-header: 
+      - text: |
+          <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+number_sections: true
+anchor_sections: true
+---
+
+
+```{r, message=FALSE, echo=F}
+knitr::opts_chunk$set(comment=NA, dpi = 300)
+```
+
+La gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, el almacenamiento, la preservación y la difusión de los datos antes de iniciar la etapa de análisis final. Los datos de los estudios de investigación incluyen los materiales generados o recopilados a lo largo de un proceso de investigación. Como se puede imaginar, esta amplia definición incluye mucho más que la gestión de conjuntos de datos digitales. También incluye archivos físicos, documentación, cuestionarios, grabaciones y más. En definitiva, es una tarea importante que comienza mucho antes de que se recopilen los datos, durante la fase de planificación, y continúa mucho después de que finaliza un proyecto de investigación durante la fase de archivo y uso compartido.
+
+## Ciencia abierta
+
+Con el auge tecnológico de los últimos años surgió un creciente interés en las prácticas de ciencia abierta, donde compartir datos bien gestionados y documentados ayuda a generar confianza en el proceso de investigación. Compartir datos curados de manera reproducible es *"un fuerte indicador para los colegas investigadores de rigor, confiabilidad y transparencia en la investigación científica"* según Alston y Rick 2021. También permite que otros repliquen y aprendan de su trabajo, validen sus resultados para fortalecer la evidencia, así como también detecten potencialmente errores en su trabajo, evitando que se tomen decisiones basadas en datos incorrectos. Compartir sus datos con suficiente documentación y metadatos estandarizados también puede conducir a una mayor colaboración y un mayor impacto ya que los colaboradores pueden acceder y comprender sus datos con facilidad.
+
+La ciencia abierta tiene como objetivo hacer que la investigación y la difusión científicas sean accesibles para todos, lo que hace absolutamente necesaria la necesidad de buenas prácticas de gestión de datos.
+
+Organizaciones, como el **Centro para la Ciencia Abierta** (Center for Open Science) <https://www.cos.io>, se han convertido en un conocido defensor de la ciencia abierta, ofreciendo el *Marco de Ciencia Abierta* (OSF por Open Science Framework) como una herramienta para promover la ciencia abierta a lo largo de todo el ciclo de vida de la investigación. 
+
+## Marcos existentes - FAIR
+
+En 2016, se publicaron los Principios **FAIR** en *Scientific Data* (Wilkinson et al. 2016), que describen cuatro principios rectores para la gestión y administración de datos científicos. Estos principios se crearon para mejorar y respaldar la reutilización de datos académicos, específicamente la capacidad de las máquinas para acceder y leer datos. Son la base de cómo se deben compartir públicamente todos los datos digitales.
+
+Los principios son:
+
+**F: Findable (Localizable)**
+
+Todos los datos deben poder encontrarse mediante un identificador persistente y contar con metadatos completos que permitan realizar búsquedas. Estas prácticas ayudan al descubrimiento de información a largo plazo y proporcionan citas registradas.
+
+**A: Accessible (Accesible)**
+
+Los usuarios deberían poder acceder a sus datos. Esto puede significar que sus datos estén disponibles en un repositorio o a través de un sistema de solicitudes. Como mínimo, un usuario debería poder acceder a los metadatos, incluso si los datos reales no están disponibles abiertamente.
+
+**I: Interoperable**
+
+Sus datos y metadatos deben utilizar vocabularios y formatos estandarizados. Tanto los humanos como las máquinas deben poder leer e interpretar sus datos. Las licencias no deben suponer una barrera para su uso. Los datos deben estar disponibles en formatos abiertos a los que se pueda acceder mediante cualquier software (por ejemplo, csv, txt, etc).
+
+**R: Reusable (Reutilizable)**
+
+Para brindar contexto para la reutilización de sus datos, sus metadatos deben brindar información sobre la procedencia de los datos, brindar una descripción del proyecto, una descripción general del flujo de trabajo de los datos y los autores a los que se debe citar para una atribución adecuada. También debe tener licencias claras para el uso de los datos.
+
+## Fuentes de datos primaria y secundaria
+
+El término datos primarios se refiere a datos recolectados por el investigador por primera vez. Esta situación requiere que se diseñen adecuadamente los instrumentos de recolección y la carga de datos que conlleva la necesidad de contar con una gran cantidad de recursos (tiempo, mano de obra y presupuesto).
+
+Por otra parte, también requiere de un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos.
+
+En cambio, las fuentes secundarias implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.
+
+Un ejemplo en el mundo epidemiológico son las encuestas nacionales de factores de riesgo (ENFR) que el *Ministerio de Salud de la Nación Argentina* en conjunto con el INDEC llevó a cabo en 2005, 2009, 2013 y 2018. Estas tablas de datos de fuente secundaria están disponibles en el sitio del [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2)
+
+## Conceptos básicos de un conjunto de datos
+
+Un dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad. Para nosotros el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.
+
+Dentro de la investigación cuantitativa, generalmente trabajamos con datos digitales en forma de un conjunto de datos, una colección estructurada de datos. 
+
+Un conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora. Los conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una unidad de investigación u observación.
+
+INSERTAR tabla de datos modelo
+
+### Columnas
+
+Las columnas del conjunto de datos representan las variables o atributos constarán de los siguientes tipos de variables:
+
+**Variables recopiladas**
+
+Son variables recogidas de un instrumento (cuestionario estrcuturado, etc) en fuentes primarias o fuente secundarias (externa).
+
+**Variables creadas**
+
+Estos pueden ser variables construidas o pueden ser variables derivadas o indicadores con fines de resumen (llamada también información agregada), como medias, proporciones, tasas, etc.
+
+**Variables de identificación**
+
+También debe incluir valores que identifiquen de forma únivoca a los sujetos en sus datos (por ejemplo, el DNI o historia clínica u otro identificador ad hoc si se desea preservar la identidad).
+
+#### Atributos de columna
+
+Las columnas o variables de su conjunto de datos también tienen los siguientes atributos:
+
+**Nombres de variables**
+
+Un nombre de variable es la representación corta de la información contenida en una columna.
+
+Los nombres de las variables deben ser únicos. Ningún nombre de variable en un conjunto de datos puede repetirse. 
+
+**Tipos de variables**
+
+El tipo de una variable determina los valores permitidos para una variable, las operaciones que se pueden realizar en la variable y cómo se almacenan los valores.
+
+Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string) o de fecha. Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).
+
+**Valores variables**
+
+Los valores de las variables hacen referencia a la información contenida en cada columna. En cada variable se puede configurar los valores permitidos predeterminados en forma de validación a la carga de datos.
+
+Algunos ejemplos de configuración de valores permitidos para diferentes tipos de variables incluyen:
+
+Variable de caracter categórico: “sí” | “no”
+
+Variable numérica entera: 1 a 100
+
+Fecha variable: 01/10/2024 a 31/12/2024
+
+Variable de carácter de texto libre: se permite cualquier valor
+
+Cualquier cosa fuera de los valores o rangos esperados se considera un error.
+
+**Etiquetas variables**
+
+Una etiqueta de variable es la descripción legible por humanos de lo que representa una variable.
+
+Esta puede ser una etiqueta con la definición de la variable o directamente la pregunta que vincula la variable con el cuestionario de origen.
+
+### Filas
+
+Las filas del conjunto de datos representan a los sujetos (también llamados registros u observaciones) de sus datos. Los sujetos de su conjunto de datos pueden ser personas, hogares, ubicaciones como países o provincias, etc. 
+
+### Celdas
+
+A la intersección entre una columna y una fila la llamamos celda. En cada una de ellas puede haber solo un valor del tipo definido en la columna y que representa al sujeto de la fila.
+
+## Bases de datos
+
+Hasta ahora hemos estado hablando de un conjunto de datos independiente. Sin embargo, es más probable que el proyecto de investigación esté compuesto por varios conjuntos de datos, dependiendo del diseño de estudio y de las diferentes dimensiones de abordaje (por ejemplo, cuestionarios clínicos y de laboratorio). En algún momento, lo más probable es que necesitemos vincular esos conjuntos de datos.
+
+Para pensar en cómo vincular datos, necesitamos discutir dos cosas: el diseño de la base de datos y la estructura de los datos.
+
+
+
+una base de datos es un conjunto de datos relacionados y organizados a través de una o más tablas con información sobre una población o muestra.
+
+  Instrumentos de recolección de datos - Cuestionario estructurado - Tipo de preguntas - Validación - estándares
+  Ética - Consentimientos - confidencialidad - sensibilidad - anonimización
+  Recolección electrónica - Bases de datos (relacional / no relacional) - nombre de variables - codificación de valores - diccionario de datos - prueba piloto 
+
+Planificación de la gestión de datos (documentación, guías de estilo, etc) 
+  Proyectos - estructura de directorios y archivos - metadatos - buenas practicas
+  Captura de datos - Formatos de archivos - formato largo / ancho - variables identificadoras - clave primaria / foránea - uniones
+
+Depuración y validación de datos  
+  Almacenamiento, seguridad, colaboración y archivo de datos
+
+- Análisis - Softwares y lenguajes disponibles 
+

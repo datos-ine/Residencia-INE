@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.54">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introducción al lenguaje R – Residencia-INE</title>
+<title>Residencia-INE - Introducción al lenguaje R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -67,7 +67,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -104,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -148,22 +147,18 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">Inicio</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -204,7 +199,6 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><strong>Introducción al lenguaje R</strong></h1>
-<p class="subtitle lead">Residencia de Epidemiología</p>
 </div>
 
 
@@ -222,7 +216,7 @@ window.Quarto = {
 
 
 <section id="qué-es-el-lenguaje-r" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-el-lenguaje-r">Qué es el lenguaje R?</h2>
+<h2 data-anchor-id="qué-es-el-lenguaje-r">Qué es el lenguaje R?</h2>
 <p>El sitio oficial <a href="https://www.r-project.org/">r-project.org</a> dice que <em>“R es un entorno de software libre para gráficos y computación estadística. Se compila y se ejecuta en una amplia variedad de plataformas UNIX, Windows y MacOS.”.</em></p>
 <p>Profundizando en su descripción podemos decir, técnicamente, que es un <strong><em>lenguaje de programación interpretado, orientado a objetos, multiplataforma y open source aplicado al manejo de datos estadísticos.</em></strong></p>
 <p>A continuación detallamos cada parte de la definición:</p>
@@ -238,7 +232,7 @@ window.Quarto = {
 <p>Esto quiere decir que se distribuye gratuitamente bajo licencia GNU (General Public License) – GPL y que los usuarios tienen la libertad de usar, estudiar, compartir (copiar) y modificar el software.</p>
 </section>
 <section id="breve-historia" class="level2">
-<h2 class="anchored" data-anchor-id="breve-historia">Breve historia</h2>
+<h2 data-anchor-id="breve-historia">Breve historia</h2>
 <p>R fue desarrollado a partir del lenguaje S que tiene sus orígenes en Bell Labs de la AT&amp;T (actualmente Lucent Technologies) de mediados de la década del ’70. Posteriormente, S fue vendido y dio origen a una versión propietaria denominada S-Plus que es comercializada por Insighful Corporation.</p>
 <p>En 1995 dos profesores de estadística de la Universidad de Auckland, en Nueva Zelanda <a href="https://en.wikipedia.org/wiki/Ross_Ihaka">Ross Ihaka</a> y <a href="https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician)">Robert Gentleman</a>, iniciaron el <a href="https://en.wikipedia.org/wiki/R_(programming_language)">“Proyecto R”</a>, con la intención de desarrollar un programa estadístico inspirado en el lenguaje S pero de dominio público.</p>
 <p>Aunque se dice que R es un dialecto de S existen diferencias importantes en el diseño de ambos lenguajes.</p>
@@ -246,7 +240,7 @@ window.Quarto = {
 <p>Actualmente es mantenido por un grupo internacional de desarrolladores voluntarios denominado <a href="https://www.r-project.org/contributors.html">Core Development Team</a>.</p>
 </section>
 <section id="scripts" class="level2">
-<h2 class="anchored" data-anchor-id="scripts">Scripts</h2>
+<h2 data-anchor-id="scripts">Scripts</h2>
 <p>Un script es un archivo de texto plano con una lista secuencial de funciones y comandos del lenguaje R para ser ejecutado por el intérprete de R.</p>
 <p>Script se puede traducir como guión, archivo de órdenes, archivo de procesamiento por lotes o archivo de sintaxis.</p>
 <p>Generalmente se crea en editores especiales y/o en cualquier procesador básico de texto plano. Se almacena en un archivo que puede ser leído, modificado, guardado y se puede ejecutar completo o línea a línea.</p>
@@ -260,7 +254,7 @@ window.Quarto = {
 <p>Así que a la hora de documentar es preferible abusar de estos comentarios que no utilizarlos.</p>
 </section>
 <section id="funciones" class="level2">
-<h2 class="anchored" data-anchor-id="funciones">Funciones</h2>
+<h2 data-anchor-id="funciones">Funciones</h2>
 <p>Los comandos u órdenes elementales de R se denominan <strong>funciones</strong>. A algunas se las llama “integradas” porque están incluidas en el núcleo (R base) y sus nombres están reservados.</p>
 <p>Tambien podemos utilizar otras pertenecientes a librerías (paquetes) que se pueden instalar y activar.</p>
 <p>Toda función tiene un nombre y normalmente recibe argumentos o parámetros que deben ser escritos <strong>entre paréntesis y separados por comas</strong>. Incluso algunas de ellas que no tienen asociado ningún argumento necesitan finalizar con paréntesis <code>()</code> para ser entendidas como funciones.</p>
@@ -300,14 +294,14 @@ window.Quarto = {
 </div>
 </section>
 <section id="librerías-paquetes" class="level2">
-<h2 class="anchored" data-anchor-id="librerías-paquetes">Librerías (paquetes)</h2>
+<h2 data-anchor-id="librerías-paquetes">Librerías (paquetes)</h2>
 <p>Las librerías son grupos de funciones empaquetados que se pueden instalar y utilizar en el análisis de datos. Habitualmente se agrupan por tema o similitud de funciones.</p>
 <p>Estos paquetes se pueden descargar directamente del repositorio oficial de CRAN en Internet (similar al uso de los repositorios de Linux) o bien descargar en formato .zip para luego instalar y usar.</p>
 <p>Se pueden activar y desactivar en cualquier momento del análisis.</p>
 <p>Algunos poseen dependencias de otros paquetes que serán necesarios para que funcione.</p>
 </section>
 <section id="sintaxis-errores-y-advertencias" class="level2">
-<h2 class="anchored" data-anchor-id="sintaxis-errores-y-advertencias">Sintaxis, errores y advertencias</h2>
+<h2 data-anchor-id="sintaxis-errores-y-advertencias">Sintaxis, errores y advertencias</h2>
 <p>El lenguaje es muy preciso en su sintaxis y equivocarse en la forma de escribir una función o cualquier otro objeto produce respuestas de error del interprete de R que es habitual cuando iniciamos el aprendizaje.</p>
 <p>La exactitud en la escritura de comandos y funciones incluye la distinción entre mayúsculas y minúsculas. Es decir, que no es lo mismo una ‘a’ que una ‘A’.</p>
 <p>Existen tres grupos de mensajes de error:</p>
@@ -387,7 +381,7 @@ window.Quarto = {
 </div>
 </section>
 <section id="creación-de-objetos" class="level2">
-<h2 class="anchored" data-anchor-id="creación-de-objetos">Creación de objetos</h2>
+<h2 data-anchor-id="creación-de-objetos">Creación de objetos</h2>
 <p>Todas las declaraciones donde se crean objetos, tienen este símbolo de asignación <code>&lt;-</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>nombre_objeto <span class="ot">&lt;-</span> valor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -407,7 +401,7 @@ window.Quarto = {
 <p>Observemos que además de devolvernos el valor aparece delante un 1 entre corchetes <code>[1]</code>.Este número es la ubicación o índice del comienzo del objeto, que en este caso tiene una sola posición.</p>
 </section>
 <section id="estructuras-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="estructuras-de-datos">Estructuras de datos</h2>
+<h2 data-anchor-id="estructuras-de-datos">Estructuras de datos</h2>
 <p>Los objetos <em>contenedores de datos</em> más simples pertenecen a <strong>cinco clases</strong> que se denominan <em>atómicas</em> y que son los siguientes tipos de datos:</p>
 <ul>
 <li>integer (números enteros)</li>
@@ -525,10 +519,10 @@ window.Quarto = {
 </div>
 </section>
 <section id="operadores-en-r" class="level2">
-<h2 class="anchored" data-anchor-id="operadores-en-r">Operadores en R</h2>
+<h2 data-anchor-id="operadores-en-r">Operadores en R</h2>
 <p>Además de funciones, el lenguaje R cuenta con operadores similares a otros lenguajes de programación, que permiten realizar operaciones con datos.</p>
 <section id="r-como-calculadora" class="level3">
-<h3 class="anchored" data-anchor-id="r-como-calculadora">R como calculadora</h3>
+<h3 data-anchor-id="r-como-calculadora">R como calculadora</h3>
 <p>El lenguaje R cuenta con operadores aritméticos de uso relativamente intuitivo, que permiten realizar operaciones matemáticas como si usasemos una calculadora.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -650,7 +644,7 @@ window.Quarto = {
 </section>
 </section>
 <section id="concatenación-y-secuencias-regulares" class="level2">
-<h2 class="anchored" data-anchor-id="concatenación-y-secuencias-regulares">Concatenación y secuencias regulares</h2>
+<h2 data-anchor-id="concatenación-y-secuencias-regulares">Concatenación y secuencias regulares</h2>
 <p>Ya usamos la función <code>c()</code> para concatenar elementos. Habitualmente cuando deseemos crear vectores con más de un elemento vamos a recurrir a esta función.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vector numérico de 4 elementos</span></span>
@@ -725,7 +719,7 @@ window.Quarto = {
 <p>También existen <strong>operadores relacionales</strong> y <strong>conectores lógicos</strong> que vamos a ver más adelante, cuando por ejemplo, necesitemos construir condiciones para filtrar subconjuntos de datos.</p>
 </section>
 <section id="valores-especiales-en-r" class="level2">
-<h2 class="anchored" data-anchor-id="valores-especiales-en-r">Valores especiales en R</h2>
+<h2 data-anchor-id="valores-especiales-en-r">Valores especiales en R</h2>
 <p>Existen algunos valores especiales para datos con expresiones reservadas en R, entre ellos encontramos los valores NA, NaN, Inf y NULL.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -906,13 +900,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -921,7 +908,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -953,37 +951,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("^https:\/\/(www\.)?(linkedin|twitter|github)\.*");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -992,6 +968,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

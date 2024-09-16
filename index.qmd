@@ -1,23 +1,28 @@
 ---
 title: "Gestión de Datos"
-subtitle: "1er. año"
 ---
 
 <!-- Add icon library -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<p>Instructor: Christian Ballejo <a href="mailto:cballejo@anlis.gob.ar" class="fa fa-envelope"></a> <a href="https://twitter.com/chrisballejo" target="_blank" class="fa fa-twitter"></a> <a href="https://www.linkedin.com/in/cballejo/" target="_blank" class="fa fa-linkedin"></a> <a href="https://github.com/cballejo/" target="_blank" class="fa fa-github"></a></p>
+### Descripción
 
-Temario
+Este curso.....
+
+### Instructor
+
+<p>Christian Ballejo <a href="mailto:cballejo@anlis.gob.ar" class="fa fa-envelope"></a> <a href="https://twitter.com/chrisballejo" target="_blank" class="fa fa-twitter"></a> <a href="https://www.linkedin.com/in/cballejo/" target="_blank" class="fa fa-linkedin"></a> <a href="https://github.com/cballejo/" target="_blank" class="fa fa-github"></a></p>
+
+### Temario
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#aabcfe;border-spacing:0;}
 .tg td{background-color:#e8edff;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
-  border-width:0px;color:#669;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;
+  border-width:0px;color:#669;font-family:Arial, sans-serif;font-size:16px;overflow:hidden;padding:10px 5px;
   word-break:normal;}
 .tg th{background-color:#b9c9fe;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
-  border-width:0px;color:#039;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;
+  border-width:0px;color:#039;font-family:Arial, sans-serif;font-size:16px;font-weight:normal;overflow:hidden;
   padding:10px 5px;word-break:normal;}
 .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
@@ -37,7 +42,7 @@ Temario
     <td class="tg-0lax">Bienvenida</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
-    <td align="center"><a href="/primero/diapositivas/00-bienvenida.html">
+    <td align="center"><a href="/primero/diapositivas/00-bienvenida.html" target="_blank">
           <i class="fa fa-laptop  fa-lg"></i></a></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-code fa-lg"></i></font></td>
@@ -173,3 +178,11 @@ Temario
     <td class="tg-0lax"></td>
   </tr>
 </tbody></table>
+
+### Bibliografía
+
+[R for Data Science (2e)](https://r4ds.hadley.nz/)
+
+[EpiRhandbook en español](https://epirhandbook.com/es/index.es.html)
+
+[Data Visualization](https://socviz.co/)

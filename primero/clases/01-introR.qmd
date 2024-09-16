@@ -1,6 +1,5 @@
 ---
 title: "**Introducción al lenguaje R**"
-subtitle: "Residencia de Epidemiología"
 format:
   html:
     page-layout: full

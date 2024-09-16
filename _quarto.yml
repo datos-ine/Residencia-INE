@@ -7,8 +7,7 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "1er. año"
 
 format:
   html:
@@ -19,6 +18,13 @@ format:
       light: [pulse, custom.scss]
       dark: darkly
     toc: true
+    language:
+      toc-title-website: "Contenido"
+    link-external-icon: true
+    link-external-newwindow: true  
+    link-external-filter: '^https:\/\/(www\.)?(linkedin|twitter|github)\.*'
+    code-copy: true
+    anchor-sections: false
 
 
 

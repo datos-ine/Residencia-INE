@@ -1,6 +1,5 @@
 ---
 title: "**Introducción a RStudio**"
-subtitle: "Residencia de Epidemiología"
 format:
   html:
     page-layout: full
