@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Residencia-INE - Gestión de datos</title>
+<title>Gestión de datos – Residencia-INE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -84,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -95,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -119,6 +153,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#celdas" id="toc-celdas" class="nav-link" data-scroll-target="#celdas">Celdas</a></li>
   </ul></li>
   <li><a href="#bases-de-datos" id="toc-bases-de-datos" class="nav-link" data-scroll-target="#bases-de-datos">Bases de datos</a></li>
+  <li><a href="#instrumentos-de-recolección-de-datos" id="toc-instrumentos-de-recolección-de-datos" class="nav-link" data-scroll-target="#instrumentos-de-recolección-de-datos">Instrumentos de recolección de datos</a></li>
+  <li><a href="#consideraciones-éticas" id="toc-consideraciones-éticas" class="nav-link" data-scroll-target="#consideraciones-éticas">Consideraciones éticas</a>
+  <ul class="collapse">
+  <li><a href="#sensibilidad" id="toc-sensibilidad" class="nav-link" data-scroll-target="#sensibilidad">Sensibilidad</a></li>
+  </ul></li>
+  <li><a href="#plan-de-gestión-de-datos" id="toc-plan-de-gestión-de-datos" class="nav-link" data-scroll-target="#plan-de-gestión-de-datos">Plan de gestión de datos</a></li>
+  <li><a href="#planificación-de-la-gestión-de-datos" id="toc-planificación-de-la-gestión-de-datos" class="nav-link" data-scroll-target="#planificación-de-la-gestión-de-datos">Planificación de la gestión de datos</a>
+  <ul class="collapse">
+  <li><a href="#plan-de-limpieza-de-datos" id="toc-plan-de-limpieza-de-datos" class="nav-link" data-scroll-target="#plan-de-limpieza-de-datos">Plan de limpieza de datos</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -180,7 +224,72 @@ ul.task-list li input[type="checkbox"] {
 <p>Un dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad. Para nosotros el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.</p>
 <p>Dentro de la investigación cuantitativa, generalmente trabajamos con datos digitales en forma de un conjunto de datos, una colección estructurada de datos.</p>
 <p>Un conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora. Los conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una unidad de investigación u observación.</p>
-<p>INSERTAR tabla de datos modelo</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">id</th>
+<th style="text-align: left;">sexo</th>
+<th style="text-align: right;">edad</th>
+<th style="text-align: right;">peso</th>
+<th style="text-align: right;">talla</th>
+<th style="text-align: left;">trabaja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">167.0</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">164.0</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">164.0</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">164.0</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">167.5</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">170.0</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <section id="columnas" class="level3">
 <h3 data-anchor-id="columnas">Columnas</h3>
 <p>Las columnas del conjunto de datos representan las variables o atributos constarán de los siguientes tipos de variables:</p>
@@ -198,14 +307,14 @@ ul.task-list li input[type="checkbox"] {
 <p>Los nombres de las variables deben ser únicos. Ningún nombre de variable en un conjunto de datos puede repetirse.</p>
 <p><strong>Tipos de variables</strong></p>
 <p>El tipo de una variable determina los valores permitidos para una variable, las operaciones que se pueden realizar en la variable y cómo se almacenan los valores.</p>
-<p>Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string) o de fecha. Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).</p>
+<p>Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string), de fecha o lógicos (valores True y False). Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).</p>
 <p><strong>Valores variables</strong></p>
 <p>Los valores de las variables hacen referencia a la información contenida en cada columna. En cada variable se puede configurar los valores permitidos predeterminados en forma de validación a la carga de datos.</p>
 <p>Algunos ejemplos de configuración de valores permitidos para diferentes tipos de variables incluyen:</p>
-<p>Variable de caracter categórico: “sí” | “no”</p>
-<p>Variable numérica entera: 1 a 100</p>
-<p>Fecha variable: 01/10/2024 a 31/12/2024</p>
-<p>Variable de carácter de texto libre: se permite cualquier valor</p>
+<p><code>Variable de caracter categórico:</code> “sí” | “no”</p>
+<p><code>Variable numérica entera:</code> 1 a 100</p>
+<p><code>Fecha variable:</code> 01/10/2024 a 31/12/2024</p>
+<p><code>Variable de carácter de texto libre:</code> se permite cualquier valor</p>
 <p>Cualquier cosa fuera de los valores o rangos esperados se considera un error.</p>
 <p><strong>Etiquetas variables</strong></p>
 <p>Una etiqueta de variable es la descripción legible por humanos de lo que representa una variable.</p>
@@ -225,9 +334,224 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-anchor-id="bases-de-datos">Bases de datos</h2>
 <p>Hasta ahora hemos estado hablando de un conjunto de datos independiente. Sin embargo, es más probable que el proyecto de investigación esté compuesto por varios conjuntos de datos, dependiendo del diseño de estudio y de las diferentes dimensiones de abordaje (por ejemplo, cuestionarios clínicos y de laboratorio). En algún momento, lo más probable es que necesitemos vincular esos conjuntos de datos.</p>
 <p>Para pensar en cómo vincular datos, necesitamos discutir dos cosas: el diseño de la base de datos y la estructura de los datos.</p>
-<p>una base de datos es un conjunto de datos relacionados y organizados a través de una o más tablas con información sobre una población o muestra.</p>
-<p>Instrumentos de recolección de datos - Cuestionario estructurado - Tipo de preguntas - Validación - estándares Ética - Consentimientos - confidencialidad - sensibilidad - anonimización Recolección electrónica - Bases de datos (relacional / no relacional) - nombre de variables - codificación de valores - diccionario de datos - prueba piloto</p>
-<p>Planificación de la gestión de datos (documentación, guías de estilo, etc) Proyectos - estructura de directorios y archivos - metadatos - buenas practicas Captura de datos - Formatos de archivos - formato largo / ancho - variables identificadoras - clave primaria / foránea - uniones</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Una base de datos es “una colección organizada de datos almacenados como múltiples conjuntos de datos”</p>
+</div>
+</div>
+</div>
+<p>En la terminología de bases de datos, cada conjunto de datos que tenemos se considera una <em>“tabla”</em>. Cada tabla incluye una o más variables que definen de forma única las filas de sus datos (es decir, una clave principal). Las tablas también pueden contener variables asociadas con valores únicos en otra tabla (es decir, claves externas). Este juego de claves principal-externa sirve para “conectar” las tablas de forma horizontal sin perder integridad.</p>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Es importante tener en cuenta que si no tiene identificadores únicos comunes en todas las tablas, como en el caso de los datos anónimos, no podremos unir datos horizontalmente.</p>
+</div>
+</div>
+</div>
+<p>Existe otra forma de unión de tablas que llamaremos <strong>uniones verticales</strong> y sucede cuando debemos anexar o apilar datos de un conjunto con otro que siempre deberá tener la misma estructura, es decir los mismo nombres de variables y tipo de datos.</p>
+</section>
+<section id="instrumentos-de-recolección-de-datos" class="level2">
+<h2 data-anchor-id="instrumentos-de-recolección-de-datos">Instrumentos de recolección de datos</h2>
+<p>Las tablas de datos son producto del almacenamiento de la información que proviene muchas veces de los instrumentos de recolección más comunes en la investigación cuantitativa: <strong>el cuestionario estructurado</strong>.</p>
+<p>La forma en que recibimos las variables de análisis tendrán su origen en la confección de estos cuestionarios. Por lo que la construcción de estos instrumentos de recolección nacen pensando en los componentes del dato científico.</p>
+<p>Un dato científico esta compuesto por una unidad de observación, dimensiones de análisis que definen variables de estudio, valores o categorías conceptuales que luego se operacionalizan en indicadores que terminaran siendo los datos que encontramos en las tablas.</p>
+<p>La unidad de observación es la entidad que deseamos estudiar, es decir, aquella que se observa para efectuar mediciones o para clasificarla en categorías. También se denomina unidad de análisis o unidad experimental y se define acompañada de un tiempo y espacio identificable.</p>
+<p>Por ejemplo, en grandes encuestas como la ENFR tenemos varias unidades de observación: vivienda, hogar, jefe de hogar y persona encuestada.</p>
+<p>Estas unidades de observación fueron abordadas en un espacio específico, domicilio-ciudad-departamento-conglomerado-provincia del país y en un tiempo determinado (encuestas de 2005, 2009, 2013 y 2018).</p>
+<p>Las variables o dimensiones de análisis constituyen los aspectos de las unidades de observación que se han seleccionado para examinar o estudiar, de acuerdo a los problemas e hipótesis de investigación. Concretamente son aquellos atributos, propiedades o características observables de las diferentes unidades de observación.</p>
+<p>Por ejemplo, algunas de las variables recabadas en la ENFR son: edad, sexo, nivel de instrucción, actividad física, consumo de alcohol, consumo de tabaco, etc.</p>
+<p>Algunas de estas variables son simples o directas como la edad donde solo hay que aclarar en que unidad se la está midiendo. Edad en años o edad en meses, etc.</p>
+<p>Otras son constructos más complejos donde para aprehender el concepto buscado se necesitan de una serie de preguntas / variables individuales que recaban información sobre distintas dimensiones del problema. Es el caso, por ejemplo de consumo de alcohol donde podemos consultar sobre si toma, cuando lo hace, cuanto bebe, que bebe, etc.</p>
+<p>Muchas de estas preguntas estan validadas por estudios previos y se copian con la misma estructura en diseños de cuestionarios nuevos para aprovechar la garantía de la validación y la comparabilidad que permite hacerlo.</p>
+<p>Cuando hablamos de definiciones operacionales o indicadores vinculados a las variables conceptuales nos referimos a los procedimientos para “medir” a estas variables. Existen variables formuladas en términos abstractos o conceptuales con cierta complejidad que deben descomponerse en varias dimensiones y deben operacionalizarse para poder medirlas.</p>
+<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Un ejemplo de operacionalización para la variable <strong>Hacinamiento</strong> es definir el indicador como:</p>
+<p>“Cantidad de personas por cuarto, informadas por algún respondente del hogar”</p>
+<ul>
+<li>Hasta 3 personas por cuarto es “Sin hacinamiento”</li>
+<li>Más de 3 personas por cuarto es “Con hacinamiento”</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Por otra parte, hallamos diferentes tipos de preguntas en un cuestionario estructurado producto de este proceso operacional que va a condicionar la forma de nuestras variables digitales incluidas en la tabla de datos.</p>
+<p>Hay preguntas cerradas con valores o códigos establecidos, preguntas abiertas que son muy difíciles de analizar en el ámbito cuantitativo o mixtas donde aparece una opción <em>otro/a</em> que se agrega a las respuestas válidas.</p>
+<p>Tenemos también preguntas de respuesta simple, donde solo una es posible y otras de respuesta múltiple donde se puede marcar más de una respuesta simultánea. Esta situación hace que en la construcción de nuestra tabla de datos cada respuesta se refleje como una variable por <em>si o no</em>, produciendo posteriormente un análisis de mayor complejidad.</p>
+<p>Siempre las preguntas cerradas deberán cumplir con dos cualidades particulares, ser exahustivas y excluyentes.</p>
+<p>Exahustiva, significa que dentro de las opciones válidas predeterminadas tendremos que tener la posibilidad de abarcar todas las posibles respuestas del entrevistado. Esto provoca que muchas veces aparezcan las opciones, <em>“Sin dato”</em>, <em>“No sabe/No contesta”</em> u <em>“Otro/a”</em>.</p>
+<p>Excluyente, es que no pueden coexistir dos respuestas simultáneamente. Si se produce, entonces habrá que construir variables de respuesta múltiple.</p>
+<p>Junto a las preguntas y sus valores se acompaña la clasificación de variables y definición de escalas. Las variables pueden ser clasificadas en:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Escala</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nominal</td>
+<td>Fuma: “si” - “no”</td>
+</tr>
+<tr class="even">
+<td>Ordinal</td>
+<td>Nivel de ingresos: “Alto” - “Medio” - “Bajo”</td>
+</tr>
+<tr class="odd">
+<td>Intervalo</td>
+<td>Hora del día: “0:00”…“24:00”</td>
+</tr>
+<tr class="even">
+<td>Razón</td>
+<td>Peso (Kgrs): 0….a n</td>
+</tr>
+</tbody>
+</table>
+<p>Otras escalas especiales son las de Likert, Guttman, visuales análogas, etc</p>
+<p>En muchas oportunidades encontramos en las tablas de datos provenientes de cuestionarios variables codificadas. La codificación es la tarea de asignar códigos a las distintas respuestas de las preguntas del cuestionario y obtener así los distintos valores de las variables con los que se construye la matriz de datos.</p>
+<p>Es necesario estar atento a esta situación porque en algunas tablas de datos de fuente secundaria se suele asignar valores extremos en la escala numérica de variables con este tipo de dato, por ejemplo en la ENFR utilizan 9, 99, 999 dependiendo de los dígitos que tenga la variable para referirse a categorías tipo Ns/Nc o sin dato.</p>
+<p>Todo lo desarrollado anteriormente nos lleva a que cada tabla de datos que construyamos nosotros mismos o las tablas provenientes de fuentes secundarias deben estar acompañadas de diccionario de datos o cuadros de operacionalización donde esten definidas las características, valores legales y codificación de cada variable de estudio.</p>
+<p>Ver <a href="https://www.indec.gob.ar/ftp/cuadros/menusuperior/enfr/manual_base_usuario_enfr2018.pdf">Manual de uso de la base de datos usuario ENFR 2018</a></p>
+</section>
+<section id="consideraciones-éticas" class="level2">
+<h2 data-anchor-id="consideraciones-éticas">Consideraciones éticas</h2>
+<p>Nuestras tablas de datos suelen contener información de sujetos humanos lo que conlleva a la responsabilidad de proteger a esos datos. Los datos de humanos pueden contener información identificable que aumenta el riesgo de que los participantes puedan ser revelados en un conjunto de datos. Habitualmente también contienen información sobre temas sensibles vinculado a la salud lo que aumenta aún más los riesgos si se identifica a los participantes.</p>
+<p>Cuando se trabaja con sujetos humanos, hay dos tipos de identificadores que se pueden recopilar en el estudio: directos e indirectos.</p>
+<p>Los identificadores directos son exclusivos de un individuo y se pueden utilizar para identificar a un participante. Los identificadores indirectos no son necesariamente exclusivos de un individuo en particular, pero si se combinan con otra información se pueden utilizar para identificar a un participante.</p>
+<p>La <a href="https://research.unc.edu/2020/05/01/de-identified-coded-or-anonymous-how-do-i-know/">Oficina de Ética de Investigación Humana de la Universidad de Carolina del Norte</a> define 4 tipos de archivos de datos en función a la identifcación personal:</p>
+<ol type="1">
+<li><p><strong>Identificable</strong>: los datos incluyen información de identificación personal. Es común que los datos crudos sin procesar de un estudio de investigación sean identificables.</p></li>
+<li><p><strong>Codificado</strong>: en este tipo de archivo de datos, se ha eliminado o distorsionado la información de identificación personal y se han reemplazado los nombres por un código (es decir, un identificador único del participante). La única forma de vincular los datos con un individuo es a través de ese código. El archivo de código de identificación (clave de vinculación) se almacena por separado de los datos de investigación. Los datos codificados son, por lo general, el tipo de archivo que se crea después de limpiar los datos sin procesar del estudio (clean_data).</p></li>
+<li><p><strong>Desidentificado</strong>: en este tipo de archivo, se ha eliminado o distorsionado la información de identificación y los datos ya no se pueden volver a asociar con la persona subyacente (la clave de vinculación ya no existe). Esto es lo que se crea normalmente cuando se comparten públicamente los datos de un estudio de investigación.</p></li>
+<li><p><strong>Anónimo</strong>: en un conjunto de datos anónimo, nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico.</p></li>
+</ol>
+<section id="sensibilidad" class="level3">
+<h3 data-anchor-id="sensibilidad">Sensibilidad</h3>
+<p>Los datos suelen clasificarse en función del nivel de sensibilidad. Estos niveles de sensibilidad determinan cómo se pueden recopilar, almacenar y compartir los datos, así como cuál debe ser la respuesta ante cualquier violación de datos. Si bien existe variación, aquí se presenta un resumen general de cómo se puede categorizar la información.</p>
+<ul>
+<li><p><strong>Sensibilidad baja</strong>: se considera que estos datos no presentan riesgo o que presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.</p></li>
+<li><p><strong>Sensibilidad moderada</strong>: Se considera que estos datos tienen un riesgo moderado si se divulgan, lo que significa que podrían afectar negativamente a las personas. Estos datos pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. Por lo general, se exige que estos datos se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.</p></li>
+<li><p><strong>Alta sensibilidad</strong>: estos datos deben estar sujetos a las medidas de seguridad más estrictas y podrían causar un gran daño si se divulgan. Estos datos incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos) y, por lo general, se exige que se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.</p></li>
+</ul>
+</section>
+</section>
+<section id="plan-de-gestión-de-datos" class="level2">
+<h2 data-anchor-id="plan-de-gestión-de-datos">Plan de gestión de datos</h2>
+<p>Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación.</p>
+<p>Es oportuno que acompañe o sea parte del protocolo de investigación o del manual de procedimiento de un programa de vigilancia epidemiológica y puede contener los siguientes items:</p>
+<ol type="1">
+<li>Descripción de los datos que se compartirán</li>
+</ol>
+<ul>
+<li>¿Cuál es la fuente de los datos? (por ejemplo, encuestas, datos existentes, sistemas de vigilancia, etc)</li>
+<li>¿Cómo se limpiarán y conservarán los datos antes de compartirlos?</li>
+<li>¿Cuál será el nivel de agregación? (por ejemplo, nivel de elemento, datos resumidos, solo metadatos)
+<ul>
+<li>Es posible que sea necesario compartir los conjuntos de datos de un proyecto de diferentes maneras debido a razones legales, éticas o técnicas.</li>
+</ul></li>
+<li>¿Se compartirán datos tanto brutos como limpios?</li>
+</ul>
+<ol start="2" type="1">
+<li>Formato de los datos a compartir</li>
+</ol>
+<ul>
+<li>¿Los datos estarán en formato electrónico?</li>
+<li>¿Se proporcionará en un formato no propietario? (por ejemplo, csv)</li>
+<li>¿Se proporcionará más de un formato? (por ejemplo, xlsx y csv)</li>
+<li>¿Se necesitan herramientas para manipular o reproducir datos compartidos? (por ejemplo, software, código)
+<ul>
+<li>Proporcione detalles sobre esas herramientas (por ejemplo, cómo se puede acceder a ellas, número de versión, sistema operativo requerido).</li>
+</ul></li>
+</ul>
+<ol start="3" type="1">
+<li>Documentación a compartir</li>
+</ol>
+<ul>
+<li>¿Qué documentación compartirás?
+<ul>
+<li>Considere la documentación a nivel de proyecto, de conjunto de datos y de variable.</li>
+</ul></li>
+<li>¿En qué formato estará su documentación? (por ejemplo, csv, pdf)</li>
+</ul>
+<ol start="4" type="1">
+<li>Normas</li>
+</ol>
+<ul>
+<li>¿Planea utilizar algún estándar para cuestiones como metadatos, recopilación de datos o formato de datos?</li>
+</ul>
+<ol start="5" type="1">
+<li>Conservación de datos</li>
+</ol>
+<ul>
+<li>¿Dónde se archivarán los datos internamente?
+<ul>
+<li>Medidas de seguridad y accesos</li>
+</ul></li>
+<li>¿Se archivarán los datos para compartirlos públicamente? ¿Dónde?</li>
+<li>¿Cuáles son las características deseables del repositorio? (por ejemplo, identificadores únicos y persistentes asignados a los datos, metadatos recopilados, procedencia de los registros, opciones de licencia)</li>
+<li>¿Cuándo depositará sus datos de estudio en el repositorio y durante cuánto tiempo permanecerán accesibles los datos?</li>
+<li>¿Cómo permitirá la reutilización de datos?</li>
+</ul>
+<ol start="6" type="1">
+<li>Consideraciones sobre acceso, distribución o reutilización</li>
+</ol>
+<ul>
+<li>¿Existen factores legales, técnicos o éticos que afecten la reutilización, el acceso o la distribución de sus datos?</li>
+<li>¿Se restringirán algunos datos?</li>
+<li>¿Se requieren controles de acceso (por ejemplo, un acuerdo de uso de datos)?</li>
+</ul>
+<ol start="7" type="1">
+<li>Protección de la privacidad y la confidencialidad</li>
+</ol>
+<ul>
+<li>¿Los participantes firman acuerdos de consentimiento informado? ¿El consentimiento comunica cómo se espera que se utilicen y compartan los datos de los participantes? ¿Cómo evitará la divulgación de información de identificación personal cuando comparta datos?</li>
+</ul>
+<ol start="8" type="1">
+<li>Seguridad de los datos</li>
+</ol>
+<ul>
+<li>¿Cómo se mantendrá la seguridad y la integridad de los datos durante un proyecto? (por ejemplo, considere el almacenamiento, el acceso, la copia de seguridad y la transferencia de datos)</li>
+</ul>
+<ol start="9" type="1">
+<li>Funciones y responsabilidades</li>
+</ol>
+<ul>
+<li>¿Cuáles son los roles del personal en la gestión y preservación de datos?</li>
+<li>¿Quién garantiza la accesibilidad, fiabilidad y calidad de los datos?</li>
+<li>¿Existe un plan si un miembro principal del equipo abandona el proyecto o la institución?</li>
+</ul>
+</section>
+<section id="planificación-de-la-gestión-de-datos" class="level2">
+<h2 data-anchor-id="planificación-de-la-gestión-de-datos">Planificación de la gestión de datos</h2>
+<section id="plan-de-limpieza-de-datos" class="level3">
+<h3 data-anchor-id="plan-de-limpieza-de-datos">Plan de limpieza de datos</h3>
+<p>Un plan de limpieza de datos es una propuesta escrita que describe cómo planeamos transformar los datos sin procesar en datos limpios y utilizables. Este documento no contiene código y no depende de habilidades técnicas. Es necesario sobre todo si compartimos el trabajo con otros integrantes o bien la información se recolecta o recibe de forma periódica (por ejemplo en vigilancia epidemiológica). Dado que este documento describe las transformaciones previstas para cada conjunto de datos sin procesar, permite que cualquier miembro del equipo brinde comentarios sobre el proceso de limpieza de datos.</p>
+<p>Un ejemplo de un plan simple de limpieza de datos para un archivo de datos cualquiera:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Importar datos crudos</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Visualizar datos (filas y columnas)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Remover registros duplicados en caso de existir (usando las reglas del caso, duplicados completos o por claves)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Anonimizar datos </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Renombrar variables basado en el diccionario de datos</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Diagnosticar variables (tipos, inconsistencias, etc)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>Depurar datos diagnosticados</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>Detección de valores perdidos (missing)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>Creación de variables construidas (clasificación, cálculo, agrupamientos, etc)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>Exportar datos limpios en el formato elegido </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>(documentación, guías de estilo, etc) Proyectos - estructura de directorios y archivos - metadatos - buenas practicas Captura de datos - Formatos de archivos - formato largo / ancho - variables identificadoras - clave primaria / foránea - uniones</p>
 <p>Depuración y validación de datos<br>
 Almacenamiento, seguridad, colaboración y archivo de datos</p>
 <ul>
@@ -235,6 +559,7 @@ Almacenamiento, seguridad, colaboración y archivo de datos</p>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -410,18 +735,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -453,7 +767,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("^https:\/\/(www\.)?(linkedin|twitter|github)\.*");
@@ -461,7 +797,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

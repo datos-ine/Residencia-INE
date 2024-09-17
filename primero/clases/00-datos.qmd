@@ -16,7 +16,6 @@ number_sections: true
 anchor_sections: true
 ---
 
-
 ```{r, message=FALSE, echo=F}
 knitr::opts_chunk$set(comment=NA, dpi = 300)
 ```
@@ -29,7 +28,7 @@ Con el auge tecnológico de los últimos años surgió un creciente interés en 
 
 La ciencia abierta tiene como objetivo hacer que la investigación y la difusión científicas sean accesibles para todos, lo que hace absolutamente necesaria la necesidad de buenas prácticas de gestión de datos.
 
-Organizaciones, como el **Centro para la Ciencia Abierta** (Center for Open Science) <https://www.cos.io>, se han convertido en un conocido defensor de la ciencia abierta, ofreciendo el *Marco de Ciencia Abierta* (OSF por Open Science Framework) como una herramienta para promover la ciencia abierta a lo largo de todo el ciclo de vida de la investigación. 
+Organizaciones, como el **Centro para la Ciencia Abierta** (Center for Open Science) <https://www.cos.io>, se han convertido en un conocido defensor de la ciencia abierta, ofreciendo el *Marco de Ciencia Abierta* (OSF por Open Science Framework) como una herramienta para promover la ciencia abierta a lo largo de todo el ciclo de vida de la investigación.
 
 ## Marcos existentes - FAIR
 
@@ -67,11 +66,20 @@ Un ejemplo en el mundo epidemiológico son las encuestas nacionales de factores 
 
 Un dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad. Para nosotros el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.
 
-Dentro de la investigación cuantitativa, generalmente trabajamos con datos digitales en forma de un conjunto de datos, una colección estructurada de datos. 
+Dentro de la investigación cuantitativa, generalmente trabajamos con datos digitales en forma de un conjunto de datos, una colección estructurada de datos.
 
 Un conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora. Los conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una unidad de investigación u observación.
 
-INSERTAR tabla de datos modelo
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+library(tidyverse)
+
+read_csv2("datos/datos.csv") |> head() |> knitr::kable()
+```
 
 ### Columnas
 
@@ -97,13 +105,13 @@ Las columnas o variables de su conjunto de datos también tienen los siguientes 
 
 Un nombre de variable es la representación corta de la información contenida en una columna.
 
-Los nombres de las variables deben ser únicos. Ningún nombre de variable en un conjunto de datos puede repetirse. 
+Los nombres de las variables deben ser únicos. Ningún nombre de variable en un conjunto de datos puede repetirse.
 
 **Tipos de variables**
 
 El tipo de una variable determina los valores permitidos para una variable, las operaciones que se pueden realizar en la variable y cómo se almacenan los valores.
 
-Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string) o de fecha. Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).
+Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string), de fecha o lógicos (valores True y False). Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).
 
 **Valores variables**
 
@@ -111,13 +119,13 @@ Los valores de las variables hacen referencia a la información contenida en cad
 
 Algunos ejemplos de configuración de valores permitidos para diferentes tipos de variables incluyen:
 
-Variable de caracter categórico: “sí” | “no”
+`Variable de caracter categórico:` “sí” \| “no”
 
-Variable numérica entera: 1 a 100
+`Variable numérica entera:` 1 a 100
 
-Fecha variable: 01/10/2024 a 31/12/2024
+`Fecha variable:` 01/10/2024 a 31/12/2024
 
-Variable de carácter de texto libre: se permite cualquier valor
+`Variable de carácter de texto libre:` se permite cualquier valor
 
 Cualquier cosa fuera de los valores o rangos esperados se considera un error.
 
@@ -129,7 +137,7 @@ Esta puede ser una etiqueta con la definición de la variable o directamente la 
 
 ### Filas
 
-Las filas del conjunto de datos representan a los sujetos (también llamados registros u observaciones) de sus datos. Los sujetos de su conjunto de datos pueden ser personas, hogares, ubicaciones como países o provincias, etc. 
+Las filas del conjunto de datos representan a los sujetos (también llamados registros u observaciones) de sus datos. Los sujetos de su conjunto de datos pueden ser personas, hogares, ubicaciones como países o provincias, etc.
 
 ### Celdas
 
@@ -141,20 +149,245 @@ Hasta ahora hemos estado hablando de un conjunto de datos independiente. Sin emb
 
 Para pensar en cómo vincular datos, necesitamos discutir dos cosas: el diseño de la base de datos y la estructura de los datos.
 
+::: {.callout-note appearance="simple" icon="false"}
+Una base de datos es “una colección organizada de datos almacenados como múltiples conjuntos de datos”
+:::
+
+En la terminología de bases de datos, cada conjunto de datos que tenemos se considera una *"tabla"*. Cada tabla incluye una o más variables que definen de forma única las filas de sus datos (es decir, una clave principal). Las tablas también pueden contener variables asociadas con valores únicos en otra tabla (es decir, claves externas). Este juego de claves principal-externa sirve para "conectar" las tablas de forma horizontal sin perder integridad.
+
+::: {.callout-warning appearance="simple" icon="false"}
+Es importante tener en cuenta que si no tiene identificadores únicos comunes en todas las tablas, como en el caso de los datos anónimos, no podremos unir datos horizontalmente.
+:::
+
+Existe otra forma de unión de tablas que llamaremos **uniones verticales** y sucede cuando debemos anexar o apilar datos de un conjunto con otro que siempre deberá tener la misma estructura, es decir los mismo nombres de variables y tipo de datos.
+
+## Instrumentos de recolección de datos
+
+Las tablas de datos son producto del almacenamiento de la información que proviene muchas veces de los instrumentos de recolección más comunes en la investigación cuantitativa: **el cuestionario estructurado**.
+
+La forma en que recibimos las variables de análisis tendrán su origen en la confección de estos cuestionarios. Por lo que la construcción de estos instrumentos de recolección nacen pensando en los componentes del dato científico.
+
+Un dato científico esta compuesto por una unidad de observación, dimensiones de análisis que definen variables de estudio, valores o categorías conceptuales que luego se operacionalizan en indicadores que terminaran siendo los datos que encontramos en las tablas.
+
+La unidad de observación es la entidad que deseamos estudiar, es decir, aquella que se observa para efectuar mediciones o para clasificarla en categorías. También se denomina unidad de análisis o unidad experimental y se define acompañada de un tiempo y espacio identificable.
+
+Por ejemplo, en grandes encuestas como la ENFR tenemos varias unidades de observación: vivienda, hogar, jefe de hogar y persona encuestada.
+
+Estas unidades de observación fueron abordadas en un espacio específico, domicilio-ciudad-departamento-conglomerado-provincia del país y en un tiempo determinado (encuestas de 2005, 2009, 2013 y 2018).
+
+Las variables o dimensiones de análisis constituyen los aspectos de las unidades de observación que se han seleccionado para examinar o estudiar, de acuerdo a los problemas e hipótesis de investigación. Concretamente son aquellos atributos, propiedades o características observables de las diferentes unidades de observación.
+
+Por ejemplo, algunas de las variables recabadas en la ENFR son: edad, sexo, nivel de instrucción, actividad física, consumo de alcohol, consumo de tabaco, etc.
+
+Algunas de estas variables son simples o directas como la edad donde solo hay que aclarar en que unidad se la está midiendo. Edad en años o edad en meses, etc.
+
+Otras son constructos más complejos donde para aprehender el concepto buscado se necesitan de una serie de preguntas / variables individuales que recaban información sobre distintas dimensiones del problema. Es el caso, por ejemplo de consumo de alcohol donde podemos consultar sobre si toma, cuando lo hace, cuanto bebe, que bebe, etc.
+
+Muchas de estas preguntas estan validadas por estudios previos y se copian con la misma estructura en diseños de cuestionarios nuevos para aprovechar la garantía de la validación y la comparabilidad que permite hacerlo.
+
+Cuando hablamos de definiciones operacionales o indicadores vinculados a las variables conceptuales nos referimos a los procedimientos para "medir" a estas variables. Existen variables formuladas en términos abstractos o conceptuales con cierta complejidad que deben descomponerse en varias dimensiones y deben operacionalizarse para poder medirlas.
+
+::: {.callout-tip appearance="simple" icon="false"}
+Un ejemplo de operacionalización para la variable **Hacinamiento** es definir el indicador como:
+
+“Cantidad de personas por cuarto, informadas por algún respondente del hogar”
+
+-   Hasta 3 personas por cuarto es “Sin hacinamiento”
+-   Más de 3 personas por cuarto es “Con hacinamiento”
+:::
+
+Por otra parte, hallamos diferentes tipos de preguntas en un cuestionario estructurado producto de este proceso operacional que va a condicionar la forma de nuestras variables digitales incluidas en la tabla de datos.
+
+Hay preguntas cerradas con valores o códigos establecidos, preguntas abiertas que son muy difíciles de analizar en el ámbito cuantitativo o mixtas donde aparece una opción *otro/a* que se agrega a las respuestas válidas.
+
+Tenemos también preguntas de respuesta simple, donde solo una es posible y otras de respuesta múltiple donde se puede marcar más de una respuesta simultánea. Esta situación hace que en la construcción de nuestra tabla de datos cada respuesta se refleje como una variable por *si o no*, produciendo posteriormente un análisis de mayor complejidad.
+
+Siempre las preguntas cerradas deberán cumplir con dos cualidades particulares, ser exahustivas y excluyentes.
+
+Exahustiva, significa que dentro de las opciones válidas predeterminadas tendremos que tener la posibilidad de abarcar todas las posibles respuestas del entrevistado. Esto provoca que muchas veces aparezcan las opciones, *"Sin dato"*, *"No sabe/No contesta"* u *"Otro/a"*.
+
+Excluyente, es que no pueden coexistir dos respuestas simultáneamente. Si se produce, entonces habrá que construir variables de respuesta múltiple.
+
+Junto a las preguntas y sus valores se acompaña la clasificación de variables y definición de escalas. Las variables pueden ser clasificadas en:
+
+| Escala | Ejemplo |
+|------|------|
+|  Nominal    | Fuma: "si" - "no"     |   
+| Ordinal     | Nivel de ingresos: "Alto" - "Medio" - "Bajo"     |     
+| Intervalo    | Hora del día: "0:00"..."24:00" |     
+| Razón   | Peso (Kgrs): 0....a n |     
+
+Otras escalas especiales son las de Likert, Guttman, visuales análogas, etc
+
+En muchas oportunidades encontramos en las tablas de datos provenientes de cuestionarios variables codificadas. La codificación es la tarea de asignar códigos a las distintas respuestas de las preguntas del cuestionario y obtener así los distintos valores de las variables con los que se construye la matriz de datos.
+
+Es necesario estar atento a esta situación porque en algunas tablas de datos de fuente secundaria se suele asignar valores extremos en la escala numérica de variables con este tipo de dato, por ejemplo en la ENFR utilizan 9, 99, 999 dependiendo de los dígitos que tenga la variable para referirse a categorías tipo Ns/Nc o sin dato.
+
+Todo lo desarrollado anteriormente nos lleva a que cada tabla de datos que construyamos nosotros mismos o las tablas provenientes de fuentes secundarias deben estar acompañadas de diccionario de datos o cuadros de operacionalización donde esten definidas las características, valores legales y codificación de cada variable de estudio.
+
+Ver [Manual de uso de la base de datos usuario ENFR 2018](https://www.indec.gob.ar/ftp/cuadros/menusuperior/enfr/manual_base_usuario_enfr2018.pdf)
+
+## Consideraciones éticas
+
+Nuestras tablas de datos suelen contener información de sujetos humanos lo que conlleva a la responsabilidad de proteger a esos datos. Los datos de humanos pueden contener información identificable que aumenta el riesgo de que los participantes puedan ser revelados en un conjunto de datos. Habitualmente también contienen información sobre temas sensibles vinculado a la salud lo que aumenta aún más los riesgos si se identifica a los participantes. 
+
+Cuando se trabaja con sujetos humanos, hay dos tipos de identificadores que se pueden recopilar en el estudio: directos e indirectos.
+
+Los identificadores directos son exclusivos de un individuo y se pueden utilizar para identificar a un participante. Los identificadores indirectos no son necesariamente exclusivos de un individuo en particular, pero si se combinan con otra información se pueden utilizar para identificar a un participante.
+
+La [Oficina de Ética de Investigación Humana de la Universidad de Carolina del Norte](https://research.unc.edu/2020/05/01/de-identified-coded-or-anonymous-how-do-i-know/) define 4 tipos de archivos de datos en función a la identifcación personal:
+
+1. **Identificable**: los datos incluyen información de identificación personal. Es común que los datos crudos sin procesar de un estudio de investigación sean identificables.
+
+2. **Codificado**: en este tipo de archivo de datos, se ha eliminado o distorsionado la información de identificación personal y se han reemplazado los nombres por un código (es decir, un identificador único del participante). La única forma de vincular los datos con un individuo es a través de ese código. El archivo de código de identificación (clave de vinculación) se almacena por separado de los datos de investigación. Los datos codificados son, por lo general, el tipo de archivo que se crea después de limpiar los datos sin procesar del estudio (clean_data).
+
+3. **Desidentificado**: en este tipo de archivo, se ha eliminado o distorsionado la información de identificación y los datos ya no se pueden volver a asociar con la persona subyacente (la clave de vinculación ya no existe). Esto es lo que se crea normalmente cuando se comparten públicamente los datos de un estudio de investigación.
+
+4. **Anónimo**: en un conjunto de datos anónimo, nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico.
+
+### Sensibilidad
+
+Los datos suelen clasificarse en función del nivel de sensibilidad. Estos niveles de sensibilidad determinan cómo se pueden recopilar, almacenar y compartir los datos, así como cuál debe ser la respuesta ante cualquier violación de datos. Si bien existe variación, aquí se presenta un resumen general de cómo se puede categorizar la información.
+
+- **Sensibilidad baja**: se considera que estos datos no presentan riesgo o que presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.
+
+- **Sensibilidad moderada**: Se considera que estos datos tienen un riesgo moderado si se divulgan, lo que significa que podrían afectar negativamente a las personas. Estos datos pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. Por lo general, se exige que estos datos se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.
+
+- **Alta sensibilidad**: estos datos deben estar sujetos a las medidas de seguridad más estrictas y podrían causar un gran daño si se divulgan. Estos datos incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos) y, por lo general, se exige que se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.
+
+## Plan de gestión de datos
+
+Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación.
+
+Es oportuno que acompañe o sea parte del protocolo de investigación o del manual de procedimiento de un programa de vigilancia epidemiológica y puede contener los siguientes items: 
+
+1. Descripción de los datos que se compartirán 
+
+- ¿Cuál es la fuente de los datos? (por ejemplo, encuestas, datos existentes, sistemas de vigilancia, etc)
+- ¿Cómo se limpiarán y conservarán los datos antes de compartirlos?
+- ¿Cuál será el nivel de agregación? (por ejemplo, nivel de elemento, datos resumidos, solo metadatos)
+  - Es posible que sea necesario compartir los conjuntos de datos de un proyecto de diferentes maneras debido a razones legales, éticas o técnicas.
+- ¿Se compartirán datos tanto brutos como limpios?
+
+2. Formato de los datos a compartir 
+
+- ¿Los datos estarán en formato electrónico?
+- ¿Se proporcionará en un formato no propietario? (por ejemplo, csv)
+- ¿Se proporcionará más de un formato? (por ejemplo, xlsx y csv)
+- ¿Se necesitan herramientas para manipular o reproducir datos compartidos? (por ejemplo, software, código)
+  - Proporcione detalles sobre esas herramientas (por ejemplo, cómo se puede acceder a ellas, número de versión, sistema operativo requerido).
+
+3. Documentación a compartir 
+
+- ¿Qué documentación compartirás?
+  - Considere la documentación a nivel de proyecto, de conjunto de datos y de variable.
+- ¿En qué formato estará su documentación? (por ejemplo, csv, pdf)
+
+4. Normas 
+
+- ¿Planea utilizar algún estándar para cuestiones como metadatos, recopilación de datos o formato de datos?
+
+5. Conservación de datos 
+
+- ¿Dónde se archivarán los datos internamente?
+  - Medidas de seguridad y accesos
+- ¿Se archivarán los datos para compartirlos públicamente? ¿Dónde?
+- ¿Cuáles son las características deseables del repositorio? (por ejemplo, identificadores únicos y persistentes asignados a los datos, metadatos recopilados, procedencia de los registros, opciones de licencia)
+- ¿Cuándo depositará sus datos de estudio en el repositorio y durante cuánto tiempo permanecerán accesibles los datos?
+- ¿Cómo permitirá la reutilización de datos?
+
+6. Consideraciones sobre acceso, distribución o reutilización 
+
+- ¿Existen factores legales, técnicos o éticos que afecten la reutilización, el acceso o la distribución de sus datos?
+- ¿Se restringirán algunos datos?
+- ¿Se requieren controles de acceso (por ejemplo, un acuerdo de uso de datos)?
+
+7. Protección de la privacidad y la confidencialidad 
+
+- ¿Los participantes firman acuerdos de consentimiento informado? ¿El consentimiento comunica cómo se espera que se utilicen y compartan los datos de los participantes?
+¿Cómo evitará la divulgación de información de identificación personal cuando comparta datos?
+
+8. Seguridad de los datos 
+
+- ¿Cómo se mantendrá la seguridad y la integridad de los datos durante un proyecto? (por ejemplo, considere el almacenamiento, el acceso, la copia de seguridad y la transferencia de datos)
+
+9. Funciones y responsabilidades 
+
+- ¿Cuáles son los roles del personal en la gestión y preservación de datos?
+- ¿Quién garantiza la accesibilidad, fiabilidad y calidad de los datos?
+- ¿Existe un plan si un miembro principal del equipo abandona el proyecto o la institución?
+
+## Planificación de la gestión de datos 
+
+Planificar las etapas del proceso de investigación o del protocolo de trabajo habitual en la vigilancia epidemiológica consiste en decidir y documentar los pasos a seguir por todo el equipo durante el estudio.
+
+La reproducibilidad comienza en la fase de planificación y por lo tanto habrá que dedicar tiempo para crear, documentar y capacitar al personal en estándares de gestión de datos antes de que comience su proyecto, dado que ayuda a garantizar que los procesos se implementen con fidelidad y se puedan replicar de manera consistente.
+
+Un ejemplo relacionado a esta planificación que es recurrente en todos los casos es la limpieza de datos.
+
+### Plan de limpieza de datos
+
+Un plan de limpieza de datos es una propuesta escrita que describe cómo planeamos transformar los datos sin procesar en datos limpios y utilizables. Este documento no contiene código y no depende de habilidades técnicas. Es necesario sobre todo si compartimos el trabajo con otros integrantes o bien la información se recolecta o recibe de forma periódica (por ejemplo en vigilancia epidemiológica). Dado que este documento describe las transformaciones previstas para cada conjunto de datos sin procesar, permite que cualquier miembro del equipo brinde comentarios sobre el proceso de limpieza de datos.
+
+Un ejemplo de un plan simple de limpieza de datos para un archivo de datos cualquiera:
+
+```{markdown}
+1. Importar datos crudos
+2. Visualizar datos (filas y columnas)
+3. Remover registros duplicados en caso de existir (usando las reglas del caso, duplicados completos o por claves)
+4. Anonimizar datos 
+5. Renombrar variables basado en el diccionario de datos
+6. Diagnosticar variables (tipos, inconsistencias, etc)
+7. Depurar datos diagnosticados
+8. Detección de valores perdidos (missing)
+9. Creación de variables construidas (clasificación, cálculo, agrupamientos, etc)
+10. Exportar datos limpios en el formato elegido 
+```
+
+Así como se desarrolla este plan de limpieza se definen otros planes para la recolección, análisis, comunicación, publicación, etc.
+
+## Guía de estilo
 
 
-una base de datos es un conjunto de datos relacionados y organizados a través de una o más tablas con información sobre una población o muestra.
 
-  Instrumentos de recolección de datos - Cuestionario estructurado - Tipo de preguntas - Validación - estándares
-  Ética - Consentimientos - confidencialidad - sensibilidad - anonimización
-  Recolección electrónica - Bases de datos (relacional / no relacional) - nombre de variables - codificación de valores - diccionario de datos - prueba piloto 
 
-Planificación de la gestión de datos (documentación, guías de estilo, etc) 
-  Proyectos - estructura de directorios y archivos - metadatos - buenas practicas
-  Captura de datos - Formatos de archivos - formato largo / ancho - variables identificadoras - clave primaria / foránea - uniones
+### Buenas prácticas
 
-Depuración y validación de datos  
-  Almacenamiento, seguridad, colaboración y archivo de datos
 
-- Análisis - Softwares y lenguajes disponibles 
+### Estructura de directorio
 
+
+### Nombres de archivo
+
+
+### Nombres de variables
+
+
+### Codificación de valores
+
+
+
+
+## Formatos de archivos
+
+
+
+## Almacenamiento y seguridad
+
+
+
+## Depuración de datos
+
+
+criterios de calidad
+
+
+## Softwares y lenguajes de análisis
+
+
+(documentación, guías de estilo, etc) Proyectos - estructura de directorios y archivos - metadatos - buenas practicas Captura de datos - Formatos de archivos 
+
+Depuración y validación de datos\
+Almacenamiento, seguridad, colaboración y archivo de datos
+
+-   Análisis - Softwares y lenguajes disponibles
