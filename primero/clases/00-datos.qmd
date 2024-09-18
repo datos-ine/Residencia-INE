@@ -348,25 +348,204 @@ Así como se desarrolla este plan de limpieza se definen otros planes para la re
 
 ## Guía de estilo
 
+Las guías de estilo crean estandarización dentro y entre proyectos. Los beneficios de usarlas de manera consistente mejora la interpretación de las estructuras del proyecto y organiza mejor la información, así como también aumentan la reproducibilidad e interoperabilidad. 
 
+Son muy útiles para proyectos colaborativos o integrados por muchas personas. Se pueden crear para proyectos individuales, pero también se pueden crear a nivel de equipo para que se apliquen en todos los proyectos.
 
 
 ### Buenas prácticas
 
+Antes de profundizar en las partes de una guía de estilo, hay algunas cosas que debemos saber sobre cómo las computadoras leen los nombres para comprender el “por qué” detrás de algunas de estas prácticas.
+
+1. Evite los espacios.
+
+- Las operaciones de línea de comandos y algunos sistemas operativos no las admiten, por lo que es mejor evitarlas por completo. Las direcciones web URL tampoco.
+- El guión bajo (_) y el guion (-) son generalmente buenos delimitadores para usar en lugar de espacios. 
+
+2. Con excepción de (_) y (-), evite los caracteres especiales en directorios y nombres de archivos. 
+
+- Los ejemplos incluyen, entre otros ?, ., *, \, /, +, ', &, ".
+- Las computadoras asignan un significado específico a muchos de estos caracteres especiales.
+- Evite caracteres acentuados y eñes
+
+3. Existen varias convenciones de nomenclatura que puedes elegir para añadir a tu guía de estilo. El uso de estas convenciones te ayuda a ser coherente con los delimitadores y las mayúsculas, lo que no solo hace que tus nombres sean más legibles para los humanos, sino que también permite que tu computadora lea y busque nombres más fácilmente.
+
+4. Ordenado de manera útil, donde se tenga en cuenta la clasificación alfanumérica y el completado de ceros a la izquierda cuando hay más de un dígito. Utilización del estándar ISO 8601 para fechas (AAAA-MM-DD).
+
+5. La longitud de los caracteres es importante. Las computadoras no pueden leer nombres que superen una determinada longitud de caracteres. Esto se aplica a las rutas de archivos, los nombres de archivos y los nombres de variables. 
+
 
 ### Estructura de directorio
 
+Al decidir cómo estructuramos los directorios del proyecto (la organización de carpetas y archivos dentro de un sistema operativo), hay varias cosas que debemos considerar.
 
-### Nombres de archivo
+**Carpetas**
+
+En primer lugar, pensemos en organizar el directorio en una estructura de carpetas jerárquica para delinear claramente los segmentos del proyecto y mejorar la capacidad de búsqueda.
+
+Al crear la estructura de carpetas, buscamos un equilibrio entre una estructura profunda y una superficial.
+
+- Si es demasiado superficial, habrá demasiados archivos en una carpeta, lo cual resulta difícil de clasificar.
+
+- Si la ruta es demasiado profunda, se necesitarán demasiados clics para llegar a un archivo, y las rutas de archivo pueden tener demasiados caracteres. Una ruta de archivo incluye la longitud completa de las carpetas y el nombre del archivo. (por ejemplo, el límite de ruta de Windows es de 260 caracteres).
+
+Considere establecer un límite de caracteres en los nombres de las carpetas (nuevamente para reducir los problemas al alcanzar los límites de caracteres de la ruta).
+
+- Haga que los nombres de sus carpetas sean significativos y fáciles de interpretar.
+- No utilice espacios en los nombres de sus carpetas.
+- Utilice (_) o (-) para separar palabras.
+- Con excepción de (-) y (_), no utilice caracteres especiales en los nombres de sus carpetas.
+- Sea coherente con los delimitadores y el uso de mayúsculas y minúsculas. Siga una convención de nomenclatura existente. 
+- Si prefiere que sus carpetas aparezcan en un orden específico, agregue el número de orden al comienzo del nombre de la carpeta, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).
+
+Un ejemplo de estructura de directorios completa de un proyecto podría ser el siguiente:
+
+```{markdown}
+
+nombre_proyecto/
+├── 01_planificacion
+|   ├── proyecto
+|   |   ├── fuentes
+|   |   |   └── ...
+|   ├── reuniones
+|   |   ├── minutas
+|   |   |   └── ...
+|   └── ...
+├── 02_documentacion
+|   ├── formularios
+|   |   └── ...
+|   ├── diccionarios_datos
+|   |   └── ...
+|   ├── protocolo
+|   └── ...
+├── 03_recoleccion_datos
+|   ├── materiales
+|       └── ...
+├── 04_seguimiento
+│   ├── cronograma
+|       └── ...
+├── 05_datos
+│   ├── cohorte1
+│   |   ├── pacientes
+|   |   |   ├── encuesta
+|   |   |   |   ├── datos_limpios
+|   |   |   |   |   ├── archivos
+|   |   |   |   |   |   └── log.txt
+|   |   |   |   ├── datos_crudos
+|   |   |   |   |   ├── archivos
+|   |   |   |   |   |   └── log.txt
+|   |   |   |   └── ...  
+|   |   |   └── ... 
+|   |   └── ...
+|   └── ...   
+└── ...
 
 
-### Nombres de variables
+```
 
+
+**Archivos**
+
+A menudo tenemos apuro por guardar nuestros archivos y tal vez no consideramos lo poco claros que serán los nombres para los futuros usuarios (incluidos nosotros mismos).
+
+Nuestros nombres de archivos por sí solos deberían poder responder preguntas como:
+
+- ¿Qué son estos documentos?
+- ¿Cuando se crearon estos documentos?
+- ¿Cuál documento es la versión más reciente?
+
+Una guía de estilo de nombres de archivos nos ayuda a nombrar los archivos de una manera que nos permita responder a estas preguntas. Podemos tener una guía de nombres de archivos general o guías de nombres de archivos para diferentes propósitos que requieren diferentes estrategias de organización (por ejemplo, una guía de nombres para notas de reuniones de proyectos, otra guía de nombres para archivos de datos de proyectos). Repasemos varias convenciones que se deben tener en cuenta al nombrar los archivos.
+
+- Que los nombres sean descriptivos (un usuario debe poder comprender el contenido del archivo sin abrirlo).
+- No se debe utilizar ninguna información de identificación personal en un nombre de archivo (por ejemplo, nombre del participante).
+- Nunca utilice espacios entre palabras.
+- Utilice (-) o (_) para separar palabras.
+- Con excepción de (_) y (-), nunca utilice caracteres especiales.
+- Sea coherente con los delimitadores y el uso de mayúsculas y minúsculas. Siga una convención de nomenclatura existente.
+- Considere limitar la cantidad de caracteres permitidos para evitar alcanzar el límite de su ruta.
+- Formatee las fechas de forma uniforme y no utilice barras diagonales (/) para separar partes de una fecha. Es conveniente formatear las fechas utilizando la norma ISO 8601 de una de estas dos maneras: AAAA-MM-DD o AAAAMMDD
+- Al versionar manualmente los nombres de archivos, elija un indicador consistente para usar. Un método consiste es añadir un número al nombre del archivo. Con este método, considere rellenar a la izquierda los números individuales con un 0 para mantener el nombre del archivo con la misma longitud a medida que crece (v01, v02).
+Otro método es agregar una fecha al nombre del archivo, utilizando el estándar ISO 8601.
+- Si sus archivos necesitan ejecutarse en un orden secuencial, agregue el número de orden al comienzo del nombre del archivo, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).
+- Mantenga metadatos redundantes (información) en el nombre del archivo.
+Esto reduce la confusión si alguna vez mueves un archivo a una carpeta diferente o envías un archivo a un colaborador. También permite realizar búsquedas en tus archivos.
+Por ejemplo, coloque siempre la palabra "raw" (crudo) o "clean" (limpio) en un nombre de archivo de datos, incluso si el archivo está alojado en una carpeta "raw" o "clean".
+- Elija un orden para los metadatos del nombre del archivo (por ejemplo, proyecto -> tiempo -> participante -> instrumento).
+
+Algunos ejemplos de nombres de archivos:
+
+```{markdown}
+01_proy1_depuracion-datos_v06.R
+02_proy1_modelos-ajustados_2024-09-11.R
+fig01_barras-grupo_etario.png
+tabla_poblacion_indec.xlsx
+```
+
+
+### Variables
+
+El mismo cuidado o aplicación de las buenas prácticas vistas hasta el momento aplican en la elección de los nombres de variables de las tablas de datos.
+
+Hay dos tipos de reglas: las que son requisitos no negociables que realmente deberían incluirse en la guía de estilo (si no se sigue estas reglas, enfrentaremos serios problemas de interpretación tanto para los humanos como para las máquinas) y las sugerencias de mejores prácticas que se recomiendan pero no son obligatorias.
+
+**Obligatorio**
+
+- No nombre una variable con ninguna palabra clave o función reservada y utilizada en ningún lenguaje de programación (como if, for, repeat).
+- Establecer un límite de caracteres (La mayoría de los programas estadísticos tienen un límite de caracteres en los nombres de las variables.) Considere el equilibrio entre el límite de caracteres y la interpretación. 
+- No utilice espacios ni caracteres especiales, excepto (_). No están permitidos en la mayoría de los programas. Incluso el (-) no está permitido en programas como R y SPSS ya que puede confundirse con un signo menos.
+Si bien (.) está permitido en R y SPSS, no está permitido en Stata, por lo que es mejor evitar su uso.
+- No comience el nombre de una variable con un número. Esto no está permitido en muchos programas estadísticos.
+
+
+**Sugerido**
+
+- Evite agregar acentos y eñes a las palabras que use como nombre de variable.
+- Trate que todas las tablas tengan un identificador único de observación o registro. Si no está vinculado específicamente a cada unidad de análisis, genere uno arbitrario pero que identifique cada observación (suelen usarse ID numéricos secuenciales).
+- Preste atención al uso de minúsculas y mayúsculas. La mayoría de los lenguajes de análisis son sensibles a estas diferencias.
+- Si hay variables producto de preguntas con respuestas múltiples, comience los nombres de variables asociadas con el mismo prefijo (sintomas_fiebre, sintomas_vomitos, sintomas_mialgias).
+- Separe con prefijos y sufijos los nombres de las variables que pertenecen a distintos bloques de una encuesta o a diferentes tipos de participantes. Por ejemplo en las ENFR los prefijos denotan el bloque de la encuesta, BI_ = Bloque Individual, BH_ = Bloque Hogar y el sufijo _J identifica variables del jefe de hogar.
+
+Algunos ejemplos de nombres de variables:
+
+```{markdown}
+bi_hi_01 = bloque hogar -> ingresos del hogar -> pregunta 01 
+rango_edad_j = rango de edad -> jefes de hogar
+nivel_instruccion_agrupado -> variable agrupada - nivel de instruccion
+condicion_actividad_c -> variable construida - condicion de actividad
+```
 
 ### Codificación de valores
 
+Se pueden definir codificaciones que sigan el esquema propuesto dentro del diccionario de datos de la tabla. En algunas ocasiones, variables de interes dicotómica que luego darán lugar a análisis de regresión suelen declararse con 1 para el Si y 0 para el No, orientandose el valor al proceso de funciones de regresión logistica de lenguajes como R.
 
+Algunas pautas a considerar en esta tarea son:
 
+- Los códigos deben ser únicos.
+Asignamos “sí” = 1 | “no” = 0 y evitamos “sí” = 1 | “no” = 1
+
+- Los códigos deben ser consistentes dentro de una variable.
+Para sexo asignamos “masculino” = 'm' y evitamos que “masculino” = 'm' o 'M' o 'Masculino' o 'masculino' dado que para la maquina terminarán siendo valores distintos por el uso de minúscula y mayúscula.
+
+- Los códigos deben ser consistentes en todo el proyecto.
+Si asignamos “sí” = 1 | “no” = 0 como valor para todos los elementos de sí/no, evitamos asignar “sí” = 1 | “no” = 0 para algunas variables y “sí” = 1 | “no” = 2 para otras.
+
+- Alineamos los códigos con las opciones de respuesta lo mejor posible.
+Asignar “ninguno” = 0 | “1” = 1 | “2” = 2 | “3 o más” = 3 y evitamos “ninguno” = 1 | “1” = 2 | “2” = 3 | “3 o más” = 4
+
+- Los códigos de escala tipo Likert deben ordenarse lógicamente.
+Asignamos “totalmente en desacuerdo” = 1 | “en desacuerdo” = 2 | “de acuerdo” = 3 | “totalmente de acuerdo” = 4 y evitamos “totalmente en desacuerdo” = 1 | “en desacuerdo” = 3 | “de acuerdo” = 4 | “totalmente de acuerdo” = 2
+
+Respecto a los valores faltantes hay una variedad de estilos, pero se pueden resumir en dos opciones generales:
+
+1. Podemos elegir dejar todos los valores faltantes en blanco.
+- La ventaja de esta opción es que no hay posibilidad de que los códigos de valores faltantes asignados (por ejemplo, -999) se confundan con valores reales.
+La preocupación con este método es que no hay manera de discernir si el valor realmente falta, o fue borrado por accidente u omitido durante el ingreso de datos. 
+
+2. La otra opción es definir códigos faltantes y agregarlos a los datos. 
+- Este código puede ser numérico (por ejemplo, “faltante” = 99 o -999) o de caracteres (por ejemplo, “faltante” = 'Sin dato') y puede ser un código uniforme aplicado a todos los datos faltantes, o puede ser varios códigos asignados para diferentes tipos de datos faltantes.
+- Una ventaja de este método es que elimina la incertidumbre que teníamos con las celdas en blanco. Si se completa un valor, ahora tenemos la certeza de que no se eliminó ni se omitió durante la entrada de datos.
+- Otro beneficio es que esto le permite especificar razones distintas para los datos faltantes (por ejemplo, “Sin dato” = 99, “Ilegible” = 98) si eso es importante para su estudio.
+- El mayor problema que puede ocurrir con este método es que sus códigos podrían confundirse con valores reales (si alguien no conoce la documentación sobre valores faltantes) o si usa un valor que no coincide con su tipo de variable, entonces introduce nuevos problemas de tipo de variable (por ejemplo, si se usa 'NULL' en una variable numérica, esa variable ya no será numérica) o se calculo la media de edad con valores 999 que no son reales y van a sesgar el resultado.
 
 ## Formatos de archivos
 
