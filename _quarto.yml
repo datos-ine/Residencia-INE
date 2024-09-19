@@ -25,6 +25,7 @@ format:
     link-external-filter: '^https:\/\/(www\.)?(linkedin|twitter|github)\.*'
     code-copy: true
     anchor-sections: false
+    bibliography: references.bib
 
 
 

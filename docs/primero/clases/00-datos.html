@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -180,6 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#criterios-de-calidad" id="toc-criterios-de-calidad" class="nav-link" data-scroll-target="#criterios-de-calidad">Criterios de calidad</a></li>
   </ul></li>
   <li><a href="#softwares-y-lenguajes-de-análisis-estadístico" id="toc-softwares-y-lenguajes-de-análisis-estadístico" class="nav-link" data-scroll-target="#softwares-y-lenguajes-de-análisis-estadístico">Softwares y lenguajes de análisis estadístico</a></li>
+  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
   </ul>
 </nav>
 </nav>
@@ -209,24 +230,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>La gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, el almacenamiento, la preservación y la difusión de los datos antes de iniciar la etapa de análisis final. Los datos de los estudios de investigación incluyen los materiales generados o recopilados a lo largo de un proceso de investigación. Como se puede imaginar, esta amplia definición incluye mucho más que la gestión de conjuntos de datos digitales. También incluye archivos físicos, documentación, cuestionarios, grabaciones y más. En definitiva, es una tarea importante que comienza mucho antes de que se recopilen los datos, durante la fase de planificación, y continúa mucho después de que finaliza un proyecto de investigación durante la fase de archivo y uso compartido.</p>
+<p>La gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, el almacenamiento, la preservación y la difusión de los datos antes de iniciar la etapa de análisis final.</p>
+<p>Los datos de los estudios de investigación incluyen los materiales generados o recopilados a lo largo de un proceso de investigación. Como podemos imaginar, esta amplia definición incluye mucho más que la gestión de conjuntos de datos digitales. También incluye archivos físicos, documentación, cuestionarios, grabaciones y más. En definitiva, es una tarea importante que comienza mucho antes de que se recopilen los datos, durante la fase de planificación, y continúa mucho después de que finaliza un proyecto de investigación durante la fase de archivo y uso compartido.</p>
 <section id="ciencia-abierta" class="level2">
 <h2 data-anchor-id="ciencia-abierta">Ciencia abierta</h2>
-<p>Con el auge tecnológico de los últimos años surgió un creciente interés en las prácticas de ciencia abierta, donde compartir datos bien gestionados y documentados ayuda a generar confianza en el proceso de investigación. Compartir datos curados de manera reproducible es <em>“un fuerte indicador para los colegas investigadores de rigor, confiabilidad y transparencia en la investigación científica”</em> según Alston y Rick 2021. También permite que otros repliquen y aprendan de su trabajo, validen sus resultados para fortalecer la evidencia, así como también detecten potencialmente errores en su trabajo, evitando que se tomen decisiones basadas en datos incorrectos. Compartir sus datos con suficiente documentación y metadatos estandarizados también puede conducir a una mayor colaboración y un mayor impacto ya que los colaboradores pueden acceder y comprender sus datos con facilidad.</p>
+<p>Con el auge tecnológico de los últimos años surgió un creciente interés en las prácticas de ciencia abierta, donde compartir datos bien gestionados y documentados ayuda a generar confianza en el proceso de investigación. Compartir datos curados de manera reproducible es <em>“un fuerte indicador para los colegas investigadores de rigor, confiabilidad y transparencia en la investigación científica”</em> según <span class="citation" data-cites="Alston2021">(<a href="#ref-Alston2021" role="doc-biblioref">Alston and Rick 2021</a>)</span>. También permite que otros repliquen y aprendan de su trabajo, validen sus resultados para fortalecer la evidencia, así como también detecten potencialmente errores en su trabajo, evitando que se tomen decisiones basadas en datos incorrectos. Compartir sus datos con suficiente documentación y metadatos estandarizados también puede conducir a una mayor colaboración y un mayor impacto ya que los colaboradores pueden acceder y comprender sus datos con facilidad.</p>
 <p>La ciencia abierta tiene como objetivo hacer que la investigación y la difusión científicas sean accesibles para todos, lo que hace absolutamente necesaria la necesidad de buenas prácticas de gestión de datos.</p>
 <p>Organizaciones, como el <strong>Centro para la Ciencia Abierta</strong> (Center for Open Science) <a href="https://www.cos.io" class="uri">https://www.cos.io</a>, se han convertido en un conocido defensor de la ciencia abierta, ofreciendo el <em>Marco de Ciencia Abierta</em> (OSF por Open Science Framework) como una herramienta para promover la ciencia abierta a lo largo de todo el ciclo de vida de la investigación.</p>
 </section>
 <section id="marcos-existentes---fair" class="level2">
 <h2 data-anchor-id="marcos-existentes---fair">Marcos existentes - FAIR</h2>
-<p>En 2016, se publicaron los Principios <strong>FAIR</strong> en <em>Scientific Data</em> (Wilkinson et al.&nbsp;2016), que describen cuatro principios rectores para la gestión y administración de datos científicos. Estos principios se crearon para mejorar y respaldar la reutilización de datos académicos, específicamente la capacidad de las máquinas para acceder y leer datos. Son la base de cómo se deben compartir públicamente todos los datos digitales.</p>
+<p>En 2016, se publicaron los Principios <strong>FAIR</strong> en <em>Scientific Data</em> <span class="citation" data-cites="Wilkinson2016">(<a href="#ref-Wilkinson2016" role="doc-biblioref">Wilkinson 2016</a>)</span>, que describen cuatro principios rectores para la gestión y administración de datos científicos. Estos principios se crearon para mejorar y respaldar la reutilización de datos académicos, específicamente la capacidad de las máquinas para acceder y leer datos. Son la base de cómo se deben compartir públicamente todos los datos digitales.</p>
 <p>Los principios son:</p>
-<p><strong>F: Findable (Localizable)</strong></p>
+<p><code>F</code><strong>: Findable (Localizable)</strong></p>
 <p>Todos los datos deben poder encontrarse mediante un identificador persistente y contar con metadatos completos que permitan realizar búsquedas. Estas prácticas ayudan al descubrimiento de información a largo plazo y proporcionan citas registradas.</p>
-<p><strong>A: Accessible (Accesible)</strong></p>
-<p>Los usuarios deberían poder acceder a sus datos. Esto puede significar que sus datos estén disponibles en un repositorio o a través de un sistema de solicitudes. Como mínimo, un usuario debería poder acceder a los metadatos, incluso si los datos reales no están disponibles abiertamente.</p>
-<p><strong>I: Interoperable</strong></p>
+<p><code>A</code><strong>: Accessible (Accesible)</strong></p>
+<p>Los usuarios deberían poder acceder a sus datos. Esto puede significar que sus datos estén disponibles en un repositorio o a través de un sistema de solicitudes. Como mínimo, un usuario debería poder acceder a los <a href="https://es.wikipedia.org/wiki/Metadatos">metadatos</a>, incluso si los datos reales no están disponibles abiertamente.</p>
+<p><code>I</code><strong>: Interoperable</strong></p>
 <p>Sus datos y metadatos deben utilizar vocabularios y formatos estandarizados. Tanto los humanos como las máquinas deben poder leer e interpretar sus datos. Las licencias no deben suponer una barrera para su uso. Los datos deben estar disponibles en formatos abiertos a los que se pueda acceder mediante cualquier software (por ejemplo, csv, txt, etc).</p>
-<p><strong>R: Reusable (Reutilizable)</strong></p>
+<p><code>R</code><strong>: Reusable (Reutilizable)</strong></p>
 <p>Para brindar contexto para la reutilización de sus datos, sus metadatos deben brindar información sobre la procedencia de los datos, brindar una descripción del proyecto, una descripción general del flujo de trabajo de los datos y los autores a los que se debe citar para una atribución adecuada. También debe tener licencias claras para el uso de los datos.</p>
 </section>
 <section id="fuentes-de-datos-primaria-y-secundaria" class="level2">
@@ -324,7 +346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Los nombres de las variables deben ser únicos. Ningún nombre de variable en un conjunto de datos puede repetirse.</p>
 <p><strong>Tipos de variables</strong></p>
 <p>El tipo de una variable determina los valores permitidos para una variable, las operaciones que se pueden realizar en la variable y cómo se almacenan los valores.</p>
-<p>Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string), de fecha o lógicos (valores True y False). Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).</p>
+<p>Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string), de fecha o lógicos (valores <code>True</code> y <code>False</code>). Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).</p>
 <p><strong>Valores variables</strong></p>
 <p>Los valores de las variables hacen referencia a la información contenida en cada columna. En cada variable se puede configurar los valores permitidos predeterminados en forma de validación a la carga de datos.</p>
 <p>Algunos ejemplos de configuración de valores permitidos para diferentes tipos de variables incluyen:</p>
@@ -380,14 +402,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>La forma en que recibimos las variables de análisis tendrán su origen en la confección de estos cuestionarios. Por lo que la construcción de estos instrumentos de recolección nacen pensando en los componentes del dato científico.</p>
 <p>Un dato científico esta compuesto por una unidad de observación, dimensiones de análisis que definen variables de estudio, valores o categorías conceptuales que luego se operacionalizan en indicadores que terminaran siendo los datos que encontramos en las tablas.</p>
 <p>La unidad de observación es la entidad que deseamos estudiar, es decir, aquella que se observa para efectuar mediciones o para clasificarla en categorías. También se denomina unidad de análisis o unidad experimental y se define acompañada de un tiempo y espacio identificable.</p>
-<p>Por ejemplo, en grandes encuestas como la ENFR tenemos varias unidades de observación: vivienda, hogar, jefe de hogar y persona encuestada.</p>
-<p>Estas unidades de observación fueron abordadas en un espacio específico, domicilio-ciudad-departamento-conglomerado-provincia del país y en un tiempo determinado (encuestas de 2005, 2009, 2013 y 2018).</p>
+<p>Por ejemplo, en grandes encuestas como la ENFR tenemos varias unidades de observación: <strong>vivienda</strong>, <strong>hogar</strong>, <strong>jefe de hogar</strong> y <strong>persona encuestada</strong>.</p>
+<p>Estas unidades de observación fueron abordadas en un espacio específico, domicilio-ciudad-departamento-conglomerado-provincia del país y en un tiempo determinado (encuestas de <strong>2005</strong>, <strong>2009</strong>, <strong>2013</strong> y <strong>2018</strong>).</p>
 <p>Las variables o dimensiones de análisis constituyen los aspectos de las unidades de observación que se han seleccionado para examinar o estudiar, de acuerdo a los problemas e hipótesis de investigación. Concretamente son aquellos atributos, propiedades o características observables de las diferentes unidades de observación.</p>
-<p>Por ejemplo, algunas de las variables recabadas en la ENFR son: edad, sexo, nivel de instrucción, actividad física, consumo de alcohol, consumo de tabaco, etc.</p>
+<p>Por ejemplo, las variables recabadas en la ENFR son: <code>edad</code>, <code>sexo</code>, <code>nivel de instrucción</code>, <code>actividad física</code>, <code>consumo de alcohol</code>, <code>consumo de tabaco</code>, etc.</p>
 <p>Algunas de estas variables son simples o directas como la edad donde solo hay que aclarar en que unidad se la está midiendo. Edad en años o edad en meses, etc.</p>
 <p>Otras son constructos más complejos donde para aprehender el concepto buscado se necesitan de una serie de preguntas / variables individuales que recaban información sobre distintas dimensiones del problema. Es el caso, por ejemplo de consumo de alcohol donde podemos consultar sobre si toma, cuando lo hace, cuanto bebe, que bebe, etc.</p>
 <p>Muchas de estas preguntas estan validadas por estudios previos y se copian con la misma estructura en diseños de cuestionarios nuevos para aprovechar la garantía de la validación y la comparabilidad que permite hacerlo.</p>
-<p>Cuando hablamos de definiciones operacionales o indicadores vinculados a las variables conceptuales nos referimos a los procedimientos para “medir” a estas variables. Existen variables formuladas en términos abstractos o conceptuales con cierta complejidad que deben descomponerse en varias dimensiones y deben operacionalizarse para poder medirlas.</p>
+<p>Cuando hablamos de definiciones operacionales o indicadores vinculados a las variables conceptuales nos referimos a los procedimientos para <em>“medir”</em> a estas variables. Existen variables formuladas en términos abstractos o conceptuales con cierta complejidad que deben descomponerse en varias dimensiones y deben operacionalizarse para poder medirlas.</p>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -436,7 +458,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Otras escalas especiales son las de Likert, Guttman, visuales análogas, etc</p>
+<p>Otras escalas especiales son las de <a href="https://es.wikipedia.org/wiki/Escala_Likert">Likert</a>, <a href="https://en.wikipedia.org/wiki/Guttman_scale">Guttman</a>, <a href="https://es.wikipedia.org/wiki/Escala_an%C3%A1loga_visual">visuales análogas</a>, etc</p>
 <p>En muchas oportunidades encontramos en las tablas de datos provenientes de cuestionarios variables codificadas. La codificación es la tarea de asignar códigos a las distintas respuestas de las preguntas del cuestionario y obtener así los distintos valores de las variables con los que se construye la matriz de datos.</p>
 <p>Es necesario estar atento a esta situación porque en algunas tablas de datos de fuente secundaria se suele asignar valores extremos en la escala numérica de variables con este tipo de dato, por ejemplo en la ENFR utilizan 9, 99, 999 dependiendo de los dígitos que tenga la variable para referirse a categorías tipo Ns/Nc o sin dato.</p>
 <p>Todo lo desarrollado anteriormente nos lleva a que cada tabla de datos que construyamos nosotros mismos o las tablas provenientes de fuentes secundarias deben estar acompañadas de diccionario de datos o cuadros de operacionalización donde esten definidas las características, valores legales y codificación de cada variable de estudio.</p>
@@ -469,7 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación.</p>
 <p>Es oportuno que acompañe o sea parte del protocolo de investigación o del manual de procedimiento de un programa de vigilancia epidemiológica y puede contener los siguientes items:</p>
 <ol type="1">
-<li>Descripción de los datos que se compartirán</li>
+<li><strong>Descripción de los datos que se compartirán</strong></li>
 </ol>
 <ul>
 <li>¿Cuál es la fuente de los datos? (por ejemplo, encuestas, datos existentes, sistemas de vigilancia, etc)</li>
@@ -481,7 +503,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>¿Se compartirán datos tanto brutos como limpios?</li>
 </ul>
 <ol start="2" type="1">
-<li>Formato de los datos a compartir</li>
+<li><strong>Formato de los datos a compartir</strong></li>
 </ol>
 <ul>
 <li>¿Los datos estarán en formato electrónico?</li>
@@ -493,7 +515,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 <ol start="3" type="1">
-<li>Documentación a compartir</li>
+<li><strong>Documentación a compartir</strong></li>
 </ol>
 <ul>
 <li>¿Qué documentación compartirás?
@@ -503,13 +525,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>¿En qué formato estará su documentación? (por ejemplo, csv, pdf)</li>
 </ul>
 <ol start="4" type="1">
-<li>Normas</li>
+<li><strong>Normas</strong></li>
 </ol>
 <ul>
 <li>¿Planea utilizar algún estándar para cuestiones como metadatos, recopilación de datos o formato de datos?</li>
 </ul>
 <ol start="5" type="1">
-<li>Conservación de datos</li>
+<li><strong>Conservación de datos</strong></li>
 </ol>
 <ul>
 <li>¿Dónde se archivarán los datos internamente?
@@ -522,7 +544,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>¿Cómo permitirá la reutilización de datos?</li>
 </ul>
 <ol start="6" type="1">
-<li>Consideraciones sobre acceso, distribución o reutilización</li>
+<li><strong>Consideraciones sobre acceso, distribución o reutilización</strong></li>
 </ol>
 <ul>
 <li>¿Existen factores legales, técnicos o éticos que afecten la reutilización, el acceso o la distribución de sus datos?</li>
@@ -530,19 +552,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>¿Se requieren controles de acceso (por ejemplo, un acuerdo de uso de datos)?</li>
 </ul>
 <ol start="7" type="1">
-<li>Protección de la privacidad y la confidencialidad</li>
+<li><strong>Protección de la privacidad y la confidencialidad</strong></li>
 </ol>
 <ul>
 <li>¿Los participantes firman acuerdos de consentimiento informado? ¿El consentimiento comunica cómo se espera que se utilicen y compartan los datos de los participantes? ¿Cómo evitará la divulgación de información de identificación personal cuando comparta datos?</li>
 </ul>
 <ol start="8" type="1">
-<li>Seguridad de los datos</li>
+<li><strong>Seguridad de los datos</strong></li>
 </ol>
 <ul>
 <li>¿Cómo se mantendrá la seguridad y la integridad de los datos durante un proyecto? (por ejemplo, considere el almacenamiento, el acceso, la copia de seguridad y la transferencia de datos)</li>
 </ul>
 <ol start="9" type="1">
-<li>Funciones y responsabilidades</li>
+<li><strong>Funciones y responsabilidades</strong></li>
 </ol>
 <ul>
 <li>¿Cuáles son los roles del personal en la gestión y preservación de datos?</li>
@@ -756,24 +778,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>En el caso que los datos provengan de una fuente secundaria es posible que el formato de los archivos sea de de un tipo específico que tendrá relación con el software donde se hizo la carga de datos o bien en el formato que los responsables de la recolección eligieron para compartir la información.</p>
 <p>Habitualmente los archivos <code>.xls</code> / <code>.xlsx</code> (Microsoft Excel), <code>.dbf</code> (database), <code>.accdb</code> (Microsoft Access) son usados en archivos creados dentro de proyectos sencillos donde las planillas de calculo o programa de bases de datos se pueden correr en computadoras personales.</p>
 <p>Si los datos fuern procesados previamente por algun software estadístico puede que los archivos compartidos tengan formato <code>.sas7bdat</code> (SAS), <code>.sav</code> (SPSS), <code>dta</code> (Stata) o <code>.RData</code> (R).</p>
-<p>También podemnos llegar a encontrar archivos <code>.json</code> (acrónimo de JavaScript Object Notation, ‘notación de objeto de JavaScript’) que es un formato abierto de texto sencillo o <code>.xml</code>(del inglés e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage, traducido como ‘Lenguaje de Marcas Extensible’).</p>
+<p>También podemnos llegar a encontrar archivos <code>.json</code> (acrónimo de <a href="https://es.wikipedia.org/wiki/JSON">JavaScript Object Notation</a>, ‘notación de objeto de JavaScript’) que es un formato abierto de texto sencillo o <code>.xml</code>(del inglés <a href="https://es.wikipedia.org/wiki/Extensible_Markup_Language">e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage</a>, traducido como ‘Lenguaje de Marcas Extensible’).</p>
 </section>
 <section id="almacenamiento-y-seguridad" class="level2">
 <h2 data-anchor-id="almacenamiento-y-seguridad">Almacenamiento y seguridad</h2>
 <p>A medida que comenzamos a recopilar datos, es importante tener una estructura bien planificada para almacenarlos de forma segura y trabajar con ellos durante el estudio activo. Hay varios objetivos que debemos tener en cuenta al configurar el sistema de almacenamiento y seguridad de archivos:</p>
 <ul>
-<li>Seguridad: garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente.</li>
+<li><strong>Seguridad:</strong> garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente.</li>
 </ul>
 <p>Para cumplir con este punto se establecen formas y protocolos que se ejecuten periódicamente de copias de seguridad que pueden realizarse en discos rígidos, espacios en un servidor central o servicios online tipo Google Drive, Dropbox, etc que deberan contar con los accesos restringidos a los usuarios autorizados del proyecto.</p>
 <ul>
-<li>Confidencialidad: asegurarse de que personas no autorizadas no vean ni accedan a información confidencial.</li>
+<li><strong>Confidencialidad:</strong> asegurarse de que personas no autorizadas no vean ni accedan a información confidencial.</li>
 </ul>
 <p>No solo estamos hablando de los archivos electrónicos producto de la recolección de datos sino también de los formularios, cuestionarios, planillas o cualquier otro dispositivo en papel que tenga información de identificación y/o sensible de participantes.</p>
-<p>Armarios con cerraduras y espacios fisicos con medidas de seguridad son recomendados en estas situaciones. Lo mismo respecto del lugar donde se encuentra la o las computadoras del equipo de trabajo, sus pendrive y discos rígidos externos.</p>
+<p>Armarios con cerraduras y espacios físicos con medidas de seguridad son recomendados en estas situaciones. Lo mismo respecto del lugar donde se encuentra la o las computadoras del equipo de trabajo, sus pendrive y discos rígidos externos.</p>
 <ul>
-<li>Accesibilidad y usabilidad de los archivos: asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen.</li>
+<li><strong>Accesibilidad y usabilidad de los archivos:</strong> asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen.</li>
 </ul>
-<p>Existen varias formas de lograr este objetivo y deberá evaluarse durante la planificación. Se pueden usar espacios de colaboración tipo Google Drive o proyectos privados de sistema de control de versiones como GitHub o GitLab. Dependerá de las capacidades de los integrantes del equipo y del nivel de comodidad buscado.</p>
+<p>Existen varias formas de lograr este objetivo y deberá evaluarse durante la planificación. Se pueden usar espacios de colaboración tipo Google Drive o proyectos privados de sistema de control de versiones como <a href="https://es.wikipedia.org/wiki/GitHub">GitHub</a> o <a href="https://es.wikipedia.org/wiki/GitLab">GitLab</a>. Dependerá de las capacidades de los integrantes del equipo y del nivel de comodidad buscado.</p>
 </section>
 <section id="depuración-de-datos" class="level2">
 <h2 data-anchor-id="depuración-de-datos">Depuración de datos</h2>
@@ -783,20 +805,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Un conjunto de datos limpio para el intercambio significa que incluye toda la muestra del estudio (no se elimina a nadie), todos los datos faltantes siguen etiquetados como faltantes (no se realiza ninguna imputación) y no se han calculado variables específicas del análisis. Cualquier limpieza adicional se realiza en otra fase de limpieza durante los análisis.</p>
 <p>Se puede pensar en los datos en tres fases distintas:</p>
 <ol type="1">
-<li>Datos brutos</li>
+<li><strong>Datos brutos</strong></li>
 </ol>
 <ul>
 <li>Este es el archivo sin procesar que proviene directamente de su fuente de recopilación o captura de datos. Si sus datos se recopilan electrónicamente, este es el archivo que extrae de su herramienta. Si sus datos se recopilan en papel, estos son los datos que se han ingresado en un formato legible por máquina. Si tiene una fuente de datos secundaria, este es el archivo que descarga o recibe del proveedor externo.</li>
 <li>Estos datos normalmente no se comparten fuera del equipo de investigación, ya que suelen contener información identificable y a menudo es necesario procesarlos más para que un usuario final pueda descifrarlos.</li>
 </ul>
 <ol start="2" type="1">
-<li>Datos depurados del estudio</li>
+<li><strong>Datos depurados del estudio</strong></li>
 </ol>
 <ul>
 <li>Éste es el conjunto de datos que se puede compartir públicamente.</li>
 </ul>
 <ol start="3" type="1">
-<li>Datos analíticos</li>
+<li><strong>Datos analíticos</strong></li>
 </ol>
 <ul>
 <li>Este conjunto de datos se crea a partir del conjunto depurado de datos (ya sea por su equipo o por otros investigadores), pero se modifica aún más para un análisis específico. Este conjunto de datos normalmente también se puede compartir públicamente en un repositorio (por ejemplo <a href="https://zenodo.org/">Zenodo</a>) en el momento de la publicación para permitir la replicación del análisis asociado. Aquí aparecen las variables creadas en el análisis, posibles eliminaciones de observaciones y/o variables e imputaciones de valores perdidos.</li>
@@ -820,7 +842,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Antes de limpiar nuestros datos, debemos tener un entendimiento compartido sobre cómo esperamos que se vean una vez que se depuren, que aseguren una determinada calidad.</p>
 <p>Los siguientes son criterios posibles de limpieza:</p>
 <ol type="1">
-<li>Completo</li>
+<li><strong>Completo</strong></li>
 </ol>
 <ul>
 <li>La cantidad de filas en su conjunto de datos debe coincidir con la cantidad de formularios completados registrados en su base de datos de seguimiento de participantes. Esto significa que todos los formularios que recopiló se capturaron (ya sea que se ingresaron o se recuperaron). También significa que eliminó todos los datos extraños que no pertenecen (por ejemplo, duplicados, participantes que no están en la muestra final, etc).</li>
@@ -828,38 +850,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Puede haber observaciones y/o variables eliminadas, pero a partir de una decisión consciente y debidamente documentada.</li>
 </ul>
 <ol start="2" type="1">
-<li>Válido</li>
+<li><strong>Válido</strong></li>
 </ol>
 <ul>
 <li>Las variables se ajustan a las restricciones que ha establecido en su diccionario de datos (por ejemplo, tipos de variables, valores y rangos de variables permitidos, la falta de elementos a nivel de elemento se alinea con las reglas del universo de variables y los patrones de omisión definidos)</li>
 </ul>
 <ol start="3" type="1">
-<li>Preciso</li>
+<li><strong>Preciso</strong></li>
 </ol>
 <ul>
 <li>Muchas veces no hay forma de saber si un valor es verdadero o no. Sin embargo, es posible utilizar su conocimiento implícito de un participante o una fuente de datos para descubrir valores erróneos.</li>
 </ul>
 <ol start="4" type="1">
-<li>Coherente</li>
+<li><strong>Coherente</strong></li>
 </ol>
 <ul>
 <li>Los valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna (por ejemplo, todos los valores de la fecha de la encuesta tienen el formato AAAA-MM-DD).</li>
 <li>En colecciones repetidas del mismo formulario, todas las variables se nombran, miden, formatean o codifican de manera consistente (por ejemplo, las categorías y/o códigos cargados en las variables son las del diccionario de datos).</li>
 </ul>
 <ol start="5" type="1">
-<li>Anonimizado</li>
+<li><strong>Anonimizado</strong></li>
 </ol>
 <ul>
 <li>Si se promete confidencialidad a los participantes, es necesario anonimizar los datos. En las primeras fases de limpieza, esto simplemente significa que se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio (es decir, identificador único del participante). Antes de compartir públicamente los datos, puede ser necesario un trabajo adicional para eliminar también los identificadores indirectos.</li>
 </ul>
 <ol start="6" type="1">
-<li>Interpretable</li>
+<li><strong>Interpretable</strong></li>
 </ol>
 <ul>
 <li>Las variables se nombran para que coincidan con el diccionario de datos y esos nombres son legibles tanto para humanos como para máquinas. Según sea necesario, se agregan etiquetas de variables y valores como metadatos integrados para facilitar la interpretación.</li>
 </ul>
 <ol start="7" type="1">
-<li>Analizable</li>
+<li><strong>Analizable</strong></li>
 </ol>
 <ul>
 <li>El conjunto de datos tiene un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización de datos.</li>
@@ -918,11 +940,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>Algunos poseen tanto interfaz gráfica como de línea de comando, aunque no llegan a ser un lenguaje de programación. Cada una con sus ventajas y desventajas, suele ser más veloz el aprendizaje de los paquetes gráficos pero también limitados a la hora de hacer cosas más complejas. La curva de aprendizaje de los lenguajes de programación como R, Python o Julia es lenta pero a su vez no tiene límites respecto del tipo de análisis que necesitemos.</p>
+</section>
+<section id="bibliografía" class="level2">
+
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliografía</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Alston2021" class="csl-entry" role="listitem">
+Alston, Jesse M., and Jessica A. Rick. 2021. <span>“A Beginner’s Guide to Conducting Reproducible Research.”</span> <em>The Bulletin of the Ecological Society of America</em> 102 (2): e01801. https://doi.org/<a href="https://doi.org/10.1002/bes2.1801">https://doi.org/10.1002/bes2.1801</a>.
+</div>
+<div id="ref-Wilkinson2016" class="csl-entry" role="listitem">
+Wilkinson, Dumontier, M. 2016. <span>“The FAIR Guiding Principles for Scientific Data Management and Stewardship.”</span> <em>Sci Data</em> 3: 160018. https://doi.org/<a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

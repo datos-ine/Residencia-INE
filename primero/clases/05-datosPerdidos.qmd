@@ -1,0 +1,208 @@
+---
+title: "**Datos perdidos (missing)**"
+format:
+  html:
+    page-layout: full
+    include-in-header: 
+      - text: |
+          <link rel="icon" type="image/x-icon" href="favicon.ico">  
+    toc: true
+    toc-title: Contenidos
+    toc-location: left
+    toc_float: true
+    toc_collapsed: false
+    toc_depth: 4
+number_sections: true
+anchor_sections: true
+---
+
+![](img/05/missing.jpeg){fig-align="center" width=40%}
+
+Cuando trabajamos con datos los valores perdidos o faltantes (conocidos en inglés como *missing*) pueden constituir un serio problema en nuestras variables por lo que deben explorarse y manejarse cuidadosamente en las etapas iniciales del análisis.
+
+Estos datos pueden faltar por muchas razones, pero generalmente se suelen agrupar en dos categorías: valores faltantes informativos y valores faltantes aleatorios. Los informativos implican una causa estructural, ya sea por deficiencias en la forma en que se recopilaron los datos o por anomalías en el entorno de observación. Los aleatorios son aquellos que tienen lugar independientemente del proceso de recopilación de datos.
+
+Dependiendo de si los valores faltantes son de uno u otro tipo, se procederá de una u otra manera. A los informativos, en general, se les puede asignar un valor concreto (por ejemplo, “Ninguno” o "Sin dato"), ya que este valor puede convenir tenerlo como una categoría más de la variable. Los aleatorios, en cambio, pueden manejarse mediante la eliminación o la imputación.
+
+Resumiendo, las tareas habituales respecto a estos valores consisten en:
+
+-   Evaluar la existencia de valores perdidos (exploración y conteo).
+-   Excluir los valores ausentes (si es posible y conveniente).
+-   Etiquetar o recodificar los valores ausentes (imputación de datos).
+
+Respecto a la imputación existen numerosa bibliografía sobre diversos algoritmos que no vamos a incluir en este curso.
+
+## Detectar observaciones incompletas (valores missing)
+
+El lenguaje R gestiona a los datos perdidos mediante el valor especial reservado `NA` de **Not Available** (No disponible),
+
+En principio, sólo vamos a enfocarnos en como podemos utilizar algunas funciones del lenguaje para detectarlos y contabilizarlos. A partir de su identificación decidiremos que hacer con ellos, dependiendo de su cantidad y extensión, es decir, si los valores faltantes son la mayoría de una variable o la mayoría de una observación o bien si representan la falta de respuesta de una pregunta, con lo cual convenga etiquetarlos.
+
+Una manera de abordar esta tarea con R base para una variables es hacer la sumatoria de valores `NA`, usando la función de identificación `is.na()`.
+
+Para ejemplificar, tomamos una tabla de datos de vigilancia con 200 observaciones y 56 variables.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readxl)
+
+datos <- read_excel("datos/base2023r.xlsx")
+```
+
+```{r}
+datos |> 
+  summarise(Cantidad_NA = sum(is.na(FECHA_FIN_TRAT)))
+```
+La consulta dice que hay 142 observaciones vacías en la variable FECHA_FIN_TRAT. Lo malo es que debemos hacer esta tarea variable por variable, lo que resulta muy trabajoso.
+
+También la función `summary()` aplicada sobre el dataframe completo informa la cantidad de `NA` de variables cuantitativas, lógicas y fecha, pero no lo hace con las de tipo caracter.
+
+```{r}
+summary(datos)
+```
+
+Más completo y en una sola línea la función `find_na()` del paquete **dlookr** muestra el porcentaje de valores perdidos en todas las variables de una tabla de datos y se complementa con el gráfico de barras de pareto `plot_na_pareto()`.
+
+```{r}
+#| message: false
+#| warning: false
+library(dlookr)
+
+find_na(datos, rate = T) # argumento rate = T muestra % de valores NA
+
+```
+
+```{r}
+#| out-width: 120%
+plot_na_pareto(datos, 
+               only_na = T) # argumento only_na = T muestra variables solo con algún valor NA 
+                                   
+```
+
+## Gestión de NA's con naniar
+
+![](img/05/naniar.PNG){fig-align="center" width=10%}
+
+El paquete **naniar** es un paquete que reúne funciones diseñadas para el manejo de valores faltantes pensado para una gestión completa.
+
+```{r}
+library(naniar)
+```
+
+Sus caracteristicas generales son:
+
+-   Proporciona funciones analíticas y visuales de detección y gestión
+
+-   Es compatible con el mundo "tidy" de tidyverse
+
+-   Aborda las relaciones o estructura de la falta de datos.
+
+-   Posibilita el trabajo de imputación (no tratado en este curso)
+
+De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para una tarea básica.
+
+La función `miss_var_summary()` proporciona un resumen sobre los valores NA en cada variable del dataframe similar a `find_na()` que vimos anterioremente pero con una salida en forma de tabla y un recento absoluto, además de porcentual.
+
+```{r}
+miss_var_summary(datos)
+```
+
+Por el lado gráfico, ofrece la función `gg_miss_var()` que representa la información de la tabla anterior pero a través de un gráfico *lollipop* horizontal de tipo **ggplot2**.
+
+```{r}
+#| out-width: 120%
+gg_miss_var(datos, 
+            show_pct = T) # muestra valores en porcentajes
+```
+
+Hay otra viaulización muy interesante porque muestra las relaciones de los valores ausentes de las variables cuya función se llama `gg_miss_upset()` y genera un gráfico **Upset** en función de la existencia de valores NA.
+
+```{r}
+#| eval: false
+
+gg_miss_upset(datos) 
+```
+
+![](img/05/upset1.png)
+Por defecto, construye el gráfico tomando las primeras 10 variables de la tabla de datos con valores NA de forma decreciente. Esto se puede modificar cambiando el argumentos `nset =`.
+
+Tiene dos entradas para su lectura. En la parte inferior izquierda nos muestra los nombres de las variables con valores NA ordenadas de menor a mayor medida en una escala absoluta. El gráfico de barras principal, ordenado de forma predeterminada de mayor a menor, informa sobre las cantidades absolutas de valores NA de las combinaciones que aperecen debajo del eje x del gráfico.
+
+Por ejemplo, la variable ETNIA tiene todos sus observaciones como NA y la variable COVID casi lo mismo, mientras que la variable FIS cerca de 50.
+
+Podemos eliminar del gráfico a esas dos variables con casi todos los valores NA, usando formas de tidyverse previas dado que las funciones de naniar son compatibles.
+
+```{r}
+#| eval: false
+datos |> 
+  select(-ETNIA, -COVID) |> 
+  gg_miss_upset() 
+```
+
+![](img/05/upset2.png)
+
+Al quitar esas dos variables, aparecen dos nuevas con cantidades menores de NA que FIS (FECHA_INICIO_TRAT y FECHA_INICIO_SINTOMA), es decir siguen siendo 10 por defecto.
+
+Si miramos los datos faltantes con estructura notamos que la combinación más frecuente de NA combinados es FECHA_FIN_TRAT, MOTIVO_CONSULTA y TRATAMIENTO_ANTIRETROVIRAL con 39 observaciones a las que le faltan valores en las tres variables simultáneamente.
+
+
+## Reemplazo de valores 
+
+El paquete tiene además dos funciones de reemplazo que funcionan como herramientas antagónicas.
+
+`replace_with_na()` reemplaza valores o etiquetas específicas con valores NA y `replace_na_with()` hace lo contrario, reemplaza valores NA con valores específicos, como "Sin dato" por ejemplo.
+
+
+La primera función trabaja sobre el dataframe completo adignando valores NA en la categoría o valor que le indiquemos.
+
+Por ejemplo, la variable ID_PROV_INDEC_RESIDENCIA no tiene valores perdidos pero si hay una categoría/código desconocido ("00"), entonces podemos decirle que ese código sea NA.
+
+```{r}
+datos |> 
+  summarise(Cantidad_NA = sum(is.na(ID_PROV_INDEC_RESIDENCIA)))
+
+datos |> 
+   replace_with_na(replace = list(ID_PROV_INDEC_RESIDENCIA = "00")) |>     
+  summarise(Cantidad_NA = sum(is.na(ID_PROV_INDEC_RESIDENCIA)))
+```
+`replace_na_with()`  etiqueta valores faltantes con categorías definidas que serán tenidas en cuenta a la hora de hacer tablas u otras operaciones. Esta función se utiliza dentro de `mutate()` del tidyverse.
+
+La variable MOTIVO_CONSULTA tiene 181 valores NA que serán etiquetados como "Sin dato" de esta forma:
+
+```{r}
+datos |> 
+  count(MOTIVO_CONSULTA)
+
+datos |> 
+  mutate(MOTIVO_CONSULTA = replace_na_with(MOTIVO_CONSULTA, 
+                                           "Sin dato")) |> 
+  count(MOTIVO_CONSULTA)
+```
+
+## Eliminación de valores NA
+
+Cuando decidimos eliminar valores NA de alguna variable, salvo que se quite la variable entera, tenemos que tener en cuenta que perdemos la observación completa, incluso valores válidos que se encuentran en otras variables.
+
+R base tiene una función llamada `na.omit()` que omite toda observación donde al menos haya un solo NA en alguna variable.
+
+```{r}
+na.omit(datos)
+```
+Aplicar esta función sobre el dataframe datos produce que no quede ninguna observación, dado que vimos que la variable ETNIA tenía sus doscientos valores vacíos.
+
+Una función superadora es `drop_na()` de tidyr que pertenece a tidyverse, porque omite observaciones que tengan variables que definamos, por ejemplo:
+
+```{r}
+datos |> 
+  drop_na(ETNIA)
+
+datos |> 
+  drop_na(FIS)
+```
+En el ejemplo anterior aplicamos la función sobre la variable ETNIA y FIS, en el primer caso omite todas las observaciones y en el segundo caso 48 observaciones, mostrando las 152 restantes sin NA en la variable.  
+
+Por último, debemos saber que eliminar observaciones por valores faltantes reduce la potencia de cualquier test de hipotesis o modelo que hagamos porque se reduce el tamaño de la muestra.

@@ -20,11 +20,13 @@ anchor_sections: true
 knitr::opts_chunk$set(comment=NA, dpi = 300)
 ```
 
-La gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, el almacenamiento, la preservación y la difusión de los datos antes de iniciar la etapa de análisis final. Los datos de los estudios de investigación incluyen los materiales generados o recopilados a lo largo de un proceso de investigación. Como se puede imaginar, esta amplia definición incluye mucho más que la gestión de conjuntos de datos digitales. También incluye archivos físicos, documentación, cuestionarios, grabaciones y más. En definitiva, es una tarea importante que comienza mucho antes de que se recopilen los datos, durante la fase de planificación, y continúa mucho después de que finaliza un proyecto de investigación durante la fase de archivo y uso compartido.
+La gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, el almacenamiento, la preservación y la difusión de los datos antes de iniciar la etapa de análisis final.
+
+Los datos de los estudios de investigación incluyen los materiales generados o recopilados a lo largo de un proceso de investigación. Como podemos imaginar, esta amplia definición incluye mucho más que la gestión de conjuntos de datos digitales. También incluye archivos físicos, documentación, cuestionarios, grabaciones y más. En definitiva, es una tarea importante que comienza mucho antes de que se recopilen los datos, durante la fase de planificación, y continúa mucho después de que finaliza un proyecto de investigación durante la fase de archivo y uso compartido.
 
 ## Ciencia abierta
 
-Con el auge tecnológico de los últimos años surgió un creciente interés en las prácticas de ciencia abierta, donde compartir datos bien gestionados y documentados ayuda a generar confianza en el proceso de investigación. Compartir datos curados de manera reproducible es *"un fuerte indicador para los colegas investigadores de rigor, confiabilidad y transparencia en la investigación científica"* según Alston y Rick 2021. También permite que otros repliquen y aprendan de su trabajo, validen sus resultados para fortalecer la evidencia, así como también detecten potencialmente errores en su trabajo, evitando que se tomen decisiones basadas en datos incorrectos. Compartir sus datos con suficiente documentación y metadatos estandarizados también puede conducir a una mayor colaboración y un mayor impacto ya que los colaboradores pueden acceder y comprender sus datos con facilidad.
+Con el auge tecnológico de los últimos años surgió un creciente interés en las prácticas de ciencia abierta, donde compartir datos bien gestionados y documentados ayuda a generar confianza en el proceso de investigación. Compartir datos curados de manera reproducible es *"un fuerte indicador para los colegas investigadores de rigor, confiabilidad y transparencia en la investigación científica"* según [@Alston2021]. También permite que otros repliquen y aprendan de su trabajo, validen sus resultados para fortalecer la evidencia, así como también detecten potencialmente errores en su trabajo, evitando que se tomen decisiones basadas en datos incorrectos. Compartir sus datos con suficiente documentación y metadatos estandarizados también puede conducir a una mayor colaboración y un mayor impacto ya que los colaboradores pueden acceder y comprender sus datos con facilidad.
 
 La ciencia abierta tiene como objetivo hacer que la investigación y la difusión científicas sean accesibles para todos, lo que hace absolutamente necesaria la necesidad de buenas prácticas de gestión de datos.
 
@@ -32,23 +34,23 @@ Organizaciones, como el **Centro para la Ciencia Abierta** (Center for Open Scie
 
 ## Marcos existentes - FAIR
 
-En 2016, se publicaron los Principios **FAIR** en *Scientific Data* (Wilkinson et al. 2016), que describen cuatro principios rectores para la gestión y administración de datos científicos. Estos principios se crearon para mejorar y respaldar la reutilización de datos académicos, específicamente la capacidad de las máquinas para acceder y leer datos. Son la base de cómo se deben compartir públicamente todos los datos digitales.
+En 2016, se publicaron los Principios **FAIR** en *Scientific Data* [@Wilkinson2016], que describen cuatro principios rectores para la gestión y administración de datos científicos. Estos principios se crearon para mejorar y respaldar la reutilización de datos académicos, específicamente la capacidad de las máquinas para acceder y leer datos. Son la base de cómo se deben compartir públicamente todos los datos digitales.
 
 Los principios son:
 
-**F: Findable (Localizable)**
+`F`**: Findable (Localizable)**
 
 Todos los datos deben poder encontrarse mediante un identificador persistente y contar con metadatos completos que permitan realizar búsquedas. Estas prácticas ayudan al descubrimiento de información a largo plazo y proporcionan citas registradas.
 
-**A: Accessible (Accesible)**
+`A`**: Accessible (Accesible)**
 
-Los usuarios deberían poder acceder a sus datos. Esto puede significar que sus datos estén disponibles en un repositorio o a través de un sistema de solicitudes. Como mínimo, un usuario debería poder acceder a los metadatos, incluso si los datos reales no están disponibles abiertamente.
+Los usuarios deberían poder acceder a sus datos. Esto puede significar que sus datos estén disponibles en un repositorio o a través de un sistema de solicitudes. Como mínimo, un usuario debería poder acceder a los [metadatos](https://es.wikipedia.org/wiki/Metadatos), incluso si los datos reales no están disponibles abiertamente.
 
-**I: Interoperable**
+`I`**: Interoperable**
 
 Sus datos y metadatos deben utilizar vocabularios y formatos estandarizados. Tanto los humanos como las máquinas deben poder leer e interpretar sus datos. Las licencias no deben suponer una barrera para su uso. Los datos deben estar disponibles en formatos abiertos a los que se pueda acceder mediante cualquier software (por ejemplo, csv, txt, etc).
 
-**R: Reusable (Reutilizable)**
+`R`**: Reusable (Reutilizable)**
 
 Para brindar contexto para la reutilización de sus datos, sus metadatos deben brindar información sobre la procedencia de los datos, brindar una descripción del proyecto, una descripción general del flujo de trabajo de los datos y los autores a los que se debe citar para una atribución adecuada. También debe tener licencias claras para el uso de los datos.
 
@@ -111,7 +113,7 @@ Los nombres de las variables deben ser únicos. Ningún nombre de variable en un
 
 El tipo de una variable determina los valores permitidos para una variable, las operaciones que se pueden realizar en la variable y cómo se almacenan los valores.
 
-Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string), de fecha o lógicos (valores True y False). Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).
+Algunos ejemplos de tipos son numéricos, de caracteres (también llamados texto o string), de fecha o lógicos (valores `True` y `False`). Los tipos también se pueden definir de forma más específica según sea necesario (por ejemplo, continuos o categóricos).
 
 **Valores variables**
 
@@ -171,13 +173,13 @@ Un dato científico esta compuesto por una unidad de observación, dimensiones d
 
 La unidad de observación es la entidad que deseamos estudiar, es decir, aquella que se observa para efectuar mediciones o para clasificarla en categorías. También se denomina unidad de análisis o unidad experimental y se define acompañada de un tiempo y espacio identificable.
 
-Por ejemplo, en grandes encuestas como la ENFR tenemos varias unidades de observación: vivienda, hogar, jefe de hogar y persona encuestada.
+Por ejemplo, en grandes encuestas como la ENFR tenemos varias unidades de observación: **vivienda**, **hogar**, **jefe de hogar** y **persona encuestada**.
 
-Estas unidades de observación fueron abordadas en un espacio específico, domicilio-ciudad-departamento-conglomerado-provincia del país y en un tiempo determinado (encuestas de 2005, 2009, 2013 y 2018).
+Estas unidades de observación fueron abordadas en un espacio específico, domicilio-ciudad-departamento-conglomerado-provincia del país y en un tiempo determinado (encuestas de **2005**, **2009**, **2013** y **2018**).
 
 Las variables o dimensiones de análisis constituyen los aspectos de las unidades de observación que se han seleccionado para examinar o estudiar, de acuerdo a los problemas e hipótesis de investigación. Concretamente son aquellos atributos, propiedades o características observables de las diferentes unidades de observación.
 
-Por ejemplo, algunas de las variables recabadas en la ENFR son: edad, sexo, nivel de instrucción, actividad física, consumo de alcohol, consumo de tabaco, etc.
+Por ejemplo, las variables recabadas en la ENFR son: `edad`, `sexo`, `nivel de instrucción`, `actividad física`, `consumo de alcohol`, `consumo de tabaco`, etc.
 
 Algunas de estas variables son simples o directas como la edad donde solo hay que aclarar en que unidad se la está midiendo. Edad en años o edad en meses, etc.
 
@@ -185,7 +187,7 @@ Otras son constructos más complejos donde para aprehender el concepto buscado s
 
 Muchas de estas preguntas estan validadas por estudios previos y se copian con la misma estructura en diseños de cuestionarios nuevos para aprovechar la garantía de la validación y la comparabilidad que permite hacerlo.
 
-Cuando hablamos de definiciones operacionales o indicadores vinculados a las variables conceptuales nos referimos a los procedimientos para "medir" a estas variables. Existen variables formuladas en términos abstractos o conceptuales con cierta complejidad que deben descomponerse en varias dimensiones y deben operacionalizarse para poder medirlas.
+Cuando hablamos de definiciones operacionales o indicadores vinculados a las variables conceptuales nos referimos a los procedimientos para *"medir"* a estas variables. Existen variables formuladas en términos abstractos o conceptuales con cierta complejidad que deben descomponerse en varias dimensiones y deben operacionalizarse para poder medirlas.
 
 ::: {.callout-tip appearance="simple" icon="false"}
 Un ejemplo de operacionalización para la variable **Hacinamiento** es definir el indicador como:
@@ -217,7 +219,7 @@ Junto a las preguntas y sus valores se acompaña la clasificación de variables 
 | Intervalo | Hora del día: "0:00"..."24:00"               |
 | Razón     | Peso (Kgrs): 0....a n                        |
 
-Otras escalas especiales son las de Likert, Guttman, visuales análogas, etc
+Otras escalas especiales son las de [Likert](https://es.wikipedia.org/wiki/Escala_Likert), [Guttman](https://en.wikipedia.org/wiki/Guttman_scale), [visuales análogas](https://es.wikipedia.org/wiki/Escala_an%C3%A1loga_visual), etc
 
 En muchas oportunidades encontramos en las tablas de datos provenientes de cuestionarios variables codificadas. La codificación es la tarea de asignar códigos a las distintas respuestas de las preguntas del cuestionario y obtener así los distintos valores de las variables con los que se construye la matriz de datos.
 
@@ -261,7 +263,7 @@ Un plan de gestión de datos es un documento complementario sobre cómo se plane
 
 Es oportuno que acompañe o sea parte del protocolo de investigación o del manual de procedimiento de un programa de vigilancia epidemiológica y puede contener los siguientes items:
 
-1.  Descripción de los datos que se compartirán
+1. **Descripción de los datos que se compartirán**
 
 -   ¿Cuál es la fuente de los datos? (por ejemplo, encuestas, datos existentes, sistemas de vigilancia, etc)
 -   ¿Cómo se limpiarán y conservarán los datos antes de compartirlos?
@@ -269,7 +271,7 @@ Es oportuno que acompañe o sea parte del protocolo de investigación o del manu
     -   Es posible que sea necesario compartir los conjuntos de datos de un proyecto de diferentes maneras debido a razones legales, éticas o técnicas.
 -   ¿Se compartirán datos tanto brutos como limpios?
 
-2.  Formato de los datos a compartir
+2.  **Formato de los datos a compartir**
 
 -   ¿Los datos estarán en formato electrónico?
 -   ¿Se proporcionará en un formato no propietario? (por ejemplo, csv)
@@ -277,17 +279,17 @@ Es oportuno que acompañe o sea parte del protocolo de investigación o del manu
 -   ¿Se necesitan herramientas para manipular o reproducir datos compartidos? (por ejemplo, software, código)
     -   Proporcione detalles sobre esas herramientas (por ejemplo, cómo se puede acceder a ellas, número de versión, sistema operativo requerido).
 
-3.  Documentación a compartir
+3.  **Documentación a compartir**
 
 -   ¿Qué documentación compartirás?
     -   Considere la documentación a nivel de proyecto, de conjunto de datos y de variable.
 -   ¿En qué formato estará su documentación? (por ejemplo, csv, pdf)
 
-4.  Normas
+4. **Normas**
 
 -   ¿Planea utilizar algún estándar para cuestiones como metadatos, recopilación de datos o formato de datos?
 
-5.  Conservación de datos
+5.  **Conservación de datos**
 
 -   ¿Dónde se archivarán los datos internamente?
     -   Medidas de seguridad y accesos
@@ -296,21 +298,21 @@ Es oportuno que acompañe o sea parte del protocolo de investigación o del manu
 -   ¿Cuándo depositará sus datos de estudio en el repositorio y durante cuánto tiempo permanecerán accesibles los datos?
 -   ¿Cómo permitirá la reutilización de datos?
 
-6.  Consideraciones sobre acceso, distribución o reutilización
+6.  **Consideraciones sobre acceso, distribución o reutilización**
 
 -   ¿Existen factores legales, técnicos o éticos que afecten la reutilización, el acceso o la distribución de sus datos?
 -   ¿Se restringirán algunos datos?
 -   ¿Se requieren controles de acceso (por ejemplo, un acuerdo de uso de datos)?
 
-7.  Protección de la privacidad y la confidencialidad
+7.  **Protección de la privacidad y la confidencialidad**
 
 -   ¿Los participantes firman acuerdos de consentimiento informado? ¿El consentimiento comunica cómo se espera que se utilicen y compartan los datos de los participantes? ¿Cómo evitará la divulgación de información de identificación personal cuando comparta datos?
 
-8.  Seguridad de los datos
+8.  **Seguridad de los datos**
 
 -   ¿Cómo se mantendrá la seguridad y la integridad de los datos durante un proyecto? (por ejemplo, considere el almacenamiento, el acceso, la copia de seguridad y la transferencia de datos)
 
-9.  Funciones y responsabilidades
+9.  **Funciones y responsabilidades**
 
 -   ¿Cuáles son los roles del personal en la gestión y preservación de datos?
 -   ¿Quién garantiza la accesibilidad, fiabilidad y calidad de los datos?
@@ -545,25 +547,25 @@ Habitualmente los archivos `.xls` / `.xlsx` (Microsoft Excel), `.dbf` (database)
 
 Si los datos fuern procesados previamente por algun software estadístico puede que los archivos compartidos tengan formato `.sas7bdat` (SAS), `.sav` (SPSS), `dta` (Stata) o `.RData` (R).
 
-También podemnos llegar a encontrar archivos `.json` (acrónimo de JavaScript Object Notation, 'notación de objeto de JavaScript') que es un formato abierto de texto sencillo o `.xml`(del inglés e**X**tensible **M**arkup **L**anguage, traducido como 'Lenguaje de Marcas Extensible').
+También podemnos llegar a encontrar archivos `.json` (acrónimo de [JavaScript Object Notation](https://es.wikipedia.org/wiki/JSON), 'notación de objeto de JavaScript') que es un formato abierto de texto sencillo o `.xml`(del inglés [e**X**tensible **M**arkup **L**anguage](https://es.wikipedia.org/wiki/Extensible_Markup_Language), traducido como 'Lenguaje de Marcas Extensible').
 
 ## Almacenamiento y seguridad
 
 A medida que comenzamos a recopilar datos, es importante tener una estructura bien planificada para almacenarlos de forma segura y trabajar con ellos durante el estudio activo. Hay varios objetivos que debemos tener en cuenta al configurar el sistema de almacenamiento y seguridad de archivos:
 
--   Seguridad: garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente.
+-   **Seguridad:** garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente.
 
 Para cumplir con este punto se establecen formas y protocolos que se ejecuten periódicamente de copias de seguridad que pueden realizarse en discos rígidos, espacios en un servidor central o servicios online tipo Google Drive, Dropbox, etc que deberan contar con los accesos restringidos a los usuarios autorizados del proyecto.
 
--   Confidencialidad: asegurarse de que personas no autorizadas no vean ni accedan a información confidencial.
+-   **Confidencialidad:** asegurarse de que personas no autorizadas no vean ni accedan a información confidencial.
 
 No solo estamos hablando de los archivos electrónicos producto de la recolección de datos sino también de los formularios, cuestionarios, planillas o cualquier otro dispositivo en papel que tenga información de identificación y/o sensible de participantes.
 
-Armarios con cerraduras y espacios fisicos con medidas de seguridad son recomendados en estas situaciones. Lo mismo respecto del lugar donde se encuentra la o las computadoras del equipo de trabajo, sus pendrive y discos rígidos externos.
+Armarios con cerraduras y espacios físicos con medidas de seguridad son recomendados en estas situaciones. Lo mismo respecto del lugar donde se encuentra la o las computadoras del equipo de trabajo, sus pendrive y discos rígidos externos.
 
--   Accesibilidad y usabilidad de los archivos: asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen.
+-   **Accesibilidad y usabilidad de los archivos:** asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen.
 
-Existen varias formas de lograr este objetivo y deberá evaluarse durante la planificación. Se pueden usar espacios de colaboración tipo Google Drive o proyectos privados de sistema de control de versiones como GitHub o GitLab. Dependerá de las capacidades de los integrantes del equipo y del nivel de comodidad buscado.
+Existen varias formas de lograr este objetivo y deberá evaluarse durante la planificación. Se pueden usar espacios de colaboración tipo Google Drive o proyectos privados de sistema de control de versiones como [GitHub](https://es.wikipedia.org/wiki/GitHub) o [GitLab](https://es.wikipedia.org/wiki/GitLab). Dependerá de las capacidades de los integrantes del equipo y del nivel de comodidad buscado.
 
 ## Depuración de datos
 
@@ -577,16 +579,16 @@ Un conjunto de datos limpio para el intercambio significa que incluye toda la mu
 
 Se puede pensar en los datos en tres fases distintas:
 
-1.  Datos brutos
+1.  **Datos brutos**
 
 -   Este es el archivo sin procesar que proviene directamente de su fuente de recopilación o captura de datos. Si sus datos se recopilan electrónicamente, este es el archivo que extrae de su herramienta. Si sus datos se recopilan en papel, estos son los datos que se han ingresado en un formato legible por máquina. Si tiene una fuente de datos secundaria, este es el archivo que descarga o recibe del proveedor externo.
 -   Estos datos normalmente no se comparten fuera del equipo de investigación, ya que suelen contener información identificable y a menudo es necesario procesarlos más para que un usuario final pueda descifrarlos.
 
-2.  Datos depurados del estudio
+2.  **Datos depurados del estudio**
 
 -   Éste es el conjunto de datos que se puede compartir públicamente.
 
-3.  Datos analíticos
+3.  **Datos analíticos**
 
 -   Este conjunto de datos se crea a partir del conjunto depurado de datos (ya sea por su equipo o por otros investigadores), pero se modifica aún más para un análisis específico. Este conjunto de datos normalmente también se puede compartir públicamente en un repositorio (por ejemplo [Zenodo](https://zenodo.org/)) en el momento de la publicación para permitir la replicación del análisis asociado. Aquí aparecen las variables creadas en el análisis, posibles eliminaciones de observaciones y/o variables e imputaciones de valores perdidos.
 
@@ -603,34 +605,34 @@ Antes de limpiar nuestros datos, debemos tener un entendimiento compartido sobre
 
 Los siguientes son criterios posibles de limpieza:
 
-1.  Completo
+1.  **Completo**
 
 -   La cantidad de filas en su conjunto de datos debe coincidir con la cantidad de formularios completados registrados en su base de datos de seguimiento de participantes. Esto significa que todos los formularios que recopiló se capturaron (ya sea que se ingresaron o se recuperaron). También significa que eliminó todos los datos extraños que no pertenecen (por ejemplo, duplicados, participantes que no están en la muestra final, etc).
 -   La cantidad de columnas de sus datos coincide con la cantidad de variables que tiene en su diccionario de datos (es decir, no se eliminaron variables accidentalmente). De manera similar, no debería haber datos faltantes inesperados para las variables (es decir, si se recopilaron los datos, deberían existir en su conjunto de datos).
 -   Puede haber observaciones y/o variables eliminadas, pero a partir de una decisión consciente y debidamente documentada.
 
-2.  Válido
+2.  **Válido**
 
 -   Las variables se ajustan a las restricciones que ha establecido en su diccionario de datos (por ejemplo, tipos de variables, valores y rangos de variables permitidos, la falta de elementos a nivel de elemento se alinea con las reglas del universo de variables y los patrones de omisión definidos)
 
-3.  Preciso
+3.  **Preciso**
 
 -   Muchas veces no hay forma de saber si un valor es verdadero o no. Sin embargo, es posible utilizar su conocimiento implícito de un participante o una fuente de datos para descubrir valores erróneos.
 
-4.  Coherente
+4.  **Coherente**
 
 -   Los valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna (por ejemplo, todos los valores de la fecha de la encuesta tienen el formato AAAA-MM-DD).
 -   En colecciones repetidas del mismo formulario, todas las variables se nombran, miden, formatean o codifican de manera consistente (por ejemplo, las categorías y/o códigos cargados en las variables son las del diccionario de datos).
 
-5.  Anonimizado
+5.  **Anonimizado**
 
 -   Si se promete confidencialidad a los participantes, es necesario anonimizar los datos. En las primeras fases de limpieza, esto simplemente significa que se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio (es decir, identificador único del participante). Antes de compartir públicamente los datos, puede ser necesario un trabajo adicional para eliminar también los identificadores indirectos.
 
-6.  Interpretable
+6.  **Interpretable**
 
 -   Las variables se nombran para que coincidan con el diccionario de datos y esos nombres son legibles tanto para humanos como para máquinas. Según sea necesario, se agregan etiquetas de variables y valores como metadatos integrados para facilitar la interpretación.
 
-7.  Analizable
+7.  **Analizable**
 
 -   El conjunto de datos tiene un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización de datos.
 
@@ -655,3 +657,5 @@ Existen multitud de paquetes informáticos, tanto de software privado como de so
 | PSPP                   |                                    |
 
 Algunos poseen tanto interfaz gráfica como de línea de comando, aunque no llegan a ser un lenguaje de programación. Cada una con sus ventajas y desventajas, suele ser más veloz el aprendizaje de los paquetes gráficos pero también limitados a la hora de hacer cosas más complejas. La curva de aprendizaje de los lenguajes de programación como R, Python o Julia es lenta pero a su vez no tiene límites respecto del tipo de análisis que necesitemos.
+
+## Bibliografía

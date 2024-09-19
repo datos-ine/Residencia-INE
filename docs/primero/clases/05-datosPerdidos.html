@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Datos perdidos (missing) – Residencia-INE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Residencia-INE</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">1er. año</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#detectar-observaciones-incompletas-valores-missing" id="toc-detectar-observaciones-incompletas-valores-missing" class="nav-link active" data-scroll-target="#detectar-observaciones-incompletas-valores-missing">Detectar observaciones incompletas (valores missing)</a></li>
+  <li><a href="#gestión-de-nas-con-naniar" id="toc-gestión-de-nas-con-naniar" class="nav-link" data-scroll-target="#gestión-de-nas-con-naniar">Gestión de NA’s con naniar</a></li>
+  <li><a href="#reemplazo-de-valores" id="toc-reemplazo-de-valores" class="nav-link" data-scroll-target="#reemplazo-de-valores">Reemplazo de valores</a></li>
+  <li><a href="#eliminación-de-valores-na" id="toc-eliminación-de-valores-na" class="nav-link" data-scroll-target="#eliminación-de-valores-na">Eliminación de valores NA</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Datos perdidos (missing)</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/05/missing.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Cuando trabajamos con datos los valores perdidos o faltantes (conocidos en inglés como <em>missing</em>) pueden constituir un serio problema en nuestras variables por lo que deben explorarse y manejarse cuidadosamente en las etapas iniciales del análisis.</p>
+<p>Estos datos pueden faltar por muchas razones, pero generalmente se suelen agrupar en dos categorías: valores faltantes informativos y valores faltantes aleatorios. Los informativos implican una causa estructural, ya sea por deficiencias en la forma en que se recopilaron los datos o por anomalías en el entorno de observación. Los aleatorios son aquellos que tienen lugar independientemente del proceso de recopilación de datos.</p>
+<p>Dependiendo de si los valores faltantes son de uno u otro tipo, se procederá de una u otra manera. A los informativos, en general, se les puede asignar un valor concreto (por ejemplo, “Ninguno” o “Sin dato”), ya que este valor puede convenir tenerlo como una categoría más de la variable. Los aleatorios, en cambio, pueden manejarse mediante la eliminación o la imputación.</p>
+<p>Resumiendo, las tareas habituales respecto a estos valores consisten en:</p>
+<ul>
+<li>Evaluar la existencia de valores perdidos (exploración y conteo).</li>
+<li>Excluir los valores ausentes (si es posible y conveniente).</li>
+<li>Etiquetar o recodificar los valores ausentes (imputación de datos).</li>
+</ul>
+<p>Respecto a la imputación existen numerosa bibliografía sobre diversos algoritmos que no vamos a incluir en este curso.</p>
+<section id="detectar-observaciones-incompletas-valores-missing" class="level2">
+<h2 data-anchor-id="detectar-observaciones-incompletas-valores-missing">Detectar observaciones incompletas (valores missing)</h2>
+<p>El lenguaje R gestiona a los datos perdidos mediante el valor especial reservado <code>NA</code> de <strong>Not Available</strong> (No disponible),</p>
+<p>En principio, sólo vamos a enfocarnos en como podemos utilizar algunas funciones del lenguaje para detectarlos y contabilizarlos. A partir de su identificación decidiremos que hacer con ellos, dependiendo de su cantidad y extensión, es decir, si los valores faltantes son la mayoría de una variable o la mayoría de una observación o bien si representan la falta de respuesta de una pregunta, con lo cual convenga etiquetarlos.</p>
+<p>Una manera de abordar esta tarea con R base para una variables es hacer la sumatoria de valores <code>NA</code>, usando la función de identificación <code>is.na()</code>.</p>
+<p>Para ejemplificar, tomamos una tabla de datos de vigilancia con 200 observaciones y 56 variables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(FECHA_FIN_TRAT)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  Cantidad_NA
+        &lt;int&gt;
+1         142</code></pre>
+</div>
+</div>
+<p>La consulta dice que hay 142 observaciones vacías en la variable FECHA_FIN_TRAT. Lo malo es que debemos hacer esta tarea variable por variable, lo que resulta muy trabajoso.</p>
+<p>También la función <code>summary()</code> aplicada sobre el dataframe completo informa la cantidad de <code>NA</code> de variables cuantitativas, lógicas y fecha, pero no lo hace con las de tipo caracter.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     SEXO           FECHA_NACIMIENTO              EDAD_DIAGNOSTICO
+ Length:200         Min.   :1934-12-13 00:00:00   Min.   : 0.00   
+ Class :character   1st Qu.:1973-11-06 12:00:00   1st Qu.:23.00   
+ Mode  :character   Median :1989-07-27 00:00:00   Median :33.00   
+                    Mean   :1985-12-04 18:14:24   Mean   :37.02   
+                    3rd Qu.:1999-11-17 12:00:00   3rd Qu.:49.00   
+                    Max.   :2023-05-05 00:00:00   Max.   :88.00   
+                                                                  
+   GRUPEDAD         PROVINCIA_RESIDENCIA ID_PROV_INDEC_RESIDENCIA
+ Length:200         Length:200           Length:200              
+ Class :character   Class :character     Class :character        
+ Mode  :character   Mode  :character     Mode  :character        
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+ DEPARTAMENTO_RESIDENCIA ID_DEPTO_INDEC_RESIDENCIA LOCALIDAD_RESIDENCIA
+ Length:200              Length:200                Length:200          
+ Class :character        Class :character          Class :character    
+ Mode  :character        Mode  :character          Mode  :character    
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+ ESTABLECIMIENTO_SALUD ESTABLECIMIENTO_CARGA PROVINCIA_CARGA   
+ Length:200            Length:200            Length:200        
+ Class :character      Class :character      Class :character  
+ Mode  :character      Mode  :character      Mode  :character  
+                                                               
+                                                               
+                                                               
+                                                               
+ DEPTO_CARGA        ESTAB_CLINICA      DEPTO_CLINICA          PPL           
+ Length:200         Length:200         Length:200         Length:200        
+ Class :character   Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+ SERVICIO_PENITENCIARIO FECHA_APERTURA               
+ Length:200             Min.   :2021-09-20 00:00:00  
+ Class :character       1st Qu.:2023-04-12 18:00:00  
+ Mode  :character       Median :2023-07-16 00:00:00  
+                        Mean   :2023-07-14 09:07:12  
+                        3rd Qu.:2023-10-18 12:00:00  
+                        Max.   :2024-04-18 00:00:00  
+                                                     
+ FECHA_NOTIFICACION            MOTIVO_CONSULTA    CLASIFICACION_MANUAL
+ Min.   :2023-01-03 00:00:00   Length:200         Length:200          
+ 1st Qu.:2023-04-03 12:00:00   Class :character   Class :character    
+ Median :2023-07-03 00:00:00   Mode  :character   Mode  :character    
+ Mean   :2023-07-01 12:36:00                                          
+ 3rd Qu.:2023-10-03 00:00:00                                          
+ Max.   :2023-12-27 00:00:00                                          
+                                                                      
+ CLASIF_INICIO_TRAT ID_PULMONAR             FIS                        
+ Length:200         Length:200         Min.   :2020-12-20 00:00:00.00  
+ Class :character   Class :character   1st Qu.:2023-02-20 00:00:00.00  
+ Mode  :character   Mode  :character   Median :2023-05-12 12:00:00.00  
+                                       Mean   :2023-05-10 05:22:06.31  
+                                       3rd Qu.:2023-08-09 18:00:00.00  
+                                       Max.   :2023-12-21 00:00:00.00  
+                                       NA's   :48                      
+ ID_EXTRAPULMONAR   FECHA_INICIO_SINTOMA             RESULTADO_RX      
+ Length:200         Min.   :2022-08-15 00:00:00.00   Length:200        
+ Class :character   1st Qu.:2023-03-01 00:00:00.00   Class :character  
+ Mode  :character   Median :2023-05-17 12:00:00.00   Mode  :character  
+                    Mean   :2023-05-28 01:50:46.15                     
+                    3rd Qu.:2023-08-09 00:00:00.00                     
+                    Max.   :2023-12-26 00:00:00.00                     
+                    NA's   :44                                         
+ Bacteriologia      Baciloscopia         Cultivo          PRUEBA_RESISTENCIA
+ Length:200         Length:200         Length:200         Length:200        
+ Class :character   Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+ RESISTENCIA           Droga           Tipo_Resistencia  
+ Length:200         Length:200         Length:200        
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+                                                         
+ ESTABLECIMIENTO_MUESTRA DEPARTAMENTO_MUESTRA ESTABLECIMIENTO_DIAG
+ Length:200              Length:200           Length:200          
+ Class :character        Class :character     Class :character    
+ Mode  :character        Mode  :character     Mode  :character    
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+ DEPARTAMENTO_DIAG   Prueba_VIH            VIH           
+ Length:200         Length:200         Length:200        
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+                                                         
+ TRATAMIENTO_ANTIRRETROVIRAL Diag_rapido        Resultado_diag_rapido
+ Length:200                  Length:200         Length:200           
+ Class :character            Class :character   Class :character     
+ Mode  :character            Mode  :character   Mode  :character     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+   EMBARAZO           DIABETES         CONSUMO_PROB_DROGAS ENF_RESP_CRONICA  
+ Length:200         Length:200         Length:200          Length:200        
+ Class :character   Class :character   Class :character    Class :character  
+ Mode  :character   Mode  :character   Mode  :character    Mode  :character  
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+    COVID           SE_DECLARA_PUEBLO_INDIGENA  ETNIA        
+ Length:200         Length:200                 Mode:logical  
+ Class :character   Class :character           NA's:200      
+ Mode  :character   Mode  :character                         
+                                                             
+                                                             
+                                                             
+                                                             
+  TABAQUISMO        ALCOHOLISMO         ESTAB_TTO        
+ Length:200         Length:200         Length:200        
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+                                                         
+ FECHA_INICIO_TRAT                FECHA_FIN_TRAT                  
+ Min.   :2023-01-03 00:00:00.00   Min.   :2023-03-09 00:00:00.00  
+ 1st Qu.:2023-03-20 00:00:00.00   1st Qu.:2023-08-21 00:00:00.00  
+ Median :2023-07-02 00:00:00.00   Median :2023-10-23 12:00:00.00  
+ Mean   :2023-06-28 21:42:25.22   Mean   :2023-10-23 02:04:08.27  
+ 3rd Qu.:2023-10-05 00:00:00.00   3rd Qu.:2024-01-11 12:00:00.00  
+ Max.   :2024-01-08 00:00:00.00   Max.   :2024-04-05 00:00:00.00  
+ NA's   :43                       NA's   :142                     
+ RESULTADO_TRATAMIENTO
+ Length:200           
+ Class :character     
+ Mode  :character     
+                      
+                      
+                      
+                      </code></pre>
+</div>
+</div>
+<p>Más completo y en una sola línea la función <code>find_na()</code> del paquete <strong>dlookr</strong> muestra el porcentaje de valores perdidos en todas las variables de una tabla de datos y se complementa con el gráfico de barras de pareto <code>plot_na_pareto()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dlookr)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find_na</span>(datos, <span class="at">rate =</span> T) <span class="co"># argumento rate = T muestra % de valores NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       SEXO            FECHA_NACIMIENTO 
+                        0.0                         0.0 
+           EDAD_DIAGNOSTICO                    GRUPEDAD 
+                        0.0                         0.0 
+       PROVINCIA_RESIDENCIA    ID_PROV_INDEC_RESIDENCIA 
+                        0.0                         0.0 
+    DEPARTAMENTO_RESIDENCIA   ID_DEPTO_INDEC_RESIDENCIA 
+                        4.5                         0.0 
+       LOCALIDAD_RESIDENCIA       ESTABLECIMIENTO_SALUD 
+                        0.0                         0.0 
+      ESTABLECIMIENTO_CARGA             PROVINCIA_CARGA 
+                        0.0                         0.0 
+                DEPTO_CARGA               ESTAB_CLINICA 
+                        0.0                        10.0 
+              DEPTO_CLINICA                         PPL 
+                       10.0                         0.0 
+     SERVICIO_PENITENCIARIO              FECHA_APERTURA 
+                        0.0                         0.0 
+         FECHA_NOTIFICACION             MOTIVO_CONSULTA 
+                        0.0                        90.5 
+       CLASIFICACION_MANUAL          CLASIF_INICIO_TRAT 
+                        0.0                         0.0 
+                ID_PULMONAR                         FIS 
+                        0.0                        24.0 
+           ID_EXTRAPULMONAR        FECHA_INICIO_SINTOMA 
+                        0.0                        22.0 
+               RESULTADO_RX               Bacteriologia 
+                        0.0                         0.0 
+               Baciloscopia                     Cultivo 
+                        0.0                         0.0 
+         PRUEBA_RESISTENCIA                 RESISTENCIA 
+                        0.0                         0.0 
+                      Droga            Tipo_Resistencia 
+                        0.0                         0.0 
+    ESTABLECIMIENTO_MUESTRA        DEPARTAMENTO_MUESTRA 
+                       36.0                        36.0 
+       ESTABLECIMIENTO_DIAG           DEPARTAMENTO_DIAG 
+                       38.0                        38.0 
+                 Prueba_VIH                         VIH 
+                        0.0                         0.0 
+TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido 
+                       99.5                         0.0 
+      Resultado_diag_rapido                    EMBARAZO 
+                        0.0                         0.0 
+                   DIABETES         CONSUMO_PROB_DROGAS 
+                        0.0                         0.0 
+           ENF_RESP_CRONICA                       COVID 
+                        0.0                        99.5 
+ SE_DECLARA_PUEBLO_INDIGENA                       ETNIA 
+                        0.0                       100.0 
+                 TABAQUISMO                 ALCOHOLISMO 
+                        0.0                         0.0 
+                  ESTAB_TTO           FECHA_INICIO_TRAT 
+                       17.5                        21.5 
+             FECHA_FIN_TRAT       RESULTADO_TRATAMIENTO 
+                       71.0                         0.0 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_na_pareto</span>(datos, </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">only_na =</span> T) <span class="co"># argumento only_na = T muestra variables solo con algún valor NA </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05-datosPerdidos_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" style="width:120.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gestión-de-nas-con-naniar" class="level2">
+<h2 data-anchor-id="gestión-de-nas-con-naniar">Gestión de NA’s con naniar</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/05/naniar.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:10.0%"></p>
+</figure>
+</div>
+<p>El paquete <strong>naniar</strong> es un paquete que reúne funciones diseñadas para el manejo de valores faltantes pensado para una gestión completa.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(naniar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Sus caracteristicas generales son:</p>
+<ul>
+<li><p>Proporciona funciones analíticas y visuales de detección y gestión</p></li>
+<li><p>Es compatible con el mundo “tidy” de tidyverse</p></li>
+<li><p>Aborda las relaciones o estructura de la falta de datos.</p></li>
+<li><p>Posibilita el trabajo de imputación (no tratado en este curso)</p></li>
+</ul>
+<p>De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para una tarea básica.</p>
+<p>La función <code>miss_var_summary()</code> proporciona un resumen sobre los valores NA en cada variable del dataframe similar a <code>find_na()</code> que vimos anterioremente pero con una salida en forma de tabla y un recento absoluto, además de porcentual.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">miss_var_summary</span>(datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 56 × 3
+   variable                    n_miss pct_miss
+   &lt;chr&gt;                        &lt;int&gt;    &lt;num&gt;
+ 1 ETNIA                          200    100  
+ 2 TRATAMIENTO_ANTIRRETROVIRAL    199     99.5
+ 3 COVID                          199     99.5
+ 4 MOTIVO_CONSULTA                181     90.5
+ 5 FECHA_FIN_TRAT                 142     71  
+ 6 ESTABLECIMIENTO_DIAG            76     38  
+ 7 DEPARTAMENTO_DIAG               76     38  
+ 8 ESTABLECIMIENTO_MUESTRA         72     36  
+ 9 DEPARTAMENTO_MUESTRA            72     36  
+10 FIS                             48     24  
+# ℹ 46 more rows</code></pre>
+</div>
+</div>
+<p>Por el lado gráfico, ofrece la función <code>gg_miss_var()</code> que representa la información de la tabla anterior pero a través de un gráfico <em>lollipop</em> horizontal de tipo <strong>ggplot2</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gg_miss_var</span>(datos, </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">show_pct =</span> T) <span class="co"># muestra valores en porcentajes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05-datosPerdidos_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" style="width:120.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Hay otra viaulización muy interesante porque muestra las relaciones de los valores ausentes de las variables cuya función se llama <code>gg_miss_upset()</code> y genera un gráfico <strong>Upset</strong> en función de la existencia de valores NA.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gg_miss_upset</span>(datos) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="img/05/upset1.png" class="img-fluid"> Por defecto, construye el gráfico tomando las primeras 10 variables de la tabla de datos con valores NA de forma decreciente. Esto se puede modificar cambiando el argumentos <code>nset =</code>.</p>
+<p>Tiene dos entradas para su lectura. En la parte inferior izquierda nos muestra los nombres de las variables con valores NA ordenadas de menor a mayor medida en una escala absoluta. El gráfico de barras principal, ordenado de forma predeterminada de mayor a menor, informa sobre las cantidades absolutas de valores NA de las combinaciones que aperecen debajo del eje x del gráfico.</p>
+<p>Por ejemplo, la variable ETNIA tiene todos sus observaciones como NA y la variable COVID casi lo mismo, mientras que la variable FIS cerca de 50.</p>
+<p>Podemos eliminar del gráfico a esas dos variables con casi todos los valores NA, usando formas de tidyverse previas dado que las funciones de naniar son compatibles.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>ETNIA, <span class="sc">-</span>COVID) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gg_miss_upset</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="img/05/upset2.png" class="img-fluid"></p>
+<p>Al quitar esas dos variables, aparecen dos nuevas con cantidades menores de NA que FIS (FECHA_INICIO_TRAT y FECHA_INICIO_SINTOMA), es decir siguen siendo 10 por defecto.</p>
+<p>Si miramos los datos faltantes con estructura notamos que la combinación más frecuente de NA combinados es FECHA_FIN_TRAT, MOTIVO_CONSULTA y TRATAMIENTO_ANTIRETROVIRAL con 39 observaciones a las que le faltan valores en las tres variables simultáneamente.</p>
+</section>
+<section id="reemplazo-de-valores" class="level2">
+<h2 data-anchor-id="reemplazo-de-valores">Reemplazo de valores</h2>
+<p>El paquete tiene además dos funciones de reemplazo que funcionan como herramientas antagónicas.</p>
+<p><code>replace_with_na()</code> reemplaza valores o etiquetas específicas con valores NA y <code>replace_na_with()</code> hace lo contrario, reemplaza valores NA con valores específicos, como “Sin dato” por ejemplo.</p>
+<p>La primera función trabaja sobre el dataframe completo adignando valores NA en la categoría o valor que le indiquemos.</p>
+<p>Por ejemplo, la variable ID_PROV_INDEC_RESIDENCIA no tiene valores perdidos pero si hay una categoría/código desconocido (“00”), entonces podemos decirle que ese código sea NA.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(ID_PROV_INDEC_RESIDENCIA)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  Cantidad_NA
+        &lt;int&gt;
+1           0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">replace_with_na</span>(<span class="at">replace =</span> <span class="fu">list</span>(<span class="at">ID_PROV_INDEC_RESIDENCIA =</span> <span class="st">"00"</span>)) <span class="sc">|&gt;</span>     </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(ID_PROV_INDEC_RESIDENCIA)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  Cantidad_NA
+        &lt;int&gt;
+1           2</code></pre>
+</div>
+</div>
+<p><code>replace_na_with()</code> etiqueta valores faltantes con categorías definidas que serán tenidas en cuenta a la hora de hacer tablas u otras operaciones. Esta función se utiliza dentro de <code>mutate()</code> del tidyverse.</p>
+<p>La variable MOTIVO_CONSULTA tiene 181 valores NA que serán etiquetados como “Sin dato” de esta forma:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(MOTIVO_CONSULTA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  MOTIVO_CONSULTA              n
+  &lt;chr&gt;                    &lt;int&gt;
+1 Contacto                     2
+2 Examen de Salud              1
+3 Sintomático Respiratorio    16
+4 &lt;NA&gt;                       181</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">MOTIVO_CONSULTA =</span> <span class="fu">replace_na_with</span>(MOTIVO_CONSULTA, </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Sin dato"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(MOTIVO_CONSULTA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  MOTIVO_CONSULTA              n
+  &lt;chr&gt;                    &lt;int&gt;
+1 Contacto                     2
+2 Examen de Salud              1
+3 Sin dato                   181
+4 Sintomático Respiratorio    16</code></pre>
+</div>
+</div>
+</section>
+<section id="eliminación-de-valores-na" class="level2">
+<h2 data-anchor-id="eliminación-de-valores-na">Eliminación de valores NA</h2>
+<p>Cuando decidimos eliminar valores NA de alguna variable, salvo que se quite la variable entera, tenemos que tener en cuenta que perdemos la observación completa, incluso valores válidos que se encuentran en otras variables.</p>
+<p>R base tiene una función llamada <code>na.omit()</code> que omite toda observación donde al menos haya un solo NA en alguna variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">na.omit</span>(datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 0 × 56
+# ℹ 56 variables: SEXO &lt;chr&gt;, FECHA_NACIMIENTO &lt;dttm&gt;, EDAD_DIAGNOSTICO &lt;dbl&gt;,
+#   GRUPEDAD &lt;chr&gt;, PROVINCIA_RESIDENCIA &lt;chr&gt;, ID_PROV_INDEC_RESIDENCIA &lt;chr&gt;,
+#   DEPARTAMENTO_RESIDENCIA &lt;chr&gt;, ID_DEPTO_INDEC_RESIDENCIA &lt;chr&gt;,
+#   LOCALIDAD_RESIDENCIA &lt;chr&gt;, ESTABLECIMIENTO_SALUD &lt;chr&gt;,
+#   ESTABLECIMIENTO_CARGA &lt;chr&gt;, PROVINCIA_CARGA &lt;chr&gt;, DEPTO_CARGA &lt;chr&gt;,
+#   ESTAB_CLINICA &lt;chr&gt;, DEPTO_CLINICA &lt;chr&gt;, PPL &lt;chr&gt;,
+#   SERVICIO_PENITENCIARIO &lt;chr&gt;, FECHA_APERTURA &lt;dttm&gt;, …</code></pre>
+</div>
+</div>
+<p>Aplicar esta función sobre el dataframe datos produce que no quede ninguna observación, dado que vimos que la variable ETNIA tenía sus doscientos valores vacíos.</p>
+<p>Una función superadora es <code>drop_na()</code> de tidyr que pertenece a tidyverse, porque omite observaciones que tengan variables que definamos, por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(ETNIA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 0 × 56
+# ℹ 56 variables: SEXO &lt;chr&gt;, FECHA_NACIMIENTO &lt;dttm&gt;, EDAD_DIAGNOSTICO &lt;dbl&gt;,
+#   GRUPEDAD &lt;chr&gt;, PROVINCIA_RESIDENCIA &lt;chr&gt;, ID_PROV_INDEC_RESIDENCIA &lt;chr&gt;,
+#   DEPARTAMENTO_RESIDENCIA &lt;chr&gt;, ID_DEPTO_INDEC_RESIDENCIA &lt;chr&gt;,
+#   LOCALIDAD_RESIDENCIA &lt;chr&gt;, ESTABLECIMIENTO_SALUD &lt;chr&gt;,
+#   ESTABLECIMIENTO_CARGA &lt;chr&gt;, PROVINCIA_CARGA &lt;chr&gt;, DEPTO_CARGA &lt;chr&gt;,
+#   ESTAB_CLINICA &lt;chr&gt;, DEPTO_CLINICA &lt;chr&gt;, PPL &lt;chr&gt;,
+#   SERVICIO_PENITENCIARIO &lt;chr&gt;, FECHA_APERTURA &lt;dttm&gt;, …</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(FIS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 152 × 56
+   SEXO  FECHA_NACIMIENTO    EDAD_DIAGNOSTICO GRUPEDAD PROVINCIA_RESIDENCIA
+   &lt;chr&gt; &lt;dttm&gt;                         &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;               
+ 1 M     1948-06-22 00:00:00               74 70-74    Tierra del Fuego    
+ 2 F     1981-06-20 00:00:00               41 40-44    Buenos Aires        
+ 3 F     1989-03-30 00:00:00               33 30-34    Buenos Aires        
+ 4 M     2006-11-17 00:00:00               16 15-19    Chaco               
+ 5 M     1993-06-02 00:00:00               29 25-29    Jujuy               
+ 6 M     1989-04-08 00:00:00               33 30-34    Buenos Aires        
+ 7 F     1977-07-30 00:00:00               45 45-49    Buenos Aires        
+ 8 F     2008-01-10 00:00:00               15 15-19    Chaco               
+ 9 M     1987-11-27 00:00:00               35 35-39    Buenos Aires        
+10 F     2002-12-21 00:00:00               20 20-24    Buenos Aires        
+# ℹ 142 more rows
+# ℹ 51 more variables: ID_PROV_INDEC_RESIDENCIA &lt;chr&gt;,
+#   DEPARTAMENTO_RESIDENCIA &lt;chr&gt;, ID_DEPTO_INDEC_RESIDENCIA &lt;chr&gt;,
+#   LOCALIDAD_RESIDENCIA &lt;chr&gt;, ESTABLECIMIENTO_SALUD &lt;chr&gt;,
+#   ESTABLECIMIENTO_CARGA &lt;chr&gt;, PROVINCIA_CARGA &lt;chr&gt;, DEPTO_CARGA &lt;chr&gt;,
+#   ESTAB_CLINICA &lt;chr&gt;, DEPTO_CLINICA &lt;chr&gt;, PPL &lt;chr&gt;,
+#   SERVICIO_PENITENCIARIO &lt;chr&gt;, FECHA_APERTURA &lt;dttm&gt;, …</code></pre>
+</div>
+</div>
+<p>En el ejemplo anterior aplicamos la función sobre la variable ETNIA y FIS, en el primer caso omite todas las observaciones y en el segundo caso 48 observaciones, mostrando las 152 restantes sin NA en la variable.</p>
+<p>Por último, debemos saber que eliminar observaciones por valores faltantes reduce la potencia de cualquier test de hipotesis o modelo que hagamos porque se reduce el tamaño de la muestra.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("^https:\/\/(www\.)?(linkedin|twitter|github)\.*");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

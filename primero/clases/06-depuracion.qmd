@@ -1,0 +1,441 @@
+---
+title: "**Exploración, depuración y gestión de tablas de datos**"
+format:
+  html:
+    page-layout: full
+    include-in-header: 
+      - text: |
+          <link rel="icon" type="image/x-icon" href="favicon.ico">  
+    toc: true
+    toc-title: Contenidos
+    toc-location: left
+    toc_float: true
+    toc_collapsed: false
+    toc_depth: 4
+number_sections: true
+anchor_sections: true
+---
+
+
+En el ámbito de los proyectos de análisis de datos, el preprocesamiento, también conocido como preparación de datos, es una etapa crucial que precede al análisis propiamente dicho. Esta fase esencial tiene como objetivo acondicionar los datos para su posterior análisis, garantizando su confiabilidad e integridad.
+
+Las tareas de preprocesamiento son específicas para cada conjunto de datos y dependen de los objetivos del proyecto y las técnicas de análisis que se emplearán. Sin embargo, existen tareas comunes que son aplicables a la mayoría de los casos, entre las que se encuentran el diagnóstico y la limpieza de datos.
+
+## Exploración y diagnóstico de datos
+
+La etapa de diagnóstico de datos es fundamental para comprender la estructura y características del conjunto de datos que se va a analizar. Esta fase involucra una serie de tareas esenciales, como:
+
+**Análisis de la estructura de la tabla de datos**: Esta tarea implica comprender la organización de los datos, identificando las variables, sus tipos de datos y la distribución de los registros. Es relevante vincular este proceso con el "diccionario de datos" de la tabla o base, ya sea de fuente secundaria o creada por nosotros mismos. 
+
+**Verificación del tipo de dato de cada variable de interés**: Es crucial determinar el tipo de dato de cada variable (numérica, categórica, fecha-hora, etc.) para aplicar las técnicas de análisis adecuadas.
+
+**Detección de valores faltantes**: La presencia de valores faltantes puede afectar significativamente los resultados del análisis. Es importante identificar estos valores y determinar la mejor manera de manejarlos (eliminación, imputación, etc.).
+
+**Identificación de las categorías de las variables cualitativas**: En el caso de variables categóricas, es necesario identificar las categorías existentes y evaluar su distribución.
+
+**Análisis de los mínimos y máximos de valores de cada variable cuantitativa**: Para variables numéricas, es importante determinar los valores mínimos y máximos para detectar posibles valores atípicos o errores de entrada.
+
+Existen diversas herramientas y funciones que facilitan la etapa de diagnóstico de datos. En este curso, se presentarán algunas de las funciones más útiles de paquetes de R.
+
+
+## Skimr
+
+![](img/06/skimr.png){fig-align="center" width=10%}
+
+Este paquete tiene funciones diseñadas para obtener un resumen rápido de la estructura de tablas de datos y son compatibles con el ecosistema tidyverse. 
+
+La función principal del paquete es `skim` y puede ser aplicada a todo el dataframe o bien a una variable o a un grupo de ellas.
+
+- Proporciona un conjunto más amplio de estadísticas que `summary()`, incluyendo valores faltantes, completos, número total (n) y desvío estándar (sd).
+
+- Informa de cada tipo de dato por separado.
+
+- Maneja fechas, valores lógicos y  otros tipos.
+
+Trabajemos con **skimr** sobre un conjunto de datos provenientes de la vigilancia del SNVS.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readxl)
+
+datos <- read_excel("datos/base2023r.xlsx")
+
+datos <- datos |> 
+  mutate(across(.cols = c(starts_with("FECHA"), FIS), .fns = as_date))
+```
+
+```{r}
+#| message: false
+#| warning: false
+library(skimr)
+
+skim(datos)
+```
+
+La salida completa de `skim()` separa los resultados por partes. Un resumen de datos inicial, donde vemos la cantidad de filas y columnas con la frecuencia de tipo de variable. Luego le siguen tablas con información descriptiva univariada, donde podemos ver que dependiendo del tipo de variable nos muestra diferentes estadísticos y hasta un mini histograma en el caso de las numéricas.
+
+
+## dlookr
+
+![](img//06/dlookr.PNG){fig-align="center" width=10%}
+
+El paquete se define como una *"colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos"*. 
+
+El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos.
+
+Contiene funciones, compatibles con tidyverse, que nos facilitan ver la calidad de nuestros datos, además de otras que tienen por objetivo la exploración y su transformación. 
+
+Entre estas funciones encontramos:
+
+### diagnose()
+
+Permite diagnosticar variables del dataframe y devuelve como resultado: el tipo de dato de la variable, la cantidad de valores faltantes, su porcentaje, la cantidad de valores únicos y su tasa (valores únicos/observaciones). Lo observamos en forma de tabla interactiva:
+
+```{r}
+#| message: false
+#| warning: false
+#| eval: false
+library(dlookr)
+
+diagnose(datos)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(dlookr)
+
+diagnose(datos) |> 
+  mutate(across(where(is.double),~round(.x, digits = 2))) |> 
+DT::datatable(
+  fillContainer = F, options = list(pageLength = 10), filter = "none", 
+  style = "bootstrap4", autoHideNavigation = T)
+```
+
+Al ser compatible con tidyverse se puede editar antes o después de la función, por ejemplo si quisiéramos filtrar variables con valores faltantes (de mayor a menor):
+
+```{r}
+diagnose(datos) |> 
+  select(!starts_with("unique")) |> 
+  filter(missing_count > 0) |> 
+  arrange(desc(missing_count))
+```
+
+### diagnose_category()
+
+Así como existe `diagnose()` como una función general, también hay funciones que sirven para el diagnóstico específico por tipo de dato.
+
+`diagnose_category()` lo hace con las variables categóricas, es decir de caracter, de factor y de factor ordenado, mostrando información de cada categoría de cada variable (N, frecuencia, proporción y ranking).
+
+```{r}
+#| eval: false
+
+datos|> 
+ diagnose_category()
+```
+
+```{r, warning=F, message=F, echo=F}
+datos|> 
+  select(-starts_with("FECHA"), -FIS) |> 
+ diagnose_category() |> 
+  mutate(across(where(is.double),~round(.x, digits = 2))) |> 
+DT::datatable(
+  fillContainer = T, options = list(pageLength = 10), filter = "none", 
+  style = "bootstrap4")
+```
+
+### diagnose_numeric()
+
+Para variables numéricas tenemos a `diagnose_numeric()` que nos brinda estadísticos resumen descriptivos univariados.
+
+```{r}
+#| eval: false
+
+datos|> 
+ diagnose_numeric()
+```
+
+```{r, warning=F, message=F, echo=F}
+datos|> 
+ diagnose_numeric() |> 
+  mutate(across(where(is.double),~round(.x, digits = 2))) |> 
+DT::datatable(
+  fillContainer = F, options = list(pageLength = 10), filter = "none", 
+  style = "bootstrap4", autoHideNavigation = T)
+```
+
+Observamos que sobre la única variable numérica de datos nos calcula el mínimo, primer cuartil, media, mediana, tercer cuartil, máximo, la cantidad de ceros, la cantidad de números negativos y la cantidad de datos atípicos.
+
+## diagnose_outlier()
+
+Sobre los datos atípicos `diagnose_outlier()` nos amplía la información:
+
+```{r}
+#| eval: false
+
+datos|> 
+ diagnose_outlier()
+```
+
+```{r, warning=F, message=F, echo=F}
+datos|> 
+ diagnose_outlier() |> 
+  mutate(across(where(is.double),~round(.x, digits = 2))) |> 
+DT::datatable(
+  fillContainer = F, options = list(pageLength = 10), filter = "none", 
+  style = "bootstrap4", autoHideNavigation = T)
+```
+
+Aquí la variable EDAD_DIAGNOSTICO no tiene datos atípicos por lo que el conteo y proporción es de cero, la media de los outlier no existe y la media contando y no contando estos outlier da lo mismo (37,02)
+
+
+## plot_outlier()
+
+Agreguemos algún dato atípico a EDAD_DIAGNOSTICO para poder mostrar este gráfico.
+
+```{r}
+datos[10, "EDAD_DIAGNOSTICO"] <- 105  # cambiamos la edad de la observación 10 
+```
+
+
+```{r}
+#| out-width: 120%
+datos |> 
+  plot_outlier(EDAD_DIAGNOSTICO) 
+```
+
+El gráfico siempre se va a producir si al menos tenemos un dato atípico en la variable. Grafica un boxplot e histograma contando los valores outlier que la variable tenga y otro quitándolos.
+
+
+### Otras funciones del paquete
+
+**dlookr** tiene muchas otras funciones, como `find_na()` y `plot_pareto_na()` vistas en el documento sobre datos faltantes, o de análisis descriptivo más completo que mostraremos más adelante.
+
+También hay algunas que tienen como objetivo la conversión de datos y/o la imputación de datos ausentes, que no trabajaremos en el curso pero pueden encontrarse en el sitio del desarrollador <https://choonghyunryu.github.io/dlookr/index.html>
+
+## Depuración de datos
+
+![](img/06/datacleaning.jpg){fig-align="center" width=40%}
+
+Una vez finalizado el diagnóstico de datos, se procede a la etapa de depuración, donde se corrigen los errores identificados y se prepara el conjunto de datos para su análisis. La depuración involucra técnicas como la eliminación de valores faltantes, la corrección de errores de entrada, la transformación de variables y el manejo de valores atípicos.
+
+Un flujo de trabajo modelo partiendo de datos crudos y terminando en datos limpios es el siguiente:
+
+![](img/06/flujo.png){fig-align="center" width=60%}
+
+Durante este proceso puede haber múltiples situaciones dependiendo de la calidad original de los datos crudos, desde carecer de encabezados o contener tipos de datos incorrectos, pasando por tener que corregir etiquetas de categorías incorrectas, etc.
+
+Las herramientas de **dplyr** en tidyverse nos van a facilitar esta tarea que suele ocupar entre un 70 y 80% del tiempo de trabajo cuando analizamos datos.
+
+
+## Gestión de duplicados
+
+Un caso habitual con el que debemos lidiar es el tener observaciones duplicadas, total o parcialmente. Por este motivo, debemos conocer las características de la o las tablas con las que estamos trabajando, es decir, si las observaciones tiene claves unívocas, si estas observaciones se pueden repetir, si la relación es uno a uno o uno a varios cuando hay más de una tabla relacionada, etc.
+
+Entonces, el primer paso será asegurarnos que los datos cumplen con el criterio que conocemos haciendo una detección de observaciones y/o partes de observaciones (variables clave) que se encuentran duplicadas.
+
+Luego, hay diferentes tareas que se pueden realizar para gestionar estos datos duplicados, cuando su existencia no es la esperada:
+
+- Eliminación de duplicados a partir de observaciones únicas.
+
+- Recortar tabla de datos para eliminar duplicados
+
+- Marcar duplicados (conservando duplicados en la tabla)
+
+La función `get_dupes()` del paquete **janitor** es muy útil porque identifica estas repeticiones.
+
+```{r}
+#| message: false
+#| warning: false
+library(janitor)
+
+datos |> 
+  get_dupes(everything())
+```
+
+Aplicada sobre el dataframe entero detecta aquellas observaciones que sean iguales en todas sus observaciones. Esto es difícil que pase pero puede suceder cuando por alguna falla técnica el sistema desde donde se obtienen los datos duplica registros completos. 
+
+Otra posibilidad es utilizar la variable que es clave en la tabla de datos o las variables que constituyen una clave combinada.
+
+Por ejemplo, en este caso, usemos una serie de variables como SEXO, FECHA_NACIMIENTO, ID_PROV_INDEC_RESIDENCIA e ID_DEPTO_INDEC_RESIDENCIA para ver si hay observaciones donde estos datos se repitan.
+
+```{r}
+datos |> 
+  get_dupes(SEXO, FECHA_NACIMIENTO, 
+            ID_PROV_INDEC_RESIDENCIA, ID_DEPTO_INDEC_RESIDENCIA)
+```
+
+Encontramos dos observaciones que tienen los mismo valores en esta combinación de variables. Un hombre nacido el 29/06/1947 en la provincia de Tucumán, en el departamento Lules.
+
+Supongamos que no puede existir dos veces la misma persona en la tabla y que, además para confirmar esto tenemos alguna variable más segura como el DNI, por ejemplo.
+
+### Eliminación de duplicados por observaciones únicas
+
+Para eliminar filas duplicadas en una tabla de datos podemos utilizar la función `distinct()` de **dplyr**.
+
+La función tiene un argumento denominado `.keep_all` que permite valores *TRUE* o *FALSE*. Si se iguala a *TRUE* se mantienen en el resultado todas las variables que son parte de la tabla, aunque estas no estén declaradas dentro del `distinct()`.
+
+Por defecto, este argumento se encuentra igualado a *FALSE*.
+
+```{r}
+nrow(datos)
+
+datos |> 
+  distinct(SEXO, FECHA_NACIMIENTO, ID_PROV_INDEC_RESIDENCIA, 
+           ID_DEPTO_INDEC_RESIDENCIA, 
+           .keep_all = T)
+```
+
+Observamos que las 200 observaciones `distinct()` nos devuelve 199. Eliminó una de las dos que tenían duplicadas esa serie de variables definidas, pero no podemos controlar cuál de ellas elimina.
+
+### Eliminación de duplicados por recorte de observaciones
+
+Recortar es similar a filtrar, la diferencia está en que se filtra por condiciones y recortamos por posiciones.
+
+La familia de funciones de **dplyr** que se puede utilizar para recortar es `slice_*()`.
+
+Estas funciones pueden ser muy útiles si se aplican a un dataframe agrupado porque la operación de recorte se realiza en cada grupo por separado.
+
+Por ejemplo, podemos usar la FECHA_NOTIFICACION para seleccionar la mas vieja. Esto se hace  combinado `group_by()` y `slice_min()` (observación con el valor mínimo)
+
+```{r}
+datos |> 
+  get_dupes(SEXO, FECHA_NACIMIENTO, 
+             ID_PROV_INDEC_RESIDENCIA, ID_DEPTO_INDEC_RESIDENCIA) |> 
+  select(SEXO, FECHA_NACIMIENTO, FECHA_NOTIFICACION)
+
+datos |> 
+  group_by(SEXO, FECHA_NACIMIENTO, 
+           ID_PROV_INDEC_RESIDENCIA, ID_DEPTO_INDEC_RESIDENCIA) |> 
+  slice_min(FECHA_NOTIFICACION) |> 
+  filter(SEXO == "M", FECHA_NACIMIENTO == dmy("29/06/1947")) |> 
+  select(SEXO, FECHA_NACIMIENTO, FECHA_NOTIFICACION) |> 
+  ungroup()
+```
+
+### Marcar duplicados
+
+Si, en cambio, lo que buscamos es mantener a todas las observaciones de la tabla pero marcar aquellos que consideramos duplicados podemos hacer:
+
+1. Recortar el dataframe original a sólo las filas para el análisis. Guardar los ID de este dataframe reducido en un vector.
+
+2. En el dataframe original, creamos una variable de marca usando una función condicional, basándonos si el ID está presente en el dataframe reducido (vector de ID anterior).
+
+Primer paso, en esta tabla no existe un ID único por lo que vamos a crear una clave subrogada.
+
+```{r}
+datos <- datos |> 
+  mutate(ID = row_number())
+```
+
+Ahora usaremos este ID para crear un vector con los números de las dos observaciones anteriores que están duplicadas.
+
+```{r}
+ID_duplicados <- datos |> 
+  get_dupes(SEXO, FECHA_NACIMIENTO, 
+             ID_PROV_INDEC_RESIDENCIA, ID_DEPTO_INDEC_RESIDENCIA) |> 
+  pull(ID)
+
+ID_duplicados
+```
+Finalmente aplicamos este vector con una función como `if_else()` para marcar con una **X** en la variable duplicado.
+
+```{r}
+datos <- datos |> 
+  mutate(duplicado = if_else(ID %in% ID_duplicados, "X", NA))
+```
+
+Luego podriamos filtrar los duplicados directamente
+
+```{r}
+datos |> 
+  filter(duplicado == "X")
+```
+
+
+## Datos ordenados
+
+Las tablas de datos con la que trabajamos dentro de tidyverse deben cumplir con ciertas características de los "datos ordenados" (tidy data). 
+
+Llamamos **tidy data** cuando:
+
+- Cada variable está en una columna
+- Cada observación está en una fila
+- Cada celda del cruce entre una columna y una fila es un valor
+- Cada tabla pertenece a una unidad de observación
+
+![](img/06/tidy_data.PNG){fig-align="center" width=60%}
+
+A veces las tablas se parecen a esto:
+
+```{r}
+#| echo: false
+tabla_ancho <- tidyr::population |> 
+  filter(country %in% c("Argentina", "Brazil", "Uruguay"), year > 2009) |> 
+  pivot_wider(names_from = year, values_from = population)
+
+knitr::kable(tabla_ancho, format = "html")
+```
+
+Cumple con las reglas de "datos ordenados"?
+
+No. 
+
+No lo hace porque lo que vemos como cabecera de columnas en 2010, 2011, etc. son categorías de la variable año (**year**) y no nombres de variables.
+
+En cambio esta tabla, aunque tenga la misma información, si cumple con el formato ordenado.
+
+
+```{r}
+#| echo: false
+tabla_largo <- tidyr::population |> 
+  filter(country %in% c("Argentina", "Brazil", "Uruguay"), year > 2009) 
+
+knitr::kable(tabla_largo, format = "html")
+```
+
+Generalmente los problemas comunes en tabla "desordenadas" de datos son:
+
+- Una variable se extiende por varias columnas.
+
+- Una observación está dispersa entre múltiples filas
+
+El paquete **tidyr** de tidyverse resuelve estos problemas y mediante sus funciones **pivot_** nos permite pivotear las tablas a lo "ancho" o "largo".
+
+- Función **pivot_longer()** - Convierte nombres de columnas en valores de una nueva variable.
+
+- Función **pivot_wider()** - Convierte valores de una variable en columnas nuevas.
+
+Para pasar de formato ancho a largo, es decir cuando los valores de una variable se extiende por varias columnas, se utilizan como mínimo estos argumentos:
+
+```{r}
+#| eval: false
+tabla_ancho |> 
+  pivot_longer(cols = -paises,        # todas las columnas -paises
+               names_to = "anio",     # nombre de la columna de los nombres
+               values_to = "casos")   # nombre la columna de los valores
+```
+
+
+![](img/06/tabla_longer.png){fig-align="center" width=50%}
+
+El formato inverso, cuando una observación está dispersa entre múltiples filas, sería:
+
+```{r}
+#| eval: false
+
+tabla_largo |> 
+  pivot_wider(names_from = tipo,    # nombres de los valores de tipo
+              values_from = casos)  # valores de los valores de casos
+```
+
+
+![](img/06/tabla_wider.png){fig-align="center" width=60%}
+
+
+

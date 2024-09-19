@@ -37,5 +37,11 @@
   },
   "primero/clases/00-datos.qmd": {
     "00-datos.html": "76d9d9a9"
+  },
+  "primero/clases/05-datosPerdidos.qmd": {
+    "05-datosPerdidos.html": "61c74ea0"
+  },
+  "primero/clases/06-depuracion.qmd": {
+    "06-depuracion.html": "ef34f94d"
   }
 }
