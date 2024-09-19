@@ -210,12 +210,12 @@ Excluyente, es que no pueden coexistir dos respuestas simultáneamente. Si se pr
 
 Junto a las preguntas y sus valores se acompaña la clasificación de variables y definición de escalas. Las variables pueden ser clasificadas en:
 
-| Escala | Ejemplo |
-|------|------|
-|  Nominal    | Fuma: "si" - "no"     |   
-| Ordinal     | Nivel de ingresos: "Alto" - "Medio" - "Bajo"     |     
-| Intervalo    | Hora del día: "0:00"..."24:00" |     
-| Razón   | Peso (Kgrs): 0....a n |     
+| Escala    | Ejemplo                                      |
+|-----------|----------------------------------------------|
+| Nominal   | Fuma: "si" - "no"                            |
+| Ordinal   | Nivel de ingresos: "Alto" - "Medio" - "Bajo" |
+| Intervalo | Hora del día: "0:00"..."24:00"               |
+| Razón     | Peso (Kgrs): 0....a n                        |
 
 Otras escalas especiales son las de Likert, Guttman, visuales análogas, etc
 
@@ -229,7 +229,7 @@ Ver [Manual de uso de la base de datos usuario ENFR 2018](https://www.indec.gob.
 
 ## Consideraciones éticas
 
-Nuestras tablas de datos suelen contener información de sujetos humanos lo que conlleva a la responsabilidad de proteger a esos datos. Los datos de humanos pueden contener información identificable que aumenta el riesgo de que los participantes puedan ser revelados en un conjunto de datos. Habitualmente también contienen información sobre temas sensibles vinculado a la salud lo que aumenta aún más los riesgos si se identifica a los participantes. 
+Nuestras tablas de datos suelen contener información de sujetos humanos lo que conlleva a la responsabilidad de proteger a esos datos. Los datos de humanos pueden contener información identificable que aumenta el riesgo de que los participantes puedan ser revelados en un conjunto de datos. Habitualmente también contienen información sobre temas sensibles vinculado a la salud lo que aumenta aún más los riesgos si se identifica a los participantes.
 
 Cuando se trabaja con sujetos humanos, hay dos tipos de identificadores que se pueden recopilar en el estudio: directos e indirectos.
 
@@ -237,87 +237,86 @@ Los identificadores directos son exclusivos de un individuo y se pueden utilizar
 
 La [Oficina de Ética de Investigación Humana de la Universidad de Carolina del Norte](https://research.unc.edu/2020/05/01/de-identified-coded-or-anonymous-how-do-i-know/) define 4 tipos de archivos de datos en función a la identifcación personal:
 
-1. **Identificable**: los datos incluyen información de identificación personal. Es común que los datos crudos sin procesar de un estudio de investigación sean identificables.
+1.  **Identificable**: los datos incluyen información de identificación personal. Es común que los datos crudos sin procesar de un estudio de investigación sean identificables.
 
-2. **Codificado**: en este tipo de archivo de datos, se ha eliminado o distorsionado la información de identificación personal y se han reemplazado los nombres por un código (es decir, un identificador único del participante). La única forma de vincular los datos con un individuo es a través de ese código. El archivo de código de identificación (clave de vinculación) se almacena por separado de los datos de investigación. Los datos codificados son, por lo general, el tipo de archivo que se crea después de limpiar los datos sin procesar del estudio (clean_data).
+2.  **Codificado**: en este tipo de archivo de datos, se ha eliminado o distorsionado la información de identificación personal y se han reemplazado los nombres por un código (es decir, un identificador único del participante). La única forma de vincular los datos con un individuo es a través de ese código. El archivo de código de identificación (clave de vinculación) se almacena por separado de los datos de investigación. Los datos codificados son, por lo general, el tipo de archivo que se crea después de limpiar los datos sin procesar del estudio (clean_data).
 
-3. **Desidentificado**: en este tipo de archivo, se ha eliminado o distorsionado la información de identificación y los datos ya no se pueden volver a asociar con la persona subyacente (la clave de vinculación ya no existe). Esto es lo que se crea normalmente cuando se comparten públicamente los datos de un estudio de investigación.
+3.  **Desidentificado**: en este tipo de archivo, se ha eliminado o distorsionado la información de identificación y los datos ya no se pueden volver a asociar con la persona subyacente (la clave de vinculación ya no existe). Esto es lo que se crea normalmente cuando se comparten públicamente los datos de un estudio de investigación.
 
-4. **Anónimo**: en un conjunto de datos anónimo, nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico.
+4.  **Anónimo**: en un conjunto de datos anónimo, nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico.
 
 ### Sensibilidad
 
 Los datos suelen clasificarse en función del nivel de sensibilidad. Estos niveles de sensibilidad determinan cómo se pueden recopilar, almacenar y compartir los datos, así como cuál debe ser la respuesta ante cualquier violación de datos. Si bien existe variación, aquí se presenta un resumen general de cómo se puede categorizar la información.
 
-- **Sensibilidad baja**: se considera que estos datos no presentan riesgo o que presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.
+-   **Sensibilidad baja**: se considera que estos datos no presentan riesgo o que presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.
 
-- **Sensibilidad moderada**: Se considera que estos datos tienen un riesgo moderado si se divulgan, lo que significa que podrían afectar negativamente a las personas. Estos datos pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. Por lo general, se exige que estos datos se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.
+-   **Sensibilidad moderada**: Se considera que estos datos tienen un riesgo moderado si se divulgan, lo que significa que podrían afectar negativamente a las personas. Estos datos pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. Por lo general, se exige que estos datos se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.
 
-- **Alta sensibilidad**: estos datos deben estar sujetos a las medidas de seguridad más estrictas y podrían causar un gran daño si se divulgan. Estos datos incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos) y, por lo general, se exige que se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.
+-   **Alta sensibilidad**: estos datos deben estar sujetos a las medidas de seguridad más estrictas y podrían causar un gran daño si se divulgan. Estos datos incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos) y, por lo general, se exige que se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.
 
 ## Plan de gestión de datos
 
 Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación.
 
-Es oportuno que acompañe o sea parte del protocolo de investigación o del manual de procedimiento de un programa de vigilancia epidemiológica y puede contener los siguientes items: 
+Es oportuno que acompañe o sea parte del protocolo de investigación o del manual de procedimiento de un programa de vigilancia epidemiológica y puede contener los siguientes items:
 
-1. Descripción de los datos que se compartirán 
+1.  Descripción de los datos que se compartirán
 
-- ¿Cuál es la fuente de los datos? (por ejemplo, encuestas, datos existentes, sistemas de vigilancia, etc)
-- ¿Cómo se limpiarán y conservarán los datos antes de compartirlos?
-- ¿Cuál será el nivel de agregación? (por ejemplo, nivel de elemento, datos resumidos, solo metadatos)
-  - Es posible que sea necesario compartir los conjuntos de datos de un proyecto de diferentes maneras debido a razones legales, éticas o técnicas.
-- ¿Se compartirán datos tanto brutos como limpios?
+-   ¿Cuál es la fuente de los datos? (por ejemplo, encuestas, datos existentes, sistemas de vigilancia, etc)
+-   ¿Cómo se limpiarán y conservarán los datos antes de compartirlos?
+-   ¿Cuál será el nivel de agregación? (por ejemplo, nivel de elemento, datos resumidos, solo metadatos)
+    -   Es posible que sea necesario compartir los conjuntos de datos de un proyecto de diferentes maneras debido a razones legales, éticas o técnicas.
+-   ¿Se compartirán datos tanto brutos como limpios?
 
-2. Formato de los datos a compartir 
+2.  Formato de los datos a compartir
 
-- ¿Los datos estarán en formato electrónico?
-- ¿Se proporcionará en un formato no propietario? (por ejemplo, csv)
-- ¿Se proporcionará más de un formato? (por ejemplo, xlsx y csv)
-- ¿Se necesitan herramientas para manipular o reproducir datos compartidos? (por ejemplo, software, código)
-  - Proporcione detalles sobre esas herramientas (por ejemplo, cómo se puede acceder a ellas, número de versión, sistema operativo requerido).
+-   ¿Los datos estarán en formato electrónico?
+-   ¿Se proporcionará en un formato no propietario? (por ejemplo, csv)
+-   ¿Se proporcionará más de un formato? (por ejemplo, xlsx y csv)
+-   ¿Se necesitan herramientas para manipular o reproducir datos compartidos? (por ejemplo, software, código)
+    -   Proporcione detalles sobre esas herramientas (por ejemplo, cómo se puede acceder a ellas, número de versión, sistema operativo requerido).
 
-3. Documentación a compartir 
+3.  Documentación a compartir
 
-- ¿Qué documentación compartirás?
-  - Considere la documentación a nivel de proyecto, de conjunto de datos y de variable.
-- ¿En qué formato estará su documentación? (por ejemplo, csv, pdf)
+-   ¿Qué documentación compartirás?
+    -   Considere la documentación a nivel de proyecto, de conjunto de datos y de variable.
+-   ¿En qué formato estará su documentación? (por ejemplo, csv, pdf)
 
-4. Normas 
+4.  Normas
 
-- ¿Planea utilizar algún estándar para cuestiones como metadatos, recopilación de datos o formato de datos?
+-   ¿Planea utilizar algún estándar para cuestiones como metadatos, recopilación de datos o formato de datos?
 
-5. Conservación de datos 
+5.  Conservación de datos
 
-- ¿Dónde se archivarán los datos internamente?
-  - Medidas de seguridad y accesos
-- ¿Se archivarán los datos para compartirlos públicamente? ¿Dónde?
-- ¿Cuáles son las características deseables del repositorio? (por ejemplo, identificadores únicos y persistentes asignados a los datos, metadatos recopilados, procedencia de los registros, opciones de licencia)
-- ¿Cuándo depositará sus datos de estudio en el repositorio y durante cuánto tiempo permanecerán accesibles los datos?
-- ¿Cómo permitirá la reutilización de datos?
+-   ¿Dónde se archivarán los datos internamente?
+    -   Medidas de seguridad y accesos
+-   ¿Se archivarán los datos para compartirlos públicamente? ¿Dónde?
+-   ¿Cuáles son las características deseables del repositorio? (por ejemplo, identificadores únicos y persistentes asignados a los datos, metadatos recopilados, procedencia de los registros, opciones de licencia)
+-   ¿Cuándo depositará sus datos de estudio en el repositorio y durante cuánto tiempo permanecerán accesibles los datos?
+-   ¿Cómo permitirá la reutilización de datos?
 
-6. Consideraciones sobre acceso, distribución o reutilización 
+6.  Consideraciones sobre acceso, distribución o reutilización
 
-- ¿Existen factores legales, técnicos o éticos que afecten la reutilización, el acceso o la distribución de sus datos?
-- ¿Se restringirán algunos datos?
-- ¿Se requieren controles de acceso (por ejemplo, un acuerdo de uso de datos)?
+-   ¿Existen factores legales, técnicos o éticos que afecten la reutilización, el acceso o la distribución de sus datos?
+-   ¿Se restringirán algunos datos?
+-   ¿Se requieren controles de acceso (por ejemplo, un acuerdo de uso de datos)?
 
-7. Protección de la privacidad y la confidencialidad 
+7.  Protección de la privacidad y la confidencialidad
 
-- ¿Los participantes firman acuerdos de consentimiento informado? ¿El consentimiento comunica cómo se espera que se utilicen y compartan los datos de los participantes?
-¿Cómo evitará la divulgación de información de identificación personal cuando comparta datos?
+-   ¿Los participantes firman acuerdos de consentimiento informado? ¿El consentimiento comunica cómo se espera que se utilicen y compartan los datos de los participantes? ¿Cómo evitará la divulgación de información de identificación personal cuando comparta datos?
 
-8. Seguridad de los datos 
+8.  Seguridad de los datos
 
-- ¿Cómo se mantendrá la seguridad y la integridad de los datos durante un proyecto? (por ejemplo, considere el almacenamiento, el acceso, la copia de seguridad y la transferencia de datos)
+-   ¿Cómo se mantendrá la seguridad y la integridad de los datos durante un proyecto? (por ejemplo, considere el almacenamiento, el acceso, la copia de seguridad y la transferencia de datos)
 
-9. Funciones y responsabilidades 
+9.  Funciones y responsabilidades
 
-- ¿Cuáles son los roles del personal en la gestión y preservación de datos?
-- ¿Quién garantiza la accesibilidad, fiabilidad y calidad de los datos?
-- ¿Existe un plan si un miembro principal del equipo abandona el proyecto o la institución?
+-   ¿Cuáles son los roles del personal en la gestión y preservación de datos?
+-   ¿Quién garantiza la accesibilidad, fiabilidad y calidad de los datos?
+-   ¿Existe un plan si un miembro principal del equipo abandona el proyecto o la institución?
 
-## Planificación de la gestión de datos 
+## Planificación de la gestión de datos
 
 Planificar las etapas del proceso de investigación o del protocolo de trabajo habitual en la vigilancia epidemiológica consiste en decidir y documentar los pasos a seguir por todo el equipo durante el estudio.
 
@@ -348,32 +347,30 @@ Así como se desarrolla este plan de limpieza se definen otros planes para la re
 
 ## Guía de estilo
 
-Las guías de estilo crean estandarización dentro y entre proyectos. Los beneficios de usarlas de manera consistente mejora la interpretación de las estructuras del proyecto y organiza mejor la información, así como también aumentan la reproducibilidad e interoperabilidad. 
+Las guías de estilo crean estandarización dentro y entre proyectos. Los beneficios de usarlas de manera consistente mejora la interpretación de las estructuras del proyecto y organiza mejor la información, así como también aumentan la reproducibilidad e interoperabilidad.
 
 Son muy útiles para proyectos colaborativos o integrados por muchas personas. Se pueden crear para proyectos individuales, pero también se pueden crear a nivel de equipo para que se apliquen en todos los proyectos.
-
 
 ### Buenas prácticas
 
 Antes de profundizar en las partes de una guía de estilo, hay algunas cosas que debemos saber sobre cómo las computadoras leen los nombres para comprender el “por qué” detrás de algunas de estas prácticas.
 
-1. Evite los espacios.
+1.  Evite los espacios.
 
-- Las operaciones de línea de comandos y algunos sistemas operativos no las admiten, por lo que es mejor evitarlas por completo. Las direcciones web URL tampoco.
-- El guión bajo (_) y el guion (-) son generalmente buenos delimitadores para usar en lugar de espacios. 
+-   Las operaciones de línea de comandos y algunos sistemas operativos no las admiten, por lo que es mejor evitarlas por completo. Las direcciones web URL tampoco.
+-   El guión bajo (\_) y el guion (-) son generalmente buenos delimitadores para usar en lugar de espacios.
 
-2. Con excepción de (_) y (-), evite los caracteres especiales en directorios y nombres de archivos. 
+2.  Con excepción de (\_) y (-), evite los caracteres especiales en directorios y nombres de archivos.
 
-- Los ejemplos incluyen, entre otros ?, ., *, \, /, +, ', &, ".
-- Las computadoras asignan un significado específico a muchos de estos caracteres especiales.
-- Evite caracteres acentuados y eñes
+-   Los ejemplos incluyen, entre otros ?, ., \*, , /, +, ', &, ".
+-   Las computadoras asignan un significado específico a muchos de estos caracteres especiales.
+-   Evite caracteres acentuados y eñes
 
-3. Existen varias convenciones de nomenclatura que puedes elegir para añadir a tu guía de estilo. El uso de estas convenciones te ayuda a ser coherente con los delimitadores y las mayúsculas, lo que no solo hace que tus nombres sean más legibles para los humanos, sino que también permite que tu computadora lea y busque nombres más fácilmente.
+3.  Existen varias convenciones de nomenclatura que puedes elegir para añadir a tu guía de estilo. El uso de estas convenciones te ayuda a ser coherente con los delimitadores y las mayúsculas, lo que no solo hace que tus nombres sean más legibles para los humanos, sino que también permite que tu computadora lea y busque nombres más fácilmente.
 
-4. Ordenado de manera útil, donde se tenga en cuenta la clasificación alfanumérica y el completado de ceros a la izquierda cuando hay más de un dígito. Utilización del estándar ISO 8601 para fechas (AAAA-MM-DD).
+4.  Ordenado de manera útil, donde se tenga en cuenta la clasificación alfanumérica y el completado de ceros a la izquierda cuando hay más de un dígito. Utilización del estándar ISO 8601 para fechas (AAAA-MM-DD).
 
-5. La longitud de los caracteres es importante. Las computadoras no pueden leer nombres que superen una determinada longitud de caracteres. Esto se aplica a las rutas de archivos, los nombres de archivos y los nombres de variables. 
-
+5.  La longitud de los caracteres es importante. Las computadoras no pueden leer nombres que superen una determinada longitud de caracteres. Esto se aplica a las rutas de archivos, los nombres de archivos y los nombres de variables.
 
 ### Estructura de directorio
 
@@ -385,18 +382,18 @@ En primer lugar, pensemos en organizar el directorio en una estructura de carpet
 
 Al crear la estructura de carpetas, buscamos un equilibrio entre una estructura profunda y una superficial.
 
-- Si es demasiado superficial, habrá demasiados archivos en una carpeta, lo cual resulta difícil de clasificar.
+-   Si es demasiado superficial, habrá demasiados archivos en una carpeta, lo cual resulta difícil de clasificar.
 
-- Si la ruta es demasiado profunda, se necesitarán demasiados clics para llegar a un archivo, y las rutas de archivo pueden tener demasiados caracteres. Una ruta de archivo incluye la longitud completa de las carpetas y el nombre del archivo. (por ejemplo, el límite de ruta de Windows es de 260 caracteres).
+-   Si la ruta es demasiado profunda, se necesitarán demasiados clics para llegar a un archivo, y las rutas de archivo pueden tener demasiados caracteres. Una ruta de archivo incluye la longitud completa de las carpetas y el nombre del archivo. (por ejemplo, el límite de ruta de Windows es de 260 caracteres).
 
 Considere establecer un límite de caracteres en los nombres de las carpetas (nuevamente para reducir los problemas al alcanzar los límites de caracteres de la ruta).
 
-- Haga que los nombres de sus carpetas sean significativos y fáciles de interpretar.
-- No utilice espacios en los nombres de sus carpetas.
-- Utilice (_) o (-) para separar palabras.
-- Con excepción de (-) y (_), no utilice caracteres especiales en los nombres de sus carpetas.
-- Sea coherente con los delimitadores y el uso de mayúsculas y minúsculas. Siga una convención de nomenclatura existente. 
-- Si prefiere que sus carpetas aparezcan en un orden específico, agregue el número de orden al comienzo del nombre de la carpeta, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).
+-   Haga que los nombres de sus carpetas sean significativos y fáciles de interpretar.
+-   No utilice espacios en los nombres de sus carpetas.
+-   Utilice (\_) o (-) para separar palabras.
+-   Con excepción de (-) y (\_), no utilice caracteres especiales en los nombres de sus carpetas.
+-   Sea coherente con los delimitadores y el uso de mayúsculas y minúsculas. Siga una convención de nomenclatura existente.
+-   Si prefiere que sus carpetas aparezcan en un orden específico, agregue el número de orden al comienzo del nombre de la carpeta, con ceros a la izquierda para garantizar una clasificación adecuada (01\_, 02\_).
 
 Un ejemplo de estructura de directorios completa de un proyecto podría ser el siguiente:
 
@@ -443,34 +440,30 @@ nombre_proyecto/
 
 ```
 
-
 **Archivos**
 
 A menudo tenemos apuro por guardar nuestros archivos y tal vez no consideramos lo poco claros que serán los nombres para los futuros usuarios (incluidos nosotros mismos).
 
 Nuestros nombres de archivos por sí solos deberían poder responder preguntas como:
 
-- ¿Qué son estos documentos?
-- ¿Cuando se crearon estos documentos?
-- ¿Cuál documento es la versión más reciente?
+-   ¿Qué son estos documentos?
+-   ¿Cuando se crearon estos documentos?
+-   ¿Cuál documento es la versión más reciente?
 
 Una guía de estilo de nombres de archivos nos ayuda a nombrar los archivos de una manera que nos permita responder a estas preguntas. Podemos tener una guía de nombres de archivos general o guías de nombres de archivos para diferentes propósitos que requieren diferentes estrategias de organización (por ejemplo, una guía de nombres para notas de reuniones de proyectos, otra guía de nombres para archivos de datos de proyectos). Repasemos varias convenciones que se deben tener en cuenta al nombrar los archivos.
 
-- Que los nombres sean descriptivos (un usuario debe poder comprender el contenido del archivo sin abrirlo).
-- No se debe utilizar ninguna información de identificación personal en un nombre de archivo (por ejemplo, nombre del participante).
-- Nunca utilice espacios entre palabras.
-- Utilice (-) o (_) para separar palabras.
-- Con excepción de (_) y (-), nunca utilice caracteres especiales.
-- Sea coherente con los delimitadores y el uso de mayúsculas y minúsculas. Siga una convención de nomenclatura existente.
-- Considere limitar la cantidad de caracteres permitidos para evitar alcanzar el límite de su ruta.
-- Formatee las fechas de forma uniforme y no utilice barras diagonales (/) para separar partes de una fecha. Es conveniente formatear las fechas utilizando la norma ISO 8601 de una de estas dos maneras: AAAA-MM-DD o AAAAMMDD
-- Al versionar manualmente los nombres de archivos, elija un indicador consistente para usar. Un método consiste es añadir un número al nombre del archivo. Con este método, considere rellenar a la izquierda los números individuales con un 0 para mantener el nombre del archivo con la misma longitud a medida que crece (v01, v02).
-Otro método es agregar una fecha al nombre del archivo, utilizando el estándar ISO 8601.
-- Si sus archivos necesitan ejecutarse en un orden secuencial, agregue el número de orden al comienzo del nombre del archivo, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).
-- Mantenga metadatos redundantes (información) en el nombre del archivo.
-Esto reduce la confusión si alguna vez mueves un archivo a una carpeta diferente o envías un archivo a un colaborador. También permite realizar búsquedas en tus archivos.
-Por ejemplo, coloque siempre la palabra "raw" (crudo) o "clean" (limpio) en un nombre de archivo de datos, incluso si el archivo está alojado en una carpeta "raw" o "clean".
-- Elija un orden para los metadatos del nombre del archivo (por ejemplo, proyecto -> tiempo -> participante -> instrumento).
+-   Que los nombres sean descriptivos (un usuario debe poder comprender el contenido del archivo sin abrirlo).
+-   No se debe utilizar ninguna información de identificación personal en un nombre de archivo (por ejemplo, nombre del participante).
+-   Nunca utilice espacios entre palabras.
+-   Utilice (-) o (\_) para separar palabras.
+-   Con excepción de (\_) y (-), nunca utilice caracteres especiales.
+-   Sea coherente con los delimitadores y el uso de mayúsculas y minúsculas. Siga una convención de nomenclatura existente.
+-   Considere limitar la cantidad de caracteres permitidos para evitar alcanzar el límite de su ruta.
+-   Formatee las fechas de forma uniforme y no utilice barras diagonales (/) para separar partes de una fecha. Es conveniente formatear las fechas utilizando la norma ISO 8601 de una de estas dos maneras: AAAA-MM-DD o AAAAMMDD
+-   Al versionar manualmente los nombres de archivos, elija un indicador consistente para usar. Un método consiste es añadir un número al nombre del archivo. Con este método, considere rellenar a la izquierda los números individuales con un 0 para mantener el nombre del archivo con la misma longitud a medida que crece (v01, v02). Otro método es agregar una fecha al nombre del archivo, utilizando el estándar ISO 8601.
+-   Si sus archivos necesitan ejecutarse en un orden secuencial, agregue el número de orden al comienzo del nombre del archivo, con ceros a la izquierda para garantizar una clasificación adecuada (01\_, 02\_).
+-   Mantenga metadatos redundantes (información) en el nombre del archivo. Esto reduce la confusión si alguna vez mueves un archivo a una carpeta diferente o envías un archivo a un colaborador. También permite realizar búsquedas en tus archivos. Por ejemplo, coloque siempre la palabra "raw" (crudo) o "clean" (limpio) en un nombre de archivo de datos, incluso si el archivo está alojado en una carpeta "raw" o "clean".
+-   Elija un orden para los metadatos del nombre del archivo (por ejemplo, proyecto -\> tiempo -\> participante -\> instrumento).
 
 Algunos ejemplos de nombres de archivos:
 
@@ -481,7 +474,6 @@ fig01_barras-grupo_etario.png
 tabla_poblacion_indec.xlsx
 ```
 
-
 ### Variables
 
 El mismo cuidado o aplicación de las buenas prácticas vistas hasta el momento aplican en la elección de los nombres de variables de las tablas de datos.
@@ -490,20 +482,18 @@ Hay dos tipos de reglas: las que son requisitos no negociables que realmente deb
 
 **Obligatorio**
 
-- No nombre una variable con ninguna palabra clave o función reservada y utilizada en ningún lenguaje de programación (como if, for, repeat).
-- Establecer un límite de caracteres (La mayoría de los programas estadísticos tienen un límite de caracteres en los nombres de las variables.) Considere el equilibrio entre el límite de caracteres y la interpretación. 
-- No utilice espacios ni caracteres especiales, excepto (_). No están permitidos en la mayoría de los programas. Incluso el (-) no está permitido en programas como R y SPSS ya que puede confundirse con un signo menos.
-Si bien (.) está permitido en R y SPSS, no está permitido en Stata, por lo que es mejor evitar su uso.
-- No comience el nombre de una variable con un número. Esto no está permitido en muchos programas estadísticos.
-
+-   No nombre una variable con ninguna palabra clave o función reservada y utilizada en ningún lenguaje de programación (como if, for, repeat).
+-   Establecer un límite de caracteres (La mayoría de los programas estadísticos tienen un límite de caracteres en los nombres de las variables.) Considere el equilibrio entre el límite de caracteres y la interpretación.
+-   No utilice espacios ni caracteres especiales, excepto (\_). No están permitidos en la mayoría de los programas. Incluso el (-) no está permitido en programas como R y SPSS ya que puede confundirse con un signo menos. Si bien (.) está permitido en R y SPSS, no está permitido en Stata, por lo que es mejor evitar su uso.
+-   No comience el nombre de una variable con un número. Esto no está permitido en muchos programas estadísticos.
 
 **Sugerido**
 
-- Evite agregar acentos y eñes a las palabras que use como nombre de variable.
-- Trate que todas las tablas tengan un identificador único de observación o registro. Si no está vinculado específicamente a cada unidad de análisis, genere uno arbitrario pero que identifique cada observación (suelen usarse ID numéricos secuenciales).
-- Preste atención al uso de minúsculas y mayúsculas. La mayoría de los lenguajes de análisis son sensibles a estas diferencias.
-- Si hay variables producto de preguntas con respuestas múltiples, comience los nombres de variables asociadas con el mismo prefijo (sintomas_fiebre, sintomas_vomitos, sintomas_mialgias).
-- Separe con prefijos y sufijos los nombres de las variables que pertenecen a distintos bloques de una encuesta o a diferentes tipos de participantes. Por ejemplo en las ENFR los prefijos denotan el bloque de la encuesta, BI_ = Bloque Individual, BH_ = Bloque Hogar y el sufijo _J identifica variables del jefe de hogar.
+-   Evite agregar acentos y eñes a las palabras que use como nombre de variable.
+-   Trate que todas las tablas tengan un identificador único de observación o registro. Si no está vinculado específicamente a cada unidad de análisis, genere uno arbitrario pero que identifique cada observación (suelen usarse ID numéricos secuenciales).
+-   Preste atención al uso de minúsculas y mayúsculas. La mayoría de los lenguajes de análisis son sensibles a estas diferencias.
+-   Si hay variables producto de preguntas con respuestas múltiples, comience los nombres de variables asociadas con el mismo prefijo (sintomas_fiebre, sintomas_vomitos, sintomas_mialgias).
+-   Separe con prefijos y sufijos los nombres de las variables que pertenecen a distintos bloques de una encuesta o a diferentes tipos de participantes. Por ejemplo en las ENFR los prefijos denotan el bloque de la encuesta, BI\_ = Bloque Individual, BH\_ = Bloque Hogar y el sufijo \_J identifica variables del jefe de hogar.
 
 Algunos ejemplos de nombres de variables:
 
@@ -520,53 +510,148 @@ Se pueden definir codificaciones que sigan el esquema propuesto dentro del dicci
 
 Algunas pautas a considerar en esta tarea son:
 
-- Los códigos deben ser únicos.
-Asignamos “sí” = 1 | “no” = 0 y evitamos “sí” = 1 | “no” = 1
+-   Los códigos deben ser únicos. Asignamos “sí” = 1 \| “no” = 0 y evitamos “sí” = 1 \| “no” = 1
 
-- Los códigos deben ser consistentes dentro de una variable.
-Para sexo asignamos “masculino” = 'm' y evitamos que “masculino” = 'm' o 'M' o 'Masculino' o 'masculino' dado que para la maquina terminarán siendo valores distintos por el uso de minúscula y mayúscula.
+-   Los códigos deben ser consistentes dentro de una variable. Para sexo asignamos “masculino” = 'm' y evitamos que “masculino” = 'm' o 'M' o 'Masculino' o 'masculino' dado que para la maquina terminarán siendo valores distintos por el uso de minúscula y mayúscula.
 
-- Los códigos deben ser consistentes en todo el proyecto.
-Si asignamos “sí” = 1 | “no” = 0 como valor para todos los elementos de sí/no, evitamos asignar “sí” = 1 | “no” = 0 para algunas variables y “sí” = 1 | “no” = 2 para otras.
+-   Los códigos deben ser consistentes en todo el proyecto. Si asignamos “sí” = 1 \| “no” = 0 como valor para todos los elementos de sí/no, evitamos asignar “sí” = 1 \| “no” = 0 para algunas variables y “sí” = 1 \| “no” = 2 para otras.
 
-- Alineamos los códigos con las opciones de respuesta lo mejor posible.
-Asignar “ninguno” = 0 | “1” = 1 | “2” = 2 | “3 o más” = 3 y evitamos “ninguno” = 1 | “1” = 2 | “2” = 3 | “3 o más” = 4
+-   Alineamos los códigos con las opciones de respuesta lo mejor posible. Asignar “ninguno” = 0 \| “1” = 1 \| “2” = 2 \| “3 o más” = 3 y evitamos “ninguno” = 1 \| “1” = 2 \| “2” = 3 \| “3 o más” = 4
 
-- Los códigos de escala tipo Likert deben ordenarse lógicamente.
-Asignamos “totalmente en desacuerdo” = 1 | “en desacuerdo” = 2 | “de acuerdo” = 3 | “totalmente de acuerdo” = 4 y evitamos “totalmente en desacuerdo” = 1 | “en desacuerdo” = 3 | “de acuerdo” = 4 | “totalmente de acuerdo” = 2
+-   Los códigos de escala tipo Likert deben ordenarse lógicamente. Asignamos “totalmente en desacuerdo” = 1 \| “en desacuerdo” = 2 \| “de acuerdo” = 3 \| “totalmente de acuerdo” = 4 y evitamos “totalmente en desacuerdo” = 1 \| “en desacuerdo” = 3 \| “de acuerdo” = 4 \| “totalmente de acuerdo” = 2
 
 Respecto a los valores faltantes hay una variedad de estilos, pero se pueden resumir en dos opciones generales:
 
-1. Podemos elegir dejar todos los valores faltantes en blanco.
-- La ventaja de esta opción es que no hay posibilidad de que los códigos de valores faltantes asignados (por ejemplo, -999) se confundan con valores reales.
-La preocupación con este método es que no hay manera de discernir si el valor realmente falta, o fue borrado por accidente u omitido durante el ingreso de datos. 
+1.  Podemos elegir dejar todos los valores faltantes en blanco.
 
-2. La otra opción es definir códigos faltantes y agregarlos a los datos. 
-- Este código puede ser numérico (por ejemplo, “faltante” = 99 o -999) o de caracteres (por ejemplo, “faltante” = 'Sin dato') y puede ser un código uniforme aplicado a todos los datos faltantes, o puede ser varios códigos asignados para diferentes tipos de datos faltantes.
-- Una ventaja de este método es que elimina la incertidumbre que teníamos con las celdas en blanco. Si se completa un valor, ahora tenemos la certeza de que no se eliminó ni se omitió durante la entrada de datos.
-- Otro beneficio es que esto le permite especificar razones distintas para los datos faltantes (por ejemplo, “Sin dato” = 99, “Ilegible” = 98) si eso es importante para su estudio.
-- El mayor problema que puede ocurrir con este método es que sus códigos podrían confundirse con valores reales (si alguien no conoce la documentación sobre valores faltantes) o si usa un valor que no coincide con su tipo de variable, entonces introduce nuevos problemas de tipo de variable (por ejemplo, si se usa 'NULL' en una variable numérica, esa variable ya no será numérica) o se calculo la media de edad con valores 999 que no son reales y van a sesgar el resultado.
+-   La ventaja de esta opción es que no hay posibilidad de que los códigos de valores faltantes asignados (por ejemplo, -999) se confundan con valores reales. La preocupación con este método es que no hay manera de discernir si el valor realmente falta, o fue borrado por accidente u omitido durante el ingreso de datos.
+
+2.  La otra opción es definir códigos faltantes y agregarlos a los datos.
+
+-   Este código puede ser numérico (por ejemplo, “faltante” = 99 o -999) o de caracteres (por ejemplo, “faltante” = 'Sin dato') y puede ser un código uniforme aplicado a todos los datos faltantes, o puede ser varios códigos asignados para diferentes tipos de datos faltantes.
+-   Una ventaja de este método es que elimina la incertidumbre que teníamos con las celdas en blanco. Si se completa un valor, ahora tenemos la certeza de que no se eliminó ni se omitió durante la entrada de datos.
+-   Otro beneficio es que esto le permite especificar razones distintas para los datos faltantes (por ejemplo, “Sin dato” = 99, “Ilegible” = 98) si eso es importante para su estudio.
+-   El mayor problema que puede ocurrir con este método es que sus códigos podrían confundirse con valores reales (si alguien no conoce la documentación sobre valores faltantes) o si usa un valor que no coincide con su tipo de variable, entonces introduce nuevos problemas de tipo de variable (por ejemplo, si se usa 'NULL' en una variable numérica, esa variable ya no será numérica) o se calculo la media de edad con valores 999 que no son reales y van a sesgar el resultado.
 
 ## Formatos de archivos
 
+Si el proyecto de datos esta vinculado a la recolección propia, es decir a una fuente primaria de información, es recomendable que el/los archivo/s sea alguno de los formatos abiertos de texto plano con separadores. Estos archivos son universales, conocidos como valores separados por coma (csv), que utilizan separadores clásicos como (,) coma, (;) punto y coma, (tab) tabulaciones u otro simbolo a elección (por ejemplo, los archivos de la ENFR tienen la (\|) barra verticual como separador de columnas).
 
+Las extensiones de estos archivos generalmente son `.csv` o `.txt`, o alguna otra pero el contenido siempre es texto plano que puede leerse desde cualquier *block de notas*.
+
+En el caso que los datos provengan de una fuente secundaria es posible que el formato de los archivos sea de de un tipo específico que tendrá relación con el software donde se hizo la carga de datos o bien en el formato que los responsables de la recolección eligieron para compartir la información.
+
+Habitualmente los archivos `.xls` / `.xlsx` (Microsoft Excel), `.dbf` (database), `.accdb` (Microsoft Access) son usados en archivos creados dentro de proyectos sencillos donde las planillas de calculo o programa de bases de datos se pueden correr en computadoras personales.
+
+Si los datos fuern procesados previamente por algun software estadístico puede que los archivos compartidos tengan formato `.sas7bdat` (SAS), `.sav` (SPSS), `dta` (Stata) o `.RData` (R).
+
+También podemnos llegar a encontrar archivos `.json` (acrónimo de JavaScript Object Notation, 'notación de objeto de JavaScript') que es un formato abierto de texto sencillo o `.xml`(del inglés e**X**tensible **M**arkup **L**anguage, traducido como 'Lenguaje de Marcas Extensible').
 
 ## Almacenamiento y seguridad
 
+A medida que comenzamos a recopilar datos, es importante tener una estructura bien planificada para almacenarlos de forma segura y trabajar con ellos durante el estudio activo. Hay varios objetivos que debemos tener en cuenta al configurar el sistema de almacenamiento y seguridad de archivos:
 
+-   Seguridad: garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente.
+
+Para cumplir con este punto se establecen formas y protocolos que se ejecuten periódicamente de copias de seguridad que pueden realizarse en discos rígidos, espacios en un servidor central o servicios online tipo Google Drive, Dropbox, etc que deberan contar con los accesos restringidos a los usuarios autorizados del proyecto.
+
+-   Confidencialidad: asegurarse de que personas no autorizadas no vean ni accedan a información confidencial.
+
+No solo estamos hablando de los archivos electrónicos producto de la recolección de datos sino también de los formularios, cuestionarios, planillas o cualquier otro dispositivo en papel que tenga información de identificación y/o sensible de participantes.
+
+Armarios con cerraduras y espacios fisicos con medidas de seguridad son recomendados en estas situaciones. Lo mismo respecto del lugar donde se encuentra la o las computadoras del equipo de trabajo, sus pendrive y discos rígidos externos.
+
+-   Accesibilidad y usabilidad de los archivos: asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen.
+
+Existen varias formas de lograr este objetivo y deberá evaluarse durante la planificación. Se pueden usar espacios de colaboración tipo Google Drive o proyectos privados de sistema de control de versiones como GitHub o GitLab. Dependerá de las capacidades de los integrantes del equipo y del nivel de comodidad buscado.
 
 ## Depuración de datos
 
+Incluso con los esfuerzos de recopilación y captura de datos mejor diseñados, los datos aún requieren al menos un poco de procesamiento adicional antes de que estén en un formato que le permita compartir con confianza. Lo que se haga en la fase de procesamiento de datos, o limpieza de datos, dependerá en gran medida de las transformaciones planificadas para sus datos, así como del nivel de garantía de calidad y procesos de control implementados durante la recopilación y captura.
 
-criterios de calidad
+En situaciones donde los datos provienen de fuentes secundarias, las hay con garatía de calidad y también sin controles como la información que sale de muchos sistemas de vigilancia epidemiológica (por ejemplo, el SNVS del SISA).
 
+La limpieza de datos es el proceso de organizar y transformar datos sin procesar en un conjunto de datos al que se puede acceder y analizar fácilmente. Esta etapa puede dar como resultado esencialmente dos tipos diferentes de conjuntos de datos: un conjunto de datos curado para fines de intercambio de datos generales y un conjunto de datos limpio para un análisis específico.
 
-## Softwares y lenguajes de análisis
+Un conjunto de datos limpio para el intercambio significa que incluye toda la muestra del estudio (no se elimina a nadie), todos los datos faltantes siguen etiquetados como faltantes (no se realiza ninguna imputación) y no se han calculado variables específicas del análisis. Cualquier limpieza adicional se realiza en otra fase de limpieza durante los análisis.
 
+Se puede pensar en los datos en tres fases distintas:
 
-(documentación, guías de estilo, etc) Proyectos - estructura de directorios y archivos - metadatos - buenas practicas Captura de datos - Formatos de archivos 
+1.  Datos brutos
 
-Depuración y validación de datos\
-Almacenamiento, seguridad, colaboración y archivo de datos
+-   Este es el archivo sin procesar que proviene directamente de su fuente de recopilación o captura de datos. Si sus datos se recopilan electrónicamente, este es el archivo que extrae de su herramienta. Si sus datos se recopilan en papel, estos son los datos que se han ingresado en un formato legible por máquina. Si tiene una fuente de datos secundaria, este es el archivo que descarga o recibe del proveedor externo.
+-   Estos datos normalmente no se comparten fuera del equipo de investigación, ya que suelen contener información identificable y a menudo es necesario procesarlos más para que un usuario final pueda descifrarlos.
 
--   Análisis - Softwares y lenguajes disponibles
+2.  Datos depurados del estudio
+
+-   Éste es el conjunto de datos que se puede compartir públicamente.
+
+3.  Datos analíticos
+
+-   Este conjunto de datos se crea a partir del conjunto depurado de datos (ya sea por su equipo o por otros investigadores), pero se modifica aún más para un análisis específico. Este conjunto de datos normalmente también se puede compartir públicamente en un repositorio (por ejemplo [Zenodo](https://zenodo.org/)) en el momento de la publicación para permitir la replicación del análisis asociado. Aquí aparecen las variables creadas en el análisis, posibles eliminaciones de observaciones y/o variables e imputaciones de valores perdidos.
+
+```{mermaid}
+%%| fig-align: center
+flowchart TB
+  A[Datos crudos] --> B[Datos limpios]
+  B --> C[Datos analíticos]
+```
+
+### Criterios de calidad
+
+Antes de limpiar nuestros datos, debemos tener un entendimiento compartido sobre cómo esperamos que se vean una vez que se depuren, que aseguren una determinada calidad.
+
+Los siguientes son criterios posibles de limpieza:
+
+1.  Completo
+
+-   La cantidad de filas en su conjunto de datos debe coincidir con la cantidad de formularios completados registrados en su base de datos de seguimiento de participantes. Esto significa que todos los formularios que recopiló se capturaron (ya sea que se ingresaron o se recuperaron). También significa que eliminó todos los datos extraños que no pertenecen (por ejemplo, duplicados, participantes que no están en la muestra final, etc).
+-   La cantidad de columnas de sus datos coincide con la cantidad de variables que tiene en su diccionario de datos (es decir, no se eliminaron variables accidentalmente). De manera similar, no debería haber datos faltantes inesperados para las variables (es decir, si se recopilaron los datos, deberían existir en su conjunto de datos).
+-   Puede haber observaciones y/o variables eliminadas, pero a partir de una decisión consciente y debidamente documentada.
+
+2.  Válido
+
+-   Las variables se ajustan a las restricciones que ha establecido en su diccionario de datos (por ejemplo, tipos de variables, valores y rangos de variables permitidos, la falta de elementos a nivel de elemento se alinea con las reglas del universo de variables y los patrones de omisión definidos)
+
+3.  Preciso
+
+-   Muchas veces no hay forma de saber si un valor es verdadero o no. Sin embargo, es posible utilizar su conocimiento implícito de un participante o una fuente de datos para descubrir valores erróneos.
+
+4.  Coherente
+
+-   Los valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna (por ejemplo, todos los valores de la fecha de la encuesta tienen el formato AAAA-MM-DD).
+-   En colecciones repetidas del mismo formulario, todas las variables se nombran, miden, formatean o codifican de manera consistente (por ejemplo, las categorías y/o códigos cargados en las variables son las del diccionario de datos).
+
+5.  Anonimizado
+
+-   Si se promete confidencialidad a los participantes, es necesario anonimizar los datos. En las primeras fases de limpieza, esto simplemente significa que se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio (es decir, identificador único del participante). Antes de compartir públicamente los datos, puede ser necesario un trabajo adicional para eliminar también los identificadores indirectos.
+
+6.  Interpretable
+
+-   Las variables se nombran para que coincidan con el diccionario de datos y esos nombres son legibles tanto para humanos como para máquinas. Según sea necesario, se agregan etiquetas de variables y valores como metadatos integrados para facilitar la interpretación.
+
+7.  Analizable
+
+-   El conjunto de datos tiene un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización de datos.
+
+## Softwares y lenguajes de análisis estadístico
+
+En el ámbito cuantitativista del mundo epidemiológico se utilizan diversos paquetes estadísticos. Un paquete estadístico es un programa informático que está especialmente diseñado para resolver problemas en el área de la estadística, que estos casos aplicamos a estudios epidemiológicos.
+
+Los paquetes más sencillos tienen interfaz gráfica por ventanas, lo que implica facilidad de uso y aprendizaje pero un mayor encorsetamiento a la hora de hacer cálculos que el programa no tenga predefinidos. Los programas más complejos exigen conocer su lenguaje de programación, pero suelen ser mucho más flexibles al poderse incluir en ellos librerías con funciones, tests o contrastes que no traen instalados por defecto.
+
+Existen multitud de paquetes informáticos, tanto de software privado como de software libre y/o open source, dentro de los cuales encontramos:
+
+| Interfaz gráfica (GUI) | Interfaz de línea de comando (CLI) |
+|------------------------|------------------------------------|
+| Excel                  | Lenguaje R                         |
+| SPSS                   | Stata                              |
+| EpiDat                 | Lenguaje Python                    |
+| EpiInfo                | SAS                                |
+| Stata                  | Lenguaje Julia                     |
+| SAS                    | PSPP                               |
+| Statgraphics           |                                    |
+| Minitab                |                                    |
+| PSPP                   |                                    |
+
+Algunos poseen tanto interfaz gráfica como de línea de comando, aunque no llegan a ser un lenguaje de programación. Cada una con sus ventajas y desventajas, suele ser más veloz el aprendizaje de los paquetes gráficos pero también limitados a la hora de hacer cosas más complejas. La curva de aprendizaje de los lenguajes de programación como R, Python o Julia es lenta pero a su vez no tiene límites respecto del tipo de análisis que necesitemos.
