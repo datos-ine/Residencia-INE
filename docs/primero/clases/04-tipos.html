@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Residencia-INE - Gestión de tipos de datos</title>
+<title>Gestión de tipos de datos – Residencia-INE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -67,7 +67,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -120,22 +119,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">1er. año</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -202,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <section id="exploración-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="exploración-de-datos">Exploración de datos</h2>
+<h2 data-anchor-id="exploración-de-datos">Exploración de datos</h2>
 <p>El primer paso en la exploración de un conjunto de datos es conocer su estructura y tamaño.</p>
 <p>El tamaño está definido por la cantidad de observaciones (filas) y la cantidad de variables (columnas).</p>
 <p>Llamamos estructura a la forma en se organizan sus variables, sus tipos de datos y sus categorías/valores.</p>
@@ -258,7 +253,7 @@ $ fecha   &lt;date&gt; 2020-10-20, 2020-10-20, 2020-10-20, 2020-11-05, 2020-11-0
 <p>Esta exploración inicial de la estructura generalmente viene acompañada por el “diccionario de datos” (codebook) asociado a la tabla de datos, ya sea que esta tabla provenga de un proyecto de investigación propio (fuente primaria), producto de una fuente secundaria o de un sistema de vigilancia epidemiológica.</p>
 </section>
 <section id="comprobación-y-coerción-de-tipos-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="comprobación-y-coerción-de-tipos-de-datos">Comprobación y coerción de tipos de datos</h2>
+<h2 data-anchor-id="comprobación-y-coerción-de-tipos-de-datos">Comprobación y coerción de tipos de datos</h2>
 <p>La mayoría de las funciones producen un error cuando el tipo de datos que esperan no coincide con los que pasamos como argumentos. En esta situación seguiremos el siguiente camino:</p>
 <ul>
 <li><p>Comprobar el tipo de datos utilizando las funciones <code>is.*()</code>, que nos responden con un valor lógico (TRUE si el tipo de dato coincide y FALSE si no lo hace). Si el tipo de dato coincide con el formato esperado por el argumento de la función, entonces podemos aplicarla, de lo contrario necesitaremos continuar:</p></li>
@@ -288,7 +283,7 @@ Levels: F M</code></pre>
 <li>Transformar el tipo de dato a partir de aplicar funciones específicas incluidas en paquetes que gestionan datos especiales, como por ejemplo las fechas (el paquete <em>lubridate</em> del tidyverse, que conoceremos más adelante, se ocupa de esto)</li>
 </ul>
 <p>A continuación se muestra una lista con los tipos más importantes que se pueden comprobar o forzar a partir de funciones de R base:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Tipo</th>
@@ -336,7 +331,7 @@ Levels: F M</code></pre>
 </table>
 </section>
 <section id="variables-de-tiempo" class="level2">
-<h2 class="anchored" data-anchor-id="variables-de-tiempo">Variables de tiempo</h2>
+<h2 data-anchor-id="variables-de-tiempo">Variables de tiempo</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -358,7 +353,7 @@ Levels: F M</code></pre>
 </ul>
 <p><strong>lubridate</strong> se instala y activa con tidyverse:</p>
 <section id="lectura-de-fechas" class="level3">
-<h3 class="anchored" data-anchor-id="lectura-de-fechas">Lectura de fechas</h3>
+<h3 data-anchor-id="lectura-de-fechas">Lectura de fechas</h3>
 <p>Podemos leer fechas en R usando la serie de funciones <strong>ymd()</strong> proporcionada por este paquete. Estas funciones analizan el contenido de cadenas de caracteres y las transforman a fechas.</p>
 <p>Las letras y, m y d corresponden al año, mes y día de una fecha. Para leer una fecha, seleccionamos el nombre de la función que coincide con el orden de los elementos contenidos en el objeto original. Por ejemplo, en la siguiente fecha el elemento mes viene primero, seguido por el día y luego el año, al estilo estadounidense. Entonces usaríamos la función <code>mdy()</code>:</p>
 <div class="cell">
@@ -385,7 +380,7 @@ Levels: F M</code></pre>
 <pre><code>[1] "Date"</code></pre>
 </div>
 </div>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Orden de los elementos</th>
@@ -427,10 +422,10 @@ Levels: F M</code></pre>
 <p>Cuando una función <code>dmy()</code> se aplica a un vector de fechas, <strong>lubridate</strong> supone que todas las fechas tienen el mismo orden y los mismos separadores.</p>
 </section>
 <section id="manipulando-fechas" class="level3">
-<h3 class="anchored" data-anchor-id="manipulando-fechas">Manipulando fechas</h3>
+<h3 data-anchor-id="manipulando-fechas">Manipulando fechas</h3>
 <p>Cada estructura fecha-hora es una combinación de diferentes elementos, cada uno con su propio valor. Por ejemplo, la mayoría de las fechas incluyen un valor de año, un valor de mes, un valor de día, etc. Juntos estos elementos especifican el momento exacto al que se refiere la fecha y la hora.</p>
 <p>Podemos extraer fácilmente cada elemento de una fecha-hora con la función de acceso que tiene su nombre, como se muestra en la siguiente tabla.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Componente de fecha</th>
@@ -631,7 +626,7 @@ Levels: F M</code></pre>
 </div>
 </section>
 <section id="cálculos-con-fecha-horas" class="level3">
-<h3 class="anchored" data-anchor-id="cálculos-con-fecha-horas">Cálculos con fecha-horas</h3>
+<h3 data-anchor-id="cálculos-con-fecha-horas">Cálculos con fecha-horas</h3>
 <p>Los cálculos con fechas y horas son más complicados que la aritmética con números, pero puede hacerse con precisión y facilidad mediante este paquete.</p>
 <p>¿Qué es lo que complica a la aritmética con datos de tiempo (fechas u horas)?</p>
 <p>El tiempo que medimos en el reloj se calibra periódicamente para ajustar las condiciones astronómicas, por caso los años bisiestos o los horarios de verano que se utilizan en muchos países.</p>
@@ -639,7 +634,7 @@ Levels: F M</code></pre>
 <p><strong>lubridate</strong> permite cálculos con unidades relativas y exactas introduciendo cuatro nuevos elementos relacionados: instantes, intervalos, duraciones y períodos. Estos conceptos son tomados del proyecto <strong>Joda Time</strong> <em>(Colebourne y O’Neill 2010)</em>. Conceptos similares para instantes, períodos y duraciones también aparecen en la biblioteca C++ Boost - Date Time (Garland 2011).</p>
 <p><strong>lubridate</strong> proporciona funciones auxiliares, clases de objetos y métodos para usar los cuatro conceptos en el lenguaje R.</p>
 <section id="instantes" class="level4">
-<h4 class="anchored" data-anchor-id="instantes">Instantes</h4>
+<h4 data-anchor-id="instantes">Instantes</h4>
 <p>Un instante es un momento específico en el tiempo, como el 1 de enero de 2024. Creamos un instante cada vez que convertimos una fecha a formato Date de R.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>start_2024 <span class="ot">&lt;-</span> <span class="fu">ymd_hms</span>(<span class="st">"2024-01-01 12:00:00"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -653,7 +648,7 @@ Levels: F M</code></pre>
 </div>
 </section>
 <section id="intervalos" class="level4">
-<h4 class="anchored" data-anchor-id="intervalos">Intervalos</h4>
+<h4 data-anchor-id="intervalos">Intervalos</h4>
 <p>Los intervalos, duraciones y períodos son todas formas de registrar tiempos. De estos, los intervalos son los más simples. Un intervalo es un lapso de tiempo que ocurre entre dos instantes específicos.</p>
 <p>Podemos crear objetos de intervalo restando dos instantes, mediante <strong>%–%</strong> o usando la función <code>new_interval()</code>.</p>
 <div class="cell">
@@ -682,7 +677,7 @@ Levels: F M</code></pre>
 <p>Desafortunadamente, dado que los intervalos están anclados a sus fechas de inicio y finalización, no son muy útiles para cálculos de fecha y hora.</p>
 </section>
 <section id="duraciones" class="level4">
-<h4 class="anchored" data-anchor-id="duraciones">Duraciones</h4>
+<h4 data-anchor-id="duraciones">Duraciones</h4>
 <p>Si eliminamos las fechas de inicio y finalización de un intervalo, tendremos un intervalo de tiempo genérico que podemos agregar a cualquier fecha. Pero, en que unidad es conveniente medir este período de tiempo? Como vimos anteriormente, si lo almacenamos en segundos, tendrá una longitud exacta ya que los segundos siempre tienen la misma longitud.</p>
 <p>Llamamos duraciones de estos lapsos de tiempo. Alternativamente, podemos registrar el lapso de tiempo en unidades más grandes, como minutos o años.</p>
 <p>Dado que la longitud de estas unidades varía con el tiempo, la longitud exacta de el lapso de tiempo dependerá de cuándo comience. Estos períodos de tiempo no exactos se llaman períodos y será discutido en la siguiente sección.</p>
@@ -751,7 +746,7 @@ Levels: F M</code></pre>
 </div>
 </section>
 <section id="períodos" class="level4">
-<h4 class="anchored" data-anchor-id="períodos">Períodos</h4>
+<h4 data-anchor-id="períodos">Períodos</h4>
 <p>Los períodos registran un intervalo de tiempo en unidades mayores que segundos, como años, meses, semanas, días, horas y minutos. Para mayor comodidad, también podemos crear un período que solo use segundos, pero dicho período tendría las mismas propiedades que una duración. <strong>lubridate</strong> introduce la clase <strong>period</strong> para modelar períodos. Construimos objetos de período con las funciones auxiliares <code>years()</code>, <code>months()</code>, <code>weeks()</code>, <code>days()</code>, <code>hours()</code>, <code>minutes()</code> y <code>seconds()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">months</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -792,7 +787,7 @@ Levels: F M</code></pre>
 </section>
 </section>
 <section id="división-con-intervalos-de-tiempo" class="level3">
-<h3 class="anchored" data-anchor-id="división-con-intervalos-de-tiempo">División con intervalos de tiempo</h3>
+<h3 data-anchor-id="división-con-intervalos-de-tiempo">División con intervalos de tiempo</h3>
 <p>A veces necesitamos responder preguntas que implican dividir un intervalo de tiempo por otro. Por ejemplo, ¿Cuántos años tiene una persona nacida el 26 de junio de 1976?</p>
 <p>Objetos de clase interval, duration y period pueden dividirse por otros objetos de las mismas clases. Los resultados de estas divisiones varían dependiendo de la naturaleza de los intervalos de tiempo involucrados. La división modular (%/%) también funciona con estas clases.</p>
 <p>Para ilustrar esto, hacemos un intervalo entre la fecha de nacimiento y la fecha actual.</p>
@@ -831,7 +826,7 @@ Levels: F M</code></pre>
 </div>
 <p>En resumen, la aritmética con tipos fecha-hora puede involucrar cuatro tipos de objetos: instantes, intervalos, duraciones y períodos.</p>
 <p><strong>lubridate</strong> crea nuevas clases de objetos: <em>interval</em>, <em>duration</em> y <em>period</em>. Reconoce que las clases de fecha y hora más comunes, como <strong>POSIXt</strong> y <strong>Date</strong>, se refieren a instantes. La siguiente tabla describe qué objetos se pueden combinar con otro y qué tipo de objeto resultará.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th></th>
@@ -875,7 +870,7 @@ Levels: F M</code></pre>
 <p>*= clase duration si los intervalos no se alinean.</p>
 </section>
 <section id="redondeando-fechas" class="level3">
-<h3 class="anchored" data-anchor-id="redondeando-fechas">Redondeando fechas</h3>
+<h3 data-anchor-id="redondeando-fechas">Redondeando fechas</h3>
 <p>Al igual que los números, las fechas se ordenan en forma creciente. Esto permite redondear los tipos de datos fecha-hora.</p>
 <p><strong>lubridate</strong> proporciona tres métodos que ayudan a realizar este redondeo: <code>round_date()</code>, <code>floor_date()</code>, y <code>ceiling_date()</code>.</p>
 <p>El primer argumento de cada función es la fecha-hora a ser redondeada. El segundo argumento es la unidad tomada para redondear.</p>
@@ -918,7 +913,7 @@ Levels: F M</code></pre>
 </div>
 </section>
 <section id="zonas-horarias" class="level3">
-<h3 class="anchored" data-anchor-id="zonas-horarias">Zonas horarias</h3>
+<h3 data-anchor-id="zonas-horarias">Zonas horarias</h3>
 <p>Las zonas horarias complejizan a los datos fecha-hora, pero algunas veces nos encontramos con bases de datos o situaciones en que debemos lidiar con ellas. Cuando creamos instantes en R, la zona horaria estándar es la universal (UTC).</p>
 <p><strong>lubridate</strong> ofrece dos formas de trabajar con zonas horarias.</p>
 <p>Podemos cambiar la zona horaria en la que se muestra un instante utilizando la función <code>with_tz()</code>. Esto cambia la forma en que se muestra el instante, pero continúa siendo el mismo. Por ejemplo, el objeto fecha tiene cargada una fecha-hora creada a partir de la función <code>now()</code> y al ejecutarse en un equipo con configuración regional de Argentina toma el uso horario de Buenos Aires (aparece -03 al final del día y horario)</p>
@@ -948,7 +943,7 @@ Levels: F M</code></pre>
 </section>
 </section>
 <section id="cadena-de-caracteres" class="level2">
-<h2 class="anchored" data-anchor-id="cadena-de-caracteres">Cadena de caracteres</h2>
+<h2 data-anchor-id="cadena-de-caracteres">Cadena de caracteres</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -965,7 +960,7 @@ Levels: F M</code></pre>
 <p><strong>Funciones de coincidencia de patrones</strong>: trabaja con motores de descripción de patrones, para funciones de busqueda, extracción, reemplazo, etc. Trabajan con expresiones regulares.</p>
 <p><strong>stringr</strong> también se instala y activa junto a tidyverse.</p>
 <section id="manipulación-de-caracteres" class="level3">
-<h3 class="anchored" data-anchor-id="manipulación-de-caracteres">Manipulación de caracteres</h3>
+<h3 data-anchor-id="manipulación-de-caracteres">Manipulación de caracteres</h3>
 <p>Podemos obtener la longitud de la cadena con <code>str_lenght()</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb119"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_length</span>(<span class="st">"abc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1053,7 +1048,7 @@ Levels: F M</code></pre>
 <p>igual al anterior pero en orden decreciente</p>
 </section>
 <section id="espacios-en-blanco" class="level3">
-<h3 class="anchored" data-anchor-id="espacios-en-blanco">Espacios en blanco</h3>
+<h3 data-anchor-id="espacios-en-blanco">Espacios en blanco</h3>
 <p>Hay tres funciones que añaden, eliminan o modifican espacios en blanco</p>
 <p><code>str_pad()</code> agrega espacio en blanco extra a una cadena a una longitud fija puede ser a izquierda, derecha o ambos lados.</p>
 <div class="cell">
@@ -1092,7 +1087,7 @@ Levels: F M</code></pre>
 <p>con el argumento <em>side=</em> le podemos indicar de que lado queremos eliminarlos</p>
 </section>
 <section id="patrones" class="level3">
-<h3 class="anchored" data-anchor-id="patrones">Patrones</h3>
+<h3 data-anchor-id="patrones">Patrones</h3>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1111,7 +1106,7 @@ Levels: F M</code></pre>
 <p>Habitualmente se construyen concatenando la especificación de caracteres secuenciados junto a otros metacaracteres.</p>
 <p>Son muy útiles cuando tenemos variables de alfanuméricas regulares, es decir con una estructura que se repite. Por ejemplo, los códigos internacionales de enfermedad, conocidos como CIE (actualmente en la versión CIE10/CIE11)</p>
 <p>Algunos de los metacaracteres para construir expresiones regulares son:</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
 <col style="width: 59%">
@@ -1165,7 +1160,7 @@ Levels: F M</code></pre>
 </tr>
 </tbody>
 </table>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
 <col style="width: 67%">
@@ -1328,7 +1323,7 @@ Levels: F M</code></pre>
 </section>
 </section>
 <section id="factores" class="level2">
-<h2 class="anchored" data-anchor-id="factores">Factores</h2>
+<h2 data-anchor-id="factores">Factores</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1898,13 +1893,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -1913,18 +1901,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1956,15 +1933,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("^https:\/\/(www\.)?(linkedin|twitter|github)\.*");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1973,6 +1972,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

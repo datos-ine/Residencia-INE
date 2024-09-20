@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Ajuste de tasas – Residencia-INE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Residencia-INE</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">1er. año</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#método-directo" id="toc-método-directo" class="nav-link active" data-scroll-target="#método-directo">Método directo</a></li>
+  <li><a href="#método-indirecto" id="toc-método-indirecto" class="nav-link" data-scroll-target="#método-indirecto">Método indirecto</a></li>
+  <li><a href="#ejemplo-en-lenguaje-r" id="toc-ejemplo-en-lenguaje-r" class="nav-link" data-scroll-target="#ejemplo-en-lenguaje-r">Ejemplo en lenguaje R</a>
+  <ul class="collapse">
+  <li><a href="#método-directo-1" id="toc-método-directo-1" class="nav-link" data-scroll-target="#método-directo-1">Método directo</a></li>
+  <li><a href="#método-indirecto-1" id="toc-método-indirecto-1" class="nav-link" data-scroll-target="#método-indirecto-1">Método indirecto</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Ajuste de tasas</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Las tasas de mortalidad son cocientes, y tienen como componentes: un numerador (en general el número de muertes con determinadas características del grupo de personas involucradas); un denominador (en general la población de referencia del numerador), y un factor de expansión.</p>
+<p>Las fuentes de información para el numerador son las estadísticas de mortalidad, mientras que para el denominador son los censos de población y sus estimaciones y proyecciones.</p>
+<p>En definitiva es un indicador que presenta de forma resumida el riesgo de morir de la población general o específica.</p>
+<p>El resultado obtenido de dividir el numerador por el denominador de la tasa de mortalidad se multiplica por una constante, que es el factor de expansión, a fin de no presentar un número fraccionario, difícil de trabajar e interpretar. El factor de expansión tiene como función transformar la tasa en un valor fácilmente comprensible, y su elección depende de la frecuencia del evento a que se hace referencia.</p>
+<p>A fin de poder realizar un análisis más preciso de los riesgos de morir, en determinados grupos de población podemos elaborar tasas de mortalidad específicas según las características de nuestro interés, como pueden ser el sexo, la edad o la causa principal de defunción, entre otros.</p>
+<p>El riesgo de morir está fuertemente relacionado con la edad y las tasas de mortalidad por edad muestran riesgos aumentados en los extremos de edad de la vida, como las tasas de mortalidad en menores de un año o en mayores de 80 años, por ejemplo.</p>
+<p>Las tasas de mortalidad a su vez, se pueden subdividir en tasas de mortalidad generales o tasas de mortalidad ajustadas.</p>
+<p>Una forma de comparar las tasas de mortalidad teniendo en cuenta la diferente estructura de edad entre poblaciones o en la misma población en diferentes periodos, es utilizando tasas de mortalidad estandarizadas o tasas de mortalidad ajustadas.</p>
+<p>El objetivo de la estandarización por edad es eliminar la influencia de la distinta estructura de edad sobre las tasas de mortalidad objeto de la comparación; según Last:</p>
+<div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><em>“una tasa de mortalidad estandarizada según la edad es una medida integrada de la tasa de mortalidad que una población tendría si su estructura por edades fuera estándar”</em> <span class="citation" data-cites="last1989">(<a href="#ref-last1989" role="doc-biblioref">Last 1989</a>)</span></p>
+</div>
+</div>
+</div>
+<p>Esto es debido a que, en la comparación de la mortalidad entre poblaciones distintas, la estructura de edad opera conceptualmente como un <strong>factor de confusión</strong><span class="citation" data-cites="Szklo2003">(<a href="#ref-Szklo2003" role="doc-biblioref">Nieto F. 2003</a>)</span>.</p>
+<section id="método-directo" class="level2">
+<h2 data-anchor-id="método-directo">Método directo</h2>
+<p>El método directo consiste en calcular primero el riesgo específico de muerte para cada grupo de edad. Para lograrlo, es necesario disponer de datos sobre el número de muertes ocurridas en un determinado año, para cada uno de los grupos de edad elegidos, así como la población correspondiente a cada uno de dichos grupos. Lo ideal es que los grupos de edad sean estratos lógicos y homogéneos en relación al riesgo de morir. Con fines de comparación, se pueden ajustar varias poblaciones de forma simultánea, pero a continuación se utilizará un ejemplo simplificado con solo dos poblaciones. Suponiendo que se quiera comparar dos regiones, A y B, cuyas poblaciones tienen una estructura de edad diferente, se calculan los riesgos específicos de muerte en cada grupo de edad (defunciones/población) para las regiones A y B por separado <span class="citation" data-cites="lineamie2017">(<a href="#ref-lineamie2017" role="doc-biblioref"><em>Lineamientos Básicos Para El Análisis de La Mortalidad</em> 2017</a>)</span>. Luego se selecciona una población estándar. Se entiende como estándar a algo que sirve como base de comparación.</p>
+<p>Las poblaciones estándar para el método de ajuste directo pueden ser las siguientes:</p>
+<ol type="a">
+<li>una población enteramente artificial</li>
+<li>una de las poblaciones de estudio</li>
+<li>la suma de las poblaciones de estudio</li>
+<li>una población externa o de referencia</li>
+<li>una población estándar de varianza mínima</li>
+</ol>
+<p>Las poblaciones externas pueden ser, por ejemplo, la población propuesta por la <strong>OMS</strong> o por la <strong>Agencia Internacional de Investigación del Cáncer</strong> (<strong>IARC</strong>).</p>
+<p>La etapa siguiente consistirá en calcular, siempre para cada grupo de edad, el número de muertes esperadas en la población estándar, si la misma estuviese sujeta al riesgo específico encontrado en la población A, realizando a continuación el mismo cálculo para la población B. Por último, se suma el número de muertes esperadas en todos los grupos de edad, y el resultado se divide por la población estándar, obteniéndose así la tasa ajustada. Todos estos procedimientos deben efectuarse por separado para cada población, A y B. En el caso de que una de ellas haya sido seleccionada como población estándar, el ajuste solo será necesario para la otra <span class="citation" data-cites="lineamie2017">(<a href="#ref-lineamie2017" role="doc-biblioref"><em>Lineamientos Básicos Para El Análisis de La Mortalidad</em> 2017</a>)</span>.</p>
+<p>En resumen, los pasos del método directo, para la comparación de dos poblaciones A y B hipotéticas, son los siguientes:</p>
+<ul>
+<li><p>Cálculo de las tasas de mortalidad reales para cada grupo de edad en la población</p></li>
+<li><p>Elección de la población estándar</p></li>
+<li><p>Cálculo de las defunciones esperadas para la población A, si aplico sus tasas de mortalidad reales por grupo de edad a la estructura de edad de la población estándar</p></li>
+<li><p>Cálculo del total de defunciones esperadas en la población A, como suma de los valores obtenidos en el punto anterior</p></li>
+<li><p>Cálculo de la tasa de mortalidad ajustada para la población A, donde el numerador estará formado por las defunciones esperadas y el denominador por la población estándar</p></li>
+<li><p>Realizar el mismo procedimiento para la población B.</p></li>
+</ul>
+<p>Finalmente, la tasa de mortalidad ajustada es una medida resumen, una medida única, de la experiencia de mortalidad que tendría esa población si tuviera la estructura de edad de la población estándar.</p>
+<p>Por último, recordar que las tasas ajustadas son tasas <em>“artificiales”</em> o <em>“hipotéticas”</em>, y sirven exclusivamente a fines de comparación entre poblaciones.</p>
+</section>
+<section id="método-indirecto" class="level2">
+<h2 data-anchor-id="método-indirecto">Método indirecto</h2>
+<p>La estandarización de tasas por el método indirecto es una alternativa cuando no se dispone de datos de mortalidad desglosados por estrato, en este caso por grupos de edad, o cuando el tamaño de cada grupo es muy pequeño, en cuyo caso los datos estarían sujetos a variaciones muy grandes, por el simple aumento o disminución de unas pocas muertes <span class="citation" data-cites="lineamie2017">(<a href="#ref-lineamie2017" role="doc-biblioref"><em>Lineamientos Básicos Para El Análisis de La Mortalidad</em> 2017</a>)</span>.</p>
+<p>En síntesis, los pasos del método indirecto, para la comparación de dos poblaciones A y B hipotéticas, son los siguientes:</p>
+<ul>
+<li><p>Obtención de las defunciones reales observadas en la población A por grupos de edad</p></li>
+<li><p>Cálculo de las tasas de mortalidad específicas por edad observadas en la población B, es decir las tasas de la población tomada como referencia.</p></li>
+<li><p>Cálculo de las defunciones esperadas para cada grupo de edad de la población A, si se aplican las tasas de mortalidad por grupo de edad de la población B (tasas de la población de referencia) a la estructura de edad de la población A</p></li>
+<li><p>Cálculo del total de defunciones esperadas en la población A</p></li>
+<li><p>Cálculo de la <strong><em>razón de mortalidad estandarizada</em></strong> (<strong>RME</strong>), tomando como numerador las defunciones observadas en la población A, y como denominador, las defunciones esperadas en la población A, si tuviera la estructura de mortalidad (las tasas de mortalidad por grupo de edad) de la población B.</p></li>
+</ul>
+<p>De esta forma, la <strong>RME</strong> es:</p>
+<div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>“el cociente entre el número de hechos observados en el grupo o población de estudio, dividido por el número que cabría esperar si dicha población tuviera las mismas tasas específicas que la población de referencia, multiplicado por 100” <span class="citation" data-cites="last1989">(<a href="#ref-last1989" role="doc-biblioref">Last 1989</a>)</span>.</p>
+</div>
+</div>
+</div>
+<p>Se debe tener en cuenta que el ajuste por el método indirecto solo permite comparar una población con la población de la cual se obtienen las tasas de referencia. Por ejemplo, si se usa el ajuste con el método indirecto para un conjunto de unidades subnacionales (provincias de un país) y se toman como referencia las tasas de la población del país, cada unidad subnacional se puede comparar solo con la nacional. Tal cómputo daría una dimensión del riesgo de cada unidad subnacional en relación al riesgo del país (como un todo), y este riesgo de cada unidad subnacional podría encontrarse hipotéticamente en un nivel superior, igual o inferior al país. Es decir, no sería correcto comparar las unidades subnacionales entre sí utilizando el ajuste con el método indirecto en el ejemplo mencionado.</p>
+</section>
+<section id="ejemplo-en-lenguaje-r" class="level2">
+<h2 data-anchor-id="ejemplo-en-lenguaje-r">Ejemplo en lenguaje R</h2>
+<section id="método-directo-1" class="level3">
+<h3 data-anchor-id="método-directo-1">Método directo</h3>
+<p>Para mostrar cómo se realiza la estandarización, compararemos tasas ajustadas de mortalidad por todas las causas durante el 2022 de la provincia de Santa Fe y de la Provincia de Buenos Aires.</p>
+<p>Necesitaremos las muertes ocurridas por todas las causas durante 2022 de las dos provincias por edad (en categorías de 5 años) y sexo (mujer, varón) y sus poblaciones proyectadas para ese año.</p>
+<p>También necesitamos una población de referencia, la población estándar. Para los propósitos de este ejercicio utilizaremos la población argentina de 2022.</p>
+<p>Iniciamos activando paquetes, en este caso vamos hacerlo con <strong>tidyverse</strong>, <strong>readxl</strong> para leer archivos Excel y con un paquete específico que nos va a servir para el ajuste directo que se llama <strong>PHEindicatormethods</strong>. <a href="https://cran.r-project.org/web/packages/PHEindicatormethods/vignettes/DSR-vignette.html">link documentación</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PHEindicatormethods)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Luego importamos los datos necesarios. En este caso el archivo con las defunciones 2022 y con las proyecciones poblacionales del último censo publicado (2010).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">guess_encoding</span>(<span class="st">"datos/def2022.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  encoding   confidence
+  &lt;chr&gt;           &lt;dbl&gt;
+1 ISO-8859-1       0.52</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>defunciones <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"datos/def2022.csv"</span>, </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"ISO-8859-1"</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>pob_INDEC <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"datos/Base_Poblacion_Provincias_Edad_Sexo_ARG_2001_2025.xlsx"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Comencemos procesando las defunciones. La estructura del archivo es:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(defunciones)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 397,115
+Columns: 28
+$ JURI      &lt;chr&gt; "02", "02", "02", "02", "02", "02", "02", "02", "02", "02", …
+$ ANO       &lt;dbl&gt; 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, …
+$ ATENMED   &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 9, 1, 1, 1, 1, …
+$ MEDSUS    &lt;chr&gt; "1", "1", "1", "2", "1", "1", "2", "2", "2", "1", "2", "2", …
+$ CODMUER   &lt;chr&gt; "J189", "I509", "G409", "J129", "K746", "C700", "I470", "F03…
+$ FECDEF    &lt;chr&gt; "04/01/2022", "01/11/2022", "12/06/2022", "22/12/2022", "28/…
+$ FECNAC    &lt;chr&gt; "03/05/1938", "02/05/1954", "22/09/2020", "31/10/1932", "26/…
+$ EDAD      &lt;dbl&gt; 83, 68, 1, 90, 65, 48, 89, 97, 71, 91, 80, 74, 90, 89, 82, 6…
+$ UNIEDAD   &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
+$ SEXO      &lt;dbl&gt; 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 1, 1, …
+$ OCLOC     &lt;dbl&gt; 1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 3, 2, 3, 2, 2, 1, 2, …
+$ DEPOC     &lt;chr&gt; "999", "999", "999", "999", "999", "999", "999", "999", "999…
+$ PROVOC    &lt;chr&gt; "02", "02", "02", "02", "02", "02", "02", "02", "02", "02", …
+$ DEPRES    &lt;chr&gt; "005", "001", "882", "003", "840", "861", "002", "005", "410…
+$ PROVRES   &lt;chr&gt; "02", "02", "06", "02", "06", "06", "02", "02", "06", "06", …
+$ PAISRES   &lt;dbl&gt; 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, …
+$ ASOCIAD   &lt;dbl&gt; 1, 9, 1, 2, 1, 2, 2, 9, 1, 1, 1, 1, 2, 1, 2, 9, 1, 1, 1, 1, …
+$ FINSTRUC  &lt;chr&gt; "03", "03", "NULL", "99", "99", "05", "99", "99", "99", "99"…
+$ FSITLABOR &lt;chr&gt; "3", "2", "NULL", "9", "9", "1", "9", "9", "9", "9", "9", "9…
+$ MINSTRUC  &lt;chr&gt; "NULL", "NULL", "06", "NULL", "NULL", "NULL", "NULL", "NULL"…
+$ MEDAD     &lt;chr&gt; "NULL", "NULL", "30", "NULL", "NULL", "NULL", "NULL", "NULL"…
+$ MSITCONY  &lt;chr&gt; "NULL", "NULL", "1", "NULL", "NULL", "NULL", "NULL", "NULL",…
+$ PINSTRUC  &lt;chr&gt; "NULL", "NULL", "05", "NULL", "NULL", "NULL", "NULL", "NULL"…
+$ SITLABOR  &lt;chr&gt; "NULL", "NULL", "1", "NULL", "NULL", "NULL", "NULL", "NULL",…
+$ PESONAC   &lt;chr&gt; "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NUL…
+$ PESOMOR   &lt;chr&gt; "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NUL…
+$ TIEMGEST  &lt;chr&gt; "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NUL…
+$ GRUPEDAD  &lt;chr&gt; "23.80 a 84", "20.65 a 69", "04.1 año", "24.85 y más", "20.6…</code></pre>
+</div>
+</div>
+<p>En la variable <code>ANO</code> se encuentra el año de la defunción, esta debería ser una constante en 2022. Corroboremos que sea así:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>defunciones <span class="sc">|&gt;</span> <span class="fu">count</span>(ANO)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+    ANO      n
+  &lt;dbl&gt;  &lt;int&gt;
+1  2022 397115</code></pre>
+</div>
+</div>
+<p>En la variable <code>JURI</code> tenemos el código de provincia de la jurisdicción donde ocurrió el fallecimiento. Para tomar la provincia de Santa Fe y la provincia de Buenos Aires vamos a quedarnos solo con los códigos “82” y “06”.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>defunciones <span class="ot">&lt;-</span> defunciones <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(JURI <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"82"</span>, <span class="st">"06"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Las variables relevantes para este trabajo son <code>JURI</code>, <code>EDAD</code>, <code>UNIEDAD</code> y <code>SEXO</code>. Recortemos el dataframe por columnas para seleccionar esas variables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>defunciones <span class="ot">&lt;-</span> defunciones <span class="sc">|&gt;</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(JURI, EDAD, UNIEDAD, SEXO)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A continuación pasemos a trabajar con el dataframe <strong>pob_INDEC</strong>. Veamos su estructura:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(pob_INDEC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 443,361
+Columns: 7
+$ CODIGO       &lt;chr&gt; "06007", "06014", "06021", "06028", "06035", "06042", "06…
+$ DEPARTAMENTO &lt;chr&gt; "Adolfo Alsina", "Adolfo Gonzáles Chaves", "Alberti", "Al…
+$ JURISDICCION &lt;chr&gt; "BUE", "BUE", "BUE", "BUE", "BUE", "BUE", "BUE", "BUE", "…
+$ SEXO         &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
+$ YEAR         &lt;chr&gt; "2001", "2001", "2001", "2001", "2001", "2001", "2001", "…
+$ GRUPEDAD     &lt;chr&gt; "0-4", "0-4", "0-4", "0-4", "0-4", "0-4", "0-4", "0-4", "…
+$ POBLACION    &lt;dbl&gt; 680, 503, 361, 25617, 12567, 881, 2659, 11273, 1706, 1372…</code></pre>
+</div>
+</div>
+<p>De su primera variable <code>CODIGO</code> debemos extraer el código de provincia. En este ejemplo, “82” y “06”, perteneciente a Santa Fe y Buenos Aires respectivamente. De paso, asignamos a una nueva variable <code>JURI</code> (la hacemos coincidir con igual nombre que la de defunciones).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>poblaciones <span class="ot">&lt;-</span> pob_INDEC <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">JURI =</span> <span class="fu">str_sub</span>(CODIGO, <span class="dv">1</span>, <span class="dv">2</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(JURI <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"82"</span>, <span class="st">"06"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>También debemos filtrar las observaciones del año 2022.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>poblaciones <span class="ot">&lt;-</span> poblaciones <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(YEAR <span class="sc">==</span> <span class="dv">2022</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Por último, vamos a sumar poblaciones de las observaciones que son de diferentes departamentos para esas dos provincias, respetando el sexo y la edad como estructura.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>poblaciones <span class="ot">&lt;-</span> poblaciones <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">POBLACION =</span> <span class="fu">sum</span>(POBLACION),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">.by =</span> <span class="fu">c</span>(JURI, SEXO, GRUPEDAD))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Observemos como nos quedó el dataframe <strong>poblaciones</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>poblaciones</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 68 × 4
+   JURI   SEXO GRUPEDAD POBLACION
+   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;
+ 1 06        1 0-4         720286
+ 2 82        1 0-4         136815
+ 3 06        2 0-4         678714
+ 4 82        2 0-4         128983
+ 5 06        1 5-9         744713
+ 6 82        1 5-9         138743
+ 7 06        2 5-9         702793
+ 8 82        2 5-9         130876
+ 9 06        1 10-14       739162
+10 82        1 10-14       134392
+# ℹ 58 more rows</code></pre>
+</div>
+</div>
+<p>Ahora volvamos sobre el dataframe <strong>defunciones</strong> para construir el grupo etario a partir la edad. Hay que considerar que la edad en esta tabla se encuentra asociada a la unidad, que puede ser diferente en cada caso (años, meses, días, etc).</p>
+<p>Nosotros necesitamos medir todo en años, porque los grupos están expresados en esa unidad cada 5 años. Además debemos hacer coincidir las etiquetas de estos grupos con las de la tabla poblaciones para posteriormente unirlas sin problemas.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-13"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-13-1"><a href="#annotated-cell-13-1" aria-hidden="true" tabindex="-1"></a>defunciones <span class="ot">&lt;-</span> defunciones <span class="sc">|&gt;</span> </span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-13-2" class="code-annotation-target"><a href="#annotated-cell-13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">EDAD =</span> <span class="fu">if_else</span>(UNIEDAD <span class="sc">&gt;</span> <span class="dv">1</span>,</span>
+<span id="annotated-cell-13-3"><a href="#annotated-cell-13-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">true =</span> <span class="dv">0</span>,  </span>
+<span id="annotated-cell-13-4"><a href="#annotated-cell-13-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">false =</span> EDAD),                   </span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-13-5" class="code-annotation-target"><a href="#annotated-cell-13-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">GRUPEDAD =</span> <span class="fu">cut_interval</span>(EDAD,</span>
+<span id="annotated-cell-13-6"><a href="#annotated-cell-13-6" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">length =</span> <span class="dv">5</span>,</span>
+<span id="annotated-cell-13-7"><a href="#annotated-cell-13-7" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">right =</span> F),</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-13-8" class="code-annotation-target"><a href="#annotated-cell-13-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">GRUPEDAD =</span> <span class="fu">as.character</span>(GRUPEDAD),</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-13-9" class="code-annotation-target"><a href="#annotated-cell-13-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">GRUPEDAD =</span> <span class="fu">str_sub</span>(GRUPEDAD,</span>
+<span id="annotated-cell-13-10"><a href="#annotated-cell-13-10" aria-hidden="true" tabindex="-1"></a>                            <span class="at">start =</span> <span class="dv">2</span>, </span>
+<span id="annotated-cell-13-11"><a href="#annotated-cell-13-11" aria-hidden="true" tabindex="-1"></a>                            <span class="at">end =</span> <span class="fu">str_length</span>(GRUPEDAD)<span class="sc">-</span><span class="dv">1</span>),</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="5" onclick="event.preventDefault();">5</a><span id="annotated-cell-13-12" class="code-annotation-target"><a href="#annotated-cell-13-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="fu">str_split_fixed</span>(GRUPEDAD, <span class="st">","</span>,</span>
+<span id="annotated-cell-13-13"><a href="#annotated-cell-13-13" aria-hidden="true" tabindex="-1"></a>                             <span class="at">n =</span> <span class="dv">2</span>),</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="6" onclick="event.preventDefault();">6</a><span id="annotated-cell-13-14" class="code-annotation-target"><a href="#annotated-cell-13-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">x2 =</span> <span class="fu">as.numeric</span>(x[,<span class="dv">2</span>])<span class="sc">-</span><span class="dv">1</span>,</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="7" onclick="event.preventDefault();">7</a><span id="annotated-cell-13-15" class="code-annotation-target"><a href="#annotated-cell-13-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">GRUPEDAD =</span> <span class="fu">str_c</span>(x[,<span class="dv">1</span>],<span class="st">"-"</span>,x2),</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="8" onclick="event.preventDefault();">8</a><span id="annotated-cell-13-16" class="code-annotation-target"><a href="#annotated-cell-13-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">GRUPEDAD =</span> <span class="fu">if_else</span>(EDAD <span class="sc">&gt;=</span> <span class="dv">80</span>,</span>
+<span id="annotated-cell-13-17"><a href="#annotated-cell-13-17" aria-hidden="true" tabindex="-1"></a>                            <span class="at">true =</span><span class="st">"80 y más"</span>, </span>
+<span id="annotated-cell-13-18"><a href="#annotated-cell-13-18" aria-hidden="true" tabindex="-1"></a>                            <span class="at">false =</span> GRUPEDAD)) <span class="sc">|&gt;</span> </span>
+<span id="annotated-cell-13-19"><a href="#annotated-cell-13-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">!</span><span class="fu">c</span>(x, x2, EDAD, UNIEDAD))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-13" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="2" data-code-annotation="1">Si la unidad de edad es mayor a 1 (es decir, menor a unidad de tiempo año -meses, días, etc-) le asignamos a la variable <code>EDAD</code> cero años.</span>
+</dd>
+<dt data-target-cell="annotated-cell-13" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="5" data-code-annotation="2">Usamos <code>cut_interval()</code> para crear intervalos de clase cada 5 años (cerrados a izquierda y abiertos a derecha). Produce salidas tipo [0,5] que necesitamos convertir en etiquetas iguales a la de la variable <code>GRUPEDAD</code> de <strong>poblaciones</strong>, es decir 0-4.</span>
+</dd>
+<dt data-target-cell="annotated-cell-13" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="8" data-code-annotation="3">Para lograr ese cambio y como los intervalos se producen como factor convertimos a character para poder operar con <code>GRUPEDAD</code></span>
+</dd>
+<dt data-target-cell="annotated-cell-13" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="9" data-code-annotation="4">Extraemos el contenido de <code>GRUPEDAD</code> evitando los corchetes y paréntesis con <code>str_sub()</code></span>
+</dd>
+<dt data-target-cell="annotated-cell-13" data-target-annotation="5">5</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="12" data-code-annotation="5">Dividimos en dos partes tomando la coma como caracter divisor con <code>str_split()</code></span>
+</dd>
+<dt data-target-cell="annotated-cell-13" data-target-annotation="6">6</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="14" data-code-annotation="6">Convertimos a numérico la última parte del intervalo para restarle 1</span>
+</dd>
+<dt data-target-cell="annotated-cell-13" data-target-annotation="7">7</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="15" data-code-annotation="7">Unimos nuevamente en <code>GRUPEDAD</code> concatenando las dos partes del intervalo definiendo en el medio el caracter “-” con <code>str_c()</code></span>
+</dd>
+<dt data-target-cell="annotated-cell-13" data-target-annotation="8">8</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="16" data-code-annotation="8">Finalmente, si la edad es igual o mayor a 80 años, definimos la etiqueta como “80 y más” al igual que <code>GRUPEDAD</code> en <strong>poblaciones</strong>.</span>
+</dd>
+</dl>
+</div>
+</div>
+<p>Veamos que nos quedó:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>defunciones</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 183,814 × 3
+   JURI   SEXO GRUPEDAD
+   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   
+ 1 06        1 80 y más
+ 2 06        2 65-69   
+ 3 06        1 80 y más
+ 4 06        2 80 y más
+ 5 06        2 70-74   
+ 6 06        2 60-64   
+ 7 06        2 70-74   
+ 8 06        2 75-79   
+ 9 06        1 75-79   
+10 06        2 75-79   
+# ℹ 183,804 more rows</code></pre>
+</div>
+</div>
+<p>Nos falta revisar las categorías de la variable <code>SEXO</code>, para esto podemos hacer un <code>count()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>defunciones <span class="sc">|&gt;</span> </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(SEXO)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+   SEXO     n
+  &lt;dbl&gt; &lt;int&gt;
+1     1 90879
+2     2 92933
+3     3     1
+4     9     1</code></pre>
+</div>
+</div>
+<p>Tenemos dos categorías, la 3 y 9, con 1 sola muerte cada una que no vamos a poder contabilizar porque en poblaciones solo hay dos categorías de sexo (1 y 2)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>defunciones <span class="ot">&lt;-</span> defunciones <span class="sc">|&gt;</span> </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(SEXO <span class="sc">&lt;</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Bien, ahora debemos hacer el conteo de estas defunciones en función a las tres variables participantes</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>defunciones <span class="ot">&lt;-</span> defunciones <span class="sc">|&gt;</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(JURI, SEXO, GRUPEDAD, <span class="at">name =</span> <span class="st">"MUERTES"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>La tabla agregada de defunciones para estas dos provincias nos queda:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>defunciones</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 68 × 4
+   JURI   SEXO GRUPEDAD MUERTES
+   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;int&gt;
+ 1 06        1 0-4         1413
+ 2 06        1 10-14         92
+ 3 06        1 15-19        435
+ 4 06        1 20-24        691
+ 5 06        1 25-29        806
+ 6 06        1 30-34        869
+ 7 06        1 35-39        907
+ 8 06        1 40-44       1371
+ 9 06        1 45-49       1894
+10 06        1 5-9           94
+# ℹ 58 more rows</code></pre>
+</div>
+</div>
+<p>Finalmente debemos unir las dos tablas usando como clave <code>JURI</code>, <code>SEXO</code> y <code>GRUPEDAD</code> (que antes logramos que se llamaran iguales, tuvieran el mismo tipo de dato y las mismas etiquetas).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> defunciones <span class="sc">|&gt;</span> </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(poblaciones)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(JURI, SEXO, GRUPEDAD)`</code></pre>
+</div>
+</div>
+<p>Observemos que no usamos ninguna definición de clave porque al coincidir sus nombres lo hace automáticamente, agregando las variables diferentes como <code>MUERTES</code> y <code>POBLACION</code> a la tabla final.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>datos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 68 × 5
+   JURI   SEXO GRUPEDAD MUERTES POBLACION
+   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;int&gt;     &lt;dbl&gt;
+ 1 06        1 0-4         1413    720286
+ 2 06        1 10-14         92    739162
+ 3 06        1 15-19        435    684298
+ 4 06        1 20-24        691    661069
+ 5 06        1 25-29        806    661561
+ 6 06        1 30-34        869    663730
+ 7 06        1 35-39        907    617850
+ 8 06        1 40-44       1371    598546
+ 9 06        1 45-49       1894    549622
+10 06        1 5-9           94    744713
+# ℹ 58 more rows</code></pre>
+</div>
+</div>
+<p>Probemos de calcular las tasas crudas para cada provincia.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(JURI) <span class="sc">|&gt;</span> </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">MUERTES =</span> <span class="fu">sum</span>(MUERTES),</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">POBLACION =</span> <span class="fu">sum</span>(POBLACION),</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">Tasa_cruda =</span> MUERTES<span class="sc">/</span>POBLACION<span class="sc">*</span><span class="dv">100000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  JURI  MUERTES POBLACION Tasa_cruda
+  &lt;chr&gt;   &lt;int&gt;     &lt;dbl&gt;      &lt;dbl&gt;
+1 06     148691  17875744       832.
+2 82      35121   3590000       978.</code></pre>
+</div>
+</div>
+<p>Las usaremos para comparar sus valores con las ajustadas, en el sentido de visualizar el cambio producido por la estandarización.</p>
+<p>Bueno, para realizar el ajuste ya tenemos los datos de muertes y población pero nos falta aún la población estándar. Calcularemos la de Argentina para 2022 a partir de los datos importados del <strong>INDEC</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>pob_INDEC <span class="ot">&lt;-</span> pob_INDEC <span class="sc">|&gt;</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(YEAR <span class="sc">==</span> <span class="dv">2022</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">POB_STD =</span> <span class="fu">sum</span>(POBLACION),</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">.by =</span> <span class="fu">c</span>(SEXO, GRUPEDAD))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Unimos al dataframe <strong>datos</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span>  datos <span class="sc">|&gt;</span> </span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(pob_INDEC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(SEXO, GRUPEDAD)`</code></pre>
+</div>
+</div>
+<p>Finalmente están los datos necesarios para el ajuste:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>datos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 68 × 6
+   JURI   SEXO GRUPEDAD MUERTES POBLACION POB_STD
+   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;int&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+ 1 06        1 0-4         1413    720286 1895619
+ 2 06        1 10-14         92    739162 1889663
+ 3 06        1 15-19        435    684298 1799316
+ 4 06        1 20-24        691    661069 1787521
+ 5 06        1 25-29        806    661561 1797079
+ 6 06        1 30-34        869    663730 1714809
+ 7 06        1 35-39        907    617850 1585535
+ 8 06        1 40-44       1371    598546 1541460
+ 9 06        1 45-49       1894    549622 1393202
+10 06        1 5-9           94    744713 1927834
+# ℹ 58 more rows</code></pre>
+</div>
+</div>
+<p>Nos toca aplicar la función <code>phe_dsr()</code> del paquete <strong>PHEindicatormethods</strong>. Su sintaxis completa es:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">phe_dsr</span>(</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> ,                   <span class="co"># columna con los eventos (muertes)</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> ,                   <span class="co"># columna con las poblaciones </span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">stdpop =</span> ,              <span class="co"># columna con la población estándar </span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">stdpoptype =</span> <span class="st">"field"</span>,   <span class="co"># la población estándar esta en el dataframe</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"full"</span>,          <span class="co"># tipo de salida "full" predeterminado</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">confidence =</span> <span class="fl">0.95</span>,      <span class="co"># nivel de confianza de los IC 0.95 por defecto</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">multiplier =</span> <span class="dv">100000</span>)    <span class="co"># factor multiplicador 100000 por defecto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>datos  <span class="sc">|&gt;</span> </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(JURI) <span class="sc">|&gt;</span> </span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">phe_dsr</span>(</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> MUERTES,            </span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> POBLACION,          </span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">stdpop =</span> POB_STD,       </span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">stdpoptype =</span> <span class="st">"field"</span>,</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"standard"</span>)   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 6
+# Groups:   JURI [2]
+  JURI  total_count total_pop value lowercl uppercl
+  &lt;chr&gt;       &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 06         148691  17875744  809.    805.    813.
+2 82          35121   3590000  883.    874.    892.</code></pre>
+</div>
+</div>
+<p>Visualizamos que en la salida de la función están los valores de tasas ajustadas por 100000 y los intervalos de confianza al 95% para cada jurisdicción.</p>
+<p>Las tasas, en general disminuyeron respecto de las crudas y ahora se pueden comparar entre sí. En 2022, la provincia de Santa Fe tuvo casi 883 fallecidos por todas las causas cada 100000 contra 809 de la provincia de Buenos Aires.</p>
+</section>
+<section id="método-indirecto-1" class="level3">
+<h3 data-anchor-id="método-indirecto-1">Método indirecto</h3>
+<p>Así como la función <code>phe_dsr()</code> calcula las tasas ajustadas aplicando el método directo, la función <code>calculate_ISRatio()</code> del mismo paquete <strong>PHEindicatormethods</strong> lo hace usando el método indirecto.</p>
+<p>La sintaxis completa de la función es:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate_ISRatio</span>(</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span>,</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span>,</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x_ref =</span>,</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_ref =</span>,</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">refpoptype =</span> <span class="st">"vector"</span>,</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"full"</span>,</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">confidence =</span> <span class="fl">0.95</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Donde los argumentos son:</p>
+<ul>
+<li><p><strong>x</strong>: nombre de la variable que contiene los casos / eventos</p></li>
+<li><p><strong>n</strong>: nombre de la variable que contiene la población</p></li>
+<li><p><strong>x_ref</strong>: eventos / casos observados en la población de referencia. Puede ser una variable de datos o un vector.</p></li>
+<li><p><strong>n_ref</strong>: población de referencia. Puede ser una variable de datos o un vector.</p></li>
+<li><p><strong>refpoptype</strong>: si es “field” x_ref y n_ref deberán ser variables de datos. si es “vector” busca las referencias como vectores externos; predeterminado = “vector”</p></li>
+<li><p><strong>type</strong>: define que valores muestra en el cálculo. “standard” (para sólo datos) o “full” (para datos y metadatos del calculo); predeterminado = “full”</p></li>
+<li><p><strong>confidence</strong>: nivel de confianza de los IC; 0.95 por defecto</p></li>
+</ul>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-last1989" class="csl-entry" role="listitem">
+Last, J. M. 1989. <span>“A Dictionary of Epidemiology.”</span> <em>Biometrics</em> 45 (3): 1036. <a href="https://doi.org/10.2307/2531713">https://doi.org/10.2307/2531713</a>.
+</div>
+<div id="ref-lineamie2017" class="csl-entry" role="listitem">
+<em>Lineamientos Básicos Para El Análisis de La Mortalidad</em>. 2017. Organización Panamericana de la Salud. <a href="https://doi.org/10.37774/9789275319819">https://doi.org/10.37774/9789275319819</a>.
+</div>
+<div id="ref-Szklo2003" class="csl-entry" role="listitem">
+Nieto F., Szklo M. y. 2003. <em>Epidemiología Intermedia.conceptos y Aplicaciones</em>. Edited by S. A Ediciones Díaz de Santos.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("^https:\/\/(www\.)?(linkedin|twitter|github)\.*");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

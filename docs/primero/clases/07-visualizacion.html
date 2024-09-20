@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Visualización de datos – Residencia-INE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Residencia-INE</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">1er. año</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul>
+  <li><a href="#principios-y-elementos-de-las-visualizaciones" id="toc-principios-y-elementos-de-las-visualizaciones" class="nav-link active" data-scroll-target="#principios-y-elementos-de-las-visualizaciones">Principios y elementos de las visualizaciones</a>
+  <ul class="collapse">
+  <li><a href="#elementos-gráficos" id="toc-elementos-gráficos" class="nav-link" data-scroll-target="#elementos-gráficos">Elementos gráficos</a></li>
+  </ul></li>
+  <li><a href="#elegir-un-tipo-de-visualización" id="toc-elegir-un-tipo-de-visualización" class="nav-link" data-scroll-target="#elegir-un-tipo-de-visualización">Elegir un tipo de visualización</a>
+  <ul class="collapse">
+  <li><a href="#tipos-de-gráfico" id="toc-tipos-de-gráfico" class="nav-link" data-scroll-target="#tipos-de-gráfico">Tipos de gráfico</a></li>
+  </ul></li>
+  <li><a href="#gramática-de-gráficos" id="toc-gramática-de-gráficos" class="nav-link" data-scroll-target="#gramática-de-gráficos">Gramática de gráficos</a></li>
+  <li><a href="#ejemplo-de-gráfico-de-dispersión" id="toc-ejemplo-de-gráfico-de-dispersión" class="nav-link" data-scroll-target="#ejemplo-de-gráfico-de-dispersión">Ejemplo de gráfico de dispersión</a></li>
+  <li><a href="#estéticas" id="toc-estéticas" class="nav-link" data-scroll-target="#estéticas">Estéticas</a></li>
+  <li><a href="#capa-geométrica" id="toc-capa-geométrica" class="nav-link" data-scroll-target="#capa-geométrica">Capa geométrica</a></li>
+  <li><a href="#ejes" id="toc-ejes" class="nav-link" data-scroll-target="#ejes">Ejes</a></li>
+  <li><a href="#facetas" id="toc-facetas" class="nav-link" data-scroll-target="#facetas">Facetas</a></li>
+  <li><a href="#colores" id="toc-colores" class="nav-link" data-scroll-target="#colores">Colores</a>
+  <ul class="collapse">
+  <li><a href="#paletas-de-colores" id="toc-paletas-de-colores" class="nav-link" data-scroll-target="#paletas-de-colores">Paletas de colores</a></li>
+  <li><a href="#funciones-scale_" id="toc-funciones-scale_" class="nav-link" data-scroll-target="#funciones-scale_">Funciones scale_*</a></li>
+  </ul></li>
+  <li><a href="#coordenadas" id="toc-coordenadas" class="nav-link" data-scroll-target="#coordenadas">Coordenadas</a></li>
+  <li><a href="#personalización" id="toc-personalización" class="nav-link" data-scroll-target="#personalización">Personalización</a></li>
+  <li><a href="#exportación" id="toc-exportación" class="nav-link" data-scroll-target="#exportación">Exportación</a></li>
+  <li><a href="#composición-de-gráficos" id="toc-composición-de-gráficos" class="nav-link" data-scroll-target="#composición-de-gráficos">Composición de gráficos</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Visualización de datos</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>“Un simple gráfico ha brindado más información a la mente del analista de datos que cualquier otro dispositivo”. — <em>John Tukey</em></p>
+</div>
+</div>
+</div>
+<p>La visualización de datos puede ser un medio muy eficaz para identificar patrones en los datos y transmitir un mensaje.</p>
+<p>El objetivo científico de cualquier visualización es permitir al lector comprender datos y extraer información intuitivamente, de la forma más precisa y eficiente.</p>
+<p>Generalmente construimos visualizaciones para dos fines:</p>
+<p>Como parte del <strong>análisis exploratorio (EDA)</strong> para descubrir y describir patrones en los datos o para <strong>presentar y comunicar</strong>, logrando transmitir el mensaje de forma clara y atractiva.</p>
+<p>Es importante, al crear una visualización, considerar las características del público objetivo. La interpretación está en el ojo del espectador, y una visualización sólo logrará transmitir su mensaje si se diseña teniendo en cuenta a su audiencia.</p>
+<p>Una visualización de datos exitosa logra:</p>
+<ul>
+<li><p><strong>Captar la atención:</strong> En un mar de texto, se destacará una visualización. Si un lector tiene poco tiempo o no está seguro de si un documento es de interés, una visualización que llame la atención puede incitarlo a comenzar a leer.</p></li>
+<li><p><strong>Mejorar el acceso a la información:</strong> Las descripciones textuales pueden ser largas y difíciles de leer, mientras que las visualizaciones creadas hábilmente permiten extraer información clave de manera más eficiente, lo que hace que la extracción de información sea una tarea divertida.</p></li>
+<li><p><strong>Aumentar la precisión:</strong> Las narrativas suelen ser menos precisas que una representación visual que muestra puntos de datos y sus ejes correspondientes, mientras que un texto con demasiados datos puede dificultar el seguimiento de la línea argumental.</p></li>
+<li><p><strong>Resumir contenido:</strong> Los gráficos y tablas permiten resumir contenido textual complejo, ayudando al lector a memorizar puntos clave.</p></li>
+</ul>
+<p>Por estas razones, las visualizaciones de datos son elementos clave en cualquier tipo de publicación: artículos científicos, presentaciones, posters, etc</p>
+<p>Las tablas también son una forma de visualizar datos y resúmenes estadísticos. Suelen ser componentes igualmente importantes en una publicación y en algunos casos, una tabla puede visualizar los datos mejor que un gráfico.</p>
+<section id="principios-y-elementos-de-las-visualizaciones" class="level2">
+<h2 data-anchor-id="principios-y-elementos-de-las-visualizaciones">Principios y elementos de las visualizaciones</h2>
+<p>Las visualizaciones de datos deben tener un propósito que no debemos de perder de vista en el proceso de construcción.</p>
+<p>Podría decirse que un propósito general de una visualización es comparar grupos de datos, como datos sobre pacientes que reciben diferentes tratamientos. Una buena elección de ejes, límites de ejes, etiquetas y símbolos puede facilitar sustancialmente la identificación de patrones en los datos, mientras que una mala elección de cualquiera de estos elementos puede dificultar sustancialmente la extracción de información.</p>
+<section id="elementos-gráficos" class="level3">
+<h3 data-anchor-id="elementos-gráficos">Elementos gráficos</h3>
+<p>Varios elementos de una visualización pueden contribuir a la eficacia con la que se puede mostrar a la información, pero básicamente todos están compuestos por signos visuales y geométricas primitivas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/07/signos.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+<p>Cuando seleccionamos un tipo de gráfico estadístico como un gráfico de barras, un boxplot o una dispersión de puntos estamos usando varios de estos signos visuales como líneas, puntos, areas, con colores, tamaños y posiciones diferentes.</p>
+</section>
+</section>
+<section id="elegir-un-tipo-de-visualización" class="level2">
+<h2 data-anchor-id="elegir-un-tipo-de-visualización">Elegir un tipo de visualización</h2>
+<p><a href="https://statmodeling.stat.columbia.edu/2022/03/15/a-checklist-for-data-graphics/">Christian Hennig</a>, profesor de estadística de la Universidad de Bolonia, sugiere resolver las siguientes preguntas:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li>¿El objetivo del gráfico es descubrir algo (“gráfico de análisis EDA”) o dejar claro algo a los demás?</li>
+<li>¿Qué quieres saber?</li>
+<li>¿Quién es la audiencia del gráfico?</li>
+</ol>
+</blockquote>
+<section id="tipos-de-gráfico" class="level3">
+<h3 data-anchor-id="tipos-de-gráfico">Tipos de gráfico</h3>
+<p>Los posibles tipos de gráfico están relacionados a las características de los datos, cuantas variables necesito mostrar, de que tipo son y que cualidad de esas variables me interesa.</p>
+<p>El sitio <a href="https://www.data-to-viz.com/">From Data to Viz</a> muestra una serie de árboles de decisión, cada uno de los cuales conduce a diferentes formatos de gráficos recomendados según el tipo de datos seleccionados (numéricos, categóricos, etc.).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/07/choosing-data-to-viz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="gramática-de-gráficos" class="level2">
+<h2 data-anchor-id="gramática-de-gráficos">Gramática de gráficos</h2>
+<p>La llamada <strong>“La gramática de gráficos”</strong> define un conjunto de reglas para construir gráficos estadísticos combinando diferentes tipos de capas, de manera similar a la gramática lingüística.</p>
+<p>Esta idea fue propuesta por <strong>Leland Wilkinson</strong> en su publicación de 2005 (The Grammar of Graphics - Statistics and Computing - USA).</p>
+<p>La publicación inspiró a los desarrolladores del paquete <a href="https://ggplot2.tidyverse.org/">ggplot2</a>, el primer paquete del universo tidyverse lanzado en 2007, que se basa en un sistema de capas. El “gg” en el nombre se refiere a la <em>“gramática de los gráficos”</em> utilizada para construir las figuras.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/07/layers.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Según la idea de Wilkinson, que aplica ggplot2, todo gráfico parte de los datos que queremos visualizar y vamos enlazando diferentes capas estéticas con elementos geométricos, escalas, ejes, facetas y temas.</p>
+<p><strong>ggplot2</strong> necesita de tres componentes básicos y obligatorios para generar una visualización:</p>
+<ul>
+<li><strong>Datos</strong> con estructura “ordenada”</li>
+<li>Mapeo estético (<strong>aes</strong>thetic) de los datos</li>
+<li>Objeto <strong>geom</strong>étrico que da nombre al tipo de gráfico</li>
+</ul>
+<p>Subyace siempre:</p>
+<ul>
+<li><strong>Coord</strong>enadas que organizan los objetos geométricos</li>
+</ul>
+<p>Y se le puede agregar:</p>
+<ul>
+<li><p>Escalas (<strong>scale</strong>) definen el rango de valores de las estéticas</p></li>
+<li><p><strong>Facet</strong>as que agrupan en subgráficos</p></li>
+<li><p>Temas estéticos preconfigurados (<strong>themes</strong>)</p></li>
+</ul>
+<p>La sintaxis básica de los tres elementos necesarios es:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[dataframe] <span class="sc">|&gt;</span>  </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>MAPEO<span class="sc">&gt;</span>)) <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_xxx</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Observamos que las capas del ggplot se añaden con un signo <strong>+</strong>, a diferencia de las tuberías que conectan otras funciones de tidyverse.</p>
+<p>Algunas de las capas posteriores que son opcionales:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>[dataframe] <span class="sc">|&gt;</span>  </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> [x<span class="sc">-</span>varible],</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">y =</span> [y<span class="sc">-</span>variable])) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_xxx</span>() <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_...</span>() <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_...</span>() <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_...</span>() <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  otras capas más</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>El mapeo estético permite definir el rol que cada variable representa en el gráfico. Los roles comunes son: <code>eje x</code>, <code>eje y</code>, <code>color de contorno</code> y <code>color de relleno</code>. Existen otros especiales como de <code>text</code>,<code>agrupamiento</code> u <code>opacidad</code>.</p>
+<p>La simultáneidad de variables provoca que se puedan realizar gráficos con 2, 3 o <em>n</em> variables.</p>
+<p>Por supuesto que esta definición conecta con el elemento geométrico seleccionado. Por ejemplo, si el elemento geométrico es un <code>geom_point()</code> generamos un diagrama de dispersión de puntos y para esto necesitamos definir como mínimo una variable en el <strong>eje x</strong> y otra en el <strong>eje y</strong> que deberán ser numéricas. También podríamos definir alguna variable que mapee el color de los puntos, es decir una tercera variable participante.</p>
+</section>
+<section id="ejemplo-de-gráfico-de-dispersión" class="level2">
+<h2 data-anchor-id="ejemplo-de-gráfico-de-dispersión">Ejemplo de gráfico de dispersión</h2>
+<p>Nada mejor que ver un ejemplo para explicar el funcionamiento del sistema gráfico de ggplot2. Realicemos paso a paso un gráfico de dispersión de puntos:</p>
+<p>Tenemos estos datos ficticios para probar el paquete.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>datos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 51 × 3
+       x     y z    
+   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;
+ 1     2     1 A    
+ 2     5     2 A    
+ 3     7     2 A    
+ 4     4     2 A    
+ 5     1     3 A    
+ 6     8     4 A    
+ 7     1     4 A    
+ 8     9     5 A    
+ 9     2     5 A    
+10     6     5 A    
+# ℹ 41 more rows</code></pre>
+</div>
+</div>
+<p>A partir de <code>datos</code> vamos a conectar mediante una tubería a la función <code>ggplot()</code>, que tiene como argumento obligatorio <strong>mapping</strong>. Dentro del argumento se utiliza la función <code>aes()</code> para las definiciones estéticas que <em>“mapeen”</em> la o las variables del dataframe <code>datos</code>.</p>
+<p>Definimos que la variable <code>x</code> se grafique en el eje x y la variable <code>y</code> lo haga en el eje y. Por supuesto que las coordenadas que utilice el gráfico serán cartesianas.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Observemos que tanto <code>x</code> como <code>y</code> aparecen en cada eje como etiqueta y que las escalas se generan automáticamente a partir de las escalas de las variables. Dentro del lienzo gris del plot no se visualiza aún ningún elemento geométrico.</p>
+<p>Agreguemos la primer capa en el ggplot para indicarle que elemento geométrico usaremos. En este caso <code>geom_point()</code> define una capa de puntos. La capa geométrica le da forma y nombre al tipo de gráfico.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Se puede hacer participar a otra variable más que mapeamos con el color de los puntos. En este caso la variable categórica <code>z</code> de datos.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> z)) <span class="sc">+</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Notemos que cuando mapeamos variables lo hacemos dentro de la función <code>aes()</code> del mapping del ggplot. Esta función permite mapear ejes, colores de contorno y relleno, opacidades, entre otros elementos graficos.</p>
+<p>Si en lugar de mapear una variable queremos definir un color fijo para un elemento gráfico debemos escribirlo fuera del <code>aes()</code>. Por ejemplo, para que todos los puntos sean color azul debemos escribir el argumento color = “blue” dentro del <code>geom_point()</code> directamente. Además cambiamos el tamaño y forma del punto.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="dv">17</span>, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Las formas de puntos surgen de esta tabla numerada.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/07/shapes.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
+</figure>
+</div>
+<p>Los mapeos declarados en la función <code>ggplot()</code> principal son globales, es decir que aplican a todas las capas con elementos geométricos posteriores. Para mostrar su efecto agregamos una capa de recta de regresión (en este caso con el método de regresión lineal).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> z)) <span class="sc">+</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>El gráfico muestra que para cada conjunto de puntos (categoría A y B de la variable z) de dibuja una recta distinta respectando la declaración global del <code>aes()</code>.</p>
+<p>En cambio, si a la variable <code>z</code> la declarásemos solo en una de las capas geométricas (por ejemplo la de puntos), obtendríamos una sola recta de regresión, dado que esa definición termina siendo local y no global.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> z), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span>           <span class="co"># estética local (solo en puntos)</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="estéticas" class="level2">
+<h2 data-anchor-id="estéticas">Estéticas</h2>
+<p>Observamos que la <strong>estética</strong> de un gráfico refiere a alguna propiedad visual que representa a los datos que estamos mostrando gráficamente.</p>
+<p>Los argumentos posibles dentro de <code>aes()</code> son:</p>
+<p><code>color =</code> color de la línea de contorno de un polígono tipo barra, boxplot, etc., o el color de punto y lineas.</p>
+<p><code>fill =</code> el color de relleno de polígonos (por ejemplo, de una barra, boxplot, áreas, etc)</p>
+<p><code>shape =</code> formas que representan un punto (estrella, triángulo, cuadrado, círculo, etc)</p>
+<p><code>size =</code> tamaño del geom (por ejemplo, grosor de línea, tamaño de punto)</p>
+<p><code>alpha =</code> transparencia (1 = opaco, 0 = invisible)</p>
+<p><code>width =</code> ancho de las columnas de un gráfico de barras</p>
+<p><code>linetype =</code> tipo de línea (por ejemplo, sólida, discontinua, punteada)</p>
+</section>
+<section id="capa-geométrica" class="level2">
+<h2 data-anchor-id="capa-geométrica">Capa geométrica</h2>
+<p>Anteriormente decíamos que el tipo de gráfico que queremos construir se decide por el elemento geométrico utilizado en la estructura del ggplot.</p>
+<p>Entre las funciones más utilizadas tenemos:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Gráfico</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Área</td>
+<td><code>geom_area()</code></td>
+</tr>
+<tr class="even">
+<td>Densidad</td>
+<td><code>geom_density()</code></td>
+</tr>
+<tr class="odd">
+<td>Polígono de frecuencia</td>
+<td><code>geom_freqpoly()</code></td>
+</tr>
+<tr class="even">
+<td>Histograma</td>
+<td><code>geom_histogram()</code></td>
+</tr>
+<tr class="odd">
+<td>QQ-Plot</td>
+<td><code>geom_qq()</code></td>
+</tr>
+<tr class="even">
+<td>Barras</td>
+<td><code>geom_bar()</code></td>
+</tr>
+<tr class="odd">
+<td>Puntos</td>
+<td><code>geom_point()</code></td>
+</tr>
+<tr class="even">
+<td>Línea regresión</td>
+<td><code>geom_smooth()</code></td>
+</tr>
+<tr class="odd">
+<td>Líneas</td>
+<td><code>geom_line(</code>)</td>
+</tr>
+<tr class="even">
+<td>Boxplot</td>
+<td><code>geom_boxplot()</code></td>
+</tr>
+<tr class="odd">
+<td>Violin plot</td>
+<td><code>geom_violin()</code></td>
+</tr>
+<tr class="even">
+<td>Barras de error</td>
+<td><code>geom_errorbar()</code></td>
+</tr>
+<tr class="odd">
+<td>Dotplot</td>
+<td><code>geom_dotplot()</code></td>
+</tr>
+<tr class="even">
+<td>Puntos al azar</td>
+<td><code>geom_jitter()</code></td>
+</tr>
+<tr class="odd">
+<td>Texto</td>
+<td><code>geom_text()</code></td>
+</tr>
+<tr class="even">
+<td>Etiquetas</td>
+<td><code>geom_label()</code></td>
+</tr>
+</tbody>
+</table>
+<p>Muchas de estas funciones se utilizan simultáneamente en capas diferentes del gráfico, por ejemplo podemos hacer un gráfico de barras con una capa de etiquetas. Algunas de las funciones se construyen con estéticas cuantitativas (boxplot) o categóricas (barras), pero también se pueden combinar (por ejemplo, un boxplot por cada categoría de una variable cualitativa).</p>
+<p>También se pueden activar otros paquetes que extienden la idea del ggplot para crear gráficos con otras capas, como heatmap, ridgeline, dispersión de puntos con barras marginales, rain plot, treemaps, waffles, Upset, etc.</p>
+<p>Las estéticas van a cambiar en base al elemento geométrico elegido. En un diagrama de puntos puede que usemos <code>size</code>, <code>color</code>, <code>shape</code> para el tamaño, el color y la forma del punto respectivamente y en un gráfico de barras podemos usar <code>fill</code> y <code>width</code> para el color de relleno y el ancho de la barra, por ejemplo.</p>
+</section>
+<section id="ejes" class="level2">
+<h2 data-anchor-id="ejes">Ejes</h2>
+<p>Los gráficos con coordenadas cartesianas tienen dos ejes. Estos se pueden configurar mediante las capas <code>scale_x_*</code> y <code>scale_y_*</code>. Hay escalas para distintos tipos de datos y ggplot implementa funciones con sufijos como:</p>
+<ul>
+<li><code>continuous</code>: valores continuos</li>
+<li><code>date</code>: valores tipo fecha</li>
+<li><code>datetime</code>: valores fecha y hora</li>
+<li><code>log10</code>: valores logaritmicos</li>
+<li><code>discrete</code>: valores discretos</li>
+</ul>
+<p>Estas funciones tienen argumentos comunes para definir los límites (<code>limits</code>), el titulo (<code>name</code>) y los cortes que queremos para las marcas del eje (<code>breaks</code>).</p>
+<p>En ocasiones necesitamos construir gráficos con doble eje y, es decir visualizar simultáneamente dos variables relacionadas con el mismo eje x donde cada una tiene una escala diferente.</p>
+<p>Algunas de esta funciones de escala traen un argumento especial llamado <code>sec.axis =</code> que se puede combinar con la función de ggplot del mismo nombre (<code>sec_axis()</code>) para definir ese segundo eje que será representado en el extremo derecho del gráfico.</p>
+<p><code>sec_axis()</code> no permite construir un eje <strong>y</strong> completamente nuevo. Simplemente construye uno basado en el primero, aplicando una transformación matemática, como el logaritmo o la raíz cuadrada.<br>
+Habrá que tener en cuenta que las magnitudes de escala de ambas capas sean consistentes para lograr una visualización armoniosa.</p>
+</section>
+<section id="facetas" class="level2">
+<h2 data-anchor-id="facetas">Facetas</h2>
+<p>Las facetas son una herramienta poderosa en ggplot2 que permite dividir un gráfico en múltiples paneles, cada uno mostrando la información para un subgrupo específico de los datos. Esto resulta particularmente útil para explorar la interacción entre dos o más variables categóricas, facilitando la identificación de patrones y tendencias que podrían pasar desapercibidos en un gráfico único.</p>
+<p>Las facetas se implementan principalmente mediante dos funciones: <code>facet_wrap()</code> y <code>facet_grid()</code>.</p>
+<ul>
+<li><p><code>facet_wrap()</code> organiza los paneles por una única variable categórica, creando filas o columnas de gráficos según el número de niveles de la variable.</p></li>
+<li><p><code>facet_grid()</code> utiliza dos variables categóricas para organizar los paneles en una cuadrícula, permitiendo explorar la interacción entre ambas variables.</p></li>
+</ul>
+<p>Las facetas no solo mejoran la organización de la información, sino que también incrementan la claridad y la legibilidad de los gráficos, especialmente cuando se trata de conjuntos de datos con múltiples categorías. Además, permiten crear gráficos más compactos y eficientes en cuanto al espacio, aprovechando al máximo el área disponible.</p>
+<p>Con los datos anteriores podemos utilizar la variable <code>z</code> para sumar una capa de facetas.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> z)) <span class="sc">+</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span>  </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>z) <span class="co"># formato columnas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="colores" class="level2">
+<h2 data-anchor-id="colores">Colores</h2>
+<p>Otro elemento esencial para lograr gráficos atractivos son los colores. <strong>ggplot2</strong> ofrece una amplia gama de funciones <code>scale_*</code> que permiten personalizar y controlar el uso del color en cada componente del gráfico.</p>
+<section id="paletas-de-colores" class="level3">
+<h3 data-anchor-id="paletas-de-colores">Paletas de colores</h3>
+<p><strong>ggplot2</strong> proporciona paletas predeterminadas para diferentes tipos de datos, como Set1, Set2, Darked, etc.</p>
+<p>Además, existen paquetes externos como <strong>RColorBrewer</strong> y <strong>viridis</strong> que ofrecen una amplia variedad de paletas de colores adicionales. La elección de la paleta dependerá del tipo de datos, la estética deseada y el mensaje que se quiere transmitir con el gráfico.</p>
+<p>Un sitio útil que muestra paquetes de paletas de colores es <a href="https://r-graph-gallery.com/color-palette-finder">Palette finder</a>. Esos paquetes deben ser instalados y activados previamente para poder utilizar sus colores.</p>
+</section>
+<section id="funciones-scale_" class="level3">
+<h3 data-anchor-id="funciones-scale_">Funciones scale_*</h3>
+<p>Existen dos funciones <code>scale_*()</code> principales que permiten ajustar el uso del color en las partes de los elementos gráficos:</p>
+<ul>
+<li><p><code>scale_color_*()</code>: Define la paleta de colores y la asignación de colores de contorno o elementos tipo puntos y lineas.</p></li>
+<li><p><code>scale_fill_*()</code>: Controla el color de relleno para elementos como barras o áreas.</p></li>
+</ul>
+<p>El asterisco se reemplaza por nombres que refieren a una característica de la escala y el tipo de variable asociada:</p>
+<p><code>scale_color_discrete()</code> para variables categóricas</p>
+<p><code>scale_fill_continuous()</code> para variables cuantitativas continuas</p>
+<p><code>scale_color_manual()</code> para definir colores en forma manual</p>
+<p>R es compatible con muchos formatos de colores. Tiene 657 colores bajo nombres que se pueden visualizar mediante la ejecución de la función <code>colors()</code>, también se puede convocar mediante números y expande sus posibilidades a partir del formato hexadecimal hasta 16.777.216 combinaciones.</p>
+<p>La página <a href="https://www.colorhexa.com/">ColorHexa</a> entre otras similares ofrecen seleccionar colores visualmente y copiar el código hexadecimal correspondiente.</p>
+<p>Otra cuestión a tener en cuenta es la accesibilidad para personas daltónicas, es decir utilizar paletas de colores amigables que garanticen que la información sea accesible para todxs. Un paquete en R que aborda este tema es <a href="https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html">colorBlindness</a>.</p>
+</section>
+</section>
+<section id="coordenadas" class="level2">
+<h2 data-anchor-id="coordenadas">Coordenadas</h2>
+<p>Es muy fácil invertir un gráfico. La función de coordenadas <code>coord_flip()</code> es todo lo que se necesita para hacerlo. Esto es útil con gráficos de barras para dibujarlas horizontales, por ejemplo. También funciona con cualquier otro tipo de capa geométrica.</p>
+<p>Si necesitamos ajustar un eje con respecto a otro (relación de aspecto del sistema de coordenadas cartesianas) se puede aplicar <code>coord_fixed()</code>.</p>
+<p>Tomando el diagrama de dispersión previo:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> z)) <span class="sc">+</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>(<span class="at">ratio =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>También se puede transformar a las coordenadas cartesianas en polares con <code>coord_polar()</code> para la construcción de gráficos circulares como de torta/sectores o similares.</p>
+</section>
+<section id="personalización" class="level2">
+<h2 data-anchor-id="personalización">Personalización</h2>
+<p>La función <code>theme()</code> de ggplot2 brinda el poder de personalizar cada aspecto de la estética de un gráfico.</p>
+<p>Con <code>theme()</code> se puede modificar elementos como:</p>
+<ul>
+<li><strong>Fuentes</strong>: Selecciona las fuentes para títulos, etiquetas y textos del gráfico.</li>
+<li><strong>Leyenda</strong>: Controla la posición, el formato y el estilo de la leyenda.</li>
+<li><strong>Ejes</strong>: Personaliza el grosor, el color, las marcas y las etiquetas de los ejes.</li>
+<li><strong>Título</strong>: Define el estilo y la ubicación del título del gráfico.</li>
+<li><strong>Cuadrícula (grid)</strong>: Controla la apariencia de la cuadrícula de fondo, incluyendo su color, grosor y tipo de línea.</li>
+</ul>
+<p>Los argumentos de la función <code>theme()</code> comienzan con un nombre del elemento en cuestión y le siguen nombres relacionados a caracteristicas de esos elementos.</p>
+<p>Por ejemplo, para los ejes, el argumento <code>axis.*</code> tiene nombres como <code>title</code>, <code>text</code>, <code>ticks</code>, <code>line</code> que se igualan a funciones tipo <code>element_line()</code> para personalización de líneas, <code>element_text()</code> para textos, etc.</p>
+<p>Hagamos un pequeño ejemplo con el gráfico de puntos que desarrollamos en el documento.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> z)) <span class="sc">+</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Grafico de puntos"</span>, <span class="co"># titulo de grafico</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Eje x"</span>, <span class="co"># titulo de eje x</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Eje y"</span>) <span class="sc">+</span> <span class="co"># titulo de eje y</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>, <span class="co"># paleta Set1 en color</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                      <span class="at">name =</span> <span class="st">"Variable z"</span>) <span class="sc">+</span> </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>), <span class="co"># titulo de eje x en negrita</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"red"</span>), <span class="co"># titulo de eje y color rojo</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>), <span class="co"># texto de eje x tamaño 7 pts</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"italic"</span>), <span class="co"># texto de eje y en itálica</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>), <span class="co"># titulo de leyenda tamaño 12 pts</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>, <span class="at">face =</span> <span class="st">"bold"</span>)) <span class="co"># titulo de grafico tamaño 16 pts y negrita</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Personalizar temas permite mantener un estilo consistente en diferentes gráficos para crear una experiencia visual uniforme y mejorar su legibilidad.</p>
+<p>Es muy útil almacenar la personalización y aplicarla a los gráficos donde la necesitamos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>mi_tema <span class="ot">&lt;-</span> <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>), </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"red"</span>),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>), </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"italic"</span>), </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>), <span class="co">#</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>, <span class="at">face =</span> <span class="st">"bold"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> z)) <span class="sc">+</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Grafico de puntos"</span>, <span class="co"># titulo de grafico</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Eje x"</span>, <span class="co"># titulo de eje x</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Eje y"</span>) <span class="sc">+</span> <span class="co"># titulo de eje y</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>, <span class="co"># paleta Set1 en color</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>                      <span class="at">name =</span> <span class="st">"Variable z"</span>) <span class="sc">+</span> </span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  mi_tema</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Se sugiere comenzar con personalizaciones simples y avanzar gradualmente a modificaciones más complejas de forma progresiva.</p>
+</section>
+<section id="exportación" class="level2">
+<h2 data-anchor-id="exportación">Exportación</h2>
+<p>La función <code>ggsave()</code> exporta los graficos generados por ggplot2 en distintos formatos, tamaños y resoluciones.</p>
+<p>La sintaxis con los argumentos opcionales es:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(filename,               <span class="co"># nombre del archivo</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">plot =</span> <span class="fu">last_plot</span>(),          <span class="co"># nombre del objeto gráfico</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="cn">NULL</span>,               <span class="co"># formato de salida "jpeg", "png", "tiff", "pdf", etc</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">width =</span> <span class="cn">NA</span>,                  <span class="co"># ancho en unidades de units</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="cn">NA</span>,                 <span class="co"># alto en unidades de units</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">units =</span> <span class="fu">c</span>(<span class="st">"in"</span>, <span class="st">"cm"</span>, <span class="st">"mm"</span>), <span class="co"># unidades de medidas</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">dpi =</span> <span class="dv">300</span>)                   <span class="co"># resolución de salida en dpi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>También es posible introducir las salidas gráficas en fragmentos de código de documentos Quarto para producir archivos html, pdf y docx de Microsoft Word.</p>
+</section>
+<section id="composición-de-gráficos" class="level2">
+<h2 data-anchor-id="composición-de-gráficos">Composición de gráficos</h2>
+<p>Dentro de los paquetes complementarios del sistema ggplot, <strong>patchwork</strong> surge como una herramienta muy útil para la composición de gráficos de manera intuitiva y eficiente. A diferencia de las funciones de facetado propias de ggplot2, patchwork se enfoca en la flexibilidad y personalización, permitiendo crear composiciones complejas con mayor control sobre la disposición y el estilo de los gráficos individuales.</p>
+<p>Se basa en el concepto de fragmentos que se pueden combinar, superponer y organizar libremente utilizando operadores intuitivos como +, | y ~.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>Combina gráficos horizontalmente.</td>
+</tr>
+<tr class="even">
+<td>|</td>
+<td>Combina gráficos verticalmente.</td>
+</tr>
+<tr class="odd">
+<td>~</td>
+<td>Apila gráficos uno encima del otro.</td>
+</tr>
+</tbody>
+</table>
+<p>Además de la simple combinación, patchwork ofrece herramientas para personalizar el diseño de la composición final, teniendo en cuenta márgenes, espacios, alineación y proporciones.</p>
+<p>Imaginemos que tenemos varios gráficos que visualizar combinados (en nuestro ejemplo lo haremos con el único gráfico que construimos).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>grafico <span class="ot">&lt;-</span> datos <span class="sc">|&gt;</span> </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> z)) <span class="sc">+</span> </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>(grafico <span class="sc">+</span> grafico) <span class="sc">/</span> grafico </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07-visualizacion_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Combinamos mediante operadores básicos una salida de tres gráficos.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("^https:\/\/(www\.)?(linkedin|twitter|github)\.*");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

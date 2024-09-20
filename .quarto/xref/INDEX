@@ -43,5 +43,26 @@
   },
   "primero/clases/06-depuracion.qmd": {
     "06-depuracion.html": "ef34f94d"
+  },
+  "primero/clases/07-visualizacion.qmd": {
+    "07-visualizacion.html": "a92fd3ff"
+  },
+  "primero/recursos/04-ajusteTasas.qmd": {
+    "04-ajusteTasas.html": "08961d8a"
+  },
+  "primero/recursos/03-funciones.qmd": {
+    "03-funciones.html": "e36995c0"
+  },
+  "primero/recursos/05-resumenes.qmd": {
+    "05-resumenes.html": "23214621"
+  },
+  "primero/recursos/06-iteracion.qmd": {
+    "06-iteracion.html": "15549d84"
+  },
+  "primero/clases/08-quarto.qmd": {
+    "08-quarto.html": "eb216951"
+  },
+  "primero/recursos/01-hojaEstilo.qmd": {
+    "01-hojaEstilo.html": "3ffa1c73"
   }
 }

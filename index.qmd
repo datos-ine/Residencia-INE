@@ -1,14 +1,32 @@
 ---
-title: "Gestión de Datos"
+title: "Gestión de datos epidemiológicos con R + RStudio"
 ---
 
 <!-- Add icon library -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-### Descripción
+### Fundamentación
 
-Este curso.....
+La vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.
+
+En la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.
+
+En este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.
+
+### Contribución esperada:
+
+Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.
+
+Objetivos:
+
+Se espera que al finalizar este curso los participantes puedan:
+
+●   Utilizar R + RStudio para procesar y analizar datos epidemiológicos
+
+●   Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud
+
+●   Producir informes técnicos en diferentes formatos mediante Quarto
 
 ### Instructor
 
@@ -74,7 +92,7 @@ Este curso.....
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">08/10/2024</td>
+    <td class="tg-0lax">15/10/2024</td>
     <td class="tg-0lax">Datos - Parte 3</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
@@ -86,7 +104,7 @@ Este curso.....
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">10/10/2024</td>
+    <td class="tg-0lax">17/10/2024</td>
     <td class="tg-0lax">Lenguaje R</td>
     <td align="center"><a href="/primero/clases/01-introR.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -98,7 +116,7 @@ Este curso.....
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">10/10/2024</td>
+    <td class="tg-0lax">17/10/2024</td>
     <td class="tg-0lax">RStudio</td>
     <td align="center"><a href="/primero/clases/02-introRStudio.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -110,7 +128,7 @@ Este curso.....
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>  
     <tr>
-    <td class="tg-0lax">10/10/2024</td>
+    <td class="tg-0lax">17/10/2024</td>
     <td class="tg-0lax">Tidyverse</td>
     <td align="center"><a href="/primero/clases/03-introTidy.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -118,61 +136,86 @@ Este curso.....
           <i class="fa fa-laptop  fa-lg"></i></font></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-code fa-lg"></i></font></td>
-    <td align="center"><font color="fafcfc">
-          <i class="fa fa-briefcase  fa-lg"></i></font></td>
+    <td align="center"><a href="/primero/recursos/01-hojaEstilo.html">
+          <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr> 
   <tr>
-    <td class="tg-0lax">15/10/2024</td>
+    <td class="tg-0lax">22/10/2024</td>
     <td class="tg-0lax">Importación y exportación de archivos</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><a href="/primero/recursos/02-lectura.html">
+          <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
-  <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <tr>
+    <td class="tg-0lax">24/10/2024</td>
+    <td class="tg-0lax">Manipulación de datos</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
   </tr>
   <tr>
+    <td class="tg-0lax">29/10/2024</td>
+    <td class="tg-0lax">Diagnóstico y depuración de datos</td>
+    <td align="center"><a href="/primero/clases/06-depuracion.html">
+          <i class="fa fa-book fa-lg"></i></a></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td align="center"><a href="/primero/clases/05-datosPerdidos.html">
+          <i class="fa fa-briefcase  fa-lg"></i></a></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">31/10/2024</td>
+    <td class="tg-0lax">Datos ordenados y relacionales</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
+    <td align="center"><a href="/primero/recursos/06-iteracion.html">
+          <i class="fa fa-briefcase  fa-lg"></i></a></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">05/11/2024</td>
+    <td class="tg-0lax">Gestión de tipos de datos: caracteres, factores y variables de tiempo</td>
+    <td align="center"><a href="/primero/clases/04-tipos.html">
+          <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
   </tr>
   <tr>
+    <td class="tg-0lax">07/11/2024</td>
+    <td class="tg-0lax">Análisis Exploratorio de datos - uni y bivariado</td>
+    <td align="center"><a href="/primero/recursos/05-resumenes.html">
+          <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
+    <td align="center"><a href="/primero/recursos/05-ajusteTasas.html">
+          <i class="fa fa-briefcase  fa-lg"></i></a></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">14/11/2024</td>
+    <td class="tg-0lax">Visualización de datos</td>
+    <td align="center"><a href="/primero/clases/07-visualizacion.html">
+          <i class="fa fa-book fa-lg"></i></a></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+    <tr>
+    <td class="tg-0lax">19/11/2024</td>
+    <td class="tg-0lax">Visualización de datos</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
   </tr>
-  <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <tr>
+    <td class="tg-0lax">21/11/2024</td>
+    <td class="tg-0lax">Comunicar - Documentos Quarto</td>
+    <td align="center"><a href="/primero/clases/08-quarto.html">
+          <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
@@ -186,3 +229,7 @@ Este curso.....
 [EpiRhandbook en español](https://epirhandbook.com/es/index.es.html)
 
 [Data Visualization](https://socviz.co/)
+
+[Fundamentos de ciencia de datos con R](https://cdr-book.github.io/index.html)
+
+[Guía de Quarto (en inglés)](https://quarto.org/docs/guide/)
