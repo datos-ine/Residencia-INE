@@ -142,7 +142,8 @@ Se espera que al finalizar este curso los participantes puedan:
   <tr>
     <td class="tg-0lax">22/10/2024</td>
     <td class="tg-0lax">Importación y exportación de archivos</td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-book fa-lg"></i></font></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td align="center"><a href="/primero/recursos/02-lectura.html">
@@ -151,7 +152,8 @@ Se espera que al finalizar este curso los participantes puedan:
     <tr>
     <td class="tg-0lax">24/10/2024</td>
     <td class="tg-0lax">Manipulación de datos</td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-book fa-lg"></i></font></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
@@ -169,7 +171,8 @@ Se espera que al finalizar este curso los participantes puedan:
   <tr>
     <td class="tg-0lax">31/10/2024</td>
     <td class="tg-0lax">Datos ordenados y relacionales</td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-book fa-lg"></i></font></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td align="center"><a href="/primero/recursos/06-iteracion.html">
@@ -191,7 +194,7 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
-    <td align="center"><a href="/primero/recursos/05-ajusteTasas.html">
+    <td align="center"><a href="/primero/recursos/04-ajusteTasas.html">
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
   <tr>
@@ -206,7 +209,8 @@ Se espera que al finalizar este curso los participantes puedan:
     <tr>
     <td class="tg-0lax">19/11/2024</td>
     <td class="tg-0lax">Visualización de datos</td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-book fa-lg"></i></font></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
@@ -221,6 +225,10 @@ Se espera que al finalizar este curso los participantes puedan:
     <td class="tg-0lax"></td>
   </tr>
 </tbody></table>
+
+### Datos para la practica
+
+
 
 ### Bibliografía
 
