@@ -22,7 +22,7 @@ format:
       toc-title-website: "Contenido"
     link-external-icon: true
     link-external-newwindow: true  
-    link-external-filter: '^https:\/\/(www\.)?(linkedin|twitter|github)\.*'
+    link-external-filter: '^https:\/\/(datos-ine|www\.)?(linkedin|twitter|github)\.*'
     code-copy: true
     anchor-sections: false
     bibliography: references.bib

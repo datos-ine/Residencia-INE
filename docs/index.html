@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#fundamentación" id="toc-fundamentación" class="nav-link active" data-scroll-target="#fundamentación">Fundamentación</a></li>
   <li><a href="#contribución-esperada" id="toc-contribución-esperada" class="nav-link" data-scroll-target="#contribución-esperada">Contribución esperada:</a></li>
-  <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a></li>
+  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente">Docente</a></li>
   <li><a href="#temario" id="toc-temario" class="nav-link" data-scroll-target="#temario">Temario</a></li>
   <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
   </ul>
@@ -157,8 +157,8 @@ ul.task-list li input[type="checkbox"] {
 <p>● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud</p>
 <p>● Producir informes técnicos en diferentes formatos mediante Quarto</p>
 </section>
-<section id="instructor" class="level3">
-<h3 data-anchor-id="instructor">Instructor</h3>
+<section id="docente" class="level3">
+<h3 data-anchor-id="docente">Docente</h3>
 <p>
 Christian Ballejo <a href="mailto:cballejo@anlis.gob.ar" class="fa fa-envelope"></a> <a href="https://twitter.com/chrisballejo" target="_blank" class="fa fa-twitter"></a> <a href="https://www.linkedin.com/in/cballejo/" target="_blank" class="fa fa-linkedin"></a> <a href="https://github.com/cballejo/" target="_blank" class="fa fa-github"></a>
 </p>
@@ -737,7 +737,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("^https:\/\/(www\.)?(linkedin|twitter|github)\.*");
+      var filterRegex = new RegExp("^https:\/\/(datos-ine|www\.)?(linkedin|twitter|github)\.*");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
