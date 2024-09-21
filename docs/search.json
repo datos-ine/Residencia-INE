@@ -922,5 +922,152 @@
     "title": "Lectura de datos",
     "section": "Hagan lo mismo para leer la otra tabla con range y guardenla como pob2021",
     "text": "Hagan lo mismo para leer la otra tabla con range y guardenla como pob2021"
+  },
+  {
+    "objectID": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
+    "href": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
+    "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
+    "section": "Contribución esperada",
+    "text": "Contribución esperada\n\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n\n\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n\n\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
+  },
+  {
+    "objectID": "primero/diapositivas/00-bienvenida.html#nos-presentamos",
+    "href": "primero/diapositivas/00-bienvenida.html#nos-presentamos",
+    "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
+    "section": "Nos presentamos",
+    "text": "Nos presentamos\n\n\nantecedentes de trabajo con datos?\n\n\n\npaquetes estadísticos conocidos o usados?\n\n\n\nmaterias de grado relacionadas al tema estadístico?"
+  },
+  {
+    "objectID": "primero/diapositivas/00-bienvenida.html#materiales",
+    "href": "primero/diapositivas/00-bienvenida.html#materiales",
+    "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
+    "section": "Materiales",
+    "text": "Materiales\n\nDurante la cursada vamos a trabajar con diapositivas, materiales de lectura-consulta, trabajos prácticos y diferentes recursos que esstarán publicados en el sitio https://datos-ine.github.io/Residencia-INE/\n\nIngresemos y veamos el cronograma tentativo…"
+  },
+  {
+    "objectID": "primero/diapositivas/00-bienvenida.html#encuentros-presenciales",
+    "href": "primero/diapositivas/00-bienvenida.html#encuentros-presenciales",
+    "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
+    "section": "Encuentros presenciales",
+    "text": "Encuentros presenciales\n\n\nLos encuentros serán los martes y jueves de 10 a 12 hs.\nEn la mayoría de ellos habrá una exposición del tema a partir de diapositivas y en algunas ocasiones tendremos actividades prácticas.\nContacto: Mi mail es christianballejo@gmail.com y mi Whatsapp 223-5309396\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/00-bienvenida.html#contacto",
+    "href": "primero/diapositivas/00-bienvenida.html#contacto",
+    "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
+    "section": "Contacto",
+    "text": "Contacto\n\nMi mail es christianballejo@gmail.com y mi Whatsapp 2235309396\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#concepto",
+    "href": "primero/diapositivas/01a-datos.html#concepto",
+    "title": "Gestión de datos - parte 1",
+    "section": "Concepto",
+    "text": "Concepto\n\n\n\n \n\nLa gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, la planificación, el almacenamiento, la preservación y la difusión de los datos antes, durante y despues de la etapa de análisis."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#ciencia-abierta",
+    "href": "primero/diapositivas/01a-datos.html#ciencia-abierta",
+    "title": "Gestión de datos - parte 1",
+    "section": "Ciencia abierta",
+    "text": "Ciencia abierta\n\nLa ciencia abierta tiene como objetivo hacer que la investigación y la difusión científicas sean accesibles para todos, lo que hace absolutamente necesaria la necesidad de buenas prácticas de gestión de datos.\n\n\nMarco de ciencia abierta: Centro para la Ciencia Abierta\nIniciativa y hoja de ruta de ciencia reproducible, ética y colaborativa: The Turing Way"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#fuente-de-datos",
+    "href": "primero/diapositivas/01a-datos.html#fuente-de-datos",
+    "title": "Gestión de datos - parte 1",
+    "section": "Fuente de datos",
+    "text": "Fuente de datos\n\nFuente primaria:\n\n\nEl término datos primarios se refiere a datos recolectados por el investigador por primera vez\n\n\n\n\nSuelen necesitar una gran cantidad de recursos como tiempo, dinero y mano de obra.\n\n\n\n\nRequieren un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos",
+    "href": "primero/diapositivas/01a-datos.html#conjuntos-de-datos",
+    "title": "Gestión de datos - parte 1",
+    "section": "Conjuntos de datos",
+    "text": "Conjuntos de datos\n\n\n\nUn dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad.\nEn nuestro trabajo el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.\n\n\n\n\n\n\nUn conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora.\nLos conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una sola unidad de investigación u observación."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-1",
+    "href": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-1",
+    "title": "Gestión de datos - parte 1",
+    "section": "Conjuntos de datos",
+    "text": "Conjuntos de datos\n\nPartes básicas de una tabla de datos estructurada"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-2",
+    "href": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-2",
+    "title": "Gestión de datos - parte 1",
+    "section": "Conjuntos de datos",
+    "text": "Conjuntos de datos"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-3",
+    "href": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-3",
+    "title": "Gestión de datos - parte 1",
+    "section": "Conjuntos de datos",
+    "text": "Conjuntos de datos\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#datos-abiertos-open-data",
+    "href": "primero/diapositivas/01a-datos.html#datos-abiertos-open-data",
+    "title": "Gestión de datos - parte 1",
+    "section": "Datos abiertos (open data)",
+    "text": "Datos abiertos (open data)\n\nSon considerados datos abiertos todos aquellos datos accesibles y reutilizables, sin exigencia de permisos específicos.\n\nTiene una ética similar a otros movimientos y comunidades abiertos, como el software libre y el código abierto.\nHay una tendencia creciente de que la producción de datos públicos se compartan en el marco de open data para lxs ciudadanxs tengan acceso libre y la gestión sea transparente.\nEn nuestro país, tanto Estado nacional, como las provincias y municipios publican repositorios o banco de datos abiertos."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#fuente-de-datos-1",
+    "href": "primero/diapositivas/01a-datos.html#fuente-de-datos-1",
+    "title": "Gestión de datos - parte 1",
+    "section": "Fuente de datos",
+    "text": "Fuente de datos\n\nFuente secundaria:\n\nLos datos secundarios implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.\n\n\n\nse enmarcan en el paradigma de open data y por su disponibilidad no tiene costo para el investigador.\n\n\n\n\nA veces los datos no son lo específicos que quisiéramos."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#columnas-variables",
+    "href": "primero/diapositivas/01a-datos.html#columnas-variables",
+    "title": "Gestión de datos - parte 1",
+    "section": "Columnas (Variables)",
+    "text": "Columnas (Variables)\n\n\n\nVariables recopiladas: son variables recogidas de un instrumento (cuestionario estrcuturado, etc) en fuentes primarias o fuente secundarias (externa).\n\n\n\n\nVariables creadas: variables construidas en el análisis o variables derivadas o indicadores con fines de resumen (llamada también información agregada).\n\n\n\n\nVariables de identificación: valores que identifiquen de forma únivoca a los sujetos en sus datos (por ejemplo, el DNI o historia clínica u otro identificador ad hoc si se desea preservar la identidad)."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#columnas-variables-1",
+    "href": "primero/diapositivas/01a-datos.html#columnas-variables-1",
+    "title": "Gestión de datos - parte 1",
+    "section": "Columnas (Variables)",
+    "text": "Columnas (Variables)\nAtributos de las variables\n\nNombre de variable: representación corta de la información contenida en una columna (deben ser únicos)\nTipos de variable: determina los valores permitidos para una variable, las operaciones que se pueden realizar en la variable y cómo se almacenan los valores.\n\nnuméricos (con y sin decimales), de caracteres (también llamados texto o string), de fecha o lógicos (valores True y False).\n\nValores variables: hacen referencia a la información contenida en cada columna.\n\nEn cada variable se puede configurar los valores permitidos predeterminados en forma de validación a la carga de datos."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#atributos-de-las-variables",
+    "href": "primero/diapositivas/01a-datos.html#atributos-de-las-variables",
+    "title": "Gestión de datos - parte 1",
+    "section": "Atributos de las variables",
+    "text": "Atributos de las variables\n\n\nNombre de variable: representación corta de la información contenida en una columna (deben ser únicos)\n\n\n\n\nTipos de variable: determina los valores permitidos para una variable, las operaciones que se pueden realizar en la variable y cómo se almacenan los valores.\n\nnuméricos (con y sin decimales), de caracteres, de fecha o lógicos (valores True y False).\n\n\n\n\n\nValores variables: hacen referencia a la información contenida en cada columna. En cada variable se puede configurar los valores permitidos predeterminados en forma de validación a la carga de datos."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#filas-observaciones",
+    "href": "primero/diapositivas/01a-datos.html#filas-observaciones",
+    "title": "Gestión de datos - parte 1",
+    "section": "Filas (observaciones)",
+    "text": "Filas (observaciones)\n\nLas filas del conjunto de datos representan a los sujetos (también llamados registros u observaciones) de sus datos.\nLos sujetos de su conjunto de datos pueden ser personas, hogares, ubicaciones como países o provincias, etc.\nTodas las observaciones de una tabla de datos pertenecen a una sola unidad de observación (entidad que deseamos estudiar, es decir, aquella que se observa para efectuar mediciones o para clasificarla en categorías)"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#base-de-datos",
+    "href": "primero/diapositivas/01a-datos.html#base-de-datos",
+    "title": "Gestión de datos - parte 1",
+    "section": "Base de datos",
+    "text": "Base de datos\n\n\n\n\nUna base de datos es “una colección organizada de datos almacenados como múltiples conjuntos de datos”\n\n\n\n\nEl tipo de organización de estas bases de datos se denomina relacionales porque las observaciones de las tablas se “relacionan” entre sí mediante claves primarias y externas (foráneas).\nLas tablas suelen representar distintas unidades de observación. También puede existir una tabla principal y otras auxiliares que conectan mediante códigos."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#ejemplo",
+    "href": "primero/diapositivas/01a-datos.html#ejemplo",
+    "title": "Gestión de datos - parte 1",
+    "section": "Ejemplo",
+    "text": "Ejemplo\nENFR 2018\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#ejemplo-para-anlizar",
+    "href": "primero/diapositivas/01a-datos.html#ejemplo-para-anlizar",
+    "title": "Gestión de datos - parte 1",
+    "section": "Ejemplo para anlizar",
+    "text": "Ejemplo para anlizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Misniterio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]
