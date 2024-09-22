@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "Gestión de datos epidemiológicos con R + RStudio",
     "section": "",
-    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n\n\n\n\n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n\n\n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n\n\n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n\n\n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
+    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n\n\n\n\n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n\n\n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n\n\n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n\n\n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
   },
   {
     "objectID": "about.html",
@@ -494,7 +494,7 @@
     "href": "primero/clases/06-depuracion.html#datos-ordenados",
     "title": "Exploración, depuración y gestión de tablas de datos",
     "section": "Datos ordenados",
-    "text": "Datos ordenados\nLas tablas de datos con la que trabajamos dentro de tidyverse deben cumplir con ciertas características de los “datos ordenados” (tidy data).\nLlamamos tidy data cuando:\n\nCada variable está en una columna\nCada observación está en una fila\nCada celda del cruce entre una columna y una fila es un valor\nCada tabla pertenece a una unidad de observación\n\n\n\n\n\n\nA veces las tablas se parecen a esto:\n\n\n\n\n\ncountry\n2010\n2011\n2012\n2013\n\n\n\n\nArgentina\n40374224\n40728738\n41086927\n41446246\n\n\nBrazil\n195210154\n196935134\n198656019\n200361925\n\n\nUruguay\n3371982\n3383486\n3395253\n3407062\n\n\n\n\n\n\n\nCumple con las reglas de “datos ordenados”?\nNo. \nNo lo hace porque lo que vemos como cabecera de columnas en 2010, 2011, etc. son categorías de la variable año (year) y no nombres de variables.\nEn cambio esta tabla, aunque tenga la misma información, si cumple con el formato ordenado.\n\n\n\n\n\ncountry\nyear\npopulation\n\n\n\n\nArgentina\n2010\n40374224\n\n\nArgentina\n2011\n40728738\n\n\nArgentina\n2012\n41086927\n\n\nArgentina\n2013\n41446246\n\n\nBrazil\n2010\n195210154\n\n\nBrazil\n2011\n196935134\n\n\nBrazil\n2012\n198656019\n\n\nBrazil\n2013\n200361925\n\n\nUruguay\n2010\n3371982\n\n\nUruguay\n2011\n3383486\n\n\nUruguay\n2012\n3395253\n\n\nUruguay\n2013\n3407062\n\n\n\n\n\n\n\nGeneralmente los problemas comunes en tabla “desordenadas” de datos son:\n\nUna variable se extiende por varias columnas.\nUna observación está dispersa entre múltiples filas\n\nEl paquete tidyr de tidyverse resuelve estos problemas y mediante sus funciones pivot_ nos permite pivotear las tablas a lo “ancho” o “largo”.\n\nFunción pivot_longer() - Convierte nombres de columnas en valores de una nueva variable.\nFunción pivot_wider() - Convierte valores de una variable en columnas nuevas.\n\nPara pasar de formato ancho a largo, es decir cuando los valores de una variable se extiende por varias columnas, se utilizan como mínimo estos argumentos:\n\ntabla_ancho |&gt; \n  pivot_longer(cols = -paises,        # todas las columnas -paises\n               names_to = \"anio\",     # nombre de la columna de los nombres\n               values_to = \"casos\")   # nombre la columna de los valores\n\n\n\n\n\n\nEl formato inverso, cuando una observación está dispersa entre múltiples filas, sería:\n\ntabla_largo |&gt; \n  pivot_wider(names_from = tipo,    # nombres de los valores de tipo\n              values_from = casos)  # valores de los valores de casos"
+    "text": "Datos ordenados\nLas tablas de datos con la que trabajamos dentro de tidyverse deben cumplir con ciertas características de los “datos ordenados” (tidy data).\nLlamamos tidy data cuando:\n\nCada variable está en una columna\nCada observación está en una fila\nCada celda del cruce entre una columna y una fila es un valor\nCada tabla pertenece a una unidad de observación\n\n\n\n\n\n\nA veces las tablas se parecen a esto:\n\n\n\n\n\n\ncountry\n2010\n2011\n2012\n2013\n\n\n\n\nArgentina\n40374224\n40728738\n41086927\n41446246\n\n\nBrazil\n195210154\n196935134\n198656019\n200361925\n\n\nUruguay\n3371982\n3383486\n3395253\n3407062\n\n\n\n\n\n\n\n\nCumple con las reglas de “datos ordenados”?\nNo. \nNo lo hace porque lo que vemos como cabecera de columnas en 2010, 2011, etc. son categorías de la variable año (year) y no nombres de variables.\nEn cambio esta tabla, aunque tenga la misma información, si cumple con el formato ordenado.\n\n\n\n\n\n\ncountry\nyear\npopulation\n\n\n\n\nArgentina\n2010\n40374224\n\n\nArgentina\n2011\n40728738\n\n\nArgentina\n2012\n41086927\n\n\nArgentina\n2013\n41446246\n\n\nBrazil\n2010\n195210154\n\n\nBrazil\n2011\n196935134\n\n\nBrazil\n2012\n198656019\n\n\nBrazil\n2013\n200361925\n\n\nUruguay\n2010\n3371982\n\n\nUruguay\n2011\n3383486\n\n\nUruguay\n2012\n3395253\n\n\nUruguay\n2013\n3407062\n\n\n\n\n\n\n\n\nGeneralmente los problemas comunes en tabla “desordenadas” de datos son:\n\nUna variable se extiende por varias columnas.\nUna observación está dispersa entre múltiples filas\n\nEl paquete tidyr de tidyverse resuelve estos problemas y mediante sus funciones pivot_ nos permite pivotear las tablas a lo “ancho” o “largo”.\n\nFunción pivot_longer() - Convierte nombres de columnas en valores de una nueva variable.\nFunción pivot_wider() - Convierte valores de una variable en columnas nuevas.\n\nPara pasar de formato ancho a largo, es decir cuando los valores de una variable se extiende por varias columnas, se utilizan como mínimo estos argumentos:\n\ntabla_ancho |&gt; \n  pivot_longer(cols = -paises,        # todas las columnas -paises\n               names_to = \"anio\",     # nombre de la columna de los nombres\n               values_to = \"casos\")   # nombre la columna de los valores\n\n\n\n\n\n\nEl formato inverso, cuando una observación está dispersa entre múltiples filas, sería:\n\ntabla_largo |&gt; \n  pivot_wider(names_from = tipo,    # nombres de los valores de tipo\n              values_from = casos)  # valores de los valores de casos"
   },
   {
     "objectID": "primero/clases/07-visualizacion.html",
@@ -1069,5 +1069,124 @@
     "title": "Gestión de datos - parte 1",
     "section": "Ejemplo para anlizar",
     "text": "Ejemplo para anlizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Misniterio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos",
+    "href": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos",
+    "title": "Planificación de la gestión de datos",
+    "section": "Plan de gestión de datos",
+    "text": "Plan de gestión de datos\n\n\n\n \n\nUn plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos-1",
+    "href": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos-1",
+    "title": "Planificación de la gestión de datos",
+    "section": "Plan de gestión de datos",
+    "text": "Plan de gestión de datos\n\nDescripción de los datos con los que trabajamos: Fuente, proceso de limpieza, etcomo limpios?\nFormato de los datos: Instrumentos en papel, tipos de archivos, etc.\nDocumentación: Diccionario de datos, manuales de procedimiento, etc\nConservación de datos: Repositorios, medidas de seguridad, etc.\nPrivacidad y la confidencialidad: Anominización, consentimientos informados, etc.\nFunciones y responsabilidades"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#dato-científico",
+    "href": "primero/diapositivas/01b-datos.html#dato-científico",
+    "title": "Planificación de la gestión de datos",
+    "section": "Dato científico",
+    "text": "Dato científico\nUn dato científico esta compuesto por:\n\nuna unidad de observación\ndimensiones de análisis (variables)\nvalores / categorías\ndefiniciones operacionales (indicadores)"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#nivel-de-medición-de-las-variables",
+    "href": "primero/diapositivas/01b-datos.html#nivel-de-medición-de-las-variables",
+    "title": "Planificación de la gestión de datos",
+    "section": "Nivel de medición de las variables",
+    "text": "Nivel de medición de las variables\nLas variables operacionalizadas que surjen de los cuestionarios cumpliran con algún nivel de medición:"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#preguntas-abiertas",
+    "href": "primero/diapositivas/01b-datos.html#preguntas-abiertas",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: abiertas",
+    "text": "Preguntas: abiertas"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#preguntas-cerradas",
+    "href": "primero/diapositivas/01b-datos.html#preguntas-cerradas",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: cerradas",
+    "text": "Preguntas: cerradas"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#tipo-de-preguntas",
+    "href": "primero/diapositivas/01b-datos.html#tipo-de-preguntas",
+    "title": "Planificación de la gestión de datos",
+    "section": "Tipo de preguntas",
+    "text": "Tipo de preguntas"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#tipo-de-preguntas-1",
+    "href": "primero/diapositivas/01b-datos.html#tipo-de-preguntas-1",
+    "title": "Planificación de la gestión de datos",
+    "section": "Tipo de preguntas",
+    "text": "Tipo de preguntas"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#tipo-de-preguntas-2",
+    "href": "primero/diapositivas/01b-datos.html#tipo-de-preguntas-2",
+    "title": "Planificación de la gestión de datos",
+    "section": "Tipo de preguntas",
+    "text": "Tipo de preguntas"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#depuración-de-datos",
+    "href": "primero/diapositivas/01b-datos.html#depuración-de-datos",
+    "title": "Planificación de la gestión de datos",
+    "section": "Depuración de datos",
+    "text": "Depuración de datos\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#instrumentos-de-recolección",
+    "href": "primero/diapositivas/01b-datos.html#instrumentos-de-recolección",
+    "title": "Planificación de la gestión de datos",
+    "section": "Instrumentos de recolección",
+    "text": "Instrumentos de recolección\n\nLos instrumentos de recolección de datos característicos dentro del ámbito cuantitativo son los cuestionarios estructurados.\n\n\n\nExisten distintos tipos de preguntas que modifican la forma en que los datos quedan expresados luego de la carga electrónica.\n\n\n\n\nEs conveniente utilizar preguntas validadas previamente que garanticen la captura de la información adecuadamente."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#preguntas-abiertas-y-cerradas",
+    "href": "primero/diapositivas/01b-datos.html#preguntas-abiertas-y-cerradas",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: abiertas y cerradas",
+    "text": "Preguntas: abiertas y cerradas"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#preguntas-simples-y-multiples",
+    "href": "primero/diapositivas/01b-datos.html#preguntas-simples-y-multiples",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: simples y multiples",
+    "text": "Preguntas: simples y multiples"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#pregunta-batería-de-items",
+    "href": "primero/diapositivas/01b-datos.html#pregunta-batería-de-items",
+    "title": "Planificación de la gestión de datos",
+    "section": "Pregunta: batería de items",
+    "text": "Pregunta: batería de items"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#preguntas-tipo-filtro",
+    "href": "primero/diapositivas/01b-datos.html#preguntas-tipo-filtro",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: tipo filtro",
+    "text": "Preguntas: tipo filtro"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#preguntas-condicionales",
+    "href": "primero/diapositivas/01b-datos.html#preguntas-condicionales",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: condicionales",
+    "text": "Preguntas: condicionales"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#modalidades",
+    "href": "primero/diapositivas/01b-datos.html#modalidades",
+    "title": "Planificación de la gestión de datos",
+    "section": "Modalidades",
+    "text": "Modalidades\n\n\nExahustivas: Incluyen todas las posibles respuestas.\n\nSi la variable es “religión” y las únicas opciones son “católica”, “judía” y “musulmana”, no se incluyen otras religiones.\n\nExcluyentes: Nadie puede presentar dos valores simultáneos de la variable. Cada individuo de una población debe expresar una y sólo una modalidad.\n\nUn individuo puede ser diabético e hipertenso simultáneamente. En este caso es necesario definir una variable por cada opción de respuesta y que sus modalidades dicotómicas sean la ausencia o presencia de dicha opción: Diabetes: [si - no] Hipertensión: [si - no]\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]
