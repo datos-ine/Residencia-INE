@@ -1,5 +1,5 @@
 ---
-title: "Bienvenidxs a Gestión de datos"
+title: "Bienvenidxs a Gestión de datos epidemiológicos con R"
 subtitle: "Residencia de Epidemiología"
 format: 
   revealjs:
@@ -22,3 +22,58 @@ library(quarto)
 library(fontawesome)
 library(tidyverse)
 ```
+
+## Contribución esperada
+
+> Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.
+
+
+**Objetivos:**
+
+Se espera que al finalizar este curso los participantes puedan:
+
+. . .
+
+-   Utilizar R + RStudio para procesar y analizar datos epidemiológicos
+
+. . .
+
+-   Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud
+
+. . .
+
+-   Producir informes técnicos en diferentes formatos mediante Quarto
+
+## Nos presentamos {.invert}
+
+<br>
+
+-   antecedentes de trabajo con datos?
+
+<br>
+
+-   paquetes estadísticos conocidos o usados?
+
+<br>
+
+-   materias de grado relacionadas al tema estadístico?
+
+## Materiales
+
+<br>
+
+Durante la cursada vamos a trabajar con diapositivas, materiales de lectura-consulta, trabajos prácticos y diferentes recursos que esstarán publicados en el sitio <https://datos-ine.github.io/Residencia-INE/>
+
+<br>
+
+Ingresemos y veamos el cronograma tentativo...
+
+## Encuentros presenciales
+
+<br>
+
+-   Los encuentros serán los martes y jueves de 10 a 12 hs.
+
+-   En la mayoría de ellos habrá una exposición del tema a partir de diapositivas y en algunas ocasiones tendremos actividades prácticas.
+
+- Contacto: Mi mail es <christianballejo@gmail.com> y mi Whatsapp `223-5309396`

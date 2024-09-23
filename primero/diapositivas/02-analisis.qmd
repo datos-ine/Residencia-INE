@@ -1,5 +1,5 @@
 ---
-title: "Bienvenidxs a Gestión de datos"
+title: "Introducción al software de análisis"
 subtitle: "Residencia de Epidemiología"
 format: 
   revealjs:
@@ -22,3 +22,366 @@ library(quarto)
 library(fontawesome)
 library(tidyverse)
 ```
+
+## Paquetes estadísticos / softwares de análisis
+
+<br>
+
+Existen numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).
+
+Entre ellos podemos mencionar: `SPSS`, `Stata`, `SAS`, `EpiDat`, `EpiInfo`, `lenguaje R`, etc
+
+El lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación).   
+
+
+## Tipo de interfaz {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Existen dos grandes grupos de softwares en función de sus interfaces: **GUI** (*Graphical User Interface*) y **CLI** (*Command Line Interface*). 
+
+- **GUI**: curva de aprendizaje inicial muy rápida. Luego pierde capacidad de realizar tareas nuevas. 
+
+- **CLI**: curva de aprendizaje lenta inicialmente, a largo plazo las posibilidades de combinar y automatizar procesos permite una versatilidad mucho mayor y por lo tanto  un mayor potencial creativo.
+
+:::
+
+::: {.column width="50%"}
+
+
+
+![](img/02/gui_vs_cli.jpg){width="100%"}
+:::
+
+::::
+
+## Tres dimensiones
+
+
+![](img/02/tres_dimensiones.png){width="100%" fig-align="center"}
+
+
+## Lenguaje R
+
+<br>
+
+El [sitio oficial](https://www.r-project.org/) del lenguaje dice que:
+
+_**“R es un entorno de software libre para gráficos y computación estadística.**_ 
+
+_**Se compila y se ejecuta en una amplia variedad de plataformas UNIX, Windows y MacOS.”**_
+
+. . . 
+
+<br>
+
+Profundizando en su descripción podemos decir, más técnicamente, que:
+
+> es un lenguaje de programación interpretado, orientado a objetos, multiplataforma y open source pensado para el manejo de datos estadísticos.
+
+## Por lo tanto ![](img/02/R.png){width="8%"} ... {.smaller}
+
+. . . 
+
+**...es un lenguaje de programación estadístico**
+
+Básicamente es un lenguaje de programación, con sus estructuras y reglas de sintaxis, que posee una gran variedad de funciones desarrolladas para estadística y otras librerías con diversas aplicaciones.
+
+. . .
+
+**...es un lenguaje Orientado a Objetos**
+
+
+Implementa los conceptos de la programación orientada a objetos y esto le otorga simpleza y flexibilidad en el manejo de datos. 
+
+. . .
+
+**...es un lenguaje interpretado**
+
+No es necesario compilar el código para construir ejecutables sino que directamente se ejecuta por medio del intérprete que el software instala.
+
+. . . 
+
+**...es multiplataforma**
+
+
+Se puede instalar en diferentes sistemas operativos como Linux, Windows y Mac. 
+
+. . . 
+
+**...es Open Source y se distribuye bajo licencia GNU - GPL**
+
+Se distribuye gratuitamente bajo [licencia GNU](https://es.wikipedia.org/wiki/GNU_General_Public_License) (General Public License) -- GPL y que los usuarios tienen la libertad de usar, estudiar, compartir (copiar) y modificar el software.
+
+
+## Historia {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+R es un lenguaje que fue desarrollado a partir del [***lenguaje S***](https://en.wikipedia.org/wiki/S_(programming_language)) que a su vez tiene sus orígenes en [Bell Labs](https://en.wikipedia.org/wiki/Bell_Labs) de la **AT&T** (actualmente Lucent Technologies) de mediados de la década del '70. Posteriormente, S fue vendido y dio origen a una versión propietaria denominada S-Plus que es comercializada por Insighful Corporation.
+
+<br>
+
+En 1995 dos profesores de estadística de la *Universidad de Auckland*, en Nueva Zelanda ([Ross Ihaka](https://en.wikipedia.org/wiki/Ross_Ihaka) y [Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician)), iniciaron el **"Proyecto R"**, con la intención de desarrollar un programa estadístico inspirado en el lenguaje S pero de dominio público.
+
+:::
+
+::: {.column width="30%"}
+
+<br>
+
+
+![](img/02/creadores_R.jpg){width="100%"}
+:::
+
+::::
+
+## Funcionamiento
+
+![](img/02/funcionamiento.jpg){width="100%" fig-align="center"}
+
+## Usuarios del lenguaje y enfoque "comunicativo"
+
+- Plantea abordar el lenguaje R como un lenguaje para **_"comunicarse"_** (similar a un segundo lenguaje como el inglés, francés, etc.)
+
+- Al dotar a R de una estructura particular **_semántica_**, **_gramatical_** y **_sintáctica_**.
+
+- Se busca comenzar a **_"decir cosas con datos"_** y luego profundizar en las estructuras del lenguaje.
+
+- Diferencias entre ser **_"usuario"_** y **_"programador"_** 
+
+- Propuesto por *Riva Quiroga* de LatinR en el encuentro global de RStudio de 2021. Para profundizar ver ponencia *“How to do things with words: Learning to program with a ‘communicative approach’"* en [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021/how-to-do-things-with-words-learning-to-program-in-r-with-a-communicative-approach/)
+
+## R es un lenguaje de funciones (y argumentos)
+
+Una función es un bloque de código que sólo se ejecuta cuando se llama.
+
+- Existen funciones que forman parte de la base del lenguaje y otras que estan empaquetadas en librerías.
+
+- Todas las funciones devuelven algo. Datos, un resultado o una acción determinada.
+
+- La mayoría necesitan de ciertos datos que se declaran dentro de la función denominados **argumentos**. Algunos son obligatorios y otros opcionales.
+
+```{r, eval=FALSE}
+# Estructura sintáctica de una función
+
+funcion(argumento1, argumento2, ...)
+```
+
+- Toda función se escribe con una sintaxis precisa y finaliza siempre con paréntesis. Los argumentos se separan por comas. 
+
+
+## Paquetes de R
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+- **Paquete** es sinónimo de *librería* y contiene una serie de funciones y/o datos con su documentación.
+
+- El conjunto base de R tiene varias funciones fundamentales contenidas en algunos paquetes (base, stats, utils, graphics, methods, etc)
+
+- Los paquetes se instalan, activan y desactivan. El sitio oficial donde se publican se encuentra en [CRAN - packages](https://cran.r-project.org/web/packages/available_packages_by_name.html)
+
+- Visto como un lenguaje (idioma) los paquetes vendrían a ser conjuntos de palabras que *"agregamos"* a nuestro vocabulario para poder *"comunicarnos"* mejor o más fácilmente con el interprete de R.
+
+:::
+
+::: {.column width="20%"}
+
+![](img/02/baseR.PNG){width="100%" fig-align="center"}
+
+:::
+
+::::
+
+##
+
+![](img/02/baseR2.PNG){width="100%" fig-align="center"}
+
+##
+
+![](img/02/paquetes.PNG){width="100%" fig-align="center"}
+
+
+## Tidyverse 
+
+Una colección de paquetes de R modernos, que comparten una **gramática** y filosofía común, diseñados para resolver los desafíos de la ciencia de datos.
+
+![](img/02/tidyverse2.PNG){fig-align="center"}
+
+## Fundamentos {.smaller}
+
+![](img/02/tidy.PNG){width="60%" fig-align="center"}
+
+
+
+- **Estructura ordenada de datos (tidy)**
+
+  - Cada _variable_ es una _columna_ de la tabla de datos
+  
+  - Cada _observación_ es una _fila_ de la tabla de datos
+  
+  - Cada _tabla_ responde a una _unidad observacional_
+
+- **Principios básicos** 
+
+  - Reutilizar las estructuras de datos mediante el uso de tuberías
+  
+  - Resolver problemas complejos combinando varias piezas sencillas
+  
+  - Diseño para humanos incorporando una gramática específica al lenguaje (*que ya posee una sintaxis estricta y una semantica que le otorga significado*)
+
+
+## 
+
+![](img/02/cd.PNG)
+
+##
+
+![](img/02/paquetes_tidy.PNG)
+
+## Tuberías
+
+<br>
+
+Las tuberías son operadores que permiten *"canalizar"* un objeto hacia una función o llamar a una expresión, lo que le permite expresar una secuencia de operaciones que transforman un objeto.
+
+<br>
+
+Existen dos tuberías conocidas: 
+
+`%>%` perteneciente al paquete **magrittr** del tidyverse 
+
+`|>` que es la propuesta **nativa** de R base a partir de la versión 4.1.0
+
+La mayoría de los scripts del curso muestran la tubería nativa, pero se puede utilizar cualquiera de las dos.
+
+## Tuberías
+
+
+![](img/02/pipe.png){width="40%" fig-align="center"}
+
+
+Para el uso general, la utilización de las dos tuberías es la misma, es decir que la forma simple de las tuberías inserta el lado izquierdo como primer argumento en la llamada del lado derecho. 
+
+Esto posibilita la reutilización de las estructuras de datos y la escritura de porciones de código similares a *"oraciones"* de un párrafo.
+
+Pulse [aquí](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/) para ver algunas caracteristicas comparativas de estas tuberías.
+
+
+
+![](img/02/vector_dataframe.png)
+
+## Estructura de datos
+
+<br>
+
+Las estructuras de datos son los **objetos** **_contenedores de datos_** que el lenguaje ofrece.
+
+Existe una variedad de estructuras de datos: vectores, matrices, arrays, dataframes, listas, etc.
+
+Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que serviran en estos inicios del curso: Los **vectores** y los **dataframes**.
+
+
+## Vectores
+
+
+- Son secuencias de elementos del mismo tipo de datos.
+
+- Tienen dos atributos principales: longitud y tipo de datos.
+
+- Los 6 tipos de datos que usaremos en R son:
+
+  1. logical (`TRUE` - `FALSE`)
+  2. integer (`15`)
+  3. double (`24.64`)    
+  4. character (`"Hola"`)
+  5. factors (`"Si"` - `"No"` - `"Ns/Nc"`)
+  6. date/datetime (`"2023-10-09"` - `"2023-10-09 01:00:00"`)
+  
+- Los vectores integer y double se conocen como vectores numéricos (numeric).
+
+
+## 
+
+![](img/02/dataframe.PNG)
+
+
+- Un dataframe, que se traduce como marco de datos, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.
+
+- Tienen dos dimensiones, las columnas verticales llamadas **variables** y las filas horizontales llamadas **observaciones**.
+
+- Las columnas pueden ser de diferentes tipos, pero todas las filas de cada columna pueden tener un mismo tipo de dato.
+
+- La combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos).
+
+## Tibbles
+
+![](img/02/tibble.PNG)
+
+- Los tibbles son una versión moderna del dataframe que introduce **tidyverse**.
+
+- Tienen las mismas características que un dataframe normal con algunos atributos más agradables.
+
+- Cuando importemos tablas de datos, estos se almacenarán como dataframes/tibbles.
+
+- Dado que estamos centrados en tidyverse, utilizaremos los términos dataframe y tibble como sinónimos entre sí para su uso general.
+
+- Los dataframes/tibbles son el tipo de datos fundamental en la mayoría de los análisis que llevaremos adelante.
+
+## Lectura de datos
+
+- El formato de archivos de datos nativo de R es el **texto plano separado por comas** (archivos csv)
+
+- Estas tablas de datos tienen las **variables** ubicadas en las *columnas* y las **observaciones** en las *filas*.
+
+- **readr** se llama el paquete que tiene funciones de lectura y escritura de este tipo de archivos dentro del tidyverse.
+
+- El objeto al que asignemos estas lecturas siempre será un **dataframe/tibble**.
+
+- Es importante reconocer el **Enconding** de los caracteres utilizados en la creación del archivo de datos para hacer una lectura adecuada.
+
+
+
+## Encoding
+
+
+- La codificación de caracteres en los archivos especifican cómo se representan los caracteres durante el procesamiento de texto.
+
+- Existen diferentes estándares de "encoding" que se adaptan a conjuntos de caracteres específicos (generalmente según el idioma)
+
+- Es el motivo por el cuál, a veces importamos datos y hay caracteres especiales de nuestro idioma español, como los acentos o la eñe, que se muestran erróneos, es decir, con otros caracteres equivocados.
+
+- **readr** tiene la función `guess_enconding()` que sirve para detectar el estándar de un archivo de texto plano.
+
+- Las funciones del paquete permiten modificar estos estándares dentro de sus argumentos.
+
+
+
+## Errores y advertencias
+
+![](img/02/errores_advertencias.PNG)
+
+
+## Ayuda
+
+
+- Todas las funciones del R base o de los paquetes vienen acompañadas con su respectiva **documentación**.
+
+- Esta documentación se puede visualizar en el panel **Help** de RStudio navegando como si fuese un navegador web.
+
+- La documentación tiene una estructura que se repite: descripción, uso, argumentos, detalles, valores, ejemplos.
+
+- También se pueden hacer busquedas en buscadores web como Google, foros especializados, como por ejemplo **Stack Overflow** o **Rpubs**, canales de **slack** y más recientemente en IAs como **chatGPT** o **Google Gemini**.
+
+
+

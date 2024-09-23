@@ -1,5 +1,5 @@
 ---
-title: "Bienvenidxs a Gestión de datos"
+title: "Planificación de la gestión de datos"
 subtitle: "Residencia de Epidemiología"
 format: 
   revealjs:
@@ -22,3 +22,138 @@ library(quarto)
 library(fontawesome)
 library(tidyverse)
 ```
+
+## Plan de gestión de datos {.invert}
+
+```{scss}
+
+div {
+  &.callout {
+    font-size: 3.2rem !important;
+  }
+}
+```
+
+<br>
+<br>
+
+::: {.justify style="font-size: 150%;"}
+Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación.
+:::
+
+## Plan de gestión de datos
+
+- **Descripción de los datos con los que trabajamos:** Fuente, proceso de limpieza, etcomo limpios?
+- **Formato de los datos:** Instrumentos en papel, tipos de archivos, etc.
+- **Documentación:** Diccionario de datos, manuales de procedimiento, etc
+- **Conservación de datos:** Repositorios, medidas de seguridad, etc.
+- **Privacidad y la confidencialidad:** Anominización, consentimientos informados, etc.
+- **Funciones y responsabilidades**
+
+## Dato científico
+
+Un dato científico esta compuesto por: 
+
+- una unidad de observación 
+- dimensiones de análisis (variables)
+- valores / categorías
+- definiciones operacionales (indicadores)
+
+![](img/01/operacionalizacion.jpg)
+
+## Instrumentos de recolección
+
+- Los instrumentos de recolección de datos característicos dentro del ámbito cuantitativo son los **cuestionarios estructurados**.
+
+. . . 
+
+- Existen distintos tipos de preguntas que modifican la forma en que los datos quedan expresados luego de la carga electrónica.
+
+. . . 
+
+- Es conveniente utilizar preguntas validadas previamente que garanticen la captura de la información adecuadamente.
+
+## Nivel de medición de las variables
+
+Las variables operacionalizadas que surjen de los cuestionarios cumpliran con algún nivel de medición:
+
+![](img/01/medicion.jpg)
+
+## Preguntas: abiertas y cerradas
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+![](img/01/preguntas1.png){width=100%}
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+![](img/01/preguntas2.png){width=100%}
+:::
+
+::::
+
+## Preguntas: simples y multiples
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+![](img/01/preguntas4.png){width=100%}
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+![](img/01/preguntas5.png){width=100%}
+
+:::
+
+::::
+
+## Pregunta: batería de items
+
+<br>
+
+![](img/01/preguntas6.png)
+
+## Preguntas: condicionales
+
+
+![](img/01/preguntas7.png){width=70%}
+
+
+![](img/01/preguntas8.png){width=70%}
+
+
+## Modalidades
+
+<br>
+
+- **Exahustivas:** Incluyen todas las posibles respuestas. 
+
+  - Si la variable es "religión" y las únicas opciones son "católica", "judía" y "musulmana", no se incluyen otras religiones. 
+
+- **Excluyentes:** Nadie puede presentar dos valores simultáneos de la variable. Cada individuo de una población debe expresar una y sólo una modalidad.
+
+  - Un individuo puede ser diabético e hipertenso simultáneamente. En este caso es necesario definir una variable por cada opción de respuesta y que sus modalidades dicotómicas sean la ausencia o presencia de dicha opción: 
+Diabetes: [si - no]  Hipertensión: [si - no]  
+
+
+
+
+

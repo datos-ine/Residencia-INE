@@ -1188,5 +1188,278 @@
     "title": "Planificación de la gestión de datos",
     "section": "Modalidades",
     "text": "Modalidades\n\n\nExahustivas: Incluyen todas las posibles respuestas.\n\nSi la variable es “religión” y las únicas opciones son “católica”, “judía” y “musulmana”, no se incluyen otras religiones.\n\nExcluyentes: Nadie puede presentar dos valores simultáneos de la variable. Cada individuo de una población debe expresar una y sólo una modalidad.\n\nUn individuo puede ser diabético e hipertenso simultáneamente. En este caso es necesario definir una variable por cada opción de respuesta y que sus modalidades dicotómicas sean la ausencia o presencia de dicha opción: Diabetes: [si - no] Hipertensión: [si - no]\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#paquetes-estadísticos-softwares-de-análisis",
+    "href": "primero/diapositivas/02-analisis.html#paquetes-estadísticos-softwares-de-análisis",
+    "title": "Introducción al software de análisis",
+    "section": "Paquetes estadísticos / softwares de análisis",
+    "text": "Paquetes estadísticos / softwares de análisis\n\nExisten numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).\nEntre ellos podemos mencionar: SPSS, Stata, SAS, EpiDat, EpiInfo, lenguaje R, etc\nEl lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación)."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#tipo-de-interfaz",
+    "href": "primero/diapositivas/02-analisis.html#tipo-de-interfaz",
+    "title": "Introducción al software de análisis",
+    "section": "Tipo de interfaz",
+    "text": "Tipo de interfaz\n\n\n\nExisten dos grandes grupos de softwares en función de sus interfaces: GUI (Graphical User Interface) y CLI (Command Line Interface).\n\nGUI: curva de aprendizaje inicial muy rápida. Luego pierde capacidad de realizar tareas nuevas.\nCLI: curva de aprendizaje lenta inicialmente, a largo plazo las posibilidades de combinar y automatizar procesos permite una versatilidad mucho mayor y por lo tanto un mayor potencial creativo."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#tres-dimensiones",
+    "href": "primero/diapositivas/02-analisis.html#tres-dimensiones",
+    "title": "Introducción al software de análisis",
+    "section": "Tres dimensiones",
+    "text": "Tres dimensiones"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#lenguaje-r",
+    "href": "primero/diapositivas/02-analisis.html#lenguaje-r",
+    "title": "Introducción al software de análisis",
+    "section": "Lenguaje R",
+    "text": "Lenguaje R\n\nEl sitio oficial del lenguaje dice que:\n“R es un entorno de software libre para gráficos y computación estadística.\nSe compila y se ejecuta en una amplia variedad de plataformas UNIX, Windows y MacOS.”\n\n\nProfundizando en su descripción podemos decir, más técnicamente, que:\n\nes un lenguaje de programación interpretado, orientado a objetos, multiplataforma y open source pensado para el manejo de datos estadísticos."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#section",
+    "href": "primero/diapositivas/02-analisis.html#section",
+    "title": "Introducción al software de análisis",
+    "section": "",
+    "text": "Aunque se dice que R es un dialecto de S, existen diferencias importantes en el diseño de ambos lenguajes.\nEl software está desarrollado en lenguaje C++ con algunas rutinas agregadas en Fortran) y su nombre se debe a la letra con la que inician los nombres de pila de sus autores (Ross y Robert).\nActualmente R es mantenido por un grupo internacional de desarrolladores voluntarios denominado Core Development Team."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#historia",
+    "href": "primero/diapositivas/02-analisis.html#historia",
+    "title": "Introducción al software de análisis",
+    "section": "Historia",
+    "text": "Historia\n\n\n\nR es un lenguaje que fue desarrollado a partir del lenguaje S que a su vez tiene sus orígenes en Bell Labs de la AT&T (actualmente Lucent Technologies) de mediados de la década del ’70. Posteriormente, S fue vendido y dio origen a una versión propietaria denominada S-Plus que es comercializada por Insighful Corporation.\n\nEn 1995 dos profesores de estadística de la Universidad de Auckland, en Nueva Zelanda (Ross Ihaka y Robert Gentleman, iniciaron el “Proyecto R”, con la intención de desarrollar un programa estadístico inspirado en el lenguaje S pero de dominio público."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#section-1",
+    "href": "primero/diapositivas/02-analisis.html#section-1",
+    "title": "Introducción al software de análisis",
+    "section": "",
+    "text": "Aunque se dice que R es un dialecto de S, existen diferencias importantes en el diseño de ambos lenguajes.\nEl software está desarrollado en lenguaje C++ con algunas rutinas agregadas en Fortran) y su nombre se debe a la letra con la que inician los nombres de pila de sus autores (Ross y Robert).\nActualmente R es mantenido por un grupo internacional de desarrolladores voluntarios denominado Core Development Team."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#funcionamiento",
+    "href": "primero/diapositivas/02-analisis.html#funcionamiento",
+    "title": "Introducción al software de análisis",
+    "section": "Funcionamiento",
+    "text": "Funcionamiento"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#usuarios-del-lenguaje-y-enfoque-comunicativo",
+    "href": "primero/diapositivas/02-analisis.html#usuarios-del-lenguaje-y-enfoque-comunicativo",
+    "title": "Introducción al software de análisis",
+    "section": "Usuarios del lenguaje y enfoque “comunicativo”",
+    "text": "Usuarios del lenguaje y enfoque “comunicativo”\n\nPlantea abordar el lenguaje R como un lenguaje para “comunicarse” (similar a un segundo lenguaje como el inglés, francés, etc.)\nAl dotar a R de una estructura particular semántica, gramatical y sintáctica.\nSe busca comenzar a “decir cosas con datos” y luego profundizar en las estructuras del lenguaje.\nDiferencias entre ser “usuario” y “programador”\nPropuesto por Riva Quiroga de LatinR en el encuentro global de RStudio de 2021. Para profundizar ver ponencia “How to do things with words: Learning to program with a ‘communicative approach’” en rstudio::global(2021)"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#r-es-un-lenguaje-de-funciones-y-argumentos",
+    "href": "primero/diapositivas/02-analisis.html#r-es-un-lenguaje-de-funciones-y-argumentos",
+    "title": "Introducción al software de análisis",
+    "section": "R es un lenguaje de funciones (y argumentos)",
+    "text": "R es un lenguaje de funciones (y argumentos)\nUna función es un bloque de código que sólo se ejecuta cuando se llama.\n\nExisten funciones que forman parte de la base del lenguaje y otras que estan empaquetadas en librerías.\nTodas las funciones devuelven algo. Datos, un resultado o una acción determinada.\nLa mayoría necesitan de ciertos datos que se declaran dentro de la función denominados argumentos. Algunos son obligatorios y otros opcionales.\n\n\nToda función se escribe con una sintaxis precisa y finaliza siempre con paréntesis. Los argumentos se separan por comas."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#paquetes-de-r",
+    "href": "primero/diapositivas/02-analisis.html#paquetes-de-r",
+    "title": "Introducción al software de análisis",
+    "section": "Paquetes de R",
+    "text": "Paquetes de R\n\n\n\nPaquete es sinónimo de librería y contiene una serie de funciones y/o datos con su documentación.\nEl conjunto base de R tiene varias funciones fundamentales contenidas en algunos paquetes (base, stats, utils, graphics, methods, etc)\nLos paquetes se instalan, activan y desactivan. El sitio oficial donde se publican se encuentra en CRAN - packages\nVisto como un lenguaje (idioma) los paquetes vendrían a ser conjuntos de palabras que “agregamos” a nuestro vocabulario para poder “comunicarnos” mejor o más fácilmente con el interprete de R."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#tidyverse",
+    "href": "primero/diapositivas/02-analisis.html#tidyverse",
+    "title": "Introducción al software de análisis",
+    "section": "Tidyverse",
+    "text": "Tidyverse\nUna colección de paquetes de R modernos, que comparten una gramática y filosofía común, diseñados para resolver los desafíos de la ciencia de datos."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#fundamentos",
+    "href": "primero/diapositivas/02-analisis.html#fundamentos",
+    "title": "Introducción al software de análisis",
+    "section": "Fundamentos",
+    "text": "Fundamentos\n\n\nEstructura ordenada de datos (tidy)\n\nCada variable es una columna de la tabla de datos\nCada observación es una fila de la tabla de datos\nCada tabla responde a una unidad observacional\n\nPrincipios básicos\n\nReutilizar las estructuras de datos mediante el uso de tuberías\nResolver problemas complejos combinando varias piezas sencillas\nDiseño para humanos incorporando una gramática específica al lenguaje (que ya posee una sintaxis estricta y una semantica que le otorga significado)"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#tuberías",
+    "href": "primero/diapositivas/02-analisis.html#tuberías",
+    "title": "Introducción al software de análisis",
+    "section": "Tuberías",
+    "text": "Tuberías\n\nLas tuberías son operadores que permiten “canalizar” un objeto hacia una función o llamar a una expresión, lo que le permite expresar una secuencia de operaciones que transforman un objeto.\n\nExisten dos tuberías conocidas:\n%&gt;% perteneciente al paquete magrittr del tidyverse\n|&gt; que es la propuesta nativa de R base a partir de la versión 4.1.0\nLa mayoría de los scripts del curso muestran la tubería nativa, pero se puede utilizar cualquiera de las dos."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#tuberías-1",
+    "href": "primero/diapositivas/02-analisis.html#tuberías-1",
+    "title": "Introducción al software de análisis",
+    "section": "Tuberías",
+    "text": "Tuberías\n\n\n\n\n\nPara el uso general, la utilización de las dos tuberías es la misma, es decir que la forma simple de las tuberías inserta el lado izquierdo como primer argumento en la llamada del lado derecho.\nEsto posibilita la reutilización de las estructuras de datos y la escritura de porciones de código similares a “oraciones” de un párrafo.\nPulse aquí para ver algunas caracteristicas comparativas de estas tuberías."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#estructura-de-datos",
+    "href": "primero/diapositivas/02-analisis.html#estructura-de-datos",
+    "title": "Introducción al software de análisis",
+    "section": "Estructura de datos",
+    "text": "Estructura de datos\n\nLas estructuras de datos son los objetos contenedores de datos que el lenguaje ofrece.\nExiste una variedad de estructuras de datos: vectores, matrices, arrays, dataframes, listas, etc.\nVamos a describir a las más relevantes dentro del ecosistema tidyverse y que serviran en estos inicios del curso: Los vectores y los dataframes."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#vectores",
+    "href": "primero/diapositivas/02-analisis.html#vectores",
+    "title": "Introducción al software de análisis",
+    "section": "Vectores",
+    "text": "Vectores\n\nSon secuencias de elementos del mismo tipo de datos.\nTienen dos atributos principales: longitud y tipo de datos.\nLos 6 tipos de datos que usaremos en R son:\n\nlogical (TRUE - FALSE)\ninteger (15)\ndouble (24.64)\n\ncharacter (\"Hola\")\nfactors (\"Si\" - \"No\" - \"Ns/Nc\")\ndate/datetime (\"2023-10-09\" - \"2023-10-09 01:00:00\")\n\nLos vectores integer y double se conocen como vectores numéricos (numeric)."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#section-7",
+    "href": "primero/diapositivas/02-analisis.html#section-7",
+    "title": "Introducción al software de análisis",
+    "section": "",
+    "text": "Un dataframe, que se traduce como marco de datos, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.\nTienen dos dimensiones, las columnas verticales llamadas variables y las filas horizontales llamadas observaciones.\nLas columnas pueden ser de diferentes tipos, pero todas las filas de cada columna pueden tener un mismo tipo de dato.\nLa combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos)."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#tibbles",
+    "href": "primero/diapositivas/02-analisis.html#tibbles",
+    "title": "Introducción al software de análisis",
+    "section": "Tibbles",
+    "text": "Tibbles\n\n\nLos tibbles son una versión moderna del dataframe que introduce tidyverse.\nTienen las mismas características que un dataframe normal con algunos atributos más agradables.\nCuando importemos tablas de datos, estos se almacenarán como dataframes/tibbles.\nDado que estamos centrados en tidyverse, utilizaremos los términos dataframe y tibble como sinónimos entre sí para su uso general.\nLos dataframes/tibbles son el tipo de datos fundamental en la mayoría de los análisis que llevaremos adelante."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#lectura-de-datos",
+    "href": "primero/diapositivas/02-analisis.html#lectura-de-datos",
+    "title": "Introducción al software de análisis",
+    "section": "Lectura de datos",
+    "text": "Lectura de datos\n\nEl formato de archivos de datos nativo de R es el texto plano separado por comas (archivos csv)\nEstas tablas de datos tienen las variables ubicadas en las columnas y las observaciones en las filas.\nreadr se llama el paquete que tiene funciones de lectura y escritura de este tipo de archivos dentro del tidyverse.\nEl objeto al que asignemos estas lecturas siempre será un dataframe/tibble.\nEs importante reconocer el Enconding de los caracteres utilizados en la creación del archivo de datos para hacer una lectura adecuada."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#encoding",
+    "href": "primero/diapositivas/02-analisis.html#encoding",
+    "title": "Introducción al software de análisis",
+    "section": "Encoding",
+    "text": "Encoding\n\nLa codificación de caracteres en los archivos especifican cómo se representan los caracteres durante el procesamiento de texto.\nExisten diferentes estándares de “encoding” que se adaptan a conjuntos de caracteres específicos (generalmente según el idioma)\nEs el motivo por el cuál, a veces importamos datos y hay caracteres especiales de nuestro idioma español, como los acentos o la eñe, que se muestran erróneos, es decir, con otros caracteres equivocados.\nreadr tiene la función guess_enconding() que sirve para detectar el estándar de un archivo de texto plano.\nLas funciones del paquete permiten modificar estos estándares dentro de sus argumentos."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#errores-y-advertencias",
+    "href": "primero/diapositivas/02-analisis.html#errores-y-advertencias",
+    "title": "Introducción al software de análisis",
+    "section": "Errores y advertencias",
+    "text": "Errores y advertencias"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#ayuda",
+    "href": "primero/diapositivas/02-analisis.html#ayuda",
+    "title": "Introducción al software de análisis",
+    "section": "Ayuda",
+    "text": "Ayuda\n\nTodas las funciones del R base o de los paquetes vienen acompañadas con su respectiva documentación.\nEsta documentación se puede visualizar en el panel Help de RStudio navegando como si fuese un navegador web.\nLa documentación tiene una estructura que se repite: descripción, uso, argumentos, detalles, valores, ejemplos.\nTambién se pueden hacer busquedas en buscadores web como Google, foros especializados, como por ejemplo Stack Overflow o Rpubs, canales de slack y más recientemente en IAs como chatGPT o Google Gemini.\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#por-lo-tanto",
+    "href": "primero/diapositivas/02-analisis.html#por-lo-tanto",
+    "title": "Introducción al software de análisis",
+    "section": "Por lo tanto  …",
+    "text": "Por lo tanto  …\n\n…es un lenguaje de programación estadístico\nBásicamente es un lenguaje de programación, con sus estructuras y reglas de sintaxis, que posee una gran variedad de funciones desarrolladas para estadística y otras librerías con diversas aplicaciones.\n\n\n…es un lenguaje Orientado a Objetos\nImplementa los conceptos de la programación orientada a objetos y esto le otorga simpleza y flexibilidad en el manejo de datos.\n\n\n…es un lenguaje interpretado\nNo es necesario compilar el código para construir ejecutables sino que directamente se ejecuta por medio del intérprete que el software instala.\n\n\n…es multiplataforma\nSe puede instalar en diferentes sistemas operativos como Linux, Windows y Mac.\n\n\n…es Open Source y se distribuye bajo licencia GNU - GPL\nSe distribuye gratuitamente bajo licencia GNU (General Public License) – GPL y que los usuarios tienen la libertad de usar, estudiar, compartir (copiar) y modificar el software."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#section-6",
+    "href": "primero/diapositivas/02-analisis.html#section-6",
+    "title": "Introducción al software de análisis",
+    "section": "",
+    "text": "Un dataframe, que se traduce como marco de datos, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.\nTienen dos dimensiones, las columnas verticales llamadas variables y las filas horizontales llamadas observaciones.\nLas columnas pueden ser de diferentes tipos, pero todas las filas de cada columna pueden tener un mismo tipo de dato.\nLa combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos)."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#section-5",
+    "href": "primero/diapositivas/02-analisis.html#section-5",
+    "title": "Introducción al software de análisis",
+    "section": "",
+    "text": "Un dataframe, que se traduce como marco de datos, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.\nTienen dos dimensiones, las columnas verticales llamadas variables y las filas horizontales llamadas observaciones.\nLas columnas pueden ser de diferentes tipos, pero todas las filas de cada columna pueden tener un mismo tipo de dato.\nLa combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos)."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#section-4",
+    "href": "primero/diapositivas/02-analisis.html#section-4",
+    "title": "Introducción al software de análisis",
+    "section": "",
+    "text": "Un dataframe, que se traduce como marco de datos, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.\nTienen dos dimensiones, las columnas verticales llamadas variables y las filas horizontales llamadas observaciones.\nLas columnas pueden ser de diferentes tipos, pero todas las filas de cada columna pueden tener un mismo tipo de dato.\nLa combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos)."
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#archivos-de-datos",
+    "href": "primero/diapositivas/03-lectoescritura.html#archivos-de-datos",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Archivos de datos",
+    "text": "Archivos de datos\n\nEn el mundo informático existen numerosos formatos de archivos de tablas / base de datos.\nEl lenguaje R permite importar y exportar de una amplia variedad de formatos a partir de utilizar diferentes paquetes. Muchos de ellos pertenecientes al ecosistema tidyverse.\nHoy nos vamos a centrar en dos formatos básicos habituales donde tenemos almacenada comúnmente la información:\n\nArchivos texto plano separados por comas u otro caracter (extensiones .csv, .txt, etc)\nArchivos con formato Excel (.xls y .xlsx)]\n\nAdemás mencionaremos otros formatos posibles y el propio de R"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#paquete-readr",
+    "href": "primero/diapositivas/03-lectoescritura.html#paquete-readr",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Paquete readr",
+    "text": "Paquete readr\n\nEl paquete readr se instala y activa cuando ejecutamos library(tidyverse).\n\nContiene una familia de funciones que permiten leer y escribir archivos de texto plano separados como coma o algún otro caracter (tabulación, punto y coma, etc)\nSus funciones de lectura comienzan todas con read_\nSus funciones de escritura comienzan con write_"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr",
+    "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Lectura con funciones de readr",
+    "text": "Lectura con funciones de readr\nLa primera función de lectura que vamos a ver es read_delim()\nEl estructura de esta función sirve de base para las demás.\nSus principales argumentos son:\n\nfile: nombre del archivo\ndelim: caracter separador de columna\ncol_names: Valor lógico. Si es TRUE lee la primera fila como nombres de las variables. Si es FALSE no lo hace.\nskip: número de líneas que saltea para comenzar a leer."
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-1",
+    "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-1",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Lectura con funciones de readr",
+    "text": "Lectura con funciones de readr\nPara archivos separados por comas en formato regional Estadounidense se utiliza la función read_csv().\nTiene la misma base de read_delim() con valor predeterminado en en el argumento:\n\ndelim: separador coma “,”"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-2",
+    "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-2",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Lectura con funciones de readr",
+    "text": "Lectura con funciones de readr\nPara archivos separados por comas en formato regional Español/Argentino se utiliza la función read_csv2().\nTiene la misma base de read_delim() con valor predeterminado en en el argumento:\n\ndelim: separador punto y coma “;”"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#herramienta-de-lectura-de-rstudio",
+    "href": "primero/diapositivas/03-lectoescritura.html#herramienta-de-lectura-de-rstudio",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Herramienta de lectura de RStudio",
+    "text": "Herramienta de lectura de RStudio"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#section",
+    "href": "primero/diapositivas/03-lectoescritura.html#section",
+    "title": "Importar y exportar archivos de datos",
+    "section": "",
+    "text": "El paquete readxl se instala con tidyverse pero hay que activarlo aparte mediante library(readxl).\n\nContiene funciones que permiten leer archivos de Microsoft Excel tan extendidos en nuestras oficinas.\nLa función comodín para leer, tanto formatos .xls como .xlsx, es read_excel()"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readxl",
+    "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readxl",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Lectura con funciones de readxl",
+    "text": "Lectura con funciones de readxl\nLa estructura de los argumentos de la función read_excel() es:\n\npath: nombre del archivo\nsheet: hoja del libro del archivo Excel\nrange: rango de celdas (opcional)\ncol_names: Valor lógico. Si es TRUE lee la primera fila como nombres de las variables. Si es FALSE no lo hace.\nskip: número de líneas que saltea para comenzar a leer."
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#paquete-haven",
+    "href": "primero/diapositivas/03-lectoescritura.html#paquete-haven",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Paquete haven",
+    "text": "Paquete haven"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#formato-nativo-r",
+    "href": "primero/diapositivas/03-lectoescritura.html#formato-nativo-r",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Formato nativo R",
+    "text": "Formato nativo R\nsave()\nload()\nRData"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#trabajamos-con-el-práctico-10",
+    "href": "primero/diapositivas/03-lectoescritura.html#trabajamos-con-el-práctico-10",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Trabajamos con el práctico 10",
+    "text": "Trabajamos con el práctico 10"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#para-profundizar",
+    "href": "primero/diapositivas/03-lectoescritura.html#para-profundizar",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Para profundizar…",
+    "text": "Para profundizar…\n\n.font150[Capítulo 11 del libro “R para Ciencias de Datos”]\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]

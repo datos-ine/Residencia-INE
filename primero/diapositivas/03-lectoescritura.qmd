@@ -1,0 +1,148 @@
+---
+title: "Importar y exportar archivos de datos"
+subtitle: "Residencia de Epidemiología"
+format: 
+  revealjs:
+    self-contained: true
+    width: 1920
+    height: 1080
+    slide-number: true
+    transition: fade
+    theme: [simple, img/custom.scss]
+    logo: img/INE.gif
+    footer: "Instituto Nacional de Epidemiología"
+---
+
+```{r setup, include=F}
+#| label: setup
+#| include: false
+
+
+library(quarto)
+library(fontawesome)
+library(tidyverse)
+```
+
+
+## Archivos de datos
+
+- En el mundo informático existen numerosos formatos de archivos de tablas / base de datos.
+
+- El lenguaje R permite importar y exportar de una amplia variedad de formatos a partir de utilizar diferentes paquetes. Muchos de ellos pertenecientes al ecosistema **tidyverse**.
+
+- Hoy nos vamos a centrar en dos formatos básicos habituales donde tenemos almacenada comúnmente la información:
+  - Archivos **texto plano separados por comas** u otro caracter (extensiones .csv, .txt, etc)
+  - Archivos con formato **Excel** (.xls y .xlsx)]
+
+- Además mencionaremos otros formatos posibles y el propio de R
+
+## Paquete readr
+
+![](img/03/readr.png)
+
+El paquete **readr** se instala y activa cuando ejecutamos `library(tidyverse)`.
+
+- Contiene una familia de funciones que permiten leer y escribir archivos de texto plano separados como coma o algún otro caracter (tabulación, punto y coma, etc)
+
+- Sus funciones de lectura comienzan todas con **read_**
+
+- Sus funciones de escritura comienzan con **write_**
+
+
+## Lectura con funciones de readr
+
+
+La primera función de lectura que vamos a ver es `read_delim()`
+
+El estructura de esta función sirve de base para las demás.
+
+Sus principales argumentos son:
+
+- **file**: nombre del archivo
+
+- **delim**: caracter separador de columna
+
+- **col_names**: Valor lógico. Si es *TRUE* lee la primera fila como nombres de las variables. Si es *FALSE* no lo hace.
+
+- **skip**: número de líneas que saltea para comenzar a leer.
+
+
+## Lectura con funciones de readr
+
+Para archivos separados por comas en formato regional Estadounidense se utiliza la función `read_csv()`.
+
+Tiene la misma base de `read_delim()` con valor predeterminado en en el  argumento:
+
+- **delim**: separador coma ","
+
+```{r, eval=F}
+read_csv(file = "datos.csv")
+```
+
+## Lectura con funciones de readr
+
+Para archivos separados por comas en formato regional Español/Argentino se utiliza la función `read_csv2()`.
+
+Tiene la misma base de `read_delim()` con valor predeterminado en en el  argumento:
+
+- **delim**: separador punto y coma ";"
+
+```{r, eval=F}
+read_csv2(file = "datos.csv")
+```
+
+
+
+## Herramienta de lectura de RStudio
+
+
+![](img/03/Import.PNG)
+
+
+## 
+
+![](img/03/readxl.png)
+
+El paquete **readxl** se instala con tidyverse pero hay que activarlo aparte mediante `library(readxl)`.
+
+- Contiene funciones que permiten leer archivos de Microsoft Excel tan extendidos en nuestras oficinas.
+
+- La función comodín para leer, tanto formatos .xls como .xlsx, es `read_excel()`
+
+## Lectura con funciones de readxl
+
+La estructura de los argumentos de la función `read_excel()` es:
+
+
+- **path**: nombre del archivo
+
+- **sheet**: hoja del libro del archivo Excel
+
+- **range**: rango de celdas (opcional)
+
+- **col_names**: Valor lógico. Si es *TRUE* lee la primera fila como nombres de las variables. Si es *FALSE* no lo hace.
+
+- **skip**: número de líneas que saltea para comenzar a leer.
+
+## Paquete haven
+
+
+
+
+## Formato nativo R
+
+save()
+
+load()
+
+RData
+
+
+## Trabajamos con el práctico 10
+
+
+## Para profundizar...
+
+![](img/03/)
+
+Capítulo 11 del libro ["R para Ciencias de Datos"](https://es.r4ds.hadley.nz/11-import.html)

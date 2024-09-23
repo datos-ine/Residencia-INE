@@ -5,12 +5,14 @@
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 
 
-$font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
+$font-family-sans-serif: "Roboto", sans-serif;
+
+$presentation-font-size-root: 55px;
+
 $code-block-font-size: 0.9em;
 
 $link-color: #693ab8;
 
-$font-size-root: 1.2em;
 
 
 /*-- scss:rules --*/
@@ -39,4 +41,8 @@ $font-size-root: 1.2em;
   position: absolute; 
   left: 750px; 
   top: 450px
+}
+
+.justify {
+  text-align: justify !important
 }
