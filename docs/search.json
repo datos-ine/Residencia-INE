@@ -927,8 +927,8 @@
     "objectID": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
     "href": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
-    "section": "Contribución esperada",
-    "text": "Contribución esperada\n\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n\n\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n\n\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
+    "section": "",
+    "text": "Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n. . .\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n. . .\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n. . .\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#nos-presentamos",
@@ -949,7 +949,7 @@
     "href": "primero/diapositivas/00-bienvenida.html#encuentros-presenciales",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
     "section": "Encuentros presenciales",
-    "text": "Encuentros presenciales\n\n\nLos encuentros serán los martes y jueves de 10 a 12 hs.\nEn la mayoría de ellos habrá una exposición del tema a partir de diapositivas y en algunas ocasiones tendremos actividades prácticas.\nContacto: Mi mail es christianballejo@gmail.com y mi Whatsapp 223-5309396\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Encuentros presenciales\n\n\nLos encuentros serán los martes y jueves de 10 a 12 hs.\nEn la mayoría de ellos habrá una exposición del tema a partir de diapositivas y en algunas ocasiones tendremos actividades prácticas.\nContacto: Mi mail es christianballejo@gmail.com y mi Whatsapp 223-5309396"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#contacto",
@@ -970,7 +970,7 @@
     "href": "primero/diapositivas/01a-datos.html#ciencia-abierta",
     "title": "Gestión de datos - parte 1",
     "section": "Ciencia abierta",
-    "text": "Ciencia abierta\n\nLa ciencia abierta tiene como objetivo hacer que la investigación y la difusión científicas sean accesibles para todos, lo que hace absolutamente necesaria la necesidad de buenas prácticas de gestión de datos.\n\n\nMarco de ciencia abierta: Centro para la Ciencia Abierta\nIniciativa y hoja de ruta de ciencia reproducible, ética y colaborativa: The Turing Way"
+    "text": "Ciencia abierta\n\nLa ciencia abierta tiene como objetivo hacer que la investigación y la difusión científicas sean accesibles para todos, lo que hace absolutamente necesaria la necesidad de buenas prácticas de gestión de datos.\n\n\nMarco de ciencia abierta: Centro para la Ciencia Abierta\nIniciativa y hoja de ruta, en el ámbito de la ciencia de datos de ciencia de datos, reproducible, ética y colaborativa: The Turing Way"
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#fuente-de-datos",
@@ -1047,7 +1047,7 @@
     "href": "primero/diapositivas/01a-datos.html#filas-observaciones",
     "title": "Gestión de datos - parte 1",
     "section": "Filas (observaciones)",
-    "text": "Filas (observaciones)\n\nLas filas del conjunto de datos representan a los sujetos (también llamados registros u observaciones) de sus datos.\nLos sujetos de su conjunto de datos pueden ser personas, hogares, ubicaciones como países o provincias, etc.\nTodas las observaciones de una tabla de datos pertenecen a una sola unidad de observación (entidad que deseamos estudiar, es decir, aquella que se observa para efectuar mediciones o para clasificarla en categorías)"
+    "text": "Filas (observaciones)\n\n\nLas filas del conjunto de datos representan a los sujetos (también llamados registros u observaciones) de sus datos.\nLos sujetos de su conjunto de datos pueden ser personas, hogares, ubicaciones como países o provincias, etc.\nTodas las observaciones de una tabla de datos pertenecen a una sola unidad de observación (entidad que deseamos estudiar, es decir, aquella que se observa para efectuar mediciones o para clasificarla en categorías)"
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#base-de-datos",
@@ -1068,7 +1068,7 @@
     "href": "primero/diapositivas/01a-datos.html#ejemplo-para-anlizar",
     "title": "Gestión de datos - parte 1",
     "section": "Ejemplo para anlizar",
-    "text": "Ejemplo para anlizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Misniterio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Ejemplo para anlizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Misniterio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2"
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos",
@@ -1082,7 +1082,7 @@
     "href": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos-1",
     "title": "Planificación de la gestión de datos",
     "section": "Plan de gestión de datos",
-    "text": "Plan de gestión de datos\n\nDescripción de los datos con los que trabajamos: Fuente, proceso de limpieza, etcomo limpios?\nFormato de los datos: Instrumentos en papel, tipos de archivos, etc.\nDocumentación: Diccionario de datos, manuales de procedimiento, etc\nConservación de datos: Repositorios, medidas de seguridad, etc.\nPrivacidad y la confidencialidad: Anominización, consentimientos informados, etc.\nFunciones y responsabilidades"
+    "text": "Plan de gestión de datos\n\nDescripción de los datos con los que trabajamos: Fuente, proceso de limpieza, etc.\nFormato de los datos: Instrumentos en papel, tipos de archivos, etc.\nDocumentación: Diccionario de datos, manuales de procedimiento, etc.\nConservación de datos: Repositorios, medidas de seguridad, etc.\nPrivacidad y la confidencialidad: Anominización, consentimientos informados, etc.\nFunciones y responsabilidades"
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#dato-científico",
@@ -1194,7 +1194,7 @@
     "href": "primero/diapositivas/02-analisis.html#paquetes-estadísticos-softwares-de-análisis",
     "title": "Introducción al software de análisis",
     "section": "Paquetes estadísticos / softwares de análisis",
-    "text": "Paquetes estadísticos / softwares de análisis\n\nExisten numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).\nEntre ellos podemos mencionar: SPSS, Stata, SAS, EpiDat, EpiInfo, lenguaje R, etc\nEl lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación)."
+    "text": "Paquetes estadísticos / softwares de análisis\n\nExisten numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).\nEntre ellos podemos mencionar: SPSS, Stata, SAS, EpiDat, EpiInfo, lenguaje R, etc.\n\nEl lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación)."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#tipo-de-interfaz",
@@ -1292,14 +1292,14 @@
     "href": "primero/diapositivas/02-analisis.html#tuberías-1",
     "title": "Introducción al software de análisis",
     "section": "Tuberías",
-    "text": "Tuberías\n\n\n\n\n\nPara el uso general, la utilización de las dos tuberías es la misma, es decir que la forma simple de las tuberías inserta el lado izquierdo como primer argumento en la llamada del lado derecho.\nEsto posibilita la reutilización de las estructuras de datos y la escritura de porciones de código similares a “oraciones” de un párrafo.\nPulse aquí para ver algunas caracteristicas comparativas de estas tuberías."
+    "text": "Tuberías\n\nPara el uso general, la utilización de las dos tuberías es la misma, es decir que la forma simple de las tuberías inserta el lado izquierdo como primer argumento en la llamada del lado derecho.\nEsto posibilita la reutilización de las estructuras de datos y la escritura de porciones de código similares a “oraciones” de un párrafo.\nPulse aquí para ver algunas caracteristicas comparativas de estas tuberías."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#estructura-de-datos",
     "href": "primero/diapositivas/02-analisis.html#estructura-de-datos",
     "title": "Introducción al software de análisis",
     "section": "Estructura de datos",
-    "text": "Estructura de datos\n\nLas estructuras de datos son los objetos contenedores de datos que el lenguaje ofrece.\nExiste una variedad de estructuras de datos: vectores, matrices, arrays, dataframes, listas, etc.\nVamos a describir a las más relevantes dentro del ecosistema tidyverse y que serviran en estos inicios del curso: Los vectores y los dataframes."
+    "text": "Estructura de datos\n\n\nLas estructuras de datos son los objetos contenedores de datos que el lenguaje ofrece.\nExiste una variedad de estructuras de datos: vectores, matrices, arrays, dataframes, listas, etc.\nVamos a describir a las más relevantes dentro del ecosistema tidyverse y que serviran en estos inicios del curso: Los vectores y los dataframes."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#vectores",
@@ -1382,8 +1382,8 @@
     "objectID": "primero/diapositivas/03-lectoescritura.html#archivos-de-datos",
     "href": "primero/diapositivas/03-lectoescritura.html#archivos-de-datos",
     "title": "Importar y exportar archivos de datos",
-    "section": "Archivos de datos",
-    "text": "Archivos de datos\n\nEn el mundo informático existen numerosos formatos de archivos de tablas / base de datos.\nEl lenguaje R permite importar y exportar de una amplia variedad de formatos a partir de utilizar diferentes paquetes. Muchos de ellos pertenecientes al ecosistema tidyverse.\nHoy nos vamos a centrar en dos formatos básicos habituales donde tenemos almacenada comúnmente la información:\n\nArchivos texto plano separados por comas u otro caracter (extensiones .csv, .txt, etc)\nArchivos con formato Excel (.xls y .xlsx)]\n\nAdemás mencionaremos otros formatos posibles y el propio de R"
+    "section": "",
+    "text": "En el mundo informático existen numerosos formatos de archivos de tablas / base de datos.\nEl lenguaje R permite importar y exportar de una amplia variedad de formatos a partir de utilizar diferentes paquetes. Muchos de ellos pertenecientes al ecosistema tidyverse.\nHoy nos vamos a centrar en dos formatos básicos habituales donde tenemos almacenada comúnmente la información:\n\nArchivos texto plano separados por comas u otro caracter (extensiones .csv, .txt, etc)\nArchivos con formato Excel (.xls y .xlsx)]\n\nAdemás mencionaremos otros formatos posibles y el propio de R"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#paquete-readr",
@@ -1404,14 +1404,14 @@
     "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-1",
     "title": "Importar y exportar archivos de datos",
     "section": "Lectura con funciones de readr",
-    "text": "Lectura con funciones de readr\nPara archivos separados por comas en formato regional Estadounidense se utiliza la función read_csv().\nTiene la misma base de read_delim() con valor predeterminado en en el argumento:\n\ndelim: separador coma “,”"
+    "text": "Lectura con funciones de readr\nPara archivos separados por comas en formato regional Estadounidense se utiliza la función read_csv().\nTiene la misma base de read_delim() con valor predeterminado en en el argumento:\n\ndelim: separador coma “,”\n\n\nread_csv(file = \"datos.csv\")"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-2",
     "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-2",
     "title": "Importar y exportar archivos de datos",
     "section": "Lectura con funciones de readr",
-    "text": "Lectura con funciones de readr\nPara archivos separados por comas en formato regional Español/Argentino se utiliza la función read_csv2().\nTiene la misma base de read_delim() con valor predeterminado en en el argumento:\n\ndelim: separador punto y coma “;”"
+    "text": "Lectura con funciones de readr\nPara archivos separados por comas en formato regional Español/Argentino se utiliza la función read_csv2().\nTiene la misma base de read_delim() con valor predeterminado en en el argumento:\n\ndelim: separador punto y coma “;”\n\n\nread_csv2(file = \"datos.csv\")"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#herramienta-de-lectura-de-rstudio",
@@ -1460,6 +1460,55 @@
     "href": "primero/diapositivas/03-lectoescritura.html#para-profundizar",
     "title": "Importar y exportar archivos de datos",
     "section": "Para profundizar…",
-    "text": "Para profundizar…\n\n.font150[Capítulo 11 del libro “R para Ciencias de Datos”]\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Para profundizar…\n\nCapítulo 11 del libro “R para Ciencias de Datos”"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html",
+    "href": "primero/diapositivas/03-lectoescritura.html",
+    "title": "Importar y exportar archivos de datos",
+    "section": "",
+    "text": "En el mundo informático existen numerosos formatos de archivos de tablas / base de datos.\nEl lenguaje R permite importar y exportar de una amplia variedad de formatos a partir de utilizar diferentes paquetes. Muchos de ellos pertenecientes al ecosistema tidyverse.\nHoy nos vamos a centrar en dos formatos básicos habituales donde tenemos almacenada comúnmente la información:\n\nArchivos texto plano separados por comas u otro caracter (extensiones .csv, .txt, etc)\nArchivos con formato Excel (.xls y .xlsx)]\n\nAdemás mencionaremos otros formatos posibles y el propio de R"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html",
+    "href": "primero/diapositivas/01b-datos.html",
+    "title": "Planificación de la gestión de datos",
+    "section": "",
+    "text": "Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación."
+  },
+  {
+    "objectID": "primero/diapositivas/00-bienvenida.html",
+    "href": "primero/diapositivas/00-bienvenida.html",
+    "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
+    "section": "",
+    "text": "Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n. . .\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n. . .\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n. . .\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html",
+    "href": "primero/diapositivas/01a-datos.html",
+    "title": "Gestión de datos - parte 1",
+    "section": "",
+    "text": "La gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, la planificación, el almacenamiento, la preservación y la difusión de los datos antes, durante y despues de la etapa de análisis."
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html",
+    "href": "primero/diapositivas/02-analisis.html",
+    "title": "Introducción al software de análisis",
+    "section": "",
+    "text": "Existen numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).\nEntre ellos podemos mencionar: SPSS, Stata, SAS, EpiDat, EpiInfo, lenguaje R, etc\nEl lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación)."
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#ejemplo-para-analizar",
+    "href": "primero/diapositivas/01a-datos.html#ejemplo-para-analizar",
+    "title": "Gestión de datos - parte 1",
+    "section": "Ejemplo para analizar",
+    "text": "Ejemplo para analizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Ministerio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#abordaje-interdisciplinario-3-dimensiones",
+    "href": "primero/diapositivas/02-analisis.html#abordaje-interdisciplinario-3-dimensiones",
+    "title": "Introducción al software de análisis",
+    "section": "Abordaje interdisciplinario: 3 dimensiones",
+    "text": "Abordaje interdisciplinario: 3 dimensiones"
   }
 ]

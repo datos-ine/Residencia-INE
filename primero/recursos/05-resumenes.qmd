@@ -1,0 +1,360 @@
+---
+title:  "**Resúmenes, indicadores y funciones estadísticas**"
+format:
+  html:
+    page-layout: full
+    include-in-header: 
+      - text: |
+          <link rel="icon" type="image/x-icon" href="favicon.ico">    
+    toc: true
+    toc-title: Contenidos
+    toc-location: left
+    toc_float: true
+    toc_collapsed: false
+    toc_depth: 4
+number_sections: true
+anchor_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, dpi = 300)
+```
+
+
+Con las herramientas conocidas hasta el momento sabemos obtener resúmenes estadísticos de variables cuantitativas usando a `summarise()` y estratificados a partir de `group_by()` o el argumento `by =` de  `summarise()`.
+
+Para variables categóricas hemos producido tablas de frecuencias con `count()` y cuando necesitamos calculos por fila aplicamos operadores simples como la suma o aprovechamos las funciones `rowwise()` y `c_across()`.
+
+En este documento explicaremos como usar otras funciones estadísticas y otros paquetes para presentar de mejor manera los resultados. 
+
+
+## Estadísticos compatibles con tidyverse
+
+El interprete de R trae muchas funciones estadísticas descriptivas y para inferencia disponibles en su versión base pero ninguna de estas son compatibles con la filosofia de trabajo de tidyverse. Es por eso que para utilizar funciones como `mean()` o `median()` por ejemplo, debemos introducirlas dentro de estructuras como `summarise()`. Las funciones de este tipo trabajan sobre vectores y no tienen en cuenta a los dataframes que encapsulan a los vectores como variables.
+
+```{r}
+#| echo: false
+datos <- tibble::tibble(Edad = c(34, 56, 43, 21, 67, 89, 54, 32, 16, 76))
+```
+
+Tenemos estos datos y vamos a calcular su media.
+
+```{r}
+datos
+```
+Si lo abordamos con la sintaxis R base:
+
+
+```{r}
+# Edad es una variable de datos pero llamada así es un vector numérico
+
+datos$Edad
+
+# preguntamos si es vector
+
+is.vector(datos$Edad)
+
+
+# ejecutamos mean() sobre ese vector
+mean(datos$Edad)
+```
+
+Si lo abordamos con tuberías.
+
+```{r}
+#| message: false
+#| warning: false
+#| error: true
+
+library(tidyverse)
+```
+
+```{r}
+#| message: false
+#| warning: true
+#| error: true
+datos |> 
+  mean(Edad)
+```
+
+Necesitamos la función `summarise()` para que funcione bien.
+
+```{r}
+datos |> 
+  summarise(media_edad = mean(Edad))
+```
+
+Cuando los estadísticos son más complejos que estas funciones descriptivas y devuelven un conjunto de resultados en forma de lista ni siquiera alcanza con aplicarlas dentro de un andamiaje de tidyverse como `summarise()`.
+
+Un ejemplo de ello, son todas las funciones de R base para comparaciones de inferencia. Tomemos el caso de la prueba **t de Student**, que sirve para comparar las medias de muestras aproximadamente normales.
+
+La función de R base es `t.test()` y sus argumentos obligatorios son `x` e `y` o bien utilizar un formato fórmula (`var1` ~ `var2`) 
+
+Para comparar dos conjuntos de datos con la forma x e y los datos tienen que estar en dos variables separadas y por lo tanto no cumplir con el formato "ordenado".
+
+```{r}
+#| echo: false
+datos <- tibble::tibble(Edad1 = c(34, 56, 43, 21, 67, 89, 54, 32, 16, 76),
+                        Edad2 = c(45, 76, 32, 12, 14, 18, 20, 54, 98, 32))
+```
+
+```{r}
+datos
+```
+
+Aplicamos la función teniendo en cuenta que lo que ingresa en cada argumento es un vector (dataframe$variable)
+
+```{r}
+t.test(x = datos$Edad1, y = datos$Edad2)
+```
+El resultado da un valor de probabilidad de 0,47 lo que indica que no hay diferencias significativas entre las medias de las dos muestras.
+
+Para usar el formato fórmula es necesario que la tabla de datos cumpla con el formato "ordenado", quedando:
+
+```{r}
+#| echo: false
+datos <- tibble::tibble(Muestra = c(rep(1, 10), rep(2, 10)),
+                        Edad = c(34, 56, 43, 21, 67, 89, 54, 32, 16, 76, 45, 76, 32, 12, 14, 18, 20, 54, 98, 32))
+```
+
+```{r}
+datos
+```
+En este caso el `t.test()` lleva formula y datos en el argumento data.
+
+```{r}
+t.test(formula = Edad ~ Muestra, data = datos)
+```
+
+Lo importante acá no es el resultado sino la forma en que lo devuelve. Observaran que no se trata de un formato ordenado ni se parece a una tabla. El tidyverse siempre (salvo raras excepciones, como con `pull()`) devuelve una tabla de datos ordenada y por eso todas estas funciones son incompatibles, aún utilizando un `summarise()` y nos dan error:
+
+```{r}
+#| error: true
+datos |> 
+  summarise(IC = t.test(Edad ~ Muestra))
+```
+Hace unos años a un desarrollador se le ocurrió crear un paquete que contiene todas estas funciones (y algunas más) del R base ***en espejo*** pero compatibles con tidyverse, esto es: reciben un dataframe y devuelven un dataframe.
+
+El paquete se llama **rstatix** y provee un marco simple e intuitivo compatible con el uso de tuberías, coherente con la filosofía de diseño "tidyverse", para realizar pruebas estadísticas descriptivas básicas y otras más avanzadas de inferencia y modelado.
+
+Las funciones relacionadas con la inferencia estadística, como t-test, ANOVAS, correlaciones y tamaños de efecto, así como también valores p ajustados o agregados de etiquetas de significación no serán explicados en este curso pero aquellxs estudiantes que les interese profundizar y utilizarlas le pueden sacar un provecho muy útil a este paquete, cuyo sitio es <https://rpkgs.datanovia.com/rstatix/index.html>.
+
+Respecto del ejemplo anterior la función de **rstatix** que reemplaza al `t.test()` tradicional es `t_test()`, es decir que al modo tidyverse reemplaza en el nombre el punto por un guión bajo (sucede en todas las funciones del paquete). 
+
+```{r}
+#| message: false
+#| warning: false
+library(rstatix)
+
+datos |> 
+  t_test(Edad ~ Muestra, conf.level = .95)
+```
+Ahora si, el resultado es una tabla de 8 variables por una fila, lo que nos va a permitir poder continuar el trabajo con tuberías. Debajo seleccionamos solo la variable que queremos ver (valor de p).
+
+```{r}
+datos |> 
+  t_test(Edad ~ Muestra, conf.level = .95) |> 
+  select(p)
+```
+
+Dentro de los estadísticos descriptivos la función `get_summary_stats()` devuelve un resumen univariado para variables cuantitativas.
+
+```{r}
+datos |> 
+  get_summary_stats(Edad)
+```
+Y al ser compatible con tidyverse se puede estratificar con `group_by()`.
+
+```{r}
+datos |> 
+  group_by(Muestra) |> 
+  get_summary_stats(Edad)
+```
+
+La función `freq_table()` construye tablas con las variables categóricas.
+
+```{r}
+#| echo: false
+datos <- tibble::tibble(Sexo = c(rep("Varon", 6), rep("Mujer", 14)),
+                        Fuma = c("Si", "No", "No", "Si", "Si", "Si", "No", "No", "Si", "Si", "No", "No", "No", "No", "No", "No", "Si", "No", "Si", "No"))
+```
+
+```{r}
+datos |> 
+ freq_table(Sexo)
+```
+También agregando otra variables que estratifiquen la salida.
+
+```{r}
+datos |> 
+ freq_table(Sexo, Fuma)
+```
+
+Una opción más completa para construir tablas y tablas de contingencia es usar la familia de funciones `tabyl()` del paquete **janitor**.
+
+```{r}
+#| message: false
+#| warning: false
+library(janitor)
+
+datos |> 
+  tabyl(Sexo)
+```
+
+
+
+Calcula las frecuencias absolutas y relativas de variables categóricas de forma similar a `freq_table()` pero se le pueden modificar sus argumentos y asociar otras funciones del paquete mediante tuberías para obtener mejores resultados (también es compatible con tidyverse).
+
+```{r}
+datos |>  
+  tabyl(Sexo) |> 
+  adorn_totals(where = "row") %>% # agregamos totales 
+  adorn_pct_formatting(digits = 2) # porcentaje con dos decimales
+```
+
+La forma más adecuada de describir la relación entre dos variables categóricas es a partir de la construcción de una tabla de contingencia. Para ello se introduce en cada fila de la tabla las categorías de una de las variables y las categorías de la otra variable se asocian a cada una de las columnas de la tabla, en cada celda de la tabla aparecerá el número de observaciones correspondientes a la combinación oportuna de ambas variables. Si bien `freq_table()` hace lo mismo, respeta la salida ordenada lo que dificulta su lectura.
+
+Con la misma función `tabyl()` se puede realizar una tabla de contingencia, incluyendo a la variable Fuma. 
+
+```{r}
+datos  |>   
+  tabyl(Sexo, Fuma) 
+```
+
+Recordemos que el orden dentro de los paréntesis de la función es igual al de los índices del lenguage, el primer argumento es la variable que aparecerá en las filas y el segundo la variable de las columnas. Por ese motivo, en la tabla de contingencia absoluta tenemos el Sexo en las filas y a Fuma en las columnas.
+
+Su salida se puede mejorar con totales por columna y que aparezca el nombre de la variable que esta en la columna:
+
+```{r}
+datos  |>   
+  tabyl(Sexo, Fuma) |> 
+  adorn_title(placement = "combined") |> 
+  adorn_totals(where = "row")
+```
+
+También haciendo que los valores sean porcentuales por fila.
+
+```{r}
+datos  |>   
+  tabyl(Sexo, Fuma) |>  
+  adorn_title(placement = "combined") |> 
+  adorn_totals(where = "row") |>  
+  adorn_percentages(denominator = "row") |>  #  % por fila
+  adorn_pct_formatting(digits = 2) # redondea con 2 decimales
+```
+
+Incoporamos valores absolutos entre paréntesis.
+
+```{r}
+datos  |>   
+  tabyl(Sexo, Fuma) |>  
+  adorn_totals(where = "row") |>  
+  adorn_percentages(denominator = "row") |>  
+  adorn_pct_formatting(digits = 2) |> 
+  adorn_ns() |> 
+  adorn_title() 
+```
+
+El paquete trae muchas funciones que se integran para construir tablas complejas. Más de estas opciones las pueden encontrar en el sitio oficial del paquete [janitor](https://sfirke.github.io/janitor/)
+
+## Tablas para presentaciones
+
+Cuando necesitemos presentar resultados estadísticos combinados, producto de variables cuanti y cualitativas a la vez, podemos hechar mano a funciones del paquete **gtsummary**.
+
+![](img/05/gtsummary.PNG){fig-align="center" width="100"}
+
+Esta librería proporciona una forma elegante y flexible de crear tablas analíticas y de resumen, univariadas, estratificadas y complejas.
+
+Integra estimaciones estadísticas predefinidas y se pueden personalizar a gusto, interactuando con otros paquetes como **gt**, **labelled** y **flextable**.
+
+En el sitio del desarrollador [(gtsummary)](https://www.danieldsjoberg.com/gtsummary/), encontrarán mucha documentación para adecuar los requerimientos de la salida buscada.
+
+Mostramos un ejemplo en función de los datos del archivo "base2023r.xlsx". 
+
+```{r}
+#| message: false
+#| warning: false
+
+library(readxl)
+library(gtsummary)
+
+
+datos <- read_excel("datos/base2023r.xlsx")
+
+
+datos |> 
+  select(EDAD_DIAGNOSTICO, SEXO, MOTIVO_CONSULTA) |>
+  tbl_summary()
+```
+Quizás lo mejor sea presentar los datos estratificados por sexo, por ejmplo. Además configuramos algunos argumentos mas.
+
+```{r}
+datos |> 
+  select(EDAD_DIAGNOSTICO, SEXO, MOTIVO_CONSULTA) |>
+  filter(SEXO != "A") |> 
+  tbl_summary(by = SEXO,
+              statistic = list(
+                all_continuous() ~ "{mean} ({sd})",
+                all_categorical() ~ "{n} / {N} ({p}%)"),
+              digits = all_continuous() ~ 1,
+              missing_text = "Sin dato") |> 
+  modify_header(label ~ "**Variable**")
+```
+
+El argumento `statistic` permite que, mediante una lista, configuremos los estadísticos a presentar. Para todas las variables continuas seleccionamos la media (mean) y el desvío estandar (sd); para todas las variables categóricas el conteo de cada categoría y el porcentaje. Los decimales de las variables continuas quedan definidos en 1 y cuando aparezcan valores NA serán expresados con la etiqueta "Sin dato". Por último, la cabecera de la tabla en la comuna de las variables será "Variable" en negrita.
+
+### Flextable
+
+![](img/05/flextable.png){fig-align="center" width="100"}
+
+Estas tablas de presentación de resultados se pueden conectar con el paquete **flextable** para exportarlas en diferentes formatos, como *Word, html, PDF, PowerPoint* o *imagen* y además se vincula con el contenido en estructuras de archivos **rmarkdown** y/o **Quarto**.
+
+Una salida interesante es poder guardar la tabla en formato **Word** (.docx), porque luego podemos editarla facilmente, para esto la función `as_flex_table()` convierte al `tbl_summary()` de **gtsummry** en clase flextable.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(flextable)
+
+tabla1 <- datos |> 
+  select(EDAD_DIAGNOSTICO, SEXO, MOTIVO_CONSULTA) |>
+  filter(SEXO != "A") |> 
+  tbl_summary(by = SEXO,
+              statistic = list(
+                all_continuous() ~ "{mean} ({sd})",
+                all_categorical() ~ "{n} / {N} ({p}%)"),
+              digits = all_continuous() ~ 1,
+              missing_text = "Sin dato") |> 
+  modify_header(label ~ "**Variable**") |> 
+  as_flex_table() |> 
+  autofit() |>    # ajuste automático 
+  theme_box()     # tema box
+```
+
+Luego es posible exportar fácilmente una o más tablas a partir de los objetos flextables almacenados a documentos tipo html, RTF, Word, PowerPoint o PNG.
+
+Un ejemplo para salidas tipo Word es: `save_as_docx()`
+
+```{r}
+#| eval: false
+save_as_docx(
+  "tabla 1" = tabla1, 
+  path = "/resultados/tabla_exportada.docx")
+```
+
+Exporta el objeto *tabla1* en el archivo **tabla_exportada.docx** dentro de la carpeta *resultados*. 
+
+Todos los objetos de clase *flextable* están compuestos por tres partes:
+
+- **header**: de forma predeterminada, solo hay una fila de encabezado que contiene los nombres del dataframe.  
+- **body**: la parte del cuerpo contiene datos del dataframe.
+- **footer**: la parte del pie de tabla no está implementada de forma predeterminada, pero puede contener notas al pie o cualquier contenido.
+
+![](img/05/flextable-partes.PNG){fig-align="center" width="300"}
+
+
+
+
+
+

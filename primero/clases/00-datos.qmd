@@ -658,4 +658,4 @@ Existen multitud de paquetes informáticos, tanto de software privado como de so
 
 Algunos poseen tanto interfaz gráfica como de línea de comando, aunque no llegan a ser un lenguaje de programación. Cada una con sus ventajas y desventajas, suele ser más veloz el aprendizaje de los paquetes gráficos pero también limitados a la hora de hacer cosas más complejas. La curva de aprendizaje de los lenguajes de programación como R, Python o Julia es lenta pero a su vez no tiene límites respecto del tipo de análisis que necesitemos.
 
-## Bibliografía
+## Referencias

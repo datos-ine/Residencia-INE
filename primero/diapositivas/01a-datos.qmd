@@ -53,7 +53,7 @@ La ciencia abierta tiene como objetivo hacer que la investigación y la difusió
 
 - Marco de ciencia abierta: [Centro para la Ciencia Abierta](https://www.cos.io)
 
-- Iniciativa y hoja de ruta de ciencia reproducible, ética y colaborativa: [The Turing Way](https://book.the-turing-way.org/)
+- Iniciativa y hoja de ruta, en el ámbito de la ciencia de datos de ciencia de datos, reproducible, ética y colaborativa: [The Turing Way](https://book.the-turing-way.org/)
 
 ## Fuente de datos
 
@@ -162,6 +162,8 @@ Partes básicas de una tabla de datos estructurada
 
 ## Filas (observaciones)
 
+<br>
+
 - Las filas del conjunto de datos representan a los sujetos (también llamados registros u observaciones) de sus datos. 
 
 - Los sujetos de su conjunto de datos pueden ser personas, hogares, ubicaciones como países o provincias, etc.
@@ -194,13 +196,13 @@ Son considerados datos abiertos todos aquellos datos accesibles y reutilizables,
 
 - En nuestro país, tanto Estado nacional, como las provincias y municipios publican repositorios o banco de datos abiertos.
 
-## Ejemplo para anlizar
+## Ejemplo para analizar
 
 <br>
 
 Veamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente. 
 
-Los responsables de llevarla a cabo son el Misniterio de Salud de la Nación y el INDEC.
+Los responsables de llevarla a cabo son el Ministerio de Salud de la Nación y el INDEC.
 
 <br>
 

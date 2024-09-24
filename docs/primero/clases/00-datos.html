@@ -200,7 +200,7 @@ div.csl-indent {
   <li><a href="#criterios-de-calidad" id="toc-criterios-de-calidad" class="nav-link" data-scroll-target="#criterios-de-calidad">Criterios de calidad</a></li>
   </ul></li>
   <li><a href="#softwares-y-lenguajes-de-análisis-estadístico" id="toc-softwares-y-lenguajes-de-análisis-estadístico" class="nav-link" data-scroll-target="#softwares-y-lenguajes-de-análisis-estadístico">Softwares y lenguajes de análisis estadístico</a></li>
-  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 </nav>
 </nav>
@@ -941,14 +941,14 @@ div.csl-indent {
 </table>
 <p>Algunos poseen tanto interfaz gráfica como de línea de comando, aunque no llegan a ser un lenguaje de programación. Cada una con sus ventajas y desventajas, suele ser más veloz el aprendizaje de los paquetes gráficos pero también limitados a la hora de hacer cosas más complejas. La curva de aprendizaje de los lenguajes de programación como R, Python o Julia es lenta pero a su vez no tiene límites respecto del tipo de análisis que necesitemos.</p>
 </section>
-<section id="bibliografía" class="level2">
+<section id="referencias" class="level2">
 
 
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliografía</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referencias</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Alston2021" class="csl-entry" role="listitem">
 Alston, Jesse M., and Jessica A. Rick. 2021. <span>“A Beginner’s Guide to Conducting Reproducible Research.”</span> <em>The Bulletin of the Ecological Society of America</em> 102 (2): e01801. https://doi.org/<a href="https://doi.org/10.1002/bes2.1801">https://doi.org/10.1002/bes2.1801</a>.
 </div>
@@ -1185,7 +1185,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("^https:\/\/(datos-ine|www)?\.?(linkedin|twitter|github)\.*");
+      var filterRegex = new RegExp("^https:\/\/(raw|datos-ine|www)?\.?(linkedin|twitter|github|githubusercontent)\.*");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

@@ -29,9 +29,11 @@ library(tidyverse)
 
 Existen numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).
 
-Entre ellos podemos mencionar: `SPSS`, `Stata`, `SAS`, `EpiDat`, `EpiInfo`, `lenguaje R`, etc
+Entre ellos podemos mencionar: `SPSS`, `Stata`, `SAS`, `EpiDat`, `EpiInfo`, `lenguaje R`, etc.
 
-El lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación).   
+<br>
+
+El **lenguaje R** es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación).   
 
 
 ## Tipo de interfaz {.smaller}
@@ -59,7 +61,7 @@ Existen dos grandes grupos de softwares en función de sus interfaces: **GUI** (
 
 ::::
 
-## Tres dimensiones
+## Abordaje interdisciplinario: 3 dimensiones
 
 
 ![](img/02/tres_dimensiones.png){width="100%" fig-align="center"}
@@ -146,7 +148,7 @@ En 1995 dos profesores de estadística de la *Universidad de Auckland*, en Nueva
 
 ## Funcionamiento
 
-![](img/02/funcionamiento.jpg){width="100%" fig-align="center"}
+![](img/02/funcionamiento.jpg){width="90%" fig-align="center"}
 
 ## Usuarios del lenguaje y enfoque "comunicativo"
 
@@ -279,11 +281,13 @@ Pulse [aquí](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/) par
 
 
 
-![](img/02/vector_dataframe.png)
+
 
 ## Estructura de datos
 
 <br>
+
+![](img/02/vector_dataframe.png)
 
 Las estructuras de datos son los **objetos** **_contenedores de datos_** que el lenguaje ofrece.
 

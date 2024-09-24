@@ -72,7 +72,7 @@ Se espera que al finalizar este curso los participantes puedan:
     <td class="tg-0lax">Datos - Parte 1</td>
     <td align="center"><a href="/primero/clases/00-datos.html">
           <i class="fa fa-book fa-lg"></i></a></td>
-    <td align="center"><a href="/primero/diapositivas/01a-datos.html">
+    <td align="center"><a href="/primero/diapositivas/01a-datos.html" target="_blank">
           <i class="fa fa-laptop  fa-lg"></i></a></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-code fa-lg"></i></font></td>
@@ -84,7 +84,7 @@ Se espera que al finalizar este curso los participantes puedan:
     <td class="tg-0lax">Datos - Parte 2</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
-    <td align="center"><a href="/primero/diapositivas/01b-datos.html">
+    <td align="center"><a href="/primero/diapositivas/01b-datos.html" target="_blank">
           <i class="fa fa-laptop  fa-lg"></i></a></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-code fa-lg"></i></font></td>
@@ -96,7 +96,7 @@ Se espera que al finalizar este curso los participantes puedan:
     <td class="tg-0lax">Datos - Parte 3</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
-    <td align="center"><a href="/primero/diapositivas/01c-datos.html">
+    <td align="center"><a href="/primero/diapositivas/01c-datos.html" target="_blank">
           <i class="fa fa-laptop  fa-lg"></i></a></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-code fa-lg"></i></font></td>
@@ -108,7 +108,7 @@ Se espera que al finalizar este curso los participantes puedan:
     <td class="tg-0lax">Lenguaje R</td>
     <td align="center"><a href="/primero/clases/01-introR.html">
           <i class="fa fa-book fa-lg"></i></a></td>
-    <td align="center"><a href="/primero/diapositivas/02-analisis.html">
+    <td align="center"><a href="/primero/diapositivas/02-analisis.html" target="_blank">
           <i class="fa fa-laptop  fa-lg"></i></a></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-code fa-lg"></i></font></td>

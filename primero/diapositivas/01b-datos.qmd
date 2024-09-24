@@ -43,9 +43,9 @@ Un plan de gestión de datos es un documento complementario sobre cómo se plane
 
 ## Plan de gestión de datos
 
-- **Descripción de los datos con los que trabajamos:** Fuente, proceso de limpieza, etcomo limpios?
+- **Descripción de los datos con los que trabajamos:** Fuente, proceso de limpieza, etc.
 - **Formato de los datos:** Instrumentos en papel, tipos de archivos, etc.
-- **Documentación:** Diccionario de datos, manuales de procedimiento, etc
+- **Documentación:** Diccionario de datos, manuales de procedimiento, etc.
 - **Conservación de datos:** Repositorios, medidas de seguridad, etc.
 - **Privacidad y la confidencialidad:** Anominización, consentimientos informados, etc.
 - **Funciones y responsabilidades**

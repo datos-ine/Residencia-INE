@@ -1,0 +1,394 @@
+---
+title:  "**Ajuste de tasas**"
+format:
+  html:
+    page-layout: full
+    include-in-header: 
+      - text: |
+          <link rel="icon" type="image/x-icon" href="favicon.ico">    
+    toc: true
+    toc-title: Contenidos
+    toc-location: left
+    toc_float: true
+    toc_collapsed: false
+    toc_depth: 4
+number_sections: true
+anchor_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, dpi = 300)
+```
+
+
+Las tasas de mortalidad son cocientes, y tienen como componentes: un numerador (en general el número de muertes con determinadas características del grupo de personas involucradas); un denominador (en general la población de referencia del numerador), y un factor de expansión.
+
+Las fuentes de información para el numerador son las estadísticas de mortalidad, mientras que para el denominador son los censos de población y sus estimaciones y proyecciones.
+
+En definitiva es un indicador que presenta de forma resumida el riesgo de morir de la población general o específica.
+
+El resultado obtenido de dividir el numerador por el denominador de la tasa de mortalidad se multiplica por una constante, que es el factor de expansión, a fin de no presentar un número fraccionario, difícil de trabajar e interpretar. El factor de expansión tiene como función transformar la tasa en un valor fácilmente comprensible, y su elección depende de la frecuencia del evento a que se hace referencia.
+
+A fin de poder realizar un análisis más preciso de los riesgos de morir, en determinados grupos de población podemos elaborar tasas de mortalidad específicas según las características de nuestro interés, como pueden ser el sexo, la edad o la causa principal de defunción, entre otros.
+
+El riesgo de morir está fuertemente relacionado con la edad y las tasas de mortalidad por edad muestran riesgos aumentados en los extremos de edad de la vida, como las tasas de mortalidad en menores de un año o en mayores de 80 años, por ejemplo.
+
+Las tasas de mortalidad a su vez, se pueden subdividir en tasas de mortalidad generales o tasas de mortalidad ajustadas.
+
+Una forma de comparar las tasas de mortalidad teniendo en cuenta la diferente estructura de edad entre poblaciones o en la misma población en diferentes periodos, es utilizando tasas de mortalidad estandarizadas o tasas de mortalidad ajustadas.
+
+El objetivo de la estandarización por edad es eliminar la influencia de la distinta estructura de edad sobre las tasas de mortalidad objeto de la comparación; según Last:
+
+::: {.callout-important appearance="simple" icon="false"}
+*“una tasa de mortalidad estandarizada según la edad es una medida integrada de la tasa de mortalidad que una población tendría si su estructura por edades fuera estándar”* [@last1989]
+:::
+
+Esto es debido a que, en la comparación de la mortalidad entre poblaciones distintas, la estructura de edad opera conceptualmente como un **factor de confusión**[@Szklo2003].
+
+## Método directo
+
+El método directo consiste en calcular primero el riesgo específico de muerte para cada grupo de edad. Para lograrlo, es necesario disponer de datos sobre el número de muertes ocurridas en un determinado año, para cada uno de los grupos de edad elegidos, así como la población correspondiente a cada uno de dichos grupos. Lo ideal es que los grupos de edad sean estratos lógicos y homogéneos en relación al riesgo de morir. Con fines de comparación, se pueden ajustar varias poblaciones de forma simultánea, pero a continuación se utilizará un ejemplo simplificado con solo dos poblaciones. Suponiendo que se quiera comparar dos regiones, A y B, cuyas poblaciones tienen una estructura de edad diferente, se calculan los riesgos específicos de muerte en cada grupo de edad (defunciones/población) para las regiones A y B por separado [@lineamie2017]. Luego se selecciona una población estándar. Se entiende como estándar a algo que sirve como base de comparación.
+
+Las poblaciones estándar para el método de ajuste directo pueden ser las siguientes:
+
+a)  una población enteramente artificial
+b)  una de las poblaciones de estudio
+c)  la suma de las poblaciones de estudio
+d)  una población externa o de referencia
+e)  una población estándar de varianza mínima
+
+Las poblaciones externas pueden ser, por ejemplo, la población propuesta por la **OMS** o por la **Agencia Internacional de Investigación del Cáncer** (**IARC**).
+
+La etapa siguiente consistirá en calcular, siempre para cada grupo de edad, el número de muertes esperadas en la población estándar, si la misma estuviese sujeta al riesgo específico encontrado en la población A, realizando a continuación el mismo cálculo para la población B. Por último, se suma el número de muertes esperadas en todos los grupos de edad, y el resultado se divide por la población estándar, obteniéndose así la tasa ajustada. Todos estos procedimientos deben efectuarse por separado para cada población, A y B. En el caso de que una de ellas haya sido seleccionada como población estándar, el ajuste solo será necesario para la otra [@lineamie2017].
+
+En resumen, los pasos del método directo, para la comparación de dos poblaciones A y B hipotéticas, son los siguientes:
+
+-   Cálculo de las tasas de mortalidad reales para cada grupo de edad en la población
+
+-   Elección de la población estándar
+
+-   Cálculo de las defunciones esperadas para la población A, si aplico sus tasas de mortalidad reales por grupo de edad a la estructura de edad de la población estándar
+
+-   Cálculo del total de defunciones esperadas en la población A, como suma de los valores obtenidos en el punto anterior
+
+-   Cálculo de la tasa de mortalidad ajustada para la población A, donde el numerador estará formado por las defunciones esperadas y el denominador por la población estándar
+
+-   Realizar el mismo procedimiento para la población B.
+
+Finalmente, la tasa de mortalidad ajustada es una medida resumen, una medida única, de la experiencia de mortalidad que tendría esa población si tuviera la estructura de edad de la población estándar.
+
+Por último, recordar que las tasas ajustadas son tasas *“artificiales”* o *“hipotéticas”*, y sirven exclusivamente a fines de comparación entre poblaciones.
+
+## Método indirecto
+
+La estandarización de tasas por el método indirecto es una alternativa cuando no se dispone de datos de mortalidad desglosados por estrato, en este caso por grupos de edad, o cuando el tamaño de cada grupo es muy pequeño, en cuyo caso los datos estarían sujetos a variaciones muy grandes, por el simple aumento o disminución de unas pocas muertes [@lineamie2017].
+
+En síntesis, los pasos del método indirecto, para la comparación de dos poblaciones A y B hipotéticas, son los siguientes:
+
+-   Obtención de las defunciones reales observadas en la población A por grupos de edad
+
+-   Cálculo de las tasas de mortalidad específicas por edad observadas en la población B, es decir las tasas de la población tomada como referencia.
+
+-   Cálculo de las defunciones esperadas para cada grupo de edad de la población A, si se aplican las tasas de mortalidad por grupo de edad de la población B (tasas de la población de referencia) a la estructura de edad de la población A
+
+-   Cálculo del total de defunciones esperadas en la población A
+
+-   Cálculo de la ***razón de mortalidad estandarizada*** (**RME**), tomando como numerador las defunciones observadas en la población A, y como denominador, las defunciones esperadas en la población A, si tuviera la estructura de mortalidad (las tasas de mortalidad por grupo de edad) de la población B.
+
+De esta forma, la **RME** es:
+
+::: {.callout-important appearance="simple" icon="false"}
+“el cociente entre el número de hechos observados en el grupo o población de estudio, dividido por el número que cabría esperar si dicha población tuviera las mismas tasas específicas que la población de referencia, multiplicado por 100” [@last1989].
+:::
+
+Se debe tener en cuenta que el ajuste por el método indirecto solo permite comparar una población con la población de la cual se obtienen las tasas de referencia. Por ejemplo, si se usa el ajuste con el método indirecto para un conjunto de unidades subnacionales (provincias de un país) y se toman como referencia las tasas de la población del país, cada unidad subnacional se puede comparar solo con la nacional. Tal cómputo daría una dimensión del riesgo de cada unidad subnacional en relación al riesgo del país (como un todo), y este riesgo de cada unidad subnacional podría encontrarse hipotéticamente en un nivel superior, igual o inferior al país. Es decir, no sería correcto comparar las unidades subnacionales entre sí utilizando el ajuste con el método indirecto en el ejemplo mencionado.
+
+## Ejemplo en lenguaje R
+
+### Método directo
+
+Para mostrar cómo se realiza la estandarización, compararemos tasas ajustadas de mortalidad por todas las causas durante el 2022 de la provincia de Santa Fe y de la Provincia de Buenos Aires.
+
+Necesitaremos las muertes ocurridas por todas las causas durante 2022 de las dos provincias por edad (en categorías de 5 años) y sexo (mujer, varón) y sus poblaciones proyectadas para ese año.
+
+También necesitamos una población de referencia, la población estándar. Para los propósitos de este ejercicio utilizaremos la población argentina de 2022.
+
+Iniciamos activando paquetes, en este caso vamos hacerlo con **tidyverse**, **readxl** para leer archivos Excel y con un paquete específico que nos va a servir para el ajuste directo que se llama **PHEindicatormethods**. [link documentación](https://cran.r-project.org/web/packages/PHEindicatormethods/vignettes/DSR-vignette.html)
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readxl)
+library(PHEindicatormethods)
+```
+
+Luego importamos los datos necesarios. En este caso el archivo con las defunciones 2022 y con las proyecciones poblacionales del último censo publicado (2010).
+
+```{r}
+#| message: false
+#| warning: false
+
+
+guess_encoding("datos/def2022.csv")
+
+defunciones <- read_csv("datos/def2022.csv", 
+                        locale = locale(encoding = "ISO-8859-1"))
+
+pob_INDEC <- read_excel("datos/Base_Poblacion_Provincias_Edad_Sexo_ARG_2001_2025.xlsx") 
+```
+
+Comencemos procesando las defunciones. La estructura del archivo es:
+
+```{r}
+glimpse(defunciones)
+```
+
+En la variable `ANO` se encuentra el año de la defunción, esta debería ser una constante en 2022. Corroboremos que sea así:
+
+```{r}
+defunciones |> count(ANO)
+```
+
+En la variable `JURI` tenemos el código de provincia de la jurisdicción donde ocurrió el fallecimiento. Para tomar la provincia de Santa Fe y la provincia de Buenos Aires vamos a quedarnos solo con los códigos "82" y "06".
+
+```{r}
+defunciones <- defunciones |> 
+  filter(JURI %in% c("82", "06"))
+```
+
+Las variables relevantes para este trabajo son `JURI`, `EDAD`, `UNIEDAD` y `SEXO`. Recortemos el dataframe por columnas para seleccionar esas variables.
+
+```{r}
+defunciones <- defunciones |> 
+  select(JURI, EDAD, UNIEDAD, SEXO)
+```
+
+A continuación pasemos a trabajar con el dataframe **pob_INDEC**. Veamos su estructura:
+
+```{r}
+glimpse(pob_INDEC)
+```
+
+De su primera variable `CODIGO` debemos extraer el código de provincia. En este ejemplo, "82" y "06", perteneciente a Santa Fe y Buenos Aires respectivamente. De paso, asignamos a una nueva variable `JURI` (la hacemos coincidir con igual nombre que la de defunciones).
+
+```{r}
+poblaciones <- pob_INDEC |> 
+  mutate(JURI = str_sub(CODIGO, 1, 2)) |> 
+  filter(JURI %in% c("82", "06"))
+```
+
+También debemos filtrar las observaciones del año 2022.
+
+```{r}
+poblaciones <- poblaciones |> 
+  filter(YEAR == 2022)
+```
+
+Por último, vamos a sumar poblaciones de las observaciones que son de diferentes departamentos para esas dos provincias, respetando el sexo y la edad como estructura.
+
+```{r}
+poblaciones <- poblaciones |> 
+  summarise(POBLACION = sum(POBLACION),
+            .by = c(JURI, SEXO, GRUPEDAD))
+```
+
+Observemos como nos quedó el dataframe **poblaciones**:
+
+```{r}
+poblaciones
+```
+
+Ahora volvamos sobre el dataframe **defunciones** para construir el grupo etario a partir la edad. Hay que considerar que la edad en esta tabla se encuentra asociada a la unidad, que puede ser diferente en cada caso (años, meses, días, etc).
+
+Nosotros necesitamos medir todo en años, porque los grupos están expresados en esa unidad cada 5 años. Además debemos hacer coincidir las etiquetas de estos grupos con las de la tabla poblaciones para posteriormente unirlas sin problemas.
+
+```{r}
+defunciones <- defunciones |> 
+  mutate(EDAD = if_else(UNIEDAD > 1,                               # <1>
+                        true = 0,  
+                        false = EDAD),                   
+         GRUPEDAD = cut_interval(EDAD,                             # <2>
+                                 length = 5,
+                                 right = F),
+         GRUPEDAD = as.character(GRUPEDAD),                        # <3>
+         GRUPEDAD = str_sub(GRUPEDAD,                              # <4>
+                            start = 2, 
+                            end = str_length(GRUPEDAD)-1),
+         x = str_split_fixed(GRUPEDAD, ",",                        # <5>
+                             n = 2),
+         x2 = as.numeric(x[,2])-1,                                 # <6>
+         GRUPEDAD = str_c(x[,1],"-",x2),                           # <7>
+         GRUPEDAD = if_else(EDAD >= 80,                            # <8>
+                            true ="80 y más", 
+                            false = GRUPEDAD)) |> 
+  select(!c(x, x2, EDAD, UNIEDAD))
+
+```
+1. Si la unidad de edad es mayor a 1 (es decir, menor a unidad de tiempo año -meses, días, etc-) le asignamos a la variable `EDAD` cero años.
+
+2. Usamos `cut_interval()` para crear intervalos de clase cada 5 años (cerrados a izquierda y abiertos a derecha). Produce salidas tipo \[0,5\] que necesitamos convertir en etiquetas iguales a la de la variable `GRUPEDAD` de **poblaciones**, es decir 0-4.
+
+3. Para lograr ese cambio y como los intervalos se producen como factor convertimos a character para poder operar con `GRUPEDAD`
+
+4. Extraemos el contenido de `GRUPEDAD` evitando los corchetes y paréntesis con `str_sub()`
+
+5. Dividimos en dos partes tomando la coma como caracter divisor con `str_split()`
+
+6. Convertimos a numérico la última parte del intervalo para restarle 1
+
+7. Unimos nuevamente en `GRUPEDAD` concatenando las dos partes del intervalo definiendo en el medio el caracter "-" con `str_c()`
+
+8. Finalmente, si la edad es igual o mayor a 80 años, definimos la etiqueta como "80 y más" al igual que `GRUPEDAD` en **poblaciones**.
+
+Veamos que nos quedó:
+
+```{r}
+defunciones
+```
+
+Nos falta revisar las categorías de la variable `SEXO`, para esto podemos hacer un `count()`
+
+```{r}
+defunciones |> 
+  count(SEXO)
+```
+
+Tenemos dos categorías, la 3 y 9, con 1 sola muerte cada una que no vamos a poder contabilizar porque en poblaciones solo hay dos categorías de sexo (1 y 2)
+
+```{r}
+defunciones <- defunciones |> 
+  filter(SEXO < 3)
+```
+
+Bien, ahora debemos hacer el conteo de estas defunciones en función a las tres variables participantes
+
+```{r}
+defunciones <- defunciones |> 
+  count(JURI, SEXO, GRUPEDAD, name = "MUERTES")
+
+```
+
+La tabla agregada de defunciones para estas dos provincias nos queda:
+
+```{r}
+defunciones
+```
+
+Finalmente debemos unir las dos tablas usando como clave `JURI`, `SEXO` y `GRUPEDAD` (que antes logramos que se llamaran iguales, tuvieran el mismo tipo de dato y las mismas etiquetas).
+
+```{r}
+datos <- defunciones |> 
+  inner_join(poblaciones)
+```
+
+Observemos que no usamos ninguna definición de clave porque al coincidir sus nombres lo hace automáticamente, agregando las variables diferentes como `MUERTES` y `POBLACION` a la tabla final.
+
+```{r}
+datos
+```
+
+Probemos de calcular las tasas crudas para cada provincia.
+
+```{r}
+datos |> 
+  group_by(JURI) |> 
+  summarise(MUERTES = sum(MUERTES),
+            POBLACION = sum(POBLACION),
+            Tasa_cruda = MUERTES/POBLACION*100000)
+```
+
+Las usaremos para comparar sus valores con las ajustadas, en el sentido de visualizar el cambio producido por la estandarización.
+
+Bueno, para realizar el ajuste ya tenemos los datos de muertes y población pero nos falta aún la población estándar. Calcularemos la de Argentina para 2022 a partir de los datos importados del **INDEC**.
+
+```{r}
+pob_INDEC <- pob_INDEC |> 
+  filter(YEAR == 2022) |> 
+  summarise(POB_STD = sum(POBLACION),
+            .by = c(SEXO, GRUPEDAD))
+```
+
+Unimos al dataframe **datos**
+
+```{r}
+datos <-  datos |> 
+  inner_join(pob_INDEC)
+```
+
+Finalmente están los datos necesarios para el ajuste:
+
+```{r}
+datos
+```
+
+Nos toca aplicar la función `phe_dsr()` del paquete **PHEindicatormethods**. Su sintaxis completa es:
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> 
+  phe_dsr(
+    x = ,                   # columna con los eventos (muertes)
+    n = ,                   # columna con las poblaciones 
+    stdpop = ,              # columna con la población estándar 
+    stdpoptype = "field",   # la población estándar esta en el dataframe
+    type = "full",          # tipo de salida "full" predeterminado
+    confidence = 0.95,      # nivel de confianza de los IC 0.95 por defecto
+    multiplier = 100000)    # factor multiplicador 100000 por defecto
+```
+
+```{r}
+datos  |> 
+  group_by(JURI) |> 
+  phe_dsr(
+    x = MUERTES,            
+    n = POBLACION,          
+    stdpop = POB_STD,       
+    stdpoptype = "field",
+    type = "standard")   
+```
+
+Visualizamos que en la salida de la función están los valores de tasas ajustadas por 100000 y los intervalos de confianza al 95% para cada jurisdicción.
+
+Las tasas, en general disminuyeron respecto de las crudas y ahora se pueden comparar entre sí. En 2022, la provincia de Santa Fe tuvo casi 883 fallecidos por todas las causas cada 100000 contra 809 de la provincia de Buenos Aires.
+
+### Método indirecto
+
+Así como la función `phe_dsr()` calcula las tasas ajustadas aplicando el método directo, la función `calculate_ISRatio()` del mismo paquete **PHEindicatormethods** lo hace usando el método indirecto.
+
+La sintaxis completa de la función es:
+
+```{r}
+#| echo: true
+#| eval: false
+datos |> 
+  calculate_ISRatio(
+    x =,
+    n =,
+    x_ref =,
+    n_ref =,
+    refpoptype = "vector",
+    type = "full",
+    confidence = 0.95
+)
+
+```
+
+Donde los argumentos son:
+
+-  **x**: nombre de la variable que contiene los casos / eventos
+
+-  **n**: nombre de la variable que contiene la población 
+
+- **x_ref**:  eventos / casos observados en la población de referencia. Puede ser una variable de datos o un vector.
+
+- **n_ref**: población de referencia. Puede ser una variable de datos o un vector.
+
+- **refpoptype**:  si es "field" x_ref y n_ref deberán ser variables de datos. si es "vector" busca las referencias como vectores externos; predeterminado = "vector"
+
+- **type**: define que valores muestra en el cálculo. "standard" (para sólo datos) o "full" (para datos y metadatos del calculo); predeterminado = "full"
+
+- **confidence**: nivel de confianza de los IC; 0.95 por defecto
