@@ -145,7 +145,8 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
     <td align="center"><a href="/primero/recursos/02-lectura.html">
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
@@ -155,8 +156,10 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
     <td class="tg-0lax">29/10/2024</td>
@@ -164,7 +167,8 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><a href="/primero/clases/06-depuracion.html">
           <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
     <td align="center"><a href="/primero/clases/05-datosPerdidos.html">
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
@@ -174,7 +178,8 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
     <td align="center"><a href="/primero/recursos/06-iteracion.html">
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
@@ -184,8 +189,10 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><a href="/primero/clases/04-tipos.html">
           <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
     <td class="tg-0lax">07/11/2024</td>
@@ -193,7 +200,8 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><a href="/primero/recursos/05-resumenes.html">
           <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
     <td align="center"><a href="/primero/recursos/04-ajusteTasas.html">
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
@@ -203,8 +211,10 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><a href="/primero/clases/07-visualizacion.html">
           <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
     <tr>
     <td class="tg-0lax">19/11/2024</td>
@@ -212,8 +222,10 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
     <tr>
     <td class="tg-0lax">21/11/2024</td>
@@ -221,8 +233,10 @@ Se espera que al finalizar este curso los participantes puedan:
     <td align="center"><a href="/primero/clases/08-quarto.html">
           <i class="fa fa-book fa-lg"></i></a></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-code fa-lg"></i></font></td>
+    <td align="center"><font color="fafcfc">
+          <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
 </tbody></table>
 

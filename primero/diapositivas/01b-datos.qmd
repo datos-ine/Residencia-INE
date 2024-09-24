@@ -153,7 +153,105 @@ Las variables operacionalizadas que surjen de los cuestionarios cumpliran con al
   - Un individuo puede ser diabético e hipertenso simultáneamente. En este caso es necesario definir una variable por cada opción de respuesta y que sus modalidades dicotómicas sean la ausencia o presencia de dicha opción: 
 Diabetes: [si - no]  Hipertensión: [si - no]  
 
+## Ética: identidad
+
+<br>
+
+Clasificación de archivos de datos según identificación personal: 
+
+- **Identificable:** es común que los datos crudos sin procesar de un estudio de investigación sean identificables.
+
+- **Codificado:** identificación personal eliminada o distorsionada. Reemplazo por códigos (es decir, un identificador único del participante). 
+
+- **Desidentificado:** identificación personal eliminada o distorsionada. No se puede volver a asociar con la persona. (compartir)
+
+- **Anónimo:** nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico.
+
+## Ética: sensibilidad
+
+<br>
+
+- **Baja:** datos que no presentan riesgo o presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.
+
+- **Moderada:** datos que pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. (protección contra el acceso no autorizado).
+
+- **Alta sensibilidad:** medidas de seguridad más estrictas. Incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos).
+
+## Buenas prácticas
+
+<br>
+
+1. Evitar espacios en nombres.Usar guión bajo (_) o guión medio (-).
+2. Evitar caracteres especiales en directorios y nombres de archivos (excepto los guiones).
+3. Evitar caracteres acentuados y eñes
+4. Orden útil. Clasificación alfanumérica y el completado de ceros a la izquierda cuando hay más de un dígito. Utilización del estándar ISO 8601 para fechas (AAAA-MM-DD).
+5. Cuidado con la longitud de los caracteres. Tomar en cuenta toda ubicación del archivo.
 
 
+## Directorios / carpetas
 
+<br>
+
+1. Nombres de carpetas significativos y fáciles de interpretar.
+2. No usar espacios en los nombres de carpetas. Separar con guiones (_) o (-).
+3. No usar caracteres especiales 
+4. Usar una convención coherente. Uso de mayúsculas y minúsculas, etc.
+5. Limitar la cantidad de caracteres
+6. Agregar número de orden al comienzo del nombre de cada carpeta, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).
+
+## Nombres de archivos {.smaller}
+
+1. Nombres descriptivos (un usuario debe poder comprender el contenido del archivo sin abrirlo).
+2. Evitar información de identificación personal 
+2. No usar espacios en los nombres de archivos. Separar con guiones (_) o (-).
+3. No usar caracteres especiales 
+4. Usar una convención coherente. Uso de mayúsculas y minúsculas, etc.
+5. Limitar la cantidad de caracteres.
+6. Formato de fechas de forma uniforme (ISO 8601). No utilizar barras diagonales (/)  
+7. Al versionar manualmente los nombres de archivos, usar un indicador consistente. (v01, v02). 
+8. Agregar número de orden al comienzo del nombre de cada archivo, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).
+9. Usar metadatos redundantes (información) en el nombre del archivo. Reduce la confusión si alguna vez se mueve a una carpeta diferente.También permite realizar búsquedas en tus archivos. Por ejemplo, coloque siempre la palabra “raw” (crudo) o “clean” (limpio) en un nombre de archivo de datos, incluso si el archivo está alojado en una carpeta “raw” o “clean”.
+
+## Nombres de variables {.smaller}
+
+<br>
+
+**Obligatorio**
+
+- No usar palabras claves o funciones reservadas (if, for, repeat, etc.)
+- Establecer un límite de caracteres 
+- No usar espacios ni caracteres especiales, excepto (_). 
+- No comenzar el nombre de una variable con un número. 
+
+**Sugerido**
+
+- Evitar acentos y eñes.
+- Que todas las tablas tengan un identificador único de observación o registro. 
+- Prestar atención al uso de minúsculas y mayúsculas. (case sensitive)
+- Utilizar prefijos y sufijos para identificación de grupo de variables.
+
+
+## Codificación de valores
+
+<br>
+<br>
+
+- Deben ser únicos (evitar mismo código para categorías distintas) 
+- Deben ser consistentes (evitar códigos distintos para mismas categorías)
+- Ordenamiento lógico (en variables ordinales)
+- Valores faltantes (dejar en blanco o usar códigos numéricos extremos de escala, 9, 99, 999, etc)
+
+
+## Documentación: diccionario de datos
+
+<br>
+
+Todo archivo de datos o grupo de archivos que conforman una base de datos debe tener estar siempre acompañado por un diccionario de datos.
+
+El **diccionario de datos** o ***codebook*** enumera: 
+
+- nombre de variable
+- descripción
+- tipo de varible
+- valores permitidos (escalas, códigos, categorías)
 
