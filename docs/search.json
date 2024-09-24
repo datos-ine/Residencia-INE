@@ -927,15 +927,15 @@
     "objectID": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
     "href": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
-    "section": "",
-    "text": "Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n. . .\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n. . .\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n. . .\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
+    "section": "Contribución esperada",
+    "text": "Contribución esperada\n\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n\n\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n\n\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#nos-presentamos",
     "href": "primero/diapositivas/00-bienvenida.html#nos-presentamos",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
     "section": "Nos presentamos",
-    "text": "Nos presentamos\n\n\nantecedentes de trabajo con datos?\n\n\n\npaquetes estadísticos conocidos o usados?\n\n\n\nmaterias de grado relacionadas al tema estadístico?"
+    "text": "Nos presentamos\n\n\nhabilidades informáticas? antecedentes de trabajo con datos?\n\n\n\npaquetes estadísticos conocidos o usados?\n\n\n\nmaterias de grado relacionadas al tema estadístico?"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#materiales",
@@ -949,7 +949,7 @@
     "href": "primero/diapositivas/00-bienvenida.html#encuentros-presenciales",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
     "section": "Encuentros presenciales",
-    "text": "Encuentros presenciales\n\n\nLos encuentros serán los martes y jueves de 10 a 12 hs.\nEn la mayoría de ellos habrá una exposición del tema a partir de diapositivas y en algunas ocasiones tendremos actividades prácticas.\nContacto: Mi mail es christianballejo@gmail.com y mi Whatsapp 223-5309396"
+    "text": "Encuentros presenciales\n\n\nLos encuentros serán los martes y jueves de 10 a 12 hs.\nEn la mayoría de ellos habrá una exposición del tema a partir de diapositivas y en algunas ocasiones tendremos actividades prácticas.\nContacto: Mi mail es christianballejo@gmail.com y mi Whatsapp 223-5309396\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#contacto",
@@ -1516,14 +1516,14 @@
     "href": "primero/diapositivas/01b-datos.html#ética-identidad",
     "title": "Planificación de la gestión de datos",
     "section": "Ética: identidad",
-    "text": "Ética: identidad\n\nClasificación de archivos de datos según identificación personal:\n\nIdentificable: es común que los datos crudos sin procesar de un estudio de investigación sean identificables.\nCodificado: identificación personal eliminada o distorsionada. Reemplazo por códigos (es decir, un identificador único del participante).\nDesidentificado: identificación personal eliminada o distorsionada. No se puede volver a asociar con la persona. (compartir)\nAnónimo: nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico."
+    "text": "Ética: identidad\nClasificación de archivos de datos según identificación personal:\n\n\nIdentificable: es común que los datos crudos sin procesar de un estudio de investigación sean identificables.\n\n\n\n\nCodificado: identificación personal eliminada o distorsionada. Reemplazo por códigos (es decir, un identificador único del participante).\n\n\n\n\nDesidentificado: identificación personal eliminada o distorsionada. No se puede volver a asociar con la persona. (compartir)\n\n\n\n\nAnónimo: nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico."
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#ética-sensibilidad",
     "href": "primero/diapositivas/01b-datos.html#ética-sensibilidad",
     "title": "Planificación de la gestión de datos",
     "section": "Ética: sensibilidad",
-    "text": "Ética: sensibilidad\n\n\nBaja: datos que no presentan riesgo o presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.\nModerada: datos que pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. (protección contra el acceso no autorizado).\nAlta sensibilidad: medidas de seguridad más estrictas. Incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos)."
+    "text": "Ética: sensibilidad\n\n\nBaja: datos que no presentan riesgo o presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.\n\n\n\n\nModerada: datos que pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. (protección contra el acceso no autorizado).\n\n\n\n\nAlta sensibilidad: medidas de seguridad más estrictas. Incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos)."
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#buenas-prácticas",
@@ -1551,14 +1551,14 @@
     "href": "primero/diapositivas/01b-datos.html#nombres-de-variables",
     "title": "Planificación de la gestión de datos",
     "section": "Nombres de variables",
-    "text": "Nombres de variables\n\nObligatorio\n\nNo usar palabras claves o funciones reservadas (if, for, repeat, etc.)\nEstablecer un límite de caracteres\nNo usar espacios ni caracteres especiales, excepto (_).\nNo comenzar el nombre de una variable con un número.\n\nSugerido\n\nEvitar acentos y eñes.\nQue todas las tablas tengan un identificador único de observación o registro.\nPrestar atención al uso de minúsculas y mayúsculas. (case sensitive)\nUtilizar prefijos y sufijos para identificación de grupo de variables."
+    "text": "Nombres de variables\n\nObligatorio\n\nNo usar palabras claves o funciones reservadas (if, for, repeat, etc.)\nEstablecer un límite de caracteres\nNo usar espacios ni caracteres especiales, excepto (_).\nNo comenzar el nombre de una variable con un número.\n\n\nSugerido\n\nEvitar acentos y eñes.\nQue todas las tablas tengan un identificador único de observación o registro.\nPrestar atención al uso de minúsculas y mayúsculas. (case sensitive)\nUtilizar prefijos y sufijos para identificación de grupo de variables."
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#documentación-diccionario-de-datos",
     "href": "primero/diapositivas/01b-datos.html#documentación-diccionario-de-datos",
     "title": "Planificación de la gestión de datos",
     "section": "Documentación: diccionario de datos",
-    "text": "Documentación: diccionario de datos\n\nTodo archivo de datos o grupo de archivos que conforman una base de datos debe tener estar siempre acompañado por un diccionario de datos.\nEl diccionario de datos o codebook enumera:\n\nnombre de variable\ndescripción\ntipo de varible\nvalores permitidos (escalas, códigos, categorías)\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Documentación: diccionario de datos\n\nTodo archivo de datos o grupo de archivos que conforman una base de datos debe tener estar siempre acompañado por un diccionario de datos.\nEl diccionario de datos o codebook enumera:\n\nnombre de variable\ndescripción\ntipo de varible\nvalores permitidos (escalas, códigos, categorías)"
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#codificación-de-valores",
@@ -1566,5 +1566,54 @@
     "title": "Planificación de la gestión de datos",
     "section": "Codificación de valores",
     "text": "Codificación de valores\n \n\nDeben ser únicos (evitar mismo código para categorías distintas)\nDeben ser consistentes (evitar códigos distintos para mismas categorías)\nOrdenamiento lógico (en variables ordinales)\nValores faltantes (dejar en blanco o usar códigos numéricos extremos de escala, 9, 99, 999, etc)"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.html#seguimos-analizando-la-documentación-de-la-enfr-2018",
+    "href": "primero/diapositivas/01b-datos.html#seguimos-analizando-la-documentación-de-la-enfr-2018",
+    "title": "Planificación de la gestión de datos",
+    "section": "Seguimos analizando la documentación de la ENFR 2018",
+    "text": "Seguimos analizando la documentación de la ENFR 2018\n  \nSitio Bases Salud INDEC\n\nDiccionario de datos ENFR 2018\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/clases/01-introR.html#videos-sobre-objetos",
+    "href": "primero/clases/01-introR.html#videos-sobre-objetos",
+    "title": "Introducción al lenguaje R",
+    "section": "Videos sobre Objetos",
+    "text": "Videos sobre Objetos"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#formatos-de-archivos",
+    "href": "primero/diapositivas/01c-datos.html#formatos-de-archivos",
+    "title": "Archivos de datos",
+    "section": "Formatos de archivos",
+    "text": "Formatos de archivos"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#almacenamiento",
+    "href": "primero/diapositivas/01c-datos.html#almacenamiento",
+    "title": "Archivos de datos",
+    "section": "Almacenamiento",
+    "text": "Almacenamiento"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#seguridad",
+    "href": "primero/diapositivas/01c-datos.html#seguridad",
+    "title": "Archivos de datos",
+    "section": "Seguridad",
+    "text": "Seguridad"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#depuración",
+    "href": "primero/diapositivas/01c-datos.html#depuración",
+    "title": "Archivos de datos",
+    "section": "Depuración",
+    "text": "Depuración\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#archivos-de-datos",
+    "href": "primero/diapositivas/02-analisis.html#archivos-de-datos",
+    "title": "Introducción al software de análisis",
+    "section": "Archivos de datos",
+    "text": "Archivos de datos\n\nEl formato de archivos de datos estándar y universal es el texto plano separado por comas (archivos csv)\nEstas tablas de datos tienen las variables ubicadas en las columnas y las observaciones en las filas.\nEl objeto al que asignemos la importación de estos archivos siempre será un dataframe/tibble.\nOtro formato de datos propio de R es .RData, que permite guardar varios objetos del lenguaje (vectores, dataframes, etc.) simultáneamente. Es como almacenar el entorno de trabajo completo."
   }
 ]

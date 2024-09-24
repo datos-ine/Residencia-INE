@@ -289,6 +289,8 @@ a
 
 Observemos que además de devolvernos el valor aparece delante un 1 entre corchetes `[1]`.Este número es la ubicación o índice del comienzo del objeto, que en este caso tiene una sola posición. 
 
+
+
 ## Estructuras de datos
 
 Los objetos *contenedores de datos* más simples pertenecen a **cinco
@@ -436,6 +438,12 @@ Existen otras estructuras de datos que aparecen en la siguiente figura. Las más
 ```{r,echo=F,  fig.align='center', out.width = "55%"}
 knitr::include_graphics("img/01/objetos_R.png")
 ```
+
+## Videos sobre Objetos
+
+{{< video https://youtu.be/JK4o_dnhyIQ?si=PFCQGww4vvieQGdJ >}}
+
+{{< video https://youtu.be/UCOCMdXzbo0?si=vtzC_thJvh3ZaDzh >}}
 
 
 ## Operadores en R

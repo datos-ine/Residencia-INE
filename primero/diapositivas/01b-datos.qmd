@@ -155,27 +155,43 @@ Diabetes: [si - no]  Hipertensión: [si - no]
 
 ## Ética: identidad
 
-<br>
-
 Clasificación de archivos de datos según identificación personal: 
+
+. . . 
 
 - **Identificable:** es común que los datos crudos sin procesar de un estudio de investigación sean identificables.
 
+. . . 
+
 - **Codificado:** identificación personal eliminada o distorsionada. Reemplazo por códigos (es decir, un identificador único del participante). 
 
+. . . 
+
 - **Desidentificado:** identificación personal eliminada o distorsionada. No se puede volver a asociar con la persona. (compartir)
+
+. . . 
 
 - **Anónimo:** nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico.
 
 ## Ética: sensibilidad
 
-<br>
+::: {.fragment .fade-in-then-semi-out}
 
 - **Baja:** datos que no presentan riesgo o presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.
 
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
 - **Moderada:** datos que pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. (protección contra el acceso no autorizado).
 
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
 - **Alta sensibilidad:** medidas de seguridad más estrictas. Incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos).
+
+:::
 
 ## Buenas prácticas
 
@@ -223,6 +239,8 @@ Clasificación de archivos de datos según identificación personal:
 - No usar espacios ni caracteres especiales, excepto (_). 
 - No comenzar el nombre de una variable con un número. 
 
+. . . 
+
 **Sugerido**
 
 - Evitar acentos y eñes.
@@ -255,3 +273,14 @@ El **diccionario de datos** o ***codebook*** enumera:
 - tipo de varible
 - valores permitidos (escalas, códigos, categorías)
 
+## Seguimos analizando la documentación de la ENFR 2018
+
+<br>
+<br>
+<br>
+
+[Sitio Bases Salud INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2)
+
+<br>
+
+[Diccionario de datos ENFR 2018](https://www.indec.gob.ar/ftp/cuadros/menusuperior/enfr/diccionario_registros_enfr2018.xls)

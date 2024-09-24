@@ -1,5 +1,5 @@
 ---
-title: "Bienvenidxs a Gestión de datos"
+title: "Archivos de datos"
 subtitle: "Residencia de Epidemiología"
 format: 
   revealjs:
@@ -22,3 +22,14 @@ library(quarto)
 library(fontawesome)
 library(tidyverse)
 ```
+
+diapositivas en construcción
+
+## Formatos de archivos
+
+## Almacenamiento
+
+## Seguridad
+
+## Depuración
+

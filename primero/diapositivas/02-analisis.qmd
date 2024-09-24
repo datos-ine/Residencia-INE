@@ -342,34 +342,15 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 
 - Los dataframes/tibbles son el tipo de datos fundamental en la mayoría de los análisis que llevaremos adelante.
 
-## Lectura de datos
+## Archivos de datos
 
-- El formato de archivos de datos nativo de R es el **texto plano separado por comas** (archivos csv)
+- El formato de archivos de datos estándar y universal es el **texto plano separado por comas** (archivos `csv`)
 
 - Estas tablas de datos tienen las **variables** ubicadas en las *columnas* y las **observaciones** en las *filas*.
 
-- **readr** se llama el paquete que tiene funciones de lectura y escritura de este tipo de archivos dentro del tidyverse.
+- El objeto al que asignemos la importación de estos archivos siempre será un **dataframe/tibble**.
 
-- El objeto al que asignemos estas lecturas siempre será un **dataframe/tibble**.
-
-- Es importante reconocer el **Enconding** de los caracteres utilizados en la creación del archivo de datos para hacer una lectura adecuada.
-
-
-
-## Encoding
-
-
-- La codificación de caracteres en los archivos especifican cómo se representan los caracteres durante el procesamiento de texto.
-
-- Existen diferentes estándares de "encoding" que se adaptan a conjuntos de caracteres específicos (generalmente según el idioma)
-
-- Es el motivo por el cuál, a veces importamos datos y hay caracteres especiales de nuestro idioma español, como los acentos o la eñe, que se muestran erróneos, es decir, con otros caracteres equivocados.
-
-- **readr** tiene la función `guess_enconding()` que sirve para detectar el estándar de un archivo de texto plano.
-
-- Las funciones del paquete permiten modificar estos estándares dentro de sus argumentos.
-
-
+- Otro formato de datos propio de R es `.RData`, que permite guardar varios objetos del lenguaje (vectores, dataframes, etc.) simultáneamente. Es como almacenar el entorno de trabajo completo.
 
 ## Errores y advertencias
 

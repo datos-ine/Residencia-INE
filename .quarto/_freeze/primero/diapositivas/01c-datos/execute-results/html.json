@@ -1,8 +1,8 @@
 {
-  "hash": "0b31e082367e69966c7e3b39f4845184",
+  "hash": "4434457e7c9a8bf2b62944a14b5c0b47",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Bienvenidxs a Gestión de datos\"\nsubtitle: \"Residencia de Epidemiología\"\nformat: \n  revealjs:\n    self-contained: true\n    width: 1920\n    height: 1080\n    slide-number: true\n    transition: fade\n    theme: [simple, img/custom.scss]\n    logo: img/INE.gif\n    footer: \"Instituto Nacional de Epidemiología\"\n---\n\n\n",
+    "markdown": "---\ntitle: \"Archivos de datos\"\nsubtitle: \"Residencia de Epidemiología\"\nformat: \n  revealjs:\n    self-contained: true\n    width: 1920\n    height: 1080\n    slide-number: true\n    transition: fade\n    theme: [simple, img/custom.scss]\n    logo: img/INE.gif\n    footer: \"Instituto Nacional de Epidemiología\"\n---\n\n\n\n\n\ndiapositivas en construcción\n\n## Formatos de archivos\n\n## Almacenamiento\n\n## Seguridad\n\n## Depuración\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
