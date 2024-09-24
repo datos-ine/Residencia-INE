@@ -27,9 +27,138 @@ diapositivas en construcción
 
 ## Formatos de archivos
 
-## Almacenamiento
+<br>
 
-## Seguridad
+- Existen variados formatos de archivos de datos
 
-## Depuración
+- Pueden ser estructuras de licencia abierta (texto plano) o privada.
 
+- Las extensiones `.csv` y `.txt` son las más comúnes en versiones texto plano.
+
+- Otras extensiones pertenecen a sofwares específicos: `xlsx` a Excel, `.sav` a SPSS, `.sas7bcat` a SAS o `.dta` a Stata, por ejemplo.
+
+- Hay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos.
+
+## Almacenamiento y seguridad
+
+Características a considerar respecto al almacenamiento: 
+
+. . . 
+
+- **Seguridad:** garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente. Copias de seguridad periódicas. Uso de la nube
+
+. . . 
+
+- **Confidencialidad:** que personas no autorizadas no vean ni accedan a información confidencial. Además de archivos electrónicos hablamos de todo documento sensible (formularios, cuestionarios, planillas, etc).
+
+. . .
+
+- **Accesibilidad y usabilidad de los archivos:** asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen.
+
+## Colaboración
+
+<br>
+
+Existen numerosos recursos en línea para el trabajo colaborativo que el equipo de trabajo puede considerar. Mencionamos dos grandes grupos:
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Google drive / Dropbox / OneDrive:**  servicios de almacenamiento gratuito en línea con permisos de acceso, trabajo colaborativo y repositorio de seguridad. 
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Plataformas tipo Github / Gitlab:** herramientas de gestión de alojamiento de repositorios con control de acceso, control de versiones y colaboración, utilizadas generalmente para el desarrollo de software.
+
+:::
+
+## Control de versiones
+
+- El control de versiones en un paso más que integra el paradigma de la investigación reproducible dentro de la ciencia abierta.
+
+- Almacena ordenadamente un historial de cambios y quién los realizó.Es como un ‘deshacer’ sin límites.
+
+- Se pueden guardar metadatos del código escrito.
+
+- Invaluable para proyectos colaborativos donde diferentes personas trabajan paralelamente en el mismo código.
+
+- Permite realizar un seguimiento de los cambios realizados y puede combinar automáticamente el trabajo de las personas
+
+## git  {transition="zoom"}
+
+
+![](img/01/git.PNG){.absolute top=0 right=0 width=400}
+
+<br>
+<br>
+
+
+- **git** es un software de código abierto desarrollado originalmente por Linus Torvalds en 2005
+
+- Se puede instalar en Windows, Linux y Mac.
+
+- Se integra en la web con sitios como GitHub, GitLab, BitBucket, etc.
+
+- Se integra con IDE’s y editores como RStudio. 
+
+
+## Repositorios: GitHub
+
+<br>
+
+- Es un sitio web que ofrece un servicio para almacenar repositorios en base a control de versiones que se integra con `Git`.
+
+- Se utiliza principalmente para alojar código y fuente de productos digitales (material educativo, libros, etc)
+
+- Fue desarrollado en 2008 y actualmente pertenece a Microsoft
+
+- Es de acceso gratuito y tiene también planes de pago con servicios especiales (mayor cantidad de colaboradores en repositorios privados, por ejemplo)
+
+## Depuración {transition="slide"}
+
+- **Datos brutos:** archivo sin procesar que proviene directamente de su fuente de recopilación o captura de datos. Si es de fuente secundaria, este es el archivo que descarga o recibe del proveedor externo. No se comparten fuera del equipo de investigación, ya que suelen contener información identificable.
+
+- **Datos depurados del estudio:** conjunto de datos que se puede compartir públicamente. Sin eliminación de observaciones ni variables, salvo la anonimización.
+
+- **Datos analíticos:** conjunto de datos que se crea a partir del conjunto depurado de datos pero se modifica aún más para un análisis específico. Aquí aparecen las variables creadas en el análisis, posibles eliminaciones de observaciones y/o variables e imputaciones de valores perdidos.
+
+## Calidad {.smaller}
+
+<br>
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Completo:** Filas coincidentes con la recopilación y sin duplicados. Variables coincidentes con el diccionario de datos. Eliminaciones documentadas.
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Válido:** variables que se ajustan a las restricciones que ha establecido en su diccionario de datos.
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Preciso: ** sin valores erróneos detectables.
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Coherente:** valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna.
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Anonimizado:** se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio. Antes de compartir públicamente también se eliminan identificadores indirectos.
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Analizable:** los datos tienen un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización.
+
+:::

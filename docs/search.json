@@ -928,7 +928,7 @@
     "href": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
     "section": "Contribución esperada",
-    "text": "Contribución esperada\n\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n\n\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n\n\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
+    "text": "Contribución esperada\n\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso lxs participantes puedan:\n\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n\n\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n\n\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#nos-presentamos",
@@ -942,7 +942,7 @@
     "href": "primero/diapositivas/00-bienvenida.html#materiales",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
     "section": "Materiales",
-    "text": "Materiales\n\nDurante la cursada vamos a trabajar con diapositivas, materiales de lectura-consulta, trabajos prácticos y diferentes recursos que esstarán publicados en el sitio https://datos-ine.github.io/Residencia-INE/\n\nIngresemos y veamos el cronograma tentativo…"
+    "text": "Materiales\n\nDurante la cursada vamos a trabajar con diapositivas, materiales de lectura-consulta, trabajos prácticos y diferentes recursos que estarán publicados en el sitio https://datos-ine.github.io/Residencia-INE/\n\nIngresemos y veamos el cronograma tentativo…"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#encuentros-presenciales",
@@ -1586,7 +1586,7 @@
     "href": "primero/diapositivas/01c-datos.html#formatos-de-archivos",
     "title": "Archivos de datos",
     "section": "Formatos de archivos",
-    "text": "Formatos de archivos"
+    "text": "Formatos de archivos\n\n\nExisten variados formatos de archivos de datos\nPueden ser estructuras de licencia abierta (texto plano) o privada.\nLas extensiones .csv y .txt son las más comúnes en versiones texto plano.\nOtras extensiones pertenecen a sofwares específicos: xlsx a Excel, .sav a SPSS, .sas7bcat a SAS o .dta a Stata, por ejemplo.\nHay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos."
   },
   {
     "objectID": "primero/diapositivas/01c-datos.html#almacenamiento",
@@ -1607,7 +1607,7 @@
     "href": "primero/diapositivas/01c-datos.html#depuración",
     "title": "Archivos de datos",
     "section": "Depuración",
-    "text": "Depuración\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Depuración\n\nDatos brutos: archivo sin procesar que proviene directamente de su fuente de recopilación o captura de datos. Si es de fuente secundaria, este es el archivo que descarga o recibe del proveedor externo. No se comparten fuera del equipo de investigación, ya que suelen contener información identificable.\nDatos depurados del estudio: conjunto de datos que se puede compartir públicamente. Sin eliminación de observaciones ni variables, salvo la anonimización.\nDatos analíticos: conjunto de datos que se crea a partir del conjunto depurado de datos pero se modifica aún más para un análisis específico. Aquí aparecen las variables creadas en el análisis, posibles eliminaciones de observaciones y/o variables e imputaciones de valores perdidos."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#archivos-de-datos",
@@ -1615,5 +1615,47 @@
     "title": "Introducción al software de análisis",
     "section": "Archivos de datos",
     "text": "Archivos de datos\n\nEl formato de archivos de datos estándar y universal es el texto plano separado por comas (archivos csv)\nEstas tablas de datos tienen las variables ubicadas en las columnas y las observaciones en las filas.\nEl objeto al que asignemos la importación de estos archivos siempre será un dataframe/tibble.\nOtro formato de datos propio de R es .RData, que permite guardar varios objetos del lenguaje (vectores, dataframes, etc.) simultáneamente. Es como almacenar el entorno de trabajo completo."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#almacenamiento-y-seguridad",
+    "href": "primero/diapositivas/01c-datos.html#almacenamiento-y-seguridad",
+    "title": "Archivos de datos",
+    "section": "Almacenamiento y seguridad",
+    "text": "Almacenamiento y seguridad\nCaracterísticas a considerar respecto al almacenamiento:\n\n\nSeguridad: garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente. Copias de seguridad periódicas. Uso de la nube\n\n\n\n\nConfidencialidad: que personas no autorizadas no vean ni accedan a información confidencial. Además de archivos electrónicos hablamos de todo documento sensible (formularios, cuestionarios, planillas, etc).\n\n\n\n\nAccesibilidad y usabilidad de los archivos: asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#colaboración",
+    "href": "primero/diapositivas/01c-datos.html#colaboración",
+    "title": "Archivos de datos",
+    "section": "Colaboración",
+    "text": "Colaboración\n\nExisten numerosos recursos en línea para el trabajo colaborativo que el equipo de trabajo puede considerar. Mencionamos dos grandes grupos:\n\n\nGoogle drive / Dropbox / OneDrive: servicios de almacenamiento gratuito en línea con permisos de acceso, trabajo colaborativo y repositorio de seguridad.\n\n\n\n\nPlataformas tipo Github / Gitlab: herramientas de gestión de alojamiento de repositorios con control de acceso, control de versiones y colaboración, utilizadas generalmente para el desarrollo de software."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#control-de-versiones",
+    "href": "primero/diapositivas/01c-datos.html#control-de-versiones",
+    "title": "Archivos de datos",
+    "section": "Control de versiones",
+    "text": "Control de versiones\n\nEl control de versiones en un paso más que integra el paradigma de la investigación reproducible dentro de la ciencia abierta.\nAlmacena ordenadamente un historial de cambios y quién los realizó.Es como un ‘deshacer’ sin límites.\nSe pueden guardar metadatos del código escrito.\nInvaluable para proyectos colaborativos donde diferentes personas trabajan paralelamente en el mismo código.\nPermite realizar un seguimiento de los cambios realizados y puede combinar automáticamente el trabajo de las personas"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#git",
+    "href": "primero/diapositivas/01c-datos.html#git",
+    "title": "Archivos de datos",
+    "section": "git",
+    "text": "git\n\n \n\ngit es un software de código abierto desarrollado originalmente por Linus Torvalds en 2005\nSe puede instalar en Windows, Linux y Mac.\nSe integra en la web con sitios como GitHub, GitLab, BitBucket, etc.\nSe integra con IDE’s y editores como RStudio."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#repositorios-github",
+    "href": "primero/diapositivas/01c-datos.html#repositorios-github",
+    "title": "Archivos de datos",
+    "section": "Repositorios: GitHub",
+    "text": "Repositorios: GitHub\n\n\nEs un sitio web que ofrece un servicio para almacenar repositorios en base a control de versiones que se integra con Git.\nSe utiliza principalmente para alojar código y fuente de productos digitales (material educativo, libros, etc)\nFue desarrollado en 2008 y actualmente pertenece a Microsoft\nEs de acceso gratuito y tiene también planes de pago con servicios especiales (mayor cantidad de colaboradores en repositorios privados, por ejemplo)"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html#calidad",
+    "href": "primero/diapositivas/01c-datos.html#calidad",
+    "title": "Archivos de datos",
+    "section": "Calidad",
+    "text": "Calidad\n\n\n\nCompleto: Filas coincidentes con la recopilación y sin duplicados. Variables coincidentes con el diccionario de datos. Eliminaciones documentadas.\n\n\n\n\nVálido: variables que se ajustan a las restricciones que ha establecido en su diccionario de datos.\n\n\n\n\nPreciso:  sin valores erróneos detectables.\n\n\n\n\nCoherente: valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna.\n\n\n\n\nAnonimizado: se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio. Antes de compartir públicamente también se eliminan identificadores indirectos.\n\n\n\n\nAnalizable: los datos tienen un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización.\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]

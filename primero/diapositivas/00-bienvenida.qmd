@@ -30,7 +30,7 @@ library(tidyverse)
 
 **Objetivos:**
 
-Se espera que al finalizar este curso los participantes puedan:
+Se espera que al finalizar este curso lxs participantes puedan:
 
 . . .
 
@@ -62,7 +62,7 @@ Se espera que al finalizar este curso los participantes puedan:
 
 <br>
 
-Durante la cursada vamos a trabajar con diapositivas, materiales de lectura-consulta, trabajos prácticos y diferentes recursos que esstarán publicados en el sitio <https://datos-ine.github.io/Residencia-INE/>
+Durante la cursada vamos a trabajar con diapositivas, materiales de lectura-consulta, trabajos prácticos y diferentes recursos que estarán publicados en el sitio <https://datos-ine.github.io/Residencia-INE/>
 
 <br>
 

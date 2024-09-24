@@ -53,7 +53,7 @@ La ciencia abierta tiene como objetivo hacer que la investigación y la difusió
 
 - Marco de ciencia abierta: [Centro para la Ciencia Abierta](https://www.cos.io)
 
-- Iniciativa y hoja de ruta, en el ámbito de la ciencia de datos de ciencia de datos, reproducible, ética y colaborativa: [The Turing Way](https://book.the-turing-way.org/)
+- Iniciativa y hoja de ruta, en el ámbito de la ciencia de datos, reproducible, ética y colaborativa: [The Turing Way](https://book.the-turing-way.org/)
 
 ## Fuente de datos
 
