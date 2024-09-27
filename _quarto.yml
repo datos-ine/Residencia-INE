@@ -4,19 +4,21 @@ project:
 
 website:
   title: "Residencia-INE"
+  favicon: favicon.ico
   navbar:
+    logo: logo_resi.gif
     left:
       - href: index.qmd
         text: "1er. año"
+    right:
+      - icon: building
+        href: https://www.ine.gov.ar  
 
 format:
   html:
-    include-in-header: 
-      - text: |
-          <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     theme: 
-      light: [pulse, custom.scss]
-      dark: darkly
+      light: custom.scss
+      dark: [darkly, custom_dark.scss]
     toc: true
     language:
       toc-title-website: "Contenido"
