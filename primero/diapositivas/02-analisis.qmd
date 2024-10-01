@@ -270,7 +270,7 @@ La mayoría de los scripts del curso muestran la tubería nativa, pero se puede 
 ## Tuberías
 
 
-![](img/02/pipe.png){width="40%" fig-align="center"}
+![](img/02/pipe.png){width="30%" fig-align="center"}
 
 
 Para el uso general, la utilización de las dos tuberías es la misma, es decir que la forma simple de las tuberías inserta el lado izquierdo como primer argumento en la llamada del lado derecho. 
@@ -280,14 +280,11 @@ Esto posibilita la reutilización de las estructuras de datos y la escritura de 
 Pulse [aquí](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/) para ver algunas caracteristicas comparativas de estas tuberías.
 
 
-
-
-
 ## Estructura de datos
 
 <br>
 
-![](img/02/vector_dataframe.png)
+![](img/02/vector_dataframe.png){fig-align="center"}
 
 Las estructuras de datos son los **objetos** **_contenedores de datos_** que el lenguaje ofrece.
 
@@ -315,12 +312,15 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 - Los vectores integer y double se conocen como vectores numéricos (numeric).
 
 
-## 
+## Dataframes {.smaller}
 
-![](img/02/dataframe.PNG)
+<br>
 
+:::: {.columns}
 
-- Un dataframe, que se traduce como marco de datos, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.
+::: {.column width="60%"}
+
+- Un dataframe, que se traduce como *marco de datos*, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.
 
 - Tienen dos dimensiones, las columnas verticales llamadas **variables** y las filas horizontales llamadas **observaciones**.
 
@@ -328,9 +328,26 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 
 - La combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos).
 
-## Tibbles
+:::
 
-![](img/02/tibble.PNG)
+::: {.column width="40%"}
+
+<br>
+
+
+![](img/02/dataframe.PNG){width="100%"}
+
+:::
+
+::::
+
+## Tibbles {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
 
 - Los tibbles son una versión moderna del dataframe que introduce **tidyverse**.
 
@@ -341,6 +358,16 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 - Dado que estamos centrados en tidyverse, utilizaremos los términos dataframe y tibble como sinónimos entre sí para su uso general.
 
 - Los dataframes/tibbles son el tipo de datos fundamental en la mayoría de los análisis que llevaremos adelante.
+
+:::
+
+::: {.column width="40%"}
+
+![](img/02/tibble.PNG){width="100%"}
+
+:::
+
+::::
 
 ## Archivos de datos
 

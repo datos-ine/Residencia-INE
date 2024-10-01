@@ -1320,7 +1320,7 @@
     "href": "primero/diapositivas/02-analisis.html#tibbles",
     "title": "Introducción al software de análisis",
     "section": "Tibbles",
-    "text": "Tibbles\n\n\nLos tibbles son una versión moderna del dataframe que introduce tidyverse.\nTienen las mismas características que un dataframe normal con algunos atributos más agradables.\nCuando importemos tablas de datos, estos se almacenarán como dataframes/tibbles.\nDado que estamos centrados en tidyverse, utilizaremos los términos dataframe y tibble como sinónimos entre sí para su uso general.\nLos dataframes/tibbles son el tipo de datos fundamental en la mayoría de los análisis que llevaremos adelante."
+    "text": "Tibbles\n\n\n\n\nLos tibbles son una versión moderna del dataframe que introduce tidyverse.\nTienen las mismas características que un dataframe normal con algunos atributos más agradables.\nCuando importemos tablas de datos, estos se almacenarán como dataframes/tibbles.\nDado que estamos centrados en tidyverse, utilizaremos los términos dataframe y tibble como sinónimos entre sí para su uso general.\nLos dataframes/tibbles son el tipo de datos fundamental en la mayoría de los análisis que llevaremos adelante."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#lectura-de-datos",
@@ -1657,5 +1657,12 @@
     "title": "Archivos de datos",
     "section": "Calidad",
     "text": "Calidad\n\n\n\nCompleto: Filas coincidentes con la recopilación y sin duplicados. Variables coincidentes con el diccionario de datos. Eliminaciones documentadas.\n\n\n\n\nVálido: variables que se ajustan a las restricciones que ha establecido en su diccionario de datos.\n\n\n\n\nPreciso:  sin valores erróneos detectables.\n\n\n\n\nCoherente: valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna.\n\n\n\n\nAnonimizado: se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio. Antes de compartir públicamente también se eliminan identificadores indirectos.\n\n\n\n\nAnalizable: los datos tienen un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización.\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/02-analisis.html#dataframes",
+    "href": "primero/diapositivas/02-analisis.html#dataframes",
+    "title": "Introducción al software de análisis",
+    "section": "Dataframes",
+    "text": "Dataframes\n\n\n\n\nUn dataframe, que se traduce como marco de datos, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.\nTienen dos dimensiones, las columnas verticales llamadas variables y las filas horizontales llamadas observaciones.\nLas columnas pueden ser de diferentes tipos, pero todas las filas de cada columna pueden tener un mismo tipo de dato.\nLa combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos)."
   }
 ]

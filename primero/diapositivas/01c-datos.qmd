@@ -23,8 +23,6 @@ library(fontawesome)
 library(tidyverse)
 ```
 
-diapositivas en construcción
-
 ## Formatos de archivos
 
 <br>
