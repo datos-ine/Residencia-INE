@@ -962,8 +962,8 @@
     "objectID": "primero/diapositivas/01a-datos.html#concepto",
     "href": "primero/diapositivas/01a-datos.html#concepto",
     "title": "Gestión de datos - parte 1",
-    "section": "",
-    "text": "div {\n  &.callout {\n    font-size: 3.2rem !important;\n  }\n}\n\n\n \n\nLa gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, la planificación, el almacenamiento, la preservación y la difusión de los datos antes, durante y despues de la etapa de análisis."
+    "section": "Concepto",
+    "text": "Concepto\n\n\n\n \n\nLa gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, la planificación, el almacenamiento, la preservación y la difusión de los datos antes, durante y despues de la etapa de análisis."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#ciencia-abierta",
@@ -977,14 +977,14 @@
     "href": "primero/diapositivas/01a-datos.html#fuente-de-datos",
     "title": "Gestión de datos - parte 1",
     "section": "Fuente de datos",
-    "text": "Fuente de datos\n\nFuente primaria:\n. . .\n\nEl término datos primarios se refiere a datos recolectados por el investigador por primera vez\n\n. . .\n\nSuelen necesitar una gran cantidad de recursos como tiempo, dinero y mano de obra.\n\n. . .\n\nRequieren un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos."
+    "text": "Fuente de datos\n\nFuente primaria:\n\n\nEl término datos primarios se refiere a datos recolectados por el investigador por primera vez\n\n\n\n\nSuelen necesitar una gran cantidad de recursos como tiempo, dinero y mano de obra.\n\n\n\n\nRequieren un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos",
     "href": "primero/diapositivas/01a-datos.html#conjuntos-de-datos",
     "title": "Gestión de datos - parte 1",
     "section": "Conjuntos de datos",
-    "text": "Conjuntos de datos\n\n\n\n\n\n\nUn dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad.\nEn nuestro trabajo el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.\n\n\n\n\n\n\n\n\n\nUn conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora.\nLos conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una sola unidad de investigación u observación."
+    "text": "Conjuntos de datos\n\n\n\nUn dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad.\nEn nuestro trabajo el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.\n\n\n\n\n\n\nUn conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora.\nLos conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una sola unidad de investigación u observación."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-1",
@@ -1019,7 +1019,7 @@
     "href": "primero/diapositivas/01a-datos.html#fuente-de-datos-1",
     "title": "Gestión de datos - parte 1",
     "section": "Fuente de datos",
-    "text": "Fuente de datos\n\nFuente secundaria:\n\nLos datos secundarios implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.\n\n. . .\n\nse enmarcan en el paradigma de open data y por su disponibilidad no tiene costo para el investigador.\n\n. . .\n\nA veces los datos no son lo específicos que quisiéramos."
+    "text": "Fuente de datos\n\nFuente secundaria:\n\nLos datos secundarios implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.\n\n\n\nse enmarcan en el paradigma de open data y por su disponibilidad no tiene costo para el investigador.\n\n\n\n\nA veces los datos no son lo específicos que quisiéramos."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#columnas-variables",
@@ -1054,7 +1054,7 @@
     "href": "primero/diapositivas/01a-datos.html#base-de-datos",
     "title": "Gestión de datos - parte 1",
     "section": "Base de datos",
-    "text": "Base de datos\n\n\n\n\n\n\n\nUna base de datos es “una colección organizada de datos almacenados como múltiples conjuntos de datos”\n\n\n\n\nEl tipo de organización de estas bases de datos se denomina relacionales porque las observaciones de las tablas se “relacionan” entre sí mediante claves primarias y externas (foráneas).\nLas tablas suelen representar distintas unidades de observación. También puede existir una tabla principal y otras auxiliares que conectan mediante códigos."
+    "text": "Base de datos\n\n\n\n\nUna base de datos es “una colección organizada de datos almacenados como múltiples conjuntos de datos”\n\n\n\n\nEl tipo de organización de estas bases de datos se denomina relacionales porque las observaciones de las tablas se “relacionan” entre sí mediante claves primarias y externas (foráneas).\nLas tablas suelen representar distintas unidades de observación. También puede existir una tabla principal y otras auxiliares que conectan mediante códigos."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#ejemplo",
@@ -1502,7 +1502,7 @@
     "href": "primero/diapositivas/01a-datos.html#ejemplo-para-analizar",
     "title": "Gestión de datos - parte 1",
     "section": "Ejemplo para analizar",
-    "text": "Ejemplo para analizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Ministerio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2"
+    "text": "Ejemplo para analizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Ministerio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2\n\n\n\n\nInstituto Nacional de Epidemiología"
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#abordaje-interdisciplinario-3-dimensiones",
