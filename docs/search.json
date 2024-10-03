@@ -1382,8 +1382,8 @@
     "objectID": "primero/diapositivas/03-lectoescritura.html#archivos-de-datos",
     "href": "primero/diapositivas/03-lectoescritura.html#archivos-de-datos",
     "title": "Importar y exportar archivos de datos",
-    "section": "",
-    "text": "En el mundo informático existen numerosos formatos de archivos de tablas / base de datos.\nEl lenguaje R permite importar y exportar de una amplia variedad de formatos a partir de utilizar diferentes paquetes. Muchos de ellos pertenecientes al ecosistema tidyverse.\nHoy nos vamos a centrar en dos formatos básicos habituales donde tenemos almacenada comúnmente la información:\n\nArchivos texto plano separados por comas u otro caracter (extensiones .csv, .txt, etc)\nArchivos con formato Excel (.xls y .xlsx)]\n\nAdemás mencionaremos otros formatos posibles y el propio de R"
+    "section": "Archivos de datos",
+    "text": "Archivos de datos\n\nEn el mundo informático existen numerosos formatos de archivos de tablas / base de datos.\nEl lenguaje R permite importar y exportar de una amplia variedad de formatos a partir de utilizar diferentes paquetes. Muchos de ellos pertenecientes al ecosistema tidyverse.\nHoy nos vamos a centrar en dos formatos básicos habituales donde tenemos almacenada comúnmente la información:\n\nArchivos texto plano separados por comas u otro caracter (extensiones .csv, .txt, etc)\nArchivos con formato Excel (.xls y .xlsx)\n\nAdemás mencionaremos otros formatos posibles y el propio de R"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#paquete-readr",
@@ -1397,21 +1397,21 @@
     "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr",
     "title": "Importar y exportar archivos de datos",
     "section": "Lectura con funciones de readr",
-    "text": "Lectura con funciones de readr\nLa primera función de lectura que vamos a ver es read_delim()\nEl estructura de esta función sirve de base para las demás.\nSus principales argumentos son:\n\nfile: nombre del archivo\ndelim: caracter separador de columna\ncol_names: Valor lógico. Si es TRUE lee la primera fila como nombres de las variables. Si es FALSE no lo hace.\nskip: número de líneas que saltea para comenzar a leer."
+    "text": "Lectura con funciones de readr\n\nLa primera función de lectura que vamos a presentar es read_delim()\nEl estructura de esta función sirve de base para las demás.\nSus principales argumentos son:\n\nfile: nombre del archivo\ndelim: caracter separador de columna\ncol_names: Valor lógico. Si es TRUE lee la primera fila como nombres de las variables. Si es FALSE no lo hace.\nskip: número de líneas que saltea para comenzar a leer."
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-1",
     "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-1",
     "title": "Importar y exportar archivos de datos",
     "section": "Lectura con funciones de readr",
-    "text": "Lectura con funciones de readr\nPara archivos separados por comas en formato regional Estadounidense se utiliza la función read_csv().\nTiene la misma base de read_delim() con valor predeterminado en en el argumento:\n\ndelim: separador coma “,”\n\n\nread_csv(file = \"datos.csv\")"
+    "text": "Lectura con funciones de readr\n\nLa función tiene numerosos argumentos que nos permite controlar eficazmente la lectura, como vemos debajo, pero se suelen modificar pocos de ellos en la mayoría de las situaciones.\n\nargs(readr::read_delim)\n\nfunction (file, delim = NULL, quote = \"\\\"\", escape_backslash = FALSE, \n    escape_double = TRUE, col_names = TRUE, col_types = NULL, \n    col_select = NULL, id = NULL, locale = default_locale(), \n    na = c(\"\", \"NA\"), quoted_na = TRUE, comment = \"\", trim_ws = FALSE, \n    skip = 0, n_max = Inf, guess_max = min(1000, n_max), name_repair = \"unique\", \n    num_threads = readr_threads(), progress = show_progress(), \n    show_col_types = should_show_types(), skip_empty_rows = TRUE, \n    lazy = should_read_lazy()) \nNULL"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-2",
     "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-2",
     "title": "Importar y exportar archivos de datos",
     "section": "Lectura con funciones de readr",
-    "text": "Lectura con funciones de readr\nPara archivos separados por comas en formato regional Español/Argentino se utiliza la función read_csv2().\nTiene la misma base de read_delim() con valor predeterminado en en el argumento:\n\ndelim: separador punto y coma “;”\n\n\nread_csv2(file = \"datos.csv\")"
+    "text": "Lectura con funciones de readr\n\nPara archivos separados por comas en formato regional Estadounidense se utiliza la función read_csv().\nTiene la misma base de read_delim() pero asume:\n\nque el caracter delimitador es la coma “,”\nque el caracter separador de coma decimal es el punto “.”\n\n\nread_csv(file = \"datos.csv\")"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#herramienta-de-lectura-de-rstudio",
@@ -1432,21 +1432,21 @@
     "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readxl",
     "title": "Importar y exportar archivos de datos",
     "section": "Lectura con funciones de readxl",
-    "text": "Lectura con funciones de readxl\nLa estructura de los argumentos de la función read_excel() es:\n\npath: nombre del archivo\nsheet: hoja del libro del archivo Excel\nrange: rango de celdas (opcional)\ncol_names: Valor lógico. Si es TRUE lee la primera fila como nombres de las variables. Si es FALSE no lo hace.\nskip: número de líneas que saltea para comenzar a leer."
+    "text": "Lectura con funciones de readxl\n\nLa estructura de los argumentos de la función read_excel() es:\n\npath: nombre del archivo\nsheet: hoja del libro del archivo Excel\nrange: rango de celdas (opcional)\ncol_names: Valor lógico. Si es TRUE lee la primera fila como nombres de las variables. Si es FALSE no lo hace.\nskip: número de líneas que saltea para comenzar a leer."
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#paquete-haven",
     "href": "primero/diapositivas/03-lectoescritura.html#paquete-haven",
     "title": "Importar y exportar archivos de datos",
     "section": "Paquete haven",
-    "text": "Paquete haven"
+    "text": "Paquete haven\n\nEste paquete permite la importación de archivos provenientes de paquetes estadísticos como SPSS (.sav), Stata (.dta) y SAS (.sas7bdat) y también su exporatción.\n\nSus funciones principales son read_spss(), read_por(), read_stata(), read_dta(), read_sas()\nLas funciones de exportación comienzan con el prefijo write_\nUtiliza la librería ReadStat hecha en lenguaje C por Evan Miller.\nTiene algunas limitaciones dependiendo de las versiones de los softwares."
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#formato-nativo-r",
     "href": "primero/diapositivas/03-lectoescritura.html#formato-nativo-r",
     "title": "Importar y exportar archivos de datos",
     "section": "Formato nativo R",
-    "text": "Formato nativo R\nsave()\nload()\nRData"
+    "text": "Formato nativo R\n\nEl propio lenguaje R tiene un formato nativo de almacenamiento del entorno de trabajo produciendo archivos con extención .RData.\nLas funciones, pertenecientes a R base, para guardar y leer los .RData son:\n\nsave(): almacena el contenido del entorno de trabajo, pudiendo seleccionar cual o cuales objetos deseamos guardar.\nload(): lee archivos .RData y su contenido (sea este uno o varios objetos)\n\nCabe aclarar que cuando nos referimos a objetos estamos hablando de cualquier estructura de datos como dataframes, vectores, matrices, etc y también funciones propias."
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#trabajamos-con-el-práctico-10",
@@ -1460,7 +1460,7 @@
     "href": "primero/diapositivas/03-lectoescritura.html#para-profundizar",
     "title": "Importar y exportar archivos de datos",
     "section": "Para profundizar…",
-    "text": "Para profundizar…\n\nCapítulo 11 del libro “R para Ciencias de Datos”"
+    "text": "Para profundizar…\n\n\n\n\n\n\n\nCapítulo 7 del libro “R for Data Science (2e)”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html",
@@ -1664,5 +1664,33 @@
     "title": "Introducción al software de análisis",
     "section": "Dataframes",
     "text": "Dataframes\n\n\n\n\nUn dataframe, que se traduce como marco de datos, es similar a una tabla de datos construida por una colección de vectores ubicados verticalmente que mantienen la integridad de sus filas.\nTienen dos dimensiones, las columnas verticales llamadas variables y las filas horizontales llamadas observaciones.\nLas columnas pueden ser de diferentes tipos, pero todas las filas de cada columna pueden tener un mismo tipo de dato.\nLa combinación de datos de las diferentes columnas que conforman una fila es fija, por lo que se asegura la integridad de estas observaciones (principio de las bases de datos)."
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-de-múltiples-archivos",
+    "href": "primero/diapositivas/03-lectoescritura.html#lectura-de-múltiples-archivos",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Lectura de múltiples archivos",
+    "text": "Lectura de múltiples archivos\n\nEn ocasiones trabajamos con múltiples archivos que tienen una misma estructura interna, por ejemplo provenientes de proyectos longitudinales de vigilancia epidemiológica. Supongamos que tenemos el caso de vigilancia de una enfermedad donde se produce un archivo por mes, tipo 01_SUH.csv, 02_SUH.csv, 03_SUH.csv, etc hasta el mes 12.\nPodemos almacenar los nombre de los archivos en un vector y luego leerlos todos juntos, incorporando la identificación del archivo.\n\narchivos_SUH &lt;- c(\"datos/01-SUH.csv\", \"datos/02-SUH.csv\", \"datos/03-SUH.csv\")\nread_csv(archivos_SUH, id = \"archivo\")\n\n#&gt;   archivo           mes     anio   ID    edad  \n#&gt;   &lt;chr&gt;             &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n#&gt; 1 datos/01-SUH.csv Enero  2019     1234     3\n#&gt; 2 datos/01-SUH.csv Enero  2019     8721     9\n#&gt; 3 datos/01-SUH.csv Enero  2019     1822     2"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#paquete-readxl",
+    "href": "primero/diapositivas/03-lectoescritura.html#paquete-readxl",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Paquete readxl",
+    "text": "Paquete readxl\n\nEl paquete readxl se instala con tidyverse pero hay que activarlo aparte mediante library(readxl).\n\nContiene funciones que permiten leer archivos de Microsoft Excel tan extendidos en nuestro trabajo cotidiano.\nLa función comodín para leer, tanto formatos .xls como .xlsx, es read_excel()"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-3",
+    "href": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr-3",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Lectura con funciones de readr",
+    "text": "Lectura con funciones de readr\n\nPara archivos separados por comas en formato regional Español/Argentino se utiliza la función read_csv2().\nTiene la misma base de read_delim() pero asume:\n\nque el caracter delimitador es el punto y coma “;”\nque el caracter separador de coma decimal es la coma “,”\n\n\nread_csv2(file = \"datos.csv\")"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#documentación",
+    "href": "primero/diapositivas/03-lectoescritura.html#documentación",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Documentación",
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 7 del libro “R for Data Science (2e)”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]

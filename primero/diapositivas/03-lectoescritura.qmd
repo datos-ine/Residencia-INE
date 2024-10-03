@@ -32,13 +32,13 @@ library(tidyverse)
 
 - Hoy nos vamos a centrar en dos formatos básicos habituales donde tenemos almacenada comúnmente la información:
   - Archivos **texto plano separados por comas** u otro caracter (extensiones .csv, .txt, etc)
-  - Archivos con formato **Excel** (.xls y .xlsx)]
+  - Archivos con formato **Excel** (.xls y .xlsx)
 
 - Además mencionaremos otros formatos posibles y el propio de R
 
 ## Paquete readr
 
-![](img/03/readr.png)
+![](img/03/readr.png){fig-align="center"}
 
 El paquete **readr** se instala y activa cuando ejecutamos `library(tidyverse)`.
 
@@ -48,11 +48,13 @@ El paquete **readr** se instala y activa cuando ejecutamos `library(tidyverse)`.
 
 - Sus funciones de escritura comienzan con **write_**
 
+<br>
 
 ## Lectura con funciones de readr
 
+<br>
 
-La primera función de lectura que vamos a ver es `read_delim()`
+La primera función de lectura que vamos a presentar es `read_delim()`
 
 El estructura de esta función sirve de base para las demás.
 
@@ -66,31 +68,78 @@ Sus principales argumentos son:
 
 - **skip**: número de líneas que saltea para comenzar a leer.
 
+## Lectura con funciones de readr
+
+<br>
+
+La función tiene numerosos argumentos que nos permite controlar eficazmente la lectura, como vemos debajo, pero se suelen modificar pocos de ellos en la mayoría de las situaciones.
+
+```{r}
+#| echo: true
+
+args(readr::read_delim)
+
+```
+
 
 ## Lectura con funciones de readr
 
+<br>
+
 Para archivos separados por comas en formato regional Estadounidense se utiliza la función `read_csv()`.
 
-Tiene la misma base de `read_delim()` con valor predeterminado en en el  argumento:
+Tiene la misma base de `read_delim()` pero asume:
 
-- **delim**: separador coma ","
+- que el caracter delimitador es la `coma` ","
+- que el caracter separador de coma decimal es el `punto` "."
 
-```{r, eval=F}
+```{r}
+#| echo: true
+#| eval: false
+
 read_csv(file = "datos.csv")
 ```
 
 ## Lectura con funciones de readr
 
+<br>
+
 Para archivos separados por comas en formato regional Español/Argentino se utiliza la función `read_csv2()`.
 
-Tiene la misma base de `read_delim()` con valor predeterminado en en el  argumento:
+Tiene la misma base de `read_delim()` pero asume:
 
-- **delim**: separador punto y coma ";"
+- que el caracter delimitador es el `punto y coma` ";"
+- que el caracter separador de coma decimal es la `coma` ","
 
-```{r, eval=F}
+```{r}
+#| echo: true
+#| eval: false
+
 read_csv2(file = "datos.csv")
 ```
 
+## Lectura de múltiples archivos{.smaller}
+
+<br>
+
+En ocasiones trabajamos con múltiples archivos que tienen una misma estructura interna, por ejemplo provenientes de proyectos longitudinales de vigilancia epidemiológica. Supongamos que tenemos el caso de vigilancia de una enfermedad donde se produce un archivo por mes, tipo `01_SUH.csv`, `02_SUH.csv`, `03_SUH.csv`, etc hasta el mes 12.
+
+Podemos almacenar los nombre de los archivos en un vector y luego leerlos todos juntos, incorporando la identificación del archivo.
+
+```{r}
+#| eval: false
+#| echo: true
+
+
+archivos_SUH <- c("datos/01-SUH.csv", "datos/02-SUH.csv", "datos/03-SUH.csv")
+read_csv(archivos_SUH, id = "archivo")
+
+#>   archivo           mes     anio   ID    edad  
+#>   <chr>             <chr>   <dbl>  <dbl> <dbl>
+#> 1 datos/01-SUH.csv Enero  2019     1234     3
+#> 2 datos/01-SUH.csv Enero  2019     8721     9
+#> 3 datos/01-SUH.csv Enero  2019     1822     2
+```
 
 
 ## Herramienta de lectura de RStudio
@@ -99,17 +148,21 @@ read_csv2(file = "datos.csv")
 ![](img/03/Import.PNG)
 
 
-## 
+## Paquete readxl
 
-![](img/03/readxl.png)
+![](img/03/readxl.png){fig-align="center"}
 
 El paquete **readxl** se instala con tidyverse pero hay que activarlo aparte mediante `library(readxl)`.
 
-- Contiene funciones que permiten leer archivos de Microsoft Excel tan extendidos en nuestras oficinas.
+- Contiene funciones que permiten leer archivos de Microsoft Excel tan extendidos en nuestro trabajo cotidiano.
 
 - La función comodín para leer, tanto formatos .xls como .xlsx, es `read_excel()`
 
+<br>
+
 ## Lectura con funciones de readxl
+
+<br>
 
 La estructura de los argumentos de la función `read_excel()` es:
 
@@ -126,23 +179,41 @@ La estructura de los argumentos de la función `read_excel()` es:
 
 ## Paquete haven
 
+![](img/03/haven.png){width=20% fig-align="center"}
 
+Este paquete permite la importación de archivos provenientes de paquetes estadísticos como SPSS (.sav), Stata (.dta) y SAS (.sas7bdat) y también su exporatción.
+
+- Sus funciones principales son `read_spss()`, `read_por()`, `read_stata()`, `read_dta()`, `read_sas()`  
+
+- Las funciones de exportación comienzan con el prefijo `write_`
+
+- Utiliza la librería ReadStat hecha en lenguaje C por Evan Miller.
+
+- Tiene algunas limitaciones dependiendo de las versiones de los softwares.
 
 
 ## Formato nativo R
 
-save()
+<br>
 
-load()
+El propio lenguaje R tiene un formato nativo de almacenamiento del entorno de trabajo produciendo archivos con extención `.RData`.
 
-RData
+Las funciones, pertenecientes a R base, para guardar y leer los `.RData` son:
 
+- `save()`: almacena el contenido del entorno de trabajo, pudiendo seleccionar cual o cuales objetos deseamos guardar.
 
-## Trabajamos con el práctico 10
+- `load()`: lee archivos `.RData` y su contenido (sea este uno o varios objetos)
 
+Cabe aclarar que cuando nos referimos a objetos estamos hablando de cualquier estructura de datos como dataframes, vectores, matrices, etc y también funciones propias. 
 
-## Para profundizar...
+## Documentación{.invert}
 
-![](img/03/)
+<br>
 
-Capítulo 11 del libro ["R para Ciencias de Datos"](https://es.r4ds.hadley.nz/11-import.html)
+![](img/03/r4ds2.png){fig-align="center"}
+
+::: {.centered}
+
+Capítulo 7 del libro ["R for Data Science (2e)"](https://r4ds.hadley.nz/data-import)
+
+:::
