@@ -143,10 +143,11 @@ Se espera que al finalizar este curso los participantes puedan:
     <td class="tg-0lax">22/10/2024</td>
     <td class="tg-0lax">Importación y exportación de archivos</td>
     <td align="center"><font color="fafcfc">
-          <i class="fa fa-book fa-lg"></i></font></td>
-    <td class="tg-0lax"></td>
-    <td align="center"><font color="fafcfc">
-          <i class="fa fa-code fa-lg"></i></font></td>
+         <i class="fa fa-book fa-lg"></i></font></td>
+    <td align="center"><a href="/primero/diapositivas/03-lectoescritura.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+    <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/01-lectoescritura.zip" download="01-lectoescritura.zip">
+          <i class="fa fa-code fa-lg"></i></a></td>
     <td align="center"><a href="/primero/recursos/02-lectura.html">
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
