@@ -158,8 +158,8 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-book fa-lg"></i></font></td>
     <td align="center"><a href="/primero/diapositivas/04-gestion.html" target="_blank">
         <i class="fa fa-laptop  fa-lg"></i></a></td>
-    <td align="center"><font color="fafcfc">
-          <i class="fa fa-code fa-lg"></i></font></td>
+ <td align="center"><a href=https://drive.google.com/file/d/1wUJAaGKwiWNKsYzIOFFGV18XceEKv4GX/view?usp=sharing">
+          <i class="fa fa-code fa-lg"></i></a></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
