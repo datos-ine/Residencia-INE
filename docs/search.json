@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "Gestión de datos epidemiológicos con R + RStudio",
     "section": "",
-    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
+    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
   },
   {
     "objectID": "about.html",
@@ -1692,5 +1692,236 @@
     "title": "Importar y exportar archivos de datos",
     "section": "Documentación",
     "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 7 del libro “R for Data Science (2e)”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#introducción",
+    "href": "primero/diapositivas/04-gestion.html#introducción",
+    "title": "Manipulación de datos",
+    "section": "Introducción",
+    "text": "Introducción\n\nLa manipulación de datos agrupa todas las tareas necesarias para la gestión de las variables:\n\nsu transformación,\nla creación de nuevas variables,\nlos cambios de escala,\nel formateo de categorías,\nel filtro de algunas observaciones, etc.,\nes decir, todo aquello que debamos hacer con los datos antes o durante el analisis."
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#paquete-dplyr",
+    "href": "primero/diapositivas/04-gestion.html#paquete-dplyr",
+    "title": "Manipulación de datos",
+    "section": "Paquete dplyr",
+    "text": "Paquete dplyr\n\n\ndplyr es el paquete para transformar datos que pertenece al ecosistema tidyverse\nImplementa una gramática “humana”\nEstá constituido por funciones definidas como “verbos”\nLas funciones primarias son: select(), filter(), arrange(), mutate() y summarise()\nOtras funciones útiles son: rename(), group_by(), count(), if_else(), case_when(), beteewn(), across(), rowwise(), etc."
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#select",
+    "href": "primero/diapositivas/04-gestion.html#select",
+    "title": "Manipulación de datos",
+    "section": "select()",
+    "text": "select()\nLa función select() del inglés seleccionar, sirve para seleccionar variables (columnas) de una tabla de datos.\n\nselect(datos, a, c)  \n\ndatos |&gt; select(a, c)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ayudantes-de-selección",
+    "href": "primero/diapositivas/04-gestion.html#ayudantes-de-selección",
+    "title": "Manipulación de datos",
+    "section": "Ayudantes de selección",
+    "text": "Ayudantes de selección\nAdemás existe un abanico de funciones que ayudan a una mejor selección de nombres de variables.\n\n\n\neverything(): coincide con todas las variables.\ngroup_cols(): seleccione todas las columnas de agrupación.\nstarts_with(): comienza con un prefijo.\nends_with(): termina con un sufijo.\ncontains(): contiene una cadena literal.\nmatches(): coincide con una expresión regular.\n\n\n\nnum_range(): coincide con un rango numérico como x01, x02, x03.\nall_of(): coincide con nombres de variables en un vector de caracteres.\nany_of(): igual que all_of(), excepto que no se genera ningún error para los nombres que no existen.\nwhere(): aplica una función a todas las variables y selecciona aquellas para las cuales la función regresa TRUE."
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-select",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-select",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de select()",
+    "text": "Ejemplo de select()\n\n\n\n  [1] \"Anio\"              \"Escuela\"           \"F1_FNac\"          \n  [4] \"F2_Edad\"           \"F3_Sexo\"           \"F4_Abuelos\"       \n  [7] \"F4_Hermanos\"       \"F4_Madrastra\"      \"F4_Madre\"         \n [10] \"F4_Otros\"          \"F4_Padrastro\"      \"F4_Padre\"         \n [13] \"F5_Amigo\"          \"F5_Familiar\"       \"F5_Nadie\"         \n [16] \"F5_Novio\"          \"F5_Otro\"           \"F5_Profesional\"   \n [19] \"F6_amigos\"         \"F7_Acompaniado\"    \"F8_novio\"         \n [22] \"F9_CuantoTiempo\"   \"FKEY\"              \"GlobalRecordId\"   \n [25] \"H1_Alcohol\"        \"H1_Bblancas\"       \"H1_Cerveza\"       \n [28] \"H1_CuantosDias\"    \"H1_CuantosVasos\"   \"H1_Fernet\"        \n [31] \"H1_Otra\"           \"H1_Vino\"           \"H2_Cigarrillos\"   \n [34] \"H2_Cuantos\"        \"H3_Cuantos\"        \"H3_Marihuana\"     \n [37] \"H4_Cual\"           \"H4_OtraDroga\"      \"H5_HoraDormir\"    \n [40] \"H6_Almuerzo\"       \"H6_Cena\"           \"H6_Desayuno\"      \n [43] \"H6_Merienda\"       \"H6_Motivado\"       \"H6A_Calle\"        \n [46] \"H6A_Casa\"          \"H6A_ConQuien\"      \"H6A_Escuela\"      \n [49] \"H6C_Calle\"         \"H6C_Casa\"          \"H6C_ConQuien\"     \n [52] \"H6C_Escuela\"       \"H6D_Calle\"         \"H6D_Casa\"         \n [55] \"H6D_ConQuien\"      \"H6M_Calle\"         \"H6M_Casa\"         \n [58] \"H6M_ConQuien\"      \"H6M_Escuela\"       \"HD6_Escuela\"      \n [61] \"S1_ControlSalud\"   \"S2_Cual\"           \"S2_ECronica\"      \n [64] \"S3_Anticonceptivo\" \"S3_Cual\"           \"S3_Edad\"          \n [67] \"S3_EdadPareja\"     \"S3_Relaciones\"     \"S4_CoitoI\"        \n [70] \"S4_Cual\"           \"S4_DiaDespues\"     \"S4_DIU\"           \n [73] \"S4_Inyecciones\"    \"S4_Ninguno\"        \"S4_Otro\"          \n [76] \"S4_Pastillas\"      \"S4_Perodo\"         \"S4_Preservativos\" \n [79] \"S5_Embarazo\"       \"S6_Hijos\"          \"SYSTEMDATE\"       \n [82] \"T1_Artemarcial\"    \"T1_Bailar\"         \"T1_Basket\"        \n [85] \"T1_Correr\"         \"T1_Deporte\"        \"T1_Futbol\"        \n [88] \"T1_Gimnasio\"       \"T1_Hockey\"         \"T1_Natacion\"      \n [91] \"T1_Rugby\"          \"T1_Skate\"          \"T1_Surf\"          \n [94] \"T1_Tenis\"          \"T1_Veces\"          \"T1_Voley\"         \n [97] \"T2_Amigos\"         \"T2_Calle\"          \"T2_Casas\"         \n[100] \"T2_Centro\"         \"T2_Club\"           \"T2_Otros\"         \n[103] \"T2_Plaza\"          \"T3_Bailar\"         \"T3_Matinee\"       \n[106] \"T3_Noche\"          \"T4_Compu\"          \"T4_Leer\"          \n[109] \"T4_Libros\"         \"T4_Revistas\"       \"T5_Conectas\"      \n[112] \"T5_Redes\"          \"T6_Consiste\"       \"T6_Empleo\"        \n[115] \"T6_Horas\"          \"T7_Cual\"           \"T7_Iglesia\"       \n[118] \"T7_Religion\"       \"Turno\"             \"V1_Alegre\"        \n[121] \"V1_Enojado\"        \"V1_Nervioso\"       \"V1_Preocupado\"    \n[124] \"V1_Solo\"           \"V1_Tranquilo\"      \"V1_Triste\"        \n[127] \"V2_SentisEscuela\"  \"V3_Casa\"           \"V3_Escuela\"       \n[130] \"V3_Pareja\"         \"V3_Violencia\"      \"V4_Futuro\"        \n[133] \"V5_Cuales\"         \"V5_Derechos\"       \"V5_Drogas\"        \n[136] \"V5_Habitos\"        \"V5_Otros\"          \"V5_Ssexual\"       \n[139] \"V5_Violencia\"      \"UniqueKey\"        \n\n\n\n# seleccionamos solo variables que comienzan con \"F5\" \ndatos |&gt; \n  select(starts_with(\"F5\")) |&gt; names()\n\n[1] \"F5_Amigo\"       \"F5_Familiar\"    \"F5_Nadie\"       \"F5_Novio\"      \n[5] \"F5_Otro\"        \"F5_Profesional\""
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#rename",
+    "href": "primero/diapositivas/04-gestion.html#rename",
+    "title": "Manipulación de datos",
+    "section": "rename()",
+    "text": "rename()\nLa función rename() posibilita renombrar a las variables de una tabla de datos.\nLa estructura básica es:\n\nrename(datos, new_name = old_name)  \n\ndatos |&gt; rename(new_name = old_name)\n\nLa variación rename_with() permite renombrar variables de una tabla a través de aplicar determinadas funciones.\nLa estructura básica de esta función es:\n\nrename_with(datos, función, variables)  \n\ndatos |&gt; rename_with(función, variables)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-rename-y-rename_with",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-rename-y-rename_with",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de rename() y rename_with()",
+    "text": "Ejemplo de rename() y rename_with()\n\n\n# renombramos F2_Edad por EDAD\n\ndatos |&gt; \n  rename(EDAD = F2_Edad) \n\n\n\n[1] \"EDAD\"\n\n\n\n# renombramos el grupo de variables que comienza con F5 \n# por sus nombres en minúsculas\n\ndatos |&gt; \n  rename_with(.fn = tolower, .cols = starts_with(\"F5\")) \n\n\n\n[1] \"f5_amigo\"       \"f5_familiar\"    \"f5_nadie\"       \"f5_novio\"      \n[5] \"f5_otro\"        \"f5_profesional\""
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#filter",
+    "href": "primero/diapositivas/04-gestion.html#filter",
+    "title": "Manipulación de datos",
+    "section": "filter()",
+    "text": "filter()\n\nLa función filter() del inglés filtrar, sirve para filtrar un subconjunto de observaciones (filas) de una tabla de datos a partir de una condición.\nPara construir la condición se utilizan una serie de operadores de comparación y operadores lógicos similares a la de otros lenguajes de programación.\nLa estructura de la función puede ser cualquiera de las siguientes:\n\n\nfilter(datos, condición)\n\ndatos |&gt; filter(condición)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#operadores-de-comparación",
+    "href": "primero/diapositivas/04-gestion.html#operadores-de-comparación",
+    "title": "Manipulación de datos",
+    "section": "Operadores de comparación",
+    "text": "Operadores de comparación"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#operadores-lógicos-booleanos",
+    "href": "primero/diapositivas/04-gestion.html#operadores-lógicos-booleanos",
+    "title": "Manipulación de datos",
+    "section": "Operadores lógicos (booleanos)",
+    "text": "Operadores lógicos (booleanos)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#operadores-lógicos-booleanos-1",
+    "href": "primero/diapositivas/04-gestion.html#operadores-lógicos-booleanos-1",
+    "title": "Manipulación de datos",
+    "section": "Operadores lógicos (booleanos)",
+    "text": "Operadores lógicos (booleanos)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-filter",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-filter",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de filter()",
+    "text": "Ejemplo de filter()\n\n\n# filtramos observaciones que cumplan con la siguiente condición\ndatos |&gt; \n  filter(F3_Sexo == 1, \n         between(F2_Edad, 17, 20), \n         H1_Cerveza == TRUE | H1_Vino == TRUE) |&gt; \n  select(F3_Sexo, F2_Edad, H1_Cerveza, H1_Vino)\n\n# A tibble: 23 × 4\n   F3_Sexo F2_Edad H1_Cerveza H1_Vino\n     &lt;dbl&gt;   &lt;dbl&gt; &lt;lgl&gt;      &lt;lgl&gt;  \n 1       1      18 TRUE       FALSE  \n 2       1      17 TRUE       TRUE   \n 3       1      18 TRUE       FALSE  \n 4       1      17 TRUE       TRUE   \n 5       1      17 FALSE      TRUE   \n 6       1      19 TRUE       TRUE   \n 7       1      18 TRUE       TRUE   \n 8       1      17 TRUE       TRUE   \n 9       1      18 TRUE       TRUE   \n10       1      18 TRUE       TRUE   \n# ℹ 13 more rows"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#arrange",
+    "href": "primero/diapositivas/04-gestion.html#arrange",
+    "title": "Manipulación de datos",
+    "section": "arrange()",
+    "text": "arrange()\n\nLa función arrange() del inglés ordenar, sirve para ordenar observaciones de una tabla de datos a partir de una o más variables (columnas).\n\n\narrange(datos, var1, var2, ...)   \n\ndatos |&gt; arrange(var1, var2, ...)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#arrange-1",
+    "href": "primero/diapositivas/04-gestion.html#arrange-1",
+    "title": "Manipulación de datos",
+    "section": "arrange()",
+    "text": "arrange()\n\nEl ordenamiento predeterminado es ascendente.\nSi la variable contiene números, las filas se van a ordenar ubicando esos números de menor a mayor (1,2,3…). Si es texto, las filas se van a ordenar ubicando las palabras alfabéticamente en forma ascendente (a,b,c…).\nSi deseamos invertir el orden debemos incorporar la función desc() dentro de arrange().\n\n\ndatos |&gt; arrange(var1)  # ascendente\n\ndatos |&gt; arrange(desc(var1)) # descendente"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#mutate",
+    "href": "primero/diapositivas/04-gestion.html#mutate",
+    "title": "Manipulación de datos",
+    "section": "mutate()",
+    "text": "mutate()\n\nLa función mutate() del inglés mutar o transformar, sirve para crear nuevas variables, a partir de los valores de otras variables, dentro de la tabla de datos.\nLa o las nuevas variables creadas se incorporan al final de las columnas del conjunto de datos.\nDentro de los argumentos de mutate() se aplican funciones vectorizadas, lo que significa que la función toma un vector de valores como entrada y devuelve el mismo número de valores como salida.\n\n\ndatos |&gt; mutate(nueva_var = operación/función)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#mutate-1",
+    "href": "primero/diapositivas/04-gestion.html#mutate-1",
+    "title": "Manipulación de datos",
+    "section": "mutate()",
+    "text": "mutate()\nAlgunas de las operaciones y funciones vectorizadas provistas por el lenguaje R son:\n\nOperadores aritméticos - +, -, *, /, ^\nAritmética modular - %/% - %%\nTransformación - escala - log() - log2() - log10() - exp() - sqrt()\nComparaciones - &gt;, &gt;=, &lt;, &lt;=, ==, !=\nAtrasos/adelantos - lag() - lead()\nOrdenamiento - min_rank() - percent_rank(), etc…\nAcumulativos - cumsum() - cummean() - etc…\nCondicional - if_else() - case_when()."
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-mutate",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-mutate",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de mutate()",
+    "text": "Ejemplo de mutate()\n\nCoercionamos la variable aplicando dmy() y as_date()\n\n\n\ndatos |&gt; select(F1_FNac)\n\n# A tibble: 1,252 × 1\n   F1_FNac           \n   &lt;chr&gt;             \n 1 29/3/1999 00:00:00\n 2 27/2/2003 00:00:00\n 3 15/3/2000 00:00:00\n 4 13/8/2001 00:00:00\n 5 13/8/1998 00:00:00\n 6 29/3/2001 00:00:00\n 7 &lt;NA&gt;              \n 8 20/4/1997 00:00:00\n 9 17/1/2001 00:00:00\n10 27/8/2002 00:00:00\n# ℹ 1,242 more rows\n\n\n\n\ndatos |&gt; \n  mutate(F1_FNac = dmy_hms(F1_FNac),\n         F1_FNac = as_date(F1_FNac)) |&gt; \n  select(F1_FNac)\n\n# A tibble: 1,252 × 1\n   F1_FNac   \n   &lt;date&gt;    \n 1 1999-03-29\n 2 2003-02-27\n 3 2000-03-15\n 4 2001-08-13\n 5 1998-08-13\n 6 2001-03-29\n 7 NA        \n 8 1997-04-20\n 9 2001-01-17\n10 2002-08-27\n# ℹ 1,242 more rows"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#summarise",
+    "href": "primero/diapositivas/04-gestion.html#summarise",
+    "title": "Manipulación de datos",
+    "section": "summarise()",
+    "text": "summarise()\n\nLa función summarise() del inglés resumir, se utiliza justamente para resumir las observaciones de una tabla de datos mediante alguna medida resumen.\nOtra forma de escribir la función es summarize(). Ambas realizan la misma operación.\n\n\ndatos |&gt; summarise(var_resumen = función_resumen)\n\ndatos |&gt; summarize(var_resumen = función_resumen)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#summarise-1",
+    "href": "primero/diapositivas/04-gestion.html#summarise-1",
+    "title": "Manipulación de datos",
+    "section": "summarise()",
+    "text": "summarise()\n\nAlgunas de las funciones resumen provistas por el lenguaje R son:\n\ntendencia central - mean() - median()\nposición - min() - max() - quantile()\ndispersión - var() - sd() - IQR()\nconteo - n() - n_distinct()\norden - first() - last()\n\nLa mayoría de estas funciones aplican en tipos de datos int (enteros), dbl (reales), date (fecha) y ddtm (fecha - hora)."
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-summarise",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-summarise",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de summarise()",
+    "text": "Ejemplo de summarise()\n \n\n# Resumimos la variable F2_Edad calculando media, \n# desvío estandar, mínimo y máximo\n\ndatos |&gt; \n  summarise(Media = mean(F2_Edad, na.rm = T),\n            Desvio = sd(F2_Edad, na.rm = T),\n            Min = min(F2_Edad, na.rm = T),\n            Max = max(F2_Edad, na.rm = T)) \n\n# A tibble: 1 × 4\n  Media Desvio   Min   Max\n  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1  14.5   1.46    10    19"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#group_by",
+    "href": "primero/diapositivas/04-gestion.html#group_by",
+    "title": "Manipulación de datos",
+    "section": "group_by()",
+    "text": "group_by()\n\nLa función group_by() del inglés agrupar por, sirve para agrupar a partir de valores o categorías distintas.\nAplicado sólo no produce ningún resultado interesante, por eso está pensando para usarlo principalmente asociado a summarise().\n\n\ndatos |&gt; group_by(variable)\n\n\nJunto a esta función aparece ungroup() que deshace el agrupamiento.\n\n\ndatos |&gt; ungroup()"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-group_by",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-group_by",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de group_by()",
+    "text": "Ejemplo de group_by()\n\n# Resumimos la variable F2_Edad según Anio \n# calculando media, desvío estandar, mínimo y máximo\n\ndatos |&gt; \n  group_by(Anio) |&gt; \n  summarise(Media = mean(F2_Edad, na.rm = T),\n            Desvio = sd(F2_Edad, na.rm = T),\n            Min = min(F2_Edad, na.rm = T),\n            Max = max(F2_Edad, na.rm = T)) \n\n# A tibble: 2 × 5\n  Anio  Media Desvio   Min   Max\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 2do.   13.7   1.03    10    18\n2 4to.   15.8   1.06    13    19"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#agrupamiento-en-summarise",
+    "href": "primero/diapositivas/04-gestion.html#agrupamiento-en-summarise",
+    "title": "Manipulación de datos",
+    "section": "Agrupamiento en summarise()",
+    "text": "Agrupamiento en summarise()\n\nEl agrupamiento o estratificación producido por group_by() es permanente mientras no desagrupemos y esto a veces ocasiona problemas.\n\nEn la última versión de dplyr se agregó un argumento en summarise() para lograr agrupamientos temporales, donde no hace falta desagrupar posteriomente al resultado.\n\n\ndatos |&gt; summarise(.by = variable_grupo)"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-con-.by-en-summarise",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-con-.by-en-summarise",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo con .by en summarise()",
+    "text": "Ejemplo con .by en summarise()\n\n# Resumimos la variable F2_Edad según Anio con .by\n# calculando media, desvío estandar, mínimo y máximo\n\ndatos |&gt; \n  summarise(Media = mean(F2_Edad, na.rm = T),\n            Desvio = sd(F2_Edad, na.rm = T),\n            Min = min(F2_Edad, na.rm = T),\n            Max = max(F2_Edad, na.rm = T),\n            .by = Anio) \n\n# A tibble: 2 × 5\n  Anio  Media Desvio   Min   Max\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 4to.   15.8   1.06    13    19\n2 2do.   13.7   1.03    10    18"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#count",
+    "href": "primero/diapositivas/04-gestion.html#count",
+    "title": "Manipulación de datos",
+    "section": "count()",
+    "text": "count()\n\nLa función count() del inglés contar, sirve para contabilizar categorías o valores diferentes de variables resumiendo los datos en una tabla de frecuencia.\nReconoce y también contabiliza los valores NA de las variables.\n\ndatos |&gt; count(variable)\n\nTiene algunos argumentos opcionales como:\n\nname (nombre de la variable que contabiliza - por defecto se llama n)\nsort (si es TRUE se ordena de mayor a menor)\nwt (variable peso / ponderación / expansión opcional)\n\nTambién se pueden agregar más variables separadas por una coma."
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-count",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-count",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de count()",
+    "text": "Ejemplo de count()\n\n\n# Contamos las frecuencias de la variable Anio\n# ordenadas de mayor a menor\n\ndatos |&gt; \n  count(Anio, sort = T)\n\n# A tibble: 2 × 2\n  Anio      n\n  &lt;chr&gt; &lt;int&gt;\n1 2do.    750\n2 4to.    502"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#if_else",
+    "href": "primero/diapositivas/04-gestion.html#if_else",
+    "title": "Manipulación de datos",
+    "section": "if_else()",
+    "text": "if_else()\n\nLa función if_else() devuelve valores dependiendo del resultado de una condición lógica (TRUE/FALSE).\nLos valores devueltos para cada observación se almacenan dentro de una variable definida en mutate().\n\n\ndatos |&gt; \n  mutate(x = if_else(condicion, valor_T, valor_F))"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-if_else",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-if_else",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de if_else()",
+    "text": "Ejemplo de if_else()\n\ndatos |&gt; \n  summarise(Mediana_edad = median(F2_Edad, na.rm = T))\n\n# A tibble: 1 × 1\n  Mediana_edad\n         &lt;dbl&gt;\n1           14\n\n\n\n# dividimos en dos grupos según la mediana de edad\ndatos |&gt; \n  mutate(Grupo_edad = if_else(F2_Edad &lt;= 14, \"&lt;= 14\", \"&gt; 14\")) |&gt;\n  count(Grupo_edad) \n\n# A tibble: 3 × 2\n  Grupo_edad     n\n  &lt;chr&gt;      &lt;int&gt;\n1 &lt;= 14        597\n2 &gt; 14         583\n3 &lt;NA&gt;          72"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#case_when",
+    "href": "primero/diapositivas/04-gestion.html#case_when",
+    "title": "Manipulación de datos",
+    "section": "case_when()",
+    "text": "case_when()\n\nLa función case_when() ejecuta una vectorización múltiple de funciones if_else().\nLos valores devueltos para cada observación se almacenan dentro de una variable definida en mutate().\n\n\ndatos |&gt; \n  mutate(x = case_when(\n    condicion ~ valor_T, \n    ...,\n    .default = valor))"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-case_when",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-case_when",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de case_when()",
+    "text": "Ejemplo de case_when()\n\n# etiquetamos la variable V1_Alegre\ndatos |&gt; \n  mutate(V1_Alegre = case_when(\n    V1_Alegre == 0 ~ \"Nada\",\n    V1_Alegre == 1 ~ \"Poco\",\n    V1_Alegre == 2 ~ \"Neutral\",\n    V1_Alegre == 3 ~ \"Muy\",\n    V1_Alegre == 4 ~ \"Totalmente\",\n    .default = \"Ns/Nc\"\n  )) |&gt; \n  count(V1_Alegre, sort = T)\n\n# A tibble: 6 × 2\n  V1_Alegre      n\n  &lt;chr&gt;      &lt;int&gt;\n1 Totalmente   452\n2 Muy          256\n3 Neutral      249\n4 Ns/Nc        171\n5 Poco          80\n6 Nada          44"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#between",
+    "href": "primero/diapositivas/04-gestion.html#between",
+    "title": "Manipulación de datos",
+    "section": "between()",
+    "text": "between()\n\nLa función between() es una función atajo para operaciones de condición &gt;= x &lt;= , implementado para vectores numéricos o de fecha/hora.\nSe utiliza dentro de estructuras donde se escriben condiciones (filter(), mutate(), etc).\n\n\ndatos |&gt; filter(between(x, izquierda, derecha)) \n\n\nLos dos extremos (izquierda y derecha) se incluyen en el intervalo"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-between",
+    "href": "primero/diapositivas/04-gestion.html#ejemplo-de-between",
+    "title": "Manipulación de datos",
+    "section": "Ejemplo de between()",
+    "text": "Ejemplo de between()\n\n\n# filtramos observaciones donde la variable F2_Edad sea mayor \n# o igual a 16 y menor o igual 18 años\n\ndatos |&gt; \n filter(between(F2_Edad, 16, 18)) |&gt; \n  count(F2_Edad)\n\n# A tibble: 3 × 2\n  F2_Edad     n\n    &lt;dbl&gt; &lt;int&gt;\n1      16   153\n2      17    95\n3      18    29"
+  },
+  {
+    "objectID": "primero/diapositivas/04-gestion.html#documentación",
+    "href": "primero/diapositivas/04-gestion.html#documentación",
+    "title": "Manipulación de datos",
+    "section": "Documentación",
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 3 del libro “R for Data Science (2e)”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]

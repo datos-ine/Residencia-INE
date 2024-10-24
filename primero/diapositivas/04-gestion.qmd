@@ -1,0 +1,642 @@
+---
+title: "Manipulación de datos"
+subtitle: "Residencia de Epidemiología"
+format: 
+  revealjs:
+    self-contained: true
+    width: 1920
+    height: 1080
+    slide-number: true
+    transition: fade
+    theme: [simple, img/custom.scss]
+    logo: img/INE.gif
+    footer: "Instituto Nacional de Epidemiología"
+---
+
+```{r setup, include=F}
+#| label: setup
+#| include: false
+
+
+library(quarto)
+library(fontawesome)
+library(tidyverse)
+```
+
+
+## Introducción {.title-top}
+
+<br>
+
+La manipulación de datos agrupa todas las tareas necesarias para la gestión de las variables:
+
+- su transformación, 
+- la creación de nuevas variables, 
+- los cambios de escala, 
+- el formateo de categorías, 
+- el filtro de algunas observaciones, etc., 
+- es decir, todo aquello que debamos hacer con los datos antes o durante el analisis.
+
+## Paquete dplyr {.title-top}
+
+![](img/04/dplyr.PNG){fig-align="center"}
+
+- **dplyr** es el paquete para **transformar datos** que pertenece al ecosistema **tidyverse**
+
+- Implementa una **_gramática "humana"_**
+
+- Está constituido por funciones definidas como **_"verbos"_**
+
+- Las funciones primarias son: `select()`, `filter()`, `arrange()`, `mutate()` y `summarise()` 
+
+- Otras funciones útiles son: `rename()`, `group_by()`, `count()`, `if_else()`, `case_when()`, `beteewn()`, `across()`, `rowwise()`, etc.
+
+## select() {.title-top}
+
+La función `select()` del inglés **seleccionar**, sirve para seleccionar variables (columnas) de una tabla de datos.
+
+```{r}
+#| echo: true
+#| eval: false
+
+select(datos, a, c)  
+
+datos |> select(a, c)
+```
+
+![](img/04/select.PNG){fig-align="center"}
+
+## Ayudantes de selección {.title-top}
+
+Además existe un abanico de funciones que **ayudan** a una mejor selección de nombres de variables.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- `everything()`: coincide con todas las variables.
+
+- `group_cols()`: seleccione todas las columnas de agrupación.
+
+- `starts_with()`: comienza con un prefijo.
+
+- `ends_with()`: termina con un sufijo.
+
+- `contains()`: contiene una cadena literal.
+
+- `matches()`: coincide con una expresión regular.
+
+:::
+
+::: {.column width="50%"}
+
+- `num_range()`: coincide con un rango numérico como x01, x02, x03.
+
+- `all_of()`: coincide con nombres de variables en un vector de caracteres. 
+
+- `any_of()`: igual que `all_of()`, excepto que no se genera ningún error para los nombres que no existen.
+
+- `where()`: aplica una función a todas las variables y selecciona aquellas para las cuales la función regresa TRUE.
+
+
+:::
+
+::::
+
+
+## Ejemplo de select() {.title-top}
+
+<br>
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+datos <- read_csv("datos/datos.csv")
+
+names(datos)
+```
+
+```{r, echo = T, message=F, warning=FALSE}
+# seleccionamos solo variables que comienzan con "F5" 
+datos |> 
+  select(starts_with("F5")) |> names()
+```
+
+## rename() {.title-top}
+
+La función `rename()` posibilita **renombrar** a las variables de una tabla de datos.
+
+La estructura básica es:
+
+```{r}
+#| echo: true
+#| eval: false
+
+rename(datos, new_name = old_name)  
+
+datos |> rename(new_name = old_name)
+```
+
+La variación `rename_with()` permite **renombrar** variables de una tabla a través de aplicar determinadas funciones.
+
+La estructura básica de esta función es:
+
+```{r}
+#| echo: true
+#| eval: false
+
+rename_with(datos, función, variables)  
+
+datos |> rename_with(función, variables)
+```
+
+## Ejemplo de rename() y rename_with() {.title-top}
+
+<br>
+
+```{r, echo = T, eval=F}
+# renombramos F2_Edad por EDAD
+
+datos |> 
+  rename(EDAD = F2_Edad) 
+```
+
+
+```{r, echo=FALSE, message=F, warning=FALSE}
+datos |> 
+  rename(EDAD = F2_Edad)  |> 
+  select(EDAD) |> names()
+
+```
+
+```{r, echo = T, eval=F}
+# renombramos el grupo de variables que comienza con F5 
+# por sus nombres en minúsculas
+
+datos |> 
+  rename_with(.fn = tolower, .cols = starts_with("F5")) 
+```
+
+
+```{r, echo=FALSE, message=F, warning=FALSE}
+datos |> 
+  rename_with(.fn = tolower, .cols = starts_with("F5"))  |>  
+  select(starts_with("F5")) |> names()
+
+```
+
+## filter()  {.title-top}
+
+<br>
+
+La función `filter()` del inglés **filtrar**, sirve para filtrar un subconjunto de observaciones (filas) de una tabla de datos a partir de una condición.
+
+Para construir la condición se utilizan una serie de operadores de comparación y operadores lógicos similares a la de otros lenguajes de programación.
+
+La estructura de la función puede ser cualquiera de las siguientes:
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+filter(datos, condición)
+
+datos |> filter(condición)
+```
+
+## Operadores de comparación {.title-top}
+
+![](img/04/operadores.PNG){fig-align="center"}
+
+
+## Operadores lógicos (booleanos) {.title-top}
+
+![](img/04/booleanos2.PNG){fig-align="center"}
+
+## Operadores lógicos (booleanos) {.title-top}
+
+![](img/04/booleanos.PNG){fig-align="center"}
+
+## Ejemplo de filter()
+
+<br>
+
+```{r, echo = T}
+# filtramos observaciones que cumplan con la siguiente condición
+datos |> 
+  filter(F3_Sexo == 1, 
+         between(F2_Edad, 17, 20), 
+         H1_Cerveza == TRUE | H1_Vino == TRUE) |> 
+  select(F3_Sexo, F2_Edad, H1_Cerveza, H1_Vino)
+```
+
+## arrange() {.title-top}
+
+<br>
+
+La función `arrange()` del inglés **ordenar**, sirve para ordenar observaciones de una tabla de datos a partir de una o más variables (columnas).
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+arrange(datos, var1, var2, ...)   
+
+datos |> arrange(var1, var2, ...) 
+```
+
+## arrange() {.title-top}
+
+<br>
+
+El ordenamiento _predeterminado_ es **_ascendente_**. 
+
+Si la variable contiene números, las filas se van a ordenar ubicando esos números de menor a mayor (1,2,3...). Si es texto, las filas se van a ordenar ubicando las palabras alfabéticamente en forma ascendente (a,b,c...).
+
+Si deseamos invertir el orden debemos incorporar la función **desc()** dentro de **arrange()**.
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> arrange(var1)  # ascendente
+
+datos |> arrange(desc(var1)) # descendente
+```
+
+## mutate() {.title-top}
+
+<br>
+
+La función `mutate()` del inglés **mutar o transformar**, sirve para crear nuevas variables, a partir de los valores de otras variables, dentro de la tabla de datos.
+
+La o las nuevas variables creadas se incorporan al final de las columnas del conjunto de datos.
+
+Dentro de los argumentos de `mutate()` se aplican funciones vectorizadas, lo que significa que la función toma un vector de valores como entrada y devuelve el mismo número de valores como salida.
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> mutate(nueva_var = operación/función)
+```
+
+## mutate() {.title-top}
+
+Algunas de las operaciones y funciones vectorizadas provistas por el lenguaje R son:
+
+
+- Operadores aritméticos - **+**, **-**, __\*__, **/**, **^**   
+
+- Aritmética modular - **%/%** - **%%** 
+
+- Transformación - escala - **log()** - **log2()** - **log10()** - **exp()** - **sqrt()**
+
+- Comparaciones - **>**, **>=**, **<**, **<=**, **==**, **!=**
+
+- Atrasos/adelantos - **lag()** - **lead()**
+
+- Ordenamiento - **min_rank()** - **percent_rank()**, etc...
+
+- Acumulativos - **cumsum()** - **cummean()** - etc...
+
+- Condicional - **if_else()** - **case_when()**.
+
+## Ejemplo de mutate() {.title-top}
+
+<br>
+
+Coercionamos la variable aplicando dmy() y as_date() 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r, echo=T}
+
+datos |> select(F1_FNac)
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+
+```{r, echo=T}
+datos |> 
+  mutate(F1_FNac = dmy_hms(F1_FNac),
+         F1_FNac = as_date(F1_FNac)) |> 
+  select(F1_FNac)
+```
+
+:::
+
+::::
+
+
+## summarise() {.title-top}
+
+<br>
+
+La función `summarise()` del inglés **resumir**, se utiliza justamente para resumir las observaciones de una tabla de datos mediante alguna ***medida resumen***.
+
+Otra forma de escribir la función es `summarize()`. Ambas realizan la misma operación.
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> summarise(var_resumen = función_resumen)
+
+datos |> summarize(var_resumen = función_resumen)
+```
+
+## summarise() {.title-top}
+
+<br>
+
+Algunas de las funciones resumen provistas por el lenguaje R son:
+
+
+- tendencia central - **mean()** - **median()**
+
+- posición - **min()** - **max()** - **quantile()**
+
+- dispersión - **var()** - **sd()** - **IQR()** 
+
+- conteo - **n()** - **n_distinct()**
+
+- orden - **first()** - **last()**
+
+La mayoría de estas funciones aplican en tipos de datos int (enteros), dbl (reales), date (fecha) y ddtm (fecha - hora).
+
+
+## Ejemplo de summarise() {.title-top}
+
+<br>
+<br>
+
+```{r, echo=TRUE}
+# Resumimos la variable F2_Edad calculando media, 
+# desvío estandar, mínimo y máximo
+
+datos |> 
+  summarise(Media = mean(F2_Edad, na.rm = T),
+            Desvio = sd(F2_Edad, na.rm = T),
+            Min = min(F2_Edad, na.rm = T),
+            Max = max(F2_Edad, na.rm = T)) 
+```
+
+## group_by() {.title-top}
+
+<br>
+
+La función `group_by()` del inglés **agrupar por**, sirve para agrupar a partir de valores o categorías distintas.
+
+Aplicado sólo no produce ningún resultado interesante, por eso está pensando para usarlo principalmente asociado a **summarise()**.
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> group_by(variable)
+```
+
+<br>
+
+Junto a esta función aparece `ungroup()` que deshace el agrupamiento.
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> ungroup()
+```
+
+## Ejemplo de group_by() {.title-top}
+
+
+```{r, echo=TRUE}
+# Resumimos la variable F2_Edad según Anio 
+# calculando media, desvío estandar, mínimo y máximo
+
+datos |> 
+  group_by(Anio) |> 
+  summarise(Media = mean(F2_Edad, na.rm = T),
+            Desvio = sd(F2_Edad, na.rm = T),
+            Min = min(F2_Edad, na.rm = T),
+            Max = max(F2_Edad, na.rm = T)) 
+```
+
+## Agrupamiento en summarise() {.title-top}
+
+<br>
+
+El agrupamiento o estratificación producido por `group_by()` es permanente mientras no desagrupemos y esto a veces ocasiona problemas.
+
+<br>
+
+En la última versión de **dplyr** se agregó un argumento en `summarise()` para lograr agrupamientos temporales, donde no hace falta desagrupar posteriomente al resultado.
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> summarise(.by = variable_grupo)
+```
+
+## Ejemplo con .by en summarise()  {.title-top}
+
+
+```{r, echo=TRUE}
+# Resumimos la variable F2_Edad según Anio con .by
+# calculando media, desvío estandar, mínimo y máximo
+
+datos |> 
+  summarise(Media = mean(F2_Edad, na.rm = T),
+            Desvio = sd(F2_Edad, na.rm = T),
+            Min = min(F2_Edad, na.rm = T),
+            Max = max(F2_Edad, na.rm = T),
+            .by = Anio) 
+```
+
+
+## count() {.title-top}
+
+<br>
+
+La función `count()` del inglés **contar**, sirve para contabilizar categorías o valores diferentes de variables resumiendo los datos en una **_tabla de frecuencia_**. 
+
+Reconoce y también contabiliza los valores **NA** de las variables.
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> count(variable)
+```
+
+Tiene algunos argumentos opcionales como:
+
+- **name** (nombre de la variable que contabiliza - por defecto se llama n)
+- **sort** (si es TRUE se ordena de mayor a menor)
+- **wt** (variable peso / ponderación / expansión opcional)
+
+También se pueden agregar más variables separadas por una coma.
+
+## Ejemplo de count() {.title-top}
+
+<br>
+
+```{r, echo=T, message=F, warning=FALSE}
+# Contamos las frecuencias de la variable Anio
+# ordenadas de mayor a menor
+
+datos |> 
+  count(Anio, sort = T)
+```
+
+## if_else() {.title-top}
+
+<br>
+
+La función `if_else()` devuelve valores dependiendo del resultado de una condición lógica (TRUE/FALSE).
+
+Los valores devueltos para cada observación se almacenan dentro de una variable definida en **mutate()**.
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> 
+  mutate(x = if_else(condicion, valor_T, valor_F))
+```
+
+
+## Ejemplo de if_else() {.title-top}
+
+```{r, echo=T, message=F, warning=FALSE}
+datos |> 
+  summarise(Mediana_edad = median(F2_Edad, na.rm = T))
+```
+
+```{r, echo=T}
+# dividimos en dos grupos según la mediana de edad
+datos |> 
+  mutate(Grupo_edad = if_else(F2_Edad <= 14, "<= 14", "> 14")) |>
+  count(Grupo_edad) 
+```
+
+
+## case_when() {.title-top}
+
+
+<br>
+
+La función `case_when()` ejecuta una vectorización múltiple de funciones `if_else()`.
+
+Los valores devueltos para cada observación se almacenan dentro de una variable definida en `mutate()`.
+
+<br>
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> 
+  mutate(x = case_when(
+    condicion ~ valor_T, 
+    ...,
+    .default = valor))
+```
+
+## Ejemplo de case_when() {.title-top}
+
+
+```{r, echo=T}
+# etiquetamos la variable V1_Alegre
+datos |> 
+  mutate(V1_Alegre = case_when(
+    V1_Alegre == 0 ~ "Nada",
+    V1_Alegre == 1 ~ "Poco",
+    V1_Alegre == 2 ~ "Neutral",
+    V1_Alegre == 3 ~ "Muy",
+    V1_Alegre == 4 ~ "Totalmente",
+    .default = "Ns/Nc"
+  )) |> 
+  count(V1_Alegre, sort = T)
+
+```
+
+## between() {.title-top}
+
+<br>
+
+La función `between()` es una función atajo para operaciones de condición  _>=_ x _<=_ , implementado para vectores numéricos o de fecha/hora.
+
+Se utiliza dentro de estructuras donde se escriben condiciones (`filter()`, `mutate()`, etc).
+
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> filter(between(x, izquierda, derecha)) 
+```
+
+
+<br>
+
+Los dos extremos (izquierda y derecha) se incluyen en el intervalo
+
+## Ejemplo de between() {.title-top}
+
+<br>
+
+```{r,  echo=TRUE}
+# filtramos observaciones donde la variable F2_Edad sea mayor 
+# o igual a 16 y menor o igual 18 años
+
+datos |> 
+ filter(between(F2_Edad, 16, 18)) |> 
+  count(F2_Edad)
+
+```
+
+## Documentación{.invert}
+
+<br>
+
+![](img/03/r4ds2.png){fig-align="center"}
+
+::: {.centered}
+
+Capítulo 3 del libro ["R for Data Science (2e)"](https://r4ds.hadley.nz/data-transform)
+
+:::
