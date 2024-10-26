@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "Gestión de datos epidemiológicos con R + RStudio",
     "section": "",
-    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
+    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
   },
   {
     "objectID": "about.html",
@@ -1923,5 +1923,82 @@
     "title": "Manipulación de datos",
     "section": "Documentación",
     "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 3 del libro “R for Data Science (2e)”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#etapas-previas-al-análisis",
+    "href": "primero/diapositivas/05-diagnostico.html#etapas-previas-al-análisis",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Etapas previas al análisis",
+    "text": "Etapas previas al análisis\nLa etapa de depuración o limpieza de datos comienza con la exploración inicial y el diagnóstico adecuado de cada variable de interés de la tabla de datos cruda. Interviene aquí también, el objetivo del análisis, el protocolo de análisis pensado y el diccionario de datos asociado a la tabla.\n\n     \nFinalmente se hacen las transformaciones necesarias en los datos a partir del diagnóstico realizado."
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#limpieza-de-datos",
+    "href": "primero/diapositivas/05-diagnostico.html#limpieza-de-datos",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Limpieza de datos",
+    "text": "Limpieza de datos\n\n\n\n\nExploración de la estructura de la tabla de datos\n\n\n\n\nVerificación del tipo de dato de cada variable de interés\n\n\n\n\nDetección de valores faltantes\n\n\n\n\nDetección de errores\n\nIdentificación de las categorías de las variables cualitativas\nAnálisis de los mínimos y máximos de valores de cada variable cuantitativa"
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#exploración-y-diagnóstico-de-datos",
+    "href": "primero/diapositivas/05-diagnostico.html#exploración-y-diagnóstico-de-datos",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Exploración y diagnóstico de datos",
+    "text": "Exploración y diagnóstico de datos\n\nLa exploración de datos se puede incluir dentro del análisis exploratorio de datos (EDA en inglés) y persigue un primer grupo de objetivos:\n\n\nConocer la estructura de la tabla de datos y sus tipos de variables\n\n\n\n\nDetectar observaciones incompletas (valores faltantes)\n\n\n\n\nDetectar datos con errores e inconsistencias"
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#paquetes-especificos",
+    "href": "primero/diapositivas/05-diagnostico.html#paquetes-especificos",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Paquetes especificos",
+    "text": "Paquetes especificos\nVamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo, aunque dentro del universo de librerías de R vamos a encontrar muchos mas.\n\n\n\nskimr\n\n\nEstá diseñado para obtener un resumen rápido de la estructura de tablas de datos y es compatible con el ecosistema tidyverse.\n\n\n\n\n\n\ndlookr\n\n\nSe define como una colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos. El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos."
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#duplicados",
+    "href": "primero/diapositivas/05-diagnostico.html#duplicados",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Duplicados",
+    "text": "Duplicados\nOtro de los problemas con los debemos lidiar muchas veces es tener observaciones duplicadas.\n\nLas tareas habituales en estos casos son:\n\n\nDetección de observaciones y/o partes de observaciones (variables clave) duplicadas\n\n\n\n\nEliminación de duplicados a partir de observaciones únicas.\n\n\n\n\nRecortar tabla de datos para eliminar duplicados\n\n\n\n\nMarcar duplicados (conservando duplicados en la tabla)"
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#detección-de-duplicados",
+    "href": "primero/diapositivas/05-diagnostico.html#detección-de-duplicados",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Detección de duplicados",
+    "text": "Detección de duplicados\n\nLas observaciones duplicadas pueden ser completas, generalmente a raíz de algún problema informático o bien parcial.\nHabitualmente nuestras tablas tienen identificadores únicos de las unidades de análisis o una serie de identificadores que resultan en una clave combinada.\n\nLa función get_dupes() del paquete janitor es una herramienta útil para identificar estas repeticiones."
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#eliminación-de-duplicados-por-observaciones-únicas",
+    "href": "primero/diapositivas/05-diagnostico.html#eliminación-de-duplicados-por-observaciones-únicas",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Eliminación de duplicados por observaciones únicas",
+    "text": "Eliminación de duplicados por observaciones únicas\n\nPara eliminar filas duplicadas en una tabla de datos podemos utilizar la función distinct() de dplyr.\n\ndistinct() muestra observaciones únicas a partir de la coincidencia total o parcial.\n\nLa función tiene un argumento denominado .keep_all que permite valores TRUE o FALSE. Si se iguala a TRUE se mantienen en el resultado todas las variables que son parte de la tabla, aunque estas no estén declaradas dentro del distinct().\nPor defecto, este argumento se encuentra igualado a FALSE."
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#eliminación-de-duplicados-por-recorte-de-observaciones",
+    "href": "primero/diapositivas/05-diagnostico.html#eliminación-de-duplicados-por-recorte-de-observaciones",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Eliminación de duplicados por recorte de observaciones",
+    "text": "Eliminación de duplicados por recorte de observaciones\n\nRecortar es similar a filtrar, la diferencia está en que se filtra por condiciones y recortamos por posiciones.\nLa familia de funciones que se puede utilizar para recortar es slice_*().\nEstas funciones pueden ser muy útiles si se aplican a un dataframe agrupado porque la operación de recorte se realiza en cada grupo por separado.\n\nPor ejemplo, si en una tabla hay varias filas por persona con fechas distintas de un seguimiento y queremos quedarnos con la última visita, podemos utilizar combinado group_by() y slice_max() para quedarnos sólo con esa observación del último encuentro para cada uno."
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#marcar-duplicados",
+    "href": "primero/diapositivas/05-diagnostico.html#marcar-duplicados",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Marcar duplicados",
+    "text": "Marcar duplicados\n\nSi lo que buscamos es mantener a todas las observaciones de la tabla pero marcar aquellos que consideramos duplicados podemos hacer:\n\nRecortar el dataframe original a sólo las filas para el análisis. Guardar los ID de este dataframe reducido en un vector.\nEn el dataframe original, creamos una variable de marca usando case_when(), basándonos si el ID está presente en el dataframe reducido (vector de ID anterior).\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#introducción",
+    "href": "primero/diapositivas/05-diagnostico.html#introducción",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Introducción",
+    "text": "Introducción"
+  },
+  {
+    "objectID": "primero/diapositivas/05-diagnostico.html#exploración-y-diagnóstico-de-datos-1",
+    "href": "primero/diapositivas/05-diagnostico.html#exploración-y-diagnóstico-de-datos-1",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Exploración y diagnóstico de datos",
+    "text": "Exploración y diagnóstico de datos\n\nHabitualmente hablamos de calidad de los datos en relación a los items anteriores.\nUna segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:\n\nResumir datos mediante estadísticos y gráficos\nDetectar valores atípicos (outlier)"
   }
 ]

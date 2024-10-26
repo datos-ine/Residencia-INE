@@ -168,9 +168,10 @@ Se espera que al finalizar este curso los participantes puedan:
     <td class="tg-0lax">Diagnóstico y depuración de datos</td>
     <td align="center"><a href="/primero/clases/06-depuracion.html">
           <i class="fa fa-book fa-lg"></i></a></td>
-    <td class="tg-0lax"></td>
-    <td align="center"><font color="fafcfc">
-          <i class="fa fa-code fa-lg"></i></font></td>
+    <td align="center"><a href="/primero/diapositivas/05-diagnostico.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+     <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/03-diagnostico.zip" download="03-diagnostico.zip">
+          <i class="fa fa-code fa-lg"></i></a></td>
     <td align="center"><a href="/primero/clases/05-datosPerdidos.html">
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
