@@ -76,5 +76,11 @@
   },
   "primero/diapositivas/05-diagnostico.qmd": {
     "05-diagnostico.html": "03823548"
+  },
+  "primero/diapositivas/05a-diagnostico.qmd": {
+    "05a-diagnostico.html": "dca8e218"
+  },
+  "primero/diapositivas/05b-tidy.qmd": {
+    "05b-tidy.html": "873b360a"
   }
 }

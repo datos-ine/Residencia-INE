@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "Gestión de datos epidemiológicos con R + RStudio",
     "section": "",
-    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
+    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
   },
   {
     "objectID": "about.html",
@@ -2000,5 +2000,236 @@
     "title": "Diagnóstico y depuración de datos",
     "section": "Exploración y diagnóstico de datos",
     "text": "Exploración y diagnóstico de datos\n\nHabitualmente hablamos de calidad de los datos en relación a los items anteriores.\nUna segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:\n\nResumir datos mediante estadísticos y gráficos\nDetectar valores atípicos (outlier)"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#introducción",
+    "href": "primero/diapositivas/05a-diagnostico.html#introducción",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Introducción",
+    "text": "Introducción"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#etapas-previas-al-análisis",
+    "href": "primero/diapositivas/05a-diagnostico.html#etapas-previas-al-análisis",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Etapas previas al análisis",
+    "text": "Etapas previas al análisis\n\nLa etapa de depuración o limpieza de datos comienza con la exploración inicial y el diagnóstico adecuado de cada variable de interés de la tabla de datos cruda. Interviene aquí también, el objetivo del análisis, el protocolo de análisis pensado y el diccionario de datos asociado a la tabla.\n\n     \nFinalmente se hacen las transformaciones necesarias en los datos a partir del diagnóstico realizado."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#limpieza-de-datos",
+    "href": "primero/diapositivas/05a-diagnostico.html#limpieza-de-datos",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Limpieza de datos",
+    "text": "Limpieza de datos\n\n \n\n\nExploración de la estructura de la tabla de datos\n\n\n\n\nVerificación del tipo de dato de cada variable de interés\n\n\n\n\nDetección de valores faltantes\n\n\n\n\nDetección de errores\n\nIdentificación de las categorías de las variables cualitativas\nAnálisis de los mínimos y máximos de valores de cada variable cuantitativa"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos",
+    "href": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Exploración y diagnóstico de datos",
+    "text": "Exploración y diagnóstico de datos\nLa exploración de datos se puede incluir dentro del análisis exploratorio de datos (EDA en inglés) y persigue un primer grupo de objetivos:\n\n\nConocer la estructura de la tabla de datos y sus tipos de variables\n\n\n\n\nDetectar observaciones incompletas (valores faltantes)\n\n\n\n\nDetectar datos con errores e inconsistencias\n\n\n\nHabitualmente hablamos de calidad de los datos en relación a los items anteriores.\nUna segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:\n\nResumir datos mediante estadísticos y gráficos\nDetectar valores atípicos (outlier)"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#paquetes-especificos",
+    "href": "primero/diapositivas/05a-diagnostico.html#paquetes-especificos",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Paquetes especificos",
+    "text": "Paquetes especificos\n\nVamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo, aunque dentro del universo de librerías de R vamos a encontrar muchos mas.\n\n\n\nskimr\n\n\nEstá diseñado para obtener un resumen rápido de la estructura de tablas de datos y es compatible con el ecosistema tidyverse.\n\n\n\n\n\n\n\ndlookr\n\n\nSe define como una colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos. El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#duplicados",
+    "href": "primero/diapositivas/05a-diagnostico.html#duplicados",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Duplicados",
+    "text": "Duplicados\n\nOtro de los problemas con los debemos lidiar muchas veces es tener observaciones duplicadas.\n\nLas tareas habituales en estos casos son:\n\n\nDetección de observaciones y/o partes de observaciones (variables clave) duplicadas\n\n\n\n\nEliminación de duplicados a partir de observaciones únicas.\n\n\n\n\nRecortar tabla de datos para eliminar duplicados\n\n\n\n\nMarcar duplicados (conservando duplicados en la tabla)"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#detección-de-duplicados",
+    "href": "primero/diapositivas/05a-diagnostico.html#detección-de-duplicados",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Detección de duplicados",
+    "text": "Detección de duplicados\n\nLas observaciones duplicadas pueden ser completas, generalmente a raíz de algún problema informático o bien parcial.\nHabitualmente nuestras tablas tienen identificadores únicos de las unidades de análisis o una serie de identificadores que resultan en una clave combinada.\n\nLa función get_dupes() del paquete janitor es una herramienta útil para identificar estas repeticiones."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#eliminación-de-duplicados-por-observaciones-únicas",
+    "href": "primero/diapositivas/05a-diagnostico.html#eliminación-de-duplicados-por-observaciones-únicas",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Eliminación de duplicados por observaciones únicas",
+    "text": "Eliminación de duplicados por observaciones únicas\n\nPara eliminar filas duplicadas en una tabla de datos podemos utilizar la función distinct() de dplyr.\n\ndistinct() muestra observaciones únicas a partir de la coincidencia total o parcial.\n\nLa función tiene un argumento denominado .keep_all que permite valores TRUE o FALSE. Si se iguala a TRUE se mantienen en el resultado todas las variables que son parte de la tabla, aunque estas no estén declaradas dentro del distinct().\nPor defecto, este argumento se encuentra igualado a FALSE."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#eliminación-de-duplicados-por-recorte-de-observaciones",
+    "href": "primero/diapositivas/05a-diagnostico.html#eliminación-de-duplicados-por-recorte-de-observaciones",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Eliminación de duplicados por recorte de observaciones",
+    "text": "Eliminación de duplicados por recorte de observaciones\n\nRecortar es similar a filtrar, la diferencia está en que se filtra por condiciones y recortamos por posiciones.\nLa familia de funciones que se puede utilizar para recortar es slice_*().\nEstas funciones pueden ser muy útiles si se aplican a un dataframe agrupado porque la operación de recorte se realiza en cada grupo por separado.\n\nPor ejemplo, si en una tabla hay varias filas por persona con fechas distintas de un seguimiento y queremos quedarnos con la última visita, podemos utilizar combinado group_by() y slice_max() para quedarnos sólo con esa observación del último encuentro para cada uno."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#marcar-duplicados",
+    "href": "primero/diapositivas/05a-diagnostico.html#marcar-duplicados",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Marcar duplicados",
+    "text": "Marcar duplicados\n\nSi lo que buscamos es mantener a todas las observaciones de la tabla pero marcar aquellos que consideramos duplicados podemos hacer:\n\nRecortar el dataframe original a sólo las filas para el análisis. Guardar los ID de este dataframe reducido en un vector.\nEn el dataframe original, creamos una variable de marca usando case_when(), basándonos si el ID está presente en el dataframe reducido (vector de ID anterior).\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#datos-ordenados-tidydata",
+    "href": "primero/diapositivas/05b-tidy.html#datos-ordenados-tidydata",
+    "title": "Datos ordenados y relacionales",
+    "section": "Datos ordenados (tidydata)",
+    "text": "Datos ordenados (tidydata)\n\nLlamamos tidy data o “datos ordenados” cuando:\n\nCada variable está en una columna\nCada observación está en una fila\nCada celda del cruce entre una columna y una fila es un valor\nCada tabla pertenece a una unidad de observación"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#problemas-comunes",
+    "href": "primero/diapositivas/05b-tidy.html#problemas-comunes",
+    "title": "Datos ordenados y relacionales",
+    "section": "Problemas comunes",
+    "text": "Problemas comunes\n\n\nUna variable se extiende por varias columnas.\nUna observación está dispersa entre múltiples filas\n\nSolución:\n\nUsamos funciones pivot del paquete tidyr de tidyverse\n\nFunción pivot_longer() - Convierte nombres de variables en valores de una nueva variable.\nFunción pivot_wider() - Convierte valores de una variable en variables nuevas."
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#pivoteos",
+    "href": "primero/diapositivas/05b-tidy.html#pivoteos",
+    "title": "Datos ordenados y relacionales",
+    "section": "Pivoteos",
+    "text": "Pivoteos"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#pivot_longer",
+    "href": "primero/diapositivas/05b-tidy.html#pivot_longer",
+    "title": "Datos ordenados y relacionales",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\n\n\nSoluciona cuando una variable se extiende por varias columnas (las categorías estan en la cabecera).\nProduce tablas “alargando” los datos, aumentando el número de filas y disminuyendo el número de columnas\n\n\ndatos |&gt; \n  pivot_longer(\n    cols = &lt;seleccion de columnas&gt;,\n    names_to = \"variable_categorías\",\n    values_to = \"variable_valores\"\n  )"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#pivot_wider",
+    "href": "primero/diapositivas/05b-tidy.html#pivot_wider",
+    "title": "Datos ordenados y relacionales",
+    "section": "pivot_wider()",
+    "text": "pivot_wider()\n\n\nSoluciona cuando una observación está dispersa entre múltiples filas.\nProduce tablas “estirando” los datos, aumentando el número de columnas y disminuyendo el número de filas.\n\n\ndatos |&gt; \n  pivot_wider(\n    names_from = variable_nombres,\n    values_from = variable_valores\n  )"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#mapa-conceptual-pivoteos",
+    "href": "primero/diapositivas/05b-tidy.html#mapa-conceptual-pivoteos",
+    "title": "Datos ordenados y relacionales",
+    "section": "Mapa conceptual pivoteos",
+    "text": "Mapa conceptual pivoteos\n\npuede tenerpuede tenerdataframedataframetidyrtidyrparte departe devalores ennombre de columnas valores en...nombre de variables en  una columnanombre de variables...ancho a largoancho a largolargo a ancholargo a anchoparte departe denúmero decolumnasnúmero de...número de filasnúmero de fil...transformarnombres/valorestransformar...aumentaaumentadisminuyedisminuyeaumentaaumentadisminuyedisminuyedar formatoa nombresdar formato...puede tenerpuede tenertransformadetransform...transformadetransform...se arreglaconse arregla...se arregla conse arregla...usandousandousandousandopuedepuede  puede  puedepivot_longerpivot_longerpivot_widerpivot_widerViewer does not support full SVG 1.1"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-en-datos-relacionales",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-en-datos-relacionales",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones en datos relacionales",
+    "text": "Uniones en datos relacionales\n\nExisten situaciones donde debemos analizar datos que se encuentran en diferentes tablas.\nCon el fin de responder a nuestras preguntas de interés en ocasiones deberemos unirlas previamente.\nDe manera general, se le llama datos relacionales a esas múltiples tablas de datos que provienen muchas veces de sistemas de bases de datos construidas bajo el modelo relacional o bien cuando las tablas de datos tienen fuentes distintas pero comparten alguna variable común que permita “conectarlas”."
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#tipos-de-operaciones",
+    "href": "primero/diapositivas/05b-tidy.html#tipos-de-operaciones",
+    "title": "Datos ordenados y relacionales",
+    "section": "Tipos de operaciones",
+    "text": "Tipos de operaciones\n\nPara trabajar con datos relacionales necesitamos de funciones-verbos que vinculen pares de tablas.\nLas tres familias de funciones del paquete dplyr diseñadas para trabajar con datos relacionales son:\n\nUniones de transformación (del inglés mutating joins), agregan nuevas variables a una tabla a partir de observaciones coincidentes de otra tabla.\nUniones de filtro (del inglés filtering joins), filtran observaciones de una tabla en función de la coincidencia o no coincidencia de otra tabla.\nOperaciones en filas y columnas, sirven para unir tablas por columnas o por filas."
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#claves",
+    "href": "primero/diapositivas/05b-tidy.html#claves",
+    "title": "Datos ordenados y relacionales",
+    "section": "Claves",
+    "text": "Claves\n\n\nLas variables usadas para conectar cada par de variables se llaman claves (del inglés key)\nUna clave es una variable (o un conjunto de variables) que identifican de manera única una observación.\n\nExisten dos tipos de claves:\n\nUna clave primaria identifica únicamente una observación en su propia tabla.\nUna clave foránea únicamente identifica una observación en otra tabla."
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-de-transformación",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-de-transformación",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones de transformación",
+    "text": "Uniones de transformación\n\nUnión interior\nLa forma más simple de unión es la unión interior (del inglés inner join). Una unión interior une pares de observaciones siempre que sus claves sean iguales"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#unión-interior",
+    "href": "primero/diapositivas/05b-tidy.html#unión-interior",
+    "title": "Datos ordenados y relacionales",
+    "section": "Unión interior",
+    "text": "Unión interior\nFunción inner_join()"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-de-transformación-1",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-de-transformación-1",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones de transformación",
+    "text": "Uniones de transformación\nUniones exteriores\nUna unión interior mantiene las observaciones que aparecen en ambas tablas.\n\n\nUna unión exterior mantiene las observaciones que aparecen en al menos una de las tablas.\n\nUna unión izquierda (left join) mantiene todas las observaciones en x.\nUna unión derecha (right join) mantiene todas las observaciones en y.\nUna unión completa (full join) mantiene todas las observaciones en x e y."
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-exteriores",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-exteriores",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones exteriores",
+    "text": "Uniones exteriores\n\nFunción full_join()"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-exteriores-1",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-exteriores-1",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones exteriores",
+    "text": "Uniones exteriores\n\nFunción left_join()"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-exteriores-2",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-exteriores-2",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones exteriores",
+    "text": "Uniones exteriores\n\nFunción right_join()"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-de-transformación-2",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-de-transformación-2",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones de transformación",
+    "text": "Uniones de transformación\nOtra forma de ilustrar diferentes tipos de uniones es mediante un diagrama de Venn.\nSin embargo, tiene una limitante importante: un diagrama de Venn no puede mostrar qué ocurre con las claves que no identifican de manera única una observación"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#claves-duplicadas",
+    "href": "primero/diapositivas/05b-tidy.html#claves-duplicadas",
+    "title": "Datos ordenados y relacionales",
+    "section": "Claves duplicadas",
+    "text": "Claves duplicadas\n\nHasta ahora todas las situaciones han asumido que las claves son únicas. Pero esto no siempre es así.\nExisten dos posibilidades habituales:\n\nUna tabla tiene claves duplicadas producto de una relación uno a varios.\nAmbas tablas tienen claves duplicadas\n\nSiempre que unimos claves duplicadas, obtenemos todas las posibles combinaciones, es decir, el producto cartesiano"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#claves-duplicadas-1",
+    "href": "primero/diapositivas/05b-tidy.html#claves-duplicadas-1",
+    "title": "Datos ordenados y relacionales",
+    "section": "Claves duplicadas",
+    "text": "Claves duplicadas\nEjemplo con left_join()"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-de-filtro",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-de-filtro",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones de filtro",
+    "text": "Uniones de filtro\n\nsemi_join()\nMantiene todas las observaciones de la tabla x donde la clave coincide con la clave de la tabla y"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#uniones-de-filtro-1",
+    "href": "primero/diapositivas/05b-tidy.html#uniones-de-filtro-1",
+    "title": "Datos ordenados y relacionales",
+    "section": "Uniones de filtro",
+    "text": "Uniones de filtro\n\nanti_join()\nDescarta todas las observaciones de la tabla x donde la clave coincide con la clave de la tabla y"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#consejos-útiles-para-evitar-errores",
+    "href": "primero/diapositivas/05b-tidy.html#consejos-útiles-para-evitar-errores",
+    "title": "Datos ordenados y relacionales",
+    "section": "Consejos útiles para evitar errores",
+    "text": "Consejos útiles para evitar errores\n\n\nIdentificar bien la variables que forman las claves de cada tabla.\nVerificar la completitud de las claves. Si existe algún valor faltante no se podrá identificar la observación.\nVerificar que las claves foráneas coinciden con las claves primarias de la otra tabla. Esto incluye comprobar coincidencia en el tipo de dato (numérico, caracter, etc)\nVerificar claves duplicadas (se puede hacer aplicando count())"
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#unión-por-filas-y-por-columnas",
+    "href": "primero/diapositivas/05b-tidy.html#unión-por-filas-y-por-columnas",
+    "title": "Datos ordenados y relacionales",
+    "section": "Unión por filas y por columnas",
+    "text": "Unión por filas y por columnas\nEn algunas ocasiones necesitamos unir tablas que tienen formatos particulares por medio de filas o por medio de columnas.\nLas funciones de dplyr para esta tarea son:\n\nbind_rows() Une una tabla debajo de otra. Aplica cuando tenemos la misma estructura en tabla de datos divida en varios archivos (por ejemplo, producto de carga simultánea de datos en diferentes computadoras con diferentes data entry)\nbind_cols() Une una tabla al lado de la otra. Es peligroso su uso si la confundimos con las uniones de transformación porque perdemos integridad de datos en las observaciones. Sirve sólo si el “orden” de las observaciones pueden garantizar la misma identidad de las partes a unir."
+  },
+  {
+    "objectID": "primero/diapositivas/05b-tidy.html#documentación",
+    "href": "primero/diapositivas/05b-tidy.html#documentación",
+    "title": "Datos ordenados y relacionales",
+    "section": "Documentación",
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 5 y 19 del libro “R for Data Science (2e) - Data tidy” / “R for Data Science (2e) - Joins”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]
