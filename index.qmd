@@ -182,8 +182,8 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-book fa-lg"></i></font></td>
     <td align="center"><a href="/primero/diapositivas/05b-tidy.html" target="_blank">
         <i class="fa fa-laptop  fa-lg"></i></a></td>
-    <td align="center"><font color="fafcfc">
-          <i class="fa fa-code fa-lg"></i></font></td>
+     <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/04-tidy.zip" download="04-tidy.zip">
+          <i class="fa fa-code fa-lg"></i></a></td>
     <td align="center"><a href="/primero/recursos/06-iteracion.html">
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
