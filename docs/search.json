@@ -2146,14 +2146,14 @@
     "href": "primero/diapositivas/05b-tidy.html#unión-interior",
     "title": "Datos ordenados y relacionales",
     "section": "Unión interior",
-    "text": "Unión interior\nFunción inner_join()"
+    "text": "Unión interior\nUna unión interior mantiene las observaciones que aparecen en ambas tablas.\nFunción inner_join()"
   },
   {
     "objectID": "primero/diapositivas/05b-tidy.html#uniones-de-transformación-1",
     "href": "primero/diapositivas/05b-tidy.html#uniones-de-transformación-1",
     "title": "Datos ordenados y relacionales",
     "section": "Uniones de transformación",
-    "text": "Uniones de transformación\nUniones exteriores\nUna unión interior mantiene las observaciones que aparecen en ambas tablas.\n\n\nUna unión exterior mantiene las observaciones que aparecen en al menos una de las tablas.\n\nUna unión izquierda (left join) mantiene todas las observaciones en x.\nUna unión derecha (right join) mantiene todas las observaciones en y.\nUna unión completa (full join) mantiene todas las observaciones en x e y."
+    "text": "Uniones de transformación\n\nUniones exteriores\n\n\n\nUna unión exterior mantiene las observaciones que aparecen en al menos una de las tablas.\n\nUna unión izquierda (left join) mantiene todas las observaciones en x.\n\n\n\nUna unión derecha (right join) mantiene todas las observaciones en y.\n\n\n\nUna unión completa (full join) mantiene todas las observaciones en x e y."
   },
   {
     "objectID": "primero/diapositivas/05b-tidy.html#uniones-exteriores",

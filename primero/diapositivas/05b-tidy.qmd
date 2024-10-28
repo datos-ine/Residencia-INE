@@ -1,0 +1,305 @@
+---
+title: "Datos ordenados y relacionales"
+subtitle: "Residencia de Epidemiología"
+format: 
+  revealjs:
+    self-contained: true
+    width: 1920
+    height: 1080
+    slide-number: true
+    transition: fade
+    theme: [simple, img/custom.scss]
+    logo: img/INE.gif
+    footer: "Instituto Nacional de Epidemiología"
+---
+
+```{r setup, include=F}
+#| label: setup
+#| include: false
+
+
+library(quarto)
+library(fontawesome)
+library(tidyverse)
+```
+
+## Datos ordenados (tidydata) {.title-top}
+
+<br>
+
+Llamamos **tidy data** o "datos ordenados" cuando:
+
+-   Cada variable está en una columna
+-   Cada observación está en una fila
+-   Cada celda del cruce entre una columna y una fila es un valor
+-   Cada tabla pertenece a una unidad de observación
+
+![](img/05b/tidy_data.PNG){.absolute top="650" left="300" width="1200"}
+
+## Problemas comunes {.title-top}
+
+<br>
+
+-   Una variable se extiende por varias columnas.
+
+-   Una observación está dispersa entre múltiples filas
+
+**Solución:**
+
+![](img/05b/tidy.PNG){.absolute top="180" left="1220" width="600"}
+
+Usamos funciones pivot del paquete **tidyr** de tidyverse
+
+-   Función **pivot_longer()** - Convierte nombres de variables en valores de una nueva variable.
+
+-   Función **pivot_wider()** - Convierte valores de una variable en variables nuevas.
+
+## Pivoteos {.title-top}
+
+![](img/05b/pivot.PNG){.absolute top="200" left="300" width="900"}
+
+## `pivot_longer()` {.title-top}
+
+<br>
+
+- Soluciona cuando una variable se extiende por varias columnas (las categorías estan en la cabecera).
+
+- Produce tablas "alargando" los datos, aumentando el número de filas y disminuyendo el número de columnas
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> 
+  pivot_longer(
+    cols = <seleccion de columnas>,
+    names_to = "variable_categorías",
+    values_to = "variable_valores"
+  )
+```
+
+
+
+## `pivot_wider()` {.title-top}
+
+<br>
+
+- Soluciona cuando una observación está dispersa entre múltiples filas.
+
+- Produce tablas "estirando" los datos, aumentando el número de columnas y disminuyendo el número de filas.
+
+```{r}
+#| echo: true
+#| eval: false
+
+datos |> 
+  pivot_wider(
+    names_from = variable_nombres,
+    values_from = variable_valores
+  )
+```
+
+
+## Uniones en datos relacionales {.title-top}
+
+<br>
+
+Existen situaciones donde debemos analizar datos que se encuentran en diferentes tablas.
+
+Con el fin de responder a nuestras preguntas de interés en ocasiones deberemos unirlas previamente.
+
+De manera general, se le llama **_datos relacionales_** a esas múltiples tablas de datos que provienen muchas veces de sistemas de bases de datos construidas bajo el modelo relacional o bien cuando las tablas de datos tienen fuentes distintas pero comparten alguna variable común que permita "conectarlas".
+
+
+## Tipos de operaciones {.title-top}
+
+<br>
+
+Para trabajar con datos relacionales necesitamos de *funciones-verbos* que vinculen pares de tablas. 
+
+Las tres familias de funciones del paquete **dplyr** diseñadas para trabajar con datos relacionales son:
+
+- **Uniones de transformación** (del inglés *mutating joins*), agregan nuevas variables a una tabla a partir de observaciones coincidentes de otra tabla.
+
+- **Uniones de filtro** (del inglés *filtering joins*), filtran observaciones de una tabla en función de la coincidencia o no coincidencia de otra tabla.
+
+- **Operaciones en filas y columnas**,  sirven para unir tablas por columnas o por filas.
+
+
+## Claves {.title-top}
+
+<br>
+
+- Las variables usadas para conectar cada par de variables se llaman **claves** (del inglés *key*)
+
+- Una clave es una variable (o un conjunto de variables) que identifican de manera *única* una observación.
+
+Existen dos tipos de claves:
+
+- Una **clave primaria** identifica únicamente una observación en su propia tabla. 
+
+- Una **clave foránea** únicamente identifica una observación en otra tabla. 
+
+
+## Uniones de transformación {.title-top}
+
+<br>
+
+**Unión interior**
+
+La forma más simple de unión es la unión interior (del inglés inner join). Una unión interior une pares de observaciones siempre que sus claves sean iguales
+
+![](img/05b/inner-join.PNG){fig-align="center" width=70%}
+
+## Unión interior {.title-top}
+
+Una unión interior mantiene las observaciones que aparecen en ambas tablas. 
+
+**Función inner_join()**
+
+![](img/05b/inner-join.gif){fig-align="center" width=100%}
+
+
+## Uniones de transformación {.title-top .smaller}
+
+<br>
+
+**Uniones exteriores**
+
+:::: {.columns}
+
+::: {.column width="50%"} 
+
+<br>
+
+Una unión exterior mantiene las observaciones que aparecen en al menos una de las tablas.
+
+- Una unión izquierda (left join) mantiene todas las observaciones en x.
+
+<br>
+
+- Una unión derecha (right join) mantiene todas las observaciones en y.
+
+<br>
+
+- Una unión completa (full join) mantiene todas las observaciones en x e y.
+
+:::
+
+::: {.column width="50%"}
+
+![](img/05b/uniones_exteriores.PNG){fig-align="center" width=60%}
+:::
+
+::::
+
+## Uniones exteriores {.title-top}
+
+<br>
+
+**Función full_join()**
+
+![](img/05b/full-join.gif){fig-align="center" width=100%}
+
+
+## Uniones exteriores {.title-top}
+
+<br>
+
+**Función left_join()**
+
+![](img/05b/left-join.gif){fig-align="center" width=100%}
+
+## Uniones exteriores {.title-top}
+
+<br>
+
+**Función right_join()**
+
+![](img/05b/right-join.gif){fig-align="center" width=100%}
+
+## Uniones de transformación {.title-top}
+
+Otra forma de ilustrar diferentes tipos de uniones es mediante un diagrama de Venn.
+
+Sin embargo, tiene una limitante importante: un diagrama de Venn no puede mostrar qué ocurre con las claves que no identifican de manera única una observación
+
+![](img/05b/venn.PNG){fig-align="center" width=100%}
+
+
+## Claves duplicadas {.title-top}
+
+<br>
+
+Hasta ahora todas las situaciones han asumido que las claves son únicas. Pero esto no siempre es así.  
+
+Existen dos posibilidades habituales:
+
+- Una tabla tiene claves duplicadas producto de una relación uno a varios.
+
+- Ambas tablas tienen claves duplicadas 
+
+Siempre que unimos claves duplicadas, obtenemos todas las posibles combinaciones, es decir, el producto cartesiano
+
+
+## Claves duplicadas {.title-top}
+
+Ejemplo con **left_join()**
+
+![](img/05b/left-join-extra.gif){fig-align="center" width=100%}
+
+## Uniones de filtro {.title-top}
+
+<br>
+
+**semi_join()**
+
+**Mantiene** todas las observaciones de la tabla **x** donde la **_clave coincide_** con la clave de la tabla **y**
+
+![](img/05b/semi-join.gif){fig-align="center" width=100%}
+
+
+## Uniones de filtro {.title-top}
+
+<br>
+
+**anti_join()**
+
+**Descarta** todas las observaciones de la tabla **x** donde la **_clave coincide_** con la clave de la tabla **y**
+
+![](img/05b/anti-join.gif){fig-align="center" width=100%}
+
+## Consejos útiles para evitar errores {.title-top}
+
+<br>
+
+- Identificar bien la variables que forman las claves de cada tabla.
+
+- Verificar la completitud de las claves. Si existe algún valor faltante no se podrá identificar la observación.
+
+- Verificar que las claves foráneas coinciden con las claves primarias de la otra tabla. Esto incluye comprobar coincidencia en el tipo de dato (numérico, caracter, etc)
+
+- Verificar claves duplicadas (se puede hacer aplicando **count()**)
+
+## Unión por filas y por columnas {.title-top}
+
+
+En algunas ocasiones necesitamos unir tablas que tienen formatos particulares por medio de filas o por medio de columnas.
+
+Las funciones de **dplyr** para esta tarea son:
+
+- **bind_rows()** Une una tabla debajo de otra. Aplica cuando tenemos la misma estructura en tabla de datos divida en varios archivos (por ejemplo, producto de carga simultánea de datos en diferentes computadoras con diferentes data entry)
+
+- **bind_cols()** Une una tabla al lado de la otra. Es peligroso su uso si la confundimos con las uniones de transformación porque perdemos integridad de datos en las observaciones. Sirve sólo si el "orden" de las observaciones pueden garantizar la misma identidad de las partes a unir.
+
+## Documentación{.invert}
+
+<br>
+
+![](img/03/r4ds2.png){fig-align="center"}
+
+::: {.centered}
+
+Capítulo 5 y 19 del libro ["R for Data Science (2e) - Data tidy"](https://r4ds.hadley.nz/data-tidy) / ["R for Data Science (2e) - Joins"](https://r4ds.hadley.nz/joins) 
+
+:::
