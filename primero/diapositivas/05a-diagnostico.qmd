@@ -24,8 +24,6 @@ library(tidyverse)
 ```
 
 
-## Introducción {.title-top}
-
 ## Etapas previas al análisis {.title-top}
 
 <br>
@@ -40,7 +38,7 @@ Finalmente se hacen las transformaciones necesarias en los datos a partir del di
 
 ## Limpieza de datos {.title-top}
 
-![](img/05a/Ordenar_datos.PNG){.absolute top="150" left="1250" width="800"}
+![](img/05a/Ordenar_datos.PNG){.absolute top="450" left="1250" width="600"}
 
 <br> <br>
 
@@ -68,6 +66,7 @@ Finalmente se hacen las transformaciones necesarias en los datos a partir del di
 
 ## Exploración y diagnóstico de datos {.title-top}
 
+<br>
 
 La exploración de datos se puede incluir dentro del **análisis exploratorio de datos** (EDA en inglés) y persigue un primer grupo de objetivos:
 
@@ -87,14 +86,20 @@ La exploración de datos se puede incluir dentro del **análisis exploratorio de
 
 Habitualmente hablamos de ***calidad de los datos*** en relación a los items anteriores.
 
-Una segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:
-
--   Resumir datos mediante estadísticos y gráficos
--   Detectar valores atípicos (outlier)
-
-## Paquetes especificos {.title-top}
+## Exploración y diagnóstico de datos {.title-top}
 
 <br>
+
+Una segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:
+
+<br>
+
+-   Resumir datos mediante estadísticos 
+-   Visualizar distribuciones y patrones mediante gráficos
+-   Detectar valores atípicos (outlier)
+
+
+## Paquetes especificos {.title-top}
 
 Vamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo, aunque dentro del universo de librerías de R vamos a encontrar muchos mas.
 
@@ -103,8 +108,6 @@ Vamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo
 
 Está diseñado para obtener un resumen rápido de la estructura de tablas de datos y es compatible con el ecosistema tidyverse.
 :::
-
-<br>
 
 ::: {.callout-note icon=false}
 ## dlookr
@@ -117,8 +120,6 @@ Se define como una colección de herramientas que permiten el diagnóstico, la e
 <br>
 
 Otro de los problemas con los debemos lidiar muchas veces es tener observaciones duplicadas.
-
-<br>
 
 Las tareas habituales en estos casos son:
 

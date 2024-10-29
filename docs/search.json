@@ -2027,21 +2027,21 @@
     "href": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos",
     "title": "Diagnóstico y depuración de datos",
     "section": "Exploración y diagnóstico de datos",
-    "text": "Exploración y diagnóstico de datos\nLa exploración de datos se puede incluir dentro del análisis exploratorio de datos (EDA en inglés) y persigue un primer grupo de objetivos:\n\n\nConocer la estructura de la tabla de datos y sus tipos de variables\n\n\n\n\nDetectar observaciones incompletas (valores faltantes)\n\n\n\n\nDetectar datos con errores e inconsistencias\n\n\n\nHabitualmente hablamos de calidad de los datos en relación a los items anteriores.\nUna segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:\n\nResumir datos mediante estadísticos y gráficos\nDetectar valores atípicos (outlier)"
+    "text": "Exploración y diagnóstico de datos\n\nLa exploración de datos se puede incluir dentro del análisis exploratorio de datos (EDA en inglés) y persigue un primer grupo de objetivos:\n\n\nConocer la estructura de la tabla de datos y sus tipos de variables\n\n\n\n\nDetectar observaciones incompletas (valores faltantes)\n\n\n\n\nDetectar datos con errores e inconsistencias\n\n\n\nHabitualmente hablamos de calidad de los datos en relación a los items anteriores."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#paquetes-especificos",
     "href": "primero/diapositivas/05a-diagnostico.html#paquetes-especificos",
     "title": "Diagnóstico y depuración de datos",
     "section": "Paquetes especificos",
-    "text": "Paquetes especificos\n\nVamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo, aunque dentro del universo de librerías de R vamos a encontrar muchos mas.\n\n\n\nskimr\n\n\nEstá diseñado para obtener un resumen rápido de la estructura de tablas de datos y es compatible con el ecosistema tidyverse.\n\n\n\n\n\n\n\ndlookr\n\n\nSe define como una colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos. El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos."
+    "text": "Paquetes especificos\nVamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo, aunque dentro del universo de librerías de R vamos a encontrar muchos mas.\n\n\n\nskimr\n\n\nEstá diseñado para obtener un resumen rápido de la estructura de tablas de datos y es compatible con el ecosistema tidyverse.\n\n\n\n\n\n\ndlookr\n\n\nSe define como una colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos. El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#duplicados",
     "href": "primero/diapositivas/05a-diagnostico.html#duplicados",
     "title": "Diagnóstico y depuración de datos",
     "section": "Duplicados",
-    "text": "Duplicados\n\nOtro de los problemas con los debemos lidiar muchas veces es tener observaciones duplicadas.\n\nLas tareas habituales en estos casos son:\n\n\nDetección de observaciones y/o partes de observaciones (variables clave) duplicadas\n\n\n\n\nEliminación de duplicados a partir de observaciones únicas.\n\n\n\n\nRecortar tabla de datos para eliminar duplicados\n\n\n\n\nMarcar duplicados (conservando duplicados en la tabla)"
+    "text": "Duplicados\n\nOtro de los problemas con los debemos lidiar muchas veces es tener observaciones duplicadas.\nLas tareas habituales en estos casos son:\n\n\nDetección de observaciones y/o partes de observaciones (variables clave) duplicadas\n\n\n\n\nEliminación de duplicados a partir de observaciones únicas.\n\n\n\n\nRecortar tabla de datos para eliminar duplicados\n\n\n\n\nMarcar duplicados (conservando duplicados en la tabla)"
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#detección-de-duplicados",
@@ -2231,5 +2231,12 @@
     "title": "Datos ordenados y relacionales",
     "section": "Documentación",
     "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 5 y 19 del libro “R for Data Science (2e) - Data tidy” / “R for Data Science (2e) - Joins”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos-1",
+    "href": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos-1",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "Exploración y diagnóstico de datos",
+    "text": "Exploración y diagnóstico de datos\n\nUna segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:\n\n\nResumir datos mediante estadísticos\nVisualizar distribuciones y patrones mediante gráficos\nDetectar valores atípicos (outlier)"
   }
 ]
