@@ -46,7 +46,7 @@ Llamamos **tidy data** o "datos ordenados" cuando:
 
 **Solución:**
 
-![](img/05b/tidy.PNG){.absolute top="180" left="1220" width="600"}
+![](img/05b/tidy.PNG){.absolute top="240" left="1350" width="450"}
 
 Usamos funciones pivot del paquete **tidyr** de tidyverse
 
@@ -56,7 +56,7 @@ Usamos funciones pivot del paquete **tidyr** de tidyverse
 
 ## Pivoteos {.title-top}
 
-![](img/05b/pivot.PNG){.absolute top="200" left="300" width="900"}
+![](img/05b/pivot.PNG){.absolute top="200" left="400" width="900"}
 
 ## `pivot_longer()` {.title-top}
 
