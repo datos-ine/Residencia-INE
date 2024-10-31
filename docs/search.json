@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "Gestión de datos epidemiológicos con R + RStudio",
     "section": "",
-    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
+    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
   },
   {
     "objectID": "about.html",
@@ -2238,5 +2238,180 @@
     "title": "Diagnóstico y depuración de datos",
     "section": "Exploración y diagnóstico de datos",
     "text": "Exploración y diagnóstico de datos\n\nUna segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:\n\n\nResumir datos mediante estadísticos\nVisualizar distribuciones y patrones mediante gráficos\nDetectar valores atípicos (outlier)"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#tipos-de-datos",
+    "href": "primero/diapositivas/05c-tipos.html#tipos-de-datos",
+    "title": "Tipos de datos específicos",
+    "section": "Tipos de datos",
+    "text": "Tipos de datos\n\nLos tipos de datos en lenguaje R se reconocen por:\n\nint (integer): números enteros\n\n\nnum o dbl (numeric): números reales\n\n\nchr (character): caracteres (texto)\n\n\nlogi o lgl (logical): valores lógicos\n\n\nDate: fechas\n\n\ndttm (date-time): fechas y horas\n\n\nfct (factor): factores"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#coerciones",
+    "href": "primero/diapositivas/05c-tipos.html#coerciones",
+    "title": "Tipos de datos específicos",
+    "section": "Coerciones",
+    "text": "Coerciones\n\nExisten funciones de R base que permiten comprobar y coercionar los tipos de datos.\n\n\n\nTipo\nComprobación\nCoerción\n\n\n\n\ncharacter\nis.character()\nas.character()\n\n\nnumeric\nis.numeric()\nas.numeric()\n\n\ninteger\nis.integer()\nas.integer()\n\n\ndouble\nis.double()\nas.double()\n\n\nfactor\nis.factor()\nas.factor()\n\n\nlogical\nis.logical()\nas.logical()\n\n\nNA\nis.na()\nas.na()\n\n\n\nLas coerciones, en ocasiones, provocan que se asignen valores NA porque no son posibles de realizar.\nEjemplo: puedo coercionar un múmero a caracter pero no puedo hacer lo inverso."
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#variables-de-tiempo",
+    "href": "primero/diapositivas/05c-tipos.html#variables-de-tiempo",
+    "title": "Tipos de datos específicos",
+    "section": "Variables de tiempo",
+    "text": "Variables de tiempo\n\n\nLas variables de tiempo pueden estar expresadas en diferentes unidades y formatos (fecha, hora, dia, mes, año, etc…). Dependerá de la tabla de datos, el tipo de estudio, etc.\nLas fechas y las horas son complicadas porque tienen que reconciliar dos fenómenos físicos (la rotación de la Tierra y su órbita alrededor del sol), con todo un conjunto de fenómenos geopolíticos que incluyen: formatos distintos (dd/mm/aaaa - mm/dd/aaaa), husos horarios y horarios de verano (en algunas ocasiones y países).\n\n\n\nPara pensar lo complejo del asunto contestemos estas preguntas:\n\n¿Todos los años tienen 365 días?\n¿Todos los días tienen 24 horas?\n¿Cada minuto tiene 60 segundos?"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#sistemas-de-fechas",
+    "href": "primero/diapositivas/05c-tipos.html#sistemas-de-fechas",
+    "title": "Tipos de datos específicos",
+    "section": "Sistemas de fechas",
+    "text": "Sistemas de fechas\nLas variables de tiempo nos obliga a gestionar tipos de datos fecha y hora, así como también intervalos entre esos instantes.\nCoexisten 2 clases de objetos básicos en el lenguaje R\n\nPOSIX (acrónimo de Portable Operating System Interface, y X viene de UNIX como seña de identidad de la API) es una norma escrita por la IEEE, que define una interfaz estándar del sistema operativo y el entorno. Los objetos fecha-hora se denominan formalmente tipos POSIXt, POSIXct, o POSIXlt (la diferencia no es relevante)"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#gestión-de-datos-de-tiempo",
+    "href": "primero/diapositivas/05c-tipos.html#gestión-de-datos-de-tiempo",
+    "title": "Tipos de datos específicos",
+    "section": "Gestión de datos de tiempo",
+    "text": "Gestión de datos de tiempo\n\n\n\n\nConvertir a formato Date o POSIX\n\n\n\n\n\nExtraer componentes (día, año, mes, semana, nombre del día, etc)\n\n\n\n\n\nTrabajar con lapsos de tiempo (intervalos, duraciones y períodos)\n\n\n\n\n\nOperaciones y cálculos con variables de tiempo"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#definiciones",
+    "href": "primero/diapositivas/05c-tipos.html#definiciones",
+    "title": "Tipos de datos específicos",
+    "section": "Definiciones",
+    "text": "Definiciones\n\nUn date es un día almacenado como el número de días desde el 01/01/1970 (si es anterior los números son negativos)\n\n\nlibrary(tidyverse)\n\n\nas_date(19881)\n\n[1] \"2024-06-07\"\n\nas_date(-1)\n\n[1] \"1969-12-31\"\n\n\n\nUn datetime es un punto en el tiempo, almacenado como el número de segundos desde el 01/01/1970 00:00:00 UTC\n\n\nas_datetime(1717718401)\n\n[1] \"2024-06-07 00:00:01 UTC\""
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#paquete-lubridate",
+    "href": "primero/diapositivas/05c-tipos.html#paquete-lubridate",
+    "title": "Tipos de datos específicos",
+    "section": "Paquete lubridate",
+    "text": "Paquete lubridate\n\n\n\nConvierte cadenas en fechas\n\n\ndmy(\"07/06/2024\")\n\n[1] \"2024-06-07\"\n\ndmy(\"07/06/2024\") |&gt; class()\n\n[1] \"Date\"\n\ndmy_h(\"07/06/2024 09\")\n\n[1] \"2024-06-07 09:00:00 UTC\"\n\n\n\n\nExtrae partes de una fecha\n\n\nhoy &lt;- dmy(\"07/06/2024\")\nhoy\n\n[1] \"2024-06-07\"\n\n# extraemos el año\n\nyear(hoy)\n\n[1] 2024\n\n# extraemos la semana epidemiológica\n\nepiweek(hoy)\n\n[1] 23"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#lapsos-de-tiempo",
+    "href": "primero/diapositivas/05c-tipos.html#lapsos-de-tiempo",
+    "title": "Tipos de datos específicos",
+    "section": "Lapsos de tiempo",
+    "text": "Lapsos de tiempo\n\n\nUn año trópico dura 365 días 5 hs 48 min 45,10 s (365,242189 días), por lo que se produce un desfasaje con respecto a nuestro año calendario.\nPara realizar operaciones con fechas y date-times sorteando estas dificultades, lubridate ofrece tres tipos de lapsos:\n\n\n\n\nIntervalos: lapso de tiempo que ocurre entre dos instantes específicos.\nDuraciones: lapso de tiempo medidos en segundos exactos (máxima unidad temporal con una longitud consistente).\nPeríodos: intervalo de tiempo en unidades “humanas” mayores que segundos (minutos, días, meses, etc)"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#operaciones-de-tiempo",
+    "href": "primero/diapositivas/05c-tipos.html#operaciones-de-tiempo",
+    "title": "Tipos de datos específicos",
+    "section": "Operaciones de tiempo",
+    "text": "Operaciones de tiempo\nCalculo de tiempo entre dos fechas\n\n\n\n\nfecha1 &lt;- dmy(\"26/05/1973\")\nfecha2 &lt;- dmy(\"07/06/2024\")\n\n# creamos un intervalo entre las dos fechas\nintervalo &lt;- interval(start = fecha1, \n                      end = fecha2)\nintervalo\n\n[1] 1973-05-26 UTC--2024-06-07 UTC\n\n# el intervalo puede ser divido por \n# duraciones que tienen unidades diferentes\n# Las duraciones comienzan con d\n# ejemplo: dyears()\n\n\n\nintervalo / dyears(1) # años\n\n[1] 51.03354\n\nintervalo %/% dyears(1) # solo enteros\n\n[1] 51\n\nintervalo / ddays()\n\n[1] 18640\n\n18640 / 365.25 # calculo de años\n\n[1] 51.03354"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#cadenas-de-caracteres-texto",
+    "href": "primero/diapositivas/05c-tipos.html#cadenas-de-caracteres-texto",
+    "title": "Tipos de datos específicos",
+    "section": "Cadenas de caracteres (texto)",
+    "text": "Cadenas de caracteres (texto)\n\nPara el lenguaje R, todo caracter que se encuentre entre comillas es una cadena de caracteres (en inglés llamada “string”).\nLas cadenas de caracteres pueden contener letras (“a”), números (“1”) y símbolos (“&”) o una combinación de todos ellos.\n\nEjemplos de datos tipo cadena regular:\n\n\n\nValores ejemplo\nDescripción\n\n\n\n\nB188\nCódigos CIE10\n\n\nC34.9\nTopografía CIE-O\n\n\n9061/6\nMorfología CIE-O\n\n\nGAT-AAU-ATC-GAA\nSecuencia ADN\n\n\n7600XAD\nCódigos postales"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#paquete-stringr",
+    "href": "primero/diapositivas/05c-tipos.html#paquete-stringr",
+    "title": "Tipos de datos específicos",
+    "section": "Paquete stringr",
+    "text": "Paquete stringr\n\n El paquete stringr se instala y activa cuando ejecutamos library(tidyverse).\n\n\nContiene una familia de funciones diseñadas para trabajar con cadenas de caracteres.\n\n\n\nPermite utilizar expresiones regulares (regex).\n\n\n\nSus funciones comienzan con el prefijo str_"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#algunas-de-sus-funciones-comunes",
+    "href": "primero/diapositivas/05c-tipos.html#algunas-de-sus-funciones-comunes",
+    "title": "Tipos de datos específicos",
+    "section": "Algunas de sus funciones comunes",
+    "text": "Algunas de sus funciones comunes\n\n\n\nstr_lengtht(): devuelve longitud de cadena\n\n\n\n\nstr_sub(): extrae o reemplaza caracteres por posición\n\n\n\n\nstr_to_upper(): convierte a mayúsculas\n\n\n\n\nstr_to_lower(): convierte a minúsculas\n\n\n\n\nstr_trim(): elimina espacios en blanco\n\n\n\n\nstr_pad(): agrega espacios en blanco u otros caracteres\n\n\n\n\nstr_glue(): une cadenas de caracteres"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#expresiones-regulares",
+    "href": "primero/diapositivas/05c-tipos.html#expresiones-regulares",
+    "title": "Tipos de datos específicos",
+    "section": "Expresiones regulares",
+    "text": "Expresiones regulares\n\nUna expresión regular es una cadena de texto especial para describir un patrón de búsqueda que se puede utilizar generalmente para:\n\n\nlocalizar cadenas de caracteres (ubicar - filtrar)\n\n\n\n\nextraer una porción de los datos (extraer)\n\n\n\n\nmodificar los datos localizados (reemplazar)\n\n\n\nUna expresión regular habitualmente se construye concatenando la especificación de caracteres secuenciados."
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#operaciones-y-funciones-que-permiten-expresiones-regulares",
+    "href": "primero/diapositivas/05c-tipos.html#operaciones-y-funciones-que-permiten-expresiones-regulares",
+    "title": "Tipos de datos específicos",
+    "section": "Operaciones y funciones que permiten expresiones regulares",
+    "text": "Operaciones y funciones que permiten expresiones regulares\n - Detectar patrones str_detect(): Devuelve vector lógico\n\nFiltrar patrones str_subset(): Devuelve coincidencia en patrón\nExtraer patrones str_extract(): Extrae coincidencias\nLocalizar patrones str_locate(): Localiza comienzo y final del patrón\nReemplazar patrones str_replace(): Reemplaza por otra cadena"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#expresiones-regulares-1",
+    "href": "primero/diapositivas/05c-tipos.html#expresiones-regulares-1",
+    "title": "Tipos de datos específicos",
+    "section": "Expresiones regulares",
+    "text": "Expresiones regulares\n\n\n\n\n\n\n\n\nSímbolos y metacaracteres\nDescripción\n\n\n\n\n^\nInicio de la cadena\n\n\n$\nFinal de la cadena\n\n\n[ ]\nCualquier carácter del conjunto entre paréntesis\n\n\n[^]\nCualquier carácter no incluido en el conjunto\n\n\n?\nCero o una ocurrencia de lo que precede al símbolo\n\n\n+\nEl caracter que le precede debe aparecer al menos una vez\n\n\n*\nEl caracter que le precede debe aparecer cero, una o más veces\n\n\n{x}\nx ocurrencias del caracter que lo precede\n\n\n{x,z}\nEntre x y z ocurrencias del caracter que lo precede\n\n\n{x,}\nx o más ocurrencias de lo que lo precede"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#expresiones-regulares-2",
+    "href": "primero/diapositivas/05c-tipos.html#expresiones-regulares-2",
+    "title": "Tipos de datos específicos",
+    "section": "Expresiones regulares",
+    "text": "Expresiones regulares\n\n\n\n\n\n\n\n\nSímbolos y metacaracteres\nDescripción\n\n\n\n\n|\nUne subexpresiones\n\n\n.\nConcuerda con cualquier carácter individual\n\n\n( )\nAgrupa subexpresiones\n\n\n0-9 a-z A-Z\nRangos de números, letras…\n\n\n\\\nMarca el carácter siguiente como un carácter especial\n\n\n\\.\nRepresenta un punto dentro del patrón\n\n\n\\s\nRepresenta un espacio en blanco dentro del patrón\n\n\n\\n\nRepresenta un salto de línea dentro del patrón\n\n\n\\d\nRepresenta un dígito numérico dentro del patrón\n\n\n\\w\nRepresenta un carácter alfanumérico dentro del patrón"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#expresiones-regulares-3",
+    "href": "primero/diapositivas/05c-tipos.html#expresiones-regulares-3",
+    "title": "Tipos de datos específicos",
+    "section": "Expresiones regulares",
+    "text": "Expresiones regulares\n\nAlgunos ejemplos sencillos:\n\n^[ML][0-9]$\nCadenas que comiencen con M o L y finalicen con algún número entre 0 y 9\n4{3}\nCadenas que contengan tres números 4 repetidos continuos\n^E\\\\d\nCadenas que comiencen con E y continúen con un número cualquiera\n[A-z]$\nCadenas que finaliza con alguna letra mayúscula o minúscula"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#factores-en-r",
+    "href": "primero/diapositivas/05c-tipos.html#factores-en-r",
+    "title": "Tipos de datos específicos",
+    "section": "Factores en R",
+    "text": "Factores en R\n\nLos factores son el formato de datos que el lenguaje R reserva para trabajar con variables categóricas, es decir, variables que tienen un conjunto fijo y conocido de valores posibles (categorías cerradas).\n\n\n\nEstán compuesto por valores numéricos internos asociados a etiquetas que definen cada uno de los niveles (categorías de la variable).\n\n\n\nSon necesarios, por ejemplo, cuando necesitamos mostrar variables de caracteres en un orden específico (no alfabético)."
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#paquete-forcats",
+    "href": "primero/diapositivas/05c-tipos.html#paquete-forcats",
+    "title": "Tipos de datos específicos",
+    "section": "Paquete forcats",
+    "text": "Paquete forcats\n\n  \n\nEl paquete forcats proporciona un conjunto de herramientas útiles que resuelven problemas comunes con factores en R.\n\n\n\nRespeta los principios del tidyverse\n\n\n\nTodas sus funciones comienzan con el prefijo fct_"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#funciones-mas-relevantes",
+    "href": "primero/diapositivas/05c-tipos.html#funciones-mas-relevantes",
+    "title": "Tipos de datos específicos",
+    "section": "Funciones mas relevantes",
+    "text": "Funciones mas relevantes\n\n\n\nfct_recode(): recodifica niveles\n\n\n\n\nfct_relevel(): reordena niveles\n\n\n\n\nfct_expand(): agrega nuevos niveles\n\n\n\n\nfct_drop(): elimina niveles no utilizados\n\n\n\n\nfct_rev(): revierte orden de los niveles\n\n\n\n\nfct_unique(): muestra valores únicos del factor"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#funciones-mas-relevantes-1",
+    "href": "primero/diapositivas/05c-tipos.html#funciones-mas-relevantes-1",
+    "title": "Tipos de datos específicos",
+    "section": "Funciones mas relevantes",
+    "text": "Funciones mas relevantes\n\n\nfct_infreq(): ordena niveles por frecuencia\n\n\n\nfct_explicit_na(): explicita valores NA (agrega etiqueta al nivel)\n\n\n\n\nfct_other(): unifica niveles concretos en “otros”\n\n\n\n\nfct_lump(): unifica niveles menos frecuentes absolutos en “otros”\n\n\n\n\nfct_lump_prop(): unifica niveles menos frecuentes porcentuales en “otros”"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#manejo-de-nas-con-naniar",
+    "href": "primero/diapositivas/05c-tipos.html#manejo-de-nas-con-naniar",
+    "title": "Tipos de datos específicos",
+    "section": "Manejo de NA’s con naniar",
+    "text": "Manejo de NA’s con naniar\n\n  \nEl paquete naniar es otro paquete que reúne funciones para el manejo de valores faltantes (NA en R).\n\n\nProporciona funciones analíticas y visuales de detección y gestión\nEs compatible con el mundo “tidy” de tidyverse\nPosibilita el trabajo de imputación (no lo trataremos en el curso)"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#paquete-naniar",
+    "href": "primero/diapositivas/05c-tipos.html#paquete-naniar",
+    "title": "Tipos de datos específicos",
+    "section": "Paquete naniar",
+    "text": "Paquete naniar\n\nDe las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para nuestra tarea habitual.\nmiss_var_summary(): proporciona un resumen sobre los valores NA en cada variable del dataframe\ngg_miss_upset(): genera un gráfico Upset sobre los valores NA de dataframe\nreplace_with_na(): reemplaza valores específicos con valores NA\nreplace_na_with(): reemplaza valores NA con valores específicos"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#ejemplo-de-un-upset-de-valores-perdidos",
+    "href": "primero/diapositivas/05c-tipos.html#ejemplo-de-un-upset-de-valores-perdidos",
+    "title": "Tipos de datos específicos",
+    "section": "Ejemplo de un UpSet de valores perdidos",
+    "text": "Ejemplo de un UpSet de valores perdidos"
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html#documentación",
+    "href": "primero/diapositivas/05c-tipos.html#documentación",
+    "title": "Tipos de datos específicos",
+    "section": "Documentación",
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulos 14, 15, 16 y 17 del libro “R for Data Science (2e) - Data tidy”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]
