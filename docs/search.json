@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "Gestión de datos epidemiológicos con R + RStudio",
     "section": "",
-    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
+    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
   },
   {
     "objectID": "about.html",
@@ -2413,5 +2413,320 @@
     "title": "Tipos de datos específicos",
     "section": "Documentación",
     "text": "Documentación\n\n\n\n\n\n\n\nCapítulos 14, 15, 16 y 17 del libro “R for Data Science (2e) - Data tidy”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#paquete-rstatix",
+    "href": "primero/diapositivas/06-analisis.html#paquete-rstatix",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete rstatix",
+    "text": "Paquete rstatix\n\nEl paquete rstatix simplifica el proceso de realizar análisis estadísticos complejos.\n\n\nsintaxis intuitiva y basada en el paradigma de la “gramática de datos” de tidyverse\n\n\n\n\npermite realizar pruebas estadísticas comunes, como t-tests, ANOVA, y correlaciones, de manera rápida y eficiente\n\n\n\n\ndiseño que facilita la integración de resultados en flujos de trabajo de análisis reproducibles, asegurando que las conclusiones derivadas de los datos sean robustas y transparentes."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#paquete-rstatix-1",
+    "href": "primero/diapositivas/06-analisis.html#paquete-rstatix-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete rstatix",
+    "text": "Paquete rstatix\n\nMuchas de sus funciones son espejos de las funciones estadísticas de R base pero compatibles con tidyverse, por lo que siempre devuelven los resultados en dataframes\n\n\nlibrary(rstatix)\n\ndatos |&gt; \n  t_test(Edad ~ Sexo)\n\n# A tibble: 1 × 8\n  .y.   group1 group2    n1    n2 statistic    df     p\n* &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Edad  Mujer  Varon     29    33    -0.871  59.6 0.387\n\n\nLo que nos permite conectar el resultado mediante tuberías hacia otras funciones del tidyverse, como select() o filter()."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#paquete-rstatix-2",
+    "href": "primero/diapositivas/06-analisis.html#paquete-rstatix-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete rstatix",
+    "text": "Paquete rstatix\n\nTiene dos funciones de resumenes para variables cuantitativas y cualitativas:\n\ndatos |&gt; get_summary_stats(Edad, type = \"mean_sd\")\n\n# A tibble: 1 × 4\n  variable     n  mean    sd\n  &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Edad        62  58.6  24.5\n\ndatos |&gt; get_summary_stats(Edad, type = \"median_iqr\")\n\n# A tibble: 1 × 4\n  variable     n median   iqr\n  &lt;fct&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 Edad        62   62.5    40"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#paquete-rstatix-3",
+    "href": "primero/diapositivas/06-analisis.html#paquete-rstatix-3",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete rstatix",
+    "text": "Paquete rstatix\n\ndatos |&gt; group_by(Sexo) |&gt; \n  get_summary_stats(Edad, type = \"common\")\n\n# A tibble: 2 × 11\n  Sexo  variable     n   min   max median   iqr  mean    sd    se    ci\n  &lt;chr&gt; &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Mujer Edad        29    18    93     57    39  55.7  23.9  4.44  9.10\n2 Varon Edad        33    19    99     63    41  61.1  25.1  4.37  8.90\n\ndatos |&gt; freq_table(Sexo)\n\n# A tibble: 2 × 3\n  Sexo      n  prop\n  &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;\n1 Mujer    31  46.3\n2 Varon    36  53.7"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#paquete-janitor",
+    "href": "primero/diapositivas/06-analisis.html#paquete-janitor",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete janitor",
+    "text": "Paquete janitor\n\nEl paquete janitor tiene numerosas funciones de las cuales vamos a destacar la familia tabyl.\n\n\nLa función tabyl() permite crear tablas de frecuencia de una variable o tablas de contingencia para dos o más variables categóricas.\n\n\n\nEl paquete además tiene otras funciones que se enlazan con tabyl para personalizar los resultados en estas tablas (por ejemplo, agregar totales o representar frecuencias realtivas como porcentajes)"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#paquete-janitor-1",
+    "href": "primero/diapositivas/06-analisis.html#paquete-janitor-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete janitor",
+    "text": "Paquete janitor\nSe puede personalizar la tabla conectando por tuberías el agregado de otras funciones del paquete.\n\nlibrary(janitor)\ndatos  |&gt;   \n  tabyl(Sexo) |&gt;  \n  adorn_totals(where = \"row\") |&gt;  \n  adorn_pct_formatting(digits = 2) \n\n  Sexo  n percent\n Mujer 31  46.27%\n Varon 36  53.73%\n Total 67 100.00%\n\n\nIncorporamos totales con adorn_totals() y configuramos los porcentajes con adorn_pct_formatting()."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#gtsummary",
+    "href": "primero/diapositivas/06-analisis.html#gtsummary",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "gtsummary",
+    "text": "gtsummary\n\nEste paquete permite crear tablas de resumen elegantes y personalizables que destacan las estadísticas descriptivas, resultados de modelos, y comparaciones de grupos.\n\nEstas tablas son esenciales para reportes, publicaciones y presentaciones, asegurando que la información clave sea fácilmente comprensible.\n\n\nLas salidas buscan producir estéticas compatibles con las tablas que se envían a publicar en la mayoría de las revistas científicas, así como también en otras publicaciones similares."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#gtsummary-1",
+    "href": "primero/diapositivas/06-analisis.html#gtsummary-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "gtsummary",
+    "text": "gtsummary\n\nUn ejemplo de una tabla descriptiva con variables cuanti y cuali estratificada por Sexo."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#flextable",
+    "href": "primero/diapositivas/06-analisis.html#flextable",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "flextable",
+    "text": "flextable\n\nEste paquete es similar a otras librerías como gt, huxtable, kableExtra, etc, que transforman las tablas y dataframes de R en salidas elegantes.\n\n\nLa documentación oficial dice “crear tablas flexibles y altamente personalizables en formatos de Microsoft Word, PowerPoint y HTML”.\n\n\n La elección de este paquete sobre las otras opciones tiene que ver con la amplitud de opciones en la compatibilidad de los formatos de salida.\n\n\nLas funciones del paquete se integran facilmente con Quarto"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#flextable-1",
+    "href": "primero/diapositivas/06-analisis.html#flextable-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "flextable",
+    "text": "flextable\n\nUna tablita que creamos anteriormente con freq_table() de rstatix fue:\n\ndatos |&gt; freq_table(Sexo)\n\n# A tibble: 2 × 3\n  Sexo      n  prop\n  &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;\n1 Mujer    31  46.3\n2 Varon    36  53.7\n\n\n\nLa salida tradicional de consola se visualiza estéticamente fea."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#flextable-2",
+    "href": "primero/diapositivas/06-analisis.html#flextable-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "flextable",
+    "text": "flextable\nCon flextable podemos configurar esa misma tabla, para mejorar su presentación:\n\nlibrary(flextable)\ndatos |&gt; freq_table(Sexo) |&gt; \n  flextable() |&gt; \n  fontsize(size = 30, part = \"all\") |&gt; \n  align(align = \"center\", part = \"all\") |&gt; \n  line_spacing(space = 2, part = \"all\") |&gt; \n  padding(padding = 6, part = \"header\") |&gt; \n  set_header_labels(n = \"Frecuencia\", prop = \"%\") |&gt; \n  theme_zebra()\n\nSexoFrecuencia%Mujer3146.3Varon3653.7"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#funciones",
+    "href": "primero/diapositivas/06-analisis.html#funciones",
+    "title": "Análisis estadístico",
+    "section": "Funciones",
+    "text": "Funciones\n\nLas funciones nos permiten automatizar tareas comunes de una manera más potente y general que copiar y pegar.\n\n\nFunciones vectoriales que toman uno o más vectores como entrada y devuelven un vector como salida.\n\n\n\n\nFunciones de tablas de datos que toman un dataframe como entrada y devuelven un dataframe como salida.\n\n\n\n\nFunciones gráficas que toman un dataframe como entrada y devuelven un gráfico como salida."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#ejemplo-de-una-función",
+    "href": "primero/diapositivas/06-analisis.html#ejemplo-de-una-función",
+    "title": "Análisis estadístico",
+    "section": "Ejemplo de una función",
+    "text": "Ejemplo de una función\n\nEn el material de ajuste de tasas de esta unidad, hay un momento donde creamos grupos etarios regulares cada 5 años y tenemos el problema que las etiquetas de cut_interval() no coinciden con las leídas en las proyecciones de población.\nTomamos entonces el dataframe defunciones a la altura de tener EDAD y UNIEDAD antes de construir los grupos etarios.\n\n\n# A tibble: 183,814 × 4\n   JURI   EDAD UNIEDAD  SEXO\n   &lt;chr&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;\n 1 06       86       1     1\n 2 06       66       1     2\n 3 06       84       1     1\n 4 06       90       1     2\n 5 06       73       1     2\n 6 06       60       1     2\n 7 06       72       1     2\n 8 06       77       1     2\n 9 06       78       1     1\n10 06       78       1     2\n# ℹ 183,804 more rows"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#ejemplo-de-una-función-1",
+    "href": "primero/diapositivas/06-analisis.html#ejemplo-de-una-función-1",
+    "title": "Análisis estadístico",
+    "section": "Ejemplo de una función",
+    "text": "Ejemplo de una función\n\nEl código que sigue es el trabajo que hay que hacer para generar los grupos y que sean coincidentes con los grupos de las proyecciones de población.\n\ndefunciones &lt;- defunciones |&gt; \n  mutate(EDAD = if_else(UNIEDAD &gt; 1,\n                        true = 0,  \n                        false = EDAD),                   \n         GRUPEDAD = cut_interval(EDAD,\n                                 length = 5,\n                                 right = F),\n         GRUPEDAD = as.character(GRUPEDAD),\n         GRUPEDAD = str_sub(GRUPEDAD,\n                            start = 2, \n                            end = str_length(GRUPEDAD)-1),\n         x = str_split_fixed(GRUPEDAD, \",\",\n                             n = 2),\n         x2 = as.numeric(x[,2])-1,\n         GRUPEDAD = str_c(x[,1],\"-\",x2),\n         GRUPEDAD = if_else(EDAD &gt;= 80,\n                            true =\"80 y más\", \n                            false = GRUPEDAD)) |&gt; \n  select(!c(x, x2, EDAD, UNIEDAD))"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#ejemplo-de-una-función-2",
+    "href": "primero/diapositivas/06-analisis.html#ejemplo-de-una-función-2",
+    "title": "Análisis estadístico",
+    "section": "Ejemplo de una función",
+    "text": "Ejemplo de una función\n\nEntonces podemos pensar en una función que automatice la tarea para aplicarla cada vez que la necesitemos.\n\ngrupo_5 &lt;- function(datos, EDAD, UNIEDAD) {\n  datos |&gt; \n  mutate(EDAD = if_else({{ UNIEDAD }} &gt; 1,\n                        true = 0,  \n                        false = {{ EDAD }}),                   \n         GRUPEDAD = cut_interval(EDAD,\n                                 length = 5,\n                                 right = F),\n         GRUPEDAD = as.character(GRUPEDAD),\n         GRUPEDAD = str_sub(GRUPEDAD,\n                            start = 2, \n                            end = str_length(GRUPEDAD)-1),\n         x = str_split_fixed(GRUPEDAD, \",\",\n                             n = 2),\n         x2 = as.numeric(x[,2])-1,\n         GRUPEDAD = str_c(x[,1],\"-\",x2),\n         GRUPEDAD = if_else(EDAD &gt;= 80,\n                            true =\"80 y más\", \n                            false = GRUPEDAD)) |&gt; \n  select(!c(x, x2, EDAD, UNIEDAD))\n}"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#ejemplo-de-una-función-3",
+    "href": "primero/diapositivas/06-analisis.html#ejemplo-de-una-función-3",
+    "title": "Análisis estadístico",
+    "section": "Ejemplo de una función",
+    "text": "Ejemplo de una función\n\nAplicamos la función a los datos defunciones\n\n\ndefunciones |&gt; grupo_5(EDAD, UNIEDAD)\n\n# A tibble: 183,814 × 3\n   JURI   SEXO GRUPEDAD\n   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   \n 1 06        1 80 y más\n 2 06        2 65-69   \n 3 06        1 80 y más\n 4 06        2 80 y más\n 5 06        2 70-74   \n 6 06        2 60-64   \n 7 06        2 70-74   \n 8 06        2 75-79   \n 9 06        1 75-79   \n10 06        2 75-79   \n# ℹ 183,804 more rows\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#operaciones-simultáneas-por-columnas",
+    "href": "primero/diapositivas/06-analisis.html#operaciones-simultáneas-por-columnas",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Operaciones simultáneas por columnas",
+    "text": "Operaciones simultáneas por columnas\n\nLa filosofía de trabajo de tidyverse se plantea nunca copiar y pegar más de dos veces el código escrito, pero cuando necesitamos realizar la misma operación en un conjunto de variables simultáneamente nos encontramos con este problema.\n\n\nLa solución, ofrecida dentro de dplyr, es un andamiaje que permite aplicar funciones y expresiones a varias columnas simultáneamente.\n\n\nEs una forma de iteración, donde se repite la misma acción en diferentes objetos. En este caso los objetos serán columnas (variables) de la tabla de datos.\n\n\nLas operaciones simultáneas pueden darse como transformación (dentro de un mutate()) o de resumen (dentro de un summarise())"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#operaciones-simultáneas-por-columnas-1",
+    "href": "primero/diapositivas/06-analisis.html#operaciones-simultáneas-por-columnas-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Operaciones simultáneas por columnas",
+    "text": "Operaciones simultáneas por columnas\n\nCreación de múltiples columnas con mutate()\n\n\n\n\n\nResumiendo múltiples columnas con summarise()"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#función-across",
+    "href": "primero/diapositivas/06-analisis.html#función-across",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función across()",
+    "text": "Función across()\nLa función across() es la encargada de dar soporte a estas operaciones múltiples (dplyr &gt;= 1.0.0).\n\nacross(.cols,  .fns,  ...,  .names)\n\n\n.cols = columnas a transformar\n.fns = función o funciones para aplicar a cada columna de .cols\n... = argumentos adicionales de las funciones especificadas anteriormente (ejemplo: na.rm = T)\n.names = nombres de las columnas de salida. Aquí, {.col} es un marcador especial al que se le puede agregar el sufijo deseado."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#resúmenes-múltiples",
+    "href": "primero/diapositivas/06-analisis.html#resúmenes-múltiples",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Resúmenes múltiples",
+    "text": "Resúmenes múltiples\n\nTomemos la siguiente tabla de datos ficticios (mostramos las primeras 4 observaciones):\n\n\n# A tibble: 4 × 4\n        a     b      c      d\n    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 -0.560  1.22  -1.07   0.426\n2 -0.230  0.360 -0.218 -0.295\n3  1.56   0.401 -1.03   0.895\n4  0.0705 0.111 -0.729  0.878\n\n\n\nSupongamos que queremos calcular la media de cada variable…"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#resúmenes-múltiples-1",
+    "href": "primero/diapositivas/06-analisis.html#resúmenes-múltiples-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Resúmenes múltiples",
+    "text": "Resúmenes múltiples\nPodríamos hacerlo repitiendo para cada variable\n\ndatos |&gt; summarise(\n  a = mean(a),\n  b = mean(b),\n  c = mean(c),\n  d = mean(d),\n)\n\n# A tibble: 1 × 4\n       a     b      c     d\n   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 0.0746 0.209 -0.425 0.322\n\n\n\nPero esto rompe la regla general que buscamos de nunca copiar y pegar más de dos veces…"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#resúmenes-múltiples-2",
+    "href": "primero/diapositivas/06-analisis.html#resúmenes-múltiples-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Resúmenes múltiples",
+    "text": "Resúmenes múltiples\nPara solucionarlo aplicamos across() y realizamos el resumen simultáneo en una sola línea.\n\ndatos |&gt; summarise(\n  across(.cols = a:d, .fns = mean),\n)\n\n# A tibble: 1 × 4\n       a     b      c     d\n   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 0.0746 0.209 -0.425 0.322\n\n\n\nNótese que el primer argumento es el rango de nombres de variables y el segundo la función que aplicamos a todas ellas (nombres de funciones sin paréntesis)."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#seleccionar-variables-.cols",
+    "href": "primero/diapositivas/06-analisis.html#seleccionar-variables-.cols",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Seleccionar variables (.cols)",
+    "text": "Seleccionar variables (.cols)\n\nEl primer argumento de across() responde de la misma forma que la función select() y aplican también las funciones ayudantes de selección.\n\nnames(datos)\n\n[1] \"grupo\" \"a\"     \"b\"     \"c\"     \"d\"    \n\ndatos |&gt; \n  group_by(grupo) |&gt; \n  summarize(across(everything(), mean))\n\n# A tibble: 2 × 5\n  grupo      a       b      c      d\n  &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1     1 -0.191 -0.331  -0.485 -0.357\n2     2  0.132 -0.0552  0.421  0.239"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#recordamos-a-las-funciones-ayudantes-de-selección",
+    "href": "primero/diapositivas/06-analisis.html#recordamos-a-las-funciones-ayudantes-de-selección",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Recordamos a las funciones ayudantes de selección",
+    "text": "Recordamos a las funciones ayudantes de selección\n\n\n\n\neverything(): coincide con todas las variables.\ngroup_cols(): seleccione todas las columnas de agrupación.\nstarts_with(): comienza con un prefijo.\nends_with(): termina con un sufijo.\ncontains(): contiene una cadena literal.\nmatches(): coincide con una expresión regular.\n\n\n\nnum_range(): coincide con un rango numérico como x01, x02, x03.\nall_of(): coincide con nombres de variables en un vector de caracteres. Todos los nombres deben estar presentes; de lo contrario, se generará un error de fuera de límites.\nany_of(): igual que all_of(), excepto que no se genera ningún error para los nombres que no existen.\nwhere(): aplica una función a todas las variables y selecciona aquellas para las cuales la función regresa TRUE."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#expresiones-de-selección",
+    "href": "primero/diapositivas/06-analisis.html#expresiones-de-selección",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Expresiones de selección",
+    "text": "Expresiones de selección\n\nEl argumento .cols también puede recibir construcciones booleanas utilizando los operadores conocidos como ! (negación) y conectores lógicos como & (AND) y | (OR) entre las funciones ayudantes de selección.\n\nPor ejemplo:\n\n.cols = !where(is.numeric) & starts_with(\"a\")\n\n\nSelecciona todas las columnas no numéricas, cuyo nombre comienza con “a”."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones",
+    "href": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Agregar argumentos a las funciones",
+    "text": "Agregar argumentos a las funciones\n\nHasta ahora vimos el ejemplo de aplicar una función simple como mean() a un grupo de variables.\n\n\nQue sucede si entre los datos de esas variables hay valores NA?\nVamos a necesitar incorporar el argumento na.rm = TRUE a la función.\n\n\n\nDonde lo hacemos dentro de un across()?"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones-1",
+    "href": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Agregar argumentos a las funciones",
+    "text": "Agregar argumentos a las funciones\n\nSupongamos que tenemos estos datos (mostramos algunas observaciones):\n\n\n# A tibble: 4 × 4\n       a      b      c      d\n   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1  1.56  -1.27  NA     -0.473\n2 -0.560 NA     -1.05  -1.07 \n3 -0.230  1.22   0.238 -0.218\n4 NA     -0.446  1.29  -1.03 \n\n\n\nVemos algunos valores NA entre las observaciones."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones-2",
+    "href": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Agregar argumentos a las funciones",
+    "text": "Agregar argumentos a las funciones\n\nSi aplicamos el mismo código de across() anterior tendríamos como resultado:\n\ndatos_na |&gt; \n  summarise(\n    across(a:d, mean)\n  )\n\n# A tibble: 1 × 4\n      a     b     c      d\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1    NA    NA    NA -0.703\n\n\n\nSería bueno que le pasaramos na.rm = TRUE a la función mean()."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones-3",
+    "href": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones-3",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Agregar argumentos a las funciones",
+    "text": "Agregar argumentos a las funciones\nExisten dos formas sintácticas de hacerlo.\n\nUna función estilo-purrr (tidyverse): ~ mean(.x, na.rm = TRUE)\nUna función anónima (base): function(x) mean(x, na.rm = TRUE) ; o mejor en su forma de atajo: \\(x) mean(x, na.rm = TRUE)\n\n\ndatos_na |&gt; \n  summarise(\n    across(a:d, \\(x) mean(x, na.rm = TRUE))\n  )\n\n# A tibble: 1 × 4\n      a      b     c      d\n  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1 0.210 -0.293 0.161 -0.703"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#múltiples-funciones",
+    "href": "primero/diapositivas/06-analisis.html#múltiples-funciones",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Múltiples funciones",
+    "text": "Múltiples funciones\nPara incorporar más de una función dentro de across() debemos incluirlas dentro de una lista [list()]\n\ndatos_na |&gt; \n  summarise(\n    across(a:d, list(\n      media = \\(x) mean(x, na.rm = TRUE),\n      n_na = \\(x) sum(is.na(x))))\n  )\n\n# A tibble: 1 × 8\n  a_media a_n_na b_media b_n_na c_media c_n_na d_media d_n_na\n    &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;\n1   0.210      1  -0.293      1   0.161      2  -0.703      0\n\n\nLa lista contiene cada función a aplicar, bajo nombres definidos."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#cambiar-nombres-de-resultados",
+    "href": "primero/diapositivas/06-analisis.html#cambiar-nombres-de-resultados",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Cambiar nombres de resultados",
+    "text": "Cambiar nombres de resultados\n\nObservemos que los nombres de las variables resultado se componen del nombre de la columna, un guión bajo y el nombre definido de la función aplicada, para distinguir entre las múltiples funciones del across().\nLa estructura de estos nombres se pueden modificar con el argumento .names de across().\nLos marcadores especiales para el nombre de columna es {.col} y para el nombre de la función definida es {.fn}."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#cambiar-nombres-de-resultados-1",
+    "href": "primero/diapositivas/06-analisis.html#cambiar-nombres-de-resultados-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Cambiar nombres de resultados",
+    "text": "Cambiar nombres de resultados\n\nPor ejemplo, podríamos invertir el orden predeterminado de los nombres del resumen.\n\ndatos_na |&gt; \n  summarise(\n    across(a:d, list(\n      media = \\(x) mean(x, na.rm = TRUE),\n      n_na = \\(x) sum(is.na(x))),\n      .names = \"{.fn}_{.col}\")\n  )\n\n# A tibble: 1 × 8\n  media_a n_na_a media_b n_na_b media_c n_na_c media_d n_na_d\n    &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;\n1   0.210      1  -0.293      1   0.161      2  -0.703      0"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#transformación-de-tipos-de-datos",
+    "href": "primero/diapositivas/06-analisis.html#transformación-de-tipos-de-datos",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Transformación de tipos de datos",
+    "text": "Transformación de tipos de datos\n\nHasta ahora vimos como funciona la función across() dentro de un resumen (summarise) pero al comienzo también dijimos que se puede utilizar para transformaciones masivas de datos.\n\nPara lograr esto la función se vincula con mutate() modificando las variables originales o bien creando nuevas variables si cambiamos su nombre con .names."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#transformación-de-tipos-de-datos-1",
+    "href": "primero/diapositivas/06-analisis.html#transformación-de-tipos-de-datos-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Transformación de tipos de datos",
+    "text": "Transformación de tipos de datos\n\nAplicamos la función coalesce() para convertir los valores NA en ceros, transformando las variables originales.\n\ndatos_na |&gt; \n  mutate(\n    across(a:d, \\(x) coalesce(x, 0))\n  )\n\n# A tibble: 5 × 4\n        a      b      c      d\n    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1  1.56   -1.27   0     -0.473\n2 -0.560   0     -1.05  -1.07 \n3 -0.230   1.22   0.238 -0.218\n4  0      -0.446  1.29  -1.03 \n5  0.0705 -0.687  0     -0.729"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#transformación-de-tipos-de-datos-2",
+    "href": "primero/diapositivas/06-analisis.html#transformación-de-tipos-de-datos-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Transformación de tipos de datos",
+    "text": "Transformación de tipos de datos\nHacemos lo mismo pero cambiamos los nombres de las variables de salida del mutate() que van a coexistir con las originales.\n\ndatos_na |&gt; \n  mutate(\n    across(a:d, \\(x) coalesce(x, 0),\n      .names = \"{.col}_na_cero\")\n  )\n\n# A tibble: 5 × 8\n        a      b      c      d a_na_cero b_na_cero c_na_cero d_na_cero\n    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1  1.56   -1.27  NA     -0.473    1.56      -1.27      0        -0.473\n2 -0.560  NA     -1.05  -1.07    -0.560      0        -1.05     -1.07 \n3 -0.230   1.22   0.238 -0.218   -0.230      1.22      0.238    -0.218\n4 NA      -0.446  1.29  -1.03     0         -0.446     1.29     -1.03 \n5  0.0705 -0.687 NA     -0.729    0.0705    -0.687     0        -0.729"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#filtros",
+    "href": "primero/diapositivas/06-analisis.html#filtros",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Filtros",
+    "text": "Filtros\n\nEn el caso de iteraciones similares para incluir dentro de la función filter() el paquete dplyr propone dos funciones específicas: if_any() e if_all().\n\nEn el primer caso, la función enmascara una repetición de OR lógicos y en la segunda una secuencia de AND lógicos."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#filtros-1",
+    "href": "primero/diapositivas/06-analisis.html#filtros-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Filtros",
+    "text": "Filtros\n\ndatos_na |&gt; filter(if_any(a:d, is.na))\n\n# A tibble: 4 × 4\n        a      b     c      d\n    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1  1.56   -1.27  NA    -0.473\n2 -0.560  NA     -1.05 -1.07 \n3 NA      -0.446  1.29 -1.03 \n4  0.0705 -0.687 NA    -0.729\n\n\nEs lo mismo que filter(is.na(a) | is.na(b) | is.na(c) | is.na(d))\n\ndatos_na |&gt; filter(if_all(a:d, is.na))\n\n# A tibble: 0 × 4\n# ℹ 4 variables: a &lt;dbl&gt;, b &lt;dbl&gt;, c &lt;dbl&gt;, d &lt;dbl&gt;\n\n\nEs lo mismo que filter(is.na(a) & is.na(b) & is.na(c) & is.na(d))"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#filtros-2",
+    "href": "primero/diapositivas/06-analisis.html#filtros-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Filtros",
+    "text": "Filtros\n\nLas dos funciones de filtro trabajan con el mismo esquema que across(), por lo tanto se le puede aplicar una función o expresión de condición (debe devolver TRUE o FALSE)\n\n\ndatos  |&gt; filter(if_all(a:d, \\(x) x &gt; -0.5 & x &lt; 1))\n\n# A tibble: 2 × 5\n  grupo     a     b      c       d\n  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;\n1     2 0.780 0.124  0.922 0.181  \n2     2 0.253 0.380 -0.491 0.00576"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#estructuras-de-control-de-flujo",
+    "href": "primero/diapositivas/06-analisis.html#estructuras-de-control-de-flujo",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Estructuras de control de flujo",
+    "text": "Estructuras de control de flujo\n\nBucles tradicionales\n\nfor(): secuencia de elementos\nwhile(): mientras una condición es verdadera\nrepeat(): repetición y control manual con break (uso peligroso)\n\n\nMapeo con paquete purrr\n\nFamilia funciones map()"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#función-for",
+    "href": "primero/diapositivas/06-analisis.html#función-for",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función for()",
+    "text": "Función for()"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#función-for-1",
+    "href": "primero/diapositivas/06-analisis.html#función-for-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función for()",
+    "text": "Función for()\n\n\nfor (variable in vector) {\n  \n}\n\n\nDonde variable se reemplaza por un índice (generalmente 1 pero puede llamarse como deseemos) que recorrerá un vector desde 1 a una determinada longitud. (habitualmente 1:length(x)).\nEn cada vuelta la variable aumenta 1 hasta que alcanza el final del vector.\nLa variable i se utiliza en el cuerpo del for() para recorrer índices de objetos."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#función-while",
+    "href": "primero/diapositivas/06-analisis.html#función-while",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función while()",
+    "text": "Función while()"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#función-while-1",
+    "href": "primero/diapositivas/06-analisis.html#función-while-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función while()",
+    "text": "Función while()\n\n\nwhile (condition) {\n  \n}\n\n\nDonde condition es una condición lógica. Si se cumple el bucle continúa, de lo contrario se sale de él.\nDentro del cuerpo de la estructura debemos proceder a manejar los cambios en lo que se evalúa en la condición. Si eso no sucede, el bucle puede llegar a ser infinito.\nEl control es más “artesanal” que el bucle for() y depende completamente del usuario del lenguaje."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#paquete-purrr",
+    "href": "primero/diapositivas/06-analisis.html#paquete-purrr",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete purrr",
+    "text": "Paquete purrr\n\nPaquete con herramientas que buscan remplazar las formas tradicionales de bucles iterativos otorgándole compatibilidad con tidy data (datos ordenados).\n\nSe utiliza para aplicar funciones a vectores, dataframes y listas, dando lugar a la denominada “programación funcional” (FP).\nEl paquete se instala y activa con tidyverse.\nSus funciones son faciles de escribir pero más dificiles de entender para usuarios sin conocimientos de programación.\nLas familia de funciones map() son similares en idea que la familia de funciones apply() de R base pero consistentes con el ecosistema tidyverse."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html#familia-map",
+    "href": "primero/diapositivas/06-analisis.html#familia-map",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Familia map()",
+    "text": "Familia map()\n\n\n\n\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]

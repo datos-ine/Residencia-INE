@@ -1,0 +1,721 @@
+---
+title: "Operaciones múltiples, estadísticos y bucles"
+subtitle: "Residencia de Epidemiología"
+format: 
+  revealjs:
+    self-contained: true
+    width: 1920
+    height: 1080
+    slide-number: true
+    transition: fade
+    theme: [simple, img/custom.scss]
+    logo: img/INE.gif
+    footer: "Instituto Nacional de Epidemiología"
+---
+
+```{r setup, include=F}
+#| label: setup
+#| include: false
+
+
+library(quarto)
+library(fontawesome)
+library(tidyverse)
+```
+
+## Operaciones simultáneas por columnas {.title-top}
+
+. . .
+
+
+La filosofía de trabajo de **tidyverse** se plantea *nunca copiar y pegar más de dos veces* el código escrito, pero cuando necesitamos realizar la misma operación en un conjunto de variables simultáneamente nos encontramos con este problema.
+
+. . .
+
+La solución, ofrecida dentro de **dplyr**, es un andamiaje que permite aplicar funciones y expresiones a varias columnas simultáneamente.
+
+. . .
+
+Es una forma de **iteración**, donde se repite la misma acción en diferentes objetos. En este caso los objetos serán columnas (*variables*) de la tabla de datos.
+
+. . .
+
+Las operaciones simultáneas pueden darse como transformación (dentro de un `mutate()`) o de resumen (dentro de un `summarise()`)
+
+## Operaciones simultáneas por columnas {.title-top}
+
+<br>
+
+Creación de múltiples columnas con **mutate()**
+
+![](img/06/mutate_across.PNG){fig-align="center" width="500"}
+
+
+Resumiendo múltiples columnas con **summarise()**
+
+![](img/06/summarise_across.PNG){fig-align="center" width="500"}
+
+## Función across() {.title-top}
+
+
+La función `across()` es la encargada de dar soporte a estas operaciones múltiples (*dplyr \>= 1.0.0*).
+
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+
+across(.cols,  .fns,  ...,  .names)
+```
+
+<br>
+
+`.cols` = columnas a transformar
+
+`.fns` = función o funciones para aplicar a cada columna de `.cols`
+
+`...` = argumentos adicionales de las funciones especificadas anteriormente (*ejemplo*: na.rm = T)
+
+`.names` = nombres de las columnas de salida. Aquí, `{.col}` es un marcador especial al que se le puede agregar el sufijo deseado.
+
+## Resúmenes múltiples {.title-top}
+
+<br>
+
+Tomemos la siguiente tabla de datos ficticios (mostramos las primeras 4 observaciones):
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+set.seed(123)
+
+datos <- tibble(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+
+datos |> head(4)
+```
+
+<br>
+
+Supongamos que queremos calcular la media de cada variable...
+
+## Resúmenes múltiples {.title-top}
+
+Podríamos hacerlo repitiendo para cada variable
+
+```{r}
+#| echo: true
+
+datos |> summarise(
+  a = mean(a),
+  b = mean(b),
+  c = mean(c),
+  d = mean(d),
+)
+```
+
+<br>
+
+Pero esto rompe la regla general que buscamos de nunca copiar y pegar más de dos veces...
+
+## Resúmenes múltiples {.title-top}
+
+Para solucionarlo aplicamos `across()` y realizamos el resumen simultáneo en una sola línea.
+
+```{r}
+#| echo: true
+
+datos |> summarise(
+  across(.cols = a:d, .fns = mean),
+)
+```
+
+<br>
+
+Nótese que el primer argumento es el rango de nombres de variables y el segundo la función que aplicamos a todas ellas (*nombres de funciones sin paréntesis*).
+
+## Seleccionar variables (**.cols**) {.title-top}
+
+<br>
+
+El primer argumento de `across()` responde de la misma forma que la función `select()` y aplican también las *funciones ayudantes de selección*.
+
+```{r}
+#| echo: false
+
+datos <- tibble(
+  grupo = sample(2, 10, replace = TRUE),
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+```
+
+```{r}
+#| echo: true
+
+names(datos)
+
+datos |> 
+  group_by(grupo) |> 
+  summarize(across(everything(), mean))
+```
+
+## Recordamos a las funciones ayudantes de selección {.title-top .smaller}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+-   `everything()`: coincide con todas las variables.
+
+-   `group_cols()`: seleccione todas las columnas de agrupación.
+
+-   `starts_with()`: comienza con un prefijo.
+
+-   `ends_with()`: termina con un sufijo.
+
+-   `contains()`: contiene una cadena literal.
+
+-   `matches()`: coincide con una expresión regular.
+:::
+
+::: {.column width="50%"}
+-   `num_range()`: coincide con un rango numérico como x01, x02, x03.
+
+-   `all_of()`: coincide con nombres de variables en un vector de caracteres. Todos los nombres deben estar presentes; de lo contrario, se generará un error de fuera de límites.
+
+-   `any_of()`: igual que `all_of()`, excepto que no se genera ningún error para los nombres que no existen.
+
+-   `where()`: aplica una función a todas las variables y selecciona aquellas para las cuales la función regresa TRUE.
+:::
+:::
+
+## Expresiones de selección {.title-top}
+
+<br>
+
+El argumento `.cols` también puede recibir construcciones *booleanas* utilizando los operadores conocidos como `!` (negación) y conectores lógicos como `&` (AND) y `|` (OR) entre las funciones ayudantes de selección.
+
+<br>
+
+Por ejemplo:
+
+```{r}
+#| echo: true
+#| eval: false
+
+.cols = !where(is.numeric) & starts_with("a")
+```
+
+<br>
+
+Selecciona todas las columnas no numéricas, cuyo nombre comienza con "a".
+
+## Agregar argumentos a las funciones {.title-top}
+
+<br>
+
+Hasta ahora vimos el ejemplo de aplicar una función simple como `mean()` a un grupo de variables.
+
+. . . 
+
+<br>
+
+Que sucede si entre los datos de esas variables hay valores **NA**?
+
+Vamos a necesitar incorporar el argumento `na.rm = TRUE` a la función.
+
+. . .
+
+<br>
+
+Donde lo hacemos dentro de un `across()`?
+
+## Agregar argumentos a las funciones {.title-top}
+
+<br>
+
+Supongamos que tenemos estos datos (mostramos algunas observaciones):
+
+```{r}
+#| echo: false
+
+set.seed(123)
+
+rnorm_na <- function(n, n_na, mean = 0, sd = 1) {
+  sample(c(rnorm(n - n_na, mean = mean, sd = sd), rep(NA, n_na)))
+}
+
+datos_na <- tibble(
+  a = rnorm_na(5, 1),
+  b = rnorm_na(5, 1),
+  c = rnorm_na(5, 2),
+  d = rnorm(5)
+)
+
+datos_na |> head(4)
+```
+
+<br>
+
+Vemos algunos valores **NA** entre las observaciones.
+
+## Agregar argumentos a las funciones {.title-top}
+
+<br>
+
+Si aplicamos el mismo código de `across()` anterior tendríamos como resultado:
+
+```{r}
+#| echo: true
+
+datos_na |> 
+  summarise(
+    across(a:d, mean)
+  )
+```
+
+<br>
+
+Sería bueno que le pasaramos `na.rm = TRUE` a la función `mean()`.
+
+## Agregar argumentos a las funciones {.title-top}
+
+Existen dos formas sintácticas de hacerlo.
+
+-   Una función estilo-purrr (tidyverse): `~ mean(.x, na.rm = TRUE)`
+
+-   Una función anónima (base): `function(x) mean(x, na.rm = TRUE)` ; o mejor en su forma de atajo: `\(x) mean(x, na.rm = TRUE)`
+
+```{r}
+#| echo: true
+
+datos_na |> 
+  summarise(
+    across(a:d, \(x) mean(x, na.rm = TRUE))
+  )
+```
+
+## Múltiples funciones {.title-top}
+
+Para incorporar más de una función dentro de `across()` debemos incluirlas dentro de una lista \[`list()`\]
+
+```{r}
+#| echo: true
+
+datos_na |> 
+  summarise(
+    across(a:d, list(
+      media = \(x) mean(x, na.rm = TRUE),
+      n_na = \(x) sum(is.na(x))))
+  )
+```
+
+La lista contiene cada función a aplicar, bajo nombres definidos.
+
+## Cambiar nombres de resultados {.title-top}
+
+<br>
+
+Observemos que los nombres de las variables resultado se componen del nombre de la columna, un guión bajo y el nombre definido de la función aplicada, para distinguir entre las múltiples funciones del `across()`.
+
+La estructura de estos nombres se pueden modificar con el argumento `.names` de `across()`.
+
+Los marcadores especiales para el nombre de columna es `{.col}` y para el nombre de la función definida es `{.fn}`.
+
+## Cambiar nombres de resultados {.title-top}
+
+<br>
+
+Por ejemplo, podríamos invertir el orden predeterminado de los nombres del resumen.
+
+```{r}
+#| echo: true
+
+datos_na |> 
+  summarise(
+    across(a:d, list(
+      media = \(x) mean(x, na.rm = TRUE),
+      n_na = \(x) sum(is.na(x))),
+      .names = "{.fn}_{.col}")
+  )
+```
+
+## Transformación de tipos de datos {.title-top}
+
+<br>
+
+Hasta ahora vimos como funciona la función `across()` dentro de un resumen (`summarise`) pero al comienzo también dijimos que se puede utilizar para transformaciones masivas de datos.
+
+<br>
+
+Para lograr esto la función se vincula con `mutate()` modificando las variables originales o bien creando nuevas variables si cambiamos su nombre con `.names`.
+
+## Transformación de tipos de datos {.title-top}
+
+<br>
+
+Aplicamos la función `coalesce()` para convertir los valores **NA** en ceros, transformando las variables originales.
+
+```{r}
+#| echo: true
+
+datos_na |> 
+  mutate(
+    across(a:d, \(x) coalesce(x, 0))
+  )
+```
+
+## Transformación de tipos de datos {.title-top}
+
+
+Hacemos lo mismo pero cambiamos los nombres de las variables de salida del `mutate()` que van a coexistir con las originales.
+
+```{r}
+#| echo: true
+
+datos_na |> 
+  mutate(
+    across(a:d, \(x) coalesce(x, 0),
+      .names = "{.col}_na_cero")
+  )
+```
+
+## Filtros {.title-top}
+
+<br>
+
+En el caso de iteraciones similares para incluir dentro de la función `filter()` el paquete dplyr propone dos funciones específicas: `if_any()` e `if_all()`.
+
+<br>
+
+En el primer caso, la función enmascara una repetición de OR lógicos y en la segunda una secuencia de AND lógicos.
+
+## Filtros {.title-top}
+
+```{r}
+#| echo: true
+
+datos_na |> filter(if_any(a:d, is.na))
+```
+
+Es lo mismo que `filter(is.na(a) | is.na(b) | is.na(c) | is.na(d))`
+
+```{r}
+#| echo: true
+
+datos_na |> filter(if_all(a:d, is.na))
+```
+
+Es lo mismo que `filter(is.na(a) & is.na(b) & is.na(c) & is.na(d))`
+
+## Filtros {.title-top}
+
+<br>
+
+Las dos funciones de filtro trabajan con el mismo esquema que `across()`, por lo tanto se le puede aplicar una función o expresión de condición (debe devolver `TRUE` o `FALSE`)
+
+<br>
+
+```{r}
+#| echo: true
+
+datos  |> filter(if_all(a:d, \(x) x > -0.5 & x < 1))
+```
+
+
+
+
+
+
+## Paquete rstatix {.title-top}
+
+<br>
+
+El paquete `rstatix` simplifica el proceso de realizar análisis estadísticos complejos. 
+   
+. . .
+   
+- sintaxis intuitiva y basada en el paradigma de la *"gramática de datos"* de tidyverse
+
+. . .
+
+- permite realizar pruebas estadísticas comunes, como t-tests, ANOVA, y correlaciones, de manera rápida y eficiente 
+
+. . .
+
+- diseño que facilita la integración de resultados en flujos de trabajo de análisis reproducibles, asegurando que las conclusiones derivadas de los datos sean robustas y transparentes.
+
+## Paquete rstatix {.title-top}
+
+- Muchas de sus funciones son espejos de las funciones estadísticas de R base pero compatibles con tidyverse, por lo que siempre devuelven los resultados en dataframes
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+
+datos <- read_excel("datos/valores.xlsx")
+```
+
+
+```{r}
+#| echo: true
+#| message: false
+#| warning: false
+library(rstatix)
+
+datos |> 
+  t_test(Edad ~ Sexo)
+```
+Lo que nos permite conectar el resultado mediante tuberías hacia otras funciones del tidyverse, como `select()` o `filter()`.
+
+## Paquete rstatix {.title-top}
+
+<br>
+
+Tiene dos funciones de resumenes para variables cuantitativas y cualitativas:
+
+```{r}
+#| echo: true
+datos |> get_summary_stats(Edad, type = "mean_sd")
+
+datos |> get_summary_stats(Edad, type = "median_iqr")
+```
+
+
+
+
+## Paquete rstatix {.title-top}
+
+```{r}
+#| echo: true
+datos |> group_by(Sexo) |> 
+  get_summary_stats(Edad, type = "common")
+
+datos |> freq_table(Sexo)
+```
+
+
+## Paquete janitor {.title-top}
+
+<br>
+
+El paquete janitor tiene numerosas funciones de las cuales vamos a destacar la familia **tabyl**.
+
+. . .
+
+<br>
+
+La función `tabyl()` permite crear tablas de frecuencia de una variable o tablas de contingencia para dos o más variables categóricas.
+
+. . .
+
+<br>
+
+El paquete además tiene otras funciones que se enlazan con tabyl para personalizar los resultados en estas tablas (por ejemplo, agregar totales o representar frecuencias realtivas como porcentajes)
+
+## Paquete janitor {.title-top}
+
+Se puede personalizar la tabla conectando por tuberías el agregado de otras funciones del paquete. 
+
+```{r}
+#| echo: true
+#| message: false
+#| warning: false
+library(janitor)
+datos  |>   
+  tabyl(Sexo) |>  
+  adorn_totals(where = "row") |>  
+  adorn_pct_formatting(digits = 2) 
+```
+
+Incorporamos totales con `adorn_totals()` y configuramos los porcentajes con `adorn_pct_formatting()`.
+
+
+## gtsummary {.title-top}
+
+<br>
+
+Este paquete permite crear tablas de resumen elegantes y personalizables que destacan las estadísticas descriptivas, resultados de modelos, y comparaciones de grupos. 
+
+. . . 
+
+Estas tablas son esenciales para reportes, publicaciones y presentaciones, asegurando que la información clave sea fácilmente comprensible.
+
+. . . 
+
+Las salidas buscan producir estéticas compatibles con las tablas que se envían a publicar en la mayoría de las revistas científicas, así como también en otras publicaciones similares.
+
+## gtsummary {.title-top}
+
+<br>
+
+Un ejemplo de una tabla descriptiva con variables cuanti y cuali estratificada por Sexo.
+
+
+![](img/06/gtsummary.PNG){fig-align="center" width="1000"}
+
+## flextable {.title-top}
+
+<br>
+
+Este paquete es similar a otras librerías como **gt**, **huxtable**, **kableExtra**, etc, que transforman las tablas y dataframes de R en salidas elegantes.
+
+. . . 
+
+<br>
+
+La documentación oficial dice *"crear tablas flexibles y altamente personalizables en formatos de Microsoft Word, PowerPoint y HTML".* 
+
+. . . 
+
+<br>
+La elección de este paquete sobre las otras opciones tiene que ver con la amplitud de opciones en la compatibilidad de los formatos de salida.
+
+. . .
+
+Las funciones del paquete se integran facilmente con Quarto
+
+## flextable {.title-top}
+
+<br>
+
+Una tablita que creamos anteriormente con `freq_table()` de **rstatix** fue:
+
+```{r}
+#| echo: true
+#| message: false
+#| warning: false
+
+
+datos |> freq_table(Sexo)
+
+```
+
+<br>
+
+La salida tradicional de consola se visualiza estéticamente fea.
+
+## flextable {.title-top}
+
+Con flextable podemos configurar esa misma tabla, para mejorar su presentación:
+
+
+```{r}
+#| echo: true
+#| message: false
+#| warning: false
+
+library(flextable)
+datos |> freq_table(Sexo) |> 
+  flextable() |> 
+  fontsize(size = 30, part = "all") |> 
+  align(align = "center", part = "all") |> 
+  line_spacing(space = 2, part = "all") |> 
+  padding(padding = 6, part = "header") |> 
+  set_header_labels(n = "Frecuencia", prop = "%") |> 
+  theme_zebra()
+```
+
+## Estructuras de control de flujo {.title-top}
+
+<br>
+
+### Bucles tradicionales
+
+- `for()`:  secuencia de elementos
+
+- `while()`:  mientras una condición es verdadera
+
+- `repeat()`:  repetición y control manual con `break` (*uso peligroso*)
+
+<br>
+
+### Mapeo con paquete purrr
+
+- Familia funciones `map()`
+
+## Función `for()` {.title-top}
+
+![](img/06/for.png){fig-align="center" width="650"}
+
+## Función `for()` {.title-top}
+
+<br>
+
+```{r}
+#| eval: false
+#| echo: true
+
+for (variable in vector) {
+  
+}
+```
+
+<br>
+
+Donde `variable` se reemplaza por un índice (generalmente `1` pero puede llamarse como deseemos) que recorrerá un `vector` desde 1 a una determinada longitud. (habitualmente `1:length(x)`).
+
+En cada vuelta la `variable` aumenta 1 hasta que alcanza el final del `vector`.
+
+La variable `i` se utiliza en el cuerpo del `for()` para recorrer índices de objetos.
+
+
+## Función `while()` {.title-top}
+
+![](img/06/while.png){fig-align="center" width="750"}
+
+## Función `while()` {.title-top}
+
+<br>
+
+```{r}
+#| eval: false
+#| echo: true
+
+while (condition) {
+  
+}
+```
+
+<br>
+
+Donde `condition` es una condición lógica. Si se cumple el bucle continúa, de lo contrario se sale de él.
+
+Dentro del cuerpo de la estructura debemos proceder a manejar los cambios en lo que se evalúa en la condición. Si eso no sucede, el bucle puede llegar a ser infinito.
+
+El control es más "artesanal" que el bucle `for()` y depende completamente del usuario del lenguaje.
+
+## Paquete purrr {.title-top}
+
+<br>
+
+Paquete con herramientas que buscan remplazar las formas tradicionales de bucles iterativos otorgándole compatibilidad con tidy data (datos ordenados).
+
+- Se utiliza para aplicar funciones a vectores, dataframes y listas, dando lugar a la denominada "programación funcional" (FP).
+
+- El paquete se instala y activa con tidyverse.
+
+- Sus funciones son faciles de escribir pero más dificiles de entender para usuarios sin conocimientos de programación.
+
+- Las familia de funciones `map()` son similares en idea que la familia de funciones `apply()` de R base pero consistentes con el ecosistema tidyverse.
+ 
+## Familia `map()`  {.title-top}
+
+<br>
+
+![](img/06/map.png){fig-align="center" width="1100"}
