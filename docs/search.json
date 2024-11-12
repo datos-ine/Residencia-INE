@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "Gestión de datos epidemiológicos con R + RStudio",
     "section": "",
-    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
+    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nFecha\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\n01/10/2024\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n01/10/2024\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n03/10/2024\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n15/10/2024\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n17/10/2024\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n22/10/2024\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n24/10/2024\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n29/10/2024\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n31/10/2024\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n05/11/2024\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n07/11/2024\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n14/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n19/11/2024\n\n\nVisualización de datos\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n21/11/2024\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\n\nDatos para la practica\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
   },
   {
     "objectID": "about.html",
@@ -2728,5 +2728,425 @@
     "title": "Operaciones múltiples, estadísticos y bucles",
     "section": "Familia map()",
     "text": "Familia map()\n\n\n\n\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#visualización",
+    "href": "primero/diapositivas/07-visualizacion.html#visualización",
+    "title": "Visualización de datos",
+    "section": "Visualización",
+    "text": "Visualización\n\n“Un simple gráfico ha brindado más información a la mente del analista de datos que cualquier otro dispositivo”. — John Tukey"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#objetivos-de-la-visualización",
+    "href": "primero/diapositivas/07-visualizacion.html#objetivos-de-la-visualización",
+    "title": "Visualización de datos",
+    "section": "Objetivos de la visualización",
+    "text": "Objetivos de la visualización\n  \n\nAnálisis exploratorio: descubrir y describir patrones en los datos (parte del Análisis Exploratorio de Datos - EDA)\n\n\n\nPresentación y comunicación: capacidad de transmitir el mensaje de forma clara y atractiva."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#señales-visuales",
+    "href": "primero/diapositivas/07-visualizacion.html#señales-visuales",
+    "title": "Visualización de datos",
+    "section": "Señales visuales",
+    "text": "Señales visuales"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#gramática-de-gráficos",
+    "href": "primero/diapositivas/07-visualizacion.html#gramática-de-gráficos",
+    "title": "Visualización de datos",
+    "section": "Gramática de gráficos",
+    "text": "Gramática de gráficos\n\n\nDe manera similar a la gramática lingüística, “La gramática de gráficos” define un conjunto de reglas para construir gráficos estadísticos combinando diferentes tipos de capas.\nEsta gramática fue creada por Leland Wilkinson (2005, The Grammar of Graphics (Statistics and Computing). Secaucus, NJ, USA: Springer-Verlag New York, Inc.)"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#section",
+    "href": "primero/diapositivas/07-visualizacion.html#section",
+    "title": "Visualización de datos",
+    "section": "",
+    "text": "{fig-align =“center”}\n.footnote[Artwork by @allison_horst]"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#section-1",
+    "href": "primero/diapositivas/07-visualizacion.html#section-1",
+    "title": "Visualización de datos",
+    "section": "",
+    "text": "{fig-align =“center”}\n.footnote[Artwork by @allison_horst]"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2",
+    "href": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2",
+    "title": "Visualización de datos",
+    "section": "Esquema gráfico ggplot2",
+    "text": "Esquema gráfico ggplot2\n\n\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico\nCoordenadas que organizan los objetos geométricos\nEscalas (scale) definen el rango de valores de las estéticas\nFacetas que agrupan en subgráficos"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-1",
+    "href": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-1",
+    "title": "Visualización de datos",
+    "section": "Esquema gráfico ggplot2",
+    "text": "Esquema gráfico ggplot2\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-2",
+    "href": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-2",
+    "title": "Visualización de datos",
+    "section": "Esquema gráfico ggplot2",
+    "text": "Esquema gráfico ggplot2\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-3",
+    "href": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-3",
+    "title": "Visualización de datos",
+    "section": "Esquema gráfico ggplot2",
+    "text": "Esquema gráfico ggplot2\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico\nCoordenadas que organizan los objetos geométricos"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-4",
+    "href": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-4",
+    "title": "Visualización de datos",
+    "section": "Esquema gráfico ggplot2",
+    "text": "Esquema gráfico ggplot2\n\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico\nCoordenadas que organizan los objetos geométricos\nEscalas (scale) definen el rango de valores de las estéticas"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-5",
+    "href": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-5",
+    "title": "Visualización de datos",
+    "section": "Esquema gráfico ggplot2",
+    "text": "Esquema gráfico ggplot2\n\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico\nCoordenadas que organizan los objetos geométricos\nEscalas (scale) definen el rango de valores de las estéticas\nFacetas que agrupan en subgráficos"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#las-geometrias-definen-el-tipo-de-gráfico",
+    "href": "primero/diapositivas/07-visualizacion.html#las-geometrias-definen-el-tipo-de-gráfico",
+    "title": "Visualización de datos",
+    "section": "Las geometrias definen el tipo de gráfico",
+    "text": "Las geometrias definen el tipo de gráfico"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#el-esquema-básico-de-un-gráfico",
+    "href": "primero/diapositivas/07-visualizacion.html#el-esquema-básico-de-un-gráfico",
+    "title": "Visualización de datos",
+    "section": "El esquema básico de un gráfico",
+    "text": "El esquema básico de un gráfico\n\n\n&lt;DATOS&gt; |&gt;  \n  ggplot(mapping = aes(&lt;MAPEO&gt;)) +\n  &lt;GEOM_FUNCION&gt;()\n\nLas capas posteriores son opcionales. Algunas de ellas son:\n\n[dataframe] |&gt;  \n  ggplot(mapping = aes(x = [x-varible],\n                       y = [y-variable])) +\n  geom_xxx() +\n  scale_x_...() +\n  scale_y_...() +\n  scale_fill_...() +\n  otras capas más"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#section-2",
+    "href": "primero/diapositivas/07-visualizacion.html#section-2",
+    "title": "Visualización de datos",
+    "section": "",
+    "text": "{fig-align =“center”}\n.footnote[Artwork by @allison_horst]"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#construcción-de-gráfico-paso-a-paso",
+    "href": "primero/diapositivas/07-visualizacion.html#construcción-de-gráfico-paso-a-paso",
+    "title": "Visualización de datos",
+    "section": "Construcción de gráfico paso a paso",
+    "text": "Construcción de gráfico paso a paso\nLa idea en esta presentación es mostrar paso a paso la construcción de un gráfico.\n\n\nPartiremos del objetivo deseado, en este caso un tipo de gráfico que ya existe, pero podría ser algún otro ejemplo o un bosquejo de lo imaginado garabateado en un papel.\nEl segundo paso es determinar cuales son las variables necesarias para construir ese gráfico y donde se mapean.\nEl tercer paso es trabajar con los datos y transformarlos para que estén preparados para graficar.\nEl cuarto es el gráfico en si mismo con todas las personalizaciones de sus partes."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#gráfico-objetivo",
+    "href": "primero/diapositivas/07-visualizacion.html#gráfico-objetivo",
+    "title": "Visualización de datos",
+    "section": "Gráfico objetivo",
+    "text": "Gráfico objetivo\n\nQueremos construir un gráfico similar a este"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#variables-participantes",
+    "href": "primero/diapositivas/07-visualizacion.html#variables-participantes",
+    "title": "Visualización de datos",
+    "section": "Variables participantes",
+    "text": "Variables participantes\n\n\nEl análisis del modelo indica que hay dos capas geométricas simultáneas: una de barras y otra de líneas.\nTambién hay dos ejes y (a izquierda Números de casos y a derecha Tasas por 100.000) y un eje x (Años)\nLas variables participantes son tres:\n\nel número de casos que mapea en y1,\nlas tasas que mapean en y2 y\nlos años de la tendencia que se ubican en x."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#lectura-y-adecuación-de-los-datos",
+    "href": "primero/diapositivas/07-visualizacion.html#lectura-y-adecuación-de-los-datos",
+    "title": "Visualización de datos",
+    "section": "Lectura y adecuación de los datos",
+    "text": "Lectura y adecuación de los datos\n\nImportamos datos de la tendencia de TB de la provincia de Santa Fe entre los años 1980 y 2008\n\nlibrary(tidyverse)\nlibrary(readxl)\n\ntendencia1 &lt;- read_excel(\"datos/Tendencia tb 1980 2008 por provincia.xls\", \n                        sheet = \"SFE\", range = \"A6:A34\", col_names = F) |&gt; \n   rename(\"Año\" = ...1)\n\ntendencia2 &lt;- read_excel(\"datos/Tendencia tb 1980 2008 por provincia.xls\", \n                        sheet = \"SFE\", range = \"D6:E34\", col_names = F) |&gt; \n  rename(\"Casos\" = ...1,\n         \"Tasa\" = ...2)\n\ntendencia &lt;- tendencia1 |&gt; \n  bind_cols(tendencia2)"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#lectura-y-adecuación-de-los-datos-1",
+    "href": "primero/diapositivas/07-visualizacion.html#lectura-y-adecuación-de-los-datos-1",
+    "title": "Visualización de datos",
+    "section": "Lectura y adecuación de los datos",
+    "text": "Lectura y adecuación de los datos\n\nEl dataframe necesario para este gráfico nos quedaría así:\n\n\n# A tibble: 29 × 3\n     Año Casos  Tasa\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1  1980   904  36.2\n 2  1981   790  31.2\n 3  1982   853  33.3\n 4  1983   802  30.9\n 5  1984   794  30.2\n 6  1985   669  25.1\n 7  1986   659  24.5\n 8  1987   516  18.9\n 9  1988   722  26.2\n10  1989   661  23.7\n# ℹ 19 more rows"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#primer-gráfico",
+    "href": "primero/diapositivas/07-visualizacion.html#primer-gráfico",
+    "title": "Visualización de datos",
+    "section": "Primer gráfico",
+    "text": "Primer gráfico\n\nIniciamos con el gráfico de barras. Mapeamos x e y, indicamos color de relleno e identidad porque las barras se van a construir con el conteo previo (datos agregados)\n\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos)) +\n  geom_bar(stat = \"identity\", \n           fill = \"royalblue\")"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#primer-gráfico-output",
+    "href": "primero/diapositivas/07-visualizacion.html#primer-gráfico-output",
+    "title": "Visualización de datos",
+    "section": "Primer gráfico",
+    "text": "Primer gráfico"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#capa-de-texto",
+    "href": "primero/diapositivas/07-visualizacion.html#capa-de-texto",
+    "title": "Visualización de datos",
+    "section": "Capa de texto",
+    "text": "Capa de texto\n\nAgregamos capa de texto con los valores de los casos.\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos)) +\n  geom_bar(stat = \"identity\", \n           fill = \"royalblue\") +\n  geom_text()"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#capa-de-texto-output",
+    "href": "primero/diapositivas/07-visualizacion.html#capa-de-texto-output",
+    "title": "Visualización de datos",
+    "section": "Capa de texto",
+    "text": "Capa de texto"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#capa-de-texto-1",
+    "href": "primero/diapositivas/07-visualizacion.html#capa-de-texto-1",
+    "title": "Visualización de datos",
+    "section": "Capa de texto",
+    "text": "Capa de texto\n\nAdecuamos los valores en las barras.\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos)) +\n  geom_bar(stat = \"identity\", \n           fill = \"royalblue\") +\n  geom_text(hjust = 1.2, vjust = 0.5, angle = 90, color = \"white\")"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#capa-de-texto-1-output",
+    "href": "primero/diapositivas/07-visualizacion.html#capa-de-texto-1-output",
+    "title": "Visualización de datos",
+    "section": "Capa de texto",
+    "text": "Capa de texto"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#eje-x",
+    "href": "primero/diapositivas/07-visualizacion.html#eje-x",
+    "title": "Visualización de datos",
+    "section": "Eje x",
+    "text": "Eje x\n\nConfiguramos eje x\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos)) +\n  geom_bar(stat = \"identity\", \n           fill = \"royalblue\") +\n  geom_text(hjust = 1.2, vjust = 0.5, angle = 90, color = \"white\") +\n  scale_x_continuous(name = \"Años\", breaks = seq(1980, 2008, 1))"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#eje-x-output",
+    "href": "primero/diapositivas/07-visualizacion.html#eje-x-output",
+    "title": "Visualización de datos",
+    "section": "Eje x",
+    "text": "Eje x"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#eje-x-1",
+    "href": "primero/diapositivas/07-visualizacion.html#eje-x-1",
+    "title": "Visualización de datos",
+    "section": "Eje x",
+    "text": "Eje x\n\nPersonalizamos mejor el eje x (ángulo de las etiquetas, etc)\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos)) +\n  geom_bar(stat = \"identity\", \n           fill = \"royalblue\") +\n  geom_text(hjust = 1.2, vjust = 0.5, angle = 90, color = \"white\") +\n  scale_x_continuous(name = \"Años\", breaks = seq(1980, 2008, 1)) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 11))"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#eje-x-1-output",
+    "href": "primero/diapositivas/07-visualizacion.html#eje-x-1-output",
+    "title": "Visualización de datos",
+    "section": "Eje x",
+    "text": "Eje x"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#eje-y",
+    "href": "primero/diapositivas/07-visualizacion.html#eje-y",
+    "title": "Visualización de datos",
+    "section": "Eje y",
+    "text": "Eje y\n\nConfiguramos el eje y asociado a las barras\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos)) +\n  geom_bar(stat = \"identity\", \n           fill = \"royalblue\") +\n  geom_text(hjust = 1.2, vjust = 0.5, angle = 90, color = \"white\") +\n  scale_x_continuous(name = \"Años\", breaks = seq(1980, 2008, 1)) +\n  scale_y_continuous(name = \"Número de casos\", breaks = seq(0, 1000, 200)) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 11),\n        axis.text.y = element_text(size = 11))"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#eje-y-output",
+    "href": "primero/diapositivas/07-visualizacion.html#eje-y-output",
+    "title": "Visualización de datos",
+    "section": "Eje y",
+    "text": "Eje y"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#segundo-gráfico",
+    "href": "primero/diapositivas/07-visualizacion.html#segundo-gráfico",
+    "title": "Visualización de datos",
+    "section": "Segundo gráfico",
+    "text": "Segundo gráfico\n\nIncoporamos el segundo gráfico o segunda capa geométrica. Utilizamos una constante para llevar los valores al mismo orden de los valores de las barras.\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos)) +\n  geom_bar(stat = \"identity\", \n           fill = \"royalblue\") +\n  geom_line(aes(y = Tasa*35), color = \"red\", linewidth = 1.5) +\n  geom_text(hjust = 1.2, vjust = 0.5, angle = 90, color = \"white\") +\n  scale_x_continuous(name = \"Años\", \n                     breaks = seq(1980, 2008, 1)) +\n  scale_y_continuous(name = \"Número de casos\", \n                     breaks = seq(0, 1000, 200),\n                     sec.axis = sec_axis(~./35, \n                                         name = \"Tasa\")) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 11),\n        axis.text.y = element_text(size = 11))"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#segundo-gráfico-output",
+    "href": "primero/diapositivas/07-visualizacion.html#segundo-gráfico-output",
+    "title": "Visualización de datos",
+    "section": "Segundo gráfico",
+    "text": "Segundo gráfico"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#etiquetas-del-segundo-gráfico",
+    "href": "primero/diapositivas/07-visualizacion.html#etiquetas-del-segundo-gráfico",
+    "title": "Visualización de datos",
+    "section": "Etiquetas del segundo gráfico",
+    "text": "Etiquetas del segundo gráfico\n\nAgregamos etiquetas asociadas a la capa geométrica line\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos)) +\n  geom_bar(stat = \"identity\", \n           fill = \"royalblue\") +\n  geom_line(aes(y = Tasa*35), color = \"red\", linewidth = 1.5) +\n  geom_text(hjust = 1.2, vjust = 0.5, angle = 90, color = \"white\") +\n  geom_text(aes(label = round(Tasa,1), y = Tasa*35), angle = 45, hjust = -0.2, vjust = -0.5) +\n  scale_x_continuous(name = \"Años\",\n                     breaks = seq(1980, 2008, 1)) +\n  scale_y_continuous(name = \"Número de casos\", \n                     breaks = seq(0, 1400, 200),\n                     limits = c(0,1400),\n                     sec.axis = sec_axis(~./35, \n                                         name = \"Tasas por 100.000\", \n                                         breaks = seq(0, 60, 10))) +\n  theme(axis.text.x = element_text(angle = 45, \n                                   hjust = 1, \n                                   size = 11),\n        axis.text.y = element_text(size = 11))"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#etiquetas-del-segundo-gráfico-output",
+    "href": "primero/diapositivas/07-visualizacion.html#etiquetas-del-segundo-gráfico-output",
+    "title": "Visualización de datos",
+    "section": "Etiquetas del segundo gráfico",
+    "text": "Etiquetas del segundo gráfico"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#leyendas",
+    "href": "primero/diapositivas/07-visualizacion.html#leyendas",
+    "title": "Visualización de datos",
+    "section": "Leyendas",
+    "text": "Leyendas\n\nAl igual que el modelo del gráfico, sumamos dentro del mismo las leyendas\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos, fill = \"Número de casos\")) +\n  geom_bar(stat = \"identity\") +\n  geom_line(aes(y = Tasa*35, color = \"Tasas por 100.000\"), linewidth = 1.5) +\n  geom_text(hjust = 1.2, vjust = 0.5, angle = 90, color = \"white\") +\n  geom_text(aes(label = round(Tasa,1), y = Tasa*35), angle = 45, hjust = -0.2, vjust = -0.5) +\n  scale_x_continuous(name = \"Años\",\n                     breaks = seq(1980, 2008, 1)) +\n  scale_y_continuous(name = \"Número de casos\", \n                     breaks = seq(0, 1400, 200),\n                     limits = c(0,1400),\n                     sec.axis = sec_axis(~./35, \n                                         name = \"Tasas por 100.000\", \n                                         breaks = seq(0, 60, 10))) +\n  scale_fill_manual(values = \"royalblue\") +\n  scale_color_manual(values = \"red\") +\n  theme(axis.text.x = element_text(angle = 45, \n                                   hjust = 1, \n                                   size = 11),\n        axis.text.y = element_text(size = 11),\n        legend.position = \"inside\",\n        legend.position.inside = c(0.8, 0.8),\n        legend.background = element_rect(fill = \"transparent\"),\n        legend.text.position = \"right\",\n        legend.title=element_blank()) +\n  guides(color = guide_legend(order = 0),\n         fill = guide_legend(order = 1))"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#leyendas-output",
+    "href": "primero/diapositivas/07-visualizacion.html#leyendas-output",
+    "title": "Visualización de datos",
+    "section": "Leyendas",
+    "text": "Leyendas"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#título-y-demás",
+    "href": "primero/diapositivas/07-visualizacion.html#título-y-demás",
+    "title": "Visualización de datos",
+    "section": "Título y demás",
+    "text": "Título y demás\n\nPor último, definimos estructura de titulo, subtitulo y pie de gráfico (habría que reemplazarlos por la definición de cada uno).\n\ntendencia |&gt; \n  ggplot(aes(x = Año, y = Casos, label = Casos, fill = \"Número de casos\")) +\n  geom_bar(stat = \"identity\") +\n  geom_line(aes(y = Tasa*35, color = \"Tasas por 100.000\"), linewidth = 1.5) +\n  geom_text(hjust = 1.2, vjust = 0.5, angle = 90, color = \"white\") +\n  geom_text(aes(label = round(Tasa,1), y = Tasa*35), angle = 45, hjust = -0.2, vjust = -0.5) +\n  scale_x_continuous(name = \"Años\",\n                     breaks = seq(1980, 2008, 1)) +\n  scale_y_continuous(name = \"Número de casos\", \n                     breaks = seq(0, 1400, 200),\n                     limits = c(0,1400),\n                     sec.axis = sec_axis(~./35, \n                                         name = \"Tasas por 100.000\", \n                                         breaks = seq(0, 60, 10))) +\n  scale_fill_manual(values = \"royalblue\") +\n  scale_color_manual(values = \"red\") +\n  labs(title = \"Titulo\", subtitle = \"subtitulo\", caption = \"pie de grafico\" ) +\n  theme(axis.text.x = element_text(angle = 45, \n                                   hjust = 1, \n                                   size = 11),\n        axis.text.y = element_text(size = 11),\n        legend.position = \"inside\",\n        legend.position.inside = c(0.8, 0.8),\n        legend.background = element_rect(fill = \"transparent\"),\n        legend.text.position = \"right\",\n        legend.title=element_blank()) +\n  guides(color = guide_legend(order = 0),\n         fill = guide_legend(order = 1))"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#título-y-demás-output",
+    "href": "primero/diapositivas/07-visualizacion.html#título-y-demás-output",
+    "title": "Visualización de datos",
+    "section": "Título y demás",
+    "text": "Título y demás"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#exportar-gráficos-de-ggplot2",
+    "href": "primero/diapositivas/07-visualizacion.html#exportar-gráficos-de-ggplot2",
+    "title": "Visualización de datos",
+    "section": "Exportar gráficos de ggplot2",
+    "text": "Exportar gráficos de ggplot2\n\nDesde el panel Plot de RStudio\nEn formatos conocidos como JPG, PNG, PDF, etc\nMayor control con la función ggsave()\n\n\nggsave(filename,               # nombre del archivo\n  plot = last_plot(),          # nombre del objeto gráfico\n  device = NULL,               # formato de salida \"jpeg\", \"png\", \"tiff\", \"pdf\", etc\n  width = NA,                  # ancho en unidades de units\n  height = NA,                 # alto en unidades de units\n  units = c(\"in\", \"cm\", \"mm\"), # unidades de medidas\n  dpi = 300)                   # resolución de salida en dpi"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#gráficos-que-no-hacen-lo-que-quiero",
+    "href": "primero/diapositivas/07-visualizacion.html#gráficos-que-no-hacen-lo-que-quiero",
+    "title": "Visualización de datos",
+    "section": "Gráficos que no hacen lo que quiero",
+    "text": "Gráficos que no hacen lo que quiero\n\nMuchas veces nos encontramos con la situación de crear un gráfico que se ve bien en el panel Plot de RStudio y cuando lo exportamos o incluímos dentro de un documento de Quarto el tamaño de sus partes (elementos geométricos, textos, leyendas, etc) se achican o agrandan de tal forma que el producto final es feo y/o desproporcionado.\n\nLa respuesta a estos problemas tienen que ver con dos conceptos que debemos entender y poder controlar: el tamaño y la resolución."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#pantalla",
+    "href": "primero/diapositivas/07-visualizacion.html#pantalla",
+    "title": "Visualización de datos",
+    "section": "Pantalla",
+    "text": "Pantalla\nRepasemos algunos conceptos de la imagen en pantalla:\n\nLa pantalla es una matriz de pixeles. Todas las imagenes que vemos en ella estan compuesta por ellos.\n\n\n\nLa que estoy utilizando ahora, para hacer esta presentación, tiene una dimensión de 24 pulgadas con un ratio de aspecto 16/10 (20 x 12,5 pulgadas)\n\n\n\n\nLa resolución es de 1920 x 1200, es decir tiene 1920 píxeles de ancho y 1200 píxeles de alto.\n\n\n\n\nEl número de píxeles por pulgada es de 96 (ppi)."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#pantalla-1",
+    "href": "primero/diapositivas/07-visualizacion.html#pantalla-1",
+    "title": "Visualización de datos",
+    "section": "Pantalla",
+    "text": "Pantalla\n\nHagamos algunos calculos para ver si todo está en orden:\n\n\nancho: 1920 (px) / 96 (px/in) = 20 pulgadas\nalto: 1200 (px) / 96 (px/in) = 12,5 pulgadas\nrelación: 1920 / 1200 = 20 / 12,5 = 16/10"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#archivos-de-imagen",
+    "href": "primero/diapositivas/07-visualizacion.html#archivos-de-imagen",
+    "title": "Visualización de datos",
+    "section": "Archivos de imagen",
+    "text": "Archivos de imagen\n\n\nLas imágenes que se crean con ggplot2, por ejemplo, están constituidas por pixeles.\n\n\nEn estas imágenes también se relacionan las dimensiones y las resoluciones.\n\n\nPara pasar de la dimensión en pulgadas a una cantidad de puntos, por ejemplo al exportar con ggsave() se utiliza la cantidad de puntos por pulgadas (dpi).\n\n\nSi creamos un gráfico de 12 x 10 pulgadas a 300 dpi, el archivo será una matriz de (12 * 300) x (10 * 300) = 3600 x 3000 puntos.\n\n\nCuando abrimos el archivo en nuestra computadora, cada punto representa un pixel, lo que da una imagen de 3600 x 3000 px de resolución."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#archivos-de-imagen-1",
+    "href": "primero/diapositivas/07-visualizacion.html#archivos-de-imagen-1",
+    "title": "Visualización de datos",
+    "section": "Archivos de imagen",
+    "text": "Archivos de imagen\n\nImaginemos que tenemos una imagen de 500x500px. Así se vería cada una, con un zoom del 100%, en un monitor de 1080p (1920x1080px) y en otro 4K (3840×2160), ambos del mismo tamaño."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#experimento-práctico",
+    "href": "primero/diapositivas/07-visualizacion.html#experimento-práctico",
+    "title": "Visualización de datos",
+    "section": "Experimento práctico",
+    "text": "Experimento práctico\n\nHagamos un pequeño experimento con un gráfico sencillo basado en los pinguinos.\n\n\n\nlibrary(tidyverse)\nlibrary(datos)\n\npinguinos |&gt;\n    ggplot(aes(largo_pico_mm, \n               alto_pico_mm, \n               color = especie)) +\n    geom_point()"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#experimento-práctico-1",
+    "href": "primero/diapositivas/07-visualizacion.html#experimento-práctico-1",
+    "title": "Visualización de datos",
+    "section": "Experimento práctico",
+    "text": "Experimento práctico\n\n\nggsave(\"prueba.png\", \n       width = 10, \n       height = 5, \n       dpi = 300)\n\nSi calculamos, la salida se almacena como:\n\nancho: 10 pulgadas * 300 dpi = 3000 px\nalto: 5 pulgadas * 300 dpi = 1500 px\n\nAhora si en lugar de guardar el gráfico solo lo visualizaramos en el monitor:\n\nancho: 10 pulgadas * 96 dpi = 960 px\nalto: 5 pulgadas * 96 dpi = 480 px"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#experimento-práctico-2",
+    "href": "primero/diapositivas/07-visualizacion.html#experimento-práctico-2",
+    "title": "Visualización de datos",
+    "section": "Experimento práctico",
+    "text": "Experimento práctico\n\n\n\nLa relación entre el tamaño de la pantalla y el tamaño físico depende del dpi (puntos por pulgada) del dispositivo gráfico, que es 96 por defecto para la pantalla.\n\n\n\n\nLuego, si guardamos el gráfico con un dpi mayor o menor, el archivo se guarda como una matriz de puntos usando el nuevo dpi y el tamaño en pulgadas.\n\n\n\n\nEntonces, cuando se abre en la computadora, la dimensión del tamaño en píxeles es diferente.\n\n\n\n\nSi visualizamos un gráfico con muchos más pixeles que otro en el mismo espacio (nuestra pantalla) los elementos que lo componen se van a ver siempre más pequeños."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#por-qué-es-importante-esta-diferencia",
+    "href": "primero/diapositivas/07-visualizacion.html#por-qué-es-importante-esta-diferencia",
+    "title": "Visualización de datos",
+    "section": "¿Por qué es importante esta diferencia?",
+    "text": "¿Por qué es importante esta diferencia?\n  \n\n\n\n\nImporta porque algunos elementos del gráfico se ajustan al espacio disponible, y algunos son fijos y medidos en su dimensión real (cm, mm o pulgadas) como las fuentes de los textos, creando una distorsión al cambiar la dimensión del gráfico o su resolución."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#tamaño-predeterminado-en-quarto",
+    "href": "primero/diapositivas/07-visualizacion.html#tamaño-predeterminado-en-quarto",
+    "title": "Visualización de datos",
+    "section": "Tamaño predeterminado en Quarto",
+    "text": "Tamaño predeterminado en Quarto\n\n\n\nFormato\nPor defecto\n\n\n\n\nPor defecto\n7 x 5\n\n\nDiapositivas HTML\n9,5 x 6,5\n\n\nDiapositivas HTML (reveal.js)\n9 x 5\n\n\nPDF\n5,5 x 3,5\n\n\nDiapositivas PDF (Beamer)\n10x7\n\n\nPowerPoint\n7,5 x 5,5\n\n\nMS Word, ODT, RTF\n5x4\n\n\nEPUB\n5x4\n\n\n\n* Medidas en pulgadas"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#grafico-con-tamaño-predeterminado-9-x-5",
+    "href": "primero/diapositivas/07-visualizacion.html#grafico-con-tamaño-predeterminado-9-x-5",
+    "title": "Visualización de datos",
+    "section": "Grafico con tamaño predeterminado (9 x 5”)",
+    "text": "Grafico con tamaño predeterminado (9 x 5”)"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#grafico-con-tamaño-al-50-4.5-x-2.5",
+    "href": "primero/diapositivas/07-visualizacion.html#grafico-con-tamaño-al-50-4.5-x-2.5",
+    "title": "Visualización de datos",
+    "section": "Grafico con tamaño al 50% (4.5 x 2.5”)",
+    "text": "Grafico con tamaño al 50% (4.5 x 2.5”)"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#grafico-con-tamaño-12-x-6.67",
+    "href": "primero/diapositivas/07-visualizacion.html#grafico-con-tamaño-12-x-6.67",
+    "title": "Visualización de datos",
+    "section": "Grafico con tamaño 12 x 6.67”",
+    "text": "Grafico con tamaño 12 x 6.67”"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#archivos-exportados",
+    "href": "primero/diapositivas/07-visualizacion.html#archivos-exportados",
+    "title": "Visualización de datos",
+    "section": "Archivos exportados",
+    "text": "Archivos exportados\n\nComparemos dos archivos exportados desde ggplot2:\n\n\nfont_prueba1_5x5_300.png\n\n\n\n\n\n\n\n\n\n\nfont_prueba1_10x10_300.png"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#problemas-con-fuentes",
+    "href": "primero/diapositivas/07-visualizacion.html#problemas-con-fuentes",
+    "title": "Visualización de datos",
+    "section": "Problemas con fuentes",
+    "text": "Problemas con fuentes\n\nObservamos que el tamaño del punto y la fuente parecen más pequeños en el gráfico de la derecha.\nDe hecho no son más pequeños, siguen teniendo el mismo tamaño en pulgadas, y como guardamos con la misma resolución (dpi = 300), tienen el mismo número de puntos (tamaño en pulgadas * 300).\nLa fuente del gráfico aparece más pequeña porque el segundo gráfico es más grande (3000x3000 frente a 1500x1500) y se reduce su aspecto para que el gráfico entre el espacio de la pantalla."
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes",
+    "href": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes",
+    "title": "Visualización de datos",
+    "section": "Diferencia en tamaño de fuentes",
+    "text": "Diferencia en tamaño de fuentes\n\nAdemás tenemos otro problema. De forma predeterminada, el tamaño de las fuentes de la configuración de theme() está definido en pts. (15 significa 15 puntos - pts-).\nEn cambio, en la capa geom_text(), el tamaño se define en mm, por lo que 15 es 15 mm.\n\n¿Cuál es la relación entre pts y mm o in?\n1 punto = 1/72 pulgadas\n1 punto = 0,35 mm"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes-1",
+    "href": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes-1",
+    "title": "Visualización de datos",
+    "section": "Diferencia en tamaño de fuentes",
+    "text": "Diferencia en tamaño de fuentes\nEntonces si queremos que el texto tenga el mismo tamaño que el título, el tamaño en mm será 15 pt * 0,35 pt/mm = 5,25 mm\nEn ggplot, hay una constante definida para realizar la conversión, .pt = 2,845276. (1/.pt = 0,35). Podemos escribir .pt en la consola y mostrará su valor:\n\n.pt\n\n[1] 2.845276\n\n1/.pt\n\n[1] 0.3514598\n\n\nEntonces para hacer la conversión:\nde pt a mm : mm = pt / .pt -&gt; 15 / 2,845276 = 5,27 mm\nde mm a pt : pt = mm * .pt -&gt; 5,27 * 2,845276 = 15 pts"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes-2",
+    "href": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes-2",
+    "title": "Visualización de datos",
+    "section": "Diferencia en tamaño de fuentes",
+    "text": "Diferencia en tamaño de fuentes\n\n\n\n\npinguinos |&gt;\n    ggplot(aes(x = largo_pico_mm, \n               y = alto_pico_mm, \n               color = especie)) +\n  geom_point() +\n  geom_text(x = 45, \n            y = 20, \n            label = \"Ejemplo font 15\", \n            size = 15, \n            inherit.aes = FALSE) +\n  labs(title = \"Relación entre largo y altura de picos por especies\") +\n  theme(plot.title = element_text(size = 15))"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes-3",
+    "href": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes-3",
+    "title": "Visualización de datos",
+    "section": "Diferencia en tamaño de fuentes",
+    "text": "Diferencia en tamaño de fuentes\n\n\n\npinguinos |&gt;\n    ggplot(aes(x = largo_pico_mm, \n               y = alto_pico_mm, \n               color = especie)) +\n  geom_point()+\n  geom_text(x = 45, \n            y = 20, \n            label = \"Ejemplo font 15\", \n            size = 15/.pt, \n            inherit.aes = FALSE) +\n  labs(title = \"Relación entre largo y altura de picos por especies\") +\n  theme(plot.title = element_text(size = 15))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
   }
 ]
