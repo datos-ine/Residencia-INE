@@ -218,8 +218,8 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-book fa-lg"></i></a></td>
     <td align="center"><a href="/primero/diapositivas/07-visualizacion.html" target="_blank">
     <i class="fa fa-laptop  fa-lg"></i></a></td>
-    <td align="center"><font color="fafcfc">
-          <i class="fa fa-code fa-lg"></i></font></td>
+    <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/07-visualizacion.zip" download="07-visualizacion.zip">
+          <i class="fa fa-code fa-lg"></i></a></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
