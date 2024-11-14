@@ -250,9 +250,9 @@ Se espera que al finalizar este curso los participantes puedan:
 
 ### Prácticas
 
-[Práctico Adolescentes](/primero/practicas/practica_integradora.html){target="_blank"}
+[Práctico Adolescentes](/primero/practicas/practica_adolescentes.html){target="_blank"}
 
-[Práctico Vigilancia Rita]()
+[Práctico Vigilancia Rita](/primero/practicas/practica_rita.html){target="_blank"}
 
 [Práctico Brote alimentario]()
 
