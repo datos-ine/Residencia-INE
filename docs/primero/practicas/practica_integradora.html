@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gestión de datos epidemiológicos con R + RStudio – Residencia-INE</title>
+<title>Practica integradora tidyverse 1 – Residencia-INE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,6 +103,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -79,10 +142,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo_resi.gif" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo_resi.gif" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Residencia-INE</span>
     </a>
   </div>
@@ -93,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">1er. año</span></a>
   </li>  
 </ul>
@@ -115,26 +178,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contenido</h2>
-   
-  <ul>
-  <li><a href="#fundamentación" id="toc-fundamentación" class="nav-link active" data-scroll-target="#fundamentación">Fundamentación</a></li>
-  <li><a href="#contribución-esperada" id="toc-contribución-esperada" class="nav-link" data-scroll-target="#contribución-esperada">Contribución esperada:</a></li>
-  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente">Docente</a></li>
-  <li><a href="#temario" id="toc-temario" class="nav-link" data-scroll-target="#temario">Temario</a></li>
-  <li><a href="#datos-para-la-practica" id="toc-datos-para-la-practica" class="nav-link" data-scroll-target="#datos-para-la-practica">Datos para la practica</a></li>
-  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gestión de datos epidemiológicos con R + RStudio</h1>
+<h1 class="title">Practica integradora tidyverse 1</h1>
+<p class="subtitle lead">Residencia de Epidemiología</p>
 </div>
 
 
@@ -151,401 +204,188 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- Add icon library -->
-<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></p>
-<section id="fundamentación" class="level3">
-<h3 data-anchor-id="fundamentación">Fundamentación</h3>
-<p>La vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.</p>
-<p>En la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.</p>
-<p>En este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.</p>
-</section>
-<section id="contribución-esperada" class="level3">
-<h3 data-anchor-id="contribución-esperada">Contribución esperada:</h3>
-<p>Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.</p>
-<p>Objetivos:</p>
-<p>Se espera que al finalizar este curso los participantes puedan:</p>
-<p>● Utilizar R + RStudio para procesar y analizar datos epidemiológicos</p>
-<p>● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud</p>
-<p>● Producir informes técnicos en diferentes formatos mediante Quarto</p>
-</section>
-<section id="docente" class="level3">
-<h3 data-anchor-id="docente">Docente</h3>
-<p>
-Christian Ballejo <a href="mailto:cballejo@anlis.gob.ar" class="fa fa-envelope"></a> <a href="https://twitter.com/chrisballejo" target="_blank" class="fa fa-twitter"></a> <a href="https://www.linkedin.com/in/cballejo/" target="_blank" class="fa fa-linkedin"></a> <a href="https://github.com/cballejo/" target="_blank" class="fa fa-github"></a>
-</p>
-</section>
-<section id="temario" class="level3">
-<h3 data-anchor-id="temario">Temario</h3>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#aabcfe;border-spacing:0;}
-.tg td{background-color:#e8edff;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
-  border-width:0px;color:#669;font-family:Arial, sans-serif;font-size:16px;overflow:hidden;padding:10px 5px;
-  word-break:normal;}
-.tg th{background-color:#b9c9fe;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
-  border-width:0px;color:#039;font-family:Arial, sans-serif;font-size:16px;font-weight:normal;overflow:hidden;
-  padding:10px 5px;word-break:normal;}
-.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg" style="max-width:900px;margin-left:auto;margin-right:auto">
+<p>En esta practica integradora vamos a trabajar con una tabla de datos en formato Excel que podrán descargar de este <a href="https://drive.google.com/open?id=1HLt_uGKpuO5h6zioDWPb_pZpCatMeVnr">enlace</a>.</p>
+<p>El archivo llamado <strong>DM.xlsx</strong> contiene datos ficticios de personas que respondieron una encuesta y que se les realizó una serie de mediciones y análisis de laboratorio.</p>
+<p>Consta de <strong>1030 observaciones</strong> de personas diferentes y son <strong>19 las variables recolectadas</strong>.</p>
+<p>Como primer paso le pedimos que cree una nueva carpeta en el lugar de preferencia de su computadora (puede ser <em>Mis documentos</em>, <em>Escritorio</em>, <em>etc.</em>) con el nombre <strong>Practica_integradora1</strong>.</p>
+<p>Luego deberá guardar el <strong>archivo DM.xlsx descargado</strong> dentro de la carpeta recién creada.</p>
+<p>A continuación ingrese a <strong>RStudio</strong> y construya un <em>nuevo proyecto</em> a partir de un directorio existente (Existing Directory) seleccionando la carpeta <strong>“Practica_integradora1”</strong>.</p>
+<p>Una vez finalizada la operación genere un <strong>nuevo script de R</strong> y guardelo con su nombre de pila.</p>
+<p>Escriba y ejecute las siguientes lineas:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"DM.xlsx"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>En las anteriores líneas de código activamos los paquetes contenidos en <strong>tidyverse</strong> y el paquete <strong>readxl</strong> que permite importar datos de archivos con formato Excel.</p>
+<p>Luego leímos el contenido de <strong>DM.xslx</strong> y visualizamos su estructura con <strong>glimpse()</strong></p>
+<p>Responda las siguientes consignas construyendo y ejecutando código R dentro del script.</p>
+<p>Utilice comentarios (iniciados con #) cuando deba responder preguntas tipo texto o si desea realizar cualquier aclaración.</p>
+<ol type="1">
+<li><p>Cuántos valores perdidos tiene la <strong>variable LDL</strong>?</p></li>
+<li><p>Resuma la <strong>variable EDAD</strong> mediante el calculo de <em>media</em> y <em>desvío estándar</em></p></li>
+<li><p>Construya un <strong>histograma</strong> de la <strong>variable EDAD</strong>. Defina el intervalo de clase en 10 años.</p></li>
+<li><p>Genere una <strong>tabla de frecuencia absoluta y porcentual</strong> de la <strong>variable SEXO</strong>.</p></li>
+<li><p>Calcule <em>mediana</em> y <em>rango intercuartílico</em> de la <strong>variable PESO</strong> según <strong>SEXO</strong>.</p></li>
+<li><p>En que <strong>tipo de gráfico</strong> podría visualizar los estadísticos de posición y dispersión anteriores?</p></li>
+<li><p>Haga un <strong>boxplot</strong> de la <strong>variable PESO según SEXO</strong>.</p></li>
+<li><p>A partir del <strong>PESO</strong> y la <strong>TALLA</strong> calcule el <strong>IMC</strong> en otra variable y déjela almacenada en la misma tabla datos. Tenga en cuenta que la fórmula del IMC es <span class="math inline">\(PESO/TALLA^2\)</span> y que las unidades correctas son <strong>kgs</strong> para PESO y <strong>metros</strong> para TALLA.</p></li>
+<li><p>Dibuje un <strong>gráfico de densidad</strong> para la nueva <strong>variables IMC según SEXO</strong>. Incorpore <em>transparencia del 50 %</em> con el fin de poder visualizar el solapamiento de las curvas.</p></li>
+<li><p>Categorice el peso en función del IMC según la siguiente tabla:</p></li>
+</ol>
+<table class="caption-top table">
 <thead>
-<tr>
-<th class="tg-amwm">
-Fecha
-</th>
-<th class="tg-amwm">
-Tema
-</th>
-<th class="tg-amwm">
-Lectura
-</th>
-<th class="tg-amwm">
-Diapositiva
-</th>
-<th class="tg-amwm">
-Práctica
-</th>
-<th class="tg-amwm">
-Recursos
-</th>
+<tr class="header">
+<th style="text-align: center;">IMC</th>
+<th style="text-align: center;">Clasificación</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tg-0lax">
-01/10/2024
-</td>
-<td class="tg-0lax">
-Bienvenida
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/00-bienvenida.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="odd">
+<td style="text-align: center;">&lt; 18,5</td>
+<td style="text-align: center;">1.Bajo peso</td>
 </tr>
-<tr>
-<td class="tg-0lax">
-01/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 1
-</td>
-<td align="center">
-<a href="./primero/clases/00-datos.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01a-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="even">
+<td style="text-align: center;">&gt;= 18,5 y &lt; 25</td>
+<td style="text-align: center;">2.Peso normal</td>
 </tr>
-<tr>
-<td class="tg-0lax">
-03/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 2
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01b-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="odd">
+<td style="text-align: center;">&gt;= 25 y &lt; 30</td>
+<td style="text-align: center;">3.Sobrepeso</td>
 </tr>
-<tr>
-<td class="tg-0lax">
-15/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 3
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01c-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-Lenguaje R
-</td>
-<td align="center">
-<a href="./primero/clases/01-introR.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/02-analisis.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="https://raw.githubusercontent.com/datos-ine/Residencia-INE/refs/heads/main/primero/recursos/Instalaci%C3%B3n%20del%20software.pdf" download="Instalacion_software.pdf"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-RStudio
-</td>
-<td align="center">
-<a href="./primero/clases/02-introRStudio.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-laptop  fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-Tidyverse
-</td>
-<td align="center">
-<a href="./primero/clases/03-introTidy.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-laptop  fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/recursos/01-hojaEstilo.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-22/10/2024
-</td>
-<td class="tg-0lax">
-Importación y exportación de archivos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/03-lectoescritura.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/01-lectoescritura.zip" download="01-lectoescritura.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/02-lectura.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-24/10/2024
-</td>
-<td class="tg-0lax">
-Manipulación de datos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/04-gestion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://drive.google.com/file/d/1wUJAaGKwiWNKsYzIOFFGV18XceEKv4GX/view?usp=sharing&quot;"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-29/10/2024
-</td>
-<td class="tg-0lax">
-Diagnóstico y depuración de datos
-</td>
-<td align="center">
-<a href="./primero/clases/06-depuracion.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05a-diagnostico.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/03-diagnostico.zip" download="03-diagnostico.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/clases/05-datosPerdidos.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-31/10/2024
-</td>
-<td class="tg-0lax">
-Datos ordenados y relacionales
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05b-tidy.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/04-tidy.zip" download="04-tidy.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/06-iteracion.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-05/11/2024
-</td>
-<td class="tg-0lax">
-Gestión de tipos de datos: caracteres, factores y variables de tiempo
-</td>
-<td align="center">
-<a href="./primero/clases/04-tipos.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05c-tipos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/05-tipos.zip" download="05-tipos.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-07/11/2024
-</td>
-<td class="tg-0lax">
-Análisis Exploratorio de datos - uni y bivariado
-</td>
-<td align="center">
-<a href="./primero/recursos/05-resumenes.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/06-analisis.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/06-estadisticos.zip" download="06-estadisticos.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/04-ajusteTasas.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-14/11/2024
-</td>
-<td class="tg-0lax">
-Visualización de datos
-</td>
-<td align="center">
-<a href="./primero/clases/07-visualizacion.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/07-visualizacion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/07-visualizacion.zip" download="07-visualizacion.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-19/11/2024
-</td>
-<td class="tg-0lax">
-Visualización de datos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/practicas/practica_integradora.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-21/11/2024
-</td>
-<td class="tg-0lax">
-Comunicar - Documentos Quarto
-</td>
-<td align="center">
-<a href="./primero/clases/08-quarto.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td class="tg-0lax">
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="even">
+<td style="text-align: center;">&gt;= 30</td>
+<td style="text-align: center;">4.Obesidad</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="datos-para-la-practica" class="level3">
-<h3 data-anchor-id="datos-para-la-practica">Datos para la practica</h3>
-</section>
-<section id="bibliografía" class="level3">
-<h3 data-anchor-id="bibliografía">Bibliografía</h3>
-<p><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a></p>
-<p><a href="https://epirhandbook.com/es/index.es.html">EpiRhandbook en español</a></p>
-<p><a href="https://socviz.co/">Data Visualization</a></p>
-<p><a href="https://cdr-book.github.io/index.html">Fundamentos de ciencia de datos con R</a></p>
-<p><a href="https://quarto.org/docs/guide/">Guía de Quarto (en inglés)</a></p>
+<p>Llame <strong>Clasificacion</strong> a la nueva variable y guárdela dentro de <strong>datos</strong>.</p>
+<ol start="11" type="1">
+<li>Construya un <strong>gráfico de barras</strong> de la variable SEXO donde podamos visualizar la distribución proporcional de las categorías de Clasificacion. Para lograr esto defina el <em>argumento position</em> en <strong>“fill”</strong>. Además asegúrese de no tener en cuenta a los <strong>valores NA</strong> de la <strong>variable Clasificacion</strong>. El producto final debería verse así:</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="practica_integradora_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="12" type="1">
+<li>Almacene en la tabla <strong>datos</strong> una nueva variable denominada <strong>HTA</strong> con valores <em>Si</em> y <em>No</em> según la siguiente condición:</li>
+</ol>
+<blockquote class="blockquote">
+<p>Si la <strong>TAS</strong> es mayor o igual a 140 o la <strong>TAD</strong> es mayor o igual a 90 entonces <strong>HTA</strong> valdrá <strong>“Si”</strong>, de lo contrario será <strong>“No”</strong>.</p>
+</blockquote>
+<ol start="13" type="1">
+<li><p>Muestre una tabla de frecuencia absoluta de HTA según condición de fumar (<strong>TABACO</strong>) excluyendo los valores perdidos de TABACO.</p></li>
+<li><p>Utilizando las variables <strong>HTA</strong>, <strong>TABACO</strong> y <strong>SEXO</strong> realice un gráfico igual al siguiente (<em>preste atención a las categorías de TABACO</em>):</p></li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="practica_integradora_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="15" type="1">
+<li>Categorice los valores de A1C (hemoglobina glicosilada) en una nueva variable <strong>Tol_Glucosa</strong> a partir de la siguiente tabla:</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">A1C</th>
+<th style="text-align: center;">Tol_Glucosa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">&lt; 5,7</td>
+<td style="text-align: center;">Normal</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">&gt;= 5,7 y &lt; 6,5</td>
+<td style="text-align: center;">IGT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&gt;= 6,5</td>
+<td style="text-align: center;">DM</td>
+</tr>
+</tbody>
+</table>
+<ol start="16" type="1">
+<li>Cree una nueva tabla llamada <strong>diabetes</strong> con las observaciones que tengan el valor <em>DM</em> en <strong>variable Tol_Glucosa</strong> y las siguientes variables: <strong>ID</strong>, <strong>EDAD</strong>, <strong>SEXO</strong>, <strong>Clasificacion</strong>, <strong>HTA</strong> y <strong>A_DIAB</strong>. Asegúrese que la tabla se almacene <strong><em>ordenada de forma creciente</em></strong> por el número de <strong>ID</strong>.</li>
+</ol>
+<ol start="17" type="1">
+<li>Calcule la mediana de la edad de los participantes y utilicela para construir una nueva variable llamada <strong>grupo_edad1</strong> que divida la muestra en dos (menores a la edad mediana y mayores o iguales a la edad mediana). Guardela dentro del dataframe de trabajo.</li>
+</ol>
+<ol start="18" type="1">
+<li>Genere y almacene dentro de dataframe una nueva variable denominada <strong>grupo_edad2</strong> a partir de la <strong>EDAD</strong> según el siguiente cuadro:</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">EDAD</th>
+<th style="text-align: center;">grupo_edad2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">&lt; 25</td>
+<td style="text-align: center;">1.Hasta 24 años</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">&gt;= 25 y &lt;= 39</td>
+<td style="text-align: center;">2.de 25 a 39 años</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&gt;= 40 y &lt;= 49</td>
+<td style="text-align: center;">3.de 40 a 49 años</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">&gt;= 50 y &lt;= 64</td>
+<td style="text-align: center;">4.de 50 a 64 años</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&gt;= 65</td>
+<td style="text-align: center;">5.65 y mas años</td>
+</tr>
+</tbody>
+</table>
+<ol start="19" type="1">
+<li>Construya un gráfico para observar la correlación de valores de cintura en centímetros (variable CINTURA) y el índice de masa corporal (IMC). Que gráfico se le ocurre que podría mostrar esta relación? Se observa relación? De qué forma?</li>
+</ol>
+<ol start="20" type="1">
+<li>Que otro gráfico podría utilizar para mostrar esta misma relación, pero utilizando la variable <strong>clasificacion</strong> que categoriza ordinalmente la variable IMC? (esta variable fue construida en la primera parte del ejercicio)</li>
+</ol>
+<ol start="21" type="1">
+<li>Resuma las categorías de la <strong>variable Tol_Glucosa</strong> mediante una tabla de frecuencias porcentual según condición de sedentarismo (<strong>variable SEDENTARIO</strong>). Fuerce el orden para que aparezca de la siguiente forma, acompañada de su frecuencia porcentual, tomando en cuenta como total a las observaciones según sedentarismo (porcentaje de categorías sobre total del grupo Si y porcentaje de categorías sobre total del grupo No):</li>
+</ol>
+<ol start="22" type="1">
+<li>Construya un <strong>histograma</strong> de la <strong>variable HDL</strong> con un ancho de barra de 10 unidades, facetado por la <strong>variable grupo_edad1</strong>.</li>
+</ol>
+<ol start="23" type="1">
+<li>Construya un gráfico de barras de la variable grupo_edad2 relacionado al consumo de alcohol (variable ALCOHOL) donde podamos visualizar la distribución absoluta. El producto final debería verse así:</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="practica_integradora_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+<p>Una vez finalizados todos los puntos guarde el archivo con el script y envíelo por mail a <a href="mailto:christianballejo@gmail.com">christianballejo@gmail.com</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

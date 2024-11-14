@@ -228,9 +228,10 @@ Se espera que al finalizar este curso los participantes puedan:
     <td class="tg-0lax">Visualización de datos</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
-    <td class="tg-0lax"></td>
+    <td align="center"><a href="/primero/practicas/practica_integradora.html" target="_blank">
+          <i class="fa fa-laptop  fa-lg"></i></a></td>
     <td align="center"><font color="fafcfc">
-          <i class="fa fa-code fa-lg"></i></font></td>
+          <i class="fa fa-code fa-lg"></i></font></td>      
     <td align="center"><font color="fafcfc">
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
