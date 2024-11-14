@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gestión de datos epidemiológicos con R + RStudio – Residencia-INE</title>
+<title>Practico sobre Encuesta de adolescentes – Residencia-INE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,10 +79,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo_resi.gif" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo_resi.gif" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Residencia-INE</span>
     </a>
   </div>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">1er. año</span></a>
   </li>  
 </ul>
@@ -120,13 +120,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenido</h2>
    
   <ul>
-  <li><a href="#fundamentación" id="toc-fundamentación" class="nav-link active" data-scroll-target="#fundamentación">Fundamentación</a></li>
-  <li><a href="#contribución-esperada" id="toc-contribución-esperada" class="nav-link" data-scroll-target="#contribución-esperada">Contribución esperada:</a></li>
-  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente">Docente</a></li>
-  <li><a href="#temario" id="toc-temario" class="nav-link" data-scroll-target="#temario">Temario</a></li>
-  <li><a href="#prácticas" id="toc-prácticas" class="nav-link" data-scroll-target="#prácticas">Prácticas</a></li>
-  <li><a href="#datos-para-la-practica" id="toc-datos-para-la-practica" class="nav-link" data-scroll-target="#datos-para-la-practica">Datos para la practica</a></li>
-  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   </ul>
 </nav>
     </div>
@@ -135,7 +130,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gestión de datos epidemiológicos con R + RStudio</h1>
+<h1 class="title">Practico sobre Encuesta de adolescentes</h1>
+<p class="subtitle lead">Residencia de Epidemiología</p>
 </div>
 
 
@@ -152,408 +148,36 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- Add icon library -->
-<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></p>
-<section id="fundamentación" class="level3">
-<h3 data-anchor-id="fundamentación">Fundamentación</h3>
-<p>La vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.</p>
-<p>En la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.</p>
-<p>En este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.</p>
+<section id="introducción" class="level2">
+<h2 data-anchor-id="introducción">Introducción</h2>
+<p>En el año 2016, en el marco del <strong>Programa Municipal de Salud Integral del Adolescente</strong>, se llevó a cabo un estudio en algunas de las escuelas públicas de Mar del Plata.</p>
+<p>1252 estudiantes de 2do y 4to año de la ciudad completaron una encuesta auto-administradas con una serie de preguntas que dieron lugar a 140 variables.</p>
+<p>El recorrido de los bloques de preguntas incluyeron: Tu familia y entorno, tu tiempo, tu salud, tus hábitos y acerca de vos.</p>
+<p>La tabla de datos la pueden descargar <a href="https://drive.google.com/file/d/1qxYdFKR6jktPjjpzZz9_7f7EN8uiW-Sd/view?usp=drive_link">aquí</a> y la encuesta en pdf <a href="https://drive.google.com/file/d/1t3JmKOZyp1Cpu4BqWCs1EZMIdUIYm1wg/view?usp=drive_link">aquí</a>.</p>
 </section>
-<section id="contribución-esperada" class="level3">
-<h3 data-anchor-id="contribución-esperada">Contribución esperada:</h3>
-<p>Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.</p>
-<p>Objetivos:</p>
-<p>Se espera que al finalizar este curso los participantes puedan:</p>
-<p>● Utilizar R + RStudio para procesar y analizar datos epidemiológicos</p>
-<p>● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud</p>
-<p>● Producir informes técnicos en diferentes formatos mediante Quarto</p>
-</section>
-<section id="docente" class="level3">
-<h3 data-anchor-id="docente">Docente</h3>
-<p>
-Christian Ballejo <a href="mailto:cballejo@anlis.gob.ar" class="fa fa-envelope"></a> <a href="https://twitter.com/chrisballejo" target="_blank" class="fa fa-twitter"></a> <a href="https://www.linkedin.com/in/cballejo/" target="_blank" class="fa fa-linkedin"></a> <a href="https://github.com/cballejo/" target="_blank" class="fa fa-github"></a>
-</p>
-</section>
-<section id="temario" class="level3">
-<h3 data-anchor-id="temario">Temario</h3>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#aabcfe;border-spacing:0;}
-.tg td{background-color:#e8edff;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
-  border-width:0px;color:#669;font-family:Arial, sans-serif;font-size:16px;overflow:hidden;padding:10px 5px;
-  word-break:normal;}
-.tg th{background-color:#b9c9fe;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
-  border-width:0px;color:#039;font-family:Arial, sans-serif;font-size:16px;font-weight:normal;overflow:hidden;
-  padding:10px 5px;word-break:normal;}
-.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg" style="max-width:900px;margin-left:auto;margin-right:auto">
-<thead>
-<tr>
-<th class="tg-amwm">
-Fecha
-</th>
-<th class="tg-amwm">
-Tema
-</th>
-<th class="tg-amwm">
-Lectura
-</th>
-<th class="tg-amwm">
-Diapositiva
-</th>
-<th class="tg-amwm">
-Práctica
-</th>
-<th class="tg-amwm">
-Recursos
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tg-0lax">
-01/10/2024
-</td>
-<td class="tg-0lax">
-Bienvenida
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/00-bienvenida.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-01/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 1
-</td>
-<td align="center">
-<a href="./primero/clases/00-datos.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01a-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-03/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 2
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01b-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-15/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 3
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01c-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-Lenguaje R
-</td>
-<td align="center">
-<a href="./primero/clases/01-introR.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/02-analisis.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="https://raw.githubusercontent.com/datos-ine/Residencia-INE/refs/heads/main/primero/recursos/Instalaci%C3%B3n%20del%20software.pdf" download="Instalacion_software.pdf"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-RStudio
-</td>
-<td align="center">
-<a href="./primero/clases/02-introRStudio.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-laptop  fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-Tidyverse
-</td>
-<td align="center">
-<a href="./primero/clases/03-introTidy.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-laptop  fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/recursos/01-hojaEstilo.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-22/10/2024
-</td>
-<td class="tg-0lax">
-Importación y exportación de archivos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/03-lectoescritura.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/01-lectoescritura.zip" download="01-lectoescritura.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/02-lectura.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-24/10/2024
-</td>
-<td class="tg-0lax">
-Manipulación de datos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/04-gestion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://drive.google.com/file/d/1wUJAaGKwiWNKsYzIOFFGV18XceEKv4GX/view?usp=sharing&quot;"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-29/10/2024
-</td>
-<td class="tg-0lax">
-Diagnóstico y depuración de datos
-</td>
-<td align="center">
-<a href="./primero/clases/06-depuracion.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05a-diagnostico.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/03-diagnostico.zip" download="03-diagnostico.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/clases/05-datosPerdidos.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-31/10/2024
-</td>
-<td class="tg-0lax">
-Datos ordenados y relacionales
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05b-tidy.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/04-tidy.zip" download="04-tidy.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/06-iteracion.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-05/11/2024
-</td>
-<td class="tg-0lax">
-Gestión de tipos de datos: caracteres, factores y variables de tiempo
-</td>
-<td align="center">
-<a href="./primero/clases/04-tipos.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05c-tipos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/05-tipos.zip" download="05-tipos.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-07/11/2024
-</td>
-<td class="tg-0lax">
-Análisis Exploratorio de datos - uni y bivariado
-</td>
-<td align="center">
-<a href="./primero/recursos/05-resumenes.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/06-analisis.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/06-estadisticos.zip" download="06-estadisticos.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/04-ajusteTasas.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-14/11/2024
-</td>
-<td class="tg-0lax">
-Visualización de datos
-</td>
-<td align="center">
-<a href="./primero/clases/07-visualizacion.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/07-visualizacion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/07-visualizacion.zip" download="07-visualizacion.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-19/11/2024
-</td>
-<td class="tg-0lax">
-Visualización de datos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/practicas/practica_integradora.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-21/11/2024
-</td>
-<td class="tg-0lax">
-Comunicar - Documentos Quarto
-</td>
-<td align="center">
-<a href="./primero/clases/08-quarto.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td class="tg-0lax">
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="prácticas" class="level3">
-<h3 data-anchor-id="prácticas">Prácticas</h3>
-<p><a href=".\primero/practicas/practica_integradora.html" target="_blank">Práctico Adolescentes</a></p>
-<p><a href="">Práctico Vigilancia Rita</a></p>
-<p><a href="">Práctico Brote alimentario</a></p>
-</section>
-<section id="datos-para-la-practica" class="level3">
-<h3 data-anchor-id="datos-para-la-practica">Datos para la practica</h3>
-<p>Archivo <a href="https://drive.google.com/open?id=1HLt_uGKpuO5h6zioDWPb_pZpCatMeVnr">Diabetes Mellitus</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/1qxYdFKR6jktPjjpzZz9_7f7EN8uiW-Sd/view?usp=drive_link">Adolescentes</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/10WVwnr9RVqcb2Mfn06-IdcivP3DEfwNB/view?usp=sharing">Vigilancia Rita</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/1p7TUHQiUKW9ve9VkTkk7bDqN6L_FXiEs/view?usp=sharing">Brote</a></p>
-</section>
-<section id="bibliografía" class="level3">
-<h3 data-anchor-id="bibliografía">Bibliografía</h3>
-<p><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a></p>
-<p><a href="https://epirhandbook.com/es/index.es.html">EpiRhandbook en español</a></p>
-<p><a href="https://socviz.co/">Data Visualization</a></p>
-<p><a href="https://cdr-book.github.io/index.html">Fundamentos de ciencia de datos con R</a></p>
-<p><a href="https://quarto.org/docs/guide/">Guía de Quarto (en inglés)</a></p>
+<section id="actividades" class="level2">
+<h2 data-anchor-id="actividades">Actividades</h2>
+<p>Usted es parte del equipo de epidemiólogos del área de salud integral del adolescente de la municipalidad de Gral. Pueyrredón y le solicitan realizar los siguientes items en lenguaje R.</p>
+<p>IMPORTANTE: todas las actividades deben resolverse mediante código dentro de un script creado en un proyecto de RStudio donde haya descargado el archivo de datos.</p>
+<ol type="1">
+<li><p>Construya un proyecto de RStudio en torno a una carpeta que llamará <strong>TP Adolescencia</strong> donde va a incluir el archivo <em>datos.csv</em> descargado.</p></li>
+<li><p>Lea correctamente el archivo <strong>datos.csv</strong>.</p></li>
+<li><p>Explore su estructura.</p></li>
+<li><p>Transforme la variable <em>F1_FNac</em> a formato fecha (date).</p></li>
+<li><p>Resuma la variable <em>F2_Edad</em> con medidas de tendencia central y dispersión según Anio.</p></li>
+<li><p>Resuma la variable <em>F3_Sexo</em> mediante una tabla de frecuencia relativa según <em>Anio</em>.</p></li>
+<li><p>Realice un gráfico que describa la información sobre los convivientes de los adolescentes, cuantificando la frecuencia de las categorías (ordenado de mayor a menor). Tenga en cuenta que las variables que comienzan con <em>F4_</em> son categorías de una variable conceptual <em>Conviviente</em>, que primero deberá pivotear correctamente.</p></li>
+<li><p>Almacene todas las variable del bloque <em>TUS HABITOS</em> en otro dataframe llamado <strong>habitos</strong>.</p></li>
+<li><p>Revise la calidad de la variable <em>H1_Alcohol</em> de este dataframe, en cuanto a sus valores perdidos. Que porcentaje de sus observaciones son <strong>NA</strong>?</p></li>
+<li><p>Cuál es la frecuencia de los adolescentes que toman bebidas alcohólicas? (variable <em>H1_Alcohol</em> - 0 es Sí y 1 es No.). Calcule lo mismo estratificado por sexo y por año (2do. y 4to.).</p></li>
+<li><p>Cuál es el anticonceptivo mas conocido por los adolescentes según sexo? (variables <em>S4_</em> - tipo lógicas donde TRUE es Sí y FALSE es No). Aquí deberán hacer también un pivoteo que ordene los datos de ancho a largo.</p></li>
+<li><p>Realice un gráfico de boxplot sobre la edad en que tuvieron relaciones sexuales la 1era vez (variable <em>S3_Edad</em>) según sexo.</p></li>
+<li><p>Cuantos adolescentes concurren a una iglesia o templo? - (variable <em>T7_Iglesia</em> donde 0 es Sí y 1 es No)</p></li>
+<li><p>Cómo se distribuye el porcentaje en las diferentes religiones de los que concurren a una iglesia o templo. (variable <em>T7_Religion</em>). Para su mejor visualización, construya un gráfico de barras para esta variable donde las barras se ordenen de mayor a menor frecuencia.</p></li>
+<li><p>A que hora se acuestan habitualmente. Cambia en función del año al que asisten? Y según el turno escolar? (variable <em>H5_HoraDormir</em>)</p></li>
+</ol>
+<hr>
+<p>Una vez finalizados todos los puntos guarde el archivo con el script y envíelo por mail a <a href="mailto:christianballejo@gmail.com">christianballejo@gmail.com</a></p>
 
 
 </section>

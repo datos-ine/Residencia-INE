@@ -248,8 +248,23 @@ Se espera que al finalizar este curso los participantes puedan:
   </tr>
 </tbody></table>
 
+### Prácticas
+
+[Práctico Adolescentes](/primero/practicas/practica_integradora.html){target="_blank"}
+
+[Práctico Vigilancia Rita]()
+
+[Práctico Brote alimentario]()
+
 ### Datos para la practica
 
+Archivo [Diabetes Mellitus](https://drive.google.com/open?id=1HLt_uGKpuO5h6zioDWPb_pZpCatMeVnr)
+
+Archivo [Adolescentes](https://drive.google.com/file/d/1qxYdFKR6jktPjjpzZz9_7f7EN8uiW-Sd/view?usp=drive_link)
+
+Archivo [Vigilancia Rita](https://drive.google.com/file/d/10WVwnr9RVqcb2Mfn06-IdcivP3DEfwNB/view?usp=sharing)
+
+Archivo [Brote](https://drive.google.com/file/d/1p7TUHQiUKW9ve9VkTkk7bDqN6L_FXiEs/view?usp=sharing)
 
 
 ### Bibliografía

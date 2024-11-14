@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gestión de datos epidemiológicos con R + RStudio – Residencia-INE</title>
+<title>Practico con datos de vigilancia RITA – Residencia-INE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,10 +79,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo_resi.gif" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo_resi.gif" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Residencia-INE</span>
     </a>
   </div>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">1er. año</span></a>
   </li>  
 </ul>
@@ -120,13 +120,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenido</h2>
    
   <ul>
-  <li><a href="#fundamentación" id="toc-fundamentación" class="nav-link active" data-scroll-target="#fundamentación">Fundamentación</a></li>
-  <li><a href="#contribución-esperada" id="toc-contribución-esperada" class="nav-link" data-scroll-target="#contribución-esperada">Contribución esperada:</a></li>
-  <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente">Docente</a></li>
-  <li><a href="#temario" id="toc-temario" class="nav-link" data-scroll-target="#temario">Temario</a></li>
-  <li><a href="#prácticas" id="toc-prácticas" class="nav-link" data-scroll-target="#prácticas">Prácticas</a></li>
-  <li><a href="#datos-para-la-practica" id="toc-datos-para-la-practica" class="nav-link" data-scroll-target="#datos-para-la-practica">Datos para la practica</a></li>
-  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   </ul>
 </nav>
     </div>
@@ -135,7 +130,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gestión de datos epidemiológicos con R + RStudio</h1>
+<h1 class="title">Practico con datos de vigilancia RITA</h1>
+<p class="subtitle lead">Residencia de Epidemiología</p>
 </div>
 
 
@@ -152,408 +148,115 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- Add icon library -->
-<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></p>
-<section id="fundamentación" class="level3">
-<h3 data-anchor-id="fundamentación">Fundamentación</h3>
-<p>La vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.</p>
-<p>En la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.</p>
-<p>En este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.</p>
+<section id="introducción" class="level2">
+<h2 data-anchor-id="introducción">Introducción</h2>
+<p>El <em>Registro Institucional de Tumores de Argentina</em> (<strong>RITA</strong>) es un sistema de registro de cáncer de base hospitalaria diseñado para ser implementado en instituciones que brindan servicios de salud a pacientes oncológicos. El RITA fue implementado a partir del año 2012 por el <strong>Instituto Nacional del Cáncer</strong> (<strong>INC</strong>) y tiene como objetivo principal disponer de datos completos, actualizados y de alta calidad de los tumores diagnosticados y/o tratados en el hospital, que puedan ser utilizados para mejorar la calidad de la atención, proporcionando datos clave para distribuir de manera racional los recursos humanos y financieros.</p>
+<p>Actualmente, existen 29 instituciones que registran en RITA distribuidas en 15 jurisdicciones del país, que conforman la Red Nacional de Registros Hospitalarios de Cáncer, coordinada por el <em>Sistema de Vigilancia Epidemiológica y Reporte del Cáncer</em> (<strong>SIVER-Ca</strong>). El relevamiento de la información se realiza en el software RITA, un sistema de información centralizado sobre una plataforma web, desarrollado por el INC, que permite a través de un sistema electrónico realizar la carga y almacenamiento de datos, facilitando el intercambio de información entre los registros de la red.</p>
+<p>Este trabajo práctico consiste en realizar diferentes tareas de gestión y extracción de información a datos de prueba de este sistema RITA.</p>
 </section>
-<section id="contribución-esperada" class="level3">
-<h3 data-anchor-id="contribución-esperada">Contribución esperada:</h3>
-<p>Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.</p>
-<p>Objetivos:</p>
-<p>Se espera que al finalizar este curso los participantes puedan:</p>
-<p>● Utilizar R + RStudio para procesar y analizar datos epidemiológicos</p>
-<p>● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud</p>
-<p>● Producir informes técnicos en diferentes formatos mediante Quarto</p>
-</section>
-<section id="docente" class="level3">
-<h3 data-anchor-id="docente">Docente</h3>
-<p>
-Christian Ballejo <a href="mailto:cballejo@anlis.gob.ar" class="fa fa-envelope"></a> <a href="https://twitter.com/chrisballejo" target="_blank" class="fa fa-twitter"></a> <a href="https://www.linkedin.com/in/cballejo/" target="_blank" class="fa fa-linkedin"></a> <a href="https://github.com/cballejo/" target="_blank" class="fa fa-github"></a>
-</p>
-</section>
-<section id="temario" class="level3">
-<h3 data-anchor-id="temario">Temario</h3>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#aabcfe;border-spacing:0;}
-.tg td{background-color:#e8edff;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
-  border-width:0px;color:#669;font-family:Arial, sans-serif;font-size:16px;overflow:hidden;padding:10px 5px;
-  word-break:normal;}
-.tg th{background-color:#b9c9fe;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
-  border-width:0px;color:#039;font-family:Arial, sans-serif;font-size:16px;font-weight:normal;overflow:hidden;
-  padding:10px 5px;word-break:normal;}
-.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg" style="max-width:900px;margin-left:auto;margin-right:auto">
+<section id="actividades" class="level2">
+<h2 data-anchor-id="actividades">Actividades</h2>
+<p>Usted es parte del equipo de epidemiólogos del INC y le solicitan realizar los siguientes items en lenguaje R.</p>
+<ol type="1">
+<li><p>Descargue la carpeta RITA con la estructura de carpetas y archivos de datos que la integran. La carpeta está en un archivo que deberá descomprimir <a href="https://drive.google.com/file/d/10WVwnr9RVqcb2Mfn06-IdcivP3DEfwNB/view?usp=sharing">rita.zip</a>.</p></li>
+<li><p>Construya un proyecto de RStudio en torno a la carpeta descargada.</p></li>
+<li><p>Genere un script con su nombre donde desarrollará los siguientes puntos solicitados.</p></li>
+<li><p>Lea correctamente el archivo <strong>rita.csv</strong> que encontrará dentro de la subcarpeta <em>Datos</em>.</p></li>
+<li><p>Explore su contenido para conocer la cantidad de observaciones y los tipos de variables. Tengo a mano el diccionario de datos que adjuntamos dentro de la carpeta de trabajo.</p></li>
+<li><p>Detecte la o las variables que tienen más del 80 % de valores faltantes y elimínelas del dataframe.</p></li>
+<li><p>Todas las variables que se piden construir en estas consignas deben almacenarse dentro del mismo dataframe para poder reutilizarlas en pasos futuros. Cree dos variables numéricas a partir de <strong>FEINI</strong> (fecha de inicio de síntomas) y <strong>FECON</strong> (fecha de primera consulta) denominadas <strong>FEINI_C</strong> y <strong>FECON_C</strong> según las siguientes condiciones:</p></li>
+</ol>
+<p>Se le coloca el valor 0 si el dato es <em>NA</em>;</p>
+<p>1 si tiene una fecha válida;</p>
+<p>8 si tiene “N/D”;</p>
+<p>y 9 si el dato es “01/06/1900” o “15/06/1900”.</p>
+<ol start="9" type="1">
+<li><p>Convierta adecuadamente los formatos de las variables donde hay fechas a <strong>date</strong> y las variables que terminan en N (menos <strong>FECON</strong> que es fecha) a factor.</p></li>
+<li><p>Convierta la variable <strong>PTESX</strong> a factor especificando en el argumento labels que 1 = “Varón” y 2 = “Mujer”.</p></li>
+<li><p>Cree una nueva variable llamada <strong>año</strong> extrayendo el año de la fecha de registro (<strong>FEREG</strong>).</p></li>
+<li><p>Construya la variable <strong>edad</strong> (número de años enteros) a partir del cálculo, utilizando la fecha de nacimiento (<strong>FENAC</strong>) y la fecha de registro (<strong>FEREG</strong>).</p></li>
+<li><p>Construya la variable <strong>grupo_etario</strong> a partir de la variable <strong>edad</strong> con los siguientes intervalos:</p>
+<table class="caption-top table">
 <thead>
-<tr>
-<th class="tg-amwm">
-Fecha
-</th>
-<th class="tg-amwm">
-Tema
-</th>
-<th class="tg-amwm">
-Lectura
-</th>
-<th class="tg-amwm">
-Diapositiva
-</th>
-<th class="tg-amwm">
-Práctica
-</th>
-<th class="tg-amwm">
-Recursos
-</th>
+<tr class="header">
+<th>Intervalo</th>
+<th>Etiqueta</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tg-0lax">
-01/10/2024
-</td>
-<td class="tg-0lax">
-Bienvenida
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/00-bienvenida.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="odd">
+<td>0 – 19</td>
+<td>0-19</td>
 </tr>
-<tr>
-<td class="tg-0lax">
-01/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 1
-</td>
-<td align="center">
-<a href="./primero/clases/00-datos.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01a-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="even">
+<td>20 – 39</td>
+<td>20-39</td>
 </tr>
-<tr>
-<td class="tg-0lax">
-03/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 2
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01b-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="odd">
+<td>40 – 59</td>
+<td>40-59</td>
 </tr>
-<tr>
-<td class="tg-0lax">
-15/10/2024
-</td>
-<td class="tg-0lax">
-Datos - Parte 3
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/01c-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="even">
+<td>60 – 79</td>
+<td>60-79</td>
 </tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-Lenguaje R
-</td>
-<td align="center">
-<a href="./primero/clases/01-introR.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/02-analisis.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="https://raw.githubusercontent.com/datos-ine/Residencia-INE/refs/heads/main/primero/recursos/Instalaci%C3%B3n%20del%20software.pdf" download="Instalacion_software.pdf"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-RStudio
-</td>
-<td align="center">
-<a href="./primero/clases/02-introRStudio.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-laptop  fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-17/10/2024
-</td>
-<td class="tg-0lax">
-Tidyverse
-</td>
-<td align="center">
-<a href="./primero/clases/03-introTidy.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-laptop  fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/recursos/01-hojaEstilo.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-22/10/2024
-</td>
-<td class="tg-0lax">
-Importación y exportación de archivos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/03-lectoescritura.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/01-lectoescritura.zip" download="01-lectoescritura.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/02-lectura.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-24/10/2024
-</td>
-<td class="tg-0lax">
-Manipulación de datos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/04-gestion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://drive.google.com/file/d/1wUJAaGKwiWNKsYzIOFFGV18XceEKv4GX/view?usp=sharing&quot;"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-29/10/2024
-</td>
-<td class="tg-0lax">
-Diagnóstico y depuración de datos
-</td>
-<td align="center">
-<a href="./primero/clases/06-depuracion.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05a-diagnostico.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/03-diagnostico.zip" download="03-diagnostico.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/clases/05-datosPerdidos.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-31/10/2024
-</td>
-<td class="tg-0lax">
-Datos ordenados y relacionales
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05b-tidy.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/04-tidy.zip" download="04-tidy.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/06-iteracion.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-05/11/2024
-</td>
-<td class="tg-0lax">
-Gestión de tipos de datos: caracteres, factores y variables de tiempo
-</td>
-<td align="center">
-<a href="./primero/clases/04-tipos.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05c-tipos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/05-tipos.zip" download="05-tipos.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-07/11/2024
-</td>
-<td class="tg-0lax">
-Análisis Exploratorio de datos - uni y bivariado
-</td>
-<td align="center">
-<a href="./primero/recursos/05-resumenes.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/06-analisis.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/06-estadisticos.zip" download="06-estadisticos.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/04-ajusteTasas.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-14/11/2024
-</td>
-<td class="tg-0lax">
-Visualización de datos
-</td>
-<td align="center">
-<a href="./primero/clases/07-visualizacion.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/07-visualizacion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/07-visualizacion.zip" download="07-visualizacion.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-19/11/2024
-</td>
-<td class="tg-0lax">
-Visualización de datos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/practicas/practica_integradora.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-21/11/2024
-</td>
-<td class="tg-0lax">
-Comunicar - Documentos Quarto
-</td>
-<td align="center">
-<a href="./primero/clases/08-quarto.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td class="tg-0lax">
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<tr class="odd">
+<td>80 y edades mayores</td>
+<td>80 y más</td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="prácticas" class="level3">
-<h3 data-anchor-id="prácticas">Prácticas</h3>
-<p><a href=".\primero/practicas/practica_integradora.html" target="_blank">Práctico Adolescentes</a></p>
-<p><a href="">Práctico Vigilancia Rita</a></p>
-<p><a href="">Práctico Brote alimentario</a></p>
-</section>
-<section id="datos-para-la-practica" class="level3">
-<h3 data-anchor-id="datos-para-la-practica">Datos para la practica</h3>
-<p>Archivo <a href="https://drive.google.com/open?id=1HLt_uGKpuO5h6zioDWPb_pZpCatMeVnr">Diabetes Mellitus</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/1qxYdFKR6jktPjjpzZz9_7f7EN8uiW-Sd/view?usp=drive_link">Adolescentes</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/10WVwnr9RVqcb2Mfn06-IdcivP3DEfwNB/view?usp=sharing">Vigilancia Rita</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/1p7TUHQiUKW9ve9VkTkk7bDqN6L_FXiEs/view?usp=sharing">Brote</a></p>
-</section>
-<section id="bibliografía" class="level3">
-<h3 data-anchor-id="bibliografía">Bibliografía</h3>
-<p><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a></p>
-<p><a href="https://epirhandbook.com/es/index.es.html">EpiRhandbook en español</a></p>
-<p><a href="https://socviz.co/">Data Visualization</a></p>
-<p><a href="https://cdr-book.github.io/index.html">Fundamentos de ciencia de datos con R</a></p>
-<p><a href="https://quarto.org/docs/guide/">Guía de Quarto (en inglés)</a></p>
+</table></li>
+<li><p>Construya la variable <strong>IdGrpTopo</strong> a partir de la variable <strong>TPGF</strong>, recortando los primeros tres caracteres (pasar de código CIE-O a código CIE-O dos dígitos).</p></li>
+<li><p>Cree una variable llamada <strong>demora</strong> medida en días (valor que incluya decimales) producto del tiempo transcurrido entre la fecha de inicio de los síntomas y la fecha de 1era. Consulta. Para esta operación excluya las observaciones que en <strong>FEINI_C</strong> o en <strong>FECON_C</strong> tengan valores 0, 8 o 9.</p></li>
+<li><p>Almacene la tabla con los cambios anteriores en un archivo bajo el nombre <strong>rita_limpia.csv</strong> utilizando el <em>punto y coma</em> como separador.</p></li>
+<li><p>Obtenga medidas resumen de la variable <strong>edad</strong> según <strong>sexo</strong> para el total de las observaciones. Las medidas a presentar son: <em>n, mínimo, máximo, mediana, rango intercuartílico, media, desvío estándar, error estándar e intervalo de confianza</em>.</p></li>
+<li><p>Construya una tabla de frecuencia relativa de la variable <strong>RTATON</strong> estratificada por <strong>sexo</strong>. Pivotee los elementos necesarios para que la estructura final de la cabecera de la tabla sea:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>RTATON</th>
+<th>Mujer</th>
+<th>Hombre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Construya un gráfico de líneas donde se observe la tendencia de la frecuencia absoluta de pacientes registrados en RITA por año (entre 2018 y 2023). Antes asegúrese que el id del paciente (<strong>IDPTE</strong>) sea único en la tabla de datos. Coloque nombres de ejes, título y todo aquello que le parezca pertinente modificar y/o agregar.</p></li>
+</ol>
+<p>El gráfico debería ser similar a este:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="practica_rita_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="21" type="1">
+<li>Construya un gráfico de barras para visualizar las frecuencias porcentuales entre las categorías de la variable <strong>grupo_etario</strong> facetado según <strong>sexo</strong> de los registros totales del año 2022. Coloque nombres de ejes, título y todo aquello que le parezca pertinente modificar y/o agregar. Almacénelo en un objeto de nombre <strong>grafico_1</strong>.</li>
+</ol>
+<p>El gráfico debería ser similar a este:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="practica_rita_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="22" type="1">
+<li>Exporte el <strong>grafico_1</strong> a un archivo jpg de 300 dpi con el mismo nombre dentro de la subcarpeta <em>Gráficos</em>.</li>
+</ol>
+<hr>
+<p>Una vez finalizados todos los puntos guarde el archivo con el script y envíelo por mail a <a href="mailto:christianballejo@gmail.com">christianballejo@gmail.com</a></p>
 
 
 </section>
