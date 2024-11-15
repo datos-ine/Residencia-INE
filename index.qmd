@@ -254,7 +254,7 @@ Se espera que al finalizar este curso los participantes puedan:
 
 [Práctico Vigilancia Rita](/primero/practicas/practica_rita.html){target="_blank"}
 
-[Práctico Brote alimentario]()
+[Práctico Brote alimentario](/primero/practicas/practica_brote.html){target="_blank"}
 
 ### Datos para la practica
 
