@@ -3218,5 +3218,145 @@
     "title": "Practico sobre un brote alimentario",
     "section": "Actividades",
     "text": "Actividades\nUsted es parte del equipo de epidemiólogos que conducen la investigación de brote y deberá realizar las siguientes actividades con los datos almacenados en este archivo.\nIMPORTANTE: todas las actividades deben resolverse mediante código dentro de un script creado en un proyecto de RStudio donde haya descargado el archivo de datos.\n\nLectura de los datos\n\nLea/importe el archivo datos.csv en un dataframe/tibble de nombre datos. Recuerde observar el archivo previamente con el fin de conocer su estructura, (por ejemplo: cuál es el caracter separador, etc) para completar los argumentos de lectura.\n\n\nAsegúrese que los tipos de datos de cada variable fueron bien reconocidos. Para que tenga una idea estos deberían ser:\n\n\n\nRows: 75\nColumns: 19\n$ ID               &lt;dbl&gt; 6, 7, 10, 18, 20, 22, 24, 26, 29, 31, 36, 38, 40, 44,…\n$ EDAD             &lt;dbl&gt; 63, 70, 33, 36, 33, 7, 3, 59, 37, 35, 35, 57, 68, 58,…\n$ SEXO             &lt;chr&gt; \"F\", \"M\", \"F\", \"M\", \"F\", \"M\", \"M\", \"F\", \"F\", \"M\", \"F\"…\n$ HORA_COMIDA      &lt;time&gt; 19:30:00, 19:30:00, 19:00:00,       NA,       NA,   …\n$ ENFERMO          &lt;chr&gt; \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\",…\n$ INICIO_SINTOMAS  &lt;chr&gt; \"18/04/2018\", \"18/04/2018\", \"18/04/2018\", \"18/04/2018…\n$ HORA_SINTOMAS    &lt;time&gt; 22:30:00, 22:30:00, 23:00:00, 22:15:00, 22:00:00, 23…\n$ CARRE_CERDO      &lt;chr&gt; \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"NO\", \"NO\", \"SI\",…\n$ ESPINACAS        &lt;chr&gt; \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\",…\n$ SALSA_TOMATE     &lt;chr&gt; \"NO\", \"SI\", \"SI\", \"NO\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\",…\n$ ENSALADA         &lt;chr&gt; \"SI\", \"NO\", \"NO\", \"SI\", \"SI\", \"SI\", \"NO\", \"SI\", \"NO\",…\n$ PAN              &lt;chr&gt; \"NO\", \"SI\", \"SI\", \"SI\", \"NO\", \"SI\", \"NO\", \"SI\", \"SI\",…\n$ LECHE            &lt;chr&gt; \"NO\", \"NO\", \"NO\", \"NO\", \"NO\", \"NO\", \"NO\", \"NO\", \"NO\",…\n$ CAFE             &lt;chr&gt; \"NO\", \"SI\", \"NO\", \"NO\", \"SI\", \"NO\", \"NO\", \"NO\", \"SI\",…\n$ AGUA             &lt;chr&gt; \"SI\", \"SI\", \"SI\", \"NO\", \"SI\", \"SI\", \"SI\", \"SI\", \"NO\",…\n$ TORTA            &lt;chr&gt; \"NO\", \"NO\", \"NO\", \"NO\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\",…\n$ HELADO_VAINILLA  &lt;chr&gt; \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\", \"SI\",…\n$ HELADO_CHOCOLATE &lt;chr&gt; \"NO\", \"NO\", \"SI\", \"NO\", \"SI\", \"SI\", \"NO\", \"NO\", \"NO\",…\n$ ENSALADA_FRUTA   &lt;chr&gt; \"NO\", \"NO\", \"NO\", \"NO\", \"NO\", \"NO\", \"NO\", \"NO\", \"NO\",…\n\n\n\n\nFormateo de variables\nLos primeros pasos generalmente están vinculados con darle formato adecuado a las variables que utilizaremos en análisis posteriores.\n\nEn principio, tomaremos la variable SEXO que fue leída como caracter (chr) y la convertiremos en tipo factor. Además, en otro paso, recodificaremos sus niveles para transformarla los valores F en Femenino y M en Masculino.\n\nAl solicitar sus niveles nos deberían de quedar así:\n\n\n[1] \"Femenino\"  \"Masculino\"\n\n\n\nContinuamos con otra variable categórica que tiene cargado quienes enfermermaron y quienes no lo hicieron en este brote.\n\nA la variable ENFERMO, también la convertimos en tipo factor y dejamos las etiquetas que tiene pero le vamos a modificar el orden de los niveles, para que queden así:\n\n\nCategorías de ENFERMO:  SI NO\n\n\n\nOtra variable a la que debemos corregir su tipo es INICIO_SINTOMAS que contiene la fecha en que comenzaron los síntomas en los afectados por el brote alimentario.\n\nSi solicitamos su clase encontraremos que fue interpretada, cuando se leyó, como:\n\n\n[1] \"character\"\n\n\nNecesitamos que tenga formato fecha, con la estructura dmy (día,mes,año) y con nuestra zona horaria para que el tipo de dato sea POSIX.\nPara asegurarse de utilizar nuestra zona horaria puede incorporar como argumento tz = Sys.timezone()\nFinalizada la conversión deberíamos ver que la clase de INICIO_SINTOMAS es:\n\n\n[1] \"POSIXct\" \"POSIXt\" \n\n\n\n\nConstrucción de nuevas variables\nUna tarea habitual en los análisis es construir nuevas variables que surgen del procesamiento de las variables recolectadas. (Definimos que los nombres de estas nuevas variables serán en minúsculas para diferenciarlas de las variables recolectadas que se encuentran en mayúsculas.)\n6.- Comenzaremos con la variable EDAD a la cual categorizaremos para construir una nueva variable llamada gedad. Las edades de los encuestados tienen un rango de:\n\nrange(datos$EDAD)\n\n[1]  3 77\n\n\nLos intervalos del agrupamiento que deseamos constuir serán irregulares según el siguiente criterio:\n\n\n\nIntervalo\nEtiqueta\n\n\n\n\nEDAD &gt; 12\n1.Niño\n\n\n12 &gt;= EDAD &lt; 18\n2.Adolescente\n\n\n18 &gt;= EDAD &lt; 30\n3.Adulto joven\n\n\n30 &gt;= EDAD &lt; 65\n4.Adulto\n\n\nEDAD &gt;= 65\n5.Adulto mayor\n\n\n\n\nCon la intención de calcular el tiempo de incubación promedio realizaremos una serie de pasos que comienza en la producción de un tibble nuevo a partir de la selección de los encuestados que poseen hora de cena (variable HORA_COMIDA) y hora de inicio de síntomas (HORA_SINTOMAS).\n\nEn la introducción decíamos que “el horario aproximado de ingesta se recolectó solo para la mitad de las personas que tenían la enfermedad gastrointestinal” y esto causa que las variables tengan algunos valores “missing” ( NA en lenguaje R).\nEntonces necesitamos generar un nuevo objeto tibble que denominaremos datos_incu con las observaciones que tengan dato completo en las variables HORA_COMIDA y HORA_SINTOMAS.\nAdemás, en la misma expresión o en otra subsiguiente, vamos a crear dos nuevas variables (siempre dentro de datos_incu):\n\ninicio: producto de la unión de la variable INICIO_SINTOMAS y la variable HORA_SINTOMAS, para producir una variable con formato date-time (es decir, que contenga fecha y hora del inicio de los síntomas)\ncomida: producto de la unión de una fecha constante “2018-04-18” (que es la fecha de la cena) con la variable HORA_COMIDA, para producir otra variable con formato date-time (es decir, que contenga la fecha (18/04/2018) y hora de la ingesta de cada asistente a la cena)\n\nLa salida final debe ser de este tipo:\n\nhead(datos_incu[20:21])\n\n# A tibble: 6 × 2\n  inicio              comida             \n  &lt;dttm&gt;              &lt;dttm&gt;             \n1 2018-04-18 22:30:00 2018-04-18 19:30:00\n2 2018-04-18 22:30:00 2018-04-18 19:30:00\n3 2018-04-18 23:00:00 2018-04-18 19:00:00\n4 2018-04-18 23:00:00 2018-04-18 19:00:00\n5 2018-04-18 23:30:00 2018-04-18 19:30:00\n6 2018-04-19 00:30:00 2018-04-18 20:00:00\n\n\nEs decir, un tibble de 22 observaciones con las 19 variables originales más las dos nuevas que se muestran en la salida anterior.\n\nEn este punto calcularemos los tiempos de incubación para cada observación de la tabla datos_incu.\n\nAprovechando la potencialidad del paquete lubridate, este cálculo lo vamos a realizar con tres unidades diferentes y por lo tanto generaremos tres nuevas variables:\n\ntiempo: intervalo entre las variables comida e inicio expresado como período\nduracion: el mismo intervalo anterior expresado como duración\nincubacion: la longitud exacta del lapso de tiempo transcurrido entre la ingesta y el inicio de los síntomas. Esta variable surge de aplicar la función time_length() y definiendo como unidad la hora (argumento unit=“hour”).\n\nLa salida final debe ser de este tipo:\n\nhead(datos_incu[22:24])\n\n# A tibble: 6 × 3\n  tiempo    duracion            incubacion\n  &lt;Period&gt;  &lt;Duration&gt;               &lt;dbl&gt;\n1 3H 0M 0S  10800s (~3 hours)          3  \n2 3H 0M 0S  10800s (~3 hours)          3  \n3 4H 0M 0S  14400s (~4 hours)          4  \n4 4H 0M 0S  14400s (~4 hours)          4  \n5 4H 0M 0S  14400s (~4 hours)          4  \n6 4H 30M 0S 16200s (~4.5 hours)        4.5\n\n\n\n\nAnálisis descriptivo\nA partir de las variables recolectadas y generadas en las dos tablas de datos, en este bloque, iremos respondiendo algunas preguntas que describan el brote.\n\nConstruiremos un histograma de la variable EDAD para conocer su distribución. A fin de definir los intervalos de clase a utilizar puede asignar la función nclass.Sturges() al argumento bindwidth de ggplot2. También puede usar cualquiera de las otras dos reglas ofrecidas por la función (Scott y FD).\n\nEl resultado debería ser similar a este:\n\n\n\n\n\n\n\n\n\n\nTrabajando sobre las 22 observaciones de datos_incu, queremos saber:\n\n\nen qué semana epidemiológica sucedió el primer caso? (tomar la fecha de inicio de sintomas)\ncuál es el tiempo medio de incubación? (calcular la mediana)\ncuál es el rango intercuartílico del tiempo de incubación?\n\nLos resultados serían:\n\n\nSemana epidemiológica   16\n\n\n\n\nMediana de tiempo de incubación   4  horas\n\n\n\n\nRango intercuartílico de tiempo de incubación   2.9  horas\n\n\n\nA continuación construiremos un boxplot del tiempo de incubación (de las 22 observaciones de datos_incu), similar al siguiente:\n\n\n\n\n\n\n\n\n\n\n\nEn este punto deseamos calcular la frecuencia de consumo de alimentos para todas las personas (tabla datos) por cada alimento y con esa información mostrar en una tabla la lista de alimentos consumidos ordenados de los más consumidos a los menos (orden decreciente).\n\nEl resultado podría ser:\n\n\n# A tibble: 12 × 3\n# Groups:   alimento [12]\n   alimento             n  prop\n   &lt;chr&gt;            &lt;int&gt; &lt;dbl&gt;\n 1 HELADO_VAINILLA     54 72   \n 2 HELADO_CHOCOLATE    47 62.7 \n 3 CARRE_CERDO         46 61.3 \n 4 ESPINACAS           43 57.3 \n 5 TORTA               40 53.3 \n 6 SALSA_TOMATE        37 49.3 \n 7 CAFE                31 41.3 \n 8 ENSALADA            28 37.3 \n 9 PAN                 27 36   \n10 AGUA                24 32   \n11 ENSALADA_FRUTA       6  8   \n12 LECHE                4  5.33\n\n\nNotese que el porcentaje calculado para cada alimento refiere al total de asistentes a la cena (por ejemplo: encabeza el listado el 72 % de los asistentes consumieron helado de vainilla). No confundir con porcentaje entre categorías (alimentos) de la lista.\n\nFinalmente, calcularemos las tasas de ataque para los que comieron y no comieron cada alimento y la diferencia entre ellas, que nos permite observar cual podría ser el alimento involucrado en el brote.\n\nLa tabla ordenada en orden decreciente es similar a esta:\n\n\n# A tibble: 12 × 4\n   alimento         Tasa_C Tasa_NC Dif_C.NC\n   &lt;chr&gt;             &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;\n 1 HELADO_VAINILLA    79.6    14.3  65.3   \n 2 TORTA              67.5    54.3  13.2   \n 3 PAN                66.7    58.3   8.34  \n 4 ENSALADA_FRUTA     66.7    60.9   5.80  \n 5 ENSALADA           64.3    59.6   4.72  \n 6 CARRE_CERDO        63.0    58.6   4.42  \n 7 SALSA_TOMATE       62.2    62.2   0     \n 8 CAFE               61.3    61.4  -0.0700\n 9 ESPINACAS          60.5    62.5  -2.03  \n10 AGUA               54.2    64.7 -10.5   \n11 LECHE              50      62.0 -12.0   \n12 HELADO_CHOCOLATE   53.2    74.1 -20.9   \n\n\nEl helado de vainilla aparece como principal sospechoso del brote con una diferencia de 65,3 entre las tasas de ataque.\n\n\nExtra\nComo elemento extra interesante para los estudios de brote incorporamos el código para la producción de una curva epidémica donde hacemos uso de la integración de algunas funciones vistas y a la vez profundizamos el nivel de complejidad (lo discutimos en clase).\n\nlibrary(scales)\n\ndatos |&gt; \n  filter(ENFERMO == \"SI\" & !is.na(INICIO_SINTOMAS) & !is.na(HORA_SINTOMAS)) |&gt; \n  mutate(inicio = as_datetime(paste0(INICIO_SINTOMAS,\"-\",\n                                                   HORA_SINTOMAS))) |&gt; \n  group_by(inicio) |&gt; \n  summarise(casos = sum(n())) |&gt; \n  ggplot(aes(inicio,casos)) +\n  geom_bar(stat = \"identity\", fill=\"olivedrab\", color=\"white\") +\n  scale_y_continuous(limits = c(0,12),\n                     breaks = seq(0,12,1)) +\n  scale_x_datetime(breaks = date_breaks(\"15 min\"),\n                   labels = time_format(\"%b %d - %H:%M\"),\n                   limits = c(ymd_hms(\"2018-04-18 20:45:00\"), \n                             ymd_hms(\"2018-04-19 02:45:00\"))) +\n  geom_hline(yintercept = seq(1, 10, by = 1), \n           colour = \"white\", size = 0.3) +\n  geom_text(aes(label = casos), nudge_y = 0.5, color = \"black\") +\n  labs(x = \"Inicio de síntomas\", y = \"Nro. de Casos\", \n       title = \"Curva epidémica\", caption = \"n=46\") + \n  theme_bw() +\n  theme(panel.grid.major = element_blank(), \n      panel.grid.minor = element_blank()) + \n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\n\n\n\n\nUna vez finalizados todos los puntos guarde el archivo con el script y envíelo por mail a christianballejo@gmail.com"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#hola-quarto-title",
+    "href": "primero/diapositivas/08-quarto.html#hola-quarto-title",
+    "title": "Residencia-INE",
+    "section": "",
+    "text": "basado en tom mock, mine centikayay elaboración propia. artwork por allison horst"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#qué-es-quarto",
+    "href": "primero/diapositivas/08-quarto.html#qué-es-quarto",
+    "title": "Residencia-INE",
+    "section": "Qué es Quarto®?",
+    "text": "Qué es Quarto®?\n\n\nQuarto® es un nuevo sistema de publicación científica y técnica de código abierto construido sobre Pandoc 1\n\n\n\nMezcla texto narrativo y código para producir resultados con un formato elegante en documentos, tableros interactivos, páginas web, publicaciones de blogs, libros y más.\n\n\n\n\nEs independiente del lenguaje R (incluso trabaja con otros lenguajes como Python y Julia).\n\n\nconversor de documentos libre y de código abierto, mayormente usado como una herramienta de escritura (especialmente por académicos) ver en Wikipedia"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#comunicar-como-parte-de-programar",
+    "href": "primero/diapositivas/08-quarto.html#comunicar-como-parte-de-programar",
+    "title": "Residencia-INE",
+    "section": "Comunicar como parte de programar",
+    "text": "Comunicar como parte de programar"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#ecosistema-de-rmarkdown",
+    "href": "primero/diapositivas/08-quarto.html#ecosistema-de-rmarkdown",
+    "title": "Residencia-INE",
+    "section": "Ecosistema de RMarkdown",
+    "text": "Ecosistema de RMarkdown"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#rmarkdown-en-rstudio",
+    "href": "primero/diapositivas/08-quarto.html#rmarkdown-en-rstudio",
+    "title": "Residencia-INE",
+    "section": "RMarkdown en Rstudio",
+    "text": "RMarkdown en Rstudio\n\nDesarrollo del paquete knitr desde 2011\nDesarrollo de RMarkdown desde 2014 (rmarkdown + pandoc)\n10 años de experiencia en knitr + rmarkdown se volcaron al desarrollo de Quarto."
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#como-funciona-quarto",
+    "href": "primero/diapositivas/08-quarto.html#como-funciona-quarto",
+    "title": "Residencia-INE",
+    "section": "Como funciona Quarto?",
+    "text": "Como funciona Quarto?"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#como-funciona-quarto-1",
+    "href": "primero/diapositivas/08-quarto.html#como-funciona-quarto-1",
+    "title": "Residencia-INE",
+    "section": "Como funciona Quarto?",
+    "text": "Como funciona Quarto?\n\nQuarto usa knitr o jupyter como motor para ejecutar código y generar una salida temporal (.md).\n\n\nEl archivo temporal se procesa mediante los filtros Lua de Pandoc y Quarto + Bootstrap CSS para HTML o LaTeX para PDF y se convierte a un formato de salida final.\n\n\nLos filtros Lua escritos por desarrolladores de R/Python/Julia son intercambiables entre formatos.\n\n\nQuarto además incluye soporte nativo para Observable JS, un conjunto de mejoras a JavaScript básico creado por Mike Bostock (también autor de D3).\n\n\nObservable JS se distingue por su tiempo de ejecución reactivo, que es especialmente adecuado para la exploración y el análisis de datos interactivos."
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#ejemplo-interactivo-con-observable-js",
+    "href": "primero/diapositivas/08-quarto.html#ejemplo-interactivo-con-observable-js",
+    "title": "Residencia-INE",
+    "section": "Ejemplo interactivo con Observable JS",
+    "text": "Ejemplo interactivo con Observable JS\n\nConversor de temperatura de ℃ a ℉\n\n\nviewof temp = Inputs.range([0, 99], {step: 1, value: 0, label: htl.html`Temp. &#x2103;`})\n\n\n\n\n\n\nCelsius = ℃ y Fahrenheit = ℉.\n\n\n```{ojs}\nviewof temp = Inputs.range([0, 99], {step: 1, value: 0, label: htl.html`Temp. &#x2103;`})\n```\nCelsius = \\${d3.format(\".0f\")(temp)}℃ y Fahrenheit = \\${d3.format(\".1f\")(temp \\* 9/5 + 32)}℉."
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#entonces-qué-es-quarto",
+    "href": "primero/diapositivas/08-quarto.html#entonces-qué-es-quarto",
+    "title": "Residencia-INE",
+    "section": "Entonces, ¿qué es Quarto?",
+    "text": "Entonces, ¿qué es Quarto?\n\nQuarto es una interfaz de línea de comandos (CLI) que representa formatos de texto sin formato (.qmd, .rmd, .md) o formatos mixtos (.ipynb/Jupyter notebook) en informes estáticos PDF/Word/HTML, libros, sitios web, presentaciones y más.\n\n\ncballejo$ quarto --help\n\n  Usage:   quarto\n  Version: 1.6.39\n\n  Description:\n    Quarto CLI\n\n  Options:\n    -h, --help     - Show this help.                            \n    -V, --version  - Show the version number for this program.  \n\n  Commands:\n    render          [input] [args...]   - Render input file(s) to various document types.            \n    preview         [file] [args...]    - Render and preview a document or website project.          \n    serve           [input]             - Serve a Shiny interactive document.                        \n    create-project  [dir]               - Create a project for rendering multiple documents          \n    convert         &lt;input&gt;             - Convert documents to alternate representations.            \n    pandoc          [args...]           - Run the version of Pandoc embedded within Quarto.          \n    run             [script] [args...]  - Run a TypeScript, R, Python, or Lua script.                \n    install         &lt;type&gt; [target]     - Installs an extension or global dependency.                \n    publish         [provider] [path]   - Publish a document or project. Available providers include:\n    check           [target]            - Verify correct functioning of Quarto installation.         \n    help            [command]           - Show this help or the help of a sub-command."
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#software-quarto",
+    "href": "primero/diapositivas/08-quarto.html#software-quarto",
+    "title": "Residencia-INE",
+    "section": "Software Quarto",
+    "text": "Software Quarto\n\n\nEl sitio web de Quarto es https://quarto.org/\nLa versión actual es 1.6.39 (Windows) del 27/11/2024\nLa guía oficial se puede encontrar en https://quarto.org/docs/guide/\nRStudio Desktop incluye una versión de Quarto en su instalación desde la versión 2022.07.01 pero conviene actualizarlo de forma independiente"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#otras-características",
+    "href": "primero/diapositivas/08-quarto.html#otras-características",
+    "title": "Residencia-INE",
+    "section": "Otras características",
+    "text": "Otras características\n\n\nTiene múltiples formatos modernos de salidas unificado la funcionalidad de muchos paquetes del ecosistema R Markdown (rmarkdown, bookdown, distill, xaringan, etc.)\n\n\n\n\nImplementa funciones más atractivas y útiles en todos los productos: pestañas, resaltado de sintaxis, diagramas, etc.\n\n\n\n\nSe pueden renderizar los documentos viejos .rmd (RMarkdown) o .ipynb (cuadernos jupyter de python) con Quarto.\n\n\n\n\nViene incluido en otros editores como VS Code\n\n\n\n\nSoporta htmlwidgets en R y Jupyter widgets para Python/Julia además de Observable JS"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#por-qué-usar-quarto-en-lugar-de-rmarkdown",
+    "href": "primero/diapositivas/08-quarto.html#por-qué-usar-quarto-en-lugar-de-rmarkdown",
+    "title": "Residencia-INE",
+    "section": "Por qué usar Quarto en lugar de RMarkdown?",
+    "text": "Por qué usar Quarto en lugar de RMarkdown?\n\n\nQuarto no es muy diferente a RMarkdown, más bien es un RMarkdown de nueva generación (next-generation)\n\n\n\n\nPosee mejor accesibilidad y funciones más completas listas para usar\n\n\n\n\nRMarkdown aún tiene soporte pero todas las novedades y mejoras se están desarrollando solo para Quarto\n\n\n\n\nSi en el futuro incorporas algún otro lenguaje de programación/análisis podes seguir utilizandolo\n\n\n\n\nPodes elegir otros editores y Quarto seguirá funcionando"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#el-universo-de-quarto-es-enorme",
+    "href": "primero/diapositivas/08-quarto.html#el-universo-de-quarto-es-enorme",
+    "title": "Residencia-INE",
+    "section": "El universo de Quarto es enorme",
+    "text": "El universo de Quarto es enorme"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#anatomia-de-un-.qmd",
+    "href": "primero/diapositivas/08-quarto.html#anatomia-de-un-.qmd",
+    "title": "Residencia-INE",
+    "section": "Anatomia de un .qmd",
+    "text": "Anatomia de un .qmd\n\nAl igual que los .Rmd de RMarkdown el archivo fuente de Quarto es de texto plano\n\n\nTiene una cabecera YAML con metadatos\n\n\nformat: html\nengine: knitr\n\nformat: html\nengine: jupyter\n\n\n\nSuele tener código incluido\n\n\n```{r}\nlibrary(dplyr)\nmtcars |&gt; \n  group_by(cyl) |&gt; \n  summarize(mean = mean(mpg))\n```\n\n```{python}\nfrom siuba import *\n(mtcars\n  &gt;&gt; group_by(_.cyl)\n  &gt;&gt; summarize(avg_mpg = _.mpg.mean()))\n```\n\n\n\nY texto narrativo\n\n# Cabecera 1\nEsto es texto en **negrita**, esto en *itálica* y esta otra una \n![imagen](image.png){fig-alt=\"Texto alternativo para esta imagen\"}."
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#ejemplo-de-un-.qmd",
+    "href": "primero/diapositivas/08-quarto.html#ejemplo-de-un-.qmd",
+    "title": "Residencia-INE",
+    "section": "Ejemplo de un .qmd",
+    "text": "Ejemplo de un .qmd\nLos archivos .qmd responden estructuralmente al modelo de programación literaria (Literate programming)\n\n---\ntitle: \"ggplot2\"\ndate: \"18/04/2024\"\nformat: html\n---\n\n## Calidad del aire\n\nEsta es la relación entre la temperatura y el nivel de ozono.\n\n```{r}\n#| label: fig-calidad_aire\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\"\n)\n```"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#metadatos-yaml",
+    "href": "primero/diapositivas/08-quarto.html#metadatos-yaml",
+    "title": "Residencia-INE",
+    "section": "Metadatos: YAML",
+    "text": "Metadatos: YAML\n\n\n\nLos metadatos que se definen en el encabezado YAML que todos los archivos .qmd tienen son procesados en muchas etapas del renderizado y puede influir en el documento final de varias formas.\n\n\n\n\nSiempre se colocan al principio del documento y lo lee Pandoc, Quarto y knitr.\n\n\n\n\nEn su recorrido, la información que contiene suele afectar el código, el contenido y el proceso de renderizado.\n\n\n\n\nMuchas de las opciones de código YAML para Quarto se pueden encontrar en su documentación"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#texto-y-otros-elementos",
+    "href": "primero/diapositivas/08-quarto.html#texto-y-otros-elementos",
+    "title": "Residencia-INE",
+    "section": "Texto y otros elementos",
+    "text": "Texto y otros elementos\n\n\n\nQuarto se basa en Pandoc y utiliza su variación de Markdown como sintaxis para documentos.\n\n\n\n\nEl Markdown de Pandoc es una versión ampliada y ligeramente revisada de la sintaxis Markdown de John Gruber.\n\n\n\n\nMarkdown es un lenguaje de marcas sencillo diseñado para ser fácil de escribir y, lo que es más importante, fácil de leer.\n\n\n\n\nEs el mismo que se utiliza en el formato anterior de RMarkdown (archivos .Rmd)"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#código",
+    "href": "primero/diapositivas/08-quarto.html#código",
+    "title": "Residencia-INE",
+    "section": "Código",
+    "text": "Código\n\n\nEl código se puede insertar a través de chunks (fragmentos) en distintos lenguajes\n\n```{r}\n#| Aquí van los metadatos con las opciones de ejecución\n\nAquí va el código\n```\n\n\n\nLas opciones de ejecución del código incluido dentro de estos fragmentos se realiza mediante metadatos con el formato #|\n\n\n\n\nSe pueden definir opciones de salida, figura, procesado, etc. Ver guía.\n\n\n\n\nTambién se puede incluir código en línea en el texto.\n\n```{r}\nradio &lt;- 5\n```\n(El radio del circulo es `{r} radio`). El radio del circulo es 5"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#algunos-ejemplos-para-visualizar",
+    "href": "primero/diapositivas/08-quarto.html#algunos-ejemplos-para-visualizar",
+    "title": "Residencia-INE",
+    "section": "Algunos ejemplos para visualizar",
+    "text": "Algunos ejemplos para visualizar\n\n\n\n\nHTML paginado -estilo Tufte-\nPresentación revealjs\nLibro web\nSitio web\nDocumentos interactivos -shiny-\nTableros"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#chau-quarto-title",
+    "href": "primero/diapositivas/08-quarto.html#chau-quarto-title",
+    "title": "Residencia-INE",
+    "section": "",
+    "text": "Instituto Nacional de Epidemiología"
   }
 ]
