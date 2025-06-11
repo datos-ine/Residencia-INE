@@ -10,6 +10,8 @@ website:
     left:
       - href: index.qmd
         text: "1er. año"
+      - href: espacial.qmd  
+        text: "2do. año"
     right:
       - icon: building
         href: https://www.ine.gov.ar  
