@@ -24,7 +24,7 @@ format:
     toc: true
     language:
       toc-title-website: "Contenido"
-    link-external-icon: true
+    link-external-icon: false
     link-external-newwindow: true  
     link-external-filter: '^https:\/\/(raw|datos-ine|www)?\.?(linkedin|twitter|github|githubusercontent)\.*'
     code-copy: true

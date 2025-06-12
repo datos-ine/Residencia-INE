@@ -47,7 +47,6 @@ Se espera que al finalizar este curso los participantes puedan:
 </style>
 <table class="tg" style="max-width:900px;margin-left:auto;margin-right:auto"><thead>
   <tr>
-    <th class="tg-amwm">Fecha</th>
     <th class="tg-amwm">Tema</th>
     <th class="tg-amwm">Lectura</th>
     <th class="tg-amwm">Diapositiva</th>
@@ -56,7 +55,6 @@ Se espera que al finalizar este curso los participantes puedan:
   </tr></thead>
 <tbody>
   <tr>
-    <td class="tg-0lax">01/10/2024</td>
     <td class="tg-0lax">Bienvenida</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
@@ -68,7 +66,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">01/10/2024</td>
     <td class="tg-0lax">Datos - Parte 1</td>
     <td align="center"><a href="/primero/clases/00-datos.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -80,7 +77,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">03/10/2024</td>
     <td class="tg-0lax">Datos - Parte 2</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
@@ -92,7 +88,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">15/10/2024</td>
     <td class="tg-0lax">Datos - Parte 3</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
@@ -104,7 +99,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">17/10/2024</td>
     <td class="tg-0lax">Lenguaje R</td>
     <td align="center"><a href="/primero/clases/01-introR.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -116,7 +110,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
   <tr>
-    <td class="tg-0lax">17/10/2024</td>
     <td class="tg-0lax">RStudio</td>
     <td align="center"><a href="/primero/clases/02-introRStudio.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -128,7 +121,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>  
     <tr>
-    <td class="tg-0lax">17/10/2024</td>
     <td class="tg-0lax">Tidyverse</td>
     <td align="center"><a href="/primero/clases/03-introTidy.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -140,7 +132,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr> 
   <tr>
-    <td class="tg-0lax">22/10/2024</td>
     <td class="tg-0lax">Importación y exportación de archivos</td>
     <td align="center"><font color="fafcfc">
          <i class="fa fa-book fa-lg"></i></font></td>
@@ -152,7 +143,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
     <tr>
-    <td class="tg-0lax">24/10/2024</td>
     <td class="tg-0lax">Manipulación de datos</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
@@ -164,7 +154,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">29/10/2024</td>
     <td class="tg-0lax">Diagnóstico y depuración de datos</td>
     <td align="center"><a href="/primero/clases/06-depuracion.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -176,7 +165,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
   <tr>
-    <td class="tg-0lax">31/10/2024</td>
     <td class="tg-0lax">Datos ordenados y relacionales</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
@@ -188,7 +176,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
   <tr>
-    <td class="tg-0lax">05/11/2024</td>
     <td class="tg-0lax">Gestión de tipos de datos: caracteres, factores y variables de tiempo</td>
     <td align="center"><a href="/primero/clases/04-tipos.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -200,7 +187,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
   <tr>
-    <td class="tg-0lax">07/11/2024</td>
     <td class="tg-0lax">Análisis Exploratorio de datos - uni y bivariado</td>
     <td align="center"><a href="/primero/recursos/05-resumenes.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -212,7 +198,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></a></td>
   </tr>
   <tr>
-    <td class="tg-0lax">14/11/2024</td>
     <td class="tg-0lax">Visualización de datos</td>
     <td align="center"><a href="/primero/clases/07-visualizacion.html">
           <i class="fa fa-book fa-lg"></i></a></td>
@@ -224,7 +209,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
     <tr>
-    <td class="tg-0lax">19/11/2024</td>
     <td class="tg-0lax">Visualización de datos</td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-book fa-lg"></i></font></td>
@@ -236,7 +220,6 @@ Se espera que al finalizar este curso los participantes puedan:
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
     <tr>
-    <td class="tg-0lax">21/11/2024</td>
     <td class="tg-0lax">Comunicar - Documentos Quarto</td>
     <td align="center"><a href="/primero/clases/08-quarto.html">
           <i class="fa fa-book fa-lg"></i></a></td>

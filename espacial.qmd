@@ -8,25 +8,30 @@ title: "Gestión de datos espaciales con R"
 
 ### Fundamentación
 
-El análisis espacial es una herramienta cada vez más útil en la investigación de salud pública y epidemiología, con un volumen creciente de datos de salud espacial generados cada año. 
+El análisis espacial constituye una dimensión fundamental en la investigación epidemiológica contemporánea, al permitir la identificación y comprensión de patrones geográficos en la distribución de eventos de salud, sus determinantes y consecuencias. En un contexto donde la disponibilidad de datos georreferenciados en salud es creciente, la incorporación de herramientas analíticas capaces de integrar la dimensión espacial resulta indispensable para la vigilancia epidemiológica, la planificación sanitaria y la evaluación de políticas públicas.
 
-Esta introducción a la gestión de datos espaciales con R, así como también aprender los fundamentos de la geoestadística consideramos que es indispensable en el trayecto formativo de las nuevas residencias en epidemiología. 
+En este marco, el presente taller propone una introducción al manejo de datos espaciales mediante el lenguaje R, abordando tanto aspectos técnicos de gestión y visualización como nociones básicas de geoestadística. La formación en estas competencias técnicas y conceptuales se considera estratégica en el trayecto formativo de las residencias en epidemiología, al fortalecer la capacidad de análisis territorial y la toma de decisiones basadas en evidencia geoespacial.
+
+ 
 
 ### Contribución esperada:
 
-Incorporar habilidades técnicas vinculadas con la lectura y gestión de datos espaciales, sistemas de información geográfica y análisis espacial utilizando un software de código abierto.
+La actividad busca incorporar habilidades técnicas vinculadas con la lectura y gestión de datos espaciales, creación de mapas coropléticos y de patrones de puntos, georreferenciación y análisis espacial mediante métodos de interpolación utilizando un software de código abierto como el lenguaje R.
 
 Objetivos:
 
 Se espera que al finalizar este curso los participantes puedan:
 
-- Leer conjuntos de datos espaciales (shape, json, etc) y no espaciales en R.
+- Leer conjuntos de datos espaciales (shape, json, etc) en R.
 
 - Manipular y visualizar datos espaciales creando mapas estáticos e interactivos.
 
 - Georreferenciar puntos a partir de ubicaciones administrativas utilizando conexiones a API gratuitas.
 
 - Comprender e implementar una variedad de técnicas de análisis de datos puntuales, como polígonos de voronoi, densidad de kernel y kriging. 
+
+
+-	Obtener e interpretar medidas de autocorrelación espacial (*I de Moran*)
 
 ### Docente
 
@@ -56,26 +61,75 @@ Se espera que al finalizar este curso los participantes puedan:
 <tbody>
   <tr>
     <td class="tg-0lax">Introducción al análisis espacial con R</td>
-    <td align="center"><a href="/primero/diapositivas/00-bienvenida.html" target="_blank">
+    <td align="center"><a href="https://datos-ine.github.io/GeoR/01-intro.html" target="_blank">
           <i class="fa fa-laptop  fa-lg"></i></a></td>
-    <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/01-lectoescritura.zip" download="01-lectoescritura.zip">
+    <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
           <i class="fa fa-code fa-lg"></i></font></td>
     <td align="center"><font color="fafcfc">
           <i class="fa fa-file fa-lg"></i></font></td>      
-   <td align="center"><a href="https://raw.githubusercontent.com/datos-ine/Residencia-INE/refs/heads/main/primero/recursos/Instalaci%C3%B3n%20del%20software.pdf" download="Instalacion_software.pdf">
+   <td align="center"><a href="https://gadm.org/">
           <i class="fa fa-briefcase  fa-lg"></i></font></td>
   </tr>
+  <tr>
+  <td class="tg-0lax">Visualizacion de mapas</td>
+  <td align="center"><a href="https://datos-ine.github.io/GeoR/02-mapas.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+  <td align="center"><a href="https://drive.google.com/file/d/1lr2ncZDVfoDHaY6i7bir20hI3hVjNMWs/view?usp=sharing" download="Encuentro2.R">
+        <i class="fa fa-code fa-lg"></i></font></td>
+  <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
+        <i class="fa fa-file fa-lg"></i></font></td>      
+ <td align="center"><a href="https://cols4all.github.io/cols4all-R">
+        <i class="fa fa-briefcase  fa-lg"></i></font></td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">Georreferenciación</td>
+  <td align="center"><a href="https://datos-ine.github.io/GeoR/03-georreferenciacion.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+  <td align="center"><a href="https://drive.google.com/file/d/1NxbQerSgYNR76hICTAMOhP_h_xts1QFZ/view?usp=sharing" download="Encuentro3.R">
+        <i class="fa fa-code fa-lg"></i></font></td>
+  <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
+        <i class="fa fa-file fa-lg"></i></font></td>      
+ <td align="center"><a href="https://jessecambon.github.io/tidygeocoder/index.html">
+        <i class="fa fa-briefcase  fa-lg"></i></font></td>
+  </tr>  
+  <tr>
+  <td class="tg-0lax">Análisis de patrones de puntos</td>
+  <td align="center"><a href="https://datos-ine.github.io/GeoR/04-patrones_puntos.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+  <td align="center"><a href="https://drive.google.com/file/d/1bz5vBPFkoNy2EEoJQf5uqw0U7knNINCK/view?usp=sharing" download="Encuentro4.R">
+        <i class="fa fa-code fa-lg"></i></font></td>
+  <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
+        <i class="fa fa-file fa-lg"></i></font></td>      
+ <td align="center"><a href="https://www.gstat.org/gstat.pdf">
+        <i class="fa fa-briefcase  fa-lg"></i></font></td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">Análisis espacial</td>
+  <td align="center"><a href="https://datos-ine.github.io/GeoR/05-analisis_espacial.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+  <td align="center"><a href="https://drive.google.com/file/d/1tsv6X4uQUJYQRaO4MbjmCAZs-zApAiDA/view?usp=sharing" download="Encuentro5.R">
+        <i class="fa fa-code fa-lg"></i></font></td>
+  <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
+        <i class="fa fa-file fa-lg"></i></font></td>      
+ <td align="center"><a href="https://rubenfcasal.github.io/estadistica_espacial/kriging.html">
+        <i class="fa fa-briefcase  fa-lg"></i></font></td>
+  </tr>  
 </tbody></table>
 
+### Datos para la practica
+
+Carpeta (para practicas de encuentros) [Datos practicas](https://drive.google.com/file/d/1c_bMWOggqDDqlfskpKdLSOAe6FyUB_V2/view?usp=sharing)
+
+Carpeta (para TP) [Datos TP]()
 
 ### Bibliografía
 
-[R for Data Science (2e)](https://r4ds.hadley.nz/)
+[Spatial Statistics for Data Science: Theory and Practice with R](https://www.paulamoraga.com/book-spatial/index.html)
 
-[EpiRhandbook en español](https://epirhandbook.com/es/index.es.html)
+[Geocomputation with R](https://r.geocompx.org/)
 
-[Data Visualization](https://socviz.co/)
+[Geospatial Analysis - A Comprehensive Guide - updated Oct 2024](https://www.spatialanalysisonline.com/)
 
-[Fundamentos de ciencia de datos con R](https://cdr-book.github.io/index.html)
+[Spatial Data Science - With Applications in R](https://r-spatial.org/book/)
 
-[Guía de Quarto (en inglés)](https://quarto.org/docs/guide/)
+[Applied Spatial Analysis for Public Health](https://hughst.github.io/)

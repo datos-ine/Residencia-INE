@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gestión de datos epidemiológicos con R + RStudio – Residencia-INE</title>
+<title>Gestión de datos espaciales con R – Residencia-INE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -258,11 +258,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">1er. año</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./espacial.html"> 
+    <a class="nav-link active" href="./espacial.html" aria-current="page"> 
 <span class="menu-text">2do. año</span></a>
   </li>  
 </ul>
@@ -293,7 +293,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#contribución-esperada" id="toc-contribución-esperada" class="nav-link" data-scroll-target="#contribución-esperada">Contribución esperada:</a></li>
   <li><a href="#docente" id="toc-docente" class="nav-link" data-scroll-target="#docente">Docente</a></li>
   <li><a href="#temario" id="toc-temario" class="nav-link" data-scroll-target="#temario">Temario</a></li>
-  <li><a href="#prácticas" id="toc-prácticas" class="nav-link" data-scroll-target="#prácticas">Prácticas</a></li>
   <li><a href="#datos-para-la-practica" id="toc-datos-para-la-practica" class="nav-link" data-scroll-target="#datos-para-la-practica">Datos para la practica</a></li>
   <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
   </ul>
@@ -305,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gestión de datos epidemiológicos con R + RStudio</h1>
+<h1 class="title">Gestión de datos espaciales con R</h1>
 </div>
 
 
@@ -326,18 +325,20 @@ ul.task-list li input[type="checkbox"] {
 <p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></p>
 <section id="fundamentación" class="level3">
 <h3 data-anchor-id="fundamentación">Fundamentación</h3>
-<p>La vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.</p>
-<p>En la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.</p>
-<p>En este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.</p>
+<p>El análisis espacial constituye una dimensión fundamental en la investigación epidemiológica contemporánea, al permitir la identificación y comprensión de patrones geográficos en la distribución de eventos de salud, sus determinantes y consecuencias. En un contexto donde la disponibilidad de datos georreferenciados en salud es creciente, la incorporación de herramientas analíticas capaces de integrar la dimensión espacial resulta indispensable para la vigilancia epidemiológica, la planificación sanitaria y la evaluación de políticas públicas.</p>
+<p>En este marco, el presente taller propone una introducción al manejo de datos espaciales mediante el lenguaje R, abordando tanto aspectos técnicos de gestión y visualización como nociones básicas de geoestadística. La formación en estas competencias técnicas y conceptuales se considera estratégica en el trayecto formativo de las residencias en epidemiología, al fortalecer la capacidad de análisis territorial y la toma de decisiones basadas en evidencia geoespacial.</p>
 </section>
 <section id="contribución-esperada" class="level3">
 <h3 data-anchor-id="contribución-esperada">Contribución esperada:</h3>
-<p>Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.</p>
+<p>Incorporar habilidades técnicas vinculadas con la lectura y gestión de datos espaciales, sistemas de información geográfica y análisis espacial utilizando un software de código abierto.</p>
 <p>Objetivos:</p>
 <p>Se espera que al finalizar este curso los participantes puedan:</p>
-<p>● Utilizar R + RStudio para procesar y analizar datos epidemiológicos</p>
-<p>● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud</p>
-<p>● Producir informes técnicos en diferentes formatos mediante Quarto</p>
+<ul>
+<li><p>Leer conjuntos de datos espaciales (shape, json, etc) y no espaciales en R.</p></li>
+<li><p>Manipular y visualizar datos espaciales creando mapas estáticos e interactivos.</p></li>
+<li><p>Georreferenciar puntos a partir de ubicaciones administrativas utilizando conexiones a API gratuitas.</p></li>
+<li><p>Comprender e implementar una variedad de técnicas de análisis de datos puntuales, como polígonos de voronoi, densidad de kernel y kriging.</p></li>
+</ul>
 </section>
 <section id="docente" class="level3">
 <h3 data-anchor-id="docente">Docente</h3>
@@ -365,13 +366,13 @@ Christian Ballejo <a href="mailto:cballejo@anlis.gob.ar" class="fa fa-envelope">
 Tema
 </th>
 <th class="tg-amwm">
-Lectura
-</th>
-<th class="tg-amwm">
 Diapositiva
 </th>
 <th class="tg-amwm">
 Práctica
+</th>
+<th class="tg-amwm">
+TP
 </th>
 <th class="tg-amwm">
 Recursos
@@ -381,299 +382,104 @@ Recursos
 <tbody>
 <tr>
 <td class="tg-0lax">
-Bienvenida
+Introducción al análisis espacial con R
 </td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
+<a href="https://datos-ine.github.io/GeoR/01-intro.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
 </td>
 <td align="center">
-<a href="./primero/diapositivas/00-bienvenida.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
+<a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R"> <i class="fa fa-code fa-lg"></i>
+</a></td>
+<td align="center">
+<font color="fafcfc"> <i class="fa fa-file fa-lg"></i></font>
 </td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<a href="https://gadm.org/"> <i class="fa fa-briefcase  fa-lg"></i>
+</a></td>
 </tr>
 <tr>
 <td class="tg-0lax">
-Datos - Parte 1
+Visualizacion de mapas
 </td>
 <td align="center">
-<a href="./primero/clases/00-datos.html"> <i class="fa fa-book fa-lg"></i></a>
+<a href="https://datos-ine.github.io/GeoR/02-mapas.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
 </td>
 <td align="center">
-<a href="./primero/diapositivas/01a-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
+<a href="https://drive.google.com/file/d/1lr2ncZDVfoDHaY6i7bir20hI3hVjNMWs/view?usp=sharing" download="Encuentro2.R"> <i class="fa fa-code fa-lg"></i>
+</a></td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
+<a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R"> <i class="fa fa-file fa-lg"></i>
+</a></td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<a href="https://cols4all.github.io/cols4all-R"> <i class="fa fa-briefcase  fa-lg"></i>
+</a></td>
 </tr>
 <tr>
 <td class="tg-0lax">
-Datos - Parte 2
+Georreferenciación
 </td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
+<a href="https://datos-ine.github.io/GeoR/03-georreferenciacion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
 </td>
 <td align="center">
-<a href="./primero/diapositivas/01b-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
+<a href="https://drive.google.com/file/d/1NxbQerSgYNR76hICTAMOhP_h_xts1QFZ/view?usp=sharing" download="Encuentro3.R"> <i class="fa fa-code fa-lg"></i>
+</a></td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
+<a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R"> <i class="fa fa-file fa-lg"></i>
+</a></td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<a href="https://jessecambon.github.io/tidygeocoder/index.html"> <i class="fa fa-briefcase  fa-lg"></i>
+</a></td>
 </tr>
 <tr>
 <td class="tg-0lax">
-Datos - Parte 3
+Análisis de patrones de puntos
 </td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
+<a href="https://datos-ine.github.io/GeoR/04-patrones_puntos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
 </td>
 <td align="center">
-<a href="./primero/diapositivas/01c-datos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
+<a href="https://drive.google.com/file/d/1bz5vBPFkoNy2EEoJQf5uqw0U7knNINCK/view?usp=sharing" download="Encuentro4.R"> <i class="fa fa-code fa-lg"></i>
+</a></td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
+<a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R"> <i class="fa fa-file fa-lg"></i>
+</a></td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<a href="https://www.gstat.org/gstat.pdf"> <i class="fa fa-briefcase  fa-lg"></i>
+</a></td>
 </tr>
 <tr>
 <td class="tg-0lax">
-Lenguaje R
+Análisis espacial
 </td>
 <td align="center">
-<a href="./primero/clases/01-introR.html"> <i class="fa fa-book fa-lg"></i></a>
+<a href="https://datos-ine.github.io/GeoR/05-analisis_espacial.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
 </td>
 <td align="center">
-<a href="./primero/diapositivas/02-analisis.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
+<a href="https://drive.google.com/file/d/1tsv6X4uQUJYQRaO4MbjmCAZs-zApAiDA/view?usp=sharing" download="Encuentro5.R"> <i class="fa fa-code fa-lg"></i>
+</a></td>
 <td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
+<a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R"> <i class="fa fa-file fa-lg"></i>
+</a></td>
 <td align="center">
-<a href="https://raw.githubusercontent.com/datos-ine/Residencia-INE/refs/heads/main/primero/recursos/Instalaci%C3%B3n%20del%20software.pdf" download="Instalacion_software.pdf"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-RStudio
-</td>
-<td align="center">
-<a href="./primero/clases/02-introRStudio.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-laptop  fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Tidyverse
-</td>
-<td align="center">
-<a href="./primero/clases/03-introTidy.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-laptop  fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/recursos/01-hojaEstilo.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Importación y exportación de archivos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/03-lectoescritura.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/01-lectoescritura.zip" download="01-lectoescritura.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/02-lectura.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Manipulación de datos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/04-gestion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://drive.google.com/file/d/1wUJAaGKwiWNKsYzIOFFGV18XceEKv4GX/view?usp=sharing&quot;"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Diagnóstico y depuración de datos
-</td>
-<td align="center">
-<a href="./primero/clases/06-depuracion.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05a-diagnostico.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/03-diagnostico.zip" download="03-diagnostico.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/clases/05-datosPerdidos.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Datos ordenados y relacionales
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05b-tidy.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/04-tidy.zip" download="04-tidy.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/06-iteracion.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Gestión de tipos de datos: caracteres, factores y variables de tiempo
-</td>
-<td align="center">
-<a href="./primero/clases/04-tipos.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/05c-tipos.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/05-tipos.zip" download="05-tipos.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Análisis Exploratorio de datos - uni y bivariado
-</td>
-<td align="center">
-<a href="./primero/recursos/05-resumenes.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/06-analisis.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/06-estadisticos.zip" download="06-estadisticos.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/recursos/04-ajusteTasas.html"> <i class="fa fa-briefcase  fa-lg"></i></a>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Visualización de datos
-</td>
-<td align="center">
-<a href="./primero/clases/07-visualizacion.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/07-visualizacion.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/primero/practicas/07-visualizacion.zip" download="07-visualizacion.zip"> <i class="fa fa-code fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Visualización de datos
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-book fa-lg"></i></font>
-</td>
-<td align="center">
-<a href="./primero/practicas/practica_integradora.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
-</tr>
-<tr>
-<td class="tg-0lax">
-Comunicar - Documentos Quarto
-</td>
-<td align="center">
-<a href="./primero/clases/08-quarto.html"> <i class="fa fa-book fa-lg"></i></a>
-</td>
-<td align="center">
-<a href="./primero/diapositivas/08-quarto.html" target="_blank"> <i class="fa fa-laptop  fa-lg"></i></a>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-code fa-lg"></i></font>
-</td>
-<td align="center">
-<font color="fafcfc"> <i class="fa fa-briefcase  fa-lg"></i></font>
-</td>
+<a href="https://rubenfcasal.github.io/estadistica_espacial/kriging.html"> <i class="fa fa-briefcase  fa-lg"></i>
+</a></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="prácticas" class="level3">
-<h3 data-anchor-id="prácticas">Prácticas</h3>
-<p><a href=".\primero/practicas/practica_adolescentes.html" target="_blank">Práctico Adolescentes</a></p>
-<p><a href=".\primero/practicas/practica_rita.html" target="_blank">Práctico Vigilancia Rita</a></p>
-<p><a href=".\primero/practicas/practica_brote.html" target="_blank">Práctico Brote alimentario</a></p>
-</section>
 <section id="datos-para-la-practica" class="level3">
 <h3 data-anchor-id="datos-para-la-practica">Datos para la practica</h3>
-<p>Archivo <a href="https://drive.google.com/open?id=1HLt_uGKpuO5h6zioDWPb_pZpCatMeVnr">Diabetes Mellitus</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/1qxYdFKR6jktPjjpzZz9_7f7EN8uiW-Sd/view?usp=drive_link">Adolescentes</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/10WVwnr9RVqcb2Mfn06-IdcivP3DEfwNB/view?usp=sharing">Vigilancia Rita</a></p>
-<p>Archivo <a href="https://drive.google.com/file/d/1p7TUHQiUKW9ve9VkTkk7bDqN6L_FXiEs/view?usp=sharing">Brote</a></p>
+<p>Carpeta (para practicas de encuentros) <a href="https://drive.google.com/file/d/1c_bMWOggqDDqlfskpKdLSOAe6FyUB_V2/view?usp=sharing">Datos practicas</a></p>
+<p>Carpeta (para TP) <a href="">Datos TP</a></p>
 </section>
 <section id="bibliografía" class="level3">
 <h3 data-anchor-id="bibliografía">Bibliografía</h3>
-<p><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a></p>
-<p><a href="https://epirhandbook.com/es/index.es.html">EpiRhandbook en español</a></p>
-<p><a href="https://socviz.co/">Data Visualization</a></p>
-<p><a href="https://cdr-book.github.io/index.html">Fundamentos de ciencia de datos con R</a></p>
-<p><a href="https://quarto.org/docs/guide/">Guía de Quarto (en inglés)</a></p>
+<p><a href="https://www.paulamoraga.com/book-spatial/index.html">Spatial Statistics for Data Science: Theory and Practice with R</a></p>
+<p><a href="https://r.geocompx.org/">Geocomputation with R</a></p>
+<p><a href="https://www.spatialanalysisonline.com/">Geospatial Analysis - A Comprehensive Guide - updated Oct 2024</a></p>
+<p><a href="https://r-spatial.org/book/">Spatial Data Science - With Applications in R</a></p>
+<p><a href="https://hughst.github.io/">Applied Spatial Analysis for Public Health</a></p>
 
 
 </section>
