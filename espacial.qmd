@@ -8,9 +8,9 @@ title: "Gestión de datos espaciales con R"
 
 ### Fundamentación
 
-El análisis espacial constituye una dimensión fundamental en la investigación epidemiológica contemporánea, al permitir la identificación y comprensión de patrones geográficos en la distribución de eventos de salud, sus determinantes y consecuencias. En un contexto donde la disponibilidad de datos georreferenciados en salud es creciente, la incorporación de herramientas analíticas capaces de integrar la dimensión espacial resulta indispensable para la vigilancia epidemiológica, la planificación sanitaria y la evaluación de políticas públicas.
+El análisis espacial constituye una dimensión fundamental en la investigación epidemiológica contemporánea, al permitir la identificación y comprensión de patrones geográficos en la distribución de eventos de salud, sus determinantes y consecuencias. En un contexto donde la disponibilidad de datos georreferenciados en salud es creciente, la incorporación de herramientas analíticas capaces de integrar la dimensión espacial resulta indispensable para la vigilancia y la investigación epidemiológica.
 
-En este marco, el presente taller propone una introducción al manejo de datos espaciales mediante el lenguaje R, abordando tanto aspectos técnicos de gestión y visualización como nociones básicas de geoestadística. La formación en estas competencias técnicas y conceptuales se considera estratégica en el trayecto formativo de las residencias en epidemiología, al fortalecer la capacidad de análisis territorial y la toma de decisiones basadas en evidencia geoespacial.
+En este marco, el presente taller propone una introducción al manejo de datos espaciales mediante el lenguaje R, abordando tanto aspectos técnicos de gestión y visualización como nociones básicas de geoestadística. La formación en estas competencias técnicas y conceptuales se considera estratégica en el trayecto formativo de las residencias en epidemiología, al fortalecer la capacidad de análisis geoespacial.
 
  
 
@@ -76,7 +76,7 @@ Se espera que al finalizar este curso los participantes puedan:
         <i class="fa fa-laptop  fa-lg"></i></a></td>
   <td align="center"><a href="https://drive.google.com/file/d/1lr2ncZDVfoDHaY6i7bir20hI3hVjNMWs/view?usp=sharing" download="Encuentro2.R">
         <i class="fa fa-code fa-lg"></i></font></td>
-  <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
+  <td align="center"><a href="https://drive.google.com/file/d/1wkHcYfO76PUld8XMOb7BY8HSXb5ihxdE/view?usp=sharing" download="TP2.pdf">
         <i class="fa fa-file fa-lg"></i></font></td>      
  <td align="center"><a href="https://cols4all.github.io/cols4all-R">
         <i class="fa fa-briefcase  fa-lg"></i></font></td>
@@ -87,7 +87,7 @@ Se espera que al finalizar este curso los participantes puedan:
         <i class="fa fa-laptop  fa-lg"></i></a></td>
   <td align="center"><a href="https://drive.google.com/file/d/1NxbQerSgYNR76hICTAMOhP_h_xts1QFZ/view?usp=sharing" download="Encuentro3.R">
         <i class="fa fa-code fa-lg"></i></font></td>
-  <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
+  <td align="center"><a href="https://drive.google.com/file/d/1tMARp0vJ_5fyux_1ObkRhFOvxpK-FcD6/view?usp=sharing" download="TP3.pdf">
         <i class="fa fa-file fa-lg"></i></font></td>      
  <td align="center"><a href="https://jessecambon.github.io/tidygeocoder/index.html">
         <i class="fa fa-briefcase  fa-lg"></i></font></td>
@@ -98,7 +98,7 @@ Se espera que al finalizar este curso los participantes puedan:
         <i class="fa fa-laptop  fa-lg"></i></a></td>
   <td align="center"><a href="https://drive.google.com/file/d/1bz5vBPFkoNy2EEoJQf5uqw0U7knNINCK/view?usp=sharing" download="Encuentro4.R">
         <i class="fa fa-code fa-lg"></i></font></td>
-  <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
+  <td align="center"><a href="https://drive.google.com/file/d/1ahLXj881WMnf7KGqRLg0P0IK2My4y1CE/view?usp=sharing" download="TP4.pdf">
         <i class="fa fa-file fa-lg"></i></font></td>      
  <td align="center"><a href="https://www.gstat.org/gstat.pdf">
         <i class="fa fa-briefcase  fa-lg"></i></font></td>
@@ -109,7 +109,7 @@ Se espera que al finalizar este curso los participantes puedan:
         <i class="fa fa-laptop  fa-lg"></i></a></td>
   <td align="center"><a href="https://drive.google.com/file/d/1tsv6X4uQUJYQRaO4MbjmCAZs-zApAiDA/view?usp=sharing" download="Encuentro5.R">
         <i class="fa fa-code fa-lg"></i></font></td>
-  <td align="center"><a href="https://drive.google.com/file/d/1AKUQNCDeb95mLOy350gJSMBTjIq1f7dn/view?usp=sharing" download="Encuentro1.R">
+  <td align="center"><a href="https://drive.google.com/file/d/1PzgVHDmvrcYIQ-_ou9ghwJH9cWtRqjmR/view?usp=sharing" download="TP5.pdf">
         <i class="fa fa-file fa-lg"></i></font></td>      
  <td align="center"><a href="https://rubenfcasal.github.io/estadistica_espacial/kriging.html">
         <i class="fa fa-briefcase  fa-lg"></i></font></td>
@@ -120,7 +120,7 @@ Se espera que al finalizar este curso los participantes puedan:
 
 Carpeta (para practicas de encuentros) [Datos practicas](https://drive.google.com/file/d/1c_bMWOggqDDqlfskpKdLSOAe6FyUB_V2/view?usp=sharing)
 
-Carpeta (para TP) [Datos TP]()
+Carpeta (para TP) [Datos TP](https://drive.google.com/file/d/1hxnf3Y6CSTKIU44c3r0jzZWfp_L_5xLM/view?usp=sharing)
 
 ### Bibliografía
 
