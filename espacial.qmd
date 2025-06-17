@@ -122,6 +122,8 @@ Carpeta (para practicas de encuentros) [Datos practicas](https://drive.google.co
 
 Carpeta (para TP) [Datos TP](https://drive.google.com/file/d/1hxnf3Y6CSTKIU44c3r0jzZWfp_L_5xLM/view?usp=sharing)
 
+Recursos [Fuentes de acceso a información geoespacial](https://drive.google.com/file/d/1qKAOZtTIKmszwku3MsSLiJvCdpL53X3K/view?usp=sharing)
+
 ### Bibliografía
 
 [Spatial Statistics for Data Science: Theory and Practice with R](https://www.paulamoraga.com/book-spatial/index.html)
