@@ -234,7 +234,7 @@ Se espera que al finalizar este curso los participantes puedan:
 
 ### Extra
 
-[Uso responsable de la IA](/primero/diapositivas/09-IA.html" target="_blank")
+[Uso responsable de la IA](/primero/diapositivas/09-IA.html){target="_blank"}
 
 ### Prácticas
 
