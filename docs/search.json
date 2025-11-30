@@ -949,7 +949,7 @@
     "href": "primero/diapositivas/00-bienvenida.html#encuentros-presenciales",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
     "section": "Encuentros presenciales",
-    "text": "Encuentros presenciales\n\n\nLos encuentros serán los martes y jueves de 10 a 12 hs.\nEn la mayoría de ellos habrá una exposición del tema a partir de diapositivas y en algunas ocasiones tendremos actividades prácticas.\nContacto: Mi mail es christianballejo@gmail.com y mi Whatsapp 223-5309396\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Encuentros presenciales\n\n\nLos encuentros serán los martes y jueves de 10 a 12 hs.\nEn la mayoría de ellos habrá una exposición del tema a partir de diapositivas y en algunas ocasiones tendremos actividades prácticas.\nContacto: Mi mail es christianballejo@gmail.com y mi Whatsapp 223-5309396"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#contacto",
@@ -1502,7 +1502,7 @@
     "href": "primero/diapositivas/01a-datos.html#ejemplo-para-analizar",
     "title": "Gestión de datos - parte 1",
     "section": "Ejemplo para analizar",
-    "text": "Ejemplo para analizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Ministerio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Ejemplo para analizar\n\nVeamos un ejemplo de datos abiertos sobre una encuesta de salud que se viene haciendo en Argentina desde 2005 cada 4 años aproximadamente.\nLos responsables de llevarla a cabo son el Ministerio de Salud de la Nación y el INDEC.\n\nUno de sus sitios es: https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2"
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#abordaje-interdisciplinario-3-dimensiones",
@@ -2412,7 +2412,7 @@
     "href": "primero/diapositivas/05c-tipos.html#documentación",
     "title": "Tipos de datos específicos",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\n\n\n\n\nCapítulos 14, 15, 16 y 17 del libro “R for Data Science (2e) - Data tidy”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Documentación\n\n\n\nCapítulos 14, 15, 16 y 17 del libro “R for Data Science (2e) - Data tidy”"
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#paquete-rstatix",
@@ -3370,8 +3370,8 @@
     "objectID": "primero/diapositivas/09-IA.html#ia-generativa-como-asistente-de-análisis-de-datos-en-r",
     "href": "primero/diapositivas/09-IA.html#ia-generativa-como-asistente-de-análisis-de-datos-en-r",
     "title": "Uso responsable de la IA",
-    "section": "",
-    "text": "¿Qué es?\n\nSistemas de Inteligencia Artificial Generativa (como Gemini, Chatgpt, Claude y otros) capaces de crear contenido nuevo (texto, código, imágenes) a partir de un prompt.\n. . .\n\nEn nuestro contexto (lenguaje R con tidyverse)\n\nEs una herramienta poderosa para traducir peticiones complejas sobre análisis de datos en código R funcional.\nConvierte el lenguaje natural en el lenguaje de programación que necesitamos para el análisis en salud."
+    "section": "IA generativa como asistente de análisis de datos en R",
+    "text": "IA generativa como asistente de análisis de datos en R\n\n¿Qué es?\n\nSistemas de Inteligencia Artificial Generativa (como Gemini, Chatgpt, Claude y otros) capaces de crear contenido nuevo (texto, código, imágenes) a partir de un prompt.\n\n\nEn nuestro contexto (lenguaje R con tidyverse)\n\nEs una herramienta poderosa para traducir peticiones complejas sobre análisis de datos en código R funcional.\nConvierte el lenguaje natural en el lenguaje de programación que necesitamos para el análisis en salud."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#beneficios-de-la-ia-en-análisis-de-datos",
@@ -3385,28 +3385,28 @@
     "href": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos",
     "title": "Uso responsable de la IA",
     "section": "Cuidados y uso responsable (riesgos)",
-    "text": "Cuidados y uso responsable (riesgos)\n\n\nEl “Riesgo de la alucinación” (fallo de código):\n\n\nCuidado: La IA puede generar código incorrecto, obsoleto o que no se ajusta a las últimas versiones de tidyverse.\nAcción: Siempre ejecuta y verifica el código línea por línea. No copiar y pegar sin entender."
+    "text": "Cuidados y uso responsable (riesgos)\n\n\nEl “Riesgo de la alucinación” (fallo de código):\n\nCuidado: La IA puede generar código incorrecto, obsoleto o que no se ajusta a las últimas versiones de tidyverse.\nAcción: Siempre ejecuta y verifica el código línea por línea. No copiar y pegar sin entender."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-1",
     "href": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-1",
     "title": "Uso responsable de la IA",
     "section": "Cuidados y uso responsable (riesgos)",
-    "text": "Cuidados y uso responsable (riesgos)\n\nEl principio de la Caja Negra (opacidad):\n\n\nCuidado: Confiar ciegamente en el código genera una dependencia que inhibe el aprendizaje profundo de R y la lógica de programación. (pereza cognitiva)\nAcción: La IA debe ser una herramienta para aprender, no un reemplazo de la comprensión. El objetivo es comprender la lógica de cada función generada."
+    "text": "Cuidados y uso responsable (riesgos)\n\nEl principio de la Caja Negra (opacidad):\n\nCuidado: Confiar ciegamente en el código genera una dependencia que inhibe el aprendizaje profundo de R y la lógica de programación. (pereza cognitiva)\nAcción: La IA debe ser una herramienta para aprender, no un reemplazo de la comprensión. El objetivo es comprender la lógica de cada función generada."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-2",
     "href": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-2",
     "title": "Uso responsable de la IA",
     "section": "Cuidados y uso responsable (riesgos)",
-    "text": "Cuidados y uso responsable (riesgos)\n\nPrivacidad y datos sensibles (ética):\n. . .\n\nCuidado: NUNCA ingreses datos reales (incluso anonimizados) o sensibles de pacientes en el prompt de una IA pública.\n\n. . .\n\nAcción: Usa datos ficticios o descripciones de la estructura del data frame (ej. “tengo una columna edad numérica y una columna diagnostico categórica”)."
+    "text": "Cuidados y uso responsable (riesgos)\n\nPrivacidad y datos sensibles (ética):\n\n\nCuidado: NUNCA ingreses datos reales (incluso anonimizados) o sensibles de pacientes en el prompt de una IA pública.\n\n\n\n\nAcción: Usa datos ficticios o descripciones de la estructura del data frame (ej. “tengo una columna edad numérica y una columna diagnostico categórica”)."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-3",
     "href": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-3",
     "title": "Uso responsable de la IA",
     "section": "Cuidados y uso responsable (riesgos)",
-    "text": "Cuidados y uso responsable (riesgos)\n\nSesgos y contexto:\n. . .\n\nCuidado: La IA no comprende el contexto epidemiológico o clínico complejo. El código puede ser correcto, pero la interpretación sigue siendo responsabilidad humana.\n\n. . .\n\nAcción: El prompt debe ser lo más específico posible para mitigar ambigüedades. La validación del resultado final es indispensable."
+    "text": "Cuidados y uso responsable (riesgos)\n\nSesgos y contexto:\n\n\nCuidado: La IA no comprende el contexto epidemiológico o clínico complejo. El código puede ser correcto, pero la interpretación sigue siendo responsabilidad humana.\n\n\n\n\nAcción: El prompt debe ser lo más específico posible para mitigar ambigüedades. La validación del resultado final es indispensable."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#la-regla-de-oro-vos-son-el-experto",
@@ -3434,7 +3434,7 @@
     "href": "primero/diapositivas/09-IA.html#dentro-de-nuestro-contexto",
     "title": "Uso responsable de la IA",
     "section": "Dentro de nuestro contexto",
-    "text": "Dentro de nuestro contexto\n\nEl prompt en la generación de código\nPara la programación, el prompt es la especificación precisa que le indica a la IA:\n\n\nQué hacer (ej. calcular la media).\nCómo hacerlo (ej. usar el paquete dplyr).\nCon qué datos (ej. data frame datos_salud y columna edad)."
+    "text": "Dentro de nuestro contexto\n\nEl prompt en la generación de código\nPara la programación, el prompt es la especificación precisa que le indica a la IA:\n\nQué hacer (ej. calcular la media).\nCómo hacerlo (ej. usar el paquete dplyr).\nCon qué datos (ej. data frame datos_salud y columna edad)."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#fundamentos-de-ingeniería-de-prompts-avanzada",
@@ -3518,7 +3518,7 @@
     "href": "primero/diapositivas/09-IA.html#la-regla-de-oro-vos-sos-el-experto",
     "title": "Uso responsable de la IA",
     "section": "La Regla de Oro: Vos sos el experto!",
-    "text": "La Regla de Oro: Vos sos el experto!\n\nLa IA genera código, pero como epidemiólogos nosotros generamos el conocimiento y somos responsables de lo que publiquemos.\n\n\nEntender el código.\nVerificar los resultados.\nNo compartir información confidencial."
+    "text": "La Regla de Oro: Vos sos el experto!\n\nLa IA genera código, pero como epidemiólogos nosotros generamos el conocimiento y somos responsables de lo que publiquemos.\n\nEntender el código.\nVerificar los resultados.\nNo compartir información confidencial."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#explicación-del-código-1",

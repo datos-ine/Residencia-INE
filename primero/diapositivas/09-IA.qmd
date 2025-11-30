@@ -3,6 +3,7 @@ title: "Uso responsable de la IA"
 subtitle: "Residencia de Epidemiología"
 format: 
   revealjs:
+    standalone: true
     self-contained: true
     width: 1920
     height: 1080
