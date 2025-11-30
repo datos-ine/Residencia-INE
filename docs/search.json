@@ -1348,7 +1348,7 @@
     "href": "primero/diapositivas/02-analisis.html#ayuda",
     "title": "Introducción al software de análisis",
     "section": "Ayuda",
-    "text": "Ayuda\n\nTodas las funciones del R base o de los paquetes vienen acompañadas con su respectiva documentación.\nEsta documentación se puede visualizar en el panel Help de RStudio navegando como si fuese un navegador web.\nLa documentación tiene una estructura que se repite: descripción, uso, argumentos, detalles, valores, ejemplos.\nTambién se pueden hacer busquedas en buscadores web como Google, foros especializados, como por ejemplo Stack Overflow o Rpubs, canales de slack y más recientemente en IAs como chatGPT o Google Gemini.\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Ayuda\n\nTodas las funciones del R base o de los paquetes vienen acompañadas con su respectiva documentación.\nEsta documentación se puede visualizar en el panel Help de RStudio navegando como si fuese un navegador web.\nLa documentación tiene una estructura que se repite: descripción, uso, argumentos, detalles, valores, ejemplos.\nTambién se pueden hacer busquedas en buscadores web como Google, foros especializados, como por ejemplo Stack Overflow o Rpubs, canales de slack y más recientemente en IAs como chatGPT o Google Gemini."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#por-lo-tanto",
@@ -1572,7 +1572,7 @@
     "href": "primero/diapositivas/01b-datos.html#seguimos-analizando-la-documentación-de-la-enfr-2018",
     "title": "Planificación de la gestión de datos",
     "section": "Seguimos analizando la documentación de la ENFR 2018",
-    "text": "Seguimos analizando la documentación de la ENFR 2018\n  \nSitio Bases Salud INDEC\n\nDiccionario de datos ENFR 2018\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Seguimos analizando la documentación de la ENFR 2018\n  \nSitio Bases Salud INDEC\n\nDiccionario de datos ENFR 2018"
   },
   {
     "objectID": "primero/clases/01-introR.html#videos-sobre-objetos",
@@ -1656,7 +1656,7 @@
     "href": "primero/diapositivas/01c-datos.html#calidad",
     "title": "Archivos de datos",
     "section": "Calidad",
-    "text": "Calidad\n\n\n\nCompleto: Filas coincidentes con la recopilación y sin duplicados. Variables coincidentes con el diccionario de datos. Eliminaciones documentadas.\n\n\n\n\nVálido: variables que se ajustan a las restricciones que ha establecido en su diccionario de datos.\n\n\n\n\nPreciso:  sin valores erróneos detectables.\n\n\n\n\nCoherente: valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna.\n\n\n\n\nAnonimizado: se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio. Antes de compartir públicamente también se eliminan identificadores indirectos.\n\n\n\n\nAnalizable: los datos tienen un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización.\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Calidad\n\n\n\nCompleto: Filas coincidentes con la recopilación y sin duplicados. Variables coincidentes con el diccionario de datos. Eliminaciones documentadas.\n\n\n\n\nVálido: variables que se ajustan a las restricciones que ha establecido en su diccionario de datos.\n\n\n\n\nPreciso:  sin valores erróneos detectables.\n\n\n\n\nCoherente: valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna.\n\n\n\n\nAnonimizado: se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio. Antes de compartir públicamente también se eliminan identificadores indirectos.\n\n\n\n\nAnalizable: los datos tienen un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#dataframes",
@@ -1691,7 +1691,7 @@
     "href": "primero/diapositivas/03-lectoescritura.html#documentación",
     "title": "Importar y exportar archivos de datos",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 7 del libro “R for Data Science (2e)”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Documentación\n\n\n\nCapítulo 7 del libro “R for Data Science (2e)”"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#introducción",
@@ -1922,7 +1922,7 @@
     "href": "primero/diapositivas/04-gestion.html#documentación",
     "title": "Manipulación de datos",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 3 del libro “R for Data Science (2e)”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Documentación\n\n\n\nCapítulo 3 del libro “R for Data Science (2e)”"
   },
   {
     "objectID": "primero/diapositivas/05-diagnostico.html#etapas-previas-al-análisis",
@@ -2069,7 +2069,7 @@
     "href": "primero/diapositivas/05a-diagnostico.html#marcar-duplicados",
     "title": "Diagnóstico y depuración de datos",
     "section": "Marcar duplicados",
-    "text": "Marcar duplicados\n\nSi lo que buscamos es mantener a todas las observaciones de la tabla pero marcar aquellos que consideramos duplicados podemos hacer:\n\nRecortar el dataframe original a sólo las filas para el análisis. Guardar los ID de este dataframe reducido en un vector.\nEn el dataframe original, creamos una variable de marca usando case_when(), basándonos si el ID está presente en el dataframe reducido (vector de ID anterior).\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Marcar duplicados\n\nSi lo que buscamos es mantener a todas las observaciones de la tabla pero marcar aquellos que consideramos duplicados podemos hacer:\n\nRecortar el dataframe original a sólo las filas para el análisis. Guardar los ID de este dataframe reducido en un vector.\nEn el dataframe original, creamos una variable de marca usando case_when(), basándonos si el ID está presente en el dataframe reducido (vector de ID anterior)."
   },
   {
     "objectID": "primero/diapositivas/05b-tidy.html#datos-ordenados-tidydata",
@@ -2230,7 +2230,7 @@
     "href": "primero/diapositivas/05b-tidy.html#documentación",
     "title": "Datos ordenados y relacionales",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 5 y 19 del libro “R for Data Science (2e) - Data tidy” / “R for Data Science (2e) - Joins”\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Documentación\n\n\n\nCapítulo 5 y 19 del libro “R for Data Science (2e) - Data tidy” / “R for Data Science (2e) - Joins”"
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos-1",
@@ -2727,7 +2727,7 @@
     "href": "primero/diapositivas/06-analisis.html#familia-map",
     "title": "Operaciones múltiples, estadísticos y bucles",
     "section": "Familia map()",
-    "text": "Familia map()\n\n\n\n\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Familia map()"
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#visualización",
@@ -2776,7 +2776,7 @@
     "href": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2",
     "title": "Visualización de datos",
     "section": "Esquema gráfico ggplot2",
-    "text": "Esquema gráfico ggplot2\n\n\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico\nCoordenadas que organizan los objetos geométricos\nEscalas (scale) definen el rango de valores de las estéticas\nFacetas que agrupan en subgráficos"
+    "text": "Esquema gráfico ggplot2\n\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico\nCoordenadas que organizan los objetos geométricos\nEscalas (scale) definen el rango de valores de las estéticas\nFacetas que agrupan en subgráficos"
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-1",
@@ -2839,7 +2839,7 @@
     "href": "primero/diapositivas/07-visualizacion.html#construcción-de-gráfico-paso-a-paso",
     "title": "Visualización de datos",
     "section": "Construcción de gráfico paso a paso",
-    "text": "Construcción de gráfico paso a paso\nLa idea en esta presentación es mostrar paso a paso la construcción de un gráfico.\n\n\nPartiremos del objetivo deseado, en este caso un tipo de gráfico que ya existe, pero podría ser algún otro ejemplo o un bosquejo de lo imaginado garabateado en un papel.\nEl segundo paso es determinar cuales son las variables necesarias para construir ese gráfico y donde se mapean.\nEl tercer paso es trabajar con los datos y transformarlos para que estén preparados para graficar.\nEl cuarto es el gráfico en si mismo con todas las personalizaciones de sus partes."
+    "text": "Construcción de gráfico paso a paso\nLa idea en esta presentación es mostrar paso a paso la construcción de un gráfico.\n\nPartiremos del objetivo deseado, en este caso un tipo de gráfico que ya existe, pero podría ser algún otro ejemplo o un bosquejo de lo imaginado garabateado en un papel.\nEl segundo paso es determinar cuales son las variables necesarias para construir ese gráfico y donde se mapean.\nEl tercer paso es trabajar con los datos y transformarlos para que estén preparados para graficar.\nEl cuarto es el gráfico en si mismo con todas las personalizaciones de sus partes."
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#gráfico-objetivo",
@@ -3147,7 +3147,7 @@
     "href": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes-3",
     "title": "Visualización de datos",
     "section": "Diferencia en tamaño de fuentes",
-    "text": "Diferencia en tamaño de fuentes\n\n\n\npinguinos |&gt;\n    ggplot(aes(x = largo_pico_mm, \n               y = alto_pico_mm, \n               color = especie)) +\n  geom_point()+\n  geom_text(x = 45, \n            y = 20, \n            label = \"Ejemplo font 15\", \n            size = 15/.pt, \n            inherit.aes = FALSE) +\n  labs(title = \"Relación entre largo y altura de picos por especies\") +\n  theme(plot.title = element_text(size = 15))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInstituto Nacional de Epidemiología"
+    "text": "Diferencia en tamaño de fuentes\n\n\n\npinguinos |&gt;\n    ggplot(aes(x = largo_pico_mm, \n               y = alto_pico_mm, \n               color = especie)) +\n  geom_point()+\n  geom_text(x = 45, \n            y = 20, \n            label = \"Ejemplo font 15\", \n            size = 15/.pt, \n            inherit.aes = FALSE) +\n  labs(title = \"Relación entre largo y altura de picos por especies\") +\n  theme(plot.title = element_text(size = 15))"
   },
   {
     "objectID": "primero/practicas/practica_integradora.html",
