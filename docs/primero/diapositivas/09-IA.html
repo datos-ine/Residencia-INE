@@ -1298,15 +1298,27 @@ margin-right: 0; }
 </ol>
 </div>
 </section>
+<section id="ia-generativas" class="slide level2 title-top">
+<h2>IA Generativas</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><p><a href="https://gemini.google.com/">Google Gemini</a></p></li>
+<li class="fragment"><p><a href="https://chat.openai.com/">OpenAI ChatGPT</a></p></li>
+<li class="fragment"><p><a href="https://www.anthropic.com/">Anthropic Claude</a></p></li>
+<li class="fragment"><p><a href="https://copilot.microsoft.com/">Microsoft Copilot</a></p></li>
+<li class="fragment"><p><a href="https://chat.deepseek.com/">DeepSeek</a></p></li>
+<li class="fragment"><p><a href="https://www.perplexity.ai/">Perplexy IA</a></p></li>
+</ul>
+</section>
 <section id="ejemplo-de-prompt" class="slide level2 title-top">
 <h2>Ejemplo de prompt</h2>
 <p><br></p>
-<p><em>“Actúa como un analista de datos senior en salud experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de por qué funciona. Necesito código para el data frame sisa_dengue que me permita convertir todas las variables de fecha tipo character con formato dd/mm/aaaa en Date.”</em></p>
+<p><em>“Actúa como un analista de datos senior en epidemiologia experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de cómo funciona. Necesito código para el data frame sisa_dengue que me permita convertir todas las variables de fecha que tengan el formato dd/mm/aaaa en Date. Tené en cuenta que algunos valores de observaciones pueden ser NA”</em></p>
 </section>
 <section id="ejemplo-para-lograr-una-función" class="slide level2 title-top">
 <h2>Ejemplo para lograr una función</h2>
 <p><br></p>
-<p><em>“Actúa como un analista de datos senior en salud experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de por qué funciona. La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando lubridate::dmy(). La función debe utilizar la estructura dplyr::mutate(across(..)) y debe ser robusta que cumplen dos condiciones simultáneas: 1) su tipo de dato es character Y 2) su nombre contiene la subcadena fecha en minúsculas.”</em></p>
+<p><em>“Actúa como un analista de datos senior en epidemiología experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de cómo funciona. La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando lubridate::dmy(). Utiliza require() para activar el o los paquetes que necesites asegurandote de tenerlos instalados. La función debe utilizar la estructura dplyr::mutate(across()) y debe ser robusta que cumplen dos condiciones simultáneas: 1) su tipo de dato es character o factor y 2) su estructura es dd/mm/aaaa. Tené en cuenta que algunos valores de observaciones pueden ser NA”</em></p>
 </section>
 <section id="salida-de-código" class="slide level2 title-top">
 <h2>Salida de código</h2>
@@ -1359,7 +1371,7 @@ margin-right: 0; }
 <section id="extra-prompt-para-aprender-un-tema" class="slide level2 title-top">
 <h2>Extra: prompt para aprender un tema</h2>
 <p><br></p>
-<p>“Actúa como un tutor experto que me ayude a dominar cualquier tema a través de un curso interactivo en estilo entrevista. El proceso debe ser recursivo y personalizado.</p>
+<p>“Actúa como analista de datos senior en epidemiología que me ayude a dominar cualquier tema relacionado a datos y uso del lenguaje R y tidyverse través de un curso interactivo en estilo entrevista. El proceso debe ser recursivo y personalizado.</p>
 <p>Esto es lo que quiero que hagas:</p>
 <ol type="1">
 <li><p>Pregúntame por un tema que quiero aprender.</p></li>
@@ -1373,7 +1385,8 @@ margin-right: 0; }
 </ol>
 <ul>
 <li><p>Explica el concepto de manera clara y concisa, usando analogías y ejemplos del mundo real.</p></li>
-<li><p>Hazme preguntas para evaluar y profundizar mi comprensión. -Dame un ejercicio corto o un experimento mental para aplicar lo que he aprendido.</p></li>
+<li><p>Hazme preguntas para evaluar y profundizar mi comprensión.</p></li>
+<li><p>Dame un ejercicio corto o un experimento mental para aplicar lo que he aprendido.</p></li>
 <li><p>Pregúntame si estoy listo para continuar o si necesito aclaraciones.</p>
 <ul>
 <li>Si digo que sí, pasa al siguiente concepto.</li>

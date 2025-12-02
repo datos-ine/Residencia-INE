@@ -239,9 +239,7 @@ En el ámbito de la salud, los valores perdidos (NA) son comunes y críticos. El
 
 ## Fundamentos de ingeniería de prompts avanzada {.title-top}
 
-<br>
-
-::: {style="font-size: 83%;"}
+::: {style="font-size: 80%;"}
 
 Iteración y refinamiento ("la conversación")
 
@@ -311,18 +309,41 @@ El principio más importante es que el código generado por IA debe ser revisado
 
 :::
 
+## IA Generativas {.title-top}
+
+<br>
+
+::: incremental
+
+- [Google Gemini](https://gemini.google.com/)
+
+- [OpenAI ChatGPT](https://chat.openai.com/)
+
+- [Anthropic Claude](https://www.anthropic.com/)
+
+- [Microsoft Copilot](https://copilot.microsoft.com/)
+
+- [DeepSeek](https://chat.deepseek.com/)  
+
+- [Perplexy IA](https://www.perplexity.ai/) 
+
+
+
+:::
+
+
 ## Ejemplo de prompt {.title-top}
 
 <br>
 
-*"Actúa como un analista de datos senior en salud experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de por qué funciona. Necesito código para el data frame sisa_dengue que me permita convertir todas las variables de fecha tipo character con formato dd/mm/aaaa en Date."* 
+*"Actúa como un analista de datos senior en epidemiologia experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de cómo funciona. Necesito código para el data frame sisa_dengue que me permita convertir todas las variables de fecha que tengan el formato dd/mm/aaaa en Date. Tené en cuenta que algunos valores de observaciones pueden ser NA"* 
 
 ## Ejemplo para lograr una función {.title-top}
 
 <br>
 
-*"Actúa como un analista de datos senior en salud experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de por qué funciona. 
-La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando lubridate::dmy(). La función debe utilizar la estructura dplyr::mutate(across(..)) y debe ser robusta que cumplen dos condiciones simultáneas: 1) su tipo de dato es character Y 2) su nombre contiene la subcadena fecha en minúsculas."*
+*"Actúa como un analista de datos senior en epidemiología experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de cómo funciona. 
+La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando lubridate::dmy(). Utiliza require() para activar el o los paquetes que necesites asegurandote de tenerlos instalados. La función debe utilizar la estructura dplyr::mutate(across()) y debe ser robusta que cumplen dos condiciones simultáneas: 1) su tipo de dato es character o factor y 2) su estructura es dd/mm/aaaa. Tené en cuenta que algunos valores de observaciones pueden ser NA"*
 
 ## Salida de código {.title-top}
 
@@ -387,7 +408,7 @@ ser de tipo texto (character) y tener la palabra "fecha" en su nombre, evitando 
 
 <br>
 
-"Actúa como un tutor experto que me ayude a dominar cualquier tema a través de un curso interactivo en estilo entrevista. El proceso debe ser recursivo y personalizado.
+"Actúa como analista de datos senior en epidemiología que me ayude a dominar cualquier tema relacionado a datos y uso del lenguaje R y tidyverse través de un curso interactivo en estilo entrevista. El proceso debe ser recursivo y personalizado.
 
 Esto es lo que quiero que hagas:
 
@@ -402,7 +423,8 @@ Esto es lo que quiero que hagas:
 
 - Explica el concepto de manera clara y concisa, usando analogías y ejemplos del mundo real. 
 
-- Hazme preguntas para evaluar y profundizar mi comprensión. -Dame un ejercicio corto o un experimento mental para aplicar lo que he aprendido.
+- Hazme preguntas para evaluar y profundizar mi comprensión. 
+- Dame un ejercicio corto o un experimento mental para aplicar lo que he aprendido.
 
 - Pregúntame si estoy listo para continuar o si necesito aclaraciones. 
 

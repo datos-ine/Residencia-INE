@@ -3483,14 +3483,14 @@
     "href": "primero/diapositivas/09-IA.html#ejemplo-de-prompt",
     "title": "Uso responsable de la IA",
     "section": "Ejemplo de prompt",
-    "text": "Ejemplo de prompt\n\n“Actúa como un analista de datos senior en salud experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de por qué funciona. Necesito código para el data frame sisa_dengue que me permita convertir todas las variables de fecha tipo character con formato dd/mm/aaaa en Date.”"
+    "text": "Ejemplo de prompt\n\n“Actúa como un analista de datos senior en epidemiologia experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de cómo funciona. Necesito código para el data frame sisa_dengue que me permita convertir todas las variables de fecha que tengan el formato dd/mm/aaaa en Date. Tené en cuenta que algunos valores de observaciones pueden ser NA”"
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#ejemplo-para-lograr-una-función",
     "href": "primero/diapositivas/09-IA.html#ejemplo-para-lograr-una-función",
     "title": "Uso responsable de la IA",
     "section": "Ejemplo para lograr una función",
-    "text": "Ejemplo para lograr una función\n\n“Actúa como un analista de datos senior en salud experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de por qué funciona. La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando lubridate::dmy(). La función debe utilizar la estructura dplyr::mutate(across(..)) y debe ser robusta que cumplen dos condiciones simultáneas: 1) su tipo de dato es character Y 2) su nombre contiene la subcadena fecha en minúsculas.”"
+    "text": "Ejemplo para lograr una función\n\n“Actúa como un analista de datos senior en epidemiología experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de cómo funciona. La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando lubridate::dmy(). Utiliza require() para activar el o los paquetes que necesites asegurandote de tenerlos instalados. La función debe utilizar la estructura dplyr::mutate(across()) y debe ser robusta que cumplen dos condiciones simultáneas: 1) su tipo de dato es character o factor y 2) su estructura es dd/mm/aaaa. Tené en cuenta que algunos valores de observaciones pueden ser NA”"
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#salida-de-código",
@@ -3532,14 +3532,14 @@
     "href": "primero/diapositivas/09-IA.html#extra-prompt-para-aprender-un-tema",
     "title": "Uso responsable de la IA",
     "section": "Extra: prompt para aprender un tema",
-    "text": "Extra: prompt para aprender un tema\n\n“Actúa como un tutor experto que me ayude a dominar cualquier tema a través de un curso interactivo en estilo entrevista. El proceso debe ser recursivo y personalizado.\nEsto es lo que quiero que hagas:\n\nPregúntame por un tema que quiero aprender.\nDivide ese tema en un plan de estudios estructurado con lecciones progresivas, empezando por los fundamentos y avanzando hacia conceptos más avanzados."
+    "text": "Extra: prompt para aprender un tema\n\n“Actúa como analista de datos senior en epidemiología que me ayude a dominar cualquier tema relacionado a datos y uso del lenguaje R y tidyverse través de un curso interactivo en estilo entrevista. El proceso debe ser recursivo y personalizado.\nEsto es lo que quiero que hagas:\n\nPregúntame por un tema que quiero aprender.\nDivide ese tema en un plan de estudios estructurado con lecciones progresivas, empezando por los fundamentos y avanzando hacia conceptos más avanzados."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#extra-prompt-para-aprender-un-tema-1",
     "href": "primero/diapositivas/09-IA.html#extra-prompt-para-aprender-un-tema-1",
     "title": "Uso responsable de la IA",
     "section": "Extra: prompt para aprender un tema",
-    "text": "Extra: prompt para aprender un tema\n\nPara cada lección:\n\n\nExplica el concepto de manera clara y concisa, usando analogías y ejemplos del mundo real.\nHazme preguntas para evaluar y profundizar mi comprensión. -Dame un ejercicio corto o un experimento mental para aplicar lo que he aprendido.\nPregúntame si estoy listo para continuar o si necesito aclaraciones.\n\nSi digo que sí, pasa al siguiente concepto.\nSi digo que no, reformula la explicación, proporciona ejemplos adicionales y guíame con pistas hasta que lo entienda."
+    "text": "Extra: prompt para aprender un tema\n\nPara cada lección:\n\n\nExplica el concepto de manera clara y concisa, usando analogías y ejemplos del mundo real.\nHazme preguntas para evaluar y profundizar mi comprensión.\nDame un ejercicio corto o un experimento mental para aplicar lo que he aprendido.\nPregúntame si estoy listo para continuar o si necesito aclaraciones.\n\nSi digo que sí, pasa al siguiente concepto.\nSi digo que no, reformula la explicación, proporciona ejemplos adicionales y guíame con pistas hasta que lo entienda."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#extra-prompt-para-aprender-un-tema-2",
@@ -3554,5 +3554,12 @@
     "title": "Uso responsable de la IA",
     "section": "",
     "text": "¿Qué es?\n\nSistemas de Inteligencia Artificial Generativa (como Gemini, Chatgpt, Claude y otros) capaces de crear contenido nuevo (texto, código, imágenes) a partir de un prompt.\n. . .\n\nEn nuestro contexto (lenguaje R con tidyverse)\n\nEs una herramienta poderosa para traducir peticiones complejas sobre análisis de datos en código R funcional.\nConvierte el lenguaje natural en el lenguaje de programación que necesitamos para el análisis en salud."
+  },
+  {
+    "objectID": "primero/diapositivas/09-IA.html#ia-generativas",
+    "href": "primero/diapositivas/09-IA.html#ia-generativas",
+    "title": "Uso responsable de la IA",
+    "section": "IA Generativas",
+    "text": "IA Generativas\n\n\nGoogle Gemini\nOpenAI ChatGPT\nAnthropic Claude\nMicrosoft Copilot\nDeepSeek\nPerplexy IA"
   }
 ]
