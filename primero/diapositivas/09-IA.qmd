@@ -336,14 +336,14 @@ El principio más importante es que el código generado por IA debe ser revisado
 
 <br>
 
-*"Actúa como un analista de datos senior en epidemiologia experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de cómo funciona. Necesito código para el data frame sisa_dengue que me permita convertir todas las variables de fecha que tengan el formato dd/mm/aaaa en Date. Tené en cuenta que algunos valores de observaciones pueden ser NA"* 
+*"Actúa como un analista de datos senior en epidemiología experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de cómo funciona. Necesito código para el data frame rita_prueba que me permita convertir todas las variables de fecha que tengan el formato dd/mm/aaaa en Date. Tené en cuenta que algunos valores de observaciones pueden ser NA u otro valor de texto"* 
 
 ## Ejemplo para lograr una función {.title-top}
 
 <br>
 
 *"Actúa como un analista de datos senior en epidemiología experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de cómo funciona. 
-La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando lubridate::dmy(). Utiliza require() para activar el o los paquetes que necesites asegurandote de tenerlos instalados. La función debe utilizar la estructura dplyr::mutate(across()) y debe ser robusta que cumplen dos condiciones simultáneas: 1) su tipo de dato es character o factor y 2) su estructura es dd/mm/aaaa. Tené en cuenta que algunos valores de observaciones pueden ser NA"*
+La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando dmy() de lubridate. Utiliza require() para activar el o los paquetes que necesites asegurándote de tenerlos instalados, de lo contrario los instalas. La función debe utilizar la estructura mutate(across()) de dplyr y debe ser robusta para que cumpla dos condiciones simultáneas: 1) su tipo de dato es character o factor y 2) su estructura es dd/mm/aaaa (usa str_detect() de string para el patrón). Tené en cuenta que algunos valores de observaciones pueden ser NA u otro valor como S/D"*
 
 ## Salida de código {.title-top}
 
@@ -352,32 +352,49 @@ La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un
 ::: {style="max-height: 100% !important;" }
 
 ```{r, echo=T, eval=F}
-limpiar_fechas_dmy <- function(df) {
+convertir_fechas_dmy <- function(df) {
   
-  # --- Bloque de gestión de paquetes --
+  # --- Bloque de Gestión de Paquetes (Método if/library) ---
   
+  # 1. Verificar e instalar dplyr
   if (!requireNamespace("dplyr", quietly = TRUE)) {
     install.packages("dplyr", dependencies = TRUE)
   }
-
+  # 2. Cargar dplyr
+  require(dplyr)
+  
+  # 3. Verificar e instalar lubridate
   if (!requireNamespace("lubridate", quietly = TRUE)) {
     install.packages("lubridate", dependencies = TRUE)
   }
-
- require(dplyr)
- require(lubridate)
+  # 4. Cargar lubridate
+  require(lubridate)
   
-  # --- Bloque principal --
+  # 3. Verificar e instalar lubridate
+  if (!requireNamespace("stringr", quietly = TRUE)) {
+    install.packages("stringr", dependencies = TRUE)
+  }
+  # 4. Cargar lubridate
+  require(stringr)
   
-  df_limpio <- df |> 
-    mutate(
-      across(
-        .cols = c(where(is.character) & contains("fecha")),
-        .fns = ~ dmy(.x)
-      )
-    )
+  # 5. Patrón regex para identificar formato dd/mm/aaaa
+  patron_fecha <- "^\\d{1,2}/\\d{1,2}/\\d{4}$"
   
-  return(df_limpio)
+  resultado <- df %>%
+    mutate(across(
+      where(~ (is.character(.) || is.factor(.)) && 
+              any(str_detect(., patron_fecha), na.rm = TRUE)),
+      ~ {
+        # Convertir factores a caracteres
+        if (is.factor(.x)) {
+          .x <- as.character(.x)
+        }
+        # Intentar conversión a fecha
+        dmy(.x, quiet = TRUE)
+      }
+    ))
+  
+  return(resultado)
 }
 ```
 
@@ -385,24 +402,51 @@ limpiar_fechas_dmy <- function(df) {
 
 ## Explicación del código {.title-top}
 
-<br>
+::: {style="font-size: 90%;"}
 
-La función utiliza un bloque `if` separado para cada paquete. 
-La condición `if (!requireNamespace("paquete"))` verifica si el paquete está instalado en el sistema. Si no lo está, se ejecuta `install.packages()`.
+Definición de la función: `convertir_fechas_dmy <- function(df) {` - Crea una función llamada **convertir_fechas_dmy** que acepta un data frame como único argumento.
 
-Después de la verificación/instalación, `require(paquete)` carga el paquete en la sesión para que sus funciones (como `mutate` y `dmy`) puedan ser utilizadas en la transformación de datos de forma *"silenciosa"*.
+Verificación de paquete dplyr: `if (!requireNamespace("dplyr", quietly = TRUE)) {` - Comprueba si el paquete `dplyr` está instalado en el sistema sin mostrar mensajes.
 
-Luego utiliza `mutate(across())` para la transformación. El selector de columnas, `where(is.character) & contains("fecha")`, es la clave. 
+Instalación de dplyr: `install.packages("dplyr", dependencies = TRUE)` - Si `dplyr` no está instalado, lo instala automáticamente con todas sus dependencias.
 
+Carga de dplyr: `require(dplyr)` - Carga el paquete `dplyr` en el entorno de trabajo actual.
 
+Repetición del proceso: El mismo patrón de verificación-instalación-carga se aplica para los paquetes `lubridate` y `stringr`.
+
+:::
 
 ## Explicación del código {.title-top}
 
-<br>
+::: {style="font-size: 90%;"}
 
-La notación `&` (AND) se usa dentro de across para filtrar solo las columnas que satisfacen *ambas* condiciones: 
+Definición del patrón regex: `patron_fecha <- "^\\d{1,2}/\\d{1,2}/\\d{4}$"` - Crea una expresión regular que busca exactamente el formato *dd/mm/aaaa* donde "dd" y "mm" pueden tener 1 o 2 dígitos, y "aaaa" siempre tiene 4 dígitos.
 
-ser de tipo texto (character) y tener la palabra "fecha" en su nombre, evitando así transformar otras variables de texto no relacionadas con fechas.
+Inicio de la transformación: `resultado <- df |> ` - Toma el data frame de entrada y lo prepara para encadenar operaciones con el operador pipe ( |> ).
+
+Selección de columnas: `mutate(across(where(~ (is.character(.) || is.factor(.)) &&` - Inicia la modificación de columnas, seleccionando solo aquellas que cumplan dos condiciones simultáneas. Aquí usamos `||` y `&&` para decisiones con valores únicos (condiciones de control).
+                                          
+Primera condición: `is.character(.) || is.factor(.)` - La columna debe ser de tipo  character O de tipo factor.
+
+:::
+
+## Explicación del código {.title-top}
+   
+::: {style="font-size: 90%;"}
+
+Segunda condición: `any(str_detect(., patron_fecha), na.rm = TRUE)))` - Al menos un valor en la columna debe coincidir con el patrón de fecha definido, ignorando valores NA.
+                             
+Función de transformación: `~ {` - Inicia una función anónima que se aplicará a 
+cada columna seleccionada.
+                                
+Conversión de factores: `if (is.factor(.x)) { .x <- as.character(.x) }` - Si la columna es un factor, la convierte a character para poder procesarla con `str_detect` y `dmy`.
+                               
+Conversión a fecha: `dmy(.x, quiet = TRUE)` - Utiliza la función `dmy()` de lubridate para convertir strings en formato día/mes/año a objetos *Date* de R, silenciando las advertencias.
+                                 
+Retorno del resultado: `return(resultado)` - Devuelve el data frame modificado 
+con las columnas de fecha convertidas a tipo Date.
+
+:::
 
 ## Extra: prompt para aprender un tema{.title-top}
 
@@ -431,16 +475,23 @@ Esto es lo que quiero que hagas:
   - Si digo que sí, pasa al siguiente concepto. 
   - Si digo que no, reformula la explicación, proporciona ejemplos adicionales y guíame con pistas hasta que lo entienda. 
 
-## Extra: prompt para aprender un tema{.title-top}
+## Extra: prompt para aprender un tema {.title-top}
 
 4. Después de cada sección importante, proporciona un mini-cuestionario de repaso o un resumen estructurado. 
 
 5. Anímame a reflexionar sobre lo que he aprendido y sugiere cómo podría aplicarlo en un proyecto o escenario del mundo real."
 
-## Pero siempre recuerda el peligro
+## Todo lindo pero no olvidar  {.title-top}
 
 <br>
+<br>
+
+::: {style="font-size: 120%;"}
 
 *"El efecto de la IA actual no extiende la cognición, sino que la automatiza, convirtiendo el pensamiento en un servicio. En lugar de democratizar el aprendizaje, privatiza el acto de pensar bajo control corporativo."*  - Ronald Purser
 
-[AI is Destroying the University and Learning Itself](https://www.currentaffairs.org/news/ai-is-destroying-the-university-and-learning-itself)
+:::
+
+<br>
+
+[AI is Destroying the University and Learning Itself - Noviembre 2025](https://www.currentaffairs.org/news/ai-is-destroying-the-university-and-learning-itself)

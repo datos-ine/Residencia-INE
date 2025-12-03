@@ -3483,28 +3483,28 @@
     "href": "primero/diapositivas/09-IA.html#ejemplo-de-prompt",
     "title": "Uso responsable de la IA",
     "section": "Ejemplo de prompt",
-    "text": "Ejemplo de prompt\n\n“Actúa como un analista de datos senior en epidemiologia experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de cómo funciona. Necesito código para el data frame sisa_dengue que me permita convertir todas las variables de fecha que tengan el formato dd/mm/aaaa en Date. Tené en cuenta que algunos valores de observaciones pueden ser NA”"
+    "text": "Ejemplo de prompt\n\n“Actúa como un analista de datos senior en epidemiología experto en R y tidyverse. Solo responde con el código R requerido y una breve explicación de cómo funciona. Necesito código para el data frame rita_prueba que me permita convertir todas las variables de fecha que tengan el formato dd/mm/aaaa en Date. Tené en cuenta que algunos valores de observaciones pueden ser NA u otro valor de texto”"
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#ejemplo-para-lograr-una-función",
     "href": "primero/diapositivas/09-IA.html#ejemplo-para-lograr-una-función",
     "title": "Uso responsable de la IA",
     "section": "Ejemplo para lograr una función",
-    "text": "Ejemplo para lograr una función\n\n“Actúa como un analista de datos senior en epidemiología experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de cómo funciona. La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando lubridate::dmy(). Utiliza require() para activar el o los paquetes que necesites asegurandote de tenerlos instalados. La función debe utilizar la estructura dplyr::mutate(across()) y debe ser robusta que cumplen dos condiciones simultáneas: 1) su tipo de dato es character o factor y 2) su estructura es dd/mm/aaaa. Tené en cuenta que algunos valores de observaciones pueden ser NA”"
+    "text": "Ejemplo para lograr una función\n\n“Actúa como un analista de datos senior en epidemiología experto en R y tidyverse. Solo responde con el código R requerido para crear una función reutilizable y una breve explicación de cómo funciona. La función debe llamarse convertir_fechas_dmy, aceptar como único argumento un data frame, y devolver el data frame con todas las variables de tipo character con formato dd/mm/aaaa convertidas a tipo Date utilizando dmy() de lubridate. Utiliza require() para activar el o los paquetes que necesites asegurándote de tenerlos instalados, de lo contrario los instalas. La función debe utilizar la estructura mutate(across()) de dplyr y debe ser robusta para que cumpla dos condiciones simultáneas: 1) su tipo de dato es character o factor y 2) su estructura es dd/mm/aaaa (usa str_detect() de string para el patrón). Tené en cuenta que algunos valores de observaciones pueden ser NA u otro valor como S/D”"
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#salida-de-código",
     "href": "primero/diapositivas/09-IA.html#salida-de-código",
     "title": "Uso responsable de la IA",
     "section": "Salida de código",
-    "text": "Salida de código\n\n\n\nlimpiar_fechas_dmy &lt;- function(df) {\n  \n  # --- Bloque de gestión de paquetes --\n  \n  if (!requireNamespace(\"dplyr\", quietly = TRUE)) {\n    install.packages(\"dplyr\", dependencies = TRUE)\n  }\n\n  if (!requireNamespace(\"lubridate\", quietly = TRUE)) {\n    install.packages(\"lubridate\", dependencies = TRUE)\n  }\n\n require(dplyr)\n require(lubridate)\n  \n  # --- Bloque principal --\n  \n  df_limpio &lt;- df |&gt; \n    mutate(\n      across(\n        .cols = c(where(is.character) & contains(\"fecha\")),\n        .fns = ~ dmy(.x)\n      )\n    )\n  \n  return(df_limpio)\n}"
+    "text": "Salida de código\n\n\n\nconvertir_fechas_dmy &lt;- function(df) {\n  \n  # --- Bloque de Gestión de Paquetes (Método if/library) ---\n  \n  # 1. Verificar e instalar dplyr\n  if (!requireNamespace(\"dplyr\", quietly = TRUE)) {\n    install.packages(\"dplyr\", dependencies = TRUE)\n  }\n  # 2. Cargar dplyr\n  require(dplyr)\n  \n  # 3. Verificar e instalar lubridate\n  if (!requireNamespace(\"lubridate\", quietly = TRUE)) {\n    install.packages(\"lubridate\", dependencies = TRUE)\n  }\n  # 4. Cargar lubridate\n  require(lubridate)\n  \n  # 3. Verificar e instalar lubridate\n  if (!requireNamespace(\"stringr\", quietly = TRUE)) {\n    install.packages(\"stringr\", dependencies = TRUE)\n  }\n  # 4. Cargar lubridate\n  require(stringr)\n  \n  # 5. Patrón regex para identificar formato dd/mm/aaaa\n  patron_fecha &lt;- \"^\\\\d{1,2}/\\\\d{1,2}/\\\\d{4}$\"\n  \n  resultado &lt;- df %&gt;%\n    mutate(across(\n      where(~ (is.character(.) || is.factor(.)) && \n              any(str_detect(., patron_fecha), na.rm = TRUE)),\n      ~ {\n        # Convertir factores a caracteres\n        if (is.factor(.x)) {\n          .x &lt;- as.character(.x)\n        }\n        # Intentar conversión a fecha\n        dmy(.x, quiet = TRUE)\n      }\n    ))\n  \n  return(resultado)\n}"
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#explicación-del-código",
     "href": "primero/diapositivas/09-IA.html#explicación-del-código",
     "title": "Uso responsable de la IA",
     "section": "Explicación del código",
-    "text": "Explicación del código\n\nLa función utiliza un bloque if separado para cada paquete. La condición if (!requireNamespace(\"paquete\")) verifica si el paquete está instalado en el sistema. Si no lo está, se ejecuta install.packages().\nDespués de la verificación/instalación, require(paquete) carga el paquete en la sesión para que sus funciones (como mutate y dmy) puedan ser utilizadas en la transformación de datos de forma “silenciosa”.\nLuego utiliza mutate(across()) para la transformación. El selector de columnas, where(is.character) & contains(\"fecha\"), es la clave."
+    "text": "Explicación del código\n\nDefinición de la función: convertir_fechas_dmy &lt;- function(df) { - Crea una función llamada convertir_fechas_dmy que acepta un data frame como único argumento.\nVerificación de paquete dplyr: if (!requireNamespace(\"dplyr\", quietly = TRUE)) { - Comprueba si el paquete dplyr está instalado en el sistema sin mostrar mensajes.\nInstalación de dplyr: install.packages(\"dplyr\", dependencies = TRUE) - Si dplyr no está instalado, lo instala automáticamente con todas sus dependencias.\nCarga de dplyr: require(dplyr) - Carga el paquete dplyr en el entorno de trabajo actual.\nRepetición del proceso: El mismo patrón de verificación-instalación-carga se aplica para los paquetes lubridate y stringr."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#extra-prompt-para-aprender",
@@ -3525,7 +3525,7 @@
     "href": "primero/diapositivas/09-IA.html#explicación-del-código-1",
     "title": "Uso responsable de la IA",
     "section": "Explicación del código",
-    "text": "Explicación del código\n\nLa notación & (AND) se usa dentro de across para filtrar solo las columnas que satisfacen ambas condiciones:\nser de tipo texto (character) y tener la palabra “fecha” en su nombre, evitando así transformar otras variables de texto no relacionadas con fechas."
+    "text": "Explicación del código\n\nDefinición del patrón regex: patron_fecha &lt;- \"^\\\\d{1,2}/\\\\d{1,2}/\\\\d{4}$\" - Crea una expresión regular que busca exactamente el formato dd/mm/aaaa donde “dd” y “mm” pueden tener 1 o 2 dígitos, y “aaaa” siempre tiene 4 dígitos.\nInicio de la transformación: resultado &lt;- df |&gt; - Toma el data frame de entrada y lo prepara para encadenar operaciones con el operador pipe ( |&gt; ).\nSelección de columnas: mutate(across(where(~ (is.character(.) || is.factor(.)) && - Inicia la modificación de columnas, seleccionando solo aquellas que cumplan dos condiciones simultáneas. Aquí usamos || y && para decisiones con valores únicos (condiciones de control).\nPrimera condición: is.character(.) || is.factor(.) - La columna debe ser de tipo character O de tipo factor."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#extra-prompt-para-aprender-un-tema",
@@ -3561,5 +3561,26 @@
     "title": "Uso responsable de la IA",
     "section": "IA Generativas",
     "text": "IA Generativas\n\n\nGoogle Gemini\nOpenAI ChatGPT\nAnthropic Claude\nMicrosoft Copilot\nDeepSeek\nPerplexy IA"
+  },
+  {
+    "objectID": "primero/diapositivas/09-IA.html#explicación-del-código-2",
+    "href": "primero/diapositivas/09-IA.html#explicación-del-código-2",
+    "title": "Uso responsable de la IA",
+    "section": "Explicación del código",
+    "text": "Explicación del código\n\nSegunda condición: any(str_detect(., patron_fecha), na.rm = TRUE))) - Al menos un valor en la columna debe coincidir con el patrón de fecha definido, ignorando valores NA.\nFunción de transformación: ~ { - Inicia una función anónima que se aplicará a cada columna seleccionada.\nConversión de factores: if (is.factor(.x)) { .x &lt;- as.character(.x) } - Si la columna es un factor, la convierte a character para poder procesarla con str_detect y dmy.\nConversión a fecha: dmy(.x, quiet = TRUE) - Utiliza la función dmy() de lubridate para convertir strings en formato día/mes/año a objetos Date de R, silenciando las advertencias.\nRetorno del resultado: return(resultado) - Devuelve el data frame modificado con las columnas de fecha convertidas a tipo Date."
+  },
+  {
+    "objectID": "primero/diapositivas/09-IA.html#todo-lindo-pero-no-olvidar-que..",
+    "href": "primero/diapositivas/09-IA.html#todo-lindo-pero-no-olvidar-que..",
+    "title": "Uso responsable de la IA",
+    "section": "Todo lindo pero no olvidar que..",
+    "text": "Todo lindo pero no olvidar que..\n\n“El efecto de la IA actual no extiende la cognición, sino que la automatiza, convirtiendo el pensamiento en un servicio. En lugar de democratizar el aprendizaje, privatiza el acto de pensar bajo control corporativo.” - Ronald Purser\nAI is Destroying the University and Learning Itself"
+  },
+  {
+    "objectID": "primero/diapositivas/09-IA.html#todo-lindo-pero-no-olvidar",
+    "href": "primero/diapositivas/09-IA.html#todo-lindo-pero-no-olvidar",
+    "title": "Uso responsable de la IA",
+    "section": "Todo lindo pero no olvidar",
+    "text": "Todo lindo pero no olvidar\n \n\n“El efecto de la IA actual no extiende la cognición, sino que la automatiza, convirtiendo el pensamiento en un servicio. En lugar de democratizar el aprendizaje, privatiza el acto de pensar bajo control corporativo.” - Ronald Purser\n\n\nAI is Destroying the University and Learning Itself - Noviembre 2025"
   }
 ]
