@@ -236,6 +236,8 @@ Se espera que al finalizar este curso los participantes puedan:
 
 [Uso responsable de la IA](/primero/diapositivas/09-IA.html){target="_blank"}
 
+[Proyecto R - IA](https://drive.google.com/file/d/1ulG3h19S-EeW-xylPl0nYdu0OIS9cpO7/view?usp=sharing)
+
 ### Prácticas
 
 [Práctico Adolescentes](/primero/practicas/practica_adolescentes.html){target="_blank"}

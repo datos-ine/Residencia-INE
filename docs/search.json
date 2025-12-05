@@ -116,7 +116,7 @@
     "href": "index.html",
     "title": "Gestión de datos epidemiológicos con R + RStudio",
     "section": "",
-    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nVisualización de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nVisualización de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nExtra\nUso responsable de la IA\n\n\nPrácticas\nPráctico Adolescentes\nPráctico Vigilancia Rita\nPráctico Brote alimentario\n\n\nDatos para la practica\nArchivo Diabetes Mellitus\nArchivo Adolescentes\nArchivo Vigilancia Rita\nArchivo Brote\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
+    "text": "Fundamentación\nLa vigilancia en salud y la investigación epidemiológica son pilares fundamentales para la salud pública, dado que a través de estas se recopilan, analizan e interpretan datos sobre la salud de las poblaciones, permitiendo identificar problemas de salud, evaluar la efectividad de intervenciones y formular políticas públicas basadas en evidencia.\nEn la actualidad, la generación y acumulación de datos en salud ha crecido exponencialmente, lo que presenta tanto un desafío como una oportunidad. El desafío radica en la capacidad de procesar y analizar grandes volúmenes de datos de manera eficiente y rigurosa, mientras que la oportunidad reside en la posibilidad de extraer información valiosa para mejorar la salud de las poblaciones.\nEn este contexto, el uso de lenguajes informático-estadísticos se ha vuelto indispensable para los profesionales de la salud pública. R es un lenguaje de programación y entorno de software estadístico gratuito y de código abierto, que ofrece una amplia gama de herramientas para el análisis de datos y la creación de visualizaciones. A su vez, RStudio es un entorno de desarrollo integrado (IDE) para R, que facilita la escritura, ejecución y depuración de código, así como la gestión de proyectos, la colaboración entre investigadores y la producción de documentos científicos y tableros dinámicos soportados por Quarto.\n\n\nContribución esperada:\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n● Utilizar R + RStudio para procesar y analizar datos epidemiológicos\n● Aplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n● Producir informes técnicos en diferentes formatos mediante Quarto\n\n\nDocente\n\nChristian Ballejo    \n\n\n\nTemario\n\n\n\n\n\nTema\n\n\nLectura\n\n\nDiapositiva\n\n\nPráctica\n\n\nRecursos\n\n\n\n\n\n\nBienvenida\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDatos - Parte 1\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDatos - Parte 2\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDatos - Parte 3\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nLenguaje R\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nRStudio\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nTidyverse\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nImportación y exportación de archivos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nManipulación de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDiagnóstico y depuración de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nDatos ordenados y relacionales\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nGestión de tipos de datos: caracteres, factores y variables de tiempo\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nAnálisis Exploratorio de datos - uni y bivariado\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nVisualización de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nVisualización de datos\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\nComunicar - Documentos Quarto\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nExtra\nUso responsable de la IA\nProyecto R - IA\n\n\nPrácticas\nPráctico Adolescentes\nPráctico Vigilancia Rita\nPráctico Brote alimentario\n\n\nDatos para la practica\nArchivo Diabetes Mellitus\nArchivo Adolescentes\nArchivo Vigilancia Rita\nArchivo Brote\n\n\nBibliografía\nR for Data Science (2e)\nEpiRhandbook en español\nData Visualization\nFundamentos de ciencia de datos con R\nGuía de Quarto (en inglés)"
   },
   {
     "objectID": "about.html",
@@ -927,8 +927,8 @@
     "objectID": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
     "href": "primero/diapositivas/00-bienvenida.html#contribución-esperada",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
-    "section": "Contribución esperada",
-    "text": "Contribución esperada\n\nIncorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso lxs participantes puedan:\n\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n\n\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n\n\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
+    "section": "",
+    "text": "Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso lxs participantes puedan:\n. . .\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n. . .\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n. . .\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
   },
   {
     "objectID": "primero/diapositivas/00-bienvenida.html#nos-presentamos",
@@ -962,8 +962,8 @@
     "objectID": "primero/diapositivas/01a-datos.html#concepto",
     "href": "primero/diapositivas/01a-datos.html#concepto",
     "title": "Gestión de datos - parte 1",
-    "section": "Concepto",
-    "text": "Concepto\n\n\n\n \n\nLa gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, la planificación, el almacenamiento, la preservación y la difusión de los datos antes, durante y despues de la etapa de análisis."
+    "section": "",
+    "text": "La gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, la planificación, el almacenamiento, la preservación y la difusión de los datos antes, durante y despues de la etapa de análisis."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#ciencia-abierta",
@@ -977,14 +977,14 @@
     "href": "primero/diapositivas/01a-datos.html#fuente-de-datos",
     "title": "Gestión de datos - parte 1",
     "section": "Fuente de datos",
-    "text": "Fuente de datos\n\nFuente primaria:\n\n\nEl término datos primarios se refiere a datos recolectados por el investigador por primera vez\n\n\n\n\nSuelen necesitar una gran cantidad de recursos como tiempo, dinero y mano de obra.\n\n\n\n\nRequieren un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos."
+    "text": "Fuente de datos\n\nFuente primaria:\n. . .\n\nEl término datos primarios se refiere a datos recolectados por el investigador por primera vez\n\n. . .\n\nSuelen necesitar una gran cantidad de recursos como tiempo, dinero y mano de obra.\n\n. . .\n\nRequieren un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos",
     "href": "primero/diapositivas/01a-datos.html#conjuntos-de-datos",
     "title": "Gestión de datos - parte 1",
     "section": "Conjuntos de datos",
-    "text": "Conjuntos de datos\n\n\n\nUn dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad.\nEn nuestro trabajo el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.\n\n\n\n\n\n\nUn conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora.\nLos conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una sola unidad de investigación u observación."
+    "text": "Conjuntos de datos\n\n\n\n\n\n\nUn dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad.\nEn nuestro trabajo el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.\n\n\n\n\n\n\n\n\n\nUn conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora.\nLos conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una sola unidad de investigación u observación."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-1",
@@ -1019,7 +1019,7 @@
     "href": "primero/diapositivas/01a-datos.html#fuente-de-datos-1",
     "title": "Gestión de datos - parte 1",
     "section": "Fuente de datos",
-    "text": "Fuente de datos\n\nFuente secundaria:\n\nLos datos secundarios implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.\n\n\n\nse enmarcan en el paradigma de open data y por su disponibilidad no tiene costo para el investigador.\n\n\n\n\nA veces los datos no son lo específicos que quisiéramos."
+    "text": "Fuente de datos\n\nFuente secundaria:\n\nLos datos secundarios implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.\n\n. . .\n\nse enmarcan en el paradigma de open data y por su disponibilidad no tiene costo para el investigador.\n\n. . .\n\nA veces los datos no son lo específicos que quisiéramos."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#columnas-variables",
@@ -1054,7 +1054,7 @@
     "href": "primero/diapositivas/01a-datos.html#base-de-datos",
     "title": "Gestión de datos - parte 1",
     "section": "Base de datos",
-    "text": "Base de datos\n\n\n\n\nUna base de datos es “una colección organizada de datos almacenados como múltiples conjuntos de datos”\n\n\n\n\nEl tipo de organización de estas bases de datos se denomina relacionales porque las observaciones de las tablas se “relacionan” entre sí mediante claves primarias y externas (foráneas).\nLas tablas suelen representar distintas unidades de observación. También puede existir una tabla principal y otras auxiliares que conectan mediante códigos."
+    "text": "Base de datos\n\n\n\n\n\n\n\nUna base de datos es “una colección organizada de datos almacenados como múltiples conjuntos de datos”\n\n\n\n\nEl tipo de organización de estas bases de datos se denomina relacionales porque las observaciones de las tablas se “relacionan” entre sí mediante claves primarias y externas (foráneas).\nLas tablas suelen representar distintas unidades de observación. También puede existir una tabla principal y otras auxiliares que conectan mediante códigos."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#ejemplo",
@@ -1074,8 +1074,8 @@
     "objectID": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos",
     "href": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos",
     "title": "Planificación de la gestión de datos",
-    "section": "Plan de gestión de datos",
-    "text": "Plan de gestión de datos\n\n\n\n \n\nUn plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación."
+    "section": "",
+    "text": "Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación."
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#plan-de-gestión-de-datos-1",
@@ -1145,7 +1145,7 @@
     "href": "primero/diapositivas/01b-datos.html#instrumentos-de-recolección",
     "title": "Planificación de la gestión de datos",
     "section": "Instrumentos de recolección",
-    "text": "Instrumentos de recolección\n\nLos instrumentos de recolección de datos característicos dentro del ámbito cuantitativo son los cuestionarios estructurados.\n\n\n\nExisten distintos tipos de preguntas que modifican la forma en que los datos quedan expresados luego de la carga electrónica.\n\n\n\n\nEs conveniente utilizar preguntas validadas previamente que garanticen la captura de la información adecuadamente."
+    "text": "Instrumentos de recolección\n\nLos instrumentos de recolección de datos característicos dentro del ámbito cuantitativo son los cuestionarios estructurados.\n\n. . .\n\nExisten distintos tipos de preguntas que modifican la forma en que los datos quedan expresados luego de la carga electrónica.\n\n. . .\n\nEs conveniente utilizar preguntas validadas previamente que garanticen la captura de la información adecuadamente."
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#preguntas-abiertas-y-cerradas",
@@ -1193,8 +1193,8 @@
     "objectID": "primero/diapositivas/02-analisis.html#paquetes-estadísticos-softwares-de-análisis",
     "href": "primero/diapositivas/02-analisis.html#paquetes-estadísticos-softwares-de-análisis",
     "title": "Introducción al software de análisis",
-    "section": "Paquetes estadísticos / softwares de análisis",
-    "text": "Paquetes estadísticos / softwares de análisis\n\nExisten numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).\nEntre ellos podemos mencionar: SPSS, Stata, SAS, EpiDat, EpiInfo, lenguaje R, etc.\n\nEl lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación)."
+    "section": "",
+    "text": "Existen numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).\nEntre ellos podemos mencionar: SPSS, Stata, SAS, EpiDat, EpiInfo, lenguaje R, etc.\n\nEl lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación)."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#tipo-de-interfaz",
@@ -1215,7 +1215,7 @@
     "href": "primero/diapositivas/02-analisis.html#lenguaje-r",
     "title": "Introducción al software de análisis",
     "section": "Lenguaje R",
-    "text": "Lenguaje R\n\nEl sitio oficial del lenguaje dice que:\n“R es un entorno de software libre para gráficos y computación estadística.\nSe compila y se ejecuta en una amplia variedad de plataformas UNIX, Windows y MacOS.”\n\n\nProfundizando en su descripción podemos decir, más técnicamente, que:\n\nes un lenguaje de programación interpretado, orientado a objetos, multiplataforma y open source pensado para el manejo de datos estadísticos."
+    "text": "Lenguaje R\n\nEl sitio oficial del lenguaje dice que:\n“R es un entorno de software libre para gráficos y computación estadística.\nSe compila y se ejecuta en una amplia variedad de plataformas UNIX, Windows y MacOS.”\n. . .\n\nProfundizando en su descripción podemos decir, más técnicamente, que:\n\nes un lenguaje de programación interpretado, orientado a objetos, multiplataforma y open source pensado para el manejo de datos estadísticos."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#section",
@@ -1278,7 +1278,7 @@
     "href": "primero/diapositivas/02-analisis.html#fundamentos",
     "title": "Introducción al software de análisis",
     "section": "Fundamentos",
-    "text": "Fundamentos\n\n\nEstructura ordenada de datos (tidy)\n\nCada variable es una columna de la tabla de datos\nCada observación es una fila de la tabla de datos\nCada tabla responde a una unidad observacional\n\nPrincipios básicos\n\nReutilizar las estructuras de datos mediante el uso de tuberías\nResolver problemas complejos combinando varias piezas sencillas\nDiseño para humanos incorporando una gramática específica al lenguaje (que ya posee una sintaxis estricta y una semantica que le otorga significado)"
+    "text": "Fundamentos\n\n\n\n\n\n\nEstructura ordenada de datos (tidy)\n\nCada variable es una columna de la tabla de datos\nCada observación es una fila de la tabla de datos\nCada tabla responde a una unidad observacional\n\nPrincipios básicos\n\nReutilizar las estructuras de datos mediante el uso de tuberías\nResolver problemas complejos combinando varias piezas sencillas\nDiseño para humanos incorporando una gramática específica al lenguaje (que ya posee una sintaxis estricta y una semantica que le otorga significado)"
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#tuberías",
@@ -1292,14 +1292,14 @@
     "href": "primero/diapositivas/02-analisis.html#tuberías-1",
     "title": "Introducción al software de análisis",
     "section": "Tuberías",
-    "text": "Tuberías\n\nPara el uso general, la utilización de las dos tuberías es la misma, es decir que la forma simple de las tuberías inserta el lado izquierdo como primer argumento en la llamada del lado derecho.\nEsto posibilita la reutilización de las estructuras de datos y la escritura de porciones de código similares a “oraciones” de un párrafo.\nPulse aquí para ver algunas caracteristicas comparativas de estas tuberías."
+    "text": "Tuberías\n\n\n\n\n\nPara el uso general, la utilización de las dos tuberías es la misma, es decir que la forma simple de las tuberías inserta el lado izquierdo como primer argumento en la llamada del lado derecho.\nEsto posibilita la reutilización de las estructuras de datos y la escritura de porciones de código similares a “oraciones” de un párrafo.\nPulse aquí para ver algunas caracteristicas comparativas de estas tuberías."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#estructura-de-datos",
     "href": "primero/diapositivas/02-analisis.html#estructura-de-datos",
     "title": "Introducción al software de análisis",
     "section": "Estructura de datos",
-    "text": "Estructura de datos\n\n\nLas estructuras de datos son los objetos contenedores de datos que el lenguaje ofrece.\nExiste una variedad de estructuras de datos: vectores, matrices, arrays, dataframes, listas, etc.\nVamos a describir a las más relevantes dentro del ecosistema tidyverse y que serviran en estos inicios del curso: Los vectores y los dataframes."
+    "text": "Estructura de datos\n\n\n\n\n\n\nLas estructuras de datos son los objetos contenedores de datos que el lenguaje ofrece.\nExiste una variedad de estructuras de datos: vectores, matrices, arrays, dataframes, listas, etc.\nVamos a describir a las más relevantes dentro del ecosistema tidyverse y que serviran en estos inicios del curso: Los vectores y los dataframes."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#vectores",
@@ -1355,7 +1355,7 @@
     "href": "primero/diapositivas/02-analisis.html#por-lo-tanto",
     "title": "Introducción al software de análisis",
     "section": "Por lo tanto  …",
-    "text": "Por lo tanto  …\n\n…es un lenguaje de programación estadístico\nBásicamente es un lenguaje de programación, con sus estructuras y reglas de sintaxis, que posee una gran variedad de funciones desarrolladas para estadística y otras librerías con diversas aplicaciones.\n\n\n…es un lenguaje Orientado a Objetos\nImplementa los conceptos de la programación orientada a objetos y esto le otorga simpleza y flexibilidad en el manejo de datos.\n\n\n…es un lenguaje interpretado\nNo es necesario compilar el código para construir ejecutables sino que directamente se ejecuta por medio del intérprete que el software instala.\n\n\n…es multiplataforma\nSe puede instalar en diferentes sistemas operativos como Linux, Windows y Mac.\n\n\n…es Open Source y se distribuye bajo licencia GNU - GPL\nSe distribuye gratuitamente bajo licencia GNU (General Public License) – GPL y que los usuarios tienen la libertad de usar, estudiar, compartir (copiar) y modificar el software."
+    "text": "Por lo tanto  …\n. . .\n…es un lenguaje de programación estadístico\nBásicamente es un lenguaje de programación, con sus estructuras y reglas de sintaxis, que posee una gran variedad de funciones desarrolladas para estadística y otras librerías con diversas aplicaciones.\n. . .\n…es un lenguaje Orientado a Objetos\nImplementa los conceptos de la programación orientada a objetos y esto le otorga simpleza y flexibilidad en el manejo de datos.\n. . .\n…es un lenguaje interpretado\nNo es necesario compilar el código para construir ejecutables sino que directamente se ejecuta por medio del intérprete que el software instala.\n. . .\n…es multiplataforma\nSe puede instalar en diferentes sistemas operativos como Linux, Windows y Mac.\n. . .\n…es Open Source y se distribuye bajo licencia GNU - GPL\nSe distribuye gratuitamente bajo licencia GNU (General Public License) – GPL y que los usuarios tienen la libertad de usar, estudiar, compartir (copiar) y modificar el software."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html#section-6",
@@ -1481,21 +1481,21 @@
     "href": "primero/diapositivas/00-bienvenida.html",
     "title": "Bienvenidxs a Gestión de datos epidemiológicos con R",
     "section": "",
-    "text": "Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso los participantes puedan:\n. . .\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n. . .\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n. . .\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
+    "text": "Incorporar habilidades técnicas vinculadas con el procesamiento de datos, análisis y visualización destinados a la producción de informes técnicos epidemiológicos utilizando un software de código abierto.\n\nObjetivos:\nSe espera que al finalizar este curso lxs participantes puedan:\n. . .\n\nUtilizar R + RStudio para procesar y analizar datos epidemiológicos\n\n. . .\n\nAplicar en R y con filosofía tidyverse, metodología estadística en el análisis de datos de salud\n\n. . .\n\nProducir informes técnicos en diferentes formatos mediante Quarto"
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html",
     "href": "primero/diapositivas/01a-datos.html",
     "title": "Gestión de datos - parte 1",
     "section": "",
-    "text": "div {\n  &.callout {\n    font-size: 3.2rem !important;\n  }\n}\n\n\n \n\nLa gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, la planificación, el almacenamiento, la preservación y la difusión de los datos antes, durante y despues de la etapa de análisis."
+    "text": "La gestión de datos vinculada a procesos de investigación o vigilancia epidemiológica implica la organización, la planificación, el almacenamiento, la preservación y la difusión de los datos antes, durante y despues de la etapa de análisis."
   },
   {
     "objectID": "primero/diapositivas/02-analisis.html",
     "href": "primero/diapositivas/02-analisis.html",
     "title": "Introducción al software de análisis",
     "section": "",
-    "text": "Existen numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).\nEntre ellos podemos mencionar: SPSS, Stata, SAS, EpiDat, EpiInfo, lenguaje R, etc\nEl lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación)."
+    "text": "Existen numerosos paquetes y lenguajes estadísticos actualmente disposición. Algunos privativos con licencias de alto costo y otros gratuitos y open source (fuente abierta).\nEntre ellos podemos mencionar: SPSS, Stata, SAS, EpiDat, EpiInfo, lenguaje R, etc.\n\nEl lenguaje R es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación)."
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#ejemplo-para-analizar",
@@ -1516,7 +1516,7 @@
     "href": "primero/diapositivas/01b-datos.html#ética-identidad",
     "title": "Planificación de la gestión de datos",
     "section": "Ética: identidad",
-    "text": "Ética: identidad\nClasificación de archivos de datos según identificación personal:\n\n\nIdentificable: es común que los datos crudos sin procesar de un estudio de investigación sean identificables.\n\n\n\n\nCodificado: identificación personal eliminada o distorsionada. Reemplazo por códigos (es decir, un identificador único del participante).\n\n\n\n\nDesidentificado: identificación personal eliminada o distorsionada. No se puede volver a asociar con la persona. (compartir)\n\n\n\n\nAnónimo: nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico."
+    "text": "Ética: identidad\nClasificación de archivos de datos según identificación personal:\n. . .\n\nIdentificable: es común que los datos crudos sin procesar de un estudio de investigación sean identificables.\n\n. . .\n\nCodificado: identificación personal eliminada o distorsionada. Reemplazo por códigos (es decir, un identificador único del participante).\n\n. . .\n\nDesidentificado: identificación personal eliminada o distorsionada. No se puede volver a asociar con la persona. (compartir)\n\n. . .\n\nAnónimo: nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico."
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#ética-sensibilidad",
@@ -1551,7 +1551,7 @@
     "href": "primero/diapositivas/01b-datos.html#nombres-de-variables",
     "title": "Planificación de la gestión de datos",
     "section": "Nombres de variables",
-    "text": "Nombres de variables\n\nObligatorio\n\nNo usar palabras claves o funciones reservadas (if, for, repeat, etc.)\nEstablecer un límite de caracteres\nNo usar espacios ni caracteres especiales, excepto (_).\nNo comenzar el nombre de una variable con un número.\n\n\nSugerido\n\nEvitar acentos y eñes.\nQue todas las tablas tengan un identificador único de observación o registro.\nPrestar atención al uso de minúsculas y mayúsculas. (case sensitive)\nUtilizar prefijos y sufijos para identificación de grupo de variables."
+    "text": "Nombres de variables\n\nObligatorio\n\nNo usar palabras claves o funciones reservadas (if, for, repeat, etc.)\nEstablecer un límite de caracteres\nNo usar espacios ni caracteres especiales, excepto (_).\nNo comenzar el nombre de una variable con un número.\n\n. . .\nSugerido\n\nEvitar acentos y eñes.\nQue todas las tablas tengan un identificador único de observación o registro.\nPrestar atención al uso de minúsculas y mayúsculas. (case sensitive)\nUtilizar prefijos y sufijos para identificación de grupo de variables."
   },
   {
     "objectID": "primero/diapositivas/01b-datos.html#documentación-diccionario-de-datos",
@@ -1585,8 +1585,8 @@
     "objectID": "primero/diapositivas/01c-datos.html#formatos-de-archivos",
     "href": "primero/diapositivas/01c-datos.html#formatos-de-archivos",
     "title": "Archivos de datos",
-    "section": "Formatos de archivos",
-    "text": "Formatos de archivos\n\n\nExisten variados formatos de archivos de datos\nPueden ser estructuras de licencia abierta (texto plano) o privada.\nLas extensiones .csv y .txt son las más comúnes en versiones texto plano.\nOtras extensiones pertenecen a sofwares específicos: xlsx a Excel, .sav a SPSS, .sas7bcat a SAS o .dta a Stata, por ejemplo.\nHay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos."
+    "section": "",
+    "text": "Existen variados formatos de archivos de datos\nPueden ser estructuras de licencia abierta (texto plano) o privada.\nLas extensiones .csv y .txt son las más comúnes en versiones texto plano.\nOtras extensiones pertenecen a sofwares específicos: xlsx a Excel, .sav a SPSS, .sas7bcat a SAS o .dta a Stata, por ejemplo.\nHay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos."
   },
   {
     "objectID": "primero/diapositivas/01c-datos.html#almacenamiento",
@@ -1621,7 +1621,7 @@
     "href": "primero/diapositivas/01c-datos.html#almacenamiento-y-seguridad",
     "title": "Archivos de datos",
     "section": "Almacenamiento y seguridad",
-    "text": "Almacenamiento y seguridad\nCaracterísticas a considerar respecto al almacenamiento:\n\n\nSeguridad: garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente. Copias de seguridad periódicas. Uso de la nube\n\n\n\n\nConfidencialidad: que personas no autorizadas no vean ni accedan a información confidencial. Además de archivos electrónicos hablamos de todo documento sensible (formularios, cuestionarios, planillas, etc).\n\n\n\n\nAccesibilidad y usabilidad de los archivos: asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen."
+    "text": "Almacenamiento y seguridad\nCaracterísticas a considerar respecto al almacenamiento:\n. . .\n\nSeguridad: garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente. Copias de seguridad periódicas. Uso de la nube\n\n. . .\n\nConfidencialidad: que personas no autorizadas no vean ni accedan a información confidencial. Además de archivos electrónicos hablamos de todo documento sensible (formularios, cuestionarios, planillas, etc).\n\n. . .\n\nAccesibilidad y usabilidad de los archivos: asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen."
   },
   {
     "objectID": "primero/diapositivas/01c-datos.html#colaboración",
@@ -2012,29 +2012,29 @@
     "objectID": "primero/diapositivas/05a-diagnostico.html#etapas-previas-al-análisis",
     "href": "primero/diapositivas/05a-diagnostico.html#etapas-previas-al-análisis",
     "title": "Diagnóstico y depuración de datos",
-    "section": "Etapas previas al análisis",
-    "text": "Etapas previas al análisis\n\nLa etapa de depuración o limpieza de datos comienza con la exploración inicial y el diagnóstico adecuado de cada variable de interés de la tabla de datos cruda. Interviene aquí también, el objetivo del análisis, el protocolo de análisis pensado y el diccionario de datos asociado a la tabla.\n\n     \nFinalmente se hacen las transformaciones necesarias en los datos a partir del diagnóstico realizado."
+    "section": "",
+    "text": "La etapa de depuración o limpieza de datos comienza con la exploración inicial y el diagnóstico adecuado de cada variable de interés de la tabla de datos cruda. Interviene aquí también, el objetivo del análisis, el protocolo de análisis pensado y el diccionario de datos asociado a la tabla.\n\n     \nFinalmente se hacen las transformaciones necesarias en los datos a partir del diagnóstico realizado."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#limpieza-de-datos",
     "href": "primero/diapositivas/05a-diagnostico.html#limpieza-de-datos",
     "title": "Diagnóstico y depuración de datos",
     "section": "Limpieza de datos",
-    "text": "Limpieza de datos\n\n \n\n\nExploración de la estructura de la tabla de datos\n\n\n\n\nVerificación del tipo de dato de cada variable de interés\n\n\n\n\nDetección de valores faltantes\n\n\n\n\nDetección de errores\n\nIdentificación de las categorías de las variables cualitativas\nAnálisis de los mínimos y máximos de valores de cada variable cuantitativa"
+    "text": "Limpieza de datos\n\n \n. . .\n\nExploración de la estructura de la tabla de datos\n\n. . .\n\nVerificación del tipo de dato de cada variable de interés\n\n. . .\n\nDetección de valores faltantes\n\n. . .\n\nDetección de errores\n\nIdentificación de las categorías de las variables cualitativas\nAnálisis de los mínimos y máximos de valores de cada variable cuantitativa\n\n\n. . ."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos",
     "href": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos",
     "title": "Diagnóstico y depuración de datos",
     "section": "Exploración y diagnóstico de datos",
-    "text": "Exploración y diagnóstico de datos\n\nLa exploración de datos se puede incluir dentro del análisis exploratorio de datos (EDA en inglés) y persigue un primer grupo de objetivos:\n\n\nConocer la estructura de la tabla de datos y sus tipos de variables\n\n\n\n\nDetectar observaciones incompletas (valores faltantes)\n\n\n\n\nDetectar datos con errores e inconsistencias\n\n\n\nHabitualmente hablamos de calidad de los datos en relación a los items anteriores."
+    "text": "Exploración y diagnóstico de datos\n\nLa exploración de datos se puede incluir dentro del análisis exploratorio de datos (EDA en inglés) y persigue un primer grupo de objetivos:\n. . .\n\nConocer la estructura de la tabla de datos y sus tipos de variables\n\n. . .\n\nDetectar observaciones incompletas (valores faltantes)\n\n. . .\n\nDetectar datos con errores e inconsistencias\n\n. . .\nHabitualmente hablamos de calidad de los datos en relación a los items anteriores."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#paquetes-especificos",
     "href": "primero/diapositivas/05a-diagnostico.html#paquetes-especificos",
     "title": "Diagnóstico y depuración de datos",
     "section": "Paquetes especificos",
-    "text": "Paquetes especificos\nVamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo, aunque dentro del universo de librerías de R vamos a encontrar muchos mas.\n\n\n\nskimr\n\n\nEstá diseñado para obtener un resumen rápido de la estructura de tablas de datos y es compatible con el ecosistema tidyverse.\n\n\n\n\n\n\ndlookr\n\n\nSe define como una colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos. El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos."
+    "text": "Paquetes especificos\nVamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo, aunque dentro del universo de librerías de R vamos a encontrar muchos mas.\n\n\n\n\n\n\nNoteskimr\n\n\n\nEstá diseñado para obtener un resumen rápido de la estructura de tablas de datos y es compatible con el ecosistema tidyverse.\n\n\n\n\n\n\n\n\nNotedlookr\n\n\n\nSe define como una colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos. El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#duplicados",
@@ -2243,8 +2243,8 @@
     "objectID": "primero/diapositivas/05c-tipos.html#tipos-de-datos",
     "href": "primero/diapositivas/05c-tipos.html#tipos-de-datos",
     "title": "Tipos de datos específicos",
-    "section": "Tipos de datos",
-    "text": "Tipos de datos\n\nLos tipos de datos en lenguaje R se reconocen por:\n\nint (integer): números enteros\n\n\nnum o dbl (numeric): números reales\n\n\nchr (character): caracteres (texto)\n\n\nlogi o lgl (logical): valores lógicos\n\n\nDate: fechas\n\n\ndttm (date-time): fechas y horas\n\n\nfct (factor): factores"
+    "section": "",
+    "text": "Los tipos de datos en lenguaje R se reconocen por:\n\nint (integer): números enteros\n\n\nnum o dbl (numeric): números reales\n\n\nchr (character): caracteres (texto)\n\n\nlogi o lgl (logical): valores lógicos\n\n\nDate: fechas\n\n\ndttm (date-time): fechas y horas\n\n\nfct (factor): factores"
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#coerciones",
@@ -2265,14 +2265,14 @@
     "href": "primero/diapositivas/05c-tipos.html#sistemas-de-fechas",
     "title": "Tipos de datos específicos",
     "section": "Sistemas de fechas",
-    "text": "Sistemas de fechas\nLas variables de tiempo nos obliga a gestionar tipos de datos fecha y hora, así como también intervalos entre esos instantes.\nCoexisten 2 clases de objetos básicos en el lenguaje R\n\nPOSIX (acrónimo de Portable Operating System Interface, y X viene de UNIX como seña de identidad de la API) es una norma escrita por la IEEE, que define una interfaz estándar del sistema operativo y el entorno. Los objetos fecha-hora se denominan formalmente tipos POSIXt, POSIXct, o POSIXlt (la diferencia no es relevante)"
+    "text": "Sistemas de fechas\nLas variables de tiempo nos obliga a gestionar tipos de datos fecha y hora, así como también intervalos entre esos instantes.\nCoexisten 2 clases de objetos básicos en el lenguaje R\n\n\n\n\n\nPOSIX (acrónimo de Portable Operating System Interface, y X viene de UNIX como seña de identidad de la API) es una norma escrita por la IEEE, que define una interfaz estándar del sistema operativo y el entorno. Los objetos fecha-hora se denominan formalmente tipos POSIXt, POSIXct, o POSIXlt (la diferencia no es relevante)"
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#gestión-de-datos-de-tiempo",
     "href": "primero/diapositivas/05c-tipos.html#gestión-de-datos-de-tiempo",
     "title": "Tipos de datos específicos",
     "section": "Gestión de datos de tiempo",
-    "text": "Gestión de datos de tiempo\n\n\n\n\nConvertir a formato Date o POSIX\n\n\n\n\n\nExtraer componentes (día, año, mes, semana, nombre del día, etc)\n\n\n\n\n\nTrabajar con lapsos de tiempo (intervalos, duraciones y períodos)\n\n\n\n\n\nOperaciones y cálculos con variables de tiempo"
+    "text": "Gestión de datos de tiempo\n\n\n. . .\n\nConvertir a formato Date o POSIX\n\n. . .\n\n\nExtraer componentes (día, año, mes, semana, nombre del día, etc)\n\n. . .\n\n\nTrabajar con lapsos de tiempo (intervalos, duraciones y períodos)\n\n. . .\n\n\nOperaciones y cálculos con variables de tiempo"
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#definiciones",
@@ -2321,14 +2321,14 @@
     "href": "primero/diapositivas/05c-tipos.html#algunas-de-sus-funciones-comunes",
     "title": "Tipos de datos específicos",
     "section": "Algunas de sus funciones comunes",
-    "text": "Algunas de sus funciones comunes\n\n\n\nstr_lengtht(): devuelve longitud de cadena\n\n\n\n\nstr_sub(): extrae o reemplaza caracteres por posición\n\n\n\n\nstr_to_upper(): convierte a mayúsculas\n\n\n\n\nstr_to_lower(): convierte a minúsculas\n\n\n\n\nstr_trim(): elimina espacios en blanco\n\n\n\n\nstr_pad(): agrega espacios en blanco u otros caracteres\n\n\n\n\nstr_glue(): une cadenas de caracteres"
+    "text": "Algunas de sus funciones comunes\n\n. . .\n\nstr_lengtht(): devuelve longitud de cadena\n\n. . .\n\nstr_sub(): extrae o reemplaza caracteres por posición\n\n. . .\n\nstr_to_upper(): convierte a mayúsculas\n\n. . .\n\nstr_to_lower(): convierte a minúsculas\n\n. . .\n\nstr_trim(): elimina espacios en blanco\n\n. . .\n\nstr_pad(): agrega espacios en blanco u otros caracteres\n\n. . .\n\nstr_glue(): une cadenas de caracteres"
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#expresiones-regulares",
     "href": "primero/diapositivas/05c-tipos.html#expresiones-regulares",
     "title": "Tipos de datos específicos",
     "section": "Expresiones regulares",
-    "text": "Expresiones regulares\n\nUna expresión regular es una cadena de texto especial para describir un patrón de búsqueda que se puede utilizar generalmente para:\n\n\nlocalizar cadenas de caracteres (ubicar - filtrar)\n\n\n\n\nextraer una porción de los datos (extraer)\n\n\n\n\nmodificar los datos localizados (reemplazar)\n\n\n\nUna expresión regular habitualmente se construye concatenando la especificación de caracteres secuenciados."
+    "text": "Expresiones regulares\n\nUna expresión regular es una cadena de texto especial para describir un patrón de búsqueda que se puede utilizar generalmente para:\n\n\nlocalizar cadenas de caracteres (ubicar - filtrar)\n\n\n\n\nextraer una porción de los datos (extraer)\n\n\n\n\nmodificar los datos localizados (reemplazar)\n\n\n. . .\nUna expresión regular habitualmente se construye concatenando la especificación de caracteres secuenciados."
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#operaciones-y-funciones-que-permiten-expresiones-regulares",
@@ -2377,14 +2377,14 @@
     "href": "primero/diapositivas/05c-tipos.html#funciones-mas-relevantes",
     "title": "Tipos de datos específicos",
     "section": "Funciones mas relevantes",
-    "text": "Funciones mas relevantes\n\n\n\nfct_recode(): recodifica niveles\n\n\n\n\nfct_relevel(): reordena niveles\n\n\n\n\nfct_expand(): agrega nuevos niveles\n\n\n\n\nfct_drop(): elimina niveles no utilizados\n\n\n\n\nfct_rev(): revierte orden de los niveles\n\n\n\n\nfct_unique(): muestra valores únicos del factor"
+    "text": "Funciones mas relevantes\n\n. . .\n\nfct_recode(): recodifica niveles\n\n. . .\n\nfct_relevel(): reordena niveles\n\n. . .\n\nfct_expand(): agrega nuevos niveles\n\n. . .\n\nfct_drop(): elimina niveles no utilizados\n\n. . .\n\nfct_rev(): revierte orden de los niveles\n\n. . .\n\nfct_unique(): muestra valores únicos del factor"
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#funciones-mas-relevantes-1",
     "href": "primero/diapositivas/05c-tipos.html#funciones-mas-relevantes-1",
     "title": "Tipos de datos específicos",
     "section": "Funciones mas relevantes",
-    "text": "Funciones mas relevantes\n\n\nfct_infreq(): ordena niveles por frecuencia\n\n\n\nfct_explicit_na(): explicita valores NA (agrega etiqueta al nivel)\n\n\n\n\nfct_other(): unifica niveles concretos en “otros”\n\n\n\n\nfct_lump(): unifica niveles menos frecuentes absolutos en “otros”\n\n\n\n\nfct_lump_prop(): unifica niveles menos frecuentes porcentuales en “otros”"
+    "text": "Funciones mas relevantes\n\n\nfct_infreq(): ordena niveles por frecuencia\n\n. . .\n\nfct_explicit_na(): explicita valores NA (agrega etiqueta al nivel)\n\n. . .\n\nfct_other(): unifica niveles concretos en “otros”\n\n. . .\n\nfct_lump(): unifica niveles menos frecuentes absolutos en “otros”\n\n. . .\n\nfct_lump_prop(): unifica niveles menos frecuentes porcentuales en “otros”"
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#manejo-de-nas-con-naniar",
@@ -2412,14 +2412,14 @@
     "href": "primero/diapositivas/05c-tipos.html#documentación",
     "title": "Tipos de datos específicos",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\nCapítulos 14, 15, 16 y 17 del libro “R for Data Science (2e) - Data tidy”"
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulos 14, 15, 16 y 17 del libro “R for Data Science (2e) - Data tidy”"
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#paquete-rstatix",
     "href": "primero/diapositivas/06-analisis.html#paquete-rstatix",
     "title": "Operaciones múltiples, estadísticos y bucles",
     "section": "Paquete rstatix",
-    "text": "Paquete rstatix\n\nEl paquete rstatix simplifica el proceso de realizar análisis estadísticos complejos.\n\n\nsintaxis intuitiva y basada en el paradigma de la “gramática de datos” de tidyverse\n\n\n\n\npermite realizar pruebas estadísticas comunes, como t-tests, ANOVA, y correlaciones, de manera rápida y eficiente\n\n\n\n\ndiseño que facilita la integración de resultados en flujos de trabajo de análisis reproducibles, asegurando que las conclusiones derivadas de los datos sean robustas y transparentes."
+    "text": "Paquete rstatix\n\nEl paquete rstatix simplifica el proceso de realizar análisis estadísticos complejos.\n. . .\n\nsintaxis intuitiva y basada en el paradigma de la “gramática de datos” de tidyverse\n\n. . .\n\npermite realizar pruebas estadísticas comunes, como t-tests, ANOVA, y correlaciones, de manera rápida y eficiente\n\n. . .\n\ndiseño que facilita la integración de resultados en flujos de trabajo de análisis reproducibles, asegurando que las conclusiones derivadas de los datos sean robustas y transparentes."
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#paquete-rstatix-1",
@@ -2447,7 +2447,7 @@
     "href": "primero/diapositivas/06-analisis.html#paquete-janitor",
     "title": "Operaciones múltiples, estadísticos y bucles",
     "section": "Paquete janitor",
-    "text": "Paquete janitor\n\nEl paquete janitor tiene numerosas funciones de las cuales vamos a destacar la familia tabyl.\n\n\nLa función tabyl() permite crear tablas de frecuencia de una variable o tablas de contingencia para dos o más variables categóricas.\n\n\n\nEl paquete además tiene otras funciones que se enlazan con tabyl para personalizar los resultados en estas tablas (por ejemplo, agregar totales o representar frecuencias realtivas como porcentajes)"
+    "text": "Paquete janitor\n\nEl paquete janitor tiene numerosas funciones de las cuales vamos a destacar la familia tabyl.\n. . .\n\nLa función tabyl() permite crear tablas de frecuencia de una variable o tablas de contingencia para dos o más variables categóricas.\n. . .\n\nEl paquete además tiene otras funciones que se enlazan con tabyl para personalizar los resultados en estas tablas (por ejemplo, agregar totales o representar frecuencias realtivas como porcentajes)"
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#paquete-janitor-1",
@@ -2461,7 +2461,7 @@
     "href": "primero/diapositivas/06-analisis.html#gtsummary",
     "title": "Operaciones múltiples, estadísticos y bucles",
     "section": "gtsummary",
-    "text": "gtsummary\n\nEste paquete permite crear tablas de resumen elegantes y personalizables que destacan las estadísticas descriptivas, resultados de modelos, y comparaciones de grupos.\n\nEstas tablas son esenciales para reportes, publicaciones y presentaciones, asegurando que la información clave sea fácilmente comprensible.\n\n\nLas salidas buscan producir estéticas compatibles con las tablas que se envían a publicar en la mayoría de las revistas científicas, así como también en otras publicaciones similares."
+    "text": "gtsummary\n\nEste paquete permite crear tablas de resumen elegantes y personalizables que destacan las estadísticas descriptivas, resultados de modelos, y comparaciones de grupos.\n. . .\nEstas tablas son esenciales para reportes, publicaciones y presentaciones, asegurando que la información clave sea fácilmente comprensible.\n. . .\nLas salidas buscan producir estéticas compatibles con las tablas que se envían a publicar en la mayoría de las revistas científicas, así como también en otras publicaciones similares."
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#gtsummary-1",
@@ -2475,7 +2475,7 @@
     "href": "primero/diapositivas/06-analisis.html#flextable",
     "title": "Operaciones múltiples, estadísticos y bucles",
     "section": "flextable",
-    "text": "flextable\n\nEste paquete es similar a otras librerías como gt, huxtable, kableExtra, etc, que transforman las tablas y dataframes de R en salidas elegantes.\n\n\nLa documentación oficial dice “crear tablas flexibles y altamente personalizables en formatos de Microsoft Word, PowerPoint y HTML”.\n\n\n La elección de este paquete sobre las otras opciones tiene que ver con la amplitud de opciones en la compatibilidad de los formatos de salida.\n\n\nLas funciones del paquete se integran facilmente con Quarto"
+    "text": "flextable\n\nEste paquete es similar a otras librerías como gt, huxtable, kableExtra, etc, que transforman las tablas y dataframes de R en salidas elegantes.\n. . .\n\nLa documentación oficial dice “crear tablas flexibles y altamente personalizables en formatos de Microsoft Word, PowerPoint y HTML”.\n. . .\n La elección de este paquete sobre las otras opciones tiene que ver con la amplitud de opciones en la compatibilidad de los formatos de salida.\n. . .\nLas funciones del paquete se integran facilmente con Quarto"
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#flextable-1",
@@ -2530,8 +2530,8 @@
     "objectID": "primero/diapositivas/06-analisis.html#operaciones-simultáneas-por-columnas",
     "href": "primero/diapositivas/06-analisis.html#operaciones-simultáneas-por-columnas",
     "title": "Operaciones múltiples, estadísticos y bucles",
-    "section": "Operaciones simultáneas por columnas",
-    "text": "Operaciones simultáneas por columnas\n\nLa filosofía de trabajo de tidyverse se plantea nunca copiar y pegar más de dos veces el código escrito, pero cuando necesitamos realizar la misma operación en un conjunto de variables simultáneamente nos encontramos con este problema.\n\n\nLa solución, ofrecida dentro de dplyr, es un andamiaje que permite aplicar funciones y expresiones a varias columnas simultáneamente.\n\n\nEs una forma de iteración, donde se repite la misma acción en diferentes objetos. En este caso los objetos serán columnas (variables) de la tabla de datos.\n\n\nLas operaciones simultáneas pueden darse como transformación (dentro de un mutate()) o de resumen (dentro de un summarise())"
+    "section": "",
+    "text": ". . .\nLa filosofía de trabajo de tidyverse se plantea nunca copiar y pegar más de dos veces el código escrito, pero cuando necesitamos realizar la misma operación en un conjunto de variables simultáneamente nos encontramos con este problema.\n. . .\nLa solución, ofrecida dentro de dplyr, es un andamiaje que permite aplicar funciones y expresiones a varias columnas simultáneamente.\n. . .\nEs una forma de iteración, donde se repite la misma acción en diferentes objetos. En este caso los objetos serán columnas (variables) de la tabla de datos.\n. . .\nLas operaciones simultáneas pueden darse como transformación (dentro de un mutate()) o de resumen (dentro de un summarise())"
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#operaciones-simultáneas-por-columnas-1",
@@ -2594,7 +2594,7 @@
     "href": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones",
     "title": "Operaciones múltiples, estadísticos y bucles",
     "section": "Agregar argumentos a las funciones",
-    "text": "Agregar argumentos a las funciones\n\nHasta ahora vimos el ejemplo de aplicar una función simple como mean() a un grupo de variables.\n\n\nQue sucede si entre los datos de esas variables hay valores NA?\nVamos a necesitar incorporar el argumento na.rm = TRUE a la función.\n\n\n\nDonde lo hacemos dentro de un across()?"
+    "text": "Agregar argumentos a las funciones\n\nHasta ahora vimos el ejemplo de aplicar una función simple como mean() a un grupo de variables.\n. . .\n\nQue sucede si entre los datos de esas variables hay valores NA?\nVamos a necesitar incorporar el argumento na.rm = TRUE a la función.\n. . .\n\nDonde lo hacemos dentro de un across()?"
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#agregar-argumentos-a-las-funciones-1",
@@ -2685,7 +2685,7 @@
     "href": "primero/diapositivas/06-analisis.html#estructuras-de-control-de-flujo",
     "title": "Operaciones múltiples, estadísticos y bucles",
     "section": "Estructuras de control de flujo",
-    "text": "Estructuras de control de flujo\n\nBucles tradicionales\n\nfor(): secuencia de elementos\nwhile(): mientras una condición es verdadera\nrepeat(): repetición y control manual con break (uso peligroso)\n\n\nMapeo con paquete purrr\n\nFamilia funciones map()"
+    "text": "Estructuras de control de flujo\n\n\nBucles tradicionales\n\nfor(): secuencia de elementos\nwhile(): mientras una condición es verdadera\nrepeat(): repetición y control manual con break (uso peligroso)\n\n\n\n\nMapeo con paquete purrr\n\nFamilia funciones map()"
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#función-for",
@@ -2733,8 +2733,8 @@
     "objectID": "primero/diapositivas/07-visualizacion.html#visualización",
     "href": "primero/diapositivas/07-visualizacion.html#visualización",
     "title": "Visualización de datos",
-    "section": "Visualización",
-    "text": "Visualización\n\n“Un simple gráfico ha brindado más información a la mente del analista de datos que cualquier otro dispositivo”. — John Tukey"
+    "section": "",
+    "text": "“Un simple gráfico ha brindado más información a la mente del analista de datos que cualquier otro dispositivo”. — John Tukey"
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#objetivos-de-la-visualización",
@@ -2755,7 +2755,7 @@
     "href": "primero/diapositivas/07-visualizacion.html#gramática-de-gráficos",
     "title": "Visualización de datos",
     "section": "Gramática de gráficos",
-    "text": "Gramática de gráficos\n\n\nDe manera similar a la gramática lingüística, “La gramática de gráficos” define un conjunto de reglas para construir gráficos estadísticos combinando diferentes tipos de capas.\nEsta gramática fue creada por Leland Wilkinson (2005, The Grammar of Graphics (Statistics and Computing). Secaucus, NJ, USA: Springer-Verlag New York, Inc.)"
+    "text": "Gramática de gráficos\n\n\nDe manera similar a la gramática lingüística, “La gramática de gráficos” define un conjunto de reglas para construir gráficos estadísticos combinando diferentes tipos de capas.\nEsta gramática fue creada por Leland Wilkinson (2005, The Grammar of Graphics (Statistics and Computing). Secaucus, NJ, USA: Springer-Verlag New York, Inc.)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2 es un paquete que se autodefine como librería para “crear elegantes visualizaciones de datos usando una gramática de gráficos”\nEl paquete propone un sistema que se basa en la idea que cualquier gráfico se puede construir usando tres componentes básicos:"
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#section",
@@ -2776,7 +2776,7 @@
     "href": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2",
     "title": "Visualización de datos",
     "section": "Esquema gráfico ggplot2",
-    "text": "Esquema gráfico ggplot2\n\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico\nCoordenadas que organizan los objetos geométricos\nEscalas (scale) definen el rango de valores de las estéticas\nFacetas que agrupan en subgráficos"
+    "text": "Esquema gráfico ggplot2\n\n\n\nDatos con estructura “ordenada”\nMapeo estético (aesthetic) de los datos\nObjetos geométricos que dan nombre al tipo de gráfico\nCoordenadas que organizan los objetos geométricos\nEscalas (scale) definen el rango de valores de las estéticas\nFacetas que agrupan en subgráficos"
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#esquema-gráfico-ggplot2-1",
@@ -2839,7 +2839,7 @@
     "href": "primero/diapositivas/07-visualizacion.html#construcción-de-gráfico-paso-a-paso",
     "title": "Visualización de datos",
     "section": "Construcción de gráfico paso a paso",
-    "text": "Construcción de gráfico paso a paso\nLa idea en esta presentación es mostrar paso a paso la construcción de un gráfico.\n\nPartiremos del objetivo deseado, en este caso un tipo de gráfico que ya existe, pero podría ser algún otro ejemplo o un bosquejo de lo imaginado garabateado en un papel.\nEl segundo paso es determinar cuales son las variables necesarias para construir ese gráfico y donde se mapean.\nEl tercer paso es trabajar con los datos y transformarlos para que estén preparados para graficar.\nEl cuarto es el gráfico en si mismo con todas las personalizaciones de sus partes."
+    "text": "Construcción de gráfico paso a paso\nLa idea en esta presentación es mostrar paso a paso la construcción de un gráfico.\n\n\nPartiremos del objetivo deseado, en este caso un tipo de gráfico que ya existe, pero podría ser algún otro ejemplo o un bosquejo de lo imaginado garabateado en un papel.\nEl segundo paso es determinar cuales son las variables necesarias para construir ese gráfico y donde se mapean.\nEl tercer paso es trabajar con los datos y transformarlos para que estén preparados para graficar.\nEl cuarto es el gráfico en si mismo con todas las personalizaciones de sus partes."
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#gráfico-objetivo",
@@ -3028,7 +3028,7 @@
     "href": "primero/diapositivas/07-visualizacion.html#pantalla",
     "title": "Visualización de datos",
     "section": "Pantalla",
-    "text": "Pantalla\nRepasemos algunos conceptos de la imagen en pantalla:\n\nLa pantalla es una matriz de pixeles. Todas las imagenes que vemos en ella estan compuesta por ellos.\n\n\n\nLa que estoy utilizando ahora, para hacer esta presentación, tiene una dimensión de 24 pulgadas con un ratio de aspecto 16/10 (20 x 12,5 pulgadas)\n\n\n\n\nLa resolución es de 1920 x 1200, es decir tiene 1920 píxeles de ancho y 1200 píxeles de alto.\n\n\n\n\nEl número de píxeles por pulgada es de 96 (ppi)."
+    "text": "Pantalla\nRepasemos algunos conceptos de la imagen en pantalla:\n\nLa pantalla es una matriz de pixeles. Todas las imagenes que vemos en ella estan compuesta por ellos.\n\n. . .\n\nLa que estoy utilizando ahora, para hacer esta presentación, tiene una dimensión de 24 pulgadas con un ratio de aspecto 16/10 (20 x 12,5 pulgadas)\n\n. . .\n\nLa resolución es de 1920 x 1200, es decir tiene 1920 píxeles de ancho y 1200 píxeles de alto.\n\n. . .\n\nEl número de píxeles por pulgada es de 96 (ppi)."
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#pantalla-1",
@@ -3070,14 +3070,14 @@
     "href": "primero/diapositivas/07-visualizacion.html#experimento-práctico-2",
     "title": "Visualización de datos",
     "section": "Experimento práctico",
-    "text": "Experimento práctico\n\n\n\nLa relación entre el tamaño de la pantalla y el tamaño físico depende del dpi (puntos por pulgada) del dispositivo gráfico, que es 96 por defecto para la pantalla.\n\n\n\n\nLuego, si guardamos el gráfico con un dpi mayor o menor, el archivo se guarda como una matriz de puntos usando el nuevo dpi y el tamaño en pulgadas.\n\n\n\n\nEntonces, cuando se abre en la computadora, la dimensión del tamaño en píxeles es diferente.\n\n\n\n\nSi visualizamos un gráfico con muchos más pixeles que otro en el mismo espacio (nuestra pantalla) los elementos que lo componen se van a ver siempre más pequeños."
+    "text": "Experimento práctico\n\n. . .\n\nLa relación entre el tamaño de la pantalla y el tamaño físico depende del dpi (puntos por pulgada) del dispositivo gráfico, que es 96 por defecto para la pantalla.\n\n. . .\n\nLuego, si guardamos el gráfico con un dpi mayor o menor, el archivo se guarda como una matriz de puntos usando el nuevo dpi y el tamaño en pulgadas.\n\n. . .\n\nEntonces, cuando se abre en la computadora, la dimensión del tamaño en píxeles es diferente.\n\n. . .\n\nSi visualizamos un gráfico con muchos más pixeles que otro en el mismo espacio (nuestra pantalla) los elementos que lo componen se van a ver siempre más pequeños."
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#por-qué-es-importante-esta-diferencia",
     "href": "primero/diapositivas/07-visualizacion.html#por-qué-es-importante-esta-diferencia",
     "title": "Visualización de datos",
     "section": "¿Por qué es importante esta diferencia?",
-    "text": "¿Por qué es importante esta diferencia?\n  \n\n\n\n\nImporta porque algunos elementos del gráfico se ajustan al espacio disponible, y algunos son fijos y medidos en su dimensión real (cm, mm o pulgadas) como las fuentes de los textos, creando una distorsión al cambiar la dimensión del gráfico o su resolución."
+    "text": "¿Por qué es importante esta diferencia?\n  \n\n\n\n\n\n\nImporta porque algunos elementos del gráfico se ajustan al espacio disponible, y algunos son fijos y medidos en su dimensión real (cm, mm o pulgadas) como las fuentes de los textos, creando una distorsión al cambiar la dimensión del gráfico o su resolución."
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#tamaño-predeterminado-en-quarto",
@@ -3126,7 +3126,7 @@
     "href": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes",
     "title": "Visualización de datos",
     "section": "Diferencia en tamaño de fuentes",
-    "text": "Diferencia en tamaño de fuentes\n\nAdemás tenemos otro problema. De forma predeterminada, el tamaño de las fuentes de la configuración de theme() está definido en pts. (15 significa 15 puntos - pts-).\nEn cambio, en la capa geom_text(), el tamaño se define en mm, por lo que 15 es 15 mm.\n\n¿Cuál es la relación entre pts y mm o in?\n1 punto = 1/72 pulgadas\n1 punto = 0,35 mm"
+    "text": "Diferencia en tamaño de fuentes\n\nAdemás tenemos otro problema. De forma predeterminada, el tamaño de las fuentes de la configuración de theme() está definido en pts. (15 significa 15 puntos - pts-).\nEn cambio, en la capa geom_text(), el tamaño se define en mm, por lo que 15 es 15 mm.\n\n\n¿Cuál es la relación entre pts y mm o in?\n1 punto = 1/72 pulgadas\n1 punto = 0,35 mm"
   },
   {
     "objectID": "primero/diapositivas/07-visualizacion.html#diferencia-en-tamaño-de-fuentes-1",
@@ -3231,7 +3231,7 @@
     "href": "primero/diapositivas/08-quarto.html#qué-es-quarto",
     "title": "Residencia-INE",
     "section": "Qué es Quarto®?",
-    "text": "Qué es Quarto®?\n\n\nQuarto® es un nuevo sistema de publicación científica y técnica de código abierto construido sobre Pandoc 1\n\n\n\nMezcla texto narrativo y código para producir resultados con un formato elegante en documentos, tableros interactivos, páginas web, publicaciones de blogs, libros y más.\n\n\n\n\nEs independiente del lenguaje R (incluso trabaja con otros lenguajes como Python y Julia).\n\n\nconversor de documentos libre y de código abierto, mayormente usado como una herramienta de escritura (especialmente por académicos) ver en Wikipedia"
+    "text": "Qué es Quarto®?\n\n\nQuarto® es un nuevo sistema de publicación científica y técnica de código abierto construido sobre Pandoc 1\n\n. . .\n\nMezcla texto narrativo y código para producir resultados con un formato elegante en documentos, tableros interactivos, páginas web, publicaciones de blogs, libros y más.\n\n. . .\n\nEs independiente del lenguaje R (incluso trabaja con otros lenguajes como Python y Julia)."
   },
   {
     "objectID": "primero/diapositivas/08-quarto.html#comunicar-como-parte-de-programar",
@@ -3273,7 +3273,7 @@
     "href": "primero/diapositivas/08-quarto.html#ejemplo-interactivo-con-observable-js",
     "title": "Residencia-INE",
     "section": "Ejemplo interactivo con Observable JS",
-    "text": "Ejemplo interactivo con Observable JS\n\nConversor de temperatura de ℃ a ℉\n\n\nviewof temp = Inputs.range([0, 99], {step: 1, value: 0, label: htl.html`Temp. &#x2103;`})\n\n\n\n\n\n\nCelsius = ℃ y Fahrenheit = ℉.\n\n\n```{ojs}\nviewof temp = Inputs.range([0, 99], {step: 1, value: 0, label: htl.html`Temp. &#x2103;`})\n```\nCelsius = \\${d3.format(\".0f\")(temp)}℃ y Fahrenheit = \\${d3.format(\".1f\")(temp \\* 9/5 + 32)}℉."
+    "text": "Ejemplo interactivo con Observable JS\n\nConversor de temperatura de ℃ a ℉\n\n\nviewof temp = Inputs.range([0, 99], {step: 1, value: 0, label: htl.html`Temp. &#x2103;`})\n\n\n\n\n\n\nCelsius = ℃ y Fahrenheit = ℉.\n. . .\n\n```{ojs}\nviewof temp = Inputs.range([0, 99], {step: 1, value: 0, label: htl.html`Temp. &#x2103;`})\n```\nCelsius = \\${d3.format(\".0f\")(temp)}℃ y Fahrenheit = \\${d3.format(\".1f\")(temp \\* 9/5 + 32)}℉."
   },
   {
     "objectID": "primero/diapositivas/08-quarto.html#entonces-qué-es-quarto",
@@ -3301,7 +3301,7 @@
     "href": "primero/diapositivas/08-quarto.html#por-qué-usar-quarto-en-lugar-de-rmarkdown",
     "title": "Residencia-INE",
     "section": "Por qué usar Quarto en lugar de RMarkdown?",
-    "text": "Por qué usar Quarto en lugar de RMarkdown?\n\n\nQuarto no es muy diferente a RMarkdown, más bien es un RMarkdown de nueva generación (next-generation)\n\n\n\n\nPosee mejor accesibilidad y funciones más completas listas para usar\n\n\n\n\nRMarkdown aún tiene soporte pero todas las novedades y mejoras se están desarrollando solo para Quarto\n\n\n\n\nSi en el futuro incorporas algún otro lenguaje de programación/análisis podes seguir utilizandolo\n\n\n\n\nPodes elegir otros editores y Quarto seguirá funcionando"
+    "text": "Por qué usar Quarto en lugar de RMarkdown?\n. . .\n\nQuarto no es muy diferente a RMarkdown, más bien es un RMarkdown de nueva generación (next-generation)\n\n. . .\n\nPosee mejor accesibilidad y funciones más completas listas para usar\n\n. . .\n\nRMarkdown aún tiene soporte pero todas las novedades y mejoras se están desarrollando solo para Quarto\n\n. . .\n\nSi en el futuro incorporas algún otro lenguaje de programación/análisis podes seguir utilizandolo\n\n. . .\n\nPodes elegir otros editores y Quarto seguirá funcionando"
   },
   {
     "objectID": "primero/diapositivas/08-quarto.html#el-universo-de-quarto-es-enorme",
@@ -3315,7 +3315,7 @@
     "href": "primero/diapositivas/08-quarto.html#anatomia-de-un-.qmd",
     "title": "Residencia-INE",
     "section": "Anatomia de un .qmd",
-    "text": "Anatomia de un .qmd\n\nAl igual que los .Rmd de RMarkdown el archivo fuente de Quarto es de texto plano\n\n\nTiene una cabecera YAML con metadatos\n\n\nformat: html\nengine: knitr\n\nformat: html\nengine: jupyter\n\n\n\nSuele tener código incluido\n\n\n```{r}\nlibrary(dplyr)\nmtcars |&gt; \n  group_by(cyl) |&gt; \n  summarize(mean = mean(mpg))\n```\n\n```{python}\nfrom siuba import *\n(mtcars\n  &gt;&gt; group_by(_.cyl)\n  &gt;&gt; summarize(avg_mpg = _.mpg.mean()))\n```\n\n\n\nY texto narrativo\n\n# Cabecera 1\nEsto es texto en **negrita**, esto en *itálica* y esta otra una \n![imagen](image.png){fig-alt=\"Texto alternativo para esta imagen\"}."
+    "text": "Anatomia de un .qmd\n. . .\nAl igual que los .Rmd de RMarkdown el archivo fuente de Quarto es de texto plano\n. . .\nTiene una cabecera YAML con metadatos\n\n\nformat: html\nengine: knitr\n\nformat: html\nengine: jupyter\n\n\n. . .\nSuele tener código incluido\n\n\n```{r}\nlibrary(dplyr)\nmtcars |&gt; \n  group_by(cyl) |&gt; \n  summarize(mean = mean(mpg))\n```\n\n```{python}\nfrom siuba import *\n(mtcars\n  &gt;&gt; group_by(_.cyl)\n  &gt;&gt; summarize(avg_mpg = _.mpg.mean()))\n```\n\n\n. . .\nY texto narrativo\n\n# Cabecera 1\nEsto es texto en **negrita**, esto en *itálica* y esta otra una \n![imagen](image.png){fig-alt=\"Texto alternativo para esta imagen\"}."
   },
   {
     "objectID": "primero/diapositivas/08-quarto.html#ejemplo-de-un-.qmd",
@@ -3329,21 +3329,21 @@
     "href": "primero/diapositivas/08-quarto.html#metadatos-yaml",
     "title": "Residencia-INE",
     "section": "Metadatos: YAML",
-    "text": "Metadatos: YAML\n\n\n\nLos metadatos que se definen en el encabezado YAML que todos los archivos .qmd tienen son procesados en muchas etapas del renderizado y puede influir en el documento final de varias formas.\n\n\n\n\nSiempre se colocan al principio del documento y lo lee Pandoc, Quarto y knitr.\n\n\n\n\nEn su recorrido, la información que contiene suele afectar el código, el contenido y el proceso de renderizado.\n\n\n\n\nMuchas de las opciones de código YAML para Quarto se pueden encontrar en su documentación"
+    "text": "Metadatos: YAML\n. . .\n\n\nLos metadatos que se definen en el encabezado YAML que todos los archivos .qmd tienen son procesados en muchas etapas del renderizado y puede influir en el documento final de varias formas.\n\n. . .\n\nSiempre se colocan al principio del documento y lo lee Pandoc, Quarto y knitr.\n\n. . .\n\nEn su recorrido, la información que contiene suele afectar el código, el contenido y el proceso de renderizado.\n\n. . .\n\nMuchas de las opciones de código YAML para Quarto se pueden encontrar en su documentación"
   },
   {
     "objectID": "primero/diapositivas/08-quarto.html#texto-y-otros-elementos",
     "href": "primero/diapositivas/08-quarto.html#texto-y-otros-elementos",
     "title": "Residencia-INE",
     "section": "Texto y otros elementos",
-    "text": "Texto y otros elementos\n\n\n\nQuarto se basa en Pandoc y utiliza su variación de Markdown como sintaxis para documentos.\n\n\n\n\nEl Markdown de Pandoc es una versión ampliada y ligeramente revisada de la sintaxis Markdown de John Gruber.\n\n\n\n\nMarkdown es un lenguaje de marcas sencillo diseñado para ser fácil de escribir y, lo que es más importante, fácil de leer.\n\n\n\n\nEs el mismo que se utiliza en el formato anterior de RMarkdown (archivos .Rmd)"
+    "text": "Texto y otros elementos\n. . .\n\n\nQuarto se basa en Pandoc y utiliza su variación de Markdown como sintaxis para documentos.\n\n. . .\n\nEl Markdown de Pandoc es una versión ampliada y ligeramente revisada de la sintaxis Markdown de John Gruber.\n\n. . .\n\nMarkdown es un lenguaje de marcas sencillo diseñado para ser fácil de escribir y, lo que es más importante, fácil de leer.\n\n. . .\n\nEs el mismo que se utiliza en el formato anterior de RMarkdown (archivos .Rmd)"
   },
   {
     "objectID": "primero/diapositivas/08-quarto.html#código",
     "href": "primero/diapositivas/08-quarto.html#código",
     "title": "Residencia-INE",
     "section": "Código",
-    "text": "Código\n\n\nEl código se puede insertar a través de chunks (fragmentos) en distintos lenguajes\n\n```{r}\n#| Aquí van los metadatos con las opciones de ejecución\n\nAquí va el código\n```\n\n\n\nLas opciones de ejecución del código incluido dentro de estos fragmentos se realiza mediante metadatos con el formato #|\n\n\n\n\nSe pueden definir opciones de salida, figura, procesado, etc. Ver guía.\n\n\n\n\nTambién se puede incluir código en línea en el texto.\n\n```{r}\nradio &lt;- 5\n```\n(El radio del circulo es `{r} radio`). El radio del circulo es 5"
+    "text": "Código\n. . .\n\nEl código se puede insertar a través de chunks (fragmentos) en distintos lenguajes\n\n```{r}\n#| Aquí van los metadatos con las opciones de ejecución\n\nAquí va el código\n```\n. . .\n\nLas opciones de ejecución del código incluido dentro de estos fragmentos se realiza mediante metadatos con el formato #|\n\n. . .\n\nSe pueden definir opciones de salida, figura, procesado, etc. Ver guía.\n\n. . .\n\nTambién se puede incluir código en línea en el texto.\n\n```{r}\nradio &lt;- 5\n```\n(El radio del circulo es `{r} radio`). El radio del circulo es 5"
   },
   {
     "objectID": "primero/diapositivas/08-quarto.html#algunos-ejemplos-para-visualizar",
@@ -3370,8 +3370,8 @@
     "objectID": "primero/diapositivas/09-IA.html#ia-generativa-como-asistente-de-análisis-de-datos-en-r",
     "href": "primero/diapositivas/09-IA.html#ia-generativa-como-asistente-de-análisis-de-datos-en-r",
     "title": "Uso responsable de la IA",
-    "section": "IA generativa como asistente de análisis de datos en R",
-    "text": "IA generativa como asistente de análisis de datos en R\n\n¿Qué es?\n\nSistemas de Inteligencia Artificial Generativa (como Gemini, Chatgpt, Claude y otros) capaces de crear contenido nuevo (texto, código, imágenes) a partir de un prompt.\n\n\nEn nuestro contexto (lenguaje R con tidyverse)\n\nEs una herramienta poderosa para traducir peticiones complejas sobre análisis de datos en código R funcional.\nConvierte el lenguaje natural en el lenguaje de programación que necesitamos para el análisis en salud."
+    "section": "",
+    "text": "¿Qué es?\n\nSistemas de Inteligencia Artificial Generativa (como Gemini, Chatgpt, Claude y otros) capaces de crear contenido nuevo (texto, código, imágenes) a partir de un prompt.\n. . .\n\nEn nuestro contexto (lenguaje R con tidyverse)\n\nEs una herramienta poderosa para traducir peticiones complejas sobre análisis de datos en código R funcional.\nConvierte el lenguaje natural en el lenguaje de programación que necesitamos para el análisis en salud."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#beneficios-de-la-ia-en-análisis-de-datos",
@@ -3385,28 +3385,28 @@
     "href": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos",
     "title": "Uso responsable de la IA",
     "section": "Cuidados y uso responsable (riesgos)",
-    "text": "Cuidados y uso responsable (riesgos)\n\n\nEl “Riesgo de la alucinación” (fallo de código):\n\nCuidado: La IA puede generar código incorrecto, obsoleto o que no se ajusta a las últimas versiones de tidyverse.\nAcción: Siempre ejecuta y verifica el código línea por línea. No copiar y pegar sin entender."
+    "text": "Cuidados y uso responsable (riesgos)\n\n\nEl “Riesgo de la alucinación” (fallo de código):\n\n\nCuidado: La IA puede generar código incorrecto, obsoleto o que no se ajusta a las últimas versiones de tidyverse.\nAcción: Siempre ejecuta y verifica el código línea por línea. No copiar y pegar sin entender."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-1",
     "href": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-1",
     "title": "Uso responsable de la IA",
     "section": "Cuidados y uso responsable (riesgos)",
-    "text": "Cuidados y uso responsable (riesgos)\n\nEl principio de la Caja Negra (opacidad):\n\nCuidado: Confiar ciegamente en el código genera una dependencia que inhibe el aprendizaje profundo de R y la lógica de programación. (pereza cognitiva)\nAcción: La IA debe ser una herramienta para aprender, no un reemplazo de la comprensión. El objetivo es comprender la lógica de cada función generada."
+    "text": "Cuidados y uso responsable (riesgos)\n\nEl principio de la Caja Negra (opacidad):\n\n\nCuidado: Confiar ciegamente en el código genera una dependencia que inhibe el aprendizaje profundo de R y la lógica de programación. (pereza cognitiva)\nAcción: La IA debe ser una herramienta para aprender, no un reemplazo de la comprensión. El objetivo es comprender la lógica de cada función generada."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-2",
     "href": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-2",
     "title": "Uso responsable de la IA",
     "section": "Cuidados y uso responsable (riesgos)",
-    "text": "Cuidados y uso responsable (riesgos)\n\nPrivacidad y datos sensibles (ética):\n\n\nCuidado: NUNCA ingreses datos reales (incluso anonimizados) o sensibles de pacientes en el prompt de una IA pública.\n\n\n\n\nAcción: Usa datos ficticios o descripciones de la estructura del data frame (ej. “tengo una columna edad numérica y una columna diagnostico categórica”)."
+    "text": "Cuidados y uso responsable (riesgos)\n\nPrivacidad y datos sensibles (ética):\n. . .\n\nCuidado: NUNCA ingreses datos reales (incluso anonimizados) o sensibles de pacientes en el prompt de una IA pública.\n\n. . .\n\nAcción: Usa datos ficticios o descripciones de la estructura del data frame (ej. “tengo una columna edad numérica y una columna diagnostico categórica”)."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-3",
     "href": "primero/diapositivas/09-IA.html#cuidados-y-uso-responsable-riesgos-3",
     "title": "Uso responsable de la IA",
     "section": "Cuidados y uso responsable (riesgos)",
-    "text": "Cuidados y uso responsable (riesgos)\n\nSesgos y contexto:\n\n\nCuidado: La IA no comprende el contexto epidemiológico o clínico complejo. El código puede ser correcto, pero la interpretación sigue siendo responsabilidad humana.\n\n\n\n\nAcción: El prompt debe ser lo más específico posible para mitigar ambigüedades. La validación del resultado final es indispensable."
+    "text": "Cuidados y uso responsable (riesgos)\n\nSesgos y contexto:\n. . .\n\nCuidado: La IA no comprende el contexto epidemiológico o clínico complejo. El código puede ser correcto, pero la interpretación sigue siendo responsabilidad humana.\n\n. . .\n\nAcción: El prompt debe ser lo más específico posible para mitigar ambigüedades. La validación del resultado final es indispensable."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#la-regla-de-oro-vos-son-el-experto",
@@ -3434,7 +3434,7 @@
     "href": "primero/diapositivas/09-IA.html#dentro-de-nuestro-contexto",
     "title": "Uso responsable de la IA",
     "section": "Dentro de nuestro contexto",
-    "text": "Dentro de nuestro contexto\n\nEl prompt en la generación de código\nPara la programación, el prompt es la especificación precisa que le indica a la IA:\n\nQué hacer (ej. calcular la media).\nCómo hacerlo (ej. usar el paquete dplyr).\nCon qué datos (ej. data frame datos_salud y columna edad)."
+    "text": "Dentro de nuestro contexto\n\nEl prompt en la generación de código\nPara la programación, el prompt es la especificación precisa que le indica a la IA:\n\n\nQué hacer (ej. calcular la media).\nCómo hacerlo (ej. usar el paquete dplyr).\nCon qué datos (ej. data frame datos_salud y columna edad)."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#fundamentos-de-ingeniería-de-prompts-avanzada",
@@ -3518,7 +3518,7 @@
     "href": "primero/diapositivas/09-IA.html#la-regla-de-oro-vos-sos-el-experto",
     "title": "Uso responsable de la IA",
     "section": "La Regla de Oro: Vos sos el experto!",
-    "text": "La Regla de Oro: Vos sos el experto!\n\nLa IA genera código, pero como epidemiólogos nosotros generamos el conocimiento y somos responsables de lo que publiquemos.\n\nEntender el código.\nVerificar los resultados.\nNo compartir información confidencial."
+    "text": "La Regla de Oro: Vos sos el experto!\n\nLa IA genera código, pero como epidemiólogos nosotros generamos el conocimiento y somos responsables de lo que publiquemos.\n\n\nEntender el código.\nVerificar los resultados.\nNo compartir información confidencial."
   },
   {
     "objectID": "primero/diapositivas/09-IA.html#explicación-del-código-1",
@@ -3560,6 +3560,552 @@
     "href": "primero/diapositivas/09-IA.html#ia-generativas",
     "title": "Uso responsable de la IA",
     "section": "IA Generativas",
-    "text": "IA Generativas\n\n\nGoogle Gemini\nOpenAI ChatGPT\nAnthropic Claude\nMicrosoft Copilot\nDeepSeek\nPerplexy IA"
+    "text": "IA Generativas\n\n\n\nGoogle Gemini\nOpenAI ChatGPT\nAnthropic Claude\nMicrosoft Copilot\nDeepSeek\nPerplexy IA"
+  },
+  {
+    "objectID": "primero/diapositivas/09-IA.html#pero-siempre-recuerda-el-peligro",
+    "href": "primero/diapositivas/09-IA.html#pero-siempre-recuerda-el-peligro",
+    "title": "Uso responsable de la IA",
+    "section": "Pero siempre recuerda el peligro",
+    "text": "Pero siempre recuerda el peligro\n\n“El efecto de la IA actual no extiende la cognición, sino que la automatiza, convirtiendo el pensamiento en un servicio. En lugar de democratizar el aprendizaje, privatiza el acto de pensar bajo control corporativo.” - Ronald Purser\nAI is Destroying the University and Learning Itself"
+  },
+  {
+    "objectID": "primero/diapositivas/07-visualizacion.html",
+    "href": "primero/diapositivas/07-visualizacion.html",
+    "title": "Visualización de datos",
+    "section": "",
+    "text": "“Un simple gráfico ha brindado más información a la mente del analista de datos que cualquier otro dispositivo”. — John Tukey"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html",
+    "href": "primero/diapositivas/06-analisis.knit.html",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "",
+    "text": ". . .\nLa filosofía de trabajo de tidyverse se plantea nunca copiar y pegar más de dos veces el código escrito, pero cuando necesitamos realizar la misma operación en un conjunto de variables simultáneamente nos encontramos con este problema.\n. . .\nLa solución, ofrecida dentro de dplyr, es un andamiaje que permite aplicar funciones y expresiones a varias columnas simultáneamente.\n. . .\nEs una forma de iteración, donde se repite la misma acción en diferentes objetos. En este caso los objetos serán columnas (variables) de la tabla de datos.\n. . .\nLas operaciones simultáneas pueden darse como transformación (dentro de un mutate()) o de resumen (dentro de un summarise())"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#operaciones-simultáneas-por-columnas",
+    "href": "primero/diapositivas/06-analisis.knit.html#operaciones-simultáneas-por-columnas",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "",
+    "text": ". . .\nLa filosofía de trabajo de tidyverse se plantea nunca copiar y pegar más de dos veces el código escrito, pero cuando necesitamos realizar la misma operación en un conjunto de variables simultáneamente nos encontramos con este problema.\n. . .\nLa solución, ofrecida dentro de dplyr, es un andamiaje que permite aplicar funciones y expresiones a varias columnas simultáneamente.\n. . .\nEs una forma de iteración, donde se repite la misma acción en diferentes objetos. En este caso los objetos serán columnas (variables) de la tabla de datos.\n. . .\nLas operaciones simultáneas pueden darse como transformación (dentro de un mutate()) o de resumen (dentro de un summarise())"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#operaciones-simultáneas-por-columnas-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#operaciones-simultáneas-por-columnas-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Operaciones simultáneas por columnas",
+    "text": "Operaciones simultáneas por columnas\n\nCreación de múltiples columnas con mutate()\n\n\n\n\n\nResumiendo múltiples columnas con summarise()"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#función-across",
+    "href": "primero/diapositivas/06-analisis.knit.html#función-across",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función across()",
+    "text": "Función across()\nLa función across() es la encargada de dar soporte a estas operaciones múltiples (dplyr &gt;= 1.0.0).\n\nacross(.cols,  .fns,  ...,  .names)\n\n\n.cols = columnas a transformar\n.fns = función o funciones para aplicar a cada columna de .cols\n... = argumentos adicionales de las funciones especificadas anteriormente (ejemplo: na.rm = T)\n.names = nombres de las columnas de salida. Aquí, {.col} es un marcador especial al que se le puede agregar el sufijo deseado."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#resúmenes-múltiples",
+    "href": "primero/diapositivas/06-analisis.knit.html#resúmenes-múltiples",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Resúmenes múltiples",
+    "text": "Resúmenes múltiples\n\nTomemos la siguiente tabla de datos ficticios (mostramos las primeras 4 observaciones):\n\n\n# A tibble: 4 × 4\n        a     b      c      d\n    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 -0.560  1.22  -1.07   0.426\n2 -0.230  0.360 -0.218 -0.295\n3  1.56   0.401 -1.03   0.895\n4  0.0705 0.111 -0.729  0.878\n\n\n\nSupongamos que queremos calcular la media de cada variable…"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#resúmenes-múltiples-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#resúmenes-múltiples-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Resúmenes múltiples",
+    "text": "Resúmenes múltiples\nPodríamos hacerlo repitiendo para cada variable\n\ndatos |&gt; summarise(\n  a = mean(a),\n  b = mean(b),\n  c = mean(c),\n  d = mean(d),\n)\n\n# A tibble: 1 × 4\n       a     b      c     d\n   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 0.0746 0.209 -0.425 0.322\n\n\n\nPero esto rompe la regla general que buscamos de nunca copiar y pegar más de dos veces…"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#resúmenes-múltiples-2",
+    "href": "primero/diapositivas/06-analisis.knit.html#resúmenes-múltiples-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Resúmenes múltiples",
+    "text": "Resúmenes múltiples\nPara solucionarlo aplicamos across() y realizamos el resumen simultáneo en una sola línea.\n\ndatos |&gt; summarise(\n  across(.cols = a:d, .fns = mean),\n)\n\n# A tibble: 1 × 4\n       a     b      c     d\n   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 0.0746 0.209 -0.425 0.322\n\n\n\nNótese que el primer argumento es el rango de nombres de variables y el segundo la función que aplicamos a todas ellas (nombres de funciones sin paréntesis)."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#seleccionar-variables-.cols",
+    "href": "primero/diapositivas/06-analisis.knit.html#seleccionar-variables-.cols",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Seleccionar variables (.cols)",
+    "text": "Seleccionar variables (.cols)\n\nEl primer argumento de across() responde de la misma forma que la función select() y aplican también las funciones ayudantes de selección.\n\nnames(datos)\n\n[1] \"grupo\" \"a\"     \"b\"     \"c\"     \"d\"    \n\ndatos |&gt; \n  group_by(grupo) |&gt; \n  summarize(across(everything(), mean))\n\n# A tibble: 2 × 5\n  grupo      a       b      c      d\n  &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1     1 -0.191 -0.331  -0.485 -0.357\n2     2  0.132 -0.0552  0.421  0.239"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#recordamos-a-las-funciones-ayudantes-de-selección",
+    "href": "primero/diapositivas/06-analisis.knit.html#recordamos-a-las-funciones-ayudantes-de-selección",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Recordamos a las funciones ayudantes de selección",
+    "text": "Recordamos a las funciones ayudantes de selección\n\n\n\n\neverything(): coincide con todas las variables.\ngroup_cols(): seleccione todas las columnas de agrupación.\nstarts_with(): comienza con un prefijo.\nends_with(): termina con un sufijo.\ncontains(): contiene una cadena literal.\nmatches(): coincide con una expresión regular.\n\n\n\nnum_range(): coincide con un rango numérico como x01, x02, x03.\nall_of(): coincide con nombres de variables en un vector de caracteres. Todos los nombres deben estar presentes; de lo contrario, se generará un error de fuera de límites.\nany_of(): igual que all_of(), excepto que no se genera ningún error para los nombres que no existen.\nwhere(): aplica una función a todas las variables y selecciona aquellas para las cuales la función regresa TRUE."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#expresiones-de-selección",
+    "href": "primero/diapositivas/06-analisis.knit.html#expresiones-de-selección",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Expresiones de selección",
+    "text": "Expresiones de selección\n\nEl argumento .cols también puede recibir construcciones booleanas utilizando los operadores conocidos como ! (negación) y conectores lógicos como & (AND) y | (OR) entre las funciones ayudantes de selección.\n\nPor ejemplo:\n\n.cols = !where(is.numeric) & starts_with(\"a\")\n\n\nSelecciona todas las columnas no numéricas, cuyo nombre comienza con “a”."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#agregar-argumentos-a-las-funciones",
+    "href": "primero/diapositivas/06-analisis.knit.html#agregar-argumentos-a-las-funciones",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Agregar argumentos a las funciones",
+    "text": "Agregar argumentos a las funciones\n\nHasta ahora vimos el ejemplo de aplicar una función simple como mean() a un grupo de variables.\n. . .\n\nQue sucede si entre los datos de esas variables hay valores NA?\nVamos a necesitar incorporar el argumento na.rm = TRUE a la función.\n. . .\n\nDonde lo hacemos dentro de un across()?"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#agregar-argumentos-a-las-funciones-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#agregar-argumentos-a-las-funciones-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Agregar argumentos a las funciones",
+    "text": "Agregar argumentos a las funciones\n\nSupongamos que tenemos estos datos (mostramos algunas observaciones):\n\n\n# A tibble: 4 × 4\n       a      b      c      d\n   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1  1.56  -1.27  NA     -0.473\n2 -0.560 NA     -1.05  -1.07 \n3 -0.230  1.22   0.238 -0.218\n4 NA     -0.446  1.29  -1.03 \n\n\n\nVemos algunos valores NA entre las observaciones."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#agregar-argumentos-a-las-funciones-2",
+    "href": "primero/diapositivas/06-analisis.knit.html#agregar-argumentos-a-las-funciones-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Agregar argumentos a las funciones",
+    "text": "Agregar argumentos a las funciones\n\nSi aplicamos el mismo código de across() anterior tendríamos como resultado:\n\ndatos_na |&gt; \n  summarise(\n    across(a:d, mean)\n  )\n\n# A tibble: 1 × 4\n      a     b     c      d\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1    NA    NA    NA -0.703\n\n\n\nSería bueno que le pasaramos na.rm = TRUE a la función mean()."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#agregar-argumentos-a-las-funciones-3",
+    "href": "primero/diapositivas/06-analisis.knit.html#agregar-argumentos-a-las-funciones-3",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Agregar argumentos a las funciones",
+    "text": "Agregar argumentos a las funciones\nExisten dos formas sintácticas de hacerlo.\n\nUna función estilo-purrr (tidyverse): ~ mean(.x, na.rm = TRUE)\nUna función anónima (base): function(x) mean(x, na.rm = TRUE) ; o mejor en su forma de atajo: \\(x) mean(x, na.rm = TRUE)\n\n\ndatos_na |&gt; \n  summarise(\n    across(a:d, \\(x) mean(x, na.rm = TRUE))\n  )\n\n# A tibble: 1 × 4\n      a      b     c      d\n  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1 0.210 -0.293 0.161 -0.703"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#múltiples-funciones",
+    "href": "primero/diapositivas/06-analisis.knit.html#múltiples-funciones",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Múltiples funciones",
+    "text": "Múltiples funciones\nPara incorporar más de una función dentro de across() debemos incluirlas dentro de una lista [list()]\n\ndatos_na |&gt; \n  summarise(\n    across(a:d, list(\n      media = \\(x) mean(x, na.rm = TRUE),\n      n_na = \\(x) sum(is.na(x))))\n  )\n\n# A tibble: 1 × 8\n  a_media a_n_na b_media b_n_na c_media c_n_na d_media d_n_na\n    &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;\n1   0.210      1  -0.293      1   0.161      2  -0.703      0\n\n\nLa lista contiene cada función a aplicar, bajo nombres definidos."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#cambiar-nombres-de-resultados",
+    "href": "primero/diapositivas/06-analisis.knit.html#cambiar-nombres-de-resultados",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Cambiar nombres de resultados",
+    "text": "Cambiar nombres de resultados\n\nObservemos que los nombres de las variables resultado se componen del nombre de la columna, un guión bajo y el nombre definido de la función aplicada, para distinguir entre las múltiples funciones del across().\nLa estructura de estos nombres se pueden modificar con el argumento .names de across().\nLos marcadores especiales para el nombre de columna es {.col} y para el nombre de la función definida es {.fn}."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#cambiar-nombres-de-resultados-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#cambiar-nombres-de-resultados-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Cambiar nombres de resultados",
+    "text": "Cambiar nombres de resultados\n\nPor ejemplo, podríamos invertir el orden predeterminado de los nombres del resumen.\n\ndatos_na |&gt; \n  summarise(\n    across(a:d, list(\n      media = \\(x) mean(x, na.rm = TRUE),\n      n_na = \\(x) sum(is.na(x))),\n      .names = \"{.fn}_{.col}\")\n  )\n\n# A tibble: 1 × 8\n  media_a n_na_a media_b n_na_b media_c n_na_c media_d n_na_d\n    &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;\n1   0.210      1  -0.293      1   0.161      2  -0.703      0"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#transformación-de-tipos-de-datos",
+    "href": "primero/diapositivas/06-analisis.knit.html#transformación-de-tipos-de-datos",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Transformación de tipos de datos",
+    "text": "Transformación de tipos de datos\n\nHasta ahora vimos como funciona la función across() dentro de un resumen (summarise) pero al comienzo también dijimos que se puede utilizar para transformaciones masivas de datos.\n\nPara lograr esto la función se vincula con mutate() modificando las variables originales o bien creando nuevas variables si cambiamos su nombre con .names."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#transformación-de-tipos-de-datos-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#transformación-de-tipos-de-datos-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Transformación de tipos de datos",
+    "text": "Transformación de tipos de datos\n\nAplicamos la función coalesce() para convertir los valores NA en ceros, transformando las variables originales.\n\ndatos_na |&gt; \n  mutate(\n    across(a:d, \\(x) coalesce(x, 0))\n  )\n\n# A tibble: 5 × 4\n        a      b      c      d\n    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1  1.56   -1.27   0     -0.473\n2 -0.560   0     -1.05  -1.07 \n3 -0.230   1.22   0.238 -0.218\n4  0      -0.446  1.29  -1.03 \n5  0.0705 -0.687  0     -0.729"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#transformación-de-tipos-de-datos-2",
+    "href": "primero/diapositivas/06-analisis.knit.html#transformación-de-tipos-de-datos-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Transformación de tipos de datos",
+    "text": "Transformación de tipos de datos\nHacemos lo mismo pero cambiamos los nombres de las variables de salida del mutate() que van a coexistir con las originales.\n\ndatos_na |&gt; \n  mutate(\n    across(a:d, \\(x) coalesce(x, 0),\n      .names = \"{.col}_na_cero\")\n  )\n\n# A tibble: 5 × 8\n        a      b      c      d a_na_cero b_na_cero c_na_cero d_na_cero\n    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1  1.56   -1.27  NA     -0.473    1.56      -1.27      0        -0.473\n2 -0.560  NA     -1.05  -1.07    -0.560      0        -1.05     -1.07 \n3 -0.230   1.22   0.238 -0.218   -0.230      1.22      0.238    -0.218\n4 NA      -0.446  1.29  -1.03     0         -0.446     1.29     -1.03 \n5  0.0705 -0.687 NA     -0.729    0.0705    -0.687     0        -0.729"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#filtros",
+    "href": "primero/diapositivas/06-analisis.knit.html#filtros",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Filtros",
+    "text": "Filtros\n\nEn el caso de iteraciones similares para incluir dentro de la función filter() el paquete dplyr propone dos funciones específicas: if_any() e if_all().\n\nEn el primer caso, la función enmascara una repetición de OR lógicos y en la segunda una secuencia de AND lógicos."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#filtros-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#filtros-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Filtros",
+    "text": "Filtros\n\ndatos_na |&gt; filter(if_any(a:d, is.na))\n\n# A tibble: 4 × 4\n        a      b     c      d\n    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1  1.56   -1.27  NA    -0.473\n2 -0.560  NA     -1.05 -1.07 \n3 NA      -0.446  1.29 -1.03 \n4  0.0705 -0.687 NA    -0.729\n\n\nEs lo mismo que filter(is.na(a) | is.na(b) | is.na(c) | is.na(d))\n\ndatos_na |&gt; filter(if_all(a:d, is.na))\n\n# A tibble: 0 × 4\n# ℹ 4 variables: a &lt;dbl&gt;, b &lt;dbl&gt;, c &lt;dbl&gt;, d &lt;dbl&gt;\n\n\nEs lo mismo que filter(is.na(a) & is.na(b) & is.na(c) & is.na(d))"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#filtros-2",
+    "href": "primero/diapositivas/06-analisis.knit.html#filtros-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Filtros",
+    "text": "Filtros\n\nLas dos funciones de filtro trabajan con el mismo esquema que across(), por lo tanto se le puede aplicar una función o expresión de condición (debe devolver TRUE o FALSE)\n\n\ndatos  |&gt; filter(if_all(a:d, \\(x) x &gt; -0.5 & x &lt; 1))\n\n# A tibble: 2 × 5\n  grupo     a     b      c       d\n  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;\n1     2 0.780 0.124  0.922 0.181  \n2     2 0.253 0.380 -0.491 0.00576"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#paquete-rstatix",
+    "href": "primero/diapositivas/06-analisis.knit.html#paquete-rstatix",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete rstatix",
+    "text": "Paquete rstatix\n\nEl paquete rstatix simplifica el proceso de realizar análisis estadísticos complejos.\n. . .\n\nsintaxis intuitiva y basada en el paradigma de la “gramática de datos” de tidyverse\n\n. . .\n\npermite realizar pruebas estadísticas comunes, como t-tests, ANOVA, y correlaciones, de manera rápida y eficiente\n\n. . .\n\ndiseño que facilita la integración de resultados en flujos de trabajo de análisis reproducibles, asegurando que las conclusiones derivadas de los datos sean robustas y transparentes."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#paquete-rstatix-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#paquete-rstatix-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete rstatix",
+    "text": "Paquete rstatix\n\nMuchas de sus funciones son espejos de las funciones estadísticas de R base pero compatibles con tidyverse, por lo que siempre devuelven los resultados en dataframes\n\n\nlibrary(rstatix)\n\ndatos |&gt; \n  t_test(Edad ~ Sexo)\n\n# A tibble: 1 × 8\n  .y.   group1 group2    n1    n2 statistic    df     p\n* &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Edad  Mujer  Varon     29    33    -0.871  59.6 0.387\n\n\nLo que nos permite conectar el resultado mediante tuberías hacia otras funciones del tidyverse, como select() o filter()."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#paquete-rstatix-2",
+    "href": "primero/diapositivas/06-analisis.knit.html#paquete-rstatix-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete rstatix",
+    "text": "Paquete rstatix\n\nTiene dos funciones de resumenes para variables cuantitativas y cualitativas:\n\ndatos |&gt; get_summary_stats(Edad, type = \"mean_sd\")\n\n# A tibble: 1 × 4\n  variable     n  mean    sd\n  &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Edad        62  58.6  24.5\n\ndatos |&gt; get_summary_stats(Edad, type = \"median_iqr\")\n\n# A tibble: 1 × 4\n  variable     n median   iqr\n  &lt;fct&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 Edad        62   62.5    40"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#paquete-rstatix-3",
+    "href": "primero/diapositivas/06-analisis.knit.html#paquete-rstatix-3",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete rstatix",
+    "text": "Paquete rstatix\n\ndatos |&gt; group_by(Sexo) |&gt; \n  get_summary_stats(Edad, type = \"common\")\n\n# A tibble: 2 × 11\n  Sexo  variable     n   min   max median   iqr  mean    sd    se    ci\n  &lt;chr&gt; &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Mujer Edad        29    18    93     57    39  55.7  23.9  4.44  9.10\n2 Varon Edad        33    19    99     63    41  61.1  25.1  4.37  8.90\n\ndatos |&gt; freq_table(Sexo)\n\n# A tibble: 2 × 3\n  Sexo      n  prop\n  &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;\n1 Mujer    31  46.3\n2 Varon    36  53.7"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#paquete-janitor",
+    "href": "primero/diapositivas/06-analisis.knit.html#paquete-janitor",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete janitor",
+    "text": "Paquete janitor\n\nEl paquete janitor tiene numerosas funciones de las cuales vamos a destacar la familia tabyl.\n. . .\n\nLa función tabyl() permite crear tablas de frecuencia de una variable o tablas de contingencia para dos o más variables categóricas.\n. . .\n\nEl paquete además tiene otras funciones que se enlazan con tabyl para personalizar los resultados en estas tablas (por ejemplo, agregar totales o representar frecuencias realtivas como porcentajes)"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#paquete-janitor-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#paquete-janitor-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete janitor",
+    "text": "Paquete janitor\nSe puede personalizar la tabla conectando por tuberías el agregado de otras funciones del paquete.\n\nlibrary(janitor)\ndatos  |&gt;   \n  tabyl(Sexo) |&gt;  \n  adorn_totals(where = \"row\") |&gt;  \n  adorn_pct_formatting(digits = 2) \n\n  Sexo  n percent\n Mujer 31  46.27%\n Varon 36  53.73%\n Total 67 100.00%\n\n\nIncorporamos totales con adorn_totals() y configuramos los porcentajes con adorn_pct_formatting()."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#gtsummary",
+    "href": "primero/diapositivas/06-analisis.knit.html#gtsummary",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "gtsummary",
+    "text": "gtsummary\n\nEste paquete permite crear tablas de resumen elegantes y personalizables que destacan las estadísticas descriptivas, resultados de modelos, y comparaciones de grupos.\n. . .\nEstas tablas son esenciales para reportes, publicaciones y presentaciones, asegurando que la información clave sea fácilmente comprensible.\n. . .\nLas salidas buscan producir estéticas compatibles con las tablas que se envían a publicar en la mayoría de las revistas científicas, así como también en otras publicaciones similares."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#gtsummary-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#gtsummary-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "gtsummary",
+    "text": "gtsummary\n\nUn ejemplo de una tabla descriptiva con variables cuanti y cuali estratificada por Sexo."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#flextable",
+    "href": "primero/diapositivas/06-analisis.knit.html#flextable",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "flextable",
+    "text": "flextable\n\nEste paquete es similar a otras librerías como gt, huxtable, kableExtra, etc, que transforman las tablas y dataframes de R en salidas elegantes.\n. . .\n\nLa documentación oficial dice “crear tablas flexibles y altamente personalizables en formatos de Microsoft Word, PowerPoint y HTML”.\n. . .\n La elección de este paquete sobre las otras opciones tiene que ver con la amplitud de opciones en la compatibilidad de los formatos de salida.\n. . .\nLas funciones del paquete se integran facilmente con Quarto"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#flextable-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#flextable-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "flextable",
+    "text": "flextable\n\nUna tablita que creamos anteriormente con freq_table() de rstatix fue:\n\ndatos |&gt; freq_table(Sexo)\n\n# A tibble: 2 × 3\n  Sexo      n  prop\n  &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;\n1 Mujer    31  46.3\n2 Varon    36  53.7\n\n\n\nLa salida tradicional de consola se visualiza estéticamente fea."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#flextable-2",
+    "href": "primero/diapositivas/06-analisis.knit.html#flextable-2",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "flextable",
+    "text": "flextable\nCon flextable podemos configurar esa misma tabla, para mejorar su presentación:\n\nlibrary(flextable)\ndatos |&gt; freq_table(Sexo) |&gt; \n  flextable() |&gt; \n  fontsize(size = 30, part = \"all\") |&gt; \n  align(align = \"center\", part = \"all\") |&gt; \n  line_spacing(space = 2, part = \"all\") |&gt; \n  padding(padding = 6, part = \"header\") |&gt; \n  set_header_labels(n = \"Frecuencia\", prop = \"%\") |&gt; \n  theme_zebra()\n\nSexoFrecuencia%Mujer3146.3Varon3653.7"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#estructuras-de-control-de-flujo",
+    "href": "primero/diapositivas/06-analisis.knit.html#estructuras-de-control-de-flujo",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Estructuras de control de flujo",
+    "text": "Estructuras de control de flujo\n\n\nBucles tradicionales\n\nfor(): secuencia de elementos\nwhile(): mientras una condición es verdadera\nrepeat(): repetición y control manual con break (uso peligroso)\n\n\n\n\nMapeo con paquete purrr\n\nFamilia funciones map()"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#función-for",
+    "href": "primero/diapositivas/06-analisis.knit.html#función-for",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función for()",
+    "text": "Función for()"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#función-for-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#función-for-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función for()",
+    "text": "Función for()\n\n\nfor (variable in vector) {\n  \n}\n\n\nDonde variable se reemplaza por un índice (generalmente 1 pero puede llamarse como deseemos) que recorrerá un vector desde 1 a una determinada longitud. (habitualmente 1:length(x)).\nEn cada vuelta la variable aumenta 1 hasta que alcanza el final del vector.\nLa variable i se utiliza en el cuerpo del for() para recorrer índices de objetos."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#función-while",
+    "href": "primero/diapositivas/06-analisis.knit.html#función-while",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función while()",
+    "text": "Función while()"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#función-while-1",
+    "href": "primero/diapositivas/06-analisis.knit.html#función-while-1",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Función while()",
+    "text": "Función while()\n\n\nwhile (condition) {\n  \n}\n\n\nDonde condition es una condición lógica. Si se cumple el bucle continúa, de lo contrario se sale de él.\nDentro del cuerpo de la estructura debemos proceder a manejar los cambios en lo que se evalúa en la condición. Si eso no sucede, el bucle puede llegar a ser infinito.\nEl control es más “artesanal” que el bucle for() y depende completamente del usuario del lenguaje."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#paquete-purrr",
+    "href": "primero/diapositivas/06-analisis.knit.html#paquete-purrr",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Paquete purrr",
+    "text": "Paquete purrr\n\nPaquete con herramientas que buscan remplazar las formas tradicionales de bucles iterativos otorgándole compatibilidad con tidy data (datos ordenados).\n\nSe utiliza para aplicar funciones a vectores, dataframes y listas, dando lugar a la denominada “programación funcional” (FP).\nEl paquete se instala y activa con tidyverse.\nSus funciones son faciles de escribir pero más dificiles de entender para usuarios sin conocimientos de programación.\nLas familia de funciones map() son similares en idea que la familia de funciones apply() de R base pero consistentes con el ecosistema tidyverse."
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.knit.html#familia-map",
+    "href": "primero/diapositivas/06-analisis.knit.html#familia-map",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "Familia map()",
+    "text": "Familia map()"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html",
+    "href": "primero/diapositivas/05a-diagnostico.html",
+    "title": "Diagnóstico y depuración de datos",
+    "section": "",
+    "text": "La etapa de depuración o limpieza de datos comienza con la exploración inicial y el diagnóstico adecuado de cada variable de interés de la tabla de datos cruda. Interviene aquí también, el objetivo del análisis, el protocolo de análisis pensado y el diccionario de datos asociado a la tabla.\n\n     \nFinalmente se hacen las transformaciones necesarias en los datos a partir del diagnóstico realizado."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.html",
+    "href": "primero/diapositivas/01c-datos.html",
+    "title": "Archivos de datos",
+    "section": "",
+    "text": "Existen variados formatos de archivos de datos\nPueden ser estructuras de licencia abierta (texto plano) o privada.\nLas extensiones .csv y .txt son las más comúnes en versiones texto plano.\nOtras extensiones pertenecen a sofwares específicos: xlsx a Excel, .sav a SPSS, .sas7bcat a SAS o .dta a Stata, por ejemplo.\nHay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html",
+    "href": "primero/diapositivas/01b-datos.knit.html",
+    "title": "Planificación de la gestión de datos",
+    "section": "",
+    "text": "Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#plan-de-gestión-de-datos",
+    "href": "primero/diapositivas/01b-datos.knit.html#plan-de-gestión-de-datos",
+    "title": "Planificación de la gestión de datos",
+    "section": "",
+    "text": "Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#plan-de-gestión-de-datos-1",
+    "href": "primero/diapositivas/01b-datos.knit.html#plan-de-gestión-de-datos-1",
+    "title": "Planificación de la gestión de datos",
+    "section": "Plan de gestión de datos",
+    "text": "Plan de gestión de datos\n\nDescripción de los datos con los que trabajamos: Fuente, proceso de limpieza, etc.\nFormato de los datos: Instrumentos en papel, tipos de archivos, etc.\nDocumentación: Diccionario de datos, manuales de procedimiento, etc.\nConservación de datos: Repositorios, medidas de seguridad, etc.\nPrivacidad y la confidencialidad: Anominización, consentimientos informados, etc.\nFunciones y responsabilidades"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#dato-científico",
+    "href": "primero/diapositivas/01b-datos.knit.html#dato-científico",
+    "title": "Planificación de la gestión de datos",
+    "section": "Dato científico",
+    "text": "Dato científico\nUn dato científico esta compuesto por:\n\nuna unidad de observación\ndimensiones de análisis (variables)\nvalores / categorías\ndefiniciones operacionales (indicadores)"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#instrumentos-de-recolección",
+    "href": "primero/diapositivas/01b-datos.knit.html#instrumentos-de-recolección",
+    "title": "Planificación de la gestión de datos",
+    "section": "Instrumentos de recolección",
+    "text": "Instrumentos de recolección\n\nLos instrumentos de recolección de datos característicos dentro del ámbito cuantitativo son los cuestionarios estructurados.\n\n. . .\n\nExisten distintos tipos de preguntas que modifican la forma en que los datos quedan expresados luego de la carga electrónica.\n\n. . .\n\nEs conveniente utilizar preguntas validadas previamente que garanticen la captura de la información adecuadamente."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#nivel-de-medición-de-las-variables",
+    "href": "primero/diapositivas/01b-datos.knit.html#nivel-de-medición-de-las-variables",
+    "title": "Planificación de la gestión de datos",
+    "section": "Nivel de medición de las variables",
+    "text": "Nivel de medición de las variables\nLas variables operacionalizadas que surjen de los cuestionarios cumpliran con algún nivel de medición:"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#preguntas-abiertas-y-cerradas",
+    "href": "primero/diapositivas/01b-datos.knit.html#preguntas-abiertas-y-cerradas",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: abiertas y cerradas",
+    "text": "Preguntas: abiertas y cerradas"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#preguntas-simples-y-multiples",
+    "href": "primero/diapositivas/01b-datos.knit.html#preguntas-simples-y-multiples",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: simples y multiples",
+    "text": "Preguntas: simples y multiples"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#pregunta-batería-de-items",
+    "href": "primero/diapositivas/01b-datos.knit.html#pregunta-batería-de-items",
+    "title": "Planificación de la gestión de datos",
+    "section": "Pregunta: batería de items",
+    "text": "Pregunta: batería de items"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#preguntas-condicionales",
+    "href": "primero/diapositivas/01b-datos.knit.html#preguntas-condicionales",
+    "title": "Planificación de la gestión de datos",
+    "section": "Preguntas: condicionales",
+    "text": "Preguntas: condicionales"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#modalidades",
+    "href": "primero/diapositivas/01b-datos.knit.html#modalidades",
+    "title": "Planificación de la gestión de datos",
+    "section": "Modalidades",
+    "text": "Modalidades\n\n\nExahustivas: Incluyen todas las posibles respuestas.\n\nSi la variable es “religión” y las únicas opciones son “católica”, “judía” y “musulmana”, no se incluyen otras religiones.\n\nExcluyentes: Nadie puede presentar dos valores simultáneos de la variable. Cada individuo de una población debe expresar una y sólo una modalidad.\n\nUn individuo puede ser diabético e hipertenso simultáneamente. En este caso es necesario definir una variable por cada opción de respuesta y que sus modalidades dicotómicas sean la ausencia o presencia de dicha opción: Diabetes: [si - no] Hipertensión: [si - no]"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#ética-identidad",
+    "href": "primero/diapositivas/01b-datos.knit.html#ética-identidad",
+    "title": "Planificación de la gestión de datos",
+    "section": "Ética: identidad",
+    "text": "Ética: identidad\nClasificación de archivos de datos según identificación personal:\n. . .\n\nIdentificable: es común que los datos crudos sin procesar de un estudio de investigación sean identificables.\n\n. . .\n\nCodificado: identificación personal eliminada o distorsionada. Reemplazo por códigos (es decir, un identificador único del participante).\n\n. . .\n\nDesidentificado: identificación personal eliminada o distorsionada. No se puede volver a asociar con la persona. (compartir)\n\n. . .\n\nAnónimo: nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#ética-sensibilidad",
+    "href": "primero/diapositivas/01b-datos.knit.html#ética-sensibilidad",
+    "title": "Planificación de la gestión de datos",
+    "section": "Ética: sensibilidad",
+    "text": "Ética: sensibilidad\n\n\nBaja: datos que no presentan riesgo o presentan un riesgo bajo si se divulgan. Por lo general, esto incluye datos anónimos y no identificados que no contienen información altamente sensible.\n\n\n\n\nModerada: datos que pueden incluir información identificable o información que podría permitir volver a identificar a los participantes dentro de los propios datos o utilizando una fuente externa. (protección contra el acceso no autorizado).\n\n\n\n\nAlta sensibilidad: medidas de seguridad más estrictas. Incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos)."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#buenas-prácticas",
+    "href": "primero/diapositivas/01b-datos.knit.html#buenas-prácticas",
+    "title": "Planificación de la gestión de datos",
+    "section": "Buenas prácticas",
+    "text": "Buenas prácticas\n\n\nEvitar espacios en nombres.Usar guión bajo (_) o guión medio (-).\nEvitar caracteres especiales en directorios y nombres de archivos (excepto los guiones).\nEvitar caracteres acentuados y eñes\nOrden útil. Clasificación alfanumérica y el completado de ceros a la izquierda cuando hay más de un dígito. Utilización del estándar ISO 8601 para fechas (AAAA-MM-DD).\nCuidado con la longitud de los caracteres. Tomar en cuenta toda ubicación del archivo."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#directorios-carpetas",
+    "href": "primero/diapositivas/01b-datos.knit.html#directorios-carpetas",
+    "title": "Planificación de la gestión de datos",
+    "section": "Directorios / carpetas",
+    "text": "Directorios / carpetas\n\n\nNombres de carpetas significativos y fáciles de interpretar.\nNo usar espacios en los nombres de carpetas. Separar con guiones (_) o (-).\nNo usar caracteres especiales\nUsar una convención coherente. Uso de mayúsculas y minúsculas, etc.\nLimitar la cantidad de caracteres\nAgregar número de orden al comienzo del nombre de cada carpeta, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_)."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#nombres-de-archivos",
+    "href": "primero/diapositivas/01b-datos.knit.html#nombres-de-archivos",
+    "title": "Planificación de la gestión de datos",
+    "section": "Nombres de archivos",
+    "text": "Nombres de archivos\n\nNombres descriptivos (un usuario debe poder comprender el contenido del archivo sin abrirlo).\nEvitar información de identificación personal\nNo usar espacios en los nombres de archivos. Separar con guiones (_) o (-).\nNo usar caracteres especiales\nUsar una convención coherente. Uso de mayúsculas y minúsculas, etc.\nLimitar la cantidad de caracteres.\nFormato de fechas de forma uniforme (ISO 8601). No utilizar barras diagonales (/)\n\nAl versionar manualmente los nombres de archivos, usar un indicador consistente. (v01, v02).\nAgregar número de orden al comienzo del nombre de cada archivo, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).\nUsar metadatos redundantes (información) en el nombre del archivo. Reduce la confusión si alguna vez se mueve a una carpeta diferente.También permite realizar búsquedas en tus archivos. Por ejemplo, coloque siempre la palabra “raw” (crudo) o “clean” (limpio) en un nombre de archivo de datos, incluso si el archivo está alojado en una carpeta “raw” o “clean”."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#nombres-de-variables",
+    "href": "primero/diapositivas/01b-datos.knit.html#nombres-de-variables",
+    "title": "Planificación de la gestión de datos",
+    "section": "Nombres de variables",
+    "text": "Nombres de variables\n\nObligatorio\n\nNo usar palabras claves o funciones reservadas (if, for, repeat, etc.)\nEstablecer un límite de caracteres\nNo usar espacios ni caracteres especiales, excepto (_).\nNo comenzar el nombre de una variable con un número.\n\n. . .\nSugerido\n\nEvitar acentos y eñes.\nQue todas las tablas tengan un identificador único de observación o registro.\nPrestar atención al uso de minúsculas y mayúsculas. (case sensitive)\nUtilizar prefijos y sufijos para identificación de grupo de variables."
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#codificación-de-valores",
+    "href": "primero/diapositivas/01b-datos.knit.html#codificación-de-valores",
+    "title": "Planificación de la gestión de datos",
+    "section": "Codificación de valores",
+    "text": "Codificación de valores\n \n\nDeben ser únicos (evitar mismo código para categorías distintas)\nDeben ser consistentes (evitar códigos distintos para mismas categorías)\nOrdenamiento lógico (en variables ordinales)\nValores faltantes (dejar en blanco o usar códigos numéricos extremos de escala, 9, 99, 999, etc)"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#documentación-diccionario-de-datos",
+    "href": "primero/diapositivas/01b-datos.knit.html#documentación-diccionario-de-datos",
+    "title": "Planificación de la gestión de datos",
+    "section": "Documentación: diccionario de datos",
+    "text": "Documentación: diccionario de datos\n\nTodo archivo de datos o grupo de archivos que conforman una base de datos debe tener estar siempre acompañado por un diccionario de datos.\nEl diccionario de datos o codebook enumera:\n\nnombre de variable\ndescripción\ntipo de varible\nvalores permitidos (escalas, códigos, categorías)"
+  },
+  {
+    "objectID": "primero/diapositivas/01b-datos.knit.html#seguimos-analizando-la-documentación-de-la-enfr-2018",
+    "href": "primero/diapositivas/01b-datos.knit.html#seguimos-analizando-la-documentación-de-la-enfr-2018",
+    "title": "Planificación de la gestión de datos",
+    "section": "Seguimos analizando la documentación de la ENFR 2018",
+    "text": "Seguimos analizando la documentación de la ENFR 2018\n  \nSitio Bases Salud INDEC\n\nDiccionario de datos ENFR 2018"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html",
+    "href": "primero/diapositivas/01c-datos.knit.html",
+    "title": "Archivos de datos",
+    "section": "",
+    "text": "Existen variados formatos de archivos de datos\nPueden ser estructuras de licencia abierta (texto plano) o privada.\nLas extensiones .csv y .txt son las más comúnes en versiones texto plano.\nOtras extensiones pertenecen a sofwares específicos: xlsx a Excel, .sav a SPSS, .sas7bcat a SAS o .dta a Stata, por ejemplo.\nHay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html#formatos-de-archivos",
+    "href": "primero/diapositivas/01c-datos.knit.html#formatos-de-archivos",
+    "title": "Archivos de datos",
+    "section": "",
+    "text": "Existen variados formatos de archivos de datos\nPueden ser estructuras de licencia abierta (texto plano) o privada.\nLas extensiones .csv y .txt son las más comúnes en versiones texto plano.\nOtras extensiones pertenecen a sofwares específicos: xlsx a Excel, .sav a SPSS, .sas7bcat a SAS o .dta a Stata, por ejemplo.\nHay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html#almacenamiento-y-seguridad",
+    "href": "primero/diapositivas/01c-datos.knit.html#almacenamiento-y-seguridad",
+    "title": "Archivos de datos",
+    "section": "Almacenamiento y seguridad",
+    "text": "Almacenamiento y seguridad\nCaracterísticas a considerar respecto al almacenamiento:\n. . .\n\nSeguridad: garantizar que sus archivos no se pierdan, corrompan o editen inesperadamente. Copias de seguridad periódicas. Uso de la nube\n\n. . .\n\nConfidencialidad: que personas no autorizadas no vean ni accedan a información confidencial. Además de archivos electrónicos hablamos de todo documento sensible (formularios, cuestionarios, planillas, etc).\n\n. . .\n\nAccesibilidad y usabilidad de los archivos: asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html#colaboración",
+    "href": "primero/diapositivas/01c-datos.knit.html#colaboración",
+    "title": "Archivos de datos",
+    "section": "Colaboración",
+    "text": "Colaboración\n\nExisten numerosos recursos en línea para el trabajo colaborativo que el equipo de trabajo puede considerar. Mencionamos dos grandes grupos:\n\n\nGoogle drive / Dropbox / OneDrive: servicios de almacenamiento gratuito en línea con permisos de acceso, trabajo colaborativo y repositorio de seguridad.\n\n\n\n\nPlataformas tipo Github / Gitlab: herramientas de gestión de alojamiento de repositorios con control de acceso, control de versiones y colaboración, utilizadas generalmente para el desarrollo de software."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html#control-de-versiones",
+    "href": "primero/diapositivas/01c-datos.knit.html#control-de-versiones",
+    "title": "Archivos de datos",
+    "section": "Control de versiones",
+    "text": "Control de versiones\n\nEl control de versiones en un paso más que integra el paradigma de la investigación reproducible dentro de la ciencia abierta.\nAlmacena ordenadamente un historial de cambios y quién los realizó.Es como un ‘deshacer’ sin límites.\nSe pueden guardar metadatos del código escrito.\nInvaluable para proyectos colaborativos donde diferentes personas trabajan paralelamente en el mismo código.\nPermite realizar un seguimiento de los cambios realizados y puede combinar automáticamente el trabajo de las personas"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html#git",
+    "href": "primero/diapositivas/01c-datos.knit.html#git",
+    "title": "Archivos de datos",
+    "section": "git",
+    "text": "git\n\n \n\ngit es un software de código abierto desarrollado originalmente por Linus Torvalds en 2005\nSe puede instalar en Windows, Linux y Mac.\nSe integra en la web con sitios como GitHub, GitLab, BitBucket, etc.\nSe integra con IDE’s y editores como RStudio."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html#repositorios-github",
+    "href": "primero/diapositivas/01c-datos.knit.html#repositorios-github",
+    "title": "Archivos de datos",
+    "section": "Repositorios: GitHub",
+    "text": "Repositorios: GitHub\n\n\nEs un sitio web que ofrece un servicio para almacenar repositorios en base a control de versiones que se integra con Git.\nSe utiliza principalmente para alojar código y fuente de productos digitales (material educativo, libros, etc)\nFue desarrollado en 2008 y actualmente pertenece a Microsoft\nEs de acceso gratuito y tiene también planes de pago con servicios especiales (mayor cantidad de colaboradores en repositorios privados, por ejemplo)"
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html#depuración",
+    "href": "primero/diapositivas/01c-datos.knit.html#depuración",
+    "title": "Archivos de datos",
+    "section": "Depuración",
+    "text": "Depuración\n\nDatos brutos: archivo sin procesar que proviene directamente de su fuente de recopilación o captura de datos. Si es de fuente secundaria, este es el archivo que descarga o recibe del proveedor externo. No se comparten fuera del equipo de investigación, ya que suelen contener información identificable.\nDatos depurados del estudio: conjunto de datos que se puede compartir públicamente. Sin eliminación de observaciones ni variables, salvo la anonimización.\nDatos analíticos: conjunto de datos que se crea a partir del conjunto depurado de datos pero se modifica aún más para un análisis específico. Aquí aparecen las variables creadas en el análisis, posibles eliminaciones de observaciones y/o variables e imputaciones de valores perdidos."
+  },
+  {
+    "objectID": "primero/diapositivas/01c-datos.knit.html#calidad",
+    "href": "primero/diapositivas/01c-datos.knit.html#calidad",
+    "title": "Archivos de datos",
+    "section": "Calidad",
+    "text": "Calidad\n\n\n\nCompleto: Filas coincidentes con la recopilación y sin duplicados. Variables coincidentes con el diccionario de datos. Eliminaciones documentadas.\n\n\n\n\nVálido: variables que se ajustan a las restricciones que ha establecido en su diccionario de datos.\n\n\n\n\nPreciso:  sin valores erróneos detectables.\n\n\n\n\nCoherente: valores de las variables se miden, formatean o categorizan de manera consistente dentro de una columna.\n\n\n\n\nAnonimizado: se eliminan todos los identificadores directos de los datos y se reemplazan con códigos de estudio. Antes de compartir públicamente también se eliminan identificadores indirectos.\n\n\n\n\nAnalizable: los datos tienen un formato rectangular (filas y columnas), legible por máquina y cumple con las reglas básicas de organización."
+  },
+  {
+    "objectID": "primero/diapositivas/05c-tipos.html",
+    "href": "primero/diapositivas/05c-tipos.html",
+    "title": "Tipos de datos específicos",
+    "section": "",
+    "text": "Los tipos de datos en lenguaje R se reconocen por:\n\nint (integer): números enteros\n\n\nnum o dbl (numeric): números reales\n\n\nchr (character): caracteres (texto)\n\n\nlogi o lgl (logical): valores lógicos\n\n\nDate: fechas\n\n\ndttm (date-time): fechas y horas\n\n\nfct (factor): factores"
+  },
+  {
+    "objectID": "primero/diapositivas/06-analisis.html",
+    "href": "primero/diapositivas/06-analisis.html",
+    "title": "Operaciones múltiples, estadísticos y bucles",
+    "section": "",
+    "text": ". . .\nLa filosofía de trabajo de tidyverse se plantea nunca copiar y pegar más de dos veces el código escrito, pero cuando necesitamos realizar la misma operación en un conjunto de variables simultáneamente nos encontramos con este problema.\n. . .\nLa solución, ofrecida dentro de dplyr, es un andamiaje que permite aplicar funciones y expresiones a varias columnas simultáneamente.\n. . .\nEs una forma de iteración, donde se repite la misma acción en diferentes objetos. En este caso los objetos serán columnas (variables) de la tabla de datos.\n. . .\nLas operaciones simultáneas pueden darse como transformación (dentro de un mutate()) o de resumen (dentro de un summarise())"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html",
+    "href": "primero/diapositivas/08-quarto.html",
+    "title": "Residencia-INE",
+    "section": "",
+    "text": "basado en tom mock, mine centikayay elaboración propia. artwork por allison horst"
+  },
+  {
+    "objectID": "primero/diapositivas/08-quarto.html#footnotes",
+    "href": "primero/diapositivas/08-quarto.html#footnotes",
+    "title": "Residencia-INE",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nconversor de documentos libre y de código abierto, mayormente usado como una herramienta de escritura (especialmente por académicos) ver en Wikipedia↩︎"
   }
 ]
