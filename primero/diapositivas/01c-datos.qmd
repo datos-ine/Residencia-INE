@@ -23,7 +23,7 @@ library(fontawesome)
 library(tidyverse)
 ```
 
-## Formatos de archivos
+## Formatos de archivos {.title-top}
 
 <br>
 
@@ -37,7 +37,7 @@ library(tidyverse)
 
 - Hay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos.
 
-## Almacenamiento y seguridad
+## Almacenamiento y seguridad {.title-top}
 
 Características a considerar respecto al almacenamiento: 
 
@@ -53,7 +53,7 @@ Características a considerar respecto al almacenamiento:
 
 - **Accesibilidad y usabilidad de los archivos:** asegurarse de que el equipo de trabajo pueda encontrar los archivos fácilmente y que pueda comprender qué contienen.
 
-## Colaboración
+## Colaboración {.title-top}
 
 <br>
 
@@ -71,7 +71,7 @@ Existen numerosos recursos en línea para el trabajo colaborativo que el equipo 
 
 :::
 
-## Control de versiones
+## Control de versiones {.title-top}
 
 - El control de versiones en un paso más que integra el paradigma de la investigación reproducible dentro de la ciencia abierta.
 
@@ -83,7 +83,7 @@ Existen numerosos recursos en línea para el trabajo colaborativo que el equipo 
 
 - Permite realizar un seguimiento de los cambios realizados y puede combinar automáticamente el trabajo de las personas
 
-## git  {transition="zoom"}
+## git  {transition="zoom" .title-top}
 
 
 ![](img/01/git.PNG){.absolute top=0 right=0 width=400}
@@ -101,7 +101,7 @@ Existen numerosos recursos en línea para el trabajo colaborativo que el equipo 
 - Se integra con IDE’s y editores como RStudio. 
 
 
-## Repositorios: GitHub
+## Repositorios: GitHub {.title-top}
 
 <br>
 
@@ -113,7 +113,7 @@ Existen numerosos recursos en línea para el trabajo colaborativo que el equipo 
 
 - Es de acceso gratuito y tiene también planes de pago con servicios especiales (mayor cantidad de colaboradores en repositorios privados, por ejemplo)
 
-## Depuración {transition="slide"}
+## Depuración {transition="slide" .title-top}
 
 - **Datos brutos:** archivo sin procesar que proviene directamente de su fuente de recopilación o captura de datos. Si es de fuente secundaria, este es el archivo que descarga o recibe del proveedor externo. No se comparten fuera del equipo de investigación, ya que suelen contener información identificable.
 
@@ -121,7 +121,7 @@ Existen numerosos recursos en línea para el trabajo colaborativo que el equipo 
 
 - **Datos analíticos:** conjunto de datos que se crea a partir del conjunto depurado de datos pero se modifica aún más para un análisis específico. Aquí aparecen las variables creadas en el análisis, posibles eliminaciones de observaciones y/o variables e imputaciones de valores perdidos.
 
-## Calidad {.smaller}
+## Calidad {.smaller .title-top}
 
 <br>
 

@@ -41,7 +41,7 @@ div {
 Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación.
 :::
 
-## Plan de gestión de datos
+## Plan de gestión de datos {.title-top}
 
 - **Descripción de los datos con los que trabajamos:** Fuente, proceso de limpieza, etc.
 - **Formato de los datos:** Instrumentos en papel, tipos de archivos, etc.
@@ -50,7 +50,7 @@ Un plan de gestión de datos es un documento complementario sobre cómo se plane
 - **Privacidad y la confidencialidad:** Anominización, consentimientos informados, etc.
 - **Funciones y responsabilidades**
 
-## Dato científico
+## Dato científico {.title-top}
 
 Un dato científico esta compuesto por: 
 
@@ -61,7 +61,7 @@ Un dato científico esta compuesto por:
 
 ![](img/01/operacionalizacion.jpg)
 
-## Instrumentos de recolección
+## Instrumentos de recolección {.title-top}
 
 - Los instrumentos de recolección de datos característicos dentro del ámbito cuantitativo son los **cuestionarios estructurados**.
 
@@ -73,13 +73,34 @@ Un dato científico esta compuesto por:
 
 - Es conveniente utilizar preguntas validadas previamente que garanticen la captura de la información adecuadamente.
 
-## Nivel de medición de las variables
+## Nivel de medición de las variables {.title-top}
 
 Las variables operacionalizadas que surjen de los cuestionarios cumpliran con algún nivel de medición:
 
 ![](img/01/medicion.jpg)
 
-## Preguntas: abiertas y cerradas
+## Tipos de variables habituales {.title-top}
+
+<br>
+
+::: {.fragment .fade-in-then-semi-out}
+-   **Cuantitativas o numéricas** (Continuas: p. ej. edad, peso o discretas: p. ej. número de consultas)
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   **Cualitativas o categóricas** (Nominales: p. ej. sexo, diagnóstico. u ordinales: p. ej. gravedad (leve/moderado/severo).
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   **Fechas / Tiempos** (Ej.: fecha de inicio de síntomas, fecha de notificación).
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   **Lógicas** (dicotómicas Verdadero - Falso)
+:::
+
+
+## Preguntas: abiertas y cerradas {.title-top}
 
 <br>
 
@@ -102,7 +123,7 @@ Las variables operacionalizadas que surjen de los cuestionarios cumpliran con al
 
 ::::
 
-## Preguntas: simples y multiples
+## Preguntas: simples y multiples {.title-top}
 
 <br>
 
@@ -125,13 +146,13 @@ Las variables operacionalizadas que surjen de los cuestionarios cumpliran con al
 
 ::::
 
-## Pregunta: batería de items
+## Pregunta: batería de items {.title-top}
 
 <br>
 
 ![](img/01/preguntas6.png)
 
-## Preguntas: condicionales
+## Preguntas: condicionales {.title-top}
 
 
 ![](img/01/preguntas7.png){width=70%}
@@ -140,7 +161,7 @@ Las variables operacionalizadas que surjen de los cuestionarios cumpliran con al
 ![](img/01/preguntas8.png){width=70%}
 
 
-## Modalidades
+## Modalidades {.title-top}
 
 <br>
 
@@ -153,7 +174,7 @@ Las variables operacionalizadas que surjen de los cuestionarios cumpliran con al
   - Un individuo puede ser diabético e hipertenso simultáneamente. En este caso es necesario definir una variable por cada opción de respuesta y que sus modalidades dicotómicas sean la ausencia o presencia de dicha opción: 
 Diabetes: [si - no]  Hipertensión: [si - no]  
 
-## Ética: identidad
+## Ética: identidad {.title-top}
 
 Clasificación de archivos de datos según identificación personal: 
 
@@ -173,7 +194,7 @@ Clasificación de archivos de datos según identificación personal:
 
 - **Anónimo:** nunca se recopila información de identificación, por lo que debería haber poco o ningún riesgo de identificar a un participante específico.
 
-## Ética: sensibilidad
+## Ética: sensibilidad {.title-top}
 
 ::: {.fragment .fade-in-then-semi-out}
 
@@ -193,7 +214,18 @@ Clasificación de archivos de datos según identificación personal:
 
 :::
 
-## Buenas prácticas
+## Consejos cuando trabajamos con datos {.title-top}
+
+<br>
+<br>
+
+1.  Definir claramente la **unidad de análisis** antes de recolectar/analizar.
+2.  Mantener un **diccionario de datos** actualizado (incluyendo variables construidas).
+3.  Saber el **tipo de variable** para elegir análisis y gráfico adecuado.
+4.  Guardar metadatos y versión de los archivos.
+
+
+## Buenas prácticas {.title-top}
 
 <br>
 
@@ -204,7 +236,7 @@ Clasificación de archivos de datos según identificación personal:
 5. Cuidado con la longitud de los caracteres. Tomar en cuenta toda ubicación del archivo.
 
 
-## Directorios / carpetas
+## Directorios / carpetas {.title-top}
 
 <br>
 
@@ -215,7 +247,7 @@ Clasificación de archivos de datos según identificación personal:
 5. Limitar la cantidad de caracteres
 6. Agregar número de orden al comienzo del nombre de cada carpeta, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).
 
-## Nombres de archivos {.smaller}
+## Nombres de archivos {.smaller .title-top}
 
 1. Nombres descriptivos (un usuario debe poder comprender el contenido del archivo sin abrirlo).
 2. Evitar información de identificación personal 
@@ -228,7 +260,7 @@ Clasificación de archivos de datos según identificación personal:
 8. Agregar número de orden al comienzo del nombre de cada archivo, con ceros a la izquierda para garantizar una clasificación adecuada (01_, 02_).
 9. Usar metadatos redundantes (información) en el nombre del archivo. Reduce la confusión si alguna vez se mueve a una carpeta diferente.También permite realizar búsquedas en tus archivos. Por ejemplo, coloque siempre la palabra “raw” (crudo) o “clean” (limpio) en un nombre de archivo de datos, incluso si el archivo está alojado en una carpeta “raw” o “clean”.
 
-## Nombres de variables {.smaller}
+## Nombres de variables {.smaller .title-top}
 
 <br>
 
@@ -249,7 +281,7 @@ Clasificación de archivos de datos según identificación personal:
 - Utilizar prefijos y sufijos para identificación de grupo de variables.
 
 
-## Codificación de valores
+## Codificación de valores {.title-top}
 
 <br>
 <br>
@@ -260,11 +292,32 @@ Clasificación de archivos de datos según identificación personal:
 - Valores faltantes (dejar en blanco o usar códigos numéricos extremos de escala, 9, 99, 999, etc)
 
 
-## Documentación: diccionario de datos
+## Metadatos: diccionario de datos {.title-top}
+
+- Son *"los datos que hablan de los datos"* e inseparables de cualquier tabla de datos que trabajemos.
+
+- Describen origen de recolección, fecha, definiciones conceptuales y técnicas, tipo de estudio al que están asociados, etc.
+
+::: {style="font-size: 80%;"}
+Delimitador de variables: ;
+
+Delimitador de decimales: ,
+
+| Variable           |       Tipo | Descripción           | Valores posibles |
+|--------------------|-----------:|-----------------------|------------------|
+| id_caso            |   numérico | Identificador único   | 1,2,3...         |
+| edad               |   numérico | Edad en años          | 0–120            |
+| sexo               | categórica | Sexo biológico        | M, F, O          |
+| fecha_notificacion |      fecha | Fecha de notificación | AAAA-MM-DD       |
+| diagnostico        | categórica | Código CIE10          | Formato CIE10    |
+:::
+
+
+## Diccionario de datos {.title-top}
 
 <br>
 
-Todo archivo de datos o grupo de archivos que conforman una base de datos debe tener estar siempre acompañado por un diccionario de datos.
+Todo archivo de datos o grupo de archivos que conforman una base de datos debería siempre estar acompañado por un diccionario de datos.
 
 El **diccionario de datos** o ***codebook*** enumera: 
 
@@ -273,7 +326,7 @@ El **diccionario de datos** o ***codebook*** enumera:
 - tipo de varible
 - valores permitidos (escalas, códigos, categorías)
 
-## Seguimos analizando la documentación de la ENFR 2018
+## Seguimos analizando la documentación de la ENFR 2018 {.title-top}
 
 <br>
 <br>

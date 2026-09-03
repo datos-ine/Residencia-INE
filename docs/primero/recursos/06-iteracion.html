@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.21">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Operaciones múltiples e iteración – Residencia-INE</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -68,18 +71,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7e9717d9caa9b4d114d189eaeb260ada.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-583656d7c2e7e961b97da43f6c342f38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-bf209e7d305bb93e59a5263bd98fed56.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-583656d7c2e7e961b97da43f6c342f38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-25e64ecf04745fc540e13936e5883341.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-7416cfc00a00f4f06d12b98363d5ccde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-25e64ecf04745fc540e13936e5883341.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1161,14 +1163,17 @@ returning NA</code></pre>
 <p>Vamos a hacer uso de la función <code>dis_ls()</code> del paquete <strong>fs</strong> (file system) que es muy útil cuando debemos hacer operaciones con carpetas y archivos de sistema desde el código (en este caso Windows).</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'fs' was built under R version 4.5.3</code></pre>
+</div>
 </div>
 <p>Con la función <code>dir_ls()</code> obtenemos listados de directorio (similar a <strong>dir()</strong> de la línea de comandos de Windows).</p>
 <p>Si en la carpeta están solos los archivos de datos no hay que aclarar nada más pero si hay otros se puede usar el argumento <em>glob</em> para definir un patrón de búsqueda. Para que esto funcione bien los archivos tienen que tener un mismo formato en su nombre. Por ejemplo, aprovechando el formato de estos archivos vamos a usar el patrón “datos_*” dentro de una subcarpeta denominada datos.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>archivos <span class="ot">&lt;-</span> <span class="fu">dir_ls</span>(<span class="at">path =</span> <span class="st">"datos"</span>, </span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">glob =</span> <span class="st">"datos/datos_*"</span>) </span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>archivos</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>archivos <span class="ot">&lt;-</span> <span class="fu">dir_ls</span>(<span class="at">path =</span> <span class="st">"datos"</span>, </span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">glob =</span> <span class="st">"datos/datos_*"</span>) </span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a>archivos</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>datos/datos_abril_vigilancia.csv      datos/datos_agosto_vigilancia.csv     
 datos/datos_diciembre_vigilancia.csv  datos/datos_enero_vigilancia.csv      
@@ -1181,12 +1186,12 @@ datos/datos_octubre_vigilancia.csv    datos/datos_septiembre_vigilancia.csv </co
 <p>Quedaron almacenados en el vector <strong>archivos</strong> los 12 nombres de los archivos mensuales. Observemos que tienen el formato “datos_mes_vigilancia.csv” y además nos dicen que son de texto plano con separador coma.</p>
 <p>A continuación aplicaremos la función <code>map_df()</code> del paquete purrr junto a la función <code>read_csv()</code> para repetir las lecturas de estos archivos agregando el nombre de cada uno a las observaciones de la tabla final.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> archivos <span class="sc">|&gt;</span> </span>
-<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a>           <span class="fu">map_df</span>(read_csv, <span class="at">.id =</span> <span class="st">"archivo"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> archivos <span class="sc">|&gt;</span> </span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>           <span class="fu">map_df</span>(read_csv, <span class="at">.id =</span> <span class="st">"archivo"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>La primera variable que tendrá el mismo nombre que definimos en el argumento <strong>.id</strong> es el nombre completo del archivo fuente.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> <span class="fu">count</span>(archivo)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> <span class="fu">count</span>(archivo)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 2
    archivo                                   n
@@ -1208,11 +1213,11 @@ datos/datos_octubre_vigilancia.csv    datos/datos_septiembre_vigilancia.csv </co
 <p>En estos datos de ejemplo ficticios hay 157 observaciones de cada uno de los meses, pero en la realidad estas cantidades seguramente son variantes.</p>
 <p>Para resolver el problema de que nos quede solamente el nombre del mes usaremos la función <code>separate_wider_delim()</code> de <strong>tidyr</strong> indicando que separe el nombre con el delimitador “_” y con el argumento <strong>names</strong> me quede la parte del medio con nombre mes y se deshaga de las constantes “datos” y “vigilancia”.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_delim</span>(<span class="at">cols =</span> archivo, </span>
-<span id="cb99-3"><a href="#cb99-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">delim =</span> <span class="st">"_"</span>, </span>
-<span id="cb99-4"><a href="#cb99-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">"mes"</span>, <span class="cn">NA</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb99-5"><a href="#cb99-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_delim</span>(<span class="at">cols =</span> archivo, </span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">delim =</span> <span class="st">"_"</span>, </span>
+<span id="cb100-4"><a href="#cb100-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">"mes"</span>, <span class="cn">NA</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb100-5"><a href="#cb100-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 2
    mes            n
@@ -1233,15 +1238,15 @@ datos/datos_octubre_vigilancia.csv    datos/datos_septiembre_vigilancia.csv </co
 </div>
 <p>La estructura completa unida por tuberías nos quedaría:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">dir_ls</span>(<span class="at">path =</span> <span class="st">"datos"</span>, <span class="at">glob =</span> <span class="st">"datos/datos_*"</span>)  <span class="sc">|&gt;</span> </span>
-<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_df</span>(read_csv, <span class="at">.id =</span> <span class="st">"archivo"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb101-3"><a href="#cb101-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_delim</span>(<span class="at">cols =</span> archivo, </span>
-<span id="cb101-4"><a href="#cb101-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">delim =</span> <span class="st">"_"</span>, </span>
-<span id="cb101-5"><a href="#cb101-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">"mes"</span>, <span class="cn">NA</span>)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">dir_ls</span>(<span class="at">path =</span> <span class="st">"datos"</span>, <span class="at">glob =</span> <span class="st">"datos/datos_*"</span>)  <span class="sc">|&gt;</span> </span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_df</span>(read_csv, <span class="at">.id =</span> <span class="st">"archivo"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb102-3"><a href="#cb102-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_delim</span>(<span class="at">cols =</span> archivo, </span>
+<span id="cb102-4"><a href="#cb102-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">delim =</span> <span class="st">"_"</span>, </span>
+<span id="cb102-5"><a href="#cb102-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">"mes"</span>, <span class="cn">NA</span>)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>El resultado final es que leímos 12 archivos (podrían ser muchos más, todos los que quisiéramos) en tan solo 3 líneas de código unidas por dos tuberías.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>datos</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>datos</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,884 × 19
    mes      HC SEXO   EDAD ANT_DIABETES ANT_TBC ANT_CANCER ANT_OBESIDAD ANT_ECV
@@ -1323,13 +1328,14 @@ datos/datos_octubre_vigilancia.csv    datos/datos_septiembre_vigilancia.csv </co
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
