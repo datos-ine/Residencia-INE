@@ -6,6 +6,7 @@ format:
     self-contained: true
     width: 1920
     height: 1080
+    auto-stretch: false
     slide-number: true
     transition: fade
     theme: [simple, img/custom.scss]
@@ -38,7 +39,7 @@ library(tidyverse)
 
 ## Paquete readr
 
-![](img/03/readr.png){fig-align="center"}
+![](img/03/readr.png){fig-align="center" width="12%"}
 
 El paquete **readr** se instala y activa cuando ejecutamos `library(tidyverse)`.
 
@@ -144,13 +145,14 @@ read_csv(archivos_SUH, id = "archivo")
 
 ## Herramienta de lectura de RStudio
 
+<br>
 
-![](img/03/Import.PNG)
+![](img/03/Import.PNG){fig-align="center"}
 
 
 ## Paquete readxl
 
-![](img/03/readxl.png){fig-align="center"}
+![](img/03/readxl.png){fig-align="center" width="12%"}
 
 El paquete **readxl** se instala con tidyverse pero hay que activarlo aparte mediante `library(readxl)`.
 
@@ -158,7 +160,7 @@ El paquete **readxl** se instala con tidyverse pero hay que activarlo aparte med
 
 - La función comodín para leer, tanto formatos .xls como .xlsx, es `read_excel()`
 
-<br>
+- Ver documento [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
 
 ## Lectura con funciones de readxl
 
@@ -179,7 +181,7 @@ La estructura de los argumentos de la función `read_excel()` es:
 
 ## Paquete haven
 
-![](img/03/haven.png){width=20% fig-align="center"}
+![](img/03/haven.png){width=12% fig-align="center"}
 
 Este paquete permite la importación de archivos provenientes de paquetes estadísticos como SPSS (.sav), Stata (.dta) y SAS (.sas7bdat) y también su exporatción.
 
@@ -187,10 +189,39 @@ Este paquete permite la importación de archivos provenientes de paquetes estad�
 
 - Las funciones de exportación comienzan con el prefijo `write_`
 
-- Utiliza la librería ReadStat hecha en lenguaje C por Evan Miller.
-
 - Tiene algunas limitaciones dependiendo de las versiones de los softwares.
 
+## Características argumentales comunes 
+
+<br>
+<br>
+
+::: incremental
+
+- Adivinación de tipo de datos (que tipo de dato contiene cada columna)
+
+- Valores que consideramos como faltantes (argumento **na**)  
+
+- Tipo de columna que queremos forzar al leer (argumento col_types) 
+
+:::
+
+## Otros formatos online y bases de datos
+
+<br>
+
+
+::: incremental
+
+- Lectura y escritura de archivos en Google Sheets (paquete [googlesheets4](https://googlesheets4.tidyverse.org/))
+
+- Conexión a bases de datos tipo SQL (paquetes [DBI](https://cran.r-project.org/web/packages/DBI/index.html) y [dbplyr](https://dbplyr.tidyverse.org/))
+
+- Archivos Apache Parquet (paquete [arrow](https://arrow.apache.org/docs/r/))
+
+- Otros: webcrapping, datos jerarquico (json -JavaScript Object-), etc 
+
+:::
 
 ## Formato nativo R
 
@@ -210,7 +241,7 @@ Cabe aclarar que cuando nos referimos a objetos estamos hablando de cualquier es
 
 <br>
 
-![](img/03/r4ds2.png){fig-align="center"}
+![](img/03/r4ds2.png){width="15%" fig-align="center"}
 
 ::: {.centered}
 

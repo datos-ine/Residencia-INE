@@ -1,5 +1,5 @@
 ---
-title: "Diagnóstico y depuración de datos"
+title: "Exploración ,diagnóstico y depuración de datos"
 subtitle: "Residencia de Epidemiología"
 format: 
   revealjs:
@@ -115,6 +115,43 @@ Está diseñado para obtener un resumen rápido de la estructura de tablas de da
 Se define como una colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos. El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos.
 :::
 
+## skimr {.title-top}
+
+<br>
+
+La función principal del paquete es `skim()` y devuelve un resumen del dataframe con el numero de filas y columnas, la frecuencia de tipos de variables e información de cada una de ellas: cantidad de datos faltantes, porcentaje de completitud, etc.
+
+En las variables numéricas además nos informa de la media, el desvío estandar, los percentilos 0, 25, 50, 75, 100 y construye un mini histograma.
+
+Para las variables tipo fecha y hora, el mínimo, máximo y la mediana.
+
+<br>
+
+![](img/05a/ejemplo_skim.PNG){fig-align="center" width=60%}
+
+## dlookr {.title-top}
+
+<br>
+
+Este paquete tiene varias familias de funciones destinadas a diagnosticar, EDA y transformación de datos.
+
+Las funciones de diagnostico comienzan con `diagnose_` y utiliza como sufijo el tipo de datos que deseamos analizar (numeric, character, etc)
+
+Informa mínimos, máximos, media, mediana, cuartiles, observaciones con ceros, números negativos, outliers, frecuencia y porcentaje de niveles, etc.
+
+<br>
+
+![](img/05a/ejemplo_dlookr2.PNG){fig-align="center" width=60%}
+
+## dlookr {.title-top}
+
+También tiene unas funciones que grafican los outliers, la normalidad de las variables (qq-plot), matrices de correlación (correlación entre variables numéricas), boxplot, mosaicos, etc.
+
+
+![](img/05a/ejemplo_dlookr.PNG){fig-align="center" width=50%}
+
+
+
 ## Duplicados {.title-top}
 
 <br>
@@ -192,6 +229,161 @@ Si lo que buscamos es mantener a todas las observaciones de la tabla pero marcar
 2.  En el dataframe original, creamos una variable de marca usando `case_when()`, basándonos si el ID está presente en el dataframe reducido (vector de ID anterior).
 
 
+## Datos ausentes (NA´s) {.title-top}
+
+<br>
+
+- Los valores ausentes (`NA` en R) son, además de problemas  técnicos en nuestros datos, decisiones analíticas con consecuencias concretas sobre la validez de las estimaciones.
+
+- Ignorarlos o tratarlos de forma descuidada puede introducir sesgo de selección, alterar la representatividad de la muestra e implicar supuestos implícitos sobre el
+proceso que generó los datos.
+
+- Por eso, antes de continuar con el análisis, es indispensable entender qué está pasando con los valores ausentes.
+
+## Datos ausentes (NA´s) {.title-top}
+
+<br>
+
+Estos datos ausentes generalmente pueden ser:
+
+. . .
+
+- **Informativos**: Implican una causa estructural en la recopilación de los datos o anomalías en el entorno de observación.
+
+. . .
+
+- **Aleatorios**: tienen lugar independientemente del proceso de recopilación de datos.
+
+. . .
+
+A los primeros se le suele asignar un valor concreto ("S/D", etc.) y tenerlos en cuenta en el conteo de frecuencias, en cambio a los segundos se los elimina o imputa dependiendo de la situación.
+
+. . .
+
+Antes de decidir el procedimiento a seguir, debemos detectarlos y describirlos, pero siempre habrá que informar lo que se hizo con ellos.
+
+
+## Datos ausentes (NA´s) {.title-top}
+
+<br>
+
+La respuesta de qué hacer con esos valores ausentes es inherente a cada situación particular en la que estemos. No hay una solución mágica ni automática para todos los casos.
+
+. . .
+
+Siempre habrá que sospechar que esos NA son información valiosa y tendremos que descartar un patrón de ausencia subyacente.
+
+. . .
+
+Apliquemos la solución que definamos, previamente tenemos que:
+
+- detectar y cuantificar los `NA`
+- explorar la estructura de los `NA` 
+- decidir y documentar
+
+## Manejo de NA's con naniar {.title-top}
+
+![](img/05a/naniar_logo.png){.absolute top="25" left="1350" width="200"}
+
+<br>
+<br>
+<br>
+<br>
+
+El paquete **naniar** reúne funciones para el manejo de valores faltantes (NA en R).
+
+<br>
+
+-   Proporciona funciones analíticas y visuales de detección y gestión.
+
+-   Es compatible con el ecosistema *"tidy"* de tidyverse
+
+-   Posibilita el trabajo de imputación (aunque no lo trataremos en el curso)
+
+## Paquete naniar {.title-top}
+
+De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para nuestra tarea habitual.
+
+`miss_var_summary()`: proporciona un resumen analítico sobre los valores NA en cada variable del dataframe
+
+`gg_miss_upset()`: genera un gráfico Upset sobre los valores NA de dataframe
+
+`replace_with_na()`: reemplaza valores específicos con valores NA
+
+`replace_na_with()`: reemplaza valores NA con valores específicos
+
+![](img/05a/naniar.png){fig-align="center" width=50%}
+
+## Ejemplo de un UpSet de valores perdidos 
+
+Gráfico para explorar posibles **patrones** de valores ausentes.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 9
+#| fig-width: 18
+
+
+datos <- readxl::read_excel("datos/Enterovirus_practicas_depuracion.xlsx")
+library(naniar)
+
+datos |> 
+  dplyr::select(where(~any(is.na(.)))) |> 
+  gg_miss_upset(nsets = 15)
+```
+
+
+## Distintas eliminaciones según decisión tomada
+
+<br>
+
+- Si decidimos eliminar una variable completa porque tiene muchos valores ausentes:
+
+```{r, eval=FALSE, echo=TRUE}
+
+nombre_dataframe <- nombre_dataframe |> 
+  select(-var_con_datos_ausentes)
+```
+
+<br>
+
+Usar la función de selección negando la variables en cuestión es suficiente para producir un nuevo dataframe o sobreescribir el original sin ella.
+
+
+
+## Distintas eliminaciones según decisión tomada
+
+<br>
+
+- Si decidimos eliminar todos los valores ausentes de una tabla de datos (proceso menos recomendable en la mayoría de los situaciones):
+
+```{r, eval=FALSE, echo=TRUE}
+
+nombre_dataframe <- na.omit(nombre_dataframe)
+```
+
+<br>
+
+Usar la función `na.omit()` del R base  elimina observaciones enteras donde al menos haya una variable con valores `NA`. Produce una tabla con completitud de datos pero suele disminuir la cantidad de observaciones si la tabla original tiene muchos valores ausentes.
+
+## Distintas eliminaciones según decisión tomada
+
+<br>
+
+- Si decidimos eliminar todos los valores ausentes de determinada variable o variables (`na.omit()` no permite hacerlo)):
+
+```{r, eval=FALSE, echo=TRUE}
+
+nombre_dataframe <- nombre_dataframe |> 
+  drop_na(nombre_variable)
+```
+
+<br>
+
+Usar la función `drop_na()` del paquete tidyr del tidyverse elimina observaciones enteras donde haya valores `NA` dentro de la variable escrita. Produce una tabla con completitud de datos en la variable seleccionada y dependiendo de la cantidad de valores ausentes de dicha variable será la cantidad de observaciones finales que tengamos.
 
 
 

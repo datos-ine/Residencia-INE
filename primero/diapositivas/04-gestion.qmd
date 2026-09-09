@@ -1,5 +1,5 @@
 ---
-title: "Manipulación de datos"
+title: "Procesamiento de datos"
 subtitle: "Residencia de Epidemiología"
 format: 
   revealjs:
@@ -70,9 +70,11 @@ datos |> select(a, c)
 
 Además existe un abanico de funciones que **ayudan** a una mejor selección de nombres de variables.
 
+<br>
+
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="50%" style="font-size: 0.8em;"}
 
 - `everything()`: coincide con todas las variables.
 
@@ -88,7 +90,7 @@ Además existe un abanico de funciones que **ayudan** a una mejor selección de 
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" style="font-size: 0.8em;"}
 
 - `num_range()`: coincide con un rango numérico como x01, x02, x03.
 
@@ -210,18 +212,26 @@ filter(datos, condición)
 datos |> filter(condición)
 ```
 
-## Operadores de comparación {.title-top}
+## Operadores de comparación {.title-top .nostretch}
 
-![](img/04/operadores.PNG){fig-align="center"}
+<br>
+
+![](img/04/operadores.PNG){fig-align="center" width="50%"}
 
 
-## Operadores lógicos (booleanos) {.title-top}
+## Operadores lógicos (booleanos) {.title-top .nostretch}
 
-![](img/04/booleanos2.PNG){fig-align="center"}
+<br>
 
-## Operadores lógicos (booleanos) {.title-top}
 
-![](img/04/booleanos.PNG){fig-align="center"}
+![](img/04/booleanos2.PNG){fig-align="center" width="70%"}
+
+## Operadores lógicos (booleanos) {.title-top .nostretch}
+
+<br>
+
+
+![](img/04/booleanos.PNG){fig-align="center" width="60%"}
 
 ## Ejemplo de filter()
 
@@ -389,7 +399,7 @@ La mayoría de estas funciones aplican en tipos de datos int (enteros), dbl (rea
 ## Ejemplo de summarise() {.title-top}
 
 <br>
-<br>
+
 
 ```{r, echo=TRUE}
 # Resumimos la variable F2_Edad calculando media, 
@@ -629,11 +639,11 @@ datos |>
 
 ```
 
-## Documentación{.invert}
+## Documentación{.invert .nostretch}
 
 <br>
 
-![](img/03/r4ds2.png){fig-align="center"}
+![](img/03/r4ds2.png){fig-align="center" width="15%"}
 
 ::: {.centered}
 

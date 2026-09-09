@@ -279,13 +279,12 @@ Ejemplos de datos tipo cadena regular:
 |-----------------|------------------|
 | B188            | Códigos CIE10    |
 | C34.9           | Topografía CIE-O |
-| 9061/6          | Morfología CIE-O |
 | GAT-AAU-ATC-GAA | Secuencia ADN    |
 | 7600XAD         | Códigos postales |
 
 ## Paquete stringr {.title-top}
 
-![](img/05c/stringr.png){.absolute top="50" left="1500" width="200"}
+![](img/05c/stringr.png){.absolute top="5" left="1800" width="180"}
 
 
 
@@ -412,7 +411,6 @@ Una expresión regular habitualmente se construye concatenando la especificació
 | 0-9 a-z A-Z                                             | Rangos de números, letras…                            |
 | \\                                                      | Marca el carácter siguiente como un carácter especial |
 | \\.                                                     | Representa un punto dentro del patrón                 |
-| \\s                                                     | Representa un espacio en blanco dentro del patrón     |
 | \\n                                                     | Representa un salto de línea dentro del patrón        |
 | \\d                                                     | Representa un dígito numérico dentro del patrón       | 
 | \\w                                                     | Representa un carácter alfanumérico dentro del patrón |
@@ -523,65 +521,11 @@ Cadenas que finaliza con alguna letra mayúscula o minúscula
 
 >   `fct_lump_prop()`: unifica niveles menos frecuentes porcentuales en "otros"
 
-
-## Manejo de NA's con naniar {.title-top}
-
-![](img/05c/naniar_logo.png){.absolute top="20" left="1500" width="200"}
-
-<br>
-<br>
-<br>
-
-
-El paquete **naniar** es otro paquete que reúne funciones para el manejo de valores faltantes (NA en R).
+## Documentación{.invert .nostretch}
 
 <br>
 
--   Proporciona funciones analíticas y visuales de detección y gestión
-
--   Es compatible con el mundo *"tidy"* de tidyverse
-
--   Posibilita el trabajo de imputación (no lo trataremos en el curso)
-
-## Paquete naniar {.title-top}
-
-![](img/05c/naniar.png){.absolute top="700" left="600" width="750"}
-
-
-De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para nuestra tarea habitual.
-
-`miss_var_summary()`: proporciona un resumen sobre los valores NA en cada variable del dataframe
-
-`gg_miss_upset()`: genera un gráfico Upset sobre los valores NA de dataframe
-
-`replace_with_na()`: reemplaza valores específicos con valores NA
-
-`replace_na_with()`: reemplaza valores NA con valores específicos
-
-## Ejemplo de un UpSet de valores perdidos 
-
-<br>
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| fig-align: center
-#| fig-height: 8
-#| fig-width: 15
-
-
-datos <- readxl::read_excel("datos/base2023r.xlsx")
-library(naniar)
-
-gg_miss_upset(datos, nsets = 15)
-```
-
-## Documentación{.invert}
-
-<br>
-
-![](img/03/r4ds2.png){fig-align="center"}
+![](img/03/r4ds2.png){fig-align="center" width="15%"}
 
 ::: {.centered}
 

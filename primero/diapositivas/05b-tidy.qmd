@@ -292,11 +292,11 @@ Las funciones de **dplyr** para esta tarea son:
 
 - **bind_cols()** Une una tabla al lado de la otra. Es peligroso su uso si la confundimos con las uniones de transformación porque perdemos integridad de datos en las observaciones. Sirve sólo si el "orden" de las observaciones pueden garantizar la misma identidad de las partes a unir.
 
-## Documentación{.invert}
+## Documentación{.invert .nostretch}
 
 <br>
 
-![](img/03/r4ds2.png){fig-align="center"}
+![](img/03/r4ds2.png){fig-align="center" width="15%"}
 
 ::: {.centered}
 

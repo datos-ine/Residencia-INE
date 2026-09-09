@@ -711,7 +711,7 @@
     "href": "primero/diapositivas/05c-tipos.html#cadenas-de-caracteres-texto",
     "title": "Tipos de datos específicos",
     "section": "Cadenas de caracteres (texto)",
-    "text": "Cadenas de caracteres (texto)\n\nPara el lenguaje R, todo caracter que se encuentre entre comillas es una cadena de caracteres (en inglés llamada “string”).\nLas cadenas de caracteres pueden contener letras (“a”), números (“1”) y símbolos (“&”) o una combinación de todos ellos.\n\nEjemplos de datos tipo cadena regular:\n\n\n\nValores ejemplo\nDescripción\n\n\n\n\nB188\nCódigos CIE10\n\n\nC34.9\nTopografía CIE-O\n\n\n9061/6\nMorfología CIE-O\n\n\nGAT-AAU-ATC-GAA\nSecuencia ADN\n\n\n7600XAD\nCódigos postales"
+    "text": "Cadenas de caracteres (texto)\n\nPara el lenguaje R, todo caracter que se encuentre entre comillas es una cadena de caracteres (en inglés llamada “string”).\nLas cadenas de caracteres pueden contener letras (“a”), números (“1”) y símbolos (“&”) o una combinación de todos ellos.\n\nEjemplos de datos tipo cadena regular:\n\n\n\nValores ejemplo\nDescripción\n\n\n\n\nB188\nCódigos CIE10\n\n\nC34.9\nTopografía CIE-O\n\n\nGAT-AAU-ATC-GAA\nSecuencia ADN\n\n\n7600XAD\nCódigos postales"
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#paquete-stringr",
@@ -753,7 +753,7 @@
     "href": "primero/diapositivas/05c-tipos.html#expresiones-regulares-2",
     "title": "Tipos de datos específicos",
     "section": "Expresiones regulares",
-    "text": "Expresiones regulares\n\n\n\n\n\n\n\n\nSímbolos y metacaracteres\nDescripción\n\n\n\n\n|\nUne subexpresiones\n\n\n.\nConcuerda con cualquier carácter individual\n\n\n( )\nAgrupa subexpresiones\n\n\n0-9 a-z A-Z\nRangos de números, letras…\n\n\n\\\nMarca el carácter siguiente como un carácter especial\n\n\n\\.\nRepresenta un punto dentro del patrón\n\n\n\\s\nRepresenta un espacio en blanco dentro del patrón\n\n\n\\n\nRepresenta un salto de línea dentro del patrón\n\n\n\\d\nRepresenta un dígito numérico dentro del patrón\n\n\n\\w\nRepresenta un carácter alfanumérico dentro del patrón"
+    "text": "Expresiones regulares\n\n\n\n\n\n\n\n\nSímbolos y metacaracteres\nDescripción\n\n\n\n\n|\nUne subexpresiones\n\n\n.\nConcuerda con cualquier carácter individual\n\n\n( )\nAgrupa subexpresiones\n\n\n0-9 a-z A-Z\nRangos de números, letras…\n\n\n\\\nMarca el carácter siguiente como un carácter especial\n\n\n\\.\nRepresenta un punto dentro del patrón\n\n\n\\n\nRepresenta un salto de línea dentro del patrón\n\n\n\\d\nRepresenta un dígito numérico dentro del patrón\n\n\n\\w\nRepresenta un carácter alfanumérico dentro del patrón"
   },
   {
     "objectID": "primero/diapositivas/05c-tipos.html#expresiones-regulares-3",
@@ -791,102 +791,165 @@
     "text": "Funciones mas relevantes\n\n\nfct_infreq(): ordena niveles por frecuencia\n\n\n\nfct_explicit_na(): explicita valores NA (agrega etiqueta al nivel)\n\n\n\n\nfct_other(): unifica niveles concretos en “otros”\n\n\n\n\nfct_lump(): unifica niveles menos frecuentes absolutos en “otros”\n\n\n\n\nfct_lump_prop(): unifica niveles menos frecuentes porcentuales en “otros”"
   },
   {
-    "objectID": "primero/diapositivas/05c-tipos.html#manejo-de-nas-con-naniar",
-    "href": "primero/diapositivas/05c-tipos.html#manejo-de-nas-con-naniar",
-    "title": "Tipos de datos específicos",
-    "section": "Manejo de NA’s con naniar",
-    "text": "Manejo de NA’s con naniar\n\n  \nEl paquete naniar es otro paquete que reúne funciones para el manejo de valores faltantes (NA en R).\n\n\nProporciona funciones analíticas y visuales de detección y gestión\nEs compatible con el mundo “tidy” de tidyverse\nPosibilita el trabajo de imputación (no lo trataremos en el curso)"
-  },
-  {
-    "objectID": "primero/diapositivas/05c-tipos.html#paquete-naniar",
-    "href": "primero/diapositivas/05c-tipos.html#paquete-naniar",
-    "title": "Tipos de datos específicos",
-    "section": "Paquete naniar",
-    "text": "Paquete naniar\n\nDe las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para nuestra tarea habitual.\nmiss_var_summary(): proporciona un resumen sobre los valores NA en cada variable del dataframe\ngg_miss_upset(): genera un gráfico Upset sobre los valores NA de dataframe\nreplace_with_na(): reemplaza valores específicos con valores NA\nreplace_na_with(): reemplaza valores NA con valores específicos"
-  },
-  {
-    "objectID": "primero/diapositivas/05c-tipos.html#ejemplo-de-un-upset-de-valores-perdidos",
-    "href": "primero/diapositivas/05c-tipos.html#ejemplo-de-un-upset-de-valores-perdidos",
-    "title": "Tipos de datos específicos",
-    "section": "Ejemplo de un UpSet de valores perdidos",
-    "text": "Ejemplo de un UpSet de valores perdidos"
-  },
-  {
     "objectID": "primero/diapositivas/05c-tipos.html#documentación",
     "href": "primero/diapositivas/05c-tipos.html#documentación",
     "title": "Tipos de datos específicos",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\nCapítulos 14, 15, 16 y 17 del libro “R for Data Science (2e) - Data tidy”"
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulos 14, 15, 16 y 17 del libro “R for Data Science (2e) - Data tidy”"
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#etapas-previas-al-análisis",
     "href": "primero/diapositivas/05a-diagnostico.html#etapas-previas-al-análisis",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Etapas previas al análisis",
     "text": "Etapas previas al análisis\n\nLa etapa de depuración o limpieza de datos comienza con la exploración inicial y el diagnóstico adecuado de cada variable de interés de la tabla de datos cruda. Interviene aquí también, el objetivo del análisis, el protocolo de análisis pensado y el diccionario de datos asociado a la tabla.\n\n     \nFinalmente se hacen las transformaciones necesarias en los datos a partir del diagnóstico realizado."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#limpieza-de-datos",
     "href": "primero/diapositivas/05a-diagnostico.html#limpieza-de-datos",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Limpieza de datos",
     "text": "Limpieza de datos\n\n \n\n\nExploración de la estructura de la tabla de datos\n\n\n\n\nVerificación del tipo de dato de cada variable de interés\n\n\n\n\nDetección de valores faltantes\n\n\n\n\nDetección de errores\n\nIdentificación de las categorías de las variables cualitativas\nAnálisis de los mínimos y máximos de valores de cada variable cuantitativa"
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos",
     "href": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Exploración y diagnóstico de datos",
     "text": "Exploración y diagnóstico de datos\n\nLa exploración de datos se puede incluir dentro del análisis exploratorio de datos (EDA en inglés) y persigue un primer grupo de objetivos:\n\n\nConocer la estructura de la tabla de datos y sus tipos de variables\n\n\n\n\nDetectar observaciones incompletas (valores faltantes)\n\n\n\n\nDetectar datos con errores e inconsistencias\n\n\n\nHabitualmente hablamos de calidad de los datos en relación a los items anteriores."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos-1",
     "href": "primero/diapositivas/05a-diagnostico.html#exploración-y-diagnóstico-de-datos-1",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Exploración y diagnóstico de datos",
     "text": "Exploración y diagnóstico de datos\n\nUna segunda etapa nos va servir para conocer la distribución de las variables de interés a partir de:\n\n\nResumir datos mediante estadísticos\nVisualizar distribuciones y patrones mediante gráficos\nDetectar valores atípicos (outlier)"
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#paquetes-especificos",
     "href": "primero/diapositivas/05a-diagnostico.html#paquetes-especificos",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Paquetes especificos",
     "text": "Paquetes especificos\nVamos a trabajar con dos paquetes especiales que nos permiten hacer este trabajo, aunque dentro del universo de librerías de R vamos a encontrar muchos mas.\n\n\n\nskimr\n\n\nEstá diseñado para obtener un resumen rápido de la estructura de tablas de datos y es compatible con el ecosistema tidyverse.\n\n\n\n\n\n\ndlookr\n\n\nSe define como una colección de herramientas que permiten el diagnóstico, la exploración y la transformación de datos. El diagnóstico de datos proporciona información y visualización de valores faltantes, valores atípicos y valores únicos y negativos para ayudarle a comprender la distribución y la calidad de sus datos."
   },
   {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#skimr-1",
+    "href": "primero/diapositivas/05a-diagnostico.html#skimr-1",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "skimr",
+    "text": "skimr\n\nLa función principal del paquete es skim() y devuelve un resumen del dataframe con el numero de filas y columnas, la frecuencia de tipos de variables e información de cada una de ellas: cantidad de datos faltantes, porcentaje de completitud, etc.\nEn las variables numéricas además nos informa de la media, el desvío estandar, los percentilos 0, 25, 50, 75, 100 y construye un mini histograma.\nPara las variables tipo fecha y hora, el mínimo, máximo y la mediana."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#dlookr-1",
+    "href": "primero/diapositivas/05a-diagnostico.html#dlookr-1",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "dlookr",
+    "text": "dlookr\n\nEste paquete tiene varias familias de funciones destinadas a diagnosticar, EDA y transformación de datos.\nLas funciones de diagnostico comienzan con diagnose_ y utiliza como sufijo el tipo de datos que deseamos analizar (numeric, character, etc)\nInforma mínimos, máximos, media, mediana, cuartiles, observaciones con ceros, números negativos, outliers, frecuencia y porcentaje de niveles, etc."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#dlookr-2",
+    "href": "primero/diapositivas/05a-diagnostico.html#dlookr-2",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "dlookr",
+    "text": "dlookr\nTambién tiene unas funciones que grafican los outliers, la normalidad de las variables (qq-plot), matrices de correlación (correlación entre variables numéricas), boxplot, mosaicos, etc."
+  },
+  {
     "objectID": "primero/diapositivas/05a-diagnostico.html#duplicados",
     "href": "primero/diapositivas/05a-diagnostico.html#duplicados",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Duplicados",
     "text": "Duplicados\n\nOtro de los problemas con los debemos lidiar muchas veces es tener observaciones duplicadas.\nLas tareas habituales en estos casos son:\n\n\nDetección de observaciones y/o partes de observaciones (variables clave) duplicadas\n\n\n\n\nEliminación de duplicados a partir de observaciones únicas.\n\n\n\n\nRecortar tabla de datos para eliminar duplicados\n\n\n\n\nMarcar duplicados (conservando duplicados en la tabla)"
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#detección-de-duplicados",
     "href": "primero/diapositivas/05a-diagnostico.html#detección-de-duplicados",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Detección de duplicados",
     "text": "Detección de duplicados\n\nLas observaciones duplicadas pueden ser completas, generalmente a raíz de algún problema informático o bien parcial.\nHabitualmente nuestras tablas tienen identificadores únicos de las unidades de análisis o una serie de identificadores que resultan en una clave combinada.\n\nLa función get_dupes() del paquete janitor es una herramienta útil para identificar estas repeticiones."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#eliminación-de-duplicados-por-observaciones-únicas",
     "href": "primero/diapositivas/05a-diagnostico.html#eliminación-de-duplicados-por-observaciones-únicas",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Eliminación de duplicados por observaciones únicas",
     "text": "Eliminación de duplicados por observaciones únicas\n\nPara eliminar filas duplicadas en una tabla de datos podemos utilizar la función distinct() de dplyr.\n\ndistinct() muestra observaciones únicas a partir de la coincidencia total o parcial.\n\nLa función tiene un argumento denominado .keep_all que permite valores TRUE o FALSE. Si se iguala a TRUE se mantienen en el resultado todas las variables que son parte de la tabla, aunque estas no estén declaradas dentro del distinct().\nPor defecto, este argumento se encuentra igualado a FALSE."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#eliminación-de-duplicados-por-recorte-de-observaciones",
     "href": "primero/diapositivas/05a-diagnostico.html#eliminación-de-duplicados-por-recorte-de-observaciones",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Eliminación de duplicados por recorte de observaciones",
     "text": "Eliminación de duplicados por recorte de observaciones\n\nRecortar es similar a filtrar, la diferencia está en que se filtra por condiciones y recortamos por posiciones.\nLa familia de funciones que se puede utilizar para recortar es slice_*().\nEstas funciones pueden ser muy útiles si se aplican a un dataframe agrupado porque la operación de recorte se realiza en cada grupo por separado.\n\nPor ejemplo, si en una tabla hay varias filas por persona con fechas distintas de un seguimiento y queremos quedarnos con la última visita, podemos utilizar combinado group_by() y slice_max() para quedarnos sólo con esa observación del último encuentro para cada uno."
   },
   {
     "objectID": "primero/diapositivas/05a-diagnostico.html#marcar-duplicados",
     "href": "primero/diapositivas/05a-diagnostico.html#marcar-duplicados",
-    "title": "Diagnóstico y depuración de datos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
     "section": "Marcar duplicados",
     "text": "Marcar duplicados\n\nSi lo que buscamos es mantener a todas las observaciones de la tabla pero marcar aquellos que consideramos duplicados podemos hacer:\n\nRecortar el dataframe original a sólo las filas para el análisis. Guardar los ID de este dataframe reducido en un vector.\nEn el dataframe original, creamos una variable de marca usando case_when(), basándonos si el ID está presente en el dataframe reducido (vector de ID anterior)."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#datos-ausentes-nas",
+    "href": "primero/diapositivas/05a-diagnostico.html#datos-ausentes-nas",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Datos ausentes (NA´s)",
+    "text": "Datos ausentes (NA´s)\n\n\nLos valores ausentes (NA en R) son, además de problemas técnicos en nuestros datos, decisiones analíticas con consecuencias concretas sobre la validez de las estimaciones.\nIgnorarlos o tratarlos de forma descuidada puede introducir sesgo de selección, alterar la representatividad de la muestra e implicar supuestos implícitos sobre el proceso que generó los datos.\nPor eso, antes de continuar con el análisis, es indispensable entender qué está pasando con los valores ausentes."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#datos-ausentes-nas-1",
+    "href": "primero/diapositivas/05a-diagnostico.html#datos-ausentes-nas-1",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Datos ausentes (NA´s)",
+    "text": "Datos ausentes (NA´s)\n\nEstos datos ausentes generalmente pueden ser:\n\n\nInformativos: Implican una causa estructural en la recopilación de los datos o anomalías en el entorno de observación.\n\n\n\n\nAleatorios: tienen lugar independientemente del proceso de recopilación de datos.\n\n\n\nA los primeros se le suele asignar un valor concreto (“S/D”, etc.) y tenerlos en cuenta en el conteo de frecuencias, en cambio a los segundos se los elimina o imputa dependiendo de la situación.\n\n\nAntes de decidir el procedimiento a seguir, debemos detectarlos y describirlos, pero siempre habrá que informar lo que se hizo con ellos."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#datos-ausentes-nas-2",
+    "href": "primero/diapositivas/05a-diagnostico.html#datos-ausentes-nas-2",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Datos ausentes (NA´s)",
+    "text": "Datos ausentes (NA´s)\n\nLa respuesta de qué hacer con esos valores ausentes es inherente a cada situación particular en la que estemos. No hay una solución mágica ni automática para todos los casos.\n\nSiempre habrá que sospechar que esos NA son información valiosa y tendremos que descartar un patrón de ausencia subyacente.\n\n\nApliquemos la solución que definamos, previamente tenemos que:\n\ndetectar y cuantificar los NA\nexplorar la estructura de los NA\ndecidir y documentar"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#manejo-de-nas-con-naniar",
+    "href": "primero/diapositivas/05a-diagnostico.html#manejo-de-nas-con-naniar",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Manejo de NA’s con naniar",
+    "text": "Manejo de NA’s con naniar\n\n   \nEl paquete naniar reúne funciones para el manejo de valores faltantes (NA en R).\n\n\nProporciona funciones analíticas y visuales de detección y gestión.\nEs compatible con el ecosistema “tidy” de tidyverse\nPosibilita el trabajo de imputación (aunque no lo trataremos en el curso)"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#paquete-naniar",
+    "href": "primero/diapositivas/05a-diagnostico.html#paquete-naniar",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Paquete naniar",
+    "text": "Paquete naniar\nDe las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para nuestra tarea habitual.\nmiss_var_summary(): proporciona un resumen analítico sobre los valores NA en cada variable del dataframe\ngg_miss_upset(): genera un gráfico Upset sobre los valores NA de dataframe\nreplace_with_na(): reemplaza valores específicos con valores NA\nreplace_na_with(): reemplaza valores NA con valores específicos"
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#ejemplo-de-un-upset-de-valores-perdidos",
+    "href": "primero/diapositivas/05a-diagnostico.html#ejemplo-de-un-upset-de-valores-perdidos",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Ejemplo de un UpSet de valores perdidos",
+    "text": "Ejemplo de un UpSet de valores perdidos\nGráfico para explorar posibles patrones de valores ausentes."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#distintas-eliminaciones-según-decisión-tomada",
+    "href": "primero/diapositivas/05a-diagnostico.html#distintas-eliminaciones-según-decisión-tomada",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Distintas eliminaciones según decisión tomada",
+    "text": "Distintas eliminaciones según decisión tomada\n\n\nSi decidimos eliminar una variable completa porque tiene muchos valores ausentes:\n\n\nnombre_dataframe &lt;- nombre_dataframe |&gt; \n  select(-var_con_datos_ausentes)\n\n\nUsar la función de selección negando la variables en cuestión es suficiente para producir un nuevo dataframe o sobreescribir el original sin ella."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#distintas-eliminaciones-según-decisión-tomada-1",
+    "href": "primero/diapositivas/05a-diagnostico.html#distintas-eliminaciones-según-decisión-tomada-1",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Distintas eliminaciones según decisión tomada",
+    "text": "Distintas eliminaciones según decisión tomada\n\n\nSi decidimos eliminar todos los valores ausentes de una tabla de datos (proceso menos recomendable en la mayoría de los situaciones):\n\n\nnombre_dataframe &lt;- na.omit(nombre_dataframe)\n\n\nUsar la función na.omit() del R base elimina observaciones enteras donde al menos haya una variable con valores NA. Produce una tabla con completitud de datos pero suele disminuir la cantidad de observaciones si la tabla original tiene muchos valores ausentes."
+  },
+  {
+    "objectID": "primero/diapositivas/05a-diagnostico.html#distintas-eliminaciones-según-decisión-tomada-2",
+    "href": "primero/diapositivas/05a-diagnostico.html#distintas-eliminaciones-según-decisión-tomada-2",
+    "title": "Exploración ,diagnóstico y depuración de datos",
+    "section": "Distintas eliminaciones según decisión tomada",
+    "text": "Distintas eliminaciones según decisión tomada\n\n\nSi decidimos eliminar todos los valores ausentes de determinada variable o variables (na.omit() no permite hacerlo)):\n\n\nnombre_dataframe &lt;- nombre_dataframe |&gt; \n  drop_na(nombre_variable)\n\n\nUsar la función drop_na() del paquete tidyr del tidyverse elimina observaciones enteras donde haya valores NA dentro de la variable escrita. Produce una tabla con completitud de datos en la variable seleccionada y dependiendo de la cantidad de valores ausentes de dicha variable será la cantidad de observaciones finales que tengamos."
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#archivos-de-datos",
@@ -900,7 +963,7 @@
     "href": "primero/diapositivas/03-lectoescritura.html#paquete-readr",
     "title": "Importar y exportar archivos de datos",
     "section": "Paquete readr",
-    "text": "Paquete readr\n\nEl paquete readr se instala y activa cuando ejecutamos library(tidyverse).\n\nContiene una familia de funciones que permiten leer y escribir archivos de texto plano separados como coma o algún otro caracter (tabulación, punto y coma, etc)\nSus funciones de lectura comienzan todas con read_\nSus funciones de escritura comienzan con write_"
+    "text": "Paquete readr\n\n\n\n\n\nEl paquete readr se instala y activa cuando ejecutamos library(tidyverse).\n\nContiene una familia de funciones que permiten leer y escribir archivos de texto plano separados como coma o algún otro caracter (tabulación, punto y coma, etc)\nSus funciones de lectura comienzan todas con read_\nSus funciones de escritura comienzan con write_"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readr",
@@ -949,7 +1012,7 @@
     "href": "primero/diapositivas/03-lectoescritura.html#paquete-readxl",
     "title": "Importar y exportar archivos de datos",
     "section": "Paquete readxl",
-    "text": "Paquete readxl\n\nEl paquete readxl se instala con tidyverse pero hay que activarlo aparte mediante library(readxl).\n\nContiene funciones que permiten leer archivos de Microsoft Excel tan extendidos en nuestro trabajo cotidiano.\nLa función comodín para leer, tanto formatos .xls como .xlsx, es read_excel()"
+    "text": "Paquete readxl\n\n\n\n\n\nEl paquete readxl se instala con tidyverse pero hay que activarlo aparte mediante library(readxl).\n\nContiene funciones que permiten leer archivos de Microsoft Excel tan extendidos en nuestro trabajo cotidiano.\nLa función comodín para leer, tanto formatos .xls como .xlsx, es read_excel()\nVer documento Data Organization in Spreadsheets"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#lectura-con-funciones-de-readxl",
@@ -963,7 +1026,21 @@
     "href": "primero/diapositivas/03-lectoescritura.html#paquete-haven",
     "title": "Importar y exportar archivos de datos",
     "section": "Paquete haven",
-    "text": "Paquete haven\n\nEste paquete permite la importación de archivos provenientes de paquetes estadísticos como SPSS (.sav), Stata (.dta) y SAS (.sas7bdat) y también su exporatción.\n\nSus funciones principales son read_spss(), read_por(), read_stata(), read_dta(), read_sas()\nLas funciones de exportación comienzan con el prefijo write_\nUtiliza la librería ReadStat hecha en lenguaje C por Evan Miller.\nTiene algunas limitaciones dependiendo de las versiones de los softwares."
+    "text": "Paquete haven\n\n\n\n\n\nEste paquete permite la importación de archivos provenientes de paquetes estadísticos como SPSS (.sav), Stata (.dta) y SAS (.sas7bdat) y también su exporatción.\n\nSus funciones principales son read_spss(), read_por(), read_stata(), read_dta(), read_sas()\nLas funciones de exportación comienzan con el prefijo write_\nTiene algunas limitaciones dependiendo de las versiones de los softwares."
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#características-argumentales-comunes",
+    "href": "primero/diapositivas/03-lectoescritura.html#características-argumentales-comunes",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Características argumentales comunes",
+    "text": "Características argumentales comunes\n \n\nAdivinación de tipo de datos (que tipo de dato contiene cada columna)\nValores que consideramos como faltantes (argumento na)\nTipo de columna que queremos forzar al leer (argumento col_types)"
+  },
+  {
+    "objectID": "primero/diapositivas/03-lectoescritura.html#otros-formatos-online-y-bases-de-datos",
+    "href": "primero/diapositivas/03-lectoescritura.html#otros-formatos-online-y-bases-de-datos",
+    "title": "Importar y exportar archivos de datos",
+    "section": "Otros formatos online y bases de datos",
+    "text": "Otros formatos online y bases de datos\n\n\nLectura y escritura de archivos en Google Sheets (paquete googlesheets4)\nConexión a bases de datos tipo SQL (paquetes DBI y dbplyr)\nArchivos Apache Parquet (paquete arrow)\nOtros: webcrapping, datos jerarquico (json -JavaScript Object-), etc"
   },
   {
     "objectID": "primero/diapositivas/03-lectoescritura.html#formato-nativo-r",
@@ -977,7 +1054,7 @@
     "href": "primero/diapositivas/03-lectoescritura.html#documentación",
     "title": "Importar y exportar archivos de datos",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\nCapítulo 7 del libro “R for Data Science (2e)”"
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 7 del libro “R for Data Science (2e)”"
   },
   {
     "objectID": "primero/diapositivas/01c-datos.html#formatos-de-archivos",
@@ -1076,6 +1153,13 @@
     "title": "Gestión de datos - parte 1",
     "section": "Conjuntos de datos",
     "text": "Conjuntos de datos\n\n\n\n\nUn conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora.\nLos conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una sola unidad de investigación u observación.\n\n\n\n\nIdea clave: los datos sólo tienen significado en su contexto (quién, cuándo, donde, cómo, para qué) y generalmente son una reducción del fenómeno. Recordar que los datos no siempre son neutrales"
+  },
+  {
+    "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-2",
+    "href": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-2",
+    "title": "Gestión de datos - parte 1",
+    "section": "Conjuntos de datos",
+    "text": "Conjuntos de datos\n\nPartes básicas de una tabla de datos estructurada"
   },
   {
     "objectID": "primero/diapositivas/01a-datos.html#desde-lo-técnico-variable-vs-valor",
@@ -1243,7 +1327,7 @@
     "href": "primero/clases/08-quarto.html#tarjetas",
     "title": "Documentos de Quarto",
     "section": "Tarjetas",
-    "text": "Tarjetas\nLas tarjetas son la unidad fundamental de visualización dentro de los tableros.\nPueden encerrar tanto texto markdown como código que produzca alguna salida tipo valor, tabla o gráfico.\n::: {.card}\n\nAquí va el contenido de la tarjeta. Puede ser un markdown directo o la salida de código.\n\n```{r}\n\n```\n\n:::\nLas cajas de valor son tarjetas especiales que se declaran con el estilo reservado .valuebox.\n\n::: {.valuebox}\nFecha actual\n\n2026-09-02\n:::\nTambién se pueden declarar con metadatos dentro del bloque de código:\n#| content: valuebox\n#| title: \"Caja de valor\"\nn &lt;- mtcars |&gt; \n  tibble::as_tibble() |&gt; \n  dplyr::count() |&gt; \n  dplyr::pull(n)\n\nlist(\n  icon = \"trash\",\n  color = \"red\",\n  value = n\n)\n\n\n\n\n\n\nAquí se incluyen también dispositivos con cierta interactividad directa como son los htmlwidgets o si se conoce el lenguaje, código de Observable JS.\nLa galería de widgets disponibles en la actualidad cuenta con 132 dispositivos que se puede ver en https://gallery.htmlwidgets.org/"
+    "text": "Tarjetas\nLas tarjetas son la unidad fundamental de visualización dentro de los tableros.\nPueden encerrar tanto texto markdown como código que produzca alguna salida tipo valor, tabla o gráfico.\n::: {.card}\n\nAquí va el contenido de la tarjeta. Puede ser un markdown directo o la salida de código.\n\n```{r}\n\n```\n\n:::\nLas cajas de valor son tarjetas especiales que se declaran con el estilo reservado .valuebox.\n\n::: {.valuebox}\nFecha actual\n\n2026-09-09\n:::\nTambién se pueden declarar con metadatos dentro del bloque de código:\n#| content: valuebox\n#| title: \"Caja de valor\"\nn &lt;- mtcars |&gt; \n  tibble::as_tibble() |&gt; \n  dplyr::count() |&gt; \n  dplyr::pull(n)\n\nlist(\n  icon = \"trash\",\n  color = \"red\",\n  value = n\n)\n\n\n\n\n\n\nAquí se incluyen también dispositivos con cierta interactividad directa como son los htmlwidgets o si se conoce el lenguaje, código de Observable JS.\nLa galería de widgets disponibles en la actualidad cuenta con 132 dispositivos que se puede ver en https://gallery.htmlwidgets.org/"
   },
   {
     "objectID": "primero/clases/08-quarto.html#interactividad",
@@ -1355,7 +1439,7 @@
     "href": "primero/clases/04-tipos.html#variables-de-tiempo",
     "title": "Gestión de tipos de datos",
     "section": "Variables de tiempo",
-    "text": "Variables de tiempo\n\n\n\n\nArtwork por @allison_horst\n\n\n\nLos eventos epidemiológicos se presentan en algun momento del tiempo, por lo que las variables de tiempo son habituales componentes de las bases de datos con las que trabaja un epidemiólogo. Estas variables pueden presentarse en distintas unidades de medida, tales como horas, días, años, decadas, etc.\nA veces trabajar con datos tipo fecha y hora puede ser frustrante.Las fechas vienen en muchos formatos diferentes, que hace que reconocerlos y analizarlos sea un desafío.\nPrimero necesitamos que los datos sean reconocidos como formato fecha (Date) y luego debemos lidiar con operaciones específicas como extraer componentes de los horarios, como años, meses o segundos, o cambiar zonas horarias o hacer cálculos entres fechas.\nPara simplificar esta tarea tidyverse trae el paquete lubridate que proporciona herramientas para manipular variables fecha-hora.\nEspecíficamente, lubridate ayuda a los usuarios a:\n\nIdentificar y analizar los datos de fecha y hora.\nExtrer y modificar componentes de una fecha y hora, como años, meses, días, horas, minutos y segundos.\nRealizar cálculos precisos con fecha y hora.\nManejar zonas horarias y horario de verano.\n\nlubridate se instala y activa con tidyverse:\n\nLectura de fechas\nPodemos leer fechas en R usando la serie de funciones ymd() proporcionada por este paquete. Estas funciones analizan el contenido de cadenas de caracteres y las transforman a fechas.\nLas letras y, m y d corresponden al año, mes y día de una fecha. Para leer una fecha, seleccionamos el nombre de la función que coincide con el orden de los elementos contenidos en el objeto original. Por ejemplo, en la siguiente fecha el elemento mes viene primero, seguido por el día y luego el año, al estilo estadounidense. Entonces usaríamos la función mdy():\n\nmdy(\"01-24-2024\")\n\n[1] \"2024-01-24\"\n\n\nEl formato de salida siempre año-mes-día, es decir se organiza del elemento más grande que anida a los otros.\nSi en cambio tuviese la forma en que usamos las fechas nosotros, usaríamos dmy().\n\ndmy(\"24-01-2024\")\n\n[1] \"2024-01-24\"\n\n\nComo se observa el formato de los caracteres de entrada pueden utilizar distintos separadores, como guión medio (-), punto (.), barra inclinada (/), guión bajo (_) o incluso espacios.\nLa clase de los objetos convertidos es Date.\n\nx &lt;- dmy(\"24/01/2024\")\n\nclass(x)\n\n[1] \"Date\"\n\n\n\n\n\nOrden de los elementos\nFunción\n\n\n\n\naño, mes y día\nymd()\n\n\naño, día y mes\nydm()\n\n\nmes, día y año\nmdy()\n\n\ndía, mes y año\ndmy()\n\n\nhora y minuto\nhm()\n\n\nhora, minuto y segundo\nhms()\n\n\naño, mes, día, hora, minuto y segundo\nymd_hms()\n\n\n\nLas funciones que tienen componente de hora crean objetos POSIXct.\nCuando una función dmy() se aplica a un vector de fechas, lubridate supone que todas las fechas tienen el mismo orden y los mismos separadores.\n\n\nManipulando fechas\nCada estructura fecha-hora es una combinación de diferentes elementos, cada uno con su propio valor. Por ejemplo, la mayoría de las fechas incluyen un valor de año, un valor de mes, un valor de día, etc. Juntos estos elementos especifican el momento exacto al que se refiere la fecha y la hora.\nPodemos extraer fácilmente cada elemento de una fecha-hora con la función de acceso que tiene su nombre, como se muestra en la siguiente tabla.\n\n\n\nComponente de fecha\nFunción\n\n\n\n\nAño\nyear()\n\n\nMes\nmonth()\n\n\nSemana\nweek()\n\n\nDía del año\nyday()\n\n\nDía del mes\nmday()\n\n\nDía de la semana\nwday()\n\n\nHora\nhour()\n\n\nMinuto\nminute()\n\n\nSegundo\nsecond()\n\n\nZona horaria (huso horario)\ntz()\n\n\n\nPor ejemplo, si almacenamos la fecha y hora actual del sistema en un objeto:\n\nfecha &lt;- now()\n\nfecha\n\n[1] \"2026-09-02 12:18:42 -03\"\n\n\npodemos extraer cada uno de sus elementos.\nTengamos en cuenta que la función now(), perteneciente al mismo paquete lubridate, devolverá una fecha diferente cada vez que se ejecute.\n\nyear(fecha)\n\n[1] 2026\n\n\n\nmday(fecha)\n\n[1] 2\n\n\n\nhour(fecha)\n\n[1] 12\n\nminute(fecha)\n\n[1] 18\n\n\nPara los elementos de mes y día de la semana (wday), también podemos especificar si queremos extraer el valor numérico del elemento, una abreviatura del nombre del mes o día de la semana, o el nombre completo.\nPor ejemplo:\n\nmonth(fecha)\n\n[1] 9\n\n\n\nmonth(fecha, label = TRUE)\n\n[1] sep\n12 Levels: ene &lt; feb &lt; mar &lt; abr &lt; may &lt; jun &lt; jul &lt; ago &lt; sep &lt; ... &lt; dic\n\n\n\nmonth(fecha, label = TRUE, abbr = FALSE)\n\n[1] septiembre\n12 Levels: enero &lt; febrero &lt; marzo &lt; abril &lt; mayo &lt; junio &lt; ... &lt; diciembre\n\n\n\nwday(fecha, label = TRUE, abbr = FALSE)\n\n[1] miércoles\n7 Levels: domingo &lt; lunes &lt; martes &lt; miércoles &lt; jueves &lt; ... &lt; sábado\n\n\nOtra buena noticia es que el paquete se adapta al formato regional del sistema operativo donde se encuentra funcionando, por lo que los nombres de los meses o los días de la semana, en este caso, figuran en español (si nuestro sistema operativo está instalado bajo ese idioma).\nPor otra parte, también podemos usar cualquiera de las funciones de acceso para establecer el valor de un elemento. Por ejemplo,\n\nfecha\n\n[1] \"2026-09-02 12:18:42 -03\"\n\nday(fecha) &lt;- 5\n\nfecha\n\n[1] \"2026-09-05 12:18:42 -03\"\n\n\ncambia nuestra fecha al quinto día del mes. También podemos configurar los elementos para más valores complicados, por ejemplo:\n\nfechas &lt;- ymd_hms(\"2017-01-01 01:00:00\", \"2017-01-01 01:30:00\")\n\nminute(fechas) &lt;- mean(minute(fechas))\n\nfechas # promedió los minutos en los dos casos\n\n[1] \"2017-01-01 01:15:00 UTC\" \"2017-01-01 01:15:00 UTC\"\n\n\nSi asignamos a un elemento un valor mayor de lo admitido, la diferencia se extenderá en el siguiente elemento superior (respetando la cantidad de días del mes de mayo adecuadamente en este caso.)\n\nfecha\n\n[1] \"2026-09-05 12:18:42 -03\"\n\nday(fecha) &lt;- 35 \n\nfecha\n\n[1] \"2026-10-05 12:18:42 -03\"\n\n\nFinalmente, también podemos cambiar las fechas agregando o restando unidades de tiempo.\n\nfecha\n\n[1] \"2026-10-05 12:18:42 -03\"\n\nfecha &lt;- fecha + hours(3)\n\nfecha\n\n[1] \"2026-10-05 15:18:42 -03\"\n\n\nObservemos que hours() (plural) no es la misma función que hour() (singular).\nPor último, algo muy útil para nuestro trabajo es poder extraer la semana epidemiologica, con la función epiweek(), en la que cae una fecha en particular o un conjunto de ellas dentro de una variable.\n\nepiweek(fecha)\n\n[1] 40\n\n\nJunto con la semana epidemiológica se puede obtener el año epidemiológico con la función epiyear()\nPor ejemplo, la fecha 01/01/2022 es el primer día de enero de 2022 pero pertenece a la semana epidemiológica 52 de año 2021. Veamos:\n\nfecha &lt;- dmy(\"01-01-2022\")\n\nfecha\n\n[1] \"2022-01-01\"\n\nepiweek(fecha)\n\n[1] 52\n\n\nSi uno obtiene el año al que pertenece, nos dice que 2022 pero si lo queremos asociar con su semana epidemiológica, nos quedaría que estamos en la semana 52 del año 2022, cosa que no es cierta.\n\nyear(fecha)\n\n[1] 2022\n\n\nEn estas situaciones que no coinciden el año de la fecha con el año epidemiológico de la semana es que se aplica epiyear().\n\nepiyear(fecha)\n\n[1] 2021\n\n\n\n\nCálculos con fecha-horas\nLos cálculos con fechas y horas son más complicados que la aritmética con números, pero puede hacerse con precisión y facilidad mediante este paquete.\n¿Qué es lo que complica a la aritmética con datos de tiempo (fechas u horas)?\nEl tiempo que medimos en el reloj se calibra periódicamente para ajustar las condiciones astronómicas, por caso los años bisiestos o los horarios de verano que se utilizan en muchos países.\nEn diferentes momentos, la duración de meses, semanas, días, horas e incluso minutos puede variar. Por lo tanto, podemos considerar que son unidades relativas de tiempo; su longitud es relativa a cuando ocurren; por el contrario, los segundos siempre tienen una longitud constante (son unidades de tiempo exactas)\nlubridate permite cálculos con unidades relativas y exactas introduciendo cuatro nuevos elementos relacionados: instantes, intervalos, duraciones y períodos. Estos conceptos son tomados del proyecto Joda Time (Colebourne y O’Neill 2010). Conceptos similares para instantes, períodos y duraciones también aparecen en la biblioteca C++ Boost - Date Time (Garland 2011).\nlubridate proporciona funciones auxiliares, clases de objetos y métodos para usar los cuatro conceptos en el lenguaje R.\n\nInstantes\nUn instante es un momento específico en el tiempo, como el 1 de enero de 2024. Creamos un instante cada vez que convertimos una fecha a formato Date de R.\n\nstart_2024 &lt;- ymd_hms(\"2024-01-01 12:00:00\")\n\nlubridate no crea una nueva clase de objetos instantes. En cambio, reconoce cualquier objeto de fecha y hora como un instante. Podemos probar si un objeto es un instante usando el identificador is.instant(). Por ejemplo:\n\nis.instant(start_2024)\n\n[1] TRUE\n\n\n\n\nIntervalos\nLos intervalos, duraciones y períodos son todas formas de registrar tiempos. De estos, los intervalos son los más simples. Un intervalo es un lapso de tiempo que ocurre entre dos instantes específicos.\nPodemos crear objetos de intervalo restando dos instantes, mediante %–% o usando la función new_interval().\n\nstart_2023 &lt;- ymd_hms(\"2023-01-01 12:00:00\")\nstart_2024 &lt;- ymd_hms(\"2024-01-01 12:00:00\")\nintervalo &lt;- start_2023 %--% start_2024\nintervalo\n\n[1] 2023-01-01 12:00:00 UTC--2024-01-01 12:00:00 UTC\n\n\nPodemos acceder a las fechas de inicio y finalización de un objeto de intervalo con int_start() e int_end().\nLos intervalos siempre comienzan en la fecha y hora que ocurre primero y finaliza en la fecha y hora que ocurre último. Por lo tanto, los intervalos siempre tienen una longitud positiva.\n\nint_start(intervalo)\n\n[1] \"2023-01-01 12:00:00 UTC\"\n\n\n\nint_end(intervalo)\n\n[1] \"2024-01-01 12:00:00 UTC\"\n\n\nDesafortunadamente, dado que los intervalos están anclados a sus fechas de inicio y finalización, no son muy útiles para cálculos de fecha y hora.\n\n\nDuraciones\nSi eliminamos las fechas de inicio y finalización de un intervalo, tendremos un intervalo de tiempo genérico que podemos agregar a cualquier fecha. Pero, en que unidad es conveniente medir este período de tiempo? Como vimos anteriormente, si lo almacenamos en segundos, tendrá una longitud exacta ya que los segundos siempre tienen la misma longitud.\nLlamamos duraciones de estos lapsos de tiempo. Alternativamente, podemos registrar el lapso de tiempo en unidades más grandes, como minutos o años.\nDado que la longitud de estas unidades varía con el tiempo, la longitud exacta de el lapso de tiempo dependerá de cuándo comience. Estos períodos de tiempo no exactos se llaman períodos y será discutido en la siguiente sección.\nLa duración de una duración es invariable para saltar años, segundos intercalares y horario de verano porque las duraciones se miden en segundos.\nPor lo tanto, las duraciones tienen longitudes consistentes y se puede comparar fácilmente con otras duraciones. Las duraciones son el objeto apropiado para usar cuando se comparan atributos basados en tiempo, como velocidades, tasas y tiempos de vida.\nEl paquete base de R tiene definido a objetos de tipo duración en la clase difftime.\nlubridate incorpora un segundo tipo: objetos clase duration\nEstos objetos se pueden usar con otros objetos de fecha y hora sin preocuparse sobre en qué unidades se muestran. Se puede crear un objeto de duración con la función duration():\n\nduration(60)\n\n[1] \"60s (~1 minutes)\"\n\n\nPara duraciones grandes, resulta inconveniente describir la longitud en segundos. Por ejemplo, no muchas personas reconocerían que 31557600 segundos es la duración de un año estándar. Por esta razón, los objetos de gran duración son seguidos entre paréntesis por una longitud estimada. Un minuto son 60 segundos, una hora 3600 segundos, un día 86400, una semana 604800 y un año 31557600 (365.25 días).\nLos objetos de clase duration se pueden crear fácilmente con las funciones auxiliares dyears(), dweeks(), ddays(), dhours(), dminutes() y dseconds(). La d en el nombre representa duración.\nCada objeto se crea tomando como unidad los segundos usando las relaciones estimadas descriptas arriba. El argumento de cada función es el número de unidades estimadas que deseamos incluir en la duración.\n\ndminutes(1)\n\n[1] \"60s (~1 minutes)\"\n\n\n\ndseconds(60)\n\n[1] \"60s (~1 minutes)\"\n\n\n\ndminutes(2)\n\n[1] \"120s (~2 minutes)\"\n\n\n\n1:3 * dhours(1)\n\n[1] \"3600s (~1 hours)\"  \"7200s (~2 hours)\"  \"10800s (~3 hours)\"\n\n\nLas duraciones se pueden agregar o restar a cualquier objeto instante.\n\nstart_2024\n\n[1] \"2024-01-01 12:00:00 UTC\"\n\nstart_2024 + ddays(10)\n\n[1] \"2024-01-11 12:00:00 UTC\"\n\n\nLas duraciones también se pueden agregar o restar de intervalos y otras duraciones. Por ejemplo:\n\ndweeks(1) + ddays(6) + dhours(2) + dminutes(1.5) + dseconds(3)\n\n[1] \"1130493s (~1.87 weeks)\"\n\n\nTambién podemos crear duraciones a partir de objetos intervalo y períodos usando as.duration().\n\nas.duration(intervalo)\n\n[1] \"31536000s (~52.14 weeks)\"\n\n\n\n\nPeríodos\nLos períodos registran un intervalo de tiempo en unidades mayores que segundos, como años, meses, semanas, días, horas y minutos. Para mayor comodidad, también podemos crear un período que solo use segundos, pero dicho período tendría las mismas propiedades que una duración. lubridate introduce la clase period para modelar períodos. Construimos objetos de período con las funciones auxiliares years(), months(), weeks(), days(), hours(), minutes() y seconds().\n\nmonths(3)\n\n[1] \"3m 0d 0H 0M 0S\"\n\n\n\nmonths(3) + days(2)\n\n[1] \"3m 2d 0H 0M 0S\"\n\n\nEstas funciones no contienen una d en su nombre, porque no crean duraciones; ya no tienen longitudes consistentes (medidas en segundos). Por ejemplo, meses (2) siempre tiene una duración de dos meses, aunque la duración de dos meses cambiará según cuando comienza el período (podrán ser meses de 30, 31 0 28 días).\nPor esta razón, no podemos calcular exactamente cuánto tiempo será un período en segundos hasta que sepamos cuándo ocurre. Sin embargo, aún podemos realizar cálculos de fecha y hora con períodos. Cuando agregamos o restamos un período a un instante, el período queda asociado al instante. El instante nos dice cuándo ocurre el período, lo que nos permite calcular su longitud exacta en segundos.\nPor ejemplo para un año bisiesto, primero sumamos un año con years():\n\nstart_2024 + years(1)\n\n[1] \"2025-01-01 12:00:00 UTC\"\n\n\nvs. sumar un año como duración con dyears()\n\nstart_2024 + dyears(1)\n\n[1] \"2024-12-31 18:00:00 UTC\"\n\n\nTambién podemos convertir otros objetos intervalo en períodos con la función as.period().\n\nas.period(intervalo)\n\n[1] \"1y 0m 0d 0H 0M 0S\"\n\n\nLos períodos se pueden agregar a instantes, intervalos y otros períodos, pero no a duraciones.\n\n\n\nDivisión con intervalos de tiempo\nA veces necesitamos responder preguntas que implican dividir un intervalo de tiempo por otro. Por ejemplo, ¿Cuántos años tiene una persona nacida el 26 de junio de 1976?\nObjetos de clase interval, duration y period pueden dividirse por otros objetos de las mismas clases. Los resultados de estas divisiones varían dependiendo de la naturaleza de los intervalos de tiempo involucrados. La división modular (%/%) también funciona con estas clases.\nPara ilustrar esto, hacemos un intervalo entre la fecha de nacimiento y la fecha actual.\n\nnacimiento &lt;- ymd(\"1976-06-26\")\n\nhoy &lt;- now()\n\nintervalo &lt;- interval(nacimiento, hoy)\n\nintervalo\n\n[1] 1976-06-26 UTC--2026-09-02 15:18:43 UTC\n\n\nComo las duraciones son una medida exacta de un intervalo de tiempo, podemos dividir este intervalo por una duración para obtener una respuesta exacta.\n\nintervalo / dyears(1)\n\n[1] 50.18655\n\n\nPodríamos utilizar un período en lugar de duración\n\nintervalo / years()\n\n[1] 50.18805\n\n\nPero lo más útil es la división modular para redondear y quedarnos solo con los años:\n\nintervalo %/% dyears()\n\n[1] 50\n\n\nEn resumen, la aritmética con tipos fecha-hora puede involucrar cuatro tipos de objetos: instantes, intervalos, duraciones y períodos.\nlubridate crea nuevas clases de objetos: interval, duration y period. Reconoce que las clases de fecha y hora más comunes, como POSIXt y Date, se refieren a instantes. La siguiente tabla describe qué objetos se pueden combinar con otro y qué tipo de objeto resultará.\n\n\n\n\ninstante\ninterval\nduration\nperiod\n\n\n\n\ninstante\nNA\ninstante\ninstante\ninstante\n\n\ninterval\ninstante\ninterval*\ninterval\ninterval\n\n\nduration\ninstante\ninterval\nduration\nperiod\n\n\nperiod\ninstante\ninterval\nperiod\nperiod\n\n\n\n*= clase duration si los intervalos no se alinean.\n\n\nRedondeando fechas\nAl igual que los números, las fechas se ordenan en forma creciente. Esto permite redondear los tipos de datos fecha-hora.\nlubridate proporciona tres métodos que ayudan a realizar este redondeo: round_date(), floor_date(), y ceiling_date().\nEl primer argumento de cada función es la fecha-hora a ser redondeada. El segundo argumento es la unidad tomada para redondear.\nPor ejemplo, podríamos redondear la siguiente fecha-hora a la unidad día:\n\nnov23 &lt;- ymd_hms(\"2023-11-23 09:38:29\")\n\nnov23\n\n[1] \"2023-11-23 09:38:29 UTC\"\n\nround_date(nov23, \"day\")\n\n[1] \"2023-11-23 UTC\"\n\n\nPero también podríamos desear redondear al comienzo de mes más próximo, asi:\n\nround_date(nov23, \"month\")\n\n[1] \"2023-12-01 UTC\"\n\n\nTenga en cuenta que al redondear un dato fecha-hora a una unidad determinada, se establece la fecha al inicio de esa unidad (al definir día, por ejemplo se establece la información de horas, minutos y segundos en 00).\nLas otras dos funciones de redondeo lo hacen al comienzo del mes menor (floor) o mayor (ceiling).\nPor ejemplo, con ceiling_date(), podemos hallar el último día de cada mes, sin importar la fecha que tengamos almacenada. Luego de ubicar el inicio del próximo mes, restamos un día.\n\nceiling_date(nov23, \"month\") - days(1)\n\n[1] \"2023-11-30 UTC\"\n\n\n\noct02 &lt;- ymd_hms(\"2023-10-02 00:00:00\")\n\nceiling_date(oct02, \"month\") - days(1)\n\n[1] \"2023-10-31 UTC\"\n\n\n\n\nZonas horarias\nLas zonas horarias complejizan a los datos fecha-hora, pero algunas veces nos encontramos con bases de datos o situaciones en que debemos lidiar con ellas. Cuando creamos instantes en R, la zona horaria estándar es la universal (UTC).\nlubridate ofrece dos formas de trabajar con zonas horarias.\nPodemos cambiar la zona horaria en la que se muestra un instante utilizando la función with_tz(). Esto cambia la forma en que se muestra el instante, pero continúa siendo el mismo. Por ejemplo, el objeto fecha tiene cargada una fecha-hora creada a partir de la función now() y al ejecutarse en un equipo con configuración regional de Argentina toma el uso horario de Buenos Aires (aparece -03 al final del día y horario)\n\nfecha\n\n[1] \"2022-01-01\"\n\n\nAl llevarlo a la zona horaria universal, le agrega 3 horas más, aunque sigue siendo el mismo instante.\n\nwith_tz(fecha, \"UTC\")\n\n[1] \"2022-01-01 UTC\"\n\n\nforce_tz() hace lo contrario de with_tz(): cambia el instante real de tiempo guardado en el objeto. Por ejemplo, el siguiente código nos mueve a un nuevo instante que ocurre 3 horas más temprano.\n\nforce_tz(fecha, \"UTC\")\n\n[1] \"2022-01-01 UTC\"\n\n\nEn este caso, un instante horario 11:32:01 UTC correponde al instante 08:32:01 -3\nwith_tz() y force_tz() solo funcionan con zonas horarias reconocidas por el sistema operativo de la computadora que aloja R. Esta lista de zonas horarias variará de una computadora a otra. Para más información ver la página de ayuda de R para Sys.timezone().\nEl código de nuestra zona horaria (es conocida como UTC-03:00 - Ciudad de Buenos Aires) para incorporar al argumento es America/Buenos_Aires"
+    "text": "Variables de tiempo\n\n\n\n\nArtwork por @allison_horst\n\n\n\nLos eventos epidemiológicos se presentan en algun momento del tiempo, por lo que las variables de tiempo son habituales componentes de las bases de datos con las que trabaja un epidemiólogo. Estas variables pueden presentarse en distintas unidades de medida, tales como horas, días, años, decadas, etc.\nA veces trabajar con datos tipo fecha y hora puede ser frustrante.Las fechas vienen en muchos formatos diferentes, que hace que reconocerlos y analizarlos sea un desafío.\nPrimero necesitamos que los datos sean reconocidos como formato fecha (Date) y luego debemos lidiar con operaciones específicas como extraer componentes de los horarios, como años, meses o segundos, o cambiar zonas horarias o hacer cálculos entres fechas.\nPara simplificar esta tarea tidyverse trae el paquete lubridate que proporciona herramientas para manipular variables fecha-hora.\nEspecíficamente, lubridate ayuda a los usuarios a:\n\nIdentificar y analizar los datos de fecha y hora.\nExtrer y modificar componentes de una fecha y hora, como años, meses, días, horas, minutos y segundos.\nRealizar cálculos precisos con fecha y hora.\nManejar zonas horarias y horario de verano.\n\nlubridate se instala y activa con tidyverse:\n\nLectura de fechas\nPodemos leer fechas en R usando la serie de funciones ymd() proporcionada por este paquete. Estas funciones analizan el contenido de cadenas de caracteres y las transforman a fechas.\nLas letras y, m y d corresponden al año, mes y día de una fecha. Para leer una fecha, seleccionamos el nombre de la función que coincide con el orden de los elementos contenidos en el objeto original. Por ejemplo, en la siguiente fecha el elemento mes viene primero, seguido por el día y luego el año, al estilo estadounidense. Entonces usaríamos la función mdy():\n\nmdy(\"01-24-2024\")\n\n[1] \"2024-01-24\"\n\n\nEl formato de salida siempre año-mes-día, es decir se organiza del elemento más grande que anida a los otros.\nSi en cambio tuviese la forma en que usamos las fechas nosotros, usaríamos dmy().\n\ndmy(\"24-01-2024\")\n\n[1] \"2024-01-24\"\n\n\nComo se observa el formato de los caracteres de entrada pueden utilizar distintos separadores, como guión medio (-), punto (.), barra inclinada (/), guión bajo (_) o incluso espacios.\nLa clase de los objetos convertidos es Date.\n\nx &lt;- dmy(\"24/01/2024\")\n\nclass(x)\n\n[1] \"Date\"\n\n\n\n\n\nOrden de los elementos\nFunción\n\n\n\n\naño, mes y día\nymd()\n\n\naño, día y mes\nydm()\n\n\nmes, día y año\nmdy()\n\n\ndía, mes y año\ndmy()\n\n\nhora y minuto\nhm()\n\n\nhora, minuto y segundo\nhms()\n\n\naño, mes, día, hora, minuto y segundo\nymd_hms()\n\n\n\nLas funciones que tienen componente de hora crean objetos POSIXct.\nCuando una función dmy() se aplica a un vector de fechas, lubridate supone que todas las fechas tienen el mismo orden y los mismos separadores.\n\n\nManipulando fechas\nCada estructura fecha-hora es una combinación de diferentes elementos, cada uno con su propio valor. Por ejemplo, la mayoría de las fechas incluyen un valor de año, un valor de mes, un valor de día, etc. Juntos estos elementos especifican el momento exacto al que se refiere la fecha y la hora.\nPodemos extraer fácilmente cada elemento de una fecha-hora con la función de acceso que tiene su nombre, como se muestra en la siguiente tabla.\n\n\n\nComponente de fecha\nFunción\n\n\n\n\nAño\nyear()\n\n\nMes\nmonth()\n\n\nSemana\nweek()\n\n\nDía del año\nyday()\n\n\nDía del mes\nmday()\n\n\nDía de la semana\nwday()\n\n\nHora\nhour()\n\n\nMinuto\nminute()\n\n\nSegundo\nsecond()\n\n\nZona horaria (huso horario)\ntz()\n\n\n\nPor ejemplo, si almacenamos la fecha y hora actual del sistema en un objeto:\n\nfecha &lt;- now()\n\nfecha\n\n[1] \"2026-09-09 11:33:53 -03\"\n\n\npodemos extraer cada uno de sus elementos.\nTengamos en cuenta que la función now(), perteneciente al mismo paquete lubridate, devolverá una fecha diferente cada vez que se ejecute.\n\nyear(fecha)\n\n[1] 2026\n\n\n\nmday(fecha)\n\n[1] 9\n\n\n\nhour(fecha)\n\n[1] 11\n\nminute(fecha)\n\n[1] 33\n\n\nPara los elementos de mes y día de la semana (wday), también podemos especificar si queremos extraer el valor numérico del elemento, una abreviatura del nombre del mes o día de la semana, o el nombre completo.\nPor ejemplo:\n\nmonth(fecha)\n\n[1] 9\n\n\n\nmonth(fecha, label = TRUE)\n\n[1] sep\n12 Levels: ene &lt; feb &lt; mar &lt; abr &lt; may &lt; jun &lt; jul &lt; ago &lt; sep &lt; ... &lt; dic\n\n\n\nmonth(fecha, label = TRUE, abbr = FALSE)\n\n[1] septiembre\n12 Levels: enero &lt; febrero &lt; marzo &lt; abril &lt; mayo &lt; junio &lt; ... &lt; diciembre\n\n\n\nwday(fecha, label = TRUE, abbr = FALSE)\n\n[1] miércoles\n7 Levels: domingo &lt; lunes &lt; martes &lt; miércoles &lt; jueves &lt; ... &lt; sábado\n\n\nOtra buena noticia es que el paquete se adapta al formato regional del sistema operativo donde se encuentra funcionando, por lo que los nombres de los meses o los días de la semana, en este caso, figuran en español (si nuestro sistema operativo está instalado bajo ese idioma).\nPor otra parte, también podemos usar cualquiera de las funciones de acceso para establecer el valor de un elemento. Por ejemplo,\n\nfecha\n\n[1] \"2026-09-09 11:33:53 -03\"\n\nday(fecha) &lt;- 5\n\nfecha\n\n[1] \"2026-09-05 11:33:53 -03\"\n\n\ncambia nuestra fecha al quinto día del mes. También podemos configurar los elementos para más valores complicados, por ejemplo:\n\nfechas &lt;- ymd_hms(\"2017-01-01 01:00:00\", \"2017-01-01 01:30:00\")\n\nminute(fechas) &lt;- mean(minute(fechas))\n\nfechas # promedió los minutos en los dos casos\n\n[1] \"2017-01-01 01:15:00 UTC\" \"2017-01-01 01:15:00 UTC\"\n\n\nSi asignamos a un elemento un valor mayor de lo admitido, la diferencia se extenderá en el siguiente elemento superior (respetando la cantidad de días del mes de mayo adecuadamente en este caso.)\n\nfecha\n\n[1] \"2026-09-05 11:33:53 -03\"\n\nday(fecha) &lt;- 35 \n\nfecha\n\n[1] \"2026-10-05 11:33:53 -03\"\n\n\nFinalmente, también podemos cambiar las fechas agregando o restando unidades de tiempo.\n\nfecha\n\n[1] \"2026-10-05 11:33:53 -03\"\n\nfecha &lt;- fecha + hours(3)\n\nfecha\n\n[1] \"2026-10-05 14:33:53 -03\"\n\n\nObservemos que hours() (plural) no es la misma función que hour() (singular).\nPor último, algo muy útil para nuestro trabajo es poder extraer la semana epidemiologica, con la función epiweek(), en la que cae una fecha en particular o un conjunto de ellas dentro de una variable.\n\nepiweek(fecha)\n\n[1] 40\n\n\nJunto con la semana epidemiológica se puede obtener el año epidemiológico con la función epiyear()\nPor ejemplo, la fecha 01/01/2022 es el primer día de enero de 2022 pero pertenece a la semana epidemiológica 52 de año 2021. Veamos:\n\nfecha &lt;- dmy(\"01-01-2022\")\n\nfecha\n\n[1] \"2022-01-01\"\n\nepiweek(fecha)\n\n[1] 52\n\n\nSi uno obtiene el año al que pertenece, nos dice que 2022 pero si lo queremos asociar con su semana epidemiológica, nos quedaría que estamos en la semana 52 del año 2022, cosa que no es cierta.\n\nyear(fecha)\n\n[1] 2022\n\n\nEn estas situaciones que no coinciden el año de la fecha con el año epidemiológico de la semana es que se aplica epiyear().\n\nepiyear(fecha)\n\n[1] 2021\n\n\n\n\nCálculos con fecha-horas\nLos cálculos con fechas y horas son más complicados que la aritmética con números, pero puede hacerse con precisión y facilidad mediante este paquete.\n¿Qué es lo que complica a la aritmética con datos de tiempo (fechas u horas)?\nEl tiempo que medimos en el reloj se calibra periódicamente para ajustar las condiciones astronómicas, por caso los años bisiestos o los horarios de verano que se utilizan en muchos países.\nEn diferentes momentos, la duración de meses, semanas, días, horas e incluso minutos puede variar. Por lo tanto, podemos considerar que son unidades relativas de tiempo; su longitud es relativa a cuando ocurren; por el contrario, los segundos siempre tienen una longitud constante (son unidades de tiempo exactas)\nlubridate permite cálculos con unidades relativas y exactas introduciendo cuatro nuevos elementos relacionados: instantes, intervalos, duraciones y períodos. Estos conceptos son tomados del proyecto Joda Time (Colebourne y O’Neill 2010). Conceptos similares para instantes, períodos y duraciones también aparecen en la biblioteca C++ Boost - Date Time (Garland 2011).\nlubridate proporciona funciones auxiliares, clases de objetos y métodos para usar los cuatro conceptos en el lenguaje R.\n\nInstantes\nUn instante es un momento específico en el tiempo, como el 1 de enero de 2024. Creamos un instante cada vez que convertimos una fecha a formato Date de R.\n\nstart_2024 &lt;- ymd_hms(\"2024-01-01 12:00:00\")\n\nlubridate no crea una nueva clase de objetos instantes. En cambio, reconoce cualquier objeto de fecha y hora como un instante. Podemos probar si un objeto es un instante usando el identificador is.instant(). Por ejemplo:\n\nis.instant(start_2024)\n\n[1] TRUE\n\n\n\n\nIntervalos\nLos intervalos, duraciones y períodos son todas formas de registrar tiempos. De estos, los intervalos son los más simples. Un intervalo es un lapso de tiempo que ocurre entre dos instantes específicos.\nPodemos crear objetos de intervalo restando dos instantes, mediante %–% o usando la función new_interval().\n\nstart_2023 &lt;- ymd_hms(\"2023-01-01 12:00:00\")\nstart_2024 &lt;- ymd_hms(\"2024-01-01 12:00:00\")\nintervalo &lt;- start_2023 %--% start_2024\nintervalo\n\n[1] 2023-01-01 12:00:00 UTC--2024-01-01 12:00:00 UTC\n\n\nPodemos acceder a las fechas de inicio y finalización de un objeto de intervalo con int_start() e int_end().\nLos intervalos siempre comienzan en la fecha y hora que ocurre primero y finaliza en la fecha y hora que ocurre último. Por lo tanto, los intervalos siempre tienen una longitud positiva.\n\nint_start(intervalo)\n\n[1] \"2023-01-01 12:00:00 UTC\"\n\n\n\nint_end(intervalo)\n\n[1] \"2024-01-01 12:00:00 UTC\"\n\n\nDesafortunadamente, dado que los intervalos están anclados a sus fechas de inicio y finalización, no son muy útiles para cálculos de fecha y hora.\n\n\nDuraciones\nSi eliminamos las fechas de inicio y finalización de un intervalo, tendremos un intervalo de tiempo genérico que podemos agregar a cualquier fecha. Pero, en que unidad es conveniente medir este período de tiempo? Como vimos anteriormente, si lo almacenamos en segundos, tendrá una longitud exacta ya que los segundos siempre tienen la misma longitud.\nLlamamos duraciones de estos lapsos de tiempo. Alternativamente, podemos registrar el lapso de tiempo en unidades más grandes, como minutos o años.\nDado que la longitud de estas unidades varía con el tiempo, la longitud exacta de el lapso de tiempo dependerá de cuándo comience. Estos períodos de tiempo no exactos se llaman períodos y será discutido en la siguiente sección.\nLa duración de una duración es invariable para saltar años, segundos intercalares y horario de verano porque las duraciones se miden en segundos.\nPor lo tanto, las duraciones tienen longitudes consistentes y se puede comparar fácilmente con otras duraciones. Las duraciones son el objeto apropiado para usar cuando se comparan atributos basados en tiempo, como velocidades, tasas y tiempos de vida.\nEl paquete base de R tiene definido a objetos de tipo duración en la clase difftime.\nlubridate incorpora un segundo tipo: objetos clase duration\nEstos objetos se pueden usar con otros objetos de fecha y hora sin preocuparse sobre en qué unidades se muestran. Se puede crear un objeto de duración con la función duration():\n\nduration(60)\n\n[1] \"60s (~1 minutes)\"\n\n\nPara duraciones grandes, resulta inconveniente describir la longitud en segundos. Por ejemplo, no muchas personas reconocerían que 31557600 segundos es la duración de un año estándar. Por esta razón, los objetos de gran duración son seguidos entre paréntesis por una longitud estimada. Un minuto son 60 segundos, una hora 3600 segundos, un día 86400, una semana 604800 y un año 31557600 (365.25 días).\nLos objetos de clase duration se pueden crear fácilmente con las funciones auxiliares dyears(), dweeks(), ddays(), dhours(), dminutes() y dseconds(). La d en el nombre representa duración.\nCada objeto se crea tomando como unidad los segundos usando las relaciones estimadas descriptas arriba. El argumento de cada función es el número de unidades estimadas que deseamos incluir en la duración.\n\ndminutes(1)\n\n[1] \"60s (~1 minutes)\"\n\n\n\ndseconds(60)\n\n[1] \"60s (~1 minutes)\"\n\n\n\ndminutes(2)\n\n[1] \"120s (~2 minutes)\"\n\n\n\n1:3 * dhours(1)\n\n[1] \"3600s (~1 hours)\"  \"7200s (~2 hours)\"  \"10800s (~3 hours)\"\n\n\nLas duraciones se pueden agregar o restar a cualquier objeto instante.\n\nstart_2024\n\n[1] \"2024-01-01 12:00:00 UTC\"\n\nstart_2024 + ddays(10)\n\n[1] \"2024-01-11 12:00:00 UTC\"\n\n\nLas duraciones también se pueden agregar o restar de intervalos y otras duraciones. Por ejemplo:\n\ndweeks(1) + ddays(6) + dhours(2) + dminutes(1.5) + dseconds(3)\n\n[1] \"1130493s (~1.87 weeks)\"\n\n\nTambién podemos crear duraciones a partir de objetos intervalo y períodos usando as.duration().\n\nas.duration(intervalo)\n\n[1] \"31536000s (~52.14 weeks)\"\n\n\n\n\nPeríodos\nLos períodos registran un intervalo de tiempo en unidades mayores que segundos, como años, meses, semanas, días, horas y minutos. Para mayor comodidad, también podemos crear un período que solo use segundos, pero dicho período tendría las mismas propiedades que una duración. lubridate introduce la clase period para modelar períodos. Construimos objetos de período con las funciones auxiliares years(), months(), weeks(), days(), hours(), minutes() y seconds().\n\nmonths(3)\n\n[1] \"3m 0d 0H 0M 0S\"\n\n\n\nmonths(3) + days(2)\n\n[1] \"3m 2d 0H 0M 0S\"\n\n\nEstas funciones no contienen una d en su nombre, porque no crean duraciones; ya no tienen longitudes consistentes (medidas en segundos). Por ejemplo, meses (2) siempre tiene una duración de dos meses, aunque la duración de dos meses cambiará según cuando comienza el período (podrán ser meses de 30, 31 0 28 días).\nPor esta razón, no podemos calcular exactamente cuánto tiempo será un período en segundos hasta que sepamos cuándo ocurre. Sin embargo, aún podemos realizar cálculos de fecha y hora con períodos. Cuando agregamos o restamos un período a un instante, el período queda asociado al instante. El instante nos dice cuándo ocurre el período, lo que nos permite calcular su longitud exacta en segundos.\nPor ejemplo para un año bisiesto, primero sumamos un año con years():\n\nstart_2024 + years(1)\n\n[1] \"2025-01-01 12:00:00 UTC\"\n\n\nvs. sumar un año como duración con dyears()\n\nstart_2024 + dyears(1)\n\n[1] \"2024-12-31 18:00:00 UTC\"\n\n\nTambién podemos convertir otros objetos intervalo en períodos con la función as.period().\n\nas.period(intervalo)\n\n[1] \"1y 0m 0d 0H 0M 0S\"\n\n\nLos períodos se pueden agregar a instantes, intervalos y otros períodos, pero no a duraciones.\n\n\n\nDivisión con intervalos de tiempo\nA veces necesitamos responder preguntas que implican dividir un intervalo de tiempo por otro. Por ejemplo, ¿Cuántos años tiene una persona nacida el 26 de junio de 1976?\nObjetos de clase interval, duration y period pueden dividirse por otros objetos de las mismas clases. Los resultados de estas divisiones varían dependiendo de la naturaleza de los intervalos de tiempo involucrados. La división modular (%/%) también funciona con estas clases.\nPara ilustrar esto, hacemos un intervalo entre la fecha de nacimiento y la fecha actual.\n\nnacimiento &lt;- ymd(\"1976-06-26\")\n\nhoy &lt;- now()\n\nintervalo &lt;- interval(nacimiento, hoy)\n\nintervalo\n\n[1] 1976-06-26 UTC--2026-09-09 14:33:54 UTC\n\n\nComo las duraciones son una medida exacta de un intervalo de tiempo, podemos dividir este intervalo por una duración para obtener una respuesta exacta.\n\nintervalo / dyears(1)\n\n[1] 50.20563\n\n\nPodríamos utilizar un período en lugar de duración\n\nintervalo / years()\n\n[1] 50.20714\n\n\nPero lo más útil es la división modular para redondear y quedarnos solo con los años:\n\nintervalo %/% dyears()\n\n[1] 50\n\n\nEn resumen, la aritmética con tipos fecha-hora puede involucrar cuatro tipos de objetos: instantes, intervalos, duraciones y períodos.\nlubridate crea nuevas clases de objetos: interval, duration y period. Reconoce que las clases de fecha y hora más comunes, como POSIXt y Date, se refieren a instantes. La siguiente tabla describe qué objetos se pueden combinar con otro y qué tipo de objeto resultará.\n\n\n\n\ninstante\ninterval\nduration\nperiod\n\n\n\n\ninstante\nNA\ninstante\ninstante\ninstante\n\n\ninterval\ninstante\ninterval*\ninterval\ninterval\n\n\nduration\ninstante\ninterval\nduration\nperiod\n\n\nperiod\ninstante\ninterval\nperiod\nperiod\n\n\n\n*= clase duration si los intervalos no se alinean.\n\n\nRedondeando fechas\nAl igual que los números, las fechas se ordenan en forma creciente. Esto permite redondear los tipos de datos fecha-hora.\nlubridate proporciona tres métodos que ayudan a realizar este redondeo: round_date(), floor_date(), y ceiling_date().\nEl primer argumento de cada función es la fecha-hora a ser redondeada. El segundo argumento es la unidad tomada para redondear.\nPor ejemplo, podríamos redondear la siguiente fecha-hora a la unidad día:\n\nnov23 &lt;- ymd_hms(\"2023-11-23 09:38:29\")\n\nnov23\n\n[1] \"2023-11-23 09:38:29 UTC\"\n\nround_date(nov23, \"day\")\n\n[1] \"2023-11-23 UTC\"\n\n\nPero también podríamos desear redondear al comienzo de mes más próximo, asi:\n\nround_date(nov23, \"month\")\n\n[1] \"2023-12-01 UTC\"\n\n\nTenga en cuenta que al redondear un dato fecha-hora a una unidad determinada, se establece la fecha al inicio de esa unidad (al definir día, por ejemplo se establece la información de horas, minutos y segundos en 00).\nLas otras dos funciones de redondeo lo hacen al comienzo del mes menor (floor) o mayor (ceiling).\nPor ejemplo, con ceiling_date(), podemos hallar el último día de cada mes, sin importar la fecha que tengamos almacenada. Luego de ubicar el inicio del próximo mes, restamos un día.\n\nceiling_date(nov23, \"month\") - days(1)\n\n[1] \"2023-11-30 UTC\"\n\n\n\noct02 &lt;- ymd_hms(\"2023-10-02 00:00:00\")\n\nceiling_date(oct02, \"month\") - days(1)\n\n[1] \"2023-10-31 UTC\"\n\n\n\n\nZonas horarias\nLas zonas horarias complejizan a los datos fecha-hora, pero algunas veces nos encontramos con bases de datos o situaciones en que debemos lidiar con ellas. Cuando creamos instantes en R, la zona horaria estándar es la universal (UTC).\nlubridate ofrece dos formas de trabajar con zonas horarias.\nPodemos cambiar la zona horaria en la que se muestra un instante utilizando la función with_tz(). Esto cambia la forma en que se muestra el instante, pero continúa siendo el mismo. Por ejemplo, el objeto fecha tiene cargada una fecha-hora creada a partir de la función now() y al ejecutarse en un equipo con configuración regional de Argentina toma el uso horario de Buenos Aires (aparece -03 al final del día y horario)\n\nfecha\n\n[1] \"2022-01-01\"\n\n\nAl llevarlo a la zona horaria universal, le agrega 3 horas más, aunque sigue siendo el mismo instante.\n\nwith_tz(fecha, \"UTC\")\n\n[1] \"2022-01-01 UTC\"\n\n\nforce_tz() hace lo contrario de with_tz(): cambia el instante real de tiempo guardado en el objeto. Por ejemplo, el siguiente código nos mueve a un nuevo instante que ocurre 3 horas más temprano.\n\nforce_tz(fecha, \"UTC\")\n\n[1] \"2022-01-01 UTC\"\n\n\nEn este caso, un instante horario 11:32:01 UTC correponde al instante 08:32:01 -3\nwith_tz() y force_tz() solo funcionan con zonas horarias reconocidas por el sistema operativo de la computadora que aloja R. Esta lista de zonas horarias variará de una computadora a otra. Para más información ver la página de ayuda de R para Sys.timezone().\nEl código de nuestra zona horaria (es conocida como UTC-03:00 - Ciudad de Buenos Aires) para incorporar al argumento es America/Buenos_Aires"
   },
   {
     "objectID": "primero/clases/04-tipos.html#cadena-de-caracteres",
@@ -2144,233 +2228,233 @@
   {
     "objectID": "primero/diapositivas/04-gestion.html#introducción",
     "href": "primero/diapositivas/04-gestion.html#introducción",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Introducción",
     "text": "Introducción\n\nLa manipulación de datos agrupa todas las tareas necesarias para la gestión de las variables:\n\nsu transformación,\nla creación de nuevas variables,\nlos cambios de escala,\nel formateo de categorías,\nel filtro de algunas observaciones, etc.,\nes decir, todo aquello que debamos hacer con los datos antes o durante el analisis."
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#paquete-dplyr",
     "href": "primero/diapositivas/04-gestion.html#paquete-dplyr",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Paquete dplyr",
     "text": "Paquete dplyr\n\n\ndplyr es el paquete para transformar datos que pertenece al ecosistema tidyverse\nImplementa una gramática “humana”\nEstá constituido por funciones definidas como “verbos”\nLas funciones primarias son: select(), filter(), arrange(), mutate() y summarise()\nOtras funciones útiles son: rename(), group_by(), count(), if_else(), case_when(), beteewn(), across(), rowwise(), etc."
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#select",
     "href": "primero/diapositivas/04-gestion.html#select",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "select()",
     "text": "select()\nLa función select() del inglés seleccionar, sirve para seleccionar variables (columnas) de una tabla de datos.\n\nselect(datos, a, c)  \n\ndatos |&gt; select(a, c)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ayudantes-de-selección",
     "href": "primero/diapositivas/04-gestion.html#ayudantes-de-selección",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ayudantes de selección",
-    "text": "Ayudantes de selección\nAdemás existe un abanico de funciones que ayudan a una mejor selección de nombres de variables.\n\n\n\neverything(): coincide con todas las variables.\ngroup_cols(): seleccione todas las columnas de agrupación.\nstarts_with(): comienza con un prefijo.\nends_with(): termina con un sufijo.\ncontains(): contiene una cadena literal.\nmatches(): coincide con una expresión regular.\n\n\n\nnum_range(): coincide con un rango numérico como x01, x02, x03.\nall_of(): coincide con nombres de variables en un vector de caracteres.\nany_of(): igual que all_of(), excepto que no se genera ningún error para los nombres que no existen.\nwhere(): aplica una función a todas las variables y selecciona aquellas para las cuales la función regresa TRUE."
+    "text": "Ayudantes de selección\nAdemás existe un abanico de funciones que ayudan a una mejor selección de nombres de variables.\n\n\n\n\neverything(): coincide con todas las variables.\ngroup_cols(): seleccione todas las columnas de agrupación.\nstarts_with(): comienza con un prefijo.\nends_with(): termina con un sufijo.\ncontains(): contiene una cadena literal.\nmatches(): coincide con una expresión regular.\n\n\n\nnum_range(): coincide con un rango numérico como x01, x02, x03.\nall_of(): coincide con nombres de variables en un vector de caracteres.\nany_of(): igual que all_of(), excepto que no se genera ningún error para los nombres que no existen.\nwhere(): aplica una función a todas las variables y selecciona aquellas para las cuales la función regresa TRUE."
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-select",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-select",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de select()",
     "text": "Ejemplo de select()\n\n\n\n  [1] \"Anio\"              \"Escuela\"           \"F1_FNac\"          \n  [4] \"F2_Edad\"           \"F3_Sexo\"           \"F4_Abuelos\"       \n  [7] \"F4_Hermanos\"       \"F4_Madrastra\"      \"F4_Madre\"         \n [10] \"F4_Otros\"          \"F4_Padrastro\"      \"F4_Padre\"         \n [13] \"F5_Amigo\"          \"F5_Familiar\"       \"F5_Nadie\"         \n [16] \"F5_Novio\"          \"F5_Otro\"           \"F5_Profesional\"   \n [19] \"F6_amigos\"         \"F7_Acompaniado\"    \"F8_novio\"         \n [22] \"F9_CuantoTiempo\"   \"FKEY\"              \"GlobalRecordId\"   \n [25] \"H1_Alcohol\"        \"H1_Bblancas\"       \"H1_Cerveza\"       \n [28] \"H1_CuantosDias\"    \"H1_CuantosVasos\"   \"H1_Fernet\"        \n [31] \"H1_Otra\"           \"H1_Vino\"           \"H2_Cigarrillos\"   \n [34] \"H2_Cuantos\"        \"H3_Cuantos\"        \"H3_Marihuana\"     \n [37] \"H4_Cual\"           \"H4_OtraDroga\"      \"H5_HoraDormir\"    \n [40] \"H6_Almuerzo\"       \"H6_Cena\"           \"H6_Desayuno\"      \n [43] \"H6_Merienda\"       \"H6_Motivado\"       \"H6A_Calle\"        \n [46] \"H6A_Casa\"          \"H6A_ConQuien\"      \"H6A_Escuela\"      \n [49] \"H6C_Calle\"         \"H6C_Casa\"          \"H6C_ConQuien\"     \n [52] \"H6C_Escuela\"       \"H6D_Calle\"         \"H6D_Casa\"         \n [55] \"H6D_ConQuien\"      \"H6M_Calle\"         \"H6M_Casa\"         \n [58] \"H6M_ConQuien\"      \"H6M_Escuela\"       \"HD6_Escuela\"      \n [61] \"S1_ControlSalud\"   \"S2_Cual\"           \"S2_ECronica\"      \n [64] \"S3_Anticonceptivo\" \"S3_Cual\"           \"S3_Edad\"          \n [67] \"S3_EdadPareja\"     \"S3_Relaciones\"     \"S4_CoitoI\"        \n [70] \"S4_Cual\"           \"S4_DiaDespues\"     \"S4_DIU\"           \n [73] \"S4_Inyecciones\"    \"S4_Ninguno\"        \"S4_Otro\"          \n [76] \"S4_Pastillas\"      \"S4_Perodo\"         \"S4_Preservativos\" \n [79] \"S5_Embarazo\"       \"S6_Hijos\"          \"SYSTEMDATE\"       \n [82] \"T1_Artemarcial\"    \"T1_Bailar\"         \"T1_Basket\"        \n [85] \"T1_Correr\"         \"T1_Deporte\"        \"T1_Futbol\"        \n [88] \"T1_Gimnasio\"       \"T1_Hockey\"         \"T1_Natacion\"      \n [91] \"T1_Rugby\"          \"T1_Skate\"          \"T1_Surf\"          \n [94] \"T1_Tenis\"          \"T1_Veces\"          \"T1_Voley\"         \n [97] \"T2_Amigos\"         \"T2_Calle\"          \"T2_Casas\"         \n[100] \"T2_Centro\"         \"T2_Club\"           \"T2_Otros\"         \n[103] \"T2_Plaza\"          \"T3_Bailar\"         \"T3_Matinee\"       \n[106] \"T3_Noche\"          \"T4_Compu\"          \"T4_Leer\"          \n[109] \"T4_Libros\"         \"T4_Revistas\"       \"T5_Conectas\"      \n[112] \"T5_Redes\"          \"T6_Consiste\"       \"T6_Empleo\"        \n[115] \"T6_Horas\"          \"T7_Cual\"           \"T7_Iglesia\"       \n[118] \"T7_Religion\"       \"Turno\"             \"V1_Alegre\"        \n[121] \"V1_Enojado\"        \"V1_Nervioso\"       \"V1_Preocupado\"    \n[124] \"V1_Solo\"           \"V1_Tranquilo\"      \"V1_Triste\"        \n[127] \"V2_SentisEscuela\"  \"V3_Casa\"           \"V3_Escuela\"       \n[130] \"V3_Pareja\"         \"V3_Violencia\"      \"V4_Futuro\"        \n[133] \"V5_Cuales\"         \"V5_Derechos\"       \"V5_Drogas\"        \n[136] \"V5_Habitos\"        \"V5_Otros\"          \"V5_Ssexual\"       \n[139] \"V5_Violencia\"      \"UniqueKey\"        \n\n\n\n# seleccionamos solo variables que comienzan con \"F5\" \ndatos |&gt; \n  select(starts_with(\"F5\")) |&gt; names()\n\n[1] \"F5_Amigo\"       \"F5_Familiar\"    \"F5_Nadie\"       \"F5_Novio\"      \n[5] \"F5_Otro\"        \"F5_Profesional\""
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#rename",
     "href": "primero/diapositivas/04-gestion.html#rename",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "rename()",
     "text": "rename()\nLa función rename() posibilita renombrar a las variables de una tabla de datos.\nLa estructura básica es:\n\nrename(datos, new_name = old_name)  \n\ndatos |&gt; rename(new_name = old_name)\n\nLa variación rename_with() permite renombrar variables de una tabla a través de aplicar determinadas funciones.\nLa estructura básica de esta función es:\n\nrename_with(datos, función, variables)  \n\ndatos |&gt; rename_with(función, variables)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-rename-y-rename_with",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-rename-y-rename_with",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de rename() y rename_with()",
     "text": "Ejemplo de rename() y rename_with()\n\n\n# renombramos F2_Edad por EDAD\n\ndatos |&gt; \n  rename(EDAD = F2_Edad) \n\n\n\n[1] \"EDAD\"\n\n\n\n# renombramos el grupo de variables que comienza con F5 \n# por sus nombres en minúsculas\n\ndatos |&gt; \n  rename_with(.fn = tolower, .cols = starts_with(\"F5\")) \n\n\n\n[1] \"f5_amigo\"       \"f5_familiar\"    \"f5_nadie\"       \"f5_novio\"      \n[5] \"f5_otro\"        \"f5_profesional\""
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#filter",
     "href": "primero/diapositivas/04-gestion.html#filter",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "filter()",
     "text": "filter()\n\nLa función filter() del inglés filtrar, sirve para filtrar un subconjunto de observaciones (filas) de una tabla de datos a partir de una condición.\nPara construir la condición se utilizan una serie de operadores de comparación y operadores lógicos similares a la de otros lenguajes de programación.\nLa estructura de la función puede ser cualquiera de las siguientes:\n\n\nfilter(datos, condición)\n\ndatos |&gt; filter(condición)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#operadores-de-comparación",
     "href": "primero/diapositivas/04-gestion.html#operadores-de-comparación",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Operadores de comparación",
     "text": "Operadores de comparación"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#operadores-lógicos-booleanos",
     "href": "primero/diapositivas/04-gestion.html#operadores-lógicos-booleanos",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Operadores lógicos (booleanos)",
     "text": "Operadores lógicos (booleanos)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#operadores-lógicos-booleanos-1",
     "href": "primero/diapositivas/04-gestion.html#operadores-lógicos-booleanos-1",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Operadores lógicos (booleanos)",
     "text": "Operadores lógicos (booleanos)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-filter",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-filter",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de filter()",
     "text": "Ejemplo de filter()\n\n\n# filtramos observaciones que cumplan con la siguiente condición\ndatos |&gt; \n  filter(F3_Sexo == 1, \n         between(F2_Edad, 17, 20), \n         H1_Cerveza == TRUE | H1_Vino == TRUE) |&gt; \n  select(F3_Sexo, F2_Edad, H1_Cerveza, H1_Vino)\n\n# A tibble: 23 × 4\n   F3_Sexo F2_Edad H1_Cerveza H1_Vino\n     &lt;dbl&gt;   &lt;dbl&gt; &lt;lgl&gt;      &lt;lgl&gt;  \n 1       1      18 TRUE       FALSE  \n 2       1      17 TRUE       TRUE   \n 3       1      18 TRUE       FALSE  \n 4       1      17 TRUE       TRUE   \n 5       1      17 FALSE      TRUE   \n 6       1      19 TRUE       TRUE   \n 7       1      18 TRUE       TRUE   \n 8       1      17 TRUE       TRUE   \n 9       1      18 TRUE       TRUE   \n10       1      18 TRUE       TRUE   \n# ℹ 13 more rows"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#arrange",
     "href": "primero/diapositivas/04-gestion.html#arrange",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "arrange()",
     "text": "arrange()\n\nLa función arrange() del inglés ordenar, sirve para ordenar observaciones de una tabla de datos a partir de una o más variables (columnas).\n\n\narrange(datos, var1, var2, ...)   \n\ndatos |&gt; arrange(var1, var2, ...)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#arrange-1",
     "href": "primero/diapositivas/04-gestion.html#arrange-1",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "arrange()",
     "text": "arrange()\n\nEl ordenamiento predeterminado es ascendente.\nSi la variable contiene números, las filas se van a ordenar ubicando esos números de menor a mayor (1,2,3…). Si es texto, las filas se van a ordenar ubicando las palabras alfabéticamente en forma ascendente (a,b,c…).\nSi deseamos invertir el orden debemos incorporar la función desc() dentro de arrange().\n\n\ndatos |&gt; arrange(var1)  # ascendente\n\ndatos |&gt; arrange(desc(var1)) # descendente"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#mutate",
     "href": "primero/diapositivas/04-gestion.html#mutate",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "mutate()",
     "text": "mutate()\n\nLa función mutate() del inglés mutar o transformar, sirve para crear nuevas variables, a partir de los valores de otras variables, dentro de la tabla de datos.\nLa o las nuevas variables creadas se incorporan al final de las columnas del conjunto de datos.\nDentro de los argumentos de mutate() se aplican funciones vectorizadas, lo que significa que la función toma un vector de valores como entrada y devuelve el mismo número de valores como salida.\n\n\ndatos |&gt; mutate(nueva_var = operación/función)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#mutate-1",
     "href": "primero/diapositivas/04-gestion.html#mutate-1",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "mutate()",
     "text": "mutate()\nAlgunas de las operaciones y funciones vectorizadas provistas por el lenguaje R son:\n\nOperadores aritméticos - +, -, *, /, ^\nAritmética modular - %/% - %%\nTransformación - escala - log() - log2() - log10() - exp() - sqrt()\nComparaciones - &gt;, &gt;=, &lt;, &lt;=, ==, !=\nAtrasos/adelantos - lag() - lead()\nOrdenamiento - min_rank() - percent_rank(), etc…\nAcumulativos - cumsum() - cummean() - etc…\nCondicional - if_else() - case_when()."
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-mutate",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-mutate",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de mutate()",
     "text": "Ejemplo de mutate()\n\nCoercionamos la variable aplicando dmy() y as_date()\n\n\n\ndatos |&gt; select(F1_FNac)\n\n# A tibble: 1,252 × 1\n   F1_FNac           \n   &lt;chr&gt;             \n 1 29/3/1999 00:00:00\n 2 27/2/2003 00:00:00\n 3 15/3/2000 00:00:00\n 4 13/8/2001 00:00:00\n 5 13/8/1998 00:00:00\n 6 29/3/2001 00:00:00\n 7 &lt;NA&gt;              \n 8 20/4/1997 00:00:00\n 9 17/1/2001 00:00:00\n10 27/8/2002 00:00:00\n# ℹ 1,242 more rows\n\n\n\n\ndatos |&gt; \n  mutate(F1_FNac = dmy_hms(F1_FNac),\n         F1_FNac = as_date(F1_FNac)) |&gt; \n  select(F1_FNac)\n\n# A tibble: 1,252 × 1\n   F1_FNac   \n   &lt;date&gt;    \n 1 1999-03-29\n 2 2003-02-27\n 3 2000-03-15\n 4 2001-08-13\n 5 1998-08-13\n 6 2001-03-29\n 7 NA        \n 8 1997-04-20\n 9 2001-01-17\n10 2002-08-27\n# ℹ 1,242 more rows"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#summarise",
     "href": "primero/diapositivas/04-gestion.html#summarise",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "summarise()",
     "text": "summarise()\n\nLa función summarise() del inglés resumir, se utiliza justamente para resumir las observaciones de una tabla de datos mediante alguna medida resumen.\nOtra forma de escribir la función es summarize(). Ambas realizan la misma operación.\n\n\ndatos |&gt; summarise(var_resumen = función_resumen)\n\ndatos |&gt; summarize(var_resumen = función_resumen)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#summarise-1",
     "href": "primero/diapositivas/04-gestion.html#summarise-1",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "summarise()",
     "text": "summarise()\n\nAlgunas de las funciones resumen provistas por el lenguaje R son:\n\ntendencia central - mean() - median()\nposición - min() - max() - quantile()\ndispersión - var() - sd() - IQR()\nconteo - n() - n_distinct()\norden - first() - last()\n\nLa mayoría de estas funciones aplican en tipos de datos int (enteros), dbl (reales), date (fecha) y ddtm (fecha - hora)."
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-summarise",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-summarise",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de summarise()",
-    "text": "Ejemplo de summarise()\n \n\n# Resumimos la variable F2_Edad calculando media, \n# desvío estandar, mínimo y máximo\n\ndatos |&gt; \n  summarise(Media = mean(F2_Edad, na.rm = T),\n            Desvio = sd(F2_Edad, na.rm = T),\n            Min = min(F2_Edad, na.rm = T),\n            Max = max(F2_Edad, na.rm = T)) \n\n# A tibble: 1 × 4\n  Media Desvio   Min   Max\n  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1  14.5   1.46    10    19"
+    "text": "Ejemplo de summarise()\n\n\n# Resumimos la variable F2_Edad calculando media, \n# desvío estandar, mínimo y máximo\n\ndatos |&gt; \n  summarise(Media = mean(F2_Edad, na.rm = T),\n            Desvio = sd(F2_Edad, na.rm = T),\n            Min = min(F2_Edad, na.rm = T),\n            Max = max(F2_Edad, na.rm = T)) \n\n# A tibble: 1 × 4\n  Media Desvio   Min   Max\n  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1  14.5   1.46    10    19"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#group_by",
     "href": "primero/diapositivas/04-gestion.html#group_by",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "group_by()",
     "text": "group_by()\n\nLa función group_by() del inglés agrupar por, sirve para agrupar a partir de valores o categorías distintas.\nAplicado sólo no produce ningún resultado interesante, por eso está pensando para usarlo principalmente asociado a summarise().\n\n\ndatos |&gt; group_by(variable)\n\n\nJunto a esta función aparece ungroup() que deshace el agrupamiento.\n\n\ndatos |&gt; ungroup()"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-group_by",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-group_by",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de group_by()",
     "text": "Ejemplo de group_by()\n\n# Resumimos la variable F2_Edad según Anio \n# calculando media, desvío estandar, mínimo y máximo\n\ndatos |&gt; \n  group_by(Anio) |&gt; \n  summarise(Media = mean(F2_Edad, na.rm = T),\n            Desvio = sd(F2_Edad, na.rm = T),\n            Min = min(F2_Edad, na.rm = T),\n            Max = max(F2_Edad, na.rm = T)) \n\n# A tibble: 2 × 5\n  Anio  Media Desvio   Min   Max\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 2do.   13.7   1.03    10    18\n2 4to.   15.8   1.06    13    19"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#agrupamiento-en-summarise",
     "href": "primero/diapositivas/04-gestion.html#agrupamiento-en-summarise",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Agrupamiento en summarise()",
     "text": "Agrupamiento en summarise()\n\nEl agrupamiento o estratificación producido por group_by() es permanente mientras no desagrupemos y esto a veces ocasiona problemas.\n\nEn la última versión de dplyr se agregó un argumento en summarise() para lograr agrupamientos temporales, donde no hace falta desagrupar posteriomente al resultado.\n\n\ndatos |&gt; summarise(.by = variable_grupo)"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-con-.by-en-summarise",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-con-.by-en-summarise",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo con .by en summarise()",
     "text": "Ejemplo con .by en summarise()\n\n# Resumimos la variable F2_Edad según Anio con .by\n# calculando media, desvío estandar, mínimo y máximo\n\ndatos |&gt; \n  summarise(Media = mean(F2_Edad, na.rm = T),\n            Desvio = sd(F2_Edad, na.rm = T),\n            Min = min(F2_Edad, na.rm = T),\n            Max = max(F2_Edad, na.rm = T),\n            .by = Anio) \n\n# A tibble: 2 × 5\n  Anio  Media Desvio   Min   Max\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 4to.   15.8   1.06    13    19\n2 2do.   13.7   1.03    10    18"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#count",
     "href": "primero/diapositivas/04-gestion.html#count",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "count()",
     "text": "count()\n\nLa función count() del inglés contar, sirve para contabilizar categorías o valores diferentes de variables resumiendo los datos en una tabla de frecuencia.\nReconoce y también contabiliza los valores NA de las variables.\n\ndatos |&gt; count(variable)\n\nTiene algunos argumentos opcionales como:\n\nname (nombre de la variable que contabiliza - por defecto se llama n)\nsort (si es TRUE se ordena de mayor a menor)\nwt (variable peso / ponderación / expansión opcional)\n\nTambién se pueden agregar más variables separadas por una coma."
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-count",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-count",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de count()",
     "text": "Ejemplo de count()\n\n\n# Contamos las frecuencias de la variable Anio\n# ordenadas de mayor a menor\n\ndatos |&gt; \n  count(Anio, sort = T)\n\n# A tibble: 2 × 2\n  Anio      n\n  &lt;chr&gt; &lt;int&gt;\n1 2do.    750\n2 4to.    502"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#if_else",
     "href": "primero/diapositivas/04-gestion.html#if_else",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "if_else()",
     "text": "if_else()\n\nLa función if_else() devuelve valores dependiendo del resultado de una condición lógica (TRUE/FALSE).\nLos valores devueltos para cada observación se almacenan dentro de una variable definida en mutate().\n\n\ndatos |&gt; \n  mutate(x = if_else(condicion, valor_T, valor_F))"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-if_else",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-if_else",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de if_else()",
     "text": "Ejemplo de if_else()\n\ndatos |&gt; \n  summarise(Mediana_edad = median(F2_Edad, na.rm = T))\n\n# A tibble: 1 × 1\n  Mediana_edad\n         &lt;dbl&gt;\n1           14\n\n\n\n# dividimos en dos grupos según la mediana de edad\ndatos |&gt; \n  mutate(Grupo_edad = if_else(F2_Edad &lt;= 14, \"&lt;= 14\", \"&gt; 14\")) |&gt;\n  count(Grupo_edad) \n\n# A tibble: 3 × 2\n  Grupo_edad     n\n  &lt;chr&gt;      &lt;int&gt;\n1 &lt;= 14        597\n2 &gt; 14         583\n3 &lt;NA&gt;          72"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#case_when",
     "href": "primero/diapositivas/04-gestion.html#case_when",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "case_when()",
     "text": "case_when()\n\nLa función case_when() ejecuta una vectorización múltiple de funciones if_else().\nLos valores devueltos para cada observación se almacenan dentro de una variable definida en mutate().\n\n\ndatos |&gt; \n  mutate(x = case_when(\n    condicion ~ valor_T, \n    ...,\n    .default = valor))"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-case_when",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-case_when",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de case_when()",
     "text": "Ejemplo de case_when()\n\n# etiquetamos la variable V1_Alegre\ndatos |&gt; \n  mutate(V1_Alegre = case_when(\n    V1_Alegre == 0 ~ \"Nada\",\n    V1_Alegre == 1 ~ \"Poco\",\n    V1_Alegre == 2 ~ \"Neutral\",\n    V1_Alegre == 3 ~ \"Muy\",\n    V1_Alegre == 4 ~ \"Totalmente\",\n    .default = \"Ns/Nc\"\n  )) |&gt; \n  count(V1_Alegre, sort = T)\n\n# A tibble: 6 × 2\n  V1_Alegre      n\n  &lt;chr&gt;      &lt;int&gt;\n1 Totalmente   452\n2 Muy          256\n3 Neutral      249\n4 Ns/Nc        171\n5 Poco          80\n6 Nada          44"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#between",
     "href": "primero/diapositivas/04-gestion.html#between",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "between()",
     "text": "between()\n\nLa función between() es una función atajo para operaciones de condición &gt;= x &lt;= , implementado para vectores numéricos o de fecha/hora.\nSe utiliza dentro de estructuras donde se escriben condiciones (filter(), mutate(), etc).\n\n\ndatos |&gt; filter(between(x, izquierda, derecha)) \n\n\nLos dos extremos (izquierda y derecha) se incluyen en el intervalo"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#ejemplo-de-between",
     "href": "primero/diapositivas/04-gestion.html#ejemplo-de-between",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Ejemplo de between()",
     "text": "Ejemplo de between()\n\n\n# filtramos observaciones donde la variable F2_Edad sea mayor \n# o igual a 16 y menor o igual 18 años\n\ndatos |&gt; \n filter(between(F2_Edad, 16, 18)) |&gt; \n  count(F2_Edad)\n\n# A tibble: 3 × 2\n  F2_Edad     n\n    &lt;dbl&gt; &lt;int&gt;\n1      16   153\n2      17    95\n3      18    29"
   },
   {
     "objectID": "primero/diapositivas/04-gestion.html#documentación",
     "href": "primero/diapositivas/04-gestion.html#documentación",
-    "title": "Manipulación de datos",
+    "title": "Procesamiento de datos",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\nCapítulo 3 del libro “R for Data Science (2e)”"
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 3 del libro “R for Data Science (2e)”"
   },
   {
     "objectID": "primero/diapositivas/05b-tidy.html#datos-ordenados-tidydata",
@@ -2524,7 +2608,7 @@
     "href": "primero/diapositivas/05b-tidy.html#documentación",
     "title": "Datos ordenados y relacionales",
     "section": "Documentación",
-    "text": "Documentación\n\n\n\nCapítulo 5 y 19 del libro “R for Data Science (2e) - Data tidy” / “R for Data Science (2e) - Joins”"
+    "text": "Documentación\n\n\n\n\n\n\n\nCapítulo 5 y 19 del libro “R for Data Science (2e) - Data tidy” / “R for Data Science (2e) - Joins”"
   },
   {
     "objectID": "primero/diapositivas/06-analisis.html#operaciones-simultáneas-por-columnas",
@@ -3050,12 +3134,5 @@
     "title": "Resúmenes, indicadores y funciones estadísticas",
     "section": "Tablas para presentaciones",
     "text": "Tablas para presentaciones\nCuando necesitemos presentar resultados estadísticos combinados, producto de variables cuanti y cualitativas a la vez, podemos hechar mano a funciones del paquete gtsummary.\n\n\n\n\n\nEsta librería proporciona una forma elegante y flexible de crear tablas analíticas y de resumen, univariadas, estratificadas y complejas.\nIntegra estimaciones estadísticas predefinidas y se pueden personalizar a gusto, interactuando con otros paquetes como gt, labelled y flextable.\nEn el sitio del desarrollador (gtsummary), encontrarán mucha documentación para adecuar los requerimientos de la salida buscada.\nMostramos un ejemplo en función de los datos del archivo “base2023r.xlsx”.\n\nlibrary(readxl)\nlibrary(gtsummary)\n\n\ndatos &lt;- read_excel(\"datos/base2023r.xlsx\")\n\n\ndatos |&gt; \n  select(EDAD_DIAGNOSTICO, SEXO, MOTIVO_CONSULTA) |&gt;\n  tbl_summary()\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nN = 2001\n\n\n\n\nEDAD_DIAGNOSTICO\n33 (23, 49)\n\n\nSEXO\n\n\n\n\n    A\n1 (0.5%)\n\n\n    F\n68 (34%)\n\n\n    M\n131 (66%)\n\n\nMOTIVO_CONSULTA\n\n\n\n\n    Contacto\n2 (11%)\n\n\n    Examen de Salud\n1 (5.3%)\n\n\n    Sintomático Respiratorio\n16 (84%)\n\n\n    Unknown\n181\n\n\n\n1 Median (Q1, Q3); n (%)\n\n\n\n\n\n\n\n\nQuizás lo mejor sea presentar los datos estratificados por sexo, por ejmplo. Además configuramos algunos argumentos mas.\n\ndatos |&gt; \n  select(EDAD_DIAGNOSTICO, SEXO, MOTIVO_CONSULTA) |&gt;\n  filter(SEXO != \"A\") |&gt; \n  tbl_summary(by = SEXO,\n              statistic = list(\n                all_continuous() ~ \"{mean} ({sd})\",\n                all_categorical() ~ \"{n} / {N} ({p}%)\"),\n              digits = all_continuous() ~ 1,\n              missing_text = \"Sin dato\") |&gt; \n  modify_header(label ~ \"**Variable**\")\n\n\n\n\n\n\n\n\n\n\n\n\nVariable\nF\nN = 681\nM\nN = 1311\n\n\n\n\nEDAD_DIAGNOSTICO\n33.2 (19.1)\n39.1 (18.2)\n\n\nMOTIVO_CONSULTA\n\n\n\n\n\n\n    Contacto\n2 / 7 (29%)\n0 / 12 (0%)\n\n\n    Examen de Salud\n1 / 7 (14%)\n0 / 12 (0%)\n\n\n    Sintomático Respiratorio\n4 / 7 (57%)\n12 / 12 (100%)\n\n\n    Sin dato\n61\n119\n\n\n\n1 Mean (SD); n / N (%)\n\n\n\n\n\n\n\n\nEl argumento statistic permite que, mediante una lista, configuremos los estadísticos a presentar. Para todas las variables continuas seleccionamos la media (mean) y el desvío estandar (sd); para todas las variables categóricas el conteo de cada categoría y el porcentaje. Los decimales de las variables continuas quedan definidos en 1 y cuando aparezcan valores NA serán expresados con la etiqueta “Sin dato”. Por último, la cabecera de la tabla en la comuna de las variables será “Variable” en negrita.\n\nFlextable\n\n\n\n\n\nEstas tablas de presentación de resultados se pueden conectar con el paquete flextable para exportarlas en diferentes formatos, como Word, html, PDF, PowerPoint o imagen y además se vincula con el contenido en estructuras de archivos rmarkdown y/o Quarto.\nUna salida interesante es poder guardar la tabla en formato Word (.docx), porque luego podemos editarla facilmente, para esto la función as_flex_table() convierte al tbl_summary() de gtsummry en clase flextable.\n\nlibrary(flextable)\n\ntabla1 &lt;- datos |&gt; \n  select(EDAD_DIAGNOSTICO, SEXO, MOTIVO_CONSULTA) |&gt;\n  filter(SEXO != \"A\") |&gt; \n  tbl_summary(by = SEXO,\n              statistic = list(\n                all_continuous() ~ \"{mean} ({sd})\",\n                all_categorical() ~ \"{n} / {N} ({p}%)\"),\n              digits = all_continuous() ~ 1,\n              missing_text = \"Sin dato\") |&gt; \n  modify_header(label ~ \"**Variable**\") |&gt; \n  as_flex_table() |&gt; \n  autofit() |&gt;    # ajuste automático \n  theme_box()     # tema box\n\nLuego es posible exportar fácilmente una o más tablas a partir de los objetos flextables almacenados a documentos tipo html, RTF, Word, PowerPoint o PNG.\nUn ejemplo para salidas tipo Word es: save_as_docx()\n\nsave_as_docx(\n  \"tabla 1\" = tabla1, \n  path = \"/resultados/tabla_exportada.docx\")\n\nExporta el objeto tabla1 en el archivo tabla_exportada.docx dentro de la carpeta resultados.\nTodos los objetos de clase flextable están compuestos por tres partes:\n\nheader: de forma predeterminada, solo hay una fila de encabezado que contiene los nombres del dataframe.\n\nbody: la parte del cuerpo contiene datos del dataframe.\nfooter: la parte del pie de tabla no está implementada de forma predeterminada, pero puede contener notas al pie o cualquier contenido."
-  },
-  {
-    "objectID": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-2",
-    "href": "primero/diapositivas/01a-datos.html#conjuntos-de-datos-2",
-    "title": "Gestión de datos - parte 1",
-    "section": "Conjuntos de datos",
-    "text": "Conjuntos de datos\n\nPartes básicas de una tabla de datos estructurada"
   }
 ]
