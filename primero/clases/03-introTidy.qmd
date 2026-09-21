@@ -521,6 +521,18 @@ datos |>
   filter(xor(año == "2016", casos > 200))
 ```
 
+Desde la versión 1.2.0 se agregó la función `filter_out()` para especificar condiciones de filas que se van a eliminar.
+
+```{r}
+datos |> 
+  filter(casos > 200)
+
+datos |> 
+    filter_out(casos < 200)
+```
+
+Las dos estructuras de código devuelven la misma tabla, la primera mediante `filter()` con casos > 200 y la segunda con `filter_out()` negando las filas con casos < 200.   
+
 ### Función **arrange()**
 
 La función `arrange()` se utiliza para ordenar las filas de un conjunto de datos de acuerdo a una o varias columnas/variables. Por defecto, el ordenamiento es ascendente alfanumérico.
@@ -839,6 +851,7 @@ datos <- datos |>
 datos |> 
   count(grupo_edad2)
 ```
+
 Construimos así una variable factor ordenada <ord>.
 
 Por último, con el argumento **labels** en `FALSE` hacemos que las etiquetas de los 8 grupos sean numéricas.
@@ -886,6 +899,13 @@ datos |>
   count(grupo3)  
 ```
 
+También desde la versión 2.1.0 de dplyr, aparecieron tres nuevas funciones relacionadas con `case_when()`:
+
+- `replace_when()` para actualizar un vector existente según condiciones lógicas. Puede considerarse una versión mejorada de `replace()` de R base.
+
+- `recode_values()` para crear un nuevo vector asignando valores nuevos a todos los valores antiguos. 
+
+- `replace_values()` para actualizar un vector existente asignando valores nuevos a algunos valores antiguos.
 
 
 ### Función **summarise()**
