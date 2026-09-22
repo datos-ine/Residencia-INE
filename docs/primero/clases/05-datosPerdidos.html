@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Datos perdidos (missing) – Residencia-INE</title>
+<title>Datos ausentes (missing) – Residencia-INE</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-25e64ecf04745fc540e13936e5883341.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e868ba6fad8aeb71849587ff44df17ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-7416cfc00a00f4f06d12b98363d5ccde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-25e64ecf04745fc540e13936e5883341.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e868ba6fad8aeb71849587ff44df17ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -328,10 +328,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contenidos</h2>
    
   <ul>
-  <li><a href="#detectar-observaciones-incompletas-valores-missing" id="toc-detectar-observaciones-incompletas-valores-missing" class="nav-link active" data-scroll-target="#detectar-observaciones-incompletas-valores-missing">Detectar observaciones incompletas (valores missing)</a></li>
+  <li><a href="#por-qué-importan-los-datos-ausentes" id="toc-por-qué-importan-los-datos-ausentes" class="nav-link active" data-scroll-target="#por-qué-importan-los-datos-ausentes">¿Por qué importan los datos ausentes?</a></li>
+  <li><a href="#contexto-para-la-toma-de-decisiones" id="toc-contexto-para-la-toma-de-decisiones" class="nav-link" data-scroll-target="#contexto-para-la-toma-de-decisiones">Contexto para la toma de decisiones</a></li>
+  <li><a href="#mecanismos-de-ausencia" id="toc-mecanismos-de-ausencia" class="nav-link" data-scroll-target="#mecanismos-de-ausencia">Mecanismos de ausencia</a></li>
+  <li><a href="#los-na-también-son-información" id="toc-los-na-también-son-información" class="nav-link" data-scroll-target="#los-na-también-son-información">Los NA también son información</a></li>
+  <li><a href="#el-error-más-común-eliminar-filas-con-al-menos-un-na" id="toc-el-error-más-común-eliminar-filas-con-al-menos-un-na" class="nav-link" data-scroll-target="#el-error-más-común-eliminar-filas-con-al-menos-un-na">El error más común: eliminar filas con al menos un NA</a></li>
+  <li><a href="#limitaciones-de-la-imputación-simple" id="toc-limitaciones-de-la-imputación-simple" class="nav-link" data-scroll-target="#limitaciones-de-la-imputación-simple">Limitaciones de la imputación simple</a></li>
+  <li><a href="#métodos-avanzados" id="toc-métodos-avanzados" class="nav-link" data-scroll-target="#métodos-avanzados">Métodos avanzados</a></li>
+  <li><a href="#detectar-observaciones-incompletas-en-r" id="toc-detectar-observaciones-incompletas-en-r" class="nav-link" data-scroll-target="#detectar-observaciones-incompletas-en-r">Detectar observaciones incompletas en R</a></li>
   <li><a href="#gestión-de-nas-con-naniar" id="toc-gestión-de-nas-con-naniar" class="nav-link" data-scroll-target="#gestión-de-nas-con-naniar">Gestión de NA’s con naniar</a></li>
   <li><a href="#reemplazo-de-valores" id="toc-reemplazo-de-valores" class="nav-link" data-scroll-target="#reemplazo-de-valores">Reemplazo de valores</a></li>
   <li><a href="#eliminación-de-valores-na" id="toc-eliminación-de-valores-na" class="nav-link" data-scroll-target="#eliminación-de-valores-na">Eliminación de valores NA</a></li>
+  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
   </ul>
 </nav>
 </nav>
@@ -345,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Datos perdidos (missing)</strong></h1>
+<h1 class="title"><strong>Datos ausentes (missing)</strong></h1>
 </div>
 
 
@@ -367,25 +375,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="img/05/missing.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
-<p>Cuando trabajamos con datos los valores perdidos o faltantes (conocidos en inglés como <em>missing</em>) pueden constituir un serio problema en nuestras variables por lo que deben explorarse y manejarse cuidadosamente en las etapas iniciales del análisis.</p>
-<p>Estos datos pueden faltar por muchas razones, pero generalmente se suelen agrupar en dos categorías: valores faltantes informativos y valores faltantes aleatorios. Los informativos implican una causa estructural, ya sea por deficiencias en la forma en que se recopilaron los datos o por anomalías en el entorno de observación. Los aleatorios son aquellos que tienen lugar independientemente del proceso de recopilación de datos.</p>
-<p>Dependiendo de si los valores faltantes son de uno u otro tipo, se procederá de una u otra manera. A los informativos, en general, se les puede asignar un valor concreto (por ejemplo, “Ninguno” o “Sin dato”), ya que este valor puede convenir tenerlo como una categoría más de la variable. Los aleatorios, en cambio, pueden manejarse mediante la eliminación o la imputación.</p>
-<p>Resumiendo, las tareas habituales respecto a estos valores consisten en:</p>
+<section id="por-qué-importan-los-datos-ausentes" class="level2">
+<h2 data-anchor-id="por-qué-importan-los-datos-ausentes">¿Por qué importan los datos ausentes?</h2>
+<p>Cuando trabajamos con datos reales, los valores ausentes o faltantes (conocidos en inglés como <em>missing</em> - <code>NA</code> en R), son más que un inconveniente técnico y lo que hagamos con ellos representan decisiones analíticas con consecuencias concretas sobre la validez de las estimaciones. Ignorarlos o tratarlos de forma descuidada puede introducir sesgo de selección, alterar la representatividad de la muestra e implicar supuestos implícitos sobre el proceso que generó los datos.</p>
+<p>Por eso, antes de continuar con el análisis, modelar o graficar, es indispensable entender qué está pasando con los valores ausentes. Tratar los NA no es simplemente “rellenar huecos” u omitirlos sino preguntarse qué dicen esos huecos sobre el proceso que produjo los datos, es decir, si existe un mecanismo de ausencia subyacente.</p>
+</section>
+<section id="contexto-para-la-toma-de-decisiones" class="level2">
+<h2 data-anchor-id="contexto-para-la-toma-de-decisiones">Contexto para la toma de decisiones</h2>
+<p>Antes de definir cómo proceder frente a valores ausentes, es necesario contextualizar cada caso y preguntarse por qué esa información no está presente en la tabla de datos.</p>
+<p>Un dato aislado rara vez es interpretable por sí mismo, su sentido suele estar anclado en el proceso de recolección y registro. En este punto, los metadatos asociados a la tabla de datos (por ejemplo, el diccionario de datos) resultan fundamentales, ya que permiten evaluar si la ausencia responde a errores de medición o carga —lo que podría justificar su corrección o exclusión, siempre debidamente documentada— o si, por el contrario, es inherente al fenómeno en estudio, en cuyo caso eliminarla implicaría perder información relevante.</p>
+<p>La mejor solución para el manejo de datos ausentes es prevenir su aparición. Esto supone fortalecer los procesos de recolección y carga de datos, minimizando la pérdida de información desde el origen.</p>
+<p>Sin embargo, en la práctica, con frecuencia no es posible recuperar los datos faltantes. En esos escenarios, nuestro rol como analista consiste en procesar la información disponible y explicitar de manera transparente qué decisiones se adoptaron frente a los valores ausentes y bajo que supuestos.</p>
+</section>
+<section id="mecanismos-de-ausencia" class="level2">
+<h2 data-anchor-id="mecanismos-de-ausencia">Mecanismos de ausencia</h2>
+<p>Técnicamente se reconocen tres tipos de mecanismo, con implicancias muy distintas para el análisis:</p>
+<p><strong>MCAR — Missing Completely at Random</strong> (ausencia completamente aleatoria)</p>
+<p>La probabilidad de que un dato falte no depende ni de las variables observadas ni del valor ausente en sí. El mecanismo es independiente de todo lo demás. Bajo MCAR, eliminar casos con datos faltantes no introduce sesgo en las estimaciones (medias, coeficientes de regresión, etc.), aunque sí reduce el tamaño muestral y la potencia estadística. En la práctica, asumir MCAR es cómodo pero raramente justificado con datos reales.</p>
+<p><strong>MAR — Missing at Random</strong> (ausencia dependiente de lo observado)</p>
+<p>La ausencia depende de las variables observadas, pero no del valor que falta, una vez que se condiciona en esas variables. En este caso, ignorar el patrón de ausencia y eliminar filas puede introducir sesgo, ya que la estructura de covariables estará desbalanceada entre los casos observados y los ausentes.</p>
+<p>Supongamos, por ejemplo, que tenemos la variable <em>nivel de colesterol</em> con valores faltantes y la edad de la persona que está completa. Existe un escenario posible de mecanismo que puede explicarse en que las personas más jóvenes tienen menos probabilidad de hacerse un análisis y ello explica los NA en colesterol.</p>
+<p>Entonces en MAR, los datos no están simplemente “faltando al azar” en sentido coloquial, sino “al azar condicionalmente a lo observado”.</p>
+<p><strong>MNAR — Missing Not at Random</strong> (ausencia dependiente del valor faltante)</p>
+<p>La ausencia depende del propio valor no observado. Es el caso más problemático: no se resuelve con técnicas estándar de imputación. Requiere modelos explícitos del mecanismo de no respuesta, análisis de sensibilidad o información externa.</p>
+<p>Un ejemplo para esta situación la tenemos en suponer un estudio poblacional sobre el consumo de alcohol y que parte de los participantes no responda a la pregunta. Es plausible que las personas con consumos más altos tengan mayor probabilidad de no responder (por estigma, deseabilidad social o temor a consecuencias).</p>
+</section>
+<section id="los-na-también-son-información" class="level2">
+<h2 data-anchor-id="los-na-también-son-información">Los NA también son información</h2>
+<p>El patrón de ausencia puede ser en sí mismo predictivo. En epidemiología, por ejemplo, el hecho de que un dato no esté registrado rara vez es fortuito y suele ser una señal sistemática asociada a características del paciente, del sistema de registro o del contexto clínico. Crear un indicador binario de “dato faltante” puede capturar mecanismos de comportamiento relevantes como la no respuesta, el abandono o la ocultación deliberada:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> datos <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">edad_na =</span> <span class="fu">is.na</span>(edad))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Este indicador no reemplaza la imputación, pero puede ser útil como variable adicional en modelos o para explorar el mecanismo de ausencia.</p>
+</section>
+<section id="el-error-más-común-eliminar-filas-con-al-menos-un-na" class="level2">
+<h2 data-anchor-id="el-error-más-común-eliminar-filas-con-al-menos-un-na">El error más común: eliminar filas con al menos un NA</h2>
+<p>La eliminación masiva de observaciones con datos ausentes es una forma de sesgo de selección.</p>
+<p>Cuando una tabla tiene muchos NA, eliminar todas las filas incompletas equivale a redefinir silenciosamente la población de estudio: ya no se trabaja con “todos los individuos”, sino con “los individuos con datos completos”.</p>
+<p>Si la completitud de los datos está asociada a variables relevantes, la muestra resultante deja de representar a la población objetivo, y el modelo puede ajustarse a una subpoblación diferente.</p>
+<p>Las consecuencias concretas son: alteración de la composición de la muestra, distorsión de las asociaciones estimadas y sesgo en medidas de interés como OR o RR.</p>
+<p>Por ejemplo, si los pacientes más graves tienen mayor cantidad de datos ausentes y se los elimina del análisis, se subestima el riesgo real en la población.</p>
+</section>
+<section id="limitaciones-de-la-imputación-simple" class="level2">
+<h2 data-anchor-id="limitaciones-de-la-imputación-simple">Limitaciones de la imputación simple</h2>
+<p>Un método frecuente consiste en reemplazar los NA por un valor resumen de la distribución (media o mediana). Sin embargo, la imputación con la media no es “gratuita” sino que modifica la estructura de los datos de manera que reduce artificialmente la variabilidad, debilita las correlaciones entre variables, sesga los coeficientes estimados y genera intervalos de confianza artificialmente estrechos.</p>
+<p>En definitiva, se introducen observaciones deterministas que nunca existieron.</p>
+</section>
+<section id="métodos-avanzados" class="level2">
+<h2 data-anchor-id="métodos-avanzados">Métodos avanzados</h2>
+<p>La imputación avanzada es un campo extenso que excede los objetivos de esta cursada, pero mencionaremos su existencia. Las técnicas más utilizadas son:</p>
 <ul>
-<li>Evaluar la existencia de valores perdidos (exploración y conteo).</li>
-<li>Excluir los valores ausentes (si es posible y conveniente).</li>
-<li>Etiquetar o recodificar los valores ausentes (imputación de datos).</li>
+<li><p>Imputación múltiple (paquetes de R mice, Amelia): genera varias versiones del conjunto de datos con distintas imputaciones plausibles y combina los resultados mediante reglas estadísticas formales, produciendo estimaciones que incorporan la incertidumbre sobre los valores faltantes.</p></li>
+<li><p>Modelos bayesianos: permiten incorporar esa incertidumbre de forma natural dentro del propio modelo de análisis.</p></li>
+<li><p>Machine learning: algunos algoritmos (como los basados en árboles -random forest-) manejan NA de forma nativa o mediante imputación por proximidad entre observaciones similares.</p></li>
 </ul>
-<p>Respecto a la imputación existen numerosa bibliografía sobre diversos algoritmos que no vamos a incluir en este curso.</p>
-<section id="detectar-observaciones-incompletas-valores-missing" class="level2">
-<h2 data-anchor-id="detectar-observaciones-incompletas-valores-missing">Detectar observaciones incompletas (valores missing)</h2>
-<p>El lenguaje R gestiona a los datos perdidos mediante el valor especial reservado <code>NA</code> de <strong>Not Available</strong> (No disponible),</p>
+<p>Estos métodos no eliminan la necesidad de reflexionar sobre el mecanismo de ausencia (lo hacen más explícito) y, en algunos casos, permiten modelarlo directamente. Ninguno de ellos es una solución automática y todos requieren decisiones informadas sobre el contexto y los datos.</p>
+</section>
+<section id="detectar-observaciones-incompletas-en-r" class="level2">
+<h2 data-anchor-id="detectar-observaciones-incompletas-en-r">Detectar observaciones incompletas en R</h2>
+<p>El lenguaje R gestiona a los datos perdidos mediante el valor especial reservado <code>NA</code> de <strong>Not Available</strong> (No disponible).</p>
 <p>En principio, sólo vamos a enfocarnos en como podemos utilizar algunas funciones del lenguaje para detectarlos y contabilizarlos. A partir de su identificación decidiremos que hacer con ellos, dependiendo de su cantidad y extensión, es decir, si los valores faltantes son la mayoría de una variable o la mayoría de una observación o bien si representan la falta de respuesta de una pregunta, con lo cual convenga etiquetarlos.</p>
 <p>Una manera de abordar esta tarea con R base para una variables es hacer la sumatoria de valores <code>NA</code>, usando la función de identificación <code>is.na()</code>.</p>
 <p>Para ejemplificar, tomamos una tabla de datos de vigilancia con 200 observaciones y 56 variables.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(FECHA_FIN_TRAT)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(FECHA_FIN_TRAT)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   Cantidad_NA
@@ -396,7 +450,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>La consulta dice que hay 142 observaciones vacías en la variable FECHA_FIN_TRAT. Lo malo es que debemos hacer esta tarea variable por variable, lo que resulta muy trabajoso.</p>
 <p>También la función <code>summary()</code> aplicada sobre el dataframe completo informa la cantidad de <code>NA</code> de variables cuantitativas, lógicas y fecha, pero no lo hace con las de tipo caracter.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(datos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(datos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     SEXO           FECHA_NACIMIENTO              EDAD_DIAGNOSTICO
  Length:200         Min.   :1934-12-13 00:00:00   Min.   : 0.00   
@@ -554,9 +608,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Más completo y en una sola línea la función <code>find_na()</code> del paquete <strong>dlookr</strong> muestra el porcentaje de valores perdidos en todas las variables de una tabla de datos y se complementa con el gráfico de barras de pareto <code>plot_na_pareto()</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dlookr)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find_na</span>(datos, <span class="at">rate =</span> T) <span class="co"># argumento rate = T muestra % de valores NA</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dlookr)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find_na</span>(datos, <span class="at">rate =</span> T) <span class="co"># argumento rate = T muestra % de valores NA</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                       SEXO            FECHA_NACIMIENTO 
                         0.0                         0.0 
@@ -617,24 +671,12 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_na_pareto</span>(datos, </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">only_na =</span> T) <span class="co"># argumento only_na = T muestra variables solo con algún valor NA </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.
-ℹ The deprecated feature was likely used in the dlookr package.
-  Please report the issue at &lt;https://github.com/choonghyunryu/dlookr/issues&gt;.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
-ℹ Please use the `linewidth` argument instead.
-ℹ The deprecated feature was likely used in the dlookr package.
-  Please report the issue at &lt;https://github.com/choonghyunryu/dlookr/issues&gt;.</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_na_pareto</span>(datos, </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">only_na =</span> T) <span class="co"># argumento only_na = T muestra variables solo con algún valor NA </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="05-datosPerdidos_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" style="width:120.0%"></p>
+<p><img src="05-datosPerdidos_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" style="width:120.0%"></p>
 </figure>
 </div>
 </div>
@@ -647,9 +689,9 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 <p><img src="img/05/naniar.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:10.0%"></p>
 </figure>
 </div>
-<p>El paquete <strong>naniar</strong> es un paquete que reúne funciones diseñadas para el manejo de valores faltantes pensado para una gestión completa.</p>
+<p>El paquete <strong>naniar</strong> es un paquete que reúne funciones diseñadas para el manejo de valores ausentes pensado para una gestión completa.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(naniar)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(naniar)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Sus caracteristicas generales son:</p>
 <ul>
@@ -661,7 +703,7 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 <p>De las muchas funciones que tiene el paquete seleccionamos algunas para mostrar que son muy útiles para una tarea básica.</p>
 <p>La función <code>miss_var_summary()</code> proporciona un resumen sobre los valores NA en cada variable del dataframe similar a <code>find_na()</code> que vimos anterioremente pero con una salida en forma de tabla y un recento absoluto, además de porcentual.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">miss_var_summary</span>(datos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">miss_var_summary</span>(datos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 56 × 3
    variable                    n_miss pct_miss
@@ -681,28 +723,28 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 </div>
 <p>Por el lado gráfico, ofrece la función <code>gg_miss_var()</code> que representa la información de la tabla anterior pero a través de un gráfico <em>lollipop</em> horizontal de tipo <strong>ggplot2</strong>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gg_miss_var</span>(datos, </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">show_pct =</span> T) <span class="co"># muestra valores en porcentajes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gg_miss_var</span>(datos, </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">show_pct =</span> T) <span class="co"># muestra valores en porcentajes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="05-datosPerdidos_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" style="width:120.0%"></p>
+<p><img src="05-datosPerdidos_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" style="width:120.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Hay otra viaulización muy interesante porque muestra las relaciones de los valores ausentes de las variables cuya función se llama <code>gg_miss_upset()</code> y genera un gráfico <strong>Upset</strong> en función de la existencia de valores NA.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gg_miss_upset</span>(datos) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gg_miss_upset</span>(datos) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/05/upset1.png" class="img-fluid"> Por defecto, construye el gráfico tomando las primeras 10 variables de la tabla de datos con valores NA de forma decreciente. Esto se puede modificar cambiando el argumentos <code>nset =</code>.</p>
 <p>Tiene dos entradas para su lectura. En la parte inferior izquierda nos muestra los nombres de las variables con valores NA ordenadas de menor a mayor medida en una escala absoluta. El gráfico de barras principal, ordenado de forma predeterminada de mayor a menor, informa sobre las cantidades absolutas de valores NA de las combinaciones que aperecen debajo del eje x del gráfico.</p>
 <p>Por ejemplo, la variable ETNIA tiene todos sus observaciones como NA y la variable COVID casi lo mismo, mientras que la variable FIS cerca de 50.</p>
 <p>Podemos eliminar del gráfico a esas dos variables con casi todos los valores NA, usando formas de tidyverse previas dado que las funciones de naniar son compatibles.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>ETNIA, <span class="sc">-</span>COVID) <span class="sc">|&gt;</span> </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gg_miss_upset</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>ETNIA, <span class="sc">-</span>COVID) <span class="sc">|&gt;</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gg_miss_upset</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img src="img/05/upset2.png" class="img-fluid"></p>
 <p>Al quitar esas dos variables, aparecen dos nuevas con cantidades menores de NA que FIS (FECHA_INICIO_TRAT y FECHA_INICIO_SINTOMA), es decir siguen siendo 10 por defecto.</p>
@@ -715,17 +757,17 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 <p>La primera función trabaja sobre el dataframe completo adignando valores NA en la categoría o valor que le indiquemos.</p>
 <p>Por ejemplo, la variable ID_PROV_INDEC_RESIDENCIA no tiene valores perdidos pero si hay una categoría/código desconocido (“00”), entonces podemos decirle que ese código sea NA.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(ID_PROV_INDEC_RESIDENCIA)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(ID_PROV_INDEC_RESIDENCIA)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   Cantidad_NA
         &lt;int&gt;
 1           0</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">replace_with_na</span>(<span class="at">replace =</span> <span class="fu">list</span>(<span class="at">ID_PROV_INDEC_RESIDENCIA =</span> <span class="st">"00"</span>)) <span class="sc">|&gt;</span>     </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(ID_PROV_INDEC_RESIDENCIA)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">replace_with_na</span>(<span class="at">replace =</span> <span class="fu">list</span>(<span class="at">ID_PROV_INDEC_RESIDENCIA =</span> <span class="st">"00"</span>)) <span class="sc">|&gt;</span>     </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Cantidad_NA =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(ID_PROV_INDEC_RESIDENCIA)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   Cantidad_NA
@@ -736,8 +778,8 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 <p><code>replace_na_with()</code> etiqueta valores faltantes con categorías definidas que serán tenidas en cuenta a la hora de hacer tablas u otras operaciones. Esta función se utiliza dentro de <code>mutate()</code> del tidyverse.</p>
 <p>La variable MOTIVO_CONSULTA tiene 181 valores NA que serán etiquetados como “Sin dato” de esta forma:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(MOTIVO_CONSULTA)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(MOTIVO_CONSULTA)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 2
   MOTIVO_CONSULTA              n
@@ -747,10 +789,10 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 3 Sintomático Respiratorio    16
 4 &lt;NA&gt;                       181</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">MOTIVO_CONSULTA =</span> <span class="fu">replace_na_with</span>(MOTIVO_CONSULTA, </span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Sin dato"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(MOTIVO_CONSULTA)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">MOTIVO_CONSULTA =</span> <span class="fu">replace_na_with</span>(MOTIVO_CONSULTA, </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>                                           <span class="st">"Sin dato"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(MOTIVO_CONSULTA)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 2
   MOTIVO_CONSULTA              n
@@ -767,7 +809,7 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 <p>Cuando decidimos eliminar valores NA de alguna variable, salvo que se quite la variable entera, tenemos que tener en cuenta que perdemos la observación completa, incluso valores válidos que se encuentran en otras variables.</p>
 <p>R base tiene una función llamada <code>na.omit()</code> que omite toda observación donde al menos haya un solo NA en alguna variable.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">na.omit</span>(datos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">na.omit</span>(datos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 0 × 56
 # ℹ 56 variables: SEXO &lt;chr&gt;, FECHA_NACIMIENTO &lt;dttm&gt;, EDAD_DIAGNOSTICO &lt;dbl&gt;,
@@ -782,8 +824,8 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 <p>Aplicar esta función sobre el dataframe datos produce que no quede ninguna observación, dado que vimos que la variable ETNIA tenía sus doscientos valores vacíos.</p>
 <p>Una función superadora es <code>drop_na()</code> de tidyr que pertenece a tidyverse, porque omite observaciones que tengan variables que definamos, por ejemplo:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(ETNIA)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(ETNIA)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 0 × 56
 # ℹ 56 variables: SEXO &lt;chr&gt;, FECHA_NACIMIENTO &lt;dttm&gt;, EDAD_DIAGNOSTICO &lt;dbl&gt;,
@@ -794,8 +836,8 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 #   ESTAB_CLINICA &lt;chr&gt;, DEPTO_CLINICA &lt;chr&gt;, PPL &lt;chr&gt;,
 #   SERVICIO_PENITENCIARIO &lt;chr&gt;, FECHA_APERTURA &lt;dttm&gt;, …</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(FIS)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(FIS)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 152 × 56
    SEXO  FECHA_NACIMIENTO    EDAD_DIAGNOSTICO GRUPEDAD PROVINCIA_RESIDENCIA
@@ -820,7 +862,53 @@ TRATAMIENTO_ANTIRRETROVIRAL                 Diag_rapido
 </div>
 </div>
 <p>En el ejemplo anterior aplicamos la función sobre la variable ETNIA y FIS, en el primer caso omite todas las observaciones y en el segundo caso 48 observaciones, mostrando las 152 restantes sin NA en la variable.</p>
-<p>Por último, debemos saber que eliminar observaciones por valores faltantes reduce la potencia de cualquier test de hipotesis o modelo que hagamos porque se reduce el tamaño de la muestra.</p>
+<p>Por último, debemos saber que eliminar observaciones por valores faltantes reduce la potencia de cualquier test de hipótesis o modelo que hagamos porque se reduce el tamaño de la muestra.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Acción</th>
+<th>Herramienta en R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cuantificar NA por variable</td>
+<td>find_na() (dlookr), miss_var_summary() (naniar)</td>
+</tr>
+<tr class="even">
+<td>Visualizar frecuencia de NA</td>
+<td>plot_na_pareto() (dlookr), gg_miss_var() (naniar)</td>
+</tr>
+<tr class="odd">
+<td>Explorar combinaciones de NA</td>
+<td>gg_miss_upset() (naniar)</td>
+</tr>
+<tr class="even">
+<td>Recodificar valores como NA</td>
+<td>replace_with_na() (naniar)</td>
+</tr>
+<tr class="odd">
+<td>Etiquetar NA como categoría</td>
+<td>replace_na_with() (naniar)</td>
+</tr>
+<tr class="even">
+<td>Eliminar observaciones incompletas</td>
+<td>drop_na() (tidyr)</td>
+</tr>
+<tr class="odd">
+<td>Justificar y reportar la decisión</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conclusión" class="level2">
+<h2 data-anchor-id="conclusión">Conclusión</h2>
+<p>No existe un tratamiento <em>“neutro”</em> de los datos ausentes. Cada decisión implica asumir algo sobre cómo se generaron los datos, qué queda dentro del análisis y qué relaciones se están estimando. La transparencia metodológica es parte del rigor analítico, por lo que toda decisión debe tomarse de forma consciente y reportarse explícitamente.</p>
 
 
 </section>

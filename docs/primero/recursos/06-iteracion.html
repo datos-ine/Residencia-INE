@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-25e64ecf04745fc540e13936e5883341.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e868ba6fad8aeb71849587ff44df17ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-7416cfc00a00f4f06d12b98363d5ccde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-25e64ecf04745fc540e13936e5883341.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e868ba6fad8aeb71849587ff44df17ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -784,8 +784,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>(nombre) <span class="sc">|&gt;</span>  </span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">m =</span> <span class="fu">mean</span>(<span class="fu">c</span>(x, y, z)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'nombre'. You can override using the
-`.groups` argument.</code></pre>
+<pre><code>`summarise()` has converted the output from a rowwise data frame to a grouped
+data frame.
+ℹ Summaries were computed rowwise.
+ℹ Output is grouped by nombre.
+ℹ Use `summarise(.groups = "keep")` to silence this message.</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
@@ -806,8 +809,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>(nombre) <span class="sc">|&gt;</span>  </span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">m =</span> <span class="fu">mean</span>(<span class="fu">c_across</span>(x<span class="sc">:</span>z)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'nombre'. You can override using the
-`.groups` argument.</code></pre>
+<pre><code>`summarise()` has converted the output from a rowwise data frame to a grouped
+data frame.
+ℹ Summaries were computed rowwise.
+ℹ Output is grouped by nombre.
+ℹ Use `summarise(.groups = "keep")` to silence this message.</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
@@ -824,8 +830,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>(nombre) <span class="sc">|&gt;</span>  </span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">m =</span> <span class="fu">mean</span>(<span class="fu">c_across</span>(<span class="fu">where</span>(is.numeric))))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'nombre'. You can override using the
-`.groups` argument.</code></pre>
+<pre><code>`summarise()` has converted the output from a rowwise data frame to a grouped
+data frame.
+ℹ Summaries were computed rowwise.
+ℹ Output is grouped by nombre.
+ℹ Use `summarise(.groups = "keep")` to silence this message.</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2

@@ -142,7 +142,7 @@ Partes básicas de una tabla de datos estructurada
 :::
 
 ::: {.column width="35%"}
-![](images/variable.JPG){fig-align="center"}
+![](img/01/variable.JPG){fig-align="center"}
 :::
 :::::
 
@@ -234,7 +234,7 @@ Partes básicas de una tabla de datos estructurada
 :::
 
 ::: {.column width="40%"}
-![](images/observacion.JPG){fig-align="center"}
+![](img/01/observacion.JPG){fig-align="center"}
 :::
 :::::
 
@@ -286,6 +286,9 @@ Son considerados datos abiertos todos aquellos datos accesibles y reutilizables,
 
 - En nuestro país, tanto Estado nacional, como las provincias y municipios publican repositorios o banco de datos abiertos.
 
+## Proceso completo {.title-top}
+
+![](img/01/proceso_dato.png){fig-align="center" .lightbox}
 
 ## Ejemplo para analizar {.title-top}
 
