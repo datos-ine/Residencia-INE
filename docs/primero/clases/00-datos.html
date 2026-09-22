@@ -101,6 +101,9 @@ div.csl-indent {
 <link href="../../site_libs/bootstrap/bootstrap-25e64ecf04745fc540e13936e5883341.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-7416cfc00a00f4f06d12b98363d5ccde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/bootstrap/bootstrap-25e64ecf04745fc540e13936e5883341.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -352,14 +355,15 @@ div.csl-indent {
   <ul>
   <li><a href="#ciencia-abierta" id="toc-ciencia-abierta" class="nav-link active" data-scroll-target="#ciencia-abierta">Ciencia abierta</a></li>
   <li><a href="#marcos-existentes---fair" id="toc-marcos-existentes---fair" class="nav-link" data-scroll-target="#marcos-existentes---fair">Marcos existentes - FAIR</a></li>
-  <li><a href="#fuentes-de-datos-primaria-y-secundaria" id="toc-fuentes-de-datos-primaria-y-secundaria" class="nav-link" data-scroll-target="#fuentes-de-datos-primaria-y-secundaria">Fuentes de datos primaria y secundaria</a></li>
-  <li><a href="#conceptos-básicos-de-un-conjunto-de-datos" id="toc-conceptos-básicos-de-un-conjunto-de-datos" class="nav-link" data-scroll-target="#conceptos-básicos-de-un-conjunto-de-datos">Conceptos básicos de un conjunto de datos</a>
+  <li><a href="#los-datos-en-epidemiología" id="toc-los-datos-en-epidemiología" class="nav-link" data-scroll-target="#los-datos-en-epidemiología">Los datos en epidemiología</a></li>
+  <li><a href="#conceptos-técnicos-de-un-conjunto-de-datos" id="toc-conceptos-técnicos-de-un-conjunto-de-datos" class="nav-link" data-scroll-target="#conceptos-técnicos-de-un-conjunto-de-datos">Conceptos técnicos de un conjunto de datos</a>
   <ul class="collapse">
   <li><a href="#columnas" id="toc-columnas" class="nav-link" data-scroll-target="#columnas">Columnas</a></li>
   <li><a href="#filas" id="toc-filas" class="nav-link" data-scroll-target="#filas">Filas</a></li>
   <li><a href="#celdas" id="toc-celdas" class="nav-link" data-scroll-target="#celdas">Celdas</a></li>
   </ul></li>
   <li><a href="#bases-de-datos" id="toc-bases-de-datos" class="nav-link" data-scroll-target="#bases-de-datos">Bases de datos</a></li>
+  <li><a href="#fuentes-de-datos-primaria-y-secundaria" id="toc-fuentes-de-datos-primaria-y-secundaria" class="nav-link" data-scroll-target="#fuentes-de-datos-primaria-y-secundaria">Fuentes de datos primaria y secundaria</a></li>
   <li><a href="#instrumentos-de-recolección-de-datos" id="toc-instrumentos-de-recolección-de-datos" class="nav-link" data-scroll-target="#instrumentos-de-recolección-de-datos">Instrumentos de recolección de datos</a></li>
   <li><a href="#consideraciones-éticas" id="toc-consideraciones-éticas" class="nav-link" data-scroll-target="#consideraciones-éticas">Consideraciones éticas</a>
   <ul class="collapse">
@@ -436,16 +440,25 @@ div.csl-indent {
 <p><code>R</code><strong>: Reusable (Reutilizable)</strong></p>
 <p>Para brindar contexto para la reutilización de sus datos, sus metadatos deben brindar información sobre la procedencia de los datos, brindar una descripción del proyecto, una descripción general del flujo de trabajo de los datos y los autores a los que se debe citar para una atribución adecuada. También debe tener licencias claras para el uso de los datos.</p>
 </section>
-<section id="fuentes-de-datos-primaria-y-secundaria" class="level2">
-<h2 data-anchor-id="fuentes-de-datos-primaria-y-secundaria">Fuentes de datos primaria y secundaria</h2>
-<p>El término datos primarios se refiere a datos recolectados por el investigador por primera vez. Esta situación requiere que se diseñen adecuadamente los instrumentos de recolección y la carga de datos que conlleva la necesidad de contar con una gran cantidad de recursos (tiempo, mano de obra y presupuesto).</p>
-<p>Por otra parte, también requiere de un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos.</p>
-<p>En cambio, las fuentes secundarias implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.</p>
-<p>Un ejemplo en el mundo epidemiológico son las encuestas nacionales de factores de riesgo (ENFR) que el <em>Ministerio de Salud de la Nación Argentina</em> en conjunto con el INDEC llevó a cabo en 2005, 2009, 2013 y 2018. Estas tablas de datos de fuente secundaria están disponibles en el sitio del <a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2">INDEC</a></p>
+<section id="los-datos-en-epidemiología" class="level2">
+<h2 data-anchor-id="los-datos-en-epidemiología">Los datos en epidemiología</h2>
+<p>En epidemiología, los datos constituyen una representación parcial y situada de fenómenos relacionados con la salud y la enfermedad. Un dato no equivale al fenómeno que pretende representar, siempre es un “recorte”, resultado de un proceso mediante el cual una característica, fenómeno o constructo teórico es definido, operacionalizado, medido y registrado para una determinada unidad de análisis. Por esta razón, una base de datos debe entenderse como el producto de decisiones conceptuales, metodológicas, técnicas e institucionales. <a href="https://politicadeldato.substack.com/p/esa-cosa-llamada-datos">Blog Mailen García</a></p>
+<p>El proceso puede representarse esquemáticamente como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/00/proceso_dato.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/00/proceso_dato.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<p>Cada transición implica decisiones. Por ejemplo, estudiar la diabetes requiere definir qué se entenderá por diabetes, qué criterios permitirán identificar un caso, qué población será considerada, qué instrumento se utilizará y cómo se codificará el resultado. La variable diabetes = 1/0 o TRUE/FALSE o Si/No, que finalmente observamos en una tabla constituye, por lo tanto, el resultado de una cadena de decisiones que antecede al análisis estadístico.</p>
+<p>Esta perspectiva permite distinguir entre dato, información y conocimiento. El dato es un registro de una observación o medición, la información surge cuando esos datos son organizados y relacionados con una pregunta o problema y el conocimiento implica interpretar esa información dentro de un marco conceptual y metodológico. En consecuencia, disponer de grandes cantidades de datos no garantiza, por sí mismo, producir conocimiento epidemiológico. La calidad del análisis depende también de la pertinencia de las preguntas, de las definiciones utilizadas, de la calidad de las mediciones y de los supuestos que orientan su interpretación.</p>
+<p>La propia estructura de una base de datos expresa parte de esas decisiones. Cuando una tabla organiza filas como unidades de análisis y columnas como variables, estamos adoptando una determinada representación de la realidad. Las unidades de análisis podrían ser personas, consultas, nacimientos, defunciones, muestras ambientales o establecimientos de salud, y una misma realidad puede requerir más de una tabla para ser adecuadamente representada. La estructura de esos datos puede estar anidada, repetida, pertenecer a un seguimiento o tener cierta jerarquía, por lo que antes de analizarlos será necesario preguntarse qué representa cada fila, qué representa cada variable y cuál es la relación entre las unidades registradas.</p>
+<p>Esta consideración es particularmente importante al trabajar con fuentes secundarias y sistemas de información sanitaria. Un registro de vigilancia epidemiológica, una historia clínica, una encuesta poblacional o una base administrativa no son equivalentes: fueron producidos con objetivos, poblaciones, procedimientos de medición y criterios de registro diferentes. La ausencia de un evento en una base tampoco necesariamente significa ausencia del fenómeno en la población. Puede reflejar, entre otras posibilidades, diferencias en el acceso a los servicios, criterios de notificación, cobertura del sistema o prácticas institucionales de registro.</p>
+<p>Desde esta perspectiva, el análisis epidemiológico es un diálogo entre ideas y datos. Las preguntas y los conceptos orientan qué datos se producen, seleccionan y analizan; a su vez, los datos pueden cuestionar, modificar o refinar las ideas iniciales. Esta relación evita concebir el análisis estadístico como una operación puramente técnica en la que un método aplicado a una base produce automáticamente una conclusión. La elección de variables, la definición de poblaciones, la categorización de exposiciones y desenlaces, la selección de modelos y la interpretación de sus resultados forman parte del razonamiento epidemiológico.</p>
+<p>En este sentido, veremos que utilizar softwares como el lenguaje R no significa simplemente aprender a manipular tablas o ejecutar procedimientos estadísticos. Significa adquirir herramientas para explorar, transformar, describir y modelizar representaciones de fenómenos epidemiológicos, manteniendo siempre presente cómo fueron construidos esos datos, qué información contienen, qué información excluyen y bajo qué supuestos pueden utilizarse para responder una pregunta de investigación o vigilancia.</p>
 </section>
-<section id="conceptos-básicos-de-un-conjunto-de-datos" class="level2">
-<h2 data-anchor-id="conceptos-básicos-de-un-conjunto-de-datos">Conceptos básicos de un conjunto de datos</h2>
-<p>Un dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad. Para nosotros el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.</p>
+<section id="conceptos-técnicos-de-un-conjunto-de-datos" class="level2">
+<h2 data-anchor-id="conceptos-técnicos-de-un-conjunto-de-datos">Conceptos técnicos de un conjunto de datos</h2>
+<p>Un dato, técnicamente, contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad. Para nosotros el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.</p>
 <p>Dentro de la investigación cuantitativa, generalmente trabajamos con datos digitales en forma de un conjunto de datos, una colección estructurada de datos.</p>
 <p>Un conjunto de datos mínimo está organizado en un formato rectangular que permite que la información sea legible por la computadora. Los conjuntos de datos rectangulares, también llamados tabulares, se componen de columnas y filas y se asocian a una unidad de investigación u observación.</p>
 <div class="cell">
@@ -581,6 +594,13 @@ div.csl-indent {
 </div>
 <p>Existe otra forma de unión de tablas que llamaremos <strong>uniones verticales</strong> y sucede cuando debemos anexar o apilar datos de un conjunto con otro que siempre deberá tener la misma estructura, es decir los mismo nombres de variables y tipo de datos.</p>
 </section>
+<section id="fuentes-de-datos-primaria-y-secundaria" class="level2">
+<h2 data-anchor-id="fuentes-de-datos-primaria-y-secundaria">Fuentes de datos primaria y secundaria</h2>
+<p>El término datos primarios se refiere a datos recolectados por el investigador por primera vez. Esta situación requiere que se diseñen adecuadamente los instrumentos de recolección y la carga de datos que conlleva la necesidad de contar con una gran cantidad de recursos (tiempo, mano de obra y presupuesto).</p>
+<p>Por otra parte, también requiere de un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos.</p>
+<p>En cambio, las fuentes secundarias implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.</p>
+<p>Un ejemplo en el mundo epidemiológico son las encuestas nacionales de factores de riesgo (ENFR) que el <em>Ministerio de Salud de la Nación Argentina</em> en conjunto con el INDEC llevó a cabo en 2005, 2009, 2013 y 2018. Estas tablas de datos de fuente secundaria están disponibles en el sitio del <a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2">INDEC</a></p>
+</section>
 <section id="instrumentos-de-recolección-de-datos" class="level2">
 <h2 data-anchor-id="instrumentos-de-recolección-de-datos">Instrumentos de recolección de datos</h2>
 <p>Las tablas de datos son producto del almacenamiento de la información que proviene muchas veces de los instrumentos de recolección más comunes en la investigación cuantitativa: <strong>el cuestionario estructurado</strong>.</p>
@@ -654,7 +674,7 @@ div.csl-indent {
 <p>Nuestras tablas de datos suelen contener información de sujetos humanos lo que conlleva a la responsabilidad de proteger a esos datos. Los datos de humanos pueden contener información identificable que aumenta el riesgo de que los participantes puedan ser revelados en un conjunto de datos. Habitualmente también contienen información sobre temas sensibles vinculado a la salud lo que aumenta aún más los riesgos si se identifica a los participantes.</p>
 <p>Cuando se trabaja con sujetos humanos, hay dos tipos de identificadores que se pueden recopilar en el estudio: directos e indirectos.</p>
 <p>Los identificadores directos son exclusivos de un individuo y se pueden utilizar para identificar a un participante. Los identificadores indirectos no son necesariamente exclusivos de un individuo en particular, pero si se combinan con otra información se pueden utilizar para identificar a un participante.</p>
-<p>La <a href="https://research.unc.edu/2020/05/01/de-identified-coded-or-anonymous-how-do-i-know/">Oficina de Ética de Investigación Humana de la Universidad de Carolina del Norte</a> define 4 tipos de archivos de datos en función a la identifcación personal:</p>
+<p>La <a href="https://research.unc.edu/2020/05/01/de-identified-coded-or-anonymous-how-do-i-know/">Oficina de Ética de Investigación Humana de la Universidad de Carolina del Norte</a> define 4 tipos de archivos de datos en función a la identificación personal:</p>
 <ol type="1">
 <li><p><strong>Identificable</strong>: los datos incluyen información de identificación personal. Es común que los datos crudos sin procesar de un estudio de investigación sean identificables.</p></li>
 <li><p><strong>Codificado</strong>: en este tipo de archivo de datos, se ha eliminado o distorsionado la información de identificación personal y se han reemplazado los nombres por un código (es decir, un identificador único del participante). La única forma de vincular los datos con un individuo es a través de ese código. El archivo de código de identificación (clave de vinculación) se almacena por separado de los datos de investigación. Los datos codificados son, por lo general, el tipo de archivo que se crea después de limpiar los datos sin procesar del estudio (clean_data).</p></li>
@@ -673,6 +693,11 @@ div.csl-indent {
 </section>
 <section id="plan-de-gestión-de-datos" class="level2">
 <h2 data-anchor-id="plan-de-gestión-de-datos">Plan de gestión de datos</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/00/gestion.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 <p>Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación.</p>
 <p>Es oportuno que acompañe o sea parte del protocolo de investigación o del manual de procedimiento de un programa de vigilancia epidemiológica y puede contener los siguientes items:</p>
 <ol type="1">
@@ -1134,8 +1159,26 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referencias</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-almeidafilho1992epidemiologia" class="csl-entry" role="listitem">
+Almeida-Filho, Naomar de. 1992. <em>Epidemiología Sin Números: Una Introducción Crítica a La Ciencia Epidemiológica</em>. Serie PALTEX 28. Organización Panamericana de la Salud.
+</div>
+<div id="ref-almeidafilho2000ciencia" class="csl-entry" role="listitem">
+Almeida-Filho, Naomar de. 2000. <em>La Ciencia Tímida: Ensayos de Deconstrucción de La Epidemiología</em>. 1st ed. Salud Colectiva. Lugar Editorial.
+</div>
 <div id="ref-Alston2021" class="csl-entry" role="listitem">
 Alston, Jesse M., and Jessica A. Rick. 2021. <span>“A Beginner’s Guide to Conducting Reproducible Research.”</span> <em>The Bulletin of the Ecological Society of America</em> 102 (2): e01801. https://doi.org/<a href="https://doi.org/10.1002/bes2.1801">https://doi.org/10.1002/bes2.1801</a>.
+</div>
+<div id="ref-becker2018datos" class="csl-entry" role="listitem">
+Becker, Howard S. 2018. <em>Datos, Pruebas e Ideas: Por Qué Los Científicos Sociales Deberían Tomárselos Más En Serio y Aprender de Sus Errores</em>. Siglo Veintiuno Editores.
+</div>
+<div id="ref-last1989" class="csl-entry" role="listitem">
+Last, J. M. 1989. <span>“A Dictionary of Epidemiology.”</span> <em>Biometrics</em> 45 (3): 1036. <a href="https://doi.org/10.2307/2531713">https://doi.org/10.2307/2531713</a>.
+</div>
+<div id="ref-lineamie2017" class="csl-entry" role="listitem">
+<em>Lineamientos Básicos Para El Análisis de La Mortalidad</em>. 2017. Organización Panamericana de la Salud. <a href="https://doi.org/10.37774/9789275319819">https://doi.org/10.37774/9789275319819</a>.
+</div>
+<div id="ref-Szklo2003" class="csl-entry" role="listitem">
+Nieto F., Szklo M. y. 2003. <em>Epidemiología Intermedia.conceptos y Aplicaciones</em>. Edited by S. A Ediciones Díaz de Santos.
 </div>
 <div id="ref-Wilkinson2016" class="csl-entry" role="listitem">
 Wilkinson, Dumontier, M. 2016. <span>“The FAIR Guiding Principles for Scientific Data Management and Stewardship.”</span> <em>Sci Data</em> 3: 160018. https://doi.org/<a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
@@ -1553,6 +1596,38 @@ Wilkinson, Dumontier, M. 2016. <span>“The FAIR Guiding Principles for Scientif
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

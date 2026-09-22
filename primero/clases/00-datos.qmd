@@ -54,19 +54,29 @@ Sus datos y metadatos deben utilizar vocabularios y formatos estandarizados. Tan
 
 Para brindar contexto para la reutilización de sus datos, sus metadatos deben brindar información sobre la procedencia de los datos, brindar una descripción del proyecto, una descripción general del flujo de trabajo de los datos y los autores a los que se debe citar para una atribución adecuada. También debe tener licencias claras para el uso de los datos.
 
-## Fuentes de datos primaria y secundaria
+## Los datos en epidemiología
 
-El término datos primarios se refiere a datos recolectados por el investigador por primera vez. Esta situación requiere que se diseñen adecuadamente los instrumentos de recolección y la carga de datos que conlleva la necesidad de contar con una gran cantidad de recursos (tiempo, mano de obra y presupuesto).
+En epidemiología, los datos constituyen una representación parcial y situada de fenómenos relacionados con la salud y la enfermedad. Un dato no equivale al fenómeno que pretende representar, siempre es un "recorte", resultado de un proceso mediante el cual una característica, fenómeno o constructo teórico es definido, operacionalizado, medido y registrado para una determinada unidad de análisis. Por esta razón, una base de datos debe entenderse como el producto de decisiones conceptuales, metodológicas, técnicas e institucionales. [Blog Mailen García](https://politicadeldato.substack.com/p/esa-cosa-llamada-datos)
 
-Por otra parte, también requiere de un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos.
+El proceso puede representarse esquemáticamente como:
 
-En cambio, las fuentes secundarias implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.
+![](img/00/proceso_dato.png){fig-align="center" .lightbox}
 
-Un ejemplo en el mundo epidemiológico son las encuestas nacionales de factores de riesgo (ENFR) que el *Ministerio de Salud de la Nación Argentina* en conjunto con el INDEC llevó a cabo en 2005, 2009, 2013 y 2018. Estas tablas de datos de fuente secundaria están disponibles en el sitio del [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2)
+Cada transición implica decisiones. Por ejemplo, estudiar la diabetes requiere definir qué se entenderá por diabetes, qué criterios permitirán identificar un caso, qué población será considerada, qué instrumento se utilizará y cómo se codificará el resultado. La variable diabetes = 1/0 o TRUE/FALSE o Si/No, que finalmente observamos en una tabla constituye, por lo tanto, el resultado de una cadena de decisiones que antecede al análisis estadístico.
 
-## Conceptos básicos de un conjunto de datos
+Esta perspectiva permite distinguir entre dato, información y conocimiento. El dato es un registro de una observación o medición, la información surge cuando esos datos son organizados y relacionados con una pregunta o problema y el conocimiento implica interpretar esa información dentro de un marco conceptual y metodológico. En consecuencia, disponer de grandes cantidades de datos no garantiza, por sí mismo, producir conocimiento epidemiológico. La calidad del análisis depende también de la pertinencia de las preguntas, de las definiciones utilizadas, de la calidad de las mediciones y de los supuestos que orientan su interpretación.
 
-Un dato contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad. Para nosotros el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.
+La propia estructura de una base de datos expresa parte de esas decisiones. Cuando una tabla organiza filas como unidades de análisis y columnas como variables, estamos adoptando una determinada representación de la realidad. Las unidades de análisis podrían ser personas, consultas, nacimientos, defunciones, muestras ambientales o establecimientos de salud, y una misma realidad puede requerir más de una tabla para ser adecuadamente representada. La estructura de esos datos puede estar anidada, repetida, pertenecer a un seguimiento o tener cierta jerarquía, por lo que antes de analizarlos será necesario preguntarse qué representa cada fila, qué representa cada variable y cuál es la relación entre las unidades registradas.
+
+Esta consideración es particularmente importante al trabajar con fuentes secundarias y sistemas de información sanitaria. Un registro de vigilancia epidemiológica, una historia clínica, una encuesta poblacional o una base administrativa no son equivalentes: fueron producidos con objetivos, poblaciones, procedimientos de medición y criterios de registro diferentes. La ausencia de un evento en una base tampoco necesariamente significa ausencia del fenómeno en la población. Puede reflejar, entre otras posibilidades, diferencias en el acceso a los servicios, criterios de notificación, cobertura del sistema o prácticas institucionales de registro.
+
+Desde esta perspectiva, el análisis epidemiológico es un diálogo entre ideas y datos. Las preguntas y los conceptos orientan qué datos se producen, seleccionan y analizan; a su vez, los datos pueden cuestionar, modificar o refinar las ideas iniciales. Esta relación evita concebir el análisis estadístico como una operación puramente técnica en la que un método aplicado a una base produce automáticamente una conclusión. La elección de variables, la definición de poblaciones, la categorización de exposiciones y desenlaces, la selección de modelos y la interpretación de sus resultados forman parte del razonamiento epidemiológico.
+
+En este sentido, veremos que utilizar softwares como el lenguaje R no significa simplemente aprender a manipular tablas o ejecutar procedimientos estadísticos. Significa adquirir herramientas para explorar, transformar, describir y modelizar representaciones de fenómenos epidemiológicos, manteniendo siempre presente cómo fueron construidos esos datos, qué información contienen, qué información excluyen y bajo qué supuestos pueden utilizarse para responder una pregunta de investigación o vigilancia.
+
+## Conceptos técnicos de un conjunto de datos
+
+Un dato, técnicamente, contiene la mínima unidad de información y desde la óptica informática es una representación simbólica (numérica, alfabética, etc) de un atributo o característica de una entidad. Para nosotros el dato siempre representa el valor / medida (variables cuantitativas) o modalidad / categoría (variables cualitativas) de una variable.
 
 Dentro de la investigación cuantitativa, generalmente trabajamos con datos digitales en forma de un conjunto de datos, una colección estructurada de datos.
 
@@ -163,6 +173,16 @@ Es importante tener en cuenta que si no tiene identificadores únicos comunes en
 
 Existe otra forma de unión de tablas que llamaremos **uniones verticales** y sucede cuando debemos anexar o apilar datos de un conjunto con otro que siempre deberá tener la misma estructura, es decir los mismo nombres de variables y tipo de datos.
 
+## Fuentes de datos primaria y secundaria
+
+El término datos primarios se refiere a datos recolectados por el investigador por primera vez. Esta situación requiere que se diseñen adecuadamente los instrumentos de recolección y la carga de datos que conlleva la necesidad de contar con una gran cantidad de recursos (tiempo, mano de obra y presupuesto).
+
+Por otra parte, también requiere de un proceso de limpieza y depuración para tratar, previo al análisis, los datos crudos.
+
+En cambio, las fuentes secundarias implican información que ya ha sido recopilada y registrada por otra/s persona/s diferente al analista, generalmente para un propósito que no está relacionado con el análisis actual.
+
+Un ejemplo en el mundo epidemiológico son las encuestas nacionales de factores de riesgo (ENFR) que el *Ministerio de Salud de la Nación Argentina* en conjunto con el INDEC llevó a cabo en 2005, 2009, 2013 y 2018. Estas tablas de datos de fuente secundaria están disponibles en el sitio del [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2)
+
 ## Instrumentos de recolección de datos
 
 Las tablas de datos son producto del almacenamiento de la información que proviene muchas veces de los instrumentos de recolección más comunes en la investigación cuantitativa: **el cuestionario estructurado**.
@@ -237,7 +257,7 @@ Cuando se trabaja con sujetos humanos, hay dos tipos de identificadores que se p
 
 Los identificadores directos son exclusivos de un individuo y se pueden utilizar para identificar a un participante. Los identificadores indirectos no son necesariamente exclusivos de un individuo en particular, pero si se combinan con otra información se pueden utilizar para identificar a un participante.
 
-La [Oficina de Ética de Investigación Humana de la Universidad de Carolina del Norte](https://research.unc.edu/2020/05/01/de-identified-coded-or-anonymous-how-do-i-know/) define 4 tipos de archivos de datos en función a la identifcación personal:
+La [Oficina de Ética de Investigación Humana de la Universidad de Carolina del Norte](https://research.unc.edu/2020/05/01/de-identified-coded-or-anonymous-how-do-i-know/) define 4 tipos de archivos de datos en función a la identificación personal:
 
 1.  **Identificable**: los datos incluyen información de identificación personal. Es común que los datos crudos sin procesar de un estudio de investigación sean identificables.
 
@@ -258,6 +278,8 @@ Los datos suelen clasificarse en función del nivel de sensibilidad. Estos nivel
 -   **Alta sensibilidad**: estos datos deben estar sujetos a las medidas de seguridad más estrictas y podrían causar un gran daño si se divulgan. Estos datos incluyen información personal identificable o información que podría permitir que los participantes sean reidentificados, así como información privada o altamente sensible (por ejemplo, registros médicos) y, por lo general, se exige que se mantengan confidenciales por ley u otros acuerdos. Estos datos deben protegerse contra el acceso no autorizado.
 
 ## Plan de gestión de datos
+
+![](img/00/gestion.PNG){fig-align="center"}
 
 Un plan de gestión de datos es un documento complementario sobre cómo se planea recopilar, almacenar, gestionar y compartir los productos de datos de investigación.
 

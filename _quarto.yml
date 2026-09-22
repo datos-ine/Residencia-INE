@@ -30,6 +30,8 @@ format:
     code-copy: true
     anchor-sections: false
     bibliography: references.bib
+    nocite: |
+      @*
 
 
 
