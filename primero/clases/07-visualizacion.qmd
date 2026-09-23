@@ -243,13 +243,15 @@ Los argumentos posibles dentro de `aes()` son:
 
 `shape =` formas que representan un punto (estrella, triángulo, cuadrado, círculo, etc)
 
-`size =` tamaño del geom (por ejemplo, grosor de línea, tamaño de punto)
+`size =` tamaño del geom (por ejemplo, tamaño de punto)
 
 `alpha =` transparencia (1 = opaco, 0 = invisible)
 
 `width =` ancho de las columnas de un gráfico de barras
 
 `linetype =` tipo de línea (por ejemplo, sólida, discontinua, punteada)
+
+`linewidth =` ancho de línea  (escala numérica)
 
 ## Capa geométrica
 

@@ -1,5 +1,5 @@
 ---
-title: "Operaciones múltiples, estadísticos y bucles"
+title: "Operaciones múltiples, resúmenes, inferencia y bucles"
 subtitle: "Residencia de Epidemiología"
 format: 
   revealjs:
@@ -630,6 +630,498 @@ datos |> freq_table(Sexo) |>
   set_header_labels(n = "Frecuencia", prop = "%") |> 
   theme_zebra()
 ```
+
+## Estadística inferencial  {.title-top}
+
+<br>
+
+:::: {.columns"}
+
+::: {.column width="70%"}
+
+::: incremental
+
+La **estadística inferencial** es la rama que permite formular conclusiones sobre una población a partir del análisis de una muestra. 
+
+Existen dos actividades principales:
+
+1.  **Estimación de parámetros**: Calcular valores aproximados de parámetros poblacionales desconocidos (ej. prevalencia de una enfermedad).
+2.  **Pruebas de hipótesis**: Evaluar afirmaciones sobre uno o más parámetros basándose en evidencia estadística (habitualmente comparaciones).
+
+:::
+
+:::
+
+::: {.column width="30%"}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 60%
+knitr::include_graphics("img/06/adorno1.JPG")
+```
+
+:::
+
+::::
+
+## La lógica de la Inferencia {.title-top}
+
+El puente entre lo que observamos y lo que desconocemos.
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 80%
+knitr::include_graphics("img/06/poblacion-muestra.JPG")
+```
+
+**Incertidumbre**: Las conclusiones siempre son *probabilísticas*, nunca absolutas.
+
+## Parámetros vs. Estadísticos {.title-top}
+
+<br>
+
+::: incremental
+
+Es fundamental distinguir entre la población y la muestra:
+
+-   **Parámetros**: Medidas de la población (ej. media poblacional $\mu$).
+-   **Estadísticos (o estimadores)**: Medidas obtenidas de la muestra (ej. media muestral $\bar{x}$).
+
+:::
+
+. . .
+
+La **distribución muestral** permite cuantificar la incertidumbre asociada a estas estimaciones. 
+
+Cada tipo diferente de estadístico posee, según su naturaleza, una distribución muestral probabilística teórica que la caracteriza (Normal, Poisson, binomial, etc).
+
+##  Estadístico = variable aleatoria {.title-top}
+
+<br>
+
+::: incremental
+
+- El estadístico es una función de los datos de la muestra.
+
+- Como los datos ($X_1, X_2, ..., X_n$) son variables aleatorias (pues no se sabe qué valores vamos a tener hasta que no conozcamos la muestra), cualquier función de variables aleatorias también es una variable aleatoria.
+
+- Por lo tanto, antes de tomar la muestra, el estadístico tiene una distribución de probabilidad teórica y puede tomar infinitos valores posibles con distintas probabilidades.
+
+:::
+
+## Definiciones {.title-top}
+
+<br>
+
+::: {.fragment .fade-in-then-semi-out}
+
+**Distribución muestral**
+La distribución muestral de un estadístico es la distribución de todos los valores posibles que ese estadístico puede tomar al calcularse en muestras aleatorias del mismo tamaño extraídas de una misma población. Este concepto es central en la inferencia estadística, ya que permite cuantificar la incertidumbre asociada a las estimaciones.
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+**Teoría del muestreo**
+Estudio de las técnicas de selección que garantizan la representatividad y permiten cuantificar el error de nuestras estimaciones. Utiliza el azar y el método para analizar la relación entre los estadísticos de la muestra y los parámetros de la población midiendo su incertidumbre. 
+
+:::
+
+## Distribución Normal {.title-top}
+
+
+:::: {.columns"}
+
+::: {.column width="55%"}
+
+- Es una distribución de probabilidad continua para una variable aleatoria, caracterizada por su forma simétrica de campana.
+
+- La curva es simétrica respecto a su centro.La media, la mediana y la moda coinciden en el mismo valor central.
+
+- Está definida por dos parámetros: la media (determina la ubicación del centro de la distribución) y la varianza o desvío estándar (determina qué tan "ancha" o "delgada" es la campana).
+
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+
+
+![](img/06/Normal.png){fig-align="center" width="100%"}
+
+:::
+::::
+
+
+## Teorema del Límite Central (TLC) {.title-top}
+
+<br>
+
+::: incremental
+
+- Si se toman muestras aleatorias de tamaño $n$ de cualquier población (incluso no Normal), la distribución de las **medias muestrales** tenderá a seguir una distribución Normal a medida que $n$ aumenta.
+
+- Plantea que la media de los promedios es igual a la media de la población.
+
+- Y que la variabilidad de los promedios (denominada error estándar) disminuye al aumentar el tamaño de la muestra $EE = \frac{\sigma}{\sqrt{n}}$
+
+- Es el "puente" que justifica el uso de tests paramétricos (como el t-test) y el cálculo de intervalos de confianza en muestras que no siguen exactamente una campana de Gauss (en n grandes y con distribuciones no sesgadas)
+
+:::
+
+## Intervalos de Confianza (IC) {.title-top}
+
+El IC proporciona un rango de valores donde se espera encontrar el parámetro poblacional con un cierto nivel de confianza.
+
+$$ IC = \text{estimador puntual} \pm (\text{coef. de confiabilidad}) \times (\text{error estándar}) $$
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 40%
+knitr::include_graphics("img/06/IC_media.JPG")
+```
+
+IC para la media basado en la distribución Normal
+
+. . .
+
+**Interpretación**: Si repetimos el muestreo **infinitas** veces, el 95% de los intervalos contendrán la media real (parámetro).
+
+## Intervalos de Confianza (IC) {.title-top}
+
+<br>
+
+**Factores que afectan la amplitud del IC**:
+
+- **Nivel de confianza**: A mayor confianza ($1-\alpha$), es decir mayor probabilidad que el parámetro se encuentre en el intervalo, mayor amplitud.
+- **Tamaño muestral ($n$)**: Al aumentar $n$, disminuye el error estándar y el IC se vuelve más preciso.
+
+$$EE_{\bar{x}} = \frac{s}{\sqrt{n}}$$
+
+## Intervalos de Confianza (IC) {.title-top}
+
+<br>
+
+- Se pueden calcular IC de distribuciones aproximadas a la Normal mediante el esquema anterior.
+
+- Si la distribucion es sesgada y/o tiene outliers conviene usar la mediana e IC calculados por métodos no paramétricos para conseguir estadísticos robustos.
+
+- Aprovechando la capacidad computacional actual se pueden calcular mediante bootstrap (remuestreo).
+
+## IC en R: Paquete `DescTools` {.title-top}
+
+Aunque no es compatible de forma directa con *tidyverse*, el paquete `DescTools` facilita estos cálculos. Posee funciones para la media y la mediana con métodos ortodoxos y de remuestreo.
+
+```{r, echo=TRUE, eval=FALSE}
+library(DescTools)
+# Forma básica
+MeanCI(base$EDAD_DIAGNOSTICO, conf.level = 0.95)
+
+# Integración con tidyverse
+base |> 
+  summarise(
+    media = mean(EDAD_DIAGNOSTICO),
+    ic_lower = MeanCI(EDAD_DIAGNOSTICO)[2],
+    ic_upper = MeanCI(EDAD_DIAGNOSTICO)[3]
+  )
+```
+
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 30%
+knitr::include_graphics("img/06/resultado_IC.JPG")
+```
+
+## Pruebas de hipótesis {.title-top}
+
+<br>
+
+La prueba de hipótesis es la herramienta que nos permite decidir si lo que vemos en la muestra es lo suficientemente fuerte como para creer que también ocurre en la población. Suele plantearse como una comparación de dos o más grupos y posee una estructura que consta de:
+
+::: {.fragment .fade-in-then-semi-out}
+
+- Hipótesis nula ($H_0$): Afirma que no existe diferencia entre los grupos que se comparan, es decir, que las variaciones observadas se deben únicamente al azar.
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- Hipótesis alternativa ($H_1$) : Es la conjetura o suposición que plantea el investigador, estableciendo que sí existe una diferencia entre los grupos. Generalmente es complementaria de la $H_0$
+
+:::
+
+## Pruebas de hipótesis {.title-top}
+
+<br>
+
+::: {.fragment .fade-in-then-semi-out}
+
+- Estadístico de prueba: Es el valor calculado a partir de los datos muestrales que se utiliza para tomar la decisión sobre la $H_0$.
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- Valor crítico o Región crítica: La región crítica se establece en función del nivel de significación ($\alpha$) y consiste en el conjunto de valores extremos del estadístico de prueba que, de ser alcanzados, llevarían a rechazar la $H_0$.
+
+::: 
+
+## Regla de decisión {.title-top}
+
+<br>
+
+::: incremental
+
+- Si el valor del estadístico de prueba calculado a partir de la muestra cae en la región crítica, se rechaza la $H_0$ y se concluye que las diferencias observadas **son estadísticamente significativas**.
+
+- Si el valor no cae en la región crítica, no se rechaza la $H_0$; esto indica que las diferencias entre lo observado y lo esperado pueden explicarse por el azar. Es decir, **no son estadísticamente significativas**.
+
+:::
+
+## Pruebas o test paramétricos y no paramétricos {.title-top}
+
+<br>
+
+- **Tests paramétricos**: Asumen que los datos provienen de una población con una distribución específica y se centran en estimar parámetros. Son más "potentes" pero requieren que se cumplan ciertos supuestos. Son sensibles a los datos atípicos.
+
+- **Tests no paramétricos**: No asumen una distribución previa ("distribución libre"). Suelen trabajar con el orden o rangos de los datos en lugar de sus valores exactos. Tienen menor potencia estadística pero no necesitan de cumplimniento de supuestos. Son robustos a datos atípicos. Incluyen a métodos computacionales como el bootstrap.
+
+## Supuestos: Normalidad y homocedasticidad {.title-top}
+
+Antes de cualquier test debemos conocer nuestros datos y como se comportan. Entonces procederemos a validar dos supuestos relevantes a la hora de cumplir con lo requerido por las pruebas paramétricas: la normalidad y la homocedasticidad.
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Normalidad**: Es el supuesto que los datos de la población de la cual extrajiste la muestra siguen una distribución Normal o aproximada (la famosa Campana de Gauss)
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+- **Homocedascitidad**: Es el supuesto de que la varianza es constante entre los grupos que comparas.
+
+:::
+
+. . . 
+
+Vamos a usar para esta tarea diagnósticos visuales (gráficos) y analíticos (pruebas de bondad de ajuste).
+
+## Diagnósticos gráficos {.title-top}
+
+<br>
+
+Mediante **Q-Q plots**: gráfico de dispersión que compara los cuantiles observados de tus datos frente a los cuantiles teóricos de una distribución de referencia (Normal).
+
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 60%
+knitr::include_graphics("img/06/normalidad.JPG")
+```
+
+Se puede hacer en R mediante paquetes como `dlookr` o `ggpubr`.
+
+
+## Diagnósticos analíticos {.title-top}
+
+<br>
+
+**Normalidad**
+
+- **Medidas de forma**: Curtosis (kurtosis) y asimetría (skewness).
+
+- **Pruebas de bondad de ajuste**: Test de Shapiro-Wilk (para n ≤ 50) o Lilliefors (para n > 50)
+
+En el lenguaje R podemos usar `kurtosis()` y `skewness()` del paquete **moments**, `shapiro_test()` de **rstatix** y `lillie.test()` de **nortest**.
+
+
+## Diagnósticos analíticos {.title-top}
+
+<br>
+
+**Homocedasticidad**
+
+:::: {.columns"}
+
+::: {.column width="50%"}
+
+- **F-test**: compara varianzas de 2 grupos
+
+- **Test de Barlett**: compara varianzas en más de 2 grupos
+
+- **Test de Levene**: permite comparar varianzas en grupos que no se aproximan a la distribución normal. 
+
+:::
+
+::: {.column width="50%"}
+
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 60%
+knitr::include_graphics("img/06/homocedasticidad_levene.JPG")
+```
+
+:::
+
+::::
+
+## Errores {.title-top}
+
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 70%
+knitr::include_graphics("img/06/errores.JPG")
+```
+
+## ¿Qué test se debe aplicar en cada caso?
+
+Preguntas que debo responder: 
+
+  - ¿Qué tipo de variable dependiente tengo? 
+  - ¿Qué se está comparando?
+
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 70%
+knitr::include_graphics("img/06/flujo_var_cuanti.JPG")
+```
+
+## Pruebas paramétricas para datos cuantitativos  {.title-top}
+
+| Prueba                                 | ¿Para qué sirve?                                                |
+|----------------------------------------|-----------------------------------------------------------------|
+| t de Student (una muestra)             | Comparar la media observada con un valor de referencia.         |
+| t de Student (muestras independientes) | Comparar medias entre dos grupos independientes.                |
+| t de Student pareada                   | Comparar medias antes-después o en observaciones emparejadas.   |
+| Correlación de Pearson                 | Medir asociación lineal entre dos variables cuantitativas.      |
+
+
+## Pruebas no paramétricas para datos cuantitativos  {.title-top}
+
+| Prueba               | Equivalente paramétrico    | ¿Para qué sirve?                             |
+|----------------------|----------------------------|----------------------------------------------|
+| Wilcoxon signed-rank | t pareada                  | Comparar dos mediciones relacionadas.        |
+| Mann-Whitney U       | t independiente            | Comparar dos grupos independientes.          |
+| Spearman             | Pearson                    | Medir asociación monotónica entre variables. |
+
+## Pruebas para datos categóricos  {.title-top}
+
+<br>
+
+**Prueba de $X^2$ (Chi-cuadrado):** Para independencia y bondad de ajuste
+
+**Prueba Exacta de Fisher:** Asociación en tablas de contingencia con frecuencias esperadas bajas.
+
+**Prueba de McNemar:** Comparación de proporciones en muestras apareadas.
+
+**Prueba binomial exacta:** Contraste de una proporción observada frente a una proporción esperada.
+
+**Prueba de tendencia de Cochran-Armitage:** Evaluación de tendencias en variables categóricas ordinales.
+
+## El balance de la inferencia estadística {.title-top}
+
+
+:::: {.columns"}
+
+::: {.column width="50%"}
+
+Hay 4 elementos que están íntimamente relacionados en este *"juego"* de los test de hipótesis:
+
+- Nivel de significación (Error de tipo I)
+- Tamaño de efecto (hay diferentes medidas estandarizadas para cuantificar su magnitud)
+- Potencia (Error de tipo II)
+- Tamaño de la muestra
+
+El paquete `pwr` en R, incorpora funciones que dados tres de ellos, calcula el cuarto elemento. 
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 80%
+knitr::include_graphics("img/06/curva_potencia.JPG")
+```
+
+:::
+
+::::
+
+
+## El balance de la inferencia estadística {.title-top}
+
+<br>
+
+| Si aumenta...              | Potencia | Tamaño de muestra necesario | α (Error Tipo I) |
+|----------------------------|----------|-----------------------------|------------------|
+| Tamaño de efecto           | ↑        | ↓                           | =                |
+| Tamaño de muestra          | ↑        | -                           | =                |
+| Nivel de significación (α) | ↑        | ↓                           | ↑                |
+| Potencia deseada           | -        | ↑                           | =                |
+
+
+## Funciones de `rstatix` {.title-top}
+
+<br>
+
+Las funciones del paquete `rstatix` tienen una estructura consistente, son compatibles con la filosofía tidyverse y sus nombres son similares al grupo de funciones de R base pero cambian el punto por un guión bajo (así `t.test()` se reemplaza por `t_test()` y `chisq.test()` por `chisq_test()`, por ejemplo). 
+
+Algunos de sus argumentos transversales son:
+
+- `data`: dataframe con el que trabajamos
+- `formula`: formula con la relación de variables del input
+- `paired`: si los datos son pareados es TRUE
+- `var.equal`: si las varianzas son iguales en los grupos es TRUE
+- `alternative`: especifica el tipo de hipótesis alternativa ("two.sided", "greater" o "less")
+
+## Sintaxis formula {.title-top}
+
+<br>
+
+La sintaxis `desenlance ~ explicativa` expresa la relación entre variables y es utilizada por la mayoría de las funciones de inferencia y modelado en R, incluyendo funciones de **rstatix**.
+
+```{r, eval=F}
+carga_viral ~ sexo     # Comparación de carga viral según categorias de sexo
+```
+
+<br>
+
+**Ventajas**
+
+- Sintaxis uniforme en numerosos paquetes y funciones.
+- Separa claramente la variable respuesta de las variables explicativas.
+- Facilita el ajuste de modelos simples y complejos.
+
+## Sintaxis formula {.title-top}
+
+<br>
+
+| Operador | Significado                                                               | Ejemplo                |
+|----------|---------------------------------------------------------------------------|------------------------|
+| +        | Agrega variables explicativas al modelo.                                  | y ~ edad + sexo        |
+| :        | Incluye únicamente la interacción entre variables.                        | y ~ sexo:tratamiento   |
+| *        | Incluye los efectos principales y su interacción (A + B + A:B).           | y ~ sexo * tratamiento |
+| -        | Elimina un término del modelo.                                            | y ~ edad + sexo - edad |
+| .        | Incluye todas las variables del conjunto de datos (excepto la respuesta). | y ~ .                  |
 
 ## Estructuras de control de flujo {.title-top}
 

@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE, dpi = 300)
 ```
 
 
-Muchas de las tareas que hicimos hasta ahora, ya sea transformando u obteniendo resultados resumenes de variables, las aplicamos variable a variable, es decir repitiendo las operaciones para cada una de las columnas de una tabla.
+Muchas de las tareas que hicimos hasta ahora, ya sea transformando u obteniendo resultados resúmenes de variables, las aplicamos variable a variable, es decir repitiendo las operaciones para cada una de las columnas de una tabla.
 
 Una premisa del tidyverse, y también de la programación en general, es no copiar y pegar el código mas de dos veces. Si bien esta práctica ahorra tiempo y no esta mal en si mismo, hacerlo suele ser una fuente de errores y además incrementa las líneas de código del script.
 
