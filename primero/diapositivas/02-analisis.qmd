@@ -10,7 +10,6 @@ format:
     transition: fade
     theme: [simple, img/custom.scss]
     logo: img/INE.gif
-    footer: "Instituto Nacional de Epidemiología"
 ---
 
 ```{r setup, include=F}
@@ -23,7 +22,7 @@ library(fontawesome)
 library(tidyverse)
 ```
 
-## Paquetes estadísticos / softwares de análisis
+## Paquetes estadísticos / softwares de análisis {.title-top}
 
 <br>
 
@@ -36,7 +35,7 @@ Entre ellos podemos mencionar: `SPSS`, `Stata`, `SAS`, `EpiDat`, `EpiInfo`, `len
 El **lenguaje R** es la herramienta con la que vamos a trabajar durante la formación de la Residencia y pertenece al grupo de interfaz por línea de comando (como todo lenguaje de programación).   
 
 
-## Tipo de interfaz {.smaller}
+## Tipo de interfaz {.title-top .smaller}
 
 <br>
 
@@ -61,13 +60,13 @@ Existen dos grandes grupos de softwares en función de sus interfaces: **GUI** (
 
 ::::
 
-## Abordaje interdisciplinario: 3 dimensiones
+## Abordaje interdisciplinario: 3 dimensiones {.title-top}
 
 
 ![](img/02/tres_dimensiones.png){width="100%" fig-align="center"}
 
 
-## Lenguaje R
+## Lenguaje R {.title-top}
 
 <br>
 
@@ -85,7 +84,7 @@ Profundizando en su descripción podemos decir, más técnicamente, que:
 
 > es un lenguaje de programación interpretado, orientado a objetos, multiplataforma y open source pensado para el manejo de datos estadísticos.
 
-## Por lo tanto ![](img/02/R.png){width="8%"} ... {.smaller}
+## Por lo tanto ![](img/02/R.png){width="8%"} ... {.title-top .smaller}
 
 . . . 
 
@@ -120,7 +119,7 @@ Se puede instalar en diferentes sistemas operativos como Linux, Windows y Mac.
 Se distribuye gratuitamente bajo [licencia GNU](https://es.wikipedia.org/wiki/GNU_General_Public_License) (General Public License) -- GPL y que los usuarios tienen la libertad de usar, estudiar, compartir (copiar) y modificar el software.
 
 
-## Historia {.smaller}
+## Historia {.title-top .smaller}
 
 <br>
 
@@ -146,11 +145,11 @@ En 1995 dos profesores de estadística de la *Universidad de Auckland*, en Nueva
 
 ::::
 
-## Funcionamiento
+## Funcionamiento {.title-top}
 
 ![](img/02/funcionamiento.jpg){width="90%" fig-align="center"}
 
-## Usuarios del lenguaje y enfoque "comunicativo"
+## Usuarios del lenguaje y enfoque "comunicativo" {.title-top}
 
 - Plantea abordar el lenguaje R como un lenguaje para **_"comunicarse"_** (similar a un segundo lenguaje como el inglés, francés, etc.)
 
@@ -162,7 +161,7 @@ En 1995 dos profesores de estadística de la *Universidad de Auckland*, en Nueva
 
 - Propuesto por *Riva Quiroga* de LatinR en el encuentro global de RStudio de 2021. Para profundizar ver ponencia *“How to do things with words: Learning to program with a ‘communicative approach’"* en [rstudio::global(2021)](https://rstudio.com/resources/rstudioglobal-2021/how-to-do-things-with-words-learning-to-program-in-r-with-a-communicative-approach/)
 
-## R es un lenguaje de funciones (y argumentos)
+## R es un lenguaje de funciones (y argumentos) {.title-top}
 
 Una función es un bloque de código que sólo se ejecuta cuando se llama.
 
@@ -181,7 +180,7 @@ funcion(argumento1, argumento2, ...)
 - Toda función se escribe con una sintaxis precisa y finaliza siempre con paréntesis. Los argumentos se separan por comas. 
 
 
-## Paquetes de R
+## Paquetes de R {.title-top}
 
 :::: {.columns}
 
@@ -191,7 +190,7 @@ funcion(argumento1, argumento2, ...)
 
 - El conjunto base de R tiene varias funciones fundamentales contenidas en algunos paquetes (base, stats, utils, graphics, methods, etc)
 
-- Los paquetes se instalan, activan y desactivan. El sitio oficial donde se publican se encuentra en [CRAN - packages](https://cran.r-project.org/web/packages/available_packages_by_name.html)
+- Los paquetes se instalan, activan y desactivan. El sitio oficial donde se publican se encuentra en [CRAN - packages](https://cran.r-project.org/web/packages/available_packages_by_name.html). Hay otros repositorios oficiales como [Bioconductor](https://www.bioconductor.org/) o personales en [GitHub](https://github.com/)
 
 - Visto como un lenguaje (idioma) los paquetes vendrían a ser conjuntos de palabras que *"agregamos"* a nuestro vocabulario para poder *"comunicarnos"* mejor o más fácilmente con el interprete de R.
 
@@ -214,13 +213,38 @@ funcion(argumento1, argumento2, ...)
 ![](img/02/paquetes.PNG){width="100%" fig-align="center"}
 
 
-## Tidyverse 
+## Paquete pak {.title-top}
+
+<br>
+
+`pak` es un gestor de paquetes moderno, rápido y seguro, diseñado para revolucionar la forma en que se instalan las dependencias en R.
+
+Se enfoca exclusivamente en la instalación y resolución inteligente de paquetes.
+
+<br>
+
+Su sitio en CRAN es <https://cran.r-project.org/web/packages/pak/index.html> y el de su desarrollador es <https://pak.r-lib.org/>
+
+## Paquete pak {.title-top}
+
+<br>
+
+Las principales ventajas de usar `pak` son:
+
+::: incremental
+- Velocidad extrema: realiza operaciones en paralelo.
+- Unificador de fuentes (CRAN, GitHub, Bioconductor): se puede instalar desde cualquier repositorio usando una interfaz unificada.
+- Resolución avanzada de dependencias: Evita conflictos con diferentes versiones de las dependencias.
+- Permite actualizar paquetes instalados con la función `pak_setup()`
+:::
+
+## Tidyverse {.title-top}
 
 Una colección de paquetes de R modernos, que comparten una **gramática** y filosofía común, diseñados para resolver los desafíos de la ciencia de datos.
 
 ![](img/02/tidyverse2.PNG){fig-align="center"}
 
-## Fundamentos {.smaller}
+## Fundamentos {.title-top .smaller}
 
 ![](img/02/tidy.PNG){width="60%" fig-align="center"}
 
@@ -251,7 +275,7 @@ Una colección de paquetes de R modernos, que comparten una **gramática** y fil
 
 ![](img/02/paquetes_tidy.PNG)
 
-## Tuberías
+## Tuberías {.title-top}
 
 <br>
 
@@ -267,7 +291,7 @@ Existen dos tuberías conocidas:
 
 La mayoría de los scripts del curso muestran la tubería nativa, pero se puede utilizar cualquiera de las dos.
 
-## Tuberías
+## Tuberías {.title-top}
 
 
 ![](img/02/pipe.png){width="30%" fig-align="center"}
@@ -280,7 +304,7 @@ Esto posibilita la reutilización de las estructuras de datos y la escritura de 
 Pulse [aquí](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/) para ver algunas caracteristicas comparativas de estas tuberías.
 
 
-## Estructura de datos
+## Estructura de datos {.title-top}
 
 <br>
 
@@ -293,7 +317,7 @@ Existe una variedad de estructuras de datos: vectores, matrices, arrays, datafra
 Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que serviran en estos inicios del curso: Los **vectores** y los **dataframes**.
 
 
-## Vectores
+## Vectores {.title-top}
 
 
 - Son secuencias de elementos del mismo tipo de datos.
@@ -312,7 +336,7 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 - Los vectores integer y double se conocen como vectores numéricos (numeric).
 
 
-## Dataframes {.smaller}
+## Dataframes {.title-top .smaller}
 
 <br>
 
@@ -341,7 +365,7 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 
 ::::
 
-## Tibbles {.smaller}
+## Tibbles {.title-top .smaller}
 
 <br>
 
@@ -369,7 +393,7 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 
 ::::
 
-## Archivos de datos
+## Archivos de datos {.title-top}
 
 - El formato de archivos de datos estándar y universal es el **texto plano separado por comas** (archivos `csv`)
 
@@ -379,12 +403,12 @@ Vamos a describir a las más relevantes dentro del ecosistema tidyverse y que se
 
 - Otro formato de datos propio de R es `.RData`, que permite guardar varios objetos del lenguaje (vectores, dataframes, etc.) simultáneamente. Es como almacenar el entorno de trabajo completo.
 
-## Errores y advertencias
+## Errores y advertencias {.title-top}
 
 ![](img/02/errores_advertencias.PNG)
 
 
-## Ayuda
+## Ayuda {.title-top}
 
 
 - Todas las funciones del R base o de los paquetes vienen acompañadas con su respectiva **documentación**.

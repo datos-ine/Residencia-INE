@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -74,14 +77,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e868ba6fad8aeb71849587ff44df17ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7416cfc00a00f4f06d12b98363d5ccde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-e868ba6fad8aeb71849587ff44df17ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6e65b1f3da324d51b96f90ed97211077.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-85dda3b1c3d2849702b2604292dd955f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6e65b1f3da324d51b96f90ed97211077.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -452,156 +455,140 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(datos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     SEXO           FECHA_NACIMIENTO              EDAD_DIAGNOSTICO
- Length:200         Min.   :1934-12-13 00:00:00   Min.   : 0.00   
- Class :character   1st Qu.:1973-11-06 12:00:00   1st Qu.:23.00   
- Mode  :character   Median :1989-07-27 00:00:00   Median :33.00   
-                    Mean   :1985-12-04 18:14:24   Mean   :37.02   
-                    3rd Qu.:1999-11-17 12:00:00   3rd Qu.:49.00   
-                    Max.   :2023-05-05 00:00:00   Max.   :88.00   
-                                                                  
-   GRUPEDAD         PROVINCIA_RESIDENCIA ID_PROV_INDEC_RESIDENCIA
- Length:200         Length:200           Length:200              
- Class :character   Class :character     Class :character        
- Mode  :character   Mode  :character     Mode  :character        
-                                                                 
-                                                                 
-                                                                 
-                                                                 
- DEPARTAMENTO_RESIDENCIA ID_DEPTO_INDEC_RESIDENCIA LOCALIDAD_RESIDENCIA
- Length:200              Length:200                Length:200          
- Class :character        Class :character          Class :character    
- Mode  :character        Mode  :character          Mode  :character    
-                                                                       
-                                                                       
-                                                                       
-                                                                       
- ESTABLECIMIENTO_SALUD ESTABLECIMIENTO_CARGA PROVINCIA_CARGA   
- Length:200            Length:200            Length:200        
- Class :character      Class :character      Class :character  
- Mode  :character      Mode  :character      Mode  :character  
-                                                               
-                                                               
-                                                               
-                                                               
- DEPTO_CARGA        ESTAB_CLINICA      DEPTO_CLINICA          PPL           
- Length:200         Length:200         Length:200         Length:200        
- Class :character   Class :character   Class :character   Class :character  
- Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-                                                                            
-                                                                            
-                                                                            
-                                                                            
- SERVICIO_PENITENCIARIO FECHA_APERTURA               
- Length:200             Min.   :2021-09-20 00:00:00  
- Class :character       1st Qu.:2023-04-12 18:00:00  
- Mode  :character       Median :2023-07-16 00:00:00  
-                        Mean   :2023-07-14 09:07:12  
-                        3rd Qu.:2023-10-18 12:00:00  
-                        Max.   :2024-04-18 00:00:00  
-                                                     
- FECHA_NOTIFICACION            MOTIVO_CONSULTA    CLASIFICACION_MANUAL
- Min.   :2023-01-03 00:00:00   Length:200         Length:200          
- 1st Qu.:2023-04-03 12:00:00   Class :character   Class :character    
- Median :2023-07-03 00:00:00   Mode  :character   Mode  :character    
- Mean   :2023-07-01 12:36:00                                          
- 3rd Qu.:2023-10-03 00:00:00                                          
- Max.   :2023-12-27 00:00:00                                          
+<pre><code>        SEXO     FECHA_NACIMIENTO              EDAD_DIAGNOSTICO      GRUPEDAD  
+ Length   :200   Min.   :1934-12-13 00:00:00   Min.   : 0.00    Length   :200  
+ N.unique :  3   1st Qu.:1973-11-06 12:00:00   1st Qu.:23.00    N.unique : 18  
+ N.blank  :  0   Median :1989-07-27 00:00:00   Median :33.00    N.blank  :  0  
+ Min.nchar:  1   Mean   :1985-12-04 18:14:24   Mean   :37.02    Min.nchar:  3  
+ Max.nchar:  1   3rd Qu.:1999-11-17 12:00:00   3rd Qu.:49.00    Max.nchar:  5  
+                 Max.   :2023-05-05 00:00:00   Max.   :88.00                   
+                                                                               
+ PROVINCIA_RESIDENCIA ID_PROV_INDEC_RESIDENCIA DEPARTAMENTO_RESIDENCIA
+ Length   :200        Length   :200            Length   :200          
+ N.unique : 18        N.unique : 18            N.unique : 81          
+ N.blank  :  0        N.blank  :  0            N.blank  :  0          
+ Min.nchar:  4        Min.nchar:  2            Min.nchar:  4          
+ Max.nchar: 16        Max.nchar:  2            Max.nchar: 26          
+                                               NAs      :  9          
                                                                       
- CLASIF_INICIO_TRAT ID_PULMONAR             FIS                     
- Length:200         Length:200         Min.   :2020-12-20 00:00:00  
- Class :character   Class :character   1st Qu.:2023-02-20 00:00:00  
- Mode  :character   Mode  :character   Median :2023-05-12 12:00:00  
-                                       Mean   :2023-05-10 05:22:06  
-                                       3rd Qu.:2023-08-09 18:00:00  
-                                       Max.   :2023-12-21 00:00:00  
-                                       NA's   :48                   
- ID_EXTRAPULMONAR   FECHA_INICIO_SINTOMA          RESULTADO_RX      
- Length:200         Min.   :2022-08-15 00:00:00   Length:200        
- Class :character   1st Qu.:2023-03-01 00:00:00   Class :character  
- Mode  :character   Median :2023-05-17 12:00:00   Mode  :character  
-                    Mean   :2023-05-28 01:50:46                     
-                    3rd Qu.:2023-08-09 00:00:00                     
-                    Max.   :2023-12-26 00:00:00                     
-                    NA's   :44                                      
- Bacteriologia      Baciloscopia         Cultivo          PRUEBA_RESISTENCIA
- Length:200         Length:200         Length:200         Length:200        
- Class :character   Class :character   Class :character   Class :character  
- Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-                                                                            
-                                                                            
-                                                                            
-                                                                            
- RESISTENCIA           Droga           Tipo_Resistencia  
- Length:200         Length:200         Length:200        
- Class :character   Class :character   Class :character  
- Mode  :character   Mode  :character   Mode  :character  
-                                                         
-                                                         
-                                                         
-                                                         
+ ID_DEPTO_INDEC_RESIDENCIA LOCALIDAD_RESIDENCIA ESTABLECIMIENTO_SALUD
+ Length   :200             Length   :200        Length   :200        
+ N.unique : 89             N.unique :106        N.unique :125        
+ N.blank  :  0             N.blank  :  0        N.blank  :  0        
+ Min.nchar:  2             Min.nchar:  4        Min.nchar: 11        
+ Max.nchar:  5             Max.nchar: 57        Max.nchar: 82        
+                                                                     
+                                                                     
+ ESTABLECIMIENTO_CARGA  PROVINCIA_CARGA    DEPTO_CARGA    ESTAB_CLINICA
+ Length   :200         Length   :200    Length   :200   Length   :200  
+ N.unique :117         N.unique : 17    N.unique : 70   N.unique :112  
+ N.blank  :  0         N.blank  :  0    N.blank  :  0   N.blank  :  0  
+ Min.nchar:  5         Min.nchar:  4    Min.nchar:  4   Min.nchar: 11  
+ Max.nchar: 82         Max.nchar: 16    Max.nchar: 22   Max.nchar: 76  
+                                                        NAs      : 20  
+                                                                       
+   DEPTO_CLINICA        PPL      SERVICIO_PENITENCIARIO
+ Length   :200   Length   :200   Length   :200         
+ N.unique : 73   N.unique :  2   N.unique :  7         
+ N.blank  :  0   N.blank  :  0   N.blank  :  0         
+ Min.nchar:  4   Min.nchar:  2   Min.nchar:  2         
+ Max.nchar: 23   Max.nchar:  2   Max.nchar: 19         
+ NAs      : 20                                         
+                                                       
+ FECHA_APERTURA                FECHA_NOTIFICACION             MOTIVO_CONSULTA
+ Min.   :2021-09-20 00:00:00   Min.   :2023-01-03 00:00:00   Length   :200   
+ 1st Qu.:2023-04-12 18:00:00   1st Qu.:2023-04-03 12:00:00   N.unique :  3   
+ Median :2023-07-16 00:00:00   Median :2023-07-03 00:00:00   N.blank  :  0   
+ Mean   :2023-07-14 09:07:12   Mean   :2023-07-01 12:36:00   Min.nchar:  8   
+ 3rd Qu.:2023-10-18 12:00:00   3rd Qu.:2023-10-03 00:00:00   Max.nchar: 24   
+ Max.   :2024-04-18 00:00:00   Max.   :2023-12-27 00:00:00   NAs      :181   
+                                                                             
+ CLASIFICACION_MANUAL CLASIF_INICIO_TRAT    ID_PULMONAR 
+ Length   :200        Length   :200      Length   :200  
+ N.unique :  9        N.unique :  6      N.unique :  3  
+ N.blank  :  0        N.blank  :  0      N.blank  :  0  
+ Min.nchar: 10        Min.nchar:  5      Min.nchar:  2  
+ Max.nchar: 67        Max.nchar: 34      Max.nchar: 15  
+                                                        
+                                                        
+      FIS                       ID_EXTRAPULMONAR FECHA_INICIO_SINTOMA         
+ Min.   :2020-12-20 00:00:00   Length   :200     Min.   :2022-08-15 00:00:00  
+ 1st Qu.:2023-02-20 00:00:00   N.unique : 13     1st Qu.:2023-03-01 00:00:00  
+ Median :2023-05-12 12:00:00   N.blank  :  0     Median :2023-05-17 12:00:00  
+ Mean   :2023-05-10 05:22:06   Min.nchar:  5     Mean   :2023-05-28 01:50:46  
+ 3rd Qu.:2023-08-09 18:00:00   Max.nchar: 31     3rd Qu.:2023-08-09 00:00:00  
+ Max.   :2023-12-21 00:00:00                     Max.   :2023-12-26 00:00:00  
+ NAs    :48                                      NAs    :44                   
+    RESULTADO_RX   Bacteriologia    Baciloscopia      Cultivo   
+ Length   :200   Length   :200   Length   :200   Length   :200  
+ N.unique :  8   N.unique :  3   N.unique :  6   N.unique :  7  
+ N.blank  :  0   N.blank  :  0   N.blank  :  0   N.blank  :  0  
+ Min.nchar:  9   Min.nchar:  8   Min.nchar:  8   Min.nchar:  8  
+ Max.nchar: 28   Max.nchar: 15   Max.nchar: 15   Max.nchar: 26  
+                                                                
+                                                                
+ PRUEBA_RESISTENCIA    RESISTENCIA        Droga      Tipo_Resistencia
+ Length   :200      Length   :200   Length   :200   Length   :200    
+ N.unique :  2      N.unique :  4   N.unique :  6   N.unique :  4    
+ N.blank  :  0      N.blank  :  0   N.blank  :  0   N.blank  :  0    
+ Min.nchar:  2      Min.nchar: 15   Min.nchar:  2   Min.nchar:  2    
+ Max.nchar: 15      Max.nchar: 25   Max.nchar: 26   Max.nchar: 10    
+                                                                     
+                                                                     
  ESTABLECIMIENTO_MUESTRA DEPARTAMENTO_MUESTRA ESTABLECIMIENTO_DIAG
- Length:200              Length:200           Length:200          
- Class :character        Class :character     Class :character    
- Mode  :character        Mode  :character     Mode  :character    
+ Length   :200           Length   :200        Length   :200       
+ N.unique : 73           N.unique : 46        N.unique : 62       
+ N.blank  :  0           N.blank  :  0        N.blank  :  0       
+ Min.nchar:  5           Min.nchar:  5        Min.nchar:  5       
+ Max.nchar:102           Max.nchar: 32        Max.nchar:160       
+ NAs      : 72           NAs      : 72        NAs      : 76       
                                                                   
-                                                                  
-                                                                  
-                                                                  
- DEPARTAMENTO_DIAG   Prueba_VIH            VIH           
- Length:200         Length:200         Length:200        
- Class :character   Class :character   Class :character  
- Mode  :character   Mode  :character   Mode  :character  
-                                                         
-                                                         
-                                                         
-                                                         
- TRATAMIENTO_ANTIRRETROVIRAL Diag_rapido        Resultado_diag_rapido
- Length:200                  Length:200         Length:200           
- Class :character            Class :character   Class :character     
- Mode  :character            Mode  :character   Mode  :character     
-                                                                     
-                                                                     
-                                                                     
-                                                                     
-   EMBARAZO           DIABETES         CONSUMO_PROB_DROGAS ENF_RESP_CRONICA  
- Length:200         Length:200         Length:200          Length:200        
- Class :character   Class :character   Class :character    Class :character  
- Mode  :character   Mode  :character   Mode  :character    Mode  :character  
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-    COVID           SE_DECLARA_PUEBLO_INDIGENA  ETNIA        
- Length:200         Length:200                 Mode:logical  
- Class :character   Class :character           NA's:200      
- Mode  :character   Mode  :character                         
-                                                             
-                                                             
-                                                             
-                                                             
-  TABAQUISMO        ALCOHOLISMO         ESTAB_TTO        
- Length:200         Length:200         Length:200        
- Class :character   Class :character   Class :character  
- Mode  :character   Mode  :character   Mode  :character  
-                                                         
-                                                         
-                                                         
-                                                         
- FECHA_INICIO_TRAT             FECHA_FIN_TRAT               
- Min.   :2023-01-03 00:00:00   Min.   :2023-03-09 00:00:00  
- 1st Qu.:2023-03-20 00:00:00   1st Qu.:2023-08-21 00:00:00  
- Median :2023-07-02 00:00:00   Median :2023-10-23 12:00:00  
- Mean   :2023-06-28 21:42:25   Mean   :2023-10-23 02:04:08  
- 3rd Qu.:2023-10-05 00:00:00   3rd Qu.:2024-01-11 12:00:00  
- Max.   :2024-01-08 00:00:00   Max.   :2024-04-05 00:00:00  
- NA's   :43                    NA's   :142                  
+ DEPARTAMENTO_DIAG     Prueba_VIH         VIH      TRATAMIENTO_ANTIRRETROVIRAL
+ Length   :200     Length   :200   Length   :200   Length   :200              
+ N.unique : 39     N.unique :  2   N.unique :  3   N.unique :  1              
+ N.blank  :  0     N.blank  :  0   N.blank  :  0   N.blank  :  0              
+ Min.nchar:  5     Min.nchar:  2   Min.nchar:  8   Min.nchar:  2              
+ Max.nchar: 37     Max.nchar: 15   Max.nchar: 15   Max.nchar:  2              
+ NAs      : 76                                     NAs      :199              
+                                                                              
+    Diag_rapido  Resultado_diag_rapido      EMBARAZO        DIABETES  
+ Length   :200   Length   :200         Length   :200   Length   :200  
+ N.unique :  2   N.unique :  9         N.unique :  3   N.unique :  2  
+ N.blank  :  0   N.blank  :  0         N.blank  :  0   N.blank  :  0  
+ Min.nchar:  2   Min.nchar: 15         Min.nchar:  2   Min.nchar:  2  
+ Max.nchar:  2   Max.nchar: 62         Max.nchar: 15   Max.nchar:  2  
+                                                                      
+                                                                      
+ CONSUMO_PROB_DROGAS  ENF_RESP_CRONICA       COVID    
+ Length   :200       Length   :200     Length   :200  
+ N.unique :  2       N.unique :  2     N.unique :  1  
+ N.blank  :  0       N.blank  :  0     N.blank  :  0  
+ Min.nchar:  2       Min.nchar:  2     Min.nchar:  2  
+ Max.nchar: 15       Max.nchar: 15     Max.nchar:  2  
+                                       NAs      :199  
+                                                      
+ SE_DECLARA_PUEBLO_INDIGENA  ETNIA             TABAQUISMO     ALCOHOLISMO 
+ Length   :200              Mode:logical   Length   :200   Length   :200  
+ N.unique :  2              NAs :200       N.unique :  2   N.unique :  2  
+ N.blank  :  0                             N.blank  :  0   N.blank  :  0  
+ Min.nchar:  2                             Min.nchar:  2   Min.nchar:  2  
+ Max.nchar: 15                             Max.nchar: 15   Max.nchar: 15  
+                                                                          
+                                                                          
+     ESTAB_TTO   FECHA_INICIO_TRAT             FECHA_FIN_TRAT               
+ Length   :200   Min.   :2023-01-03 00:00:00   Min.   :2023-03-09 00:00:00  
+ N.unique :102   1st Qu.:2023-03-20 00:00:00   1st Qu.:2023-08-21 00:00:00  
+ N.blank  :  0   Median :2023-07-02 00:00:00   Median :2023-10-23 12:00:00  
+ Min.nchar: 11   Mean   :2023-06-28 21:42:25   Mean   :2023-10-23 02:04:08  
+ Max.nchar: 76   3rd Qu.:2023-10-05 00:00:00   3rd Qu.:2024-01-11 12:00:00  
+ NAs      : 35   Max.   :2024-01-08 00:00:00   Max.   :2024-04-05 00:00:00  
+                 NAs    :43                    NAs    :142                  
  RESULTADO_TRATAMIENTO
- Length:200           
- Class :character     
- Mode  :character     
-                      
-                      
+ Length   :200        
+ N.unique :  7        
+ N.blank  :  0        
+ Min.nchar:  6        
+ Max.nchar: 22        
                       
                       </code></pre>
 </div>

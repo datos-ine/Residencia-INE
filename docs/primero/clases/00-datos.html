@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -93,14 +96,14 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e868ba6fad8aeb71849587ff44df17ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7416cfc00a00f4f06d12b98363d5ccde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-e868ba6fad8aeb71849587ff44df17ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6e65b1f3da324d51b96f90ed97211077.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-85dda3b1c3d2849702b2604292dd955f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6e65b1f3da324d51b96f90ed97211077.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -1171,6 +1174,18 @@ Alston, Jesse M., and Jessica A. Rick. 2021. <span>“A Beginner’s Guide to Co
 <div id="ref-becker2018datos" class="csl-entry" role="listitem">
 Becker, Howard S. 2018. <em>Datos, Pruebas e Ideas: Por Qué Los Científicos Sociales Deberían Tomárselos Más En Serio y Aprender de Sus Errores</em>. Siglo Veintiuno Editores.
 </div>
+<div id="ref-pwr" class="csl-entry" role="listitem">
+Champely, Stephane. 2020. <em>Pwr: Basic Functions for Power Analysis</em>. <a href="https://CRAN.R-project.org/package=pwr">https://CRAN.R-project.org/package=pwr</a>.
+</div>
+<div id="ref-nortest" class="csl-entry" role="listitem">
+Gross, Juergen, and Uwe Ligges. 2015. <em>Nortest: Tests for Normality</em>. <a href="https://CRAN.R-project.org/package=nortest">https://CRAN.R-project.org/package=nortest</a>.
+</div>
+<div id="ref-ggpubr" class="csl-entry" role="listitem">
+Kassambara, Alboukadel. 2023. <em>Ggpubr: ’Ggplot2’ Based Publication Ready Plots</em>. <a href="https://CRAN.R-project.org/package=ggpubr">https://CRAN.R-project.org/package=ggpubr</a>.
+</div>
+<div id="ref-moments" class="csl-entry" role="listitem">
+Komsta, Lukasz, and Frederick Novomestky. 2022. <em>Moments: Moments, Cumulants, Skewness, Kurtosis and Related Tests</em>. <a href="https://CRAN.R-project.org/package=moments">https://CRAN.R-project.org/package=moments</a>.
+</div>
 <div id="ref-last1989" class="csl-entry" role="listitem">
 Last, J. M. 1989. <span>“A Dictionary of Epidemiology.”</span> <em>Biometrics</em> 45 (3): 1036. <a href="https://doi.org/10.2307/2531713">https://doi.org/10.2307/2531713</a>.
 </div>
@@ -1179,6 +1194,12 @@ Last, J. M. 1989. <span>“A Dictionary of Epidemiology.”</span> <em>Biometric
 </div>
 <div id="ref-Szklo2003" class="csl-entry" role="listitem">
 Nieto F., Szklo M. y. 2003. <em>Epidemiología Intermedia.conceptos y Aplicaciones</em>. Edited by S. A Ediciones Díaz de Santos.
+</div>
+<div id="ref-base" class="csl-entry" role="listitem">
+R Core Team. 2025. <em>R: A Language and Environment for Statistical Computing</em>. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-tidyverse" class="csl-entry" role="listitem">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, et al. 2019. <em>Welcome to the <span></span>Tidyverse<span></span></em>. 4: 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
 </div>
 <div id="ref-Wilkinson2016" class="csl-entry" role="listitem">
 Wilkinson, Dumontier, M. 2016. <span>“The FAIR Guiding Principles for Scientific Data Management and Stewardship.”</span> <em>Sci Data</em> 3: 160018. https://doi.org/<a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
