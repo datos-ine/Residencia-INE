@@ -33,7 +33,7 @@ library(tidyverse)
 
 - Las extensiones `.csv` y `.txt` son las más comúnes en versiones texto plano.
 
-- Otras extensiones pertenecen a sofwares específicos: `xlsx` a Excel, `.sav` a SPSS, `.sas7bcat` a SAS o `.dta` a Stata, por ejemplo.
+- Otras extensiones pertenecen a sofwares específicos: `xlsx` a Excel, `.sav` a SPSS, `.sas7bcat` a SAS o `.dta` a Stata, `.parquet`,  por ejemplo.
 
 - Hay tantas funciones y paquetes en el lenguaje R como extensiones de archivos de datos.
 

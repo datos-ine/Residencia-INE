@@ -25,7 +25,7 @@ library(tidyverse)
 ```
 
 
-## Archivos de datos
+## Archivos de datos {.title-top}
 
 - En el mundo informático existen numerosos formatos de archivos de tablas / base de datos.
 
@@ -37,7 +37,7 @@ library(tidyverse)
 
 - Además mencionaremos otros formatos posibles y el propio de R
 
-## Paquete readr
+## Paquete readr {.title-top}
 
 ![](img/03/readr.png){fig-align="center" width="12%"}
 
@@ -51,7 +51,7 @@ El paquete **readr** se instala y activa cuando ejecutamos `library(tidyverse)`.
 
 <br>
 
-## Lectura con funciones de readr
+## Lectura con funciones de readr {.title-top}
 
 <br>
 
@@ -69,7 +69,7 @@ Sus principales argumentos son:
 
 - **skip**: número de líneas que saltea para comenzar a leer.
 
-## Lectura con funciones de readr
+## Lectura con funciones de readr {.title-top}
 
 <br>
 
@@ -83,7 +83,7 @@ args(readr::read_delim)
 ```
 
 
-## Lectura con funciones de readr
+## Lectura con funciones de readr {.title-top}
 
 <br>
 
@@ -101,7 +101,7 @@ Tiene la misma base de `read_delim()` pero asume:
 read_csv(file = "datos.csv")
 ```
 
-## Lectura con funciones de readr
+## Lectura con funciones de readr {.title-top}
 
 <br>
 
@@ -119,7 +119,7 @@ Tiene la misma base de `read_delim()` pero asume:
 read_csv2(file = "datos.csv")
 ```
 
-## Lectura de múltiples archivos{.smaller}
+## Lectura de múltiples archivos {.title-top .smaller}
 
 <br>
 
@@ -143,14 +143,14 @@ read_csv(archivos_SUH, id = "archivo")
 ```
 
 
-## Herramienta de lectura de RStudio
+## Herramienta de lectura de RStudio {.title-top}
 
 <br>
 
 ![](img/03/Import.PNG){fig-align="center"}
 
 
-## Paquete readxl
+## Paquete readxl {.title-top}
 
 ![](img/03/readxl.png){fig-align="center" width="12%"}
 
@@ -162,7 +162,7 @@ El paquete **readxl** se instala con tidyverse pero hay que activarlo aparte med
 
 - Ver documento [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
 
-## Lectura con funciones de readxl
+## Lectura con funciones de readxl {.title-top}
 
 <br>
 
@@ -179,7 +179,7 @@ La estructura de los argumentos de la función `read_excel()` es:
 
 - **skip**: número de líneas que saltea para comenzar a leer.
 
-## Paquete haven
+## Paquete haven {.title-top}
 
 ![](img/03/haven.png){width=12% fig-align="center"}
 
@@ -191,7 +191,7 @@ Este paquete permite la importación de archivos provenientes de paquetes estad�
 
 - Tiene algunas limitaciones dependiendo de las versiones de los softwares.
 
-## Características argumentales comunes 
+## Características argumentales comunes  {.title-top}
 
 <br>
 <br>
@@ -206,7 +206,35 @@ Este paquete permite la importación de archivos provenientes de paquetes estad�
 
 :::
 
-## Otros formatos online y bases de datos
+
+## Apache Parquet (arrow) {.title-top}
+
+<br>
+
+Cuando los archivos csv superan los 50 MB a 100 MB, o cuando rebasan los 500.000 a 1.000.000 de filas conviene usar formatos de archivo Parquet. 
+
+Apache Parquet es un formato de archivo columnar diseñado específicamente para el almacenamiento y procesamiento eficiente de datos estructurados.
+
+A diferencia de los archivos cvs o Excel, que guardan los datos por filas (como una tabla de texto tradicional), Parquet organiza y almacena los datos agrupados por columnas.
+
+El paquete que permite gestionarlos en R se llama (paquete [arrow](https://arrow.apache.org/docs/r/))
+
+## Apache Parquet (arrow) {.title-top}
+
+Sus ventajas principales son:
+
+
+::: incremental
+- **Compresión avanzada**: Los datos ocupan mucho menos espacio en disco (puede llegar a ocupar un 70% menos que un csv).
+
+- **Velocidad de lectura**: Es muy eficiente y veloz
+
+- **Preservación de tipos de datos**: A diferencia de los csv —donde al reabrir el archivo a menudo pierdes la noción de si una columna era fecha, entero o factor— Parquet guarda internamente el tipo de dato exacto (números, textos, booleanos, fechas).
+
+- **Particionamiento**: Permite dividir grandes volúmenes de datos en carpetas organizadas por categorías (por ejemplo, año o región), lo que acelera exponencialmente las consultas filtradas.
+:::
+
+## Otros formatos online y bases de datos {.title-top}
 
 <br>
 
@@ -217,13 +245,11 @@ Este paquete permite la importación de archivos provenientes de paquetes estad�
 
 - Conexión a bases de datos tipo SQL (paquetes [DBI](https://cran.r-project.org/web/packages/DBI/index.html) y [dbplyr](https://dbplyr.tidyverse.org/))
 
-- Archivos Apache Parquet (paquete [arrow](https://arrow.apache.org/docs/r/))
-
 - Otros: webcrapping, datos jerarquico (json -JavaScript Object-), etc 
 
 :::
 
-## Formato nativo R
+## Formato nativo R {.title-top}
 
 <br>
 
@@ -237,7 +263,7 @@ Las funciones, pertenecientes a R base, para guardar y leer los `.RData` son:
 
 Cabe aclarar que cuando nos referimos a objetos estamos hablando de cualquier estructura de datos como dataframes, vectores, matrices, etc y también funciones propias. 
 
-## Documentación{.invert}
+## Documentación {.invert}
 
 <br>
 

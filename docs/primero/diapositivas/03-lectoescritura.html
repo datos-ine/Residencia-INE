@@ -1063,7 +1063,7 @@ margin-right: 0; }
 </div>
 
 </section>
-<section id="archivos-de-datos" class="slide level2">
+<section id="archivos-de-datos" class="slide level2 title-top">
 <h2>Archivos de datos</h2>
 <ul>
 <li><p>En el mundo informático existen numerosos formatos de archivos de tablas / base de datos.</p></li>
@@ -1076,7 +1076,7 @@ margin-right: 0; }
 <li><p>Además mencionaremos otros formatos posibles y el propio de R</p></li>
 </ul>
 </section>
-<section id="paquete-readr" class="slide level2">
+<section id="paquete-readr" class="slide level2 title-top">
 <h2>Paquete readr</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1091,7 +1091,7 @@ margin-right: 0; }
 </ul>
 <p><br></p>
 </section>
-<section id="lectura-con-funciones-de-readr" class="slide level2">
+<section id="lectura-con-funciones-de-readr" class="slide level2 title-top">
 <h2>Lectura con funciones de readr</h2>
 <p><br></p>
 <p>La primera función de lectura que vamos a presentar es <code>read_delim()</code></p>
@@ -1104,7 +1104,7 @@ margin-right: 0; }
 <li><p><strong>skip</strong>: número de líneas que saltea para comenzar a leer.</p></li>
 </ul>
 </section>
-<section id="lectura-con-funciones-de-readr-1" class="slide level2">
+<section id="lectura-con-funciones-de-readr-1" class="slide level2 title-top">
 <h2>Lectura con funciones de readr</h2>
 <p><br></p>
 <p>La función tiene numerosos argumentos que nos permite controlar eficazmente la lectura, como vemos debajo, pero se suelen modificar pocos de ellos en la mayoría de las situaciones.</p>
@@ -1123,7 +1123,7 @@ NULL</code></pre>
 </div>
 </div>
 </section>
-<section id="lectura-con-funciones-de-readr-2" class="slide level2">
+<section id="lectura-con-funciones-de-readr-2" class="slide level2 title-top">
 <h2>Lectura con funciones de readr</h2>
 <p><br></p>
 <p>Para archivos separados por comas en formato regional Estadounidense se utiliza la función <code>read_csv()</code>.</p>
@@ -1136,7 +1136,7 @@ NULL</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="fu">read_csv</span>(<span class="at">file =</span> <span class="st">&quot;datos.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="lectura-con-funciones-de-readr-3" class="slide level2">
+<section id="lectura-con-funciones-de-readr-3" class="slide level2 title-top">
 <h2>Lectura con funciones de readr</h2>
 <p><br></p>
 <p>Para archivos separados por comas en formato regional Español/Argentino se utiliza la función <code>read_csv2()</code>.</p>
@@ -1149,7 +1149,7 @@ NULL</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a><span class="fu">read_csv2</span>(<span class="at">file =</span> <span class="st">&quot;datos.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="lectura-de-múltiples-archivos" class="slide level2 smaller">
+<section id="lectura-de-múltiples-archivos" class="slide level2 title-top smaller">
 <h2>Lectura de múltiples archivos</h2>
 <p><br></p>
 <p>En ocasiones trabajamos con múltiples archivos que tienen una misma estructura interna, por ejemplo provenientes de proyectos longitudinales de vigilancia epidemiológica. Supongamos que tenemos el caso de vigilancia de una enfermedad donde se produce un archivo por mes, tipo <code>01_SUH.csv</code>, <code>02_SUH.csv</code>, <code>03_SUH.csv</code>, etc hasta el mes 12.</p>
@@ -1165,7 +1165,7 @@ NULL</code></pre>
 <span id="cb5-8"><a aria-label="8"></a><span class="co">#&gt; 3 datos/01-SUH.csv Enero  2019     1822     2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="herramienta-de-lectura-de-rstudio" class="slide level2">
+<section id="herramienta-de-lectura-de-rstudio" class="slide level2 title-top">
 <h2>Herramienta de lectura de RStudio</h2>
 <p><br></p>
 <div class="quarto-figure quarto-figure-center">
@@ -1174,7 +1174,7 @@ NULL</code></pre>
 </figure>
 </div>
 </section>
-<section id="paquete-readxl" class="slide level2">
+<section id="paquete-readxl" class="slide level2 title-top">
 <h2>Paquete readxl</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1188,7 +1188,7 @@ NULL</code></pre>
 <li><p>Ver documento <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a></p></li>
 </ul>
 </section>
-<section id="lectura-con-funciones-de-readxl" class="slide level2">
+<section id="lectura-con-funciones-de-readxl" class="slide level2 title-top">
 <h2>Lectura con funciones de readxl</h2>
 <p><br></p>
 <p>La estructura de los argumentos de la función <code>read_excel()</code> es:</p>
@@ -1200,7 +1200,7 @@ NULL</code></pre>
 <li><p><strong>skip</strong>: número de líneas que saltea para comenzar a leer.</p></li>
 </ul>
 </section>
-<section id="paquete-haven" class="slide level2">
+<section id="paquete-haven" class="slide level2 title-top">
 <h2>Paquete haven</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1214,7 +1214,7 @@ NULL</code></pre>
 <li><p>Tiene algunas limitaciones dependiendo de las versiones de los softwares.</p></li>
 </ul>
 </section>
-<section id="características-argumentales-comunes" class="slide level2">
+<section id="características-argumentales-comunes" class="slide level2 title-top">
 <h2>Características argumentales comunes</h2>
 <p><br> <br></p>
 <ul>
@@ -1223,17 +1223,34 @@ NULL</code></pre>
 <li class="fragment"><p>Tipo de columna que queremos forzar al leer (argumento col_types)</p></li>
 </ul>
 </section>
-<section id="otros-formatos-online-y-bases-de-datos" class="slide level2">
+<section id="apache-parquet-arrow" class="slide level2 title-top">
+<h2>Apache Parquet (arrow)</h2>
+<p><br></p>
+<p>Cuando los archivos csv superan los 50 MB a 100 MB, o cuando rebasan los 500.000 a 1.000.000 de filas conviene usar formatos de archivo Parquet.</p>
+<p>Apache Parquet es un formato de archivo columnar diseñado específicamente para el almacenamiento y procesamiento eficiente de datos estructurados.</p>
+<p>A diferencia de los archivos cvs o Excel, que guardan los datos por filas (como una tabla de texto tradicional), Parquet organiza y almacena los datos agrupados por columnas.</p>
+<p>El paquete que permite gestionarlos en R se llama (paquete <a href="https://arrow.apache.org/docs/r/">arrow</a>)</p>
+</section>
+<section id="apache-parquet-arrow-1" class="slide level2 title-top">
+<h2>Apache Parquet (arrow)</h2>
+<p>Sus ventajas principales son:</p>
+<ul>
+<li class="fragment"><p><strong>Compresión avanzada</strong>: Los datos ocupan mucho menos espacio en disco (puede llegar a ocupar un 70% menos que un csv).</p></li>
+<li class="fragment"><p><strong>Velocidad de lectura</strong>: Es muy eficiente y veloz</p></li>
+<li class="fragment"><p><strong>Preservación de tipos de datos</strong>: A diferencia de los csv —donde al reabrir el archivo a menudo pierdes la noción de si una columna era fecha, entero o factor— Parquet guarda internamente el tipo de dato exacto (números, textos, booleanos, fechas).</p></li>
+<li class="fragment"><p><strong>Particionamiento</strong>: Permite dividir grandes volúmenes de datos en carpetas organizadas por categorías (por ejemplo, año o región), lo que acelera exponencialmente las consultas filtradas.</p></li>
+</ul>
+</section>
+<section id="otros-formatos-online-y-bases-de-datos" class="slide level2 title-top">
 <h2>Otros formatos online y bases de datos</h2>
 <p><br></p>
 <ul>
 <li class="fragment"><p>Lectura y escritura de archivos en Google Sheets (paquete <a href="https://googlesheets4.tidyverse.org/">googlesheets4</a>)</p></li>
 <li class="fragment"><p>Conexión a bases de datos tipo SQL (paquetes <a href="https://cran.r-project.org/web/packages/DBI/index.html">DBI</a> y <a href="https://dbplyr.tidyverse.org/">dbplyr</a>)</p></li>
-<li class="fragment"><p>Archivos Apache Parquet (paquete <a href="https://arrow.apache.org/docs/r/">arrow</a>)</p></li>
 <li class="fragment"><p>Otros: webcrapping, datos jerarquico (json -JavaScript Object-), etc</p></li>
 </ul>
 </section>
-<section id="formato-nativo-r" class="slide level2">
+<section id="formato-nativo-r" class="slide level2 title-top">
 <h2>Formato nativo R</h2>
 <p><br></p>
 <p>El propio lenguaje R tiene un formato nativo de almacenamiento del entorno de trabajo produciendo archivos con extención <code>.RData</code>.</p>
