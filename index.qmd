@@ -238,7 +238,7 @@ Se espera que al finalizar este curso los participantes puedan:
 
 [Proyecto R - IA](https://drive.google.com/file/d/1ulG3h19S-EeW-xylPl0nYdu0OIS9cpO7/view?usp=sharing)
 
-[Git](/primero/diapositivas/10-git.html{target="_blank"}) - [GitHub Parte 1](/primero/diapositivas/11-github.html{target="_blank"}) - [GitHub Parte 2](/primero/diapositivas/12-github2.html{target="_blank"})
+[Git](/primero/diapositivas/10-git.html){target="_blank"} - [GitHub Parte 1](/primero/diapositivas/11-github.html){target="_blank"} - [GitHub Parte 2](/primero/diapositivas/12-github2.html){target="_blank"}
 
 ### Prácticas
 
