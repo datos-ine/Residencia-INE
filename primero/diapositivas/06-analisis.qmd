@@ -10,7 +10,6 @@ format:
     transition: fade
     theme: [simple, img/custom.scss]
     logo: img/INE.gif
-    footer: "Instituto Nacional de Epidemiología"
 ---
 
 ```{r setup, include=F}
@@ -982,7 +981,7 @@ knitr::include_graphics("img/06/homocedasticidad_levene.JPG")
 #| echo: false
 #| fig-align: center
 #| out-width: 70%
-knitr::include_graphics("img/06/errores.JPG")
+knitr::include_graphics("img/06/errores.png")
 ```
 
 ## ¿Qué test se debe aplicar en cada caso?
