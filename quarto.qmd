@@ -76,3 +76,14 @@ Se espera que los participantes adquieran herramientas para desarrollar informes
 
 
 ### Bibliografía
+
+[Advanced R](https://adv-r.hadley.nz/)
+
+[purrr](https://purrr.tidyverse.org/index.html)
+
+[Guía oficial Quarto](https://quarto.org/docs/guide/)
+
+[Quarto awesome](https://github.com/mcanouil/awesome-quarto)
+
+[Manual Quarto - Universidad Nacional de Colombia (español)](https://estadisticaun.github.io/ManualQuarto/)
+
