@@ -121,5 +121,23 @@
   },
   "primero/diapositivas/12-github2.qmd": {
     "12-github2.html": "9ce19841"
+  },
+  "quarto.qmd": {
+    "quarto.html": "1c477817"
+  },
+  "segundo.qmd": {
+    "segundo.html": "b201637b"
+  },
+  "segundo/aut_r_quarto/diapositivas/01-automatizar.qmd": {
+    "01-automatizar.html": "5d6dbec5"
+  },
+  "segundo/aut_r_quarto/diapositivas/02-quarto.qmd": {
+    "02-quarto.html": "baf01fa7"
+  },
+  "segundo/aut_r_quarto/diapositivas/03-parametros.qmd": {
+    "03-parametros.html": "f744b8ac"
+  },
+  "segundo/aut_r_quarto/diapositivas/04-estetica.qmd": {
+    "04-estetica.html": "d3357364"
   }
 }

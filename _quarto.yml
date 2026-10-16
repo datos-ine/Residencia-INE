@@ -10,11 +10,21 @@ website:
     left:
       - href: index.qmd
         text: "1er. año"
-      - href: espacial.qmd  
+      - href: segundo.qmd  
         text: "2do. año"
     right:
       - icon: building
         href: https://www.ine.gov.ar  
+
+  sidebar:
+    - id: menu-lateral-seccion  # Identificador único para este menú
+      title: "2do. año"     # Título opcional que aparecerá arriba en la barra lateral
+      style: "docked"             # Estilo de la barra ("docked" o "floating")
+      contents:
+        - text: "Programacion y Quarto"
+          href: quarto.qmd
+        - text: "Datos espaciales"
+          href: espacial.qmd
 
 format:
   html:

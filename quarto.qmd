@@ -1,0 +1,78 @@
+---
+title: "Programación avanzada y Quarto"
+---
+
+<!-- Add icon library -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+### Fundamentación
+
+La elaboración de informes de vigilancia epidemiológica requiere procesos de análisis que sean reproducibles, eficientes y sostenibles en el tiempo, capaces de adaptarse a la actualización periódica de los datos. En este marco, la integración de R y Quarto permite automatizar tareas, organizar el código de manera modular y generar documentos que articulen resultados, visualizaciones e interpretación epidemiológica. El curso propone un abordaje eminentemente práctico, orientado a incorporar herramientas de programación y documentación que faciliten la producción sistemática de informes, reduzcan las tareas manuales y favorezcan la calidad y consistencia de los productos elaborados.
+
+### Contribución esperada:
+
+Se espera que los participantes adquieran herramientas para desarrollar informes de vigilancia epidemiológica reproducibles mediante R y Quarto, integrando la automatización de tareas con condicionales, iteraciones y funciones, la organización modular de proyectos, la parametrización de documentos y la incorporación de recursos de documentación y diseño. Al finalizar, estarán en condiciones de adaptar y reutilizar estructuras de informes ante nuevas actualizaciones de datos, períodos o jurisdicciones, optimizando el flujo de trabajo y fortaleciendo la comunicación de los resultados epidemiológicos.
+
+### Temario
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#aabcfe;border-spacing:0;}
+.tg td{background-color:#e8edff;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
+  border-width:0px;color:#669;font-family:Arial, sans-serif;font-size:16px;overflow:hidden;padding:10px 5px;
+  word-break:normal;}
+.tg th{background-color:#b9c9fe;border-bottom-width:1px;border-color:#aabcfe;border-style:solid;border-top-width:1px;
+  border-width:0px;color:#039;font-family:Arial, sans-serif;font-size:16px;font-weight:normal;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg" style="max-width:900px;margin-left:auto;margin-right:auto"><thead>
+  <tr>
+    <th class="tg-amwm">Tema</th>
+    <th class="tg-amwm">Diapositiva</th>
+    <th class="tg-amwm">Prácticas</th>
+    <th class="tg-amwm">Recursos</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Automatizar con R</td>
+    <td align="center"><a href="/segundo/aut_r_quarto/diapositivas/01-automatizar.html" target="_blank">
+          <i class="fa fa-laptop  fa-lg"></i></a></td>
+    <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/segundo/aut_r_quarto/practicas/enc1_practica.zip" download="enc1_practica.zip">
+          <i class="fa fa-file fa-lg"></i></font></td>      
+   <td align="center"><a href="https://drive.google.com/file/d/1SDJDa6zusmjY2t4RlktdgwrdpFVUr1bI/view?usp=sharing">
+          <i class="fa fa-briefcase  fa-lg"></i></font></td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">Comunicar con Quarto</td>
+  <td align="center"><a href="/segundo/aut_r_quarto/diapositivas/02-quarto.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+  <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/segundo/aut_r_quarto/practicas/enc2_practica.zip" download="enc2_practica.zip">
+        <i class="fa fa-file fa-lg"></i></font></td>      
+ <td align="center"><a href="https://drive.google.com/file/d/1nnfPuUu2iLZs_skQxwphE4hk2jxvU_1m/view?usp=sharing">
+        <i class="fa fa-briefcase  fa-lg"></i></font></td>
+  </tr>
+  <tr>
+  <td class="tg-0lax">Arquitectura de un proyecto Quarto parametrizado</td>
+  <td align="center"><a href="/segundo/aut_r_quarto/diapositivas/03-parametros.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+  <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/segundo/aut_r_quarto/practicas/enc3_practica.zip" download="enc3_practica.zip">
+        <i class="fa fa-file fa-lg"></i></font></td>      
+ <td align="center"><a href="https://jadeyryan.quarto.pub/rladies-dc-quarto-params/">
+        <i class="fa fa-briefcase  fa-lg"></i></font></td>
+  </tr>  
+  <tr>
+  <td class="tg-0lax">Estética de documentos Quarto</td>
+  <td align="center"><a href="/segundo/aut_r_quarto/diapositivas/04-estetica.html" target="_blank">
+        <i class="fa fa-laptop  fa-lg"></i></a></td>
+  <td align="center"><a href="https://github.com/datos-ine/Residencia-INE/raw/refs/heads/main/segundo/aut_r_quarto/practicas/enc4_practica.zip" download="enc4_practica.zip">
+        <i class="fa fa-file fa-lg"></i></font></td>      
+ <td align="center"><a href="https://slidecrafting-book.com/">
+        <i class="fa fa-briefcase  fa-lg"></i></font></td>
+  </tr>
+</tbody></table>
+
+
+### Bibliografía

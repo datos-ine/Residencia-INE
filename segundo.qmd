@@ -1,0 +1,14 @@
+---
+title: "Segundo año"
+sidebar: menu-lateral-seccion
+---
+
+<!-- Add icon library -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+#### Formación en segundo año
+
+En la barra ubicada a la izquierda del sitio se encontrarán los talleres, cursos, seminarios y encuentros que se realizarán en segundo año de la residencia.
+
+La idea es que a partir de la introducción al mundo de los datos y su gestión mediante el lenguaje R incursionemos en temas específicos y más avanzados como automatización en R, ecosistema para documentación Quarto, representación y análisis de datos espaciales, detección de anomalías en datos de vigilancia, etc.  
