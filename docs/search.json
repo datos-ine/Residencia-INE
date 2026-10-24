@@ -67,35 +67,35 @@
     "href": "segundo/aut_r_quarto/diapositivas/03-parametros.html#parámetros-una-plantilla-muchos-informes-1",
     "title": "Arquitectura de un proyecto Quarto parametrizado",
     "section": "Parámetros: una plantilla, muchos informes",
-    "text": "Parámetros: una plantilla, muchos informes\nSe declaran en el encabezado YAML del .qmd y tienen formato clave:valor. Se definen con un valor por defecto:\n---\ntitle: \"Boletín epidemiológico de COVID-19\"\nparams:\n  jurisdiccion: \"Buenos Aires\"\n  fecha_desde: \"2022-01-01\"\n  fecha_hasta: \"2022-12-31\"\n  grupo_etario: \"todos\"\n---\n\nLos valores válidos para los parámetros son cadenas de texto, números o valores booleanos.\nReemplazan los valores escritos a mano en el código\nSe sobrescriben al renderizar"
+    "text": "Parámetros: una plantilla, muchos informes\nSe declaran en el encabezado YAML del .qmd y tienen formato clave:valor. Se definen con un valor por defecto:\n---\ntitle: \"Boletín epidemiológico de COVID-19\"\nparams:\n  jurisdiccion: \"Buenos Aires\"\n  fecha_desde: \"2022-01-01\"\n  fecha_hasta: \"2022-12-31\"\n---\n\nLos valores válidos para los parámetros son cadenas de texto, números o valores booleanos.\nReemplazan los valores escritos a mano en el código\nSe sobrescriben al renderizar"
   },
   {
     "objectID": "segundo/aut_r_quarto/diapositivas/03-parametros.html#acceder-a-params-desde-r",
     "href": "segundo/aut_r_quarto/diapositivas/03-parametros.html#acceder-a-params-desde-r",
     "title": "Arquitectura de un proyecto Quarto parametrizado",
     "section": "Acceder a params desde R",
-    "text": "Acceder a params desde R\n\nDentro de un chunk, params es una lista:\ndesde &lt;- as.Date(params$fecha_desde)\nhasta &lt;- as.Date(params$fecha_hasta)\n\ncasos &lt;- datos |&gt;\n  limpiar_casos() |&gt;\n  filtrar_casos(params$jurisdiccion, desde, hasta, params$grupo_etario)\nTambién en el texto, con código inline:\n\n## `r params$jurisdiccion`\n\n\n\n\n\n\n\nOjo\n\n\nLas fechas llegan como texto: hay que convertirlas con as.Date().\nEl título del YAML no evalúa código inline (la jurisdicción, por ejemplo, debe ir dentro de un encabezado en el cuerpo del .qmd."
+    "text": "Acceder a params desde R\n\nDentro de un chunk, params es una lista:\ndesde &lt;- as_date(params$fecha_desde)\nhasta &lt;- as_date(params$fecha_hasta)\n\ncasos &lt;- datos |&gt;\n  limpiar_casos() |&gt;\n  filtrar_casos(params$jurisdiccion, desde, hasta)\nTambién en el texto, con código inline:\n\n## `r params$jurisdiccion`\n\n\n\n\n\n\n\nOjo\n\n\nLas fechas llegan como texto: hay que convertirlas con as.Date() o as_date().\nEl título del YAML no evalúa código inline (la jurisdicción, por ejemplo, debe ir dentro de un encabezado en el cuerpo del .qmd."
   },
   {
     "objectID": "segundo/aut_r_quarto/diapositivas/03-parametros.html#un-.qmd-renderiza-muchos-informes",
     "href": "segundo/aut_r_quarto/diapositivas/03-parametros.html#un-.qmd-renderiza-muchos-informes",
     "title": "Arquitectura de un proyecto Quarto parametrizado",
     "section": "Un .qmd, renderiza muchos informes",
-    "text": "Un .qmd, renderiza muchos informes\n\nDesde la terminal, un informe por vez:\nquarto render boletin.qmd -P jurisdiccion:Córdoba --output boletin_cordoba.html\nDesde un script de R, un informe por jurisdicción:\nwalk(jurisdicciones, renderizar_boletin)\n\nLos pares clave-valor de tus parámetros definidos deben encontrarse en el conjunto de datos.\nLa plantilla es siempre la misma, solo cambian los parámetros\n24 jurisdicciones → 24 informes, sin copiar ni pegar\nUn error corregido en R/ se corrige en todos los informes"
+    "text": "Un .qmd, renderiza muchos informes\n\nDesde la terminal, un informe por vez:\nquarto render boletin.qmd -P jurisdiccion:Chubut --output boletin_chubut.html\nDesde un script de R, un informe por jurisdicción:\nwalk(jurisdicciones, renderizar_boletin)\n\nLos pares clave-valor de tus parámetros definidos deben encontrarse en el conjunto de datos.\nLa plantilla es siempre la misma, solo cambian los parámetros\n24 jurisdicciones → 24 informes, sin copiar ni pegar\nUn error corregido en R/ se corrige en todos los informes"
   },
   {
     "objectID": "segundo/aut_r_quarto/diapositivas/03-parametros.html#función-quarto_render-de-quarto",
     "href": "segundo/aut_r_quarto/diapositivas/03-parametros.html#función-quarto_render-de-quarto",
     "title": "Arquitectura de un proyecto Quarto parametrizado",
     "section": "Función quarto_render() de quarto",
-    "text": "Función quarto_render() de quarto\n\nRenderiza desde código R un archivo .qmd definido como entrada al formato de salida especificado usando quarto.\n\nquarto::quarto_render(\n  input =  \"boletin.qmd\", # Input archivo quarto \n  output_file = \"output/Cordoba.html\",\n  execute_params = list(                        # Named list of params\n    jurisdiccion: \"Cordoba\",\n    fecha_desde: \"2022-01-01\",\n    fecha_hasta: \"2022-12-31\",\n    grupo_etario: \"todos\"))\n\nSe puede automatizar haciendo funciones o recorriendo un dataframe con tres columnas (formato de salida, nombre de archivo y parametros) y luego recorrer con pwalk()"
+    "text": "Función quarto_render() de quarto\n\nRenderiza desde código R un archivo .qmd definido como entrada al formato de salida especificado usando quarto.\n\nquarto::quarto_render(\n  input =  \"boletin.qmd\", # Input archivo quarto \n  output_file = \"output/Cordoba.html\",\n  execute_params = list(                        # Named list of params\n    jurisdiccion: \"Cordoba\",\n    fecha_desde: \"2022-01-01\",\n    fecha_hasta: \"2022-12-31\"))\n\nSe puede automatizar haciendo funciones o recorriendo un dataframe con tres columnas (formato de salida, nombre de archivo y parametros) y luego recorrer con pwalk()"
   },
   {
     "objectID": "segundo/aut_r_quarto/diapositivas/03-parametros.html#dataframe-para-iterar",
     "href": "segundo/aut_r_quarto/diapositivas/03-parametros.html#dataframe-para-iterar",
     "title": "Arquitectura de un proyecto Quarto parametrizado",
     "section": "Dataframe para iterar",
-    "text": "Dataframe para iterar\n\n\nreportes_jurisdicciones &lt;- datos |&gt; \n    distinct(residencia_provincia_nombre) |&gt;  # jurisdicciones únicas\n    mutate(\n        output_file = paste(                  # nombres de archivos\n            str_to_lower(residencia_provincia_nombre),\n            \"reporte.html\",\n            sep = \"-\"),\n        execute_params = purrr::map(         # parametros tipo lista\n            residencia_provincia_nombre,\n            \\(residencia_provincia_nombre) list(jurisdiccion = residencia_provincia_nombre, fecha_desde = \"2022-01-01\", fecha_hasta = \"2022-12-31\", grupo_etario = \"todos\"))) |&gt; \n  select(output_file, execute_params)       # seleccionamos solo columnas válidas\n  \n\npurrr::pwalk(\n  .l = reportes_jurisdicciones,             # dataframe         \n  .f = quarto::quarto_render,               # función a aplicar    \n  input = \"boletin.qmd\",                    # .qmp fuente\n  .progress = TRUE                              \n)"
+    "text": "Dataframe para iterar\n\n\nreportes_jurisdicciones &lt;- datos |&gt; \n    distinct(residencia_provincia_nombre) |&gt;  # jurisdicciones únicas\n    mutate(\n        output_file = paste(                  # nombres de archivos\n            str_to_lower(residencia_provincia_nombre),\n            \"reporte.html\",\n            sep = \"-\"),\n        execute_params = purrr::map(         # parametros tipo lista\n            residencia_provincia_nombre,\n            \\(residencia_provincia_nombre) list(jurisdiccion = residencia_provincia_nombre, fecha_desde = \"2022-01-01\", fecha_hasta = \"2022-12-31\"))) |&gt; \n  select(output_file, execute_params)       # seleccionamos solo columnas válidas\n  \n\npurrr::pwalk(\n  .l = reportes_jurisdicciones,             # dataframe         \n  .f = quarto::quarto_render,               # función a aplicar    \n  input = \"boletin.qmd\",                    # .qmp fuente\n  .progress = TRUE                              \n)"
   },
   {
     "objectID": "segundo/aut_r_quarto/diapositivas/03-parametros.html#hoja-de-ruta-de-la-práctica",
@@ -4645,5 +4645,19 @@
     "title": "Estética de documentos Quarto",
     "section": "Resumen: cada capa en su lugar",
     "text": "Resumen: cada capa en su lugar\n\n\n\n\nQué\nDónde\n\n\n\n\nElección del tema y opciones generales\n_quarto.yml\n\n\nColores, fuentes y reglas de estilo\nscss/\n\n\nEstilo de gráficos\nR/05_tema.R (o similar)\n\n\nContenido\n.qmd"
+  },
+  {
+    "objectID": "segundo/aut_r_quarto/diapositivas/03-parametros.html#que-vamos-a-encontrar-en-práctica-de-hoy",
+    "href": "segundo/aut_r_quarto/diapositivas/03-parametros.html#que-vamos-a-encontrar-en-práctica-de-hoy",
+    "title": "Arquitectura de un proyecto Quarto parametrizado",
+    "section": "Que vamos a encontrar en práctica de hoy",
+    "text": "Que vamos a encontrar en práctica de hoy\n\n\nUn proyecto Quarto con _quarto.yml con las caracteristicas generales de quarto (características del proyecto, formato de salida, opciones de ejecución de código, etc)\nUn archivo Quarto boletin.qmd (con la plantilla del boletín hecha en quarto y con el código que llama a las funciones necesarias para visualizar la información)\nSubcarpetas: data, R y output (donde en data tenemos los datos, en R los scripts con las funciones y en output almacenaremos los diferentes boletines que renderizamos)\nUn script render_todos.R (con el código para renderizar diferentes tipos de boletines)"
+  },
+  {
+    "objectID": "segundo/aut_r_quarto/diapositivas/03-parametros.html#que-vamos-a-encontrar-en-práctica-de-hoy-1",
+    "href": "segundo/aut_r_quarto/diapositivas/03-parametros.html#que-vamos-a-encontrar-en-práctica-de-hoy-1",
+    "title": "Arquitectura de un proyecto Quarto parametrizado",
+    "section": "Que vamos a encontrar en práctica de hoy",
+    "text": "Que vamos a encontrar en práctica de hoy\n\nDentro de la subcarpeta R tendremos los scripts:\n\n00_librerías.R con las activaciones de los paquetes y algunas utilidades generales como formatear la salida de numeros con decimales que usan coma decimal o construir nombres de archivos.\n01_carga.R con funciones de lectura de datos y validación de variables.\n02_limpieza.R con funciones de depuración de datos, creación de grupos etarios y definición de semanas epidemiológicas.\n03_analisis.R con funciones de analisis, conteo de casos, resumenes, tablas y texto automatizado que queremos incluir en el boletin.\n04_graficos.R con funciones de generación de gráficos (curva epidemica y piramide poblacional, en este ejemplo)"
   }
 ]

@@ -1213,8 +1213,7 @@ margin-right: 0; }
 <span id="cb8-4"><a></a><span class="at">  </span><span class="fu">jurisdiccion</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Buenos Aires&quot;</span></span>
 <span id="cb8-5"><a></a><span class="at">  </span><span class="fu">fecha_desde</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2022-01-01&quot;</span></span>
 <span id="cb8-6"><a></a><span class="at">  </span><span class="fu">fecha_hasta</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2022-12-31&quot;</span></span>
-<span id="cb8-7"><a></a><span class="at">  </span><span class="fu">grupo_etario</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;todos&quot;</span></span>
-<span id="cb8-8"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-7"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li class="fragment">Los valores válidos para los parámetros son cadenas de texto, números o valores booleanos.</li>
 <li class="fragment">Reemplazan los valores escritos a mano en el código</li>
@@ -1225,12 +1224,12 @@ margin-right: 0; }
 <h2>Acceder a <code>params</code> desde R</h2>
 <p><br></p>
 <p>Dentro de un chunk, <code>params</code> es una <strong>lista</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>desde <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(params<span class="sc">$</span>fecha_desde)</span>
-<span id="cb9-2"><a></a>hasta <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(params<span class="sc">$</span>fecha_hasta)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>desde <span class="ot">&lt;-</span> <span class="fu">as_date</span>(params<span class="sc">$</span>fecha_desde)</span>
+<span id="cb9-2"><a></a>hasta <span class="ot">&lt;-</span> <span class="fu">as_date</span>(params<span class="sc">$</span>fecha_hasta)</span>
 <span id="cb9-3"><a></a></span>
 <span id="cb9-4"><a></a>casos <span class="ot">&lt;-</span> datos <span class="sc">|&gt;</span></span>
 <span id="cb9-5"><a></a>  <span class="fu">limpiar_casos</span>() <span class="sc">|&gt;</span></span>
-<span id="cb9-6"><a></a>  <span class="fu">filtrar_casos</span>(params<span class="sc">$</span>jurisdiccion, desde, hasta, params<span class="sc">$</span>grupo_etario)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-6"><a></a>  <span class="fu">filtrar_casos</span>(params<span class="sc">$</span>jurisdiccion, desde, hasta)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>También en el texto, con código <em>inline</em>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="do">## `r params$jurisdiccion`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1244,7 +1243,7 @@ margin-right: 0; }
 <p><strong>Ojo</strong></p>
 </div>
 <div class="callout-content">
-<p>Las <strong>fechas llegan como texto</strong>: hay que convertirlas con <code>as.Date()</code>.</p>
+<p>Las <strong>fechas llegan como texto</strong>: hay que convertirlas con <code>as.Date()</code> o <code>as_date()</code>.</p>
 <p>El <strong>título del YAML</strong> no evalúa código inline (la jurisdicción, por ejemplo, debe ir dentro de un encabezado en el cuerpo del <code>.qmd</code>.</p>
 </div>
 </div>
@@ -1254,7 +1253,7 @@ margin-right: 0; }
 <h2>Un <code>.qmd</code>, renderiza muchos informes</h2>
 <p><br></p>
 <p><strong>Desde la terminal</strong>, un informe por vez:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="ex">quarto</span> render boletin.qmd <span class="at">-P</span> jurisdiccion:Córdoba <span class="at">--output</span> boletin_cordoba.html</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="ex">quarto</span> render boletin.qmd <span class="at">-P</span> jurisdiccion:Chubut <span class="at">--output</span> boletin_chubut.html</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Desde un script de R</strong>, un informe por jurisdicción:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">walk</span>(jurisdicciones, renderizar_boletin)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
@@ -1275,8 +1274,7 @@ margin-right: 0; }
 <span id="cb13-4"><a></a>  <span class="at">execute_params =</span> <span class="fu">list</span>(                        <span class="co"># Named list of params</span></span>
 <span id="cb13-5"><a></a>    jurisdiccion<span class="sc">:</span> <span class="st">&quot;Cordoba&quot;</span>,</span>
 <span id="cb13-6"><a></a>    fecha_desde<span class="sc">:</span> <span class="st">&quot;2022-01-01&quot;</span>,</span>
-<span id="cb13-7"><a></a>    fecha_hasta<span class="sc">:</span> <span class="st">&quot;2022-12-31&quot;</span>,</span>
-<span id="cb13-8"><a></a>    grupo_etario<span class="sc">:</span> <span class="st">&quot;todos&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-7"><a></a>    fecha_hasta<span class="sc">:</span> <span class="st">&quot;2022-12-31&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Se puede automatizar haciendo funciones o recorriendo un dataframe con tres columnas (formato de salida, nombre de archivo y parametros) y luego recorrer con <code>pwalk()</code></p>
 </section>
@@ -1293,7 +1291,7 @@ margin-right: 0; }
 <span id="cb14-7"><a></a>            <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>),</span>
 <span id="cb14-8"><a></a>        <span class="at">execute_params =</span> purrr<span class="sc">::</span><span class="fu">map</span>(         <span class="co"># parametros tipo lista</span></span>
 <span id="cb14-9"><a></a>            residencia_provincia_nombre,</span>
-<span id="cb14-10"><a></a>            \(residencia_provincia_nombre) <span class="fu">list</span>(<span class="at">jurisdiccion =</span> residencia_provincia_nombre, <span class="at">fecha_desde =</span> <span class="st">&quot;2022-01-01&quot;</span>, <span class="at">fecha_hasta =</span> <span class="st">&quot;2022-12-31&quot;</span>, <span class="at">grupo_etario =</span> <span class="st">&quot;todos&quot;</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb14-10"><a></a>            \(residencia_provincia_nombre) <span class="fu">list</span>(<span class="at">jurisdiccion =</span> residencia_provincia_nombre, <span class="at">fecha_desde =</span> <span class="st">&quot;2022-01-01&quot;</span>, <span class="at">fecha_hasta =</span> <span class="st">&quot;2022-12-31&quot;</span>))) <span class="sc">|&gt;</span> </span>
 <span id="cb14-11"><a></a>  <span class="fu">select</span>(output_file, execute_params)       <span class="co"># seleccionamos solo columnas válidas</span></span>
 <span id="cb14-12"><a></a>  </span>
 <span id="cb14-13"><a></a></span>
@@ -1322,15 +1320,37 @@ margin-right: 0; }
 <blockquote>
 <p>Al terminar, ubicaremos cada archivo en el flujo: datos → funciones → análisis → Quarto → informe.</p>
 </blockquote>
-
-
 </div>
+</section>
+<section id="que-vamos-a-encontrar-en-práctica-de-hoy" class="slide level2 title-top">
+<h2>Que vamos a encontrar en práctica de hoy</h2>
+<p><br></p>
+<ul>
+<li class="fragment">Un proyecto Quarto con <code>_quarto.yml</code> con las caracteristicas generales de quarto (características del proyecto, formato de salida, opciones de ejecución de código, etc)</li>
+<li class="fragment">Un archivo Quarto <code>boletin.qmd</code> (con la plantilla del boletín hecha en quarto y con el código que llama a las funciones necesarias para visualizar la información)</li>
+<li class="fragment">Subcarpetas: <code>data</code>, <code>R</code> y <code>output</code> (donde en <code>data</code> tenemos los datos, en <code>R</code> los scripts con las funciones y en <code>output</code> almacenaremos los diferentes boletines que renderizamos)</li>
+<li class="fragment">Un script <code>render_todos.R</code> (con el código para renderizar diferentes tipos de boletines)</li>
+</ul>
+</section>
+<section id="que-vamos-a-encontrar-en-práctica-de-hoy-1" class="slide level2 title-top">
+<h2>Que vamos a encontrar en práctica de hoy</h2>
+<p><br></p>
+<p>Dentro de la subcarpeta <code>R</code> tendremos los scripts:</p>
+<ul>
+<li><p><code>00_librerías.R</code> con las activaciones de los paquetes y algunas utilidades generales como formatear la salida de numeros con decimales que usan coma decimal o construir nombres de archivos.</p></li>
+<li><p><code>01_carga.R</code> con funciones de lectura de datos y validación de variables.</p></li>
+<li><p><code>02_limpieza.R</code> con funciones de depuración de datos, creación de grupos etarios y definición de semanas epidemiológicas.</p></li>
+<li><p><code>03_analisis.R</code> con funciones de analisis, conteo de casos, resumenes, tablas y texto automatizado que queremos incluir en el boletin.</p></li>
+<li><p><code>04_graficos.R</code> con funciones de generación de gráficos (curva epidemica y piramide poblacional, en este ejemplo)</p></li>
+</ul>
+
+
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img role="img" src="data:image/gif;base64,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" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>Instituto Nacional de Epidemiología</p>
+
 </div>
 </div></div>
 

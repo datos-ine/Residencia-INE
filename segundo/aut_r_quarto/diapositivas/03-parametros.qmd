@@ -13,7 +13,6 @@ format:
     transition: fade
     theme: [simple, custom.scss]
     logo: images/INE.gif
-    footer: "Instituto Nacional de Epidemiología"
 editor: source
 ---
 
@@ -218,7 +217,6 @@ params:
   jurisdiccion: "Buenos Aires"
   fecha_desde: "2022-01-01"
   fecha_hasta: "2022-12-31"
-  grupo_etario: "todos"
 ---
 ```
 ::: {.incremental}
@@ -234,12 +232,12 @@ params:
 Dentro de un chunk, `params` es una **lista**:
 
 ```r
-desde <- as.Date(params$fecha_desde)
-hasta <- as.Date(params$fecha_hasta)
+desde <- as_date(params$fecha_desde)
+hasta <- as_date(params$fecha_hasta)
 
 casos <- datos |>
   limpiar_casos() |>
-  filtrar_casos(params$jurisdiccion, desde, hasta, params$grupo_etario)
+  filtrar_casos(params$jurisdiccion, desde, hasta)
 ```
 
 También en el texto, con código *inline*:
@@ -251,7 +249,7 @@ También en el texto, con código *inline*:
 
 ::: {.callout-warning}
 ## Ojo
-Las **fechas llegan como texto**: hay que convertirlas con `as.Date()`.
+Las **fechas llegan como texto**: hay que convertirlas con `as.Date()` o `as_date()`.
 
 El **título del YAML** no evalúa código inline (la jurisdicción, por ejemplo, debe ir dentro de un encabezado en el cuerpo del `.qmd`.
 :::
@@ -263,7 +261,7 @@ El **título del YAML** no evalúa código inline (la jurisdicción, por ejemplo
 **Desde la terminal**, un informe por vez:
 
 ```bash
-quarto render boletin.qmd -P jurisdiccion:Córdoba --output boletin_cordoba.html
+quarto render boletin.qmd -P jurisdiccion:Chubut --output boletin_chubut.html
 ```
 
 **Desde un script de R**, un informe por jurisdicción:
@@ -295,8 +293,7 @@ quarto::quarto_render(
   execute_params = list(                        # Named list of params
     jurisdiccion: "Cordoba",
     fecha_desde: "2022-01-01",
-    fecha_hasta: "2022-12-31",
-    grupo_etario: "todos"))
+    fecha_hasta: "2022-12-31"))
 ```
 
 Se puede automatizar haciendo funciones o recorriendo un dataframe con tres columnas (formato de salida, nombre de archivo y parametros) y luego recorrer con `pwalk()`
@@ -319,7 +316,7 @@ reportes_jurisdicciones <- datos |>
             sep = "-"),
         execute_params = purrr::map(         # parametros tipo lista
             residencia_provincia_nombre,
-            \(residencia_provincia_nombre) list(jurisdiccion = residencia_provincia_nombre, fecha_desde = "2022-01-01", fecha_hasta = "2022-12-31", grupo_etario = "todos"))) |> 
+            \(residencia_provincia_nombre) list(jurisdiccion = residencia_provincia_nombre, fecha_desde = "2022-01-01", fecha_hasta = "2022-12-31"))) |> 
   select(output_file, execute_params)       # seleccionamos solo columnas válidas
   
 
@@ -352,3 +349,30 @@ Partimos del informe monolítico y llegamos al proyecto con parámetros:
 . . .
 
 > Al terminar, ubicaremos cada archivo en el flujo: datos → funciones → análisis → Quarto → informe.
+
+## Que vamos a encontrar en práctica de hoy {.title-top}
+
+<br>
+
+::: incremental
+- Un proyecto Quarto con `_quarto.yml` con las caracteristicas generales de quarto (características del proyecto, formato de salida, opciones de ejecución de código, etc)
+- Un archivo Quarto `boletin.qmd` (con la plantilla del boletín hecha en quarto y con el código que llama a las funciones necesarias para visualizar la información)
+- Subcarpetas: `data`, `R` y `output` (donde en `data` tenemos los datos, en `R` los scripts con las funciones y en `output` almacenaremos los diferentes boletines que renderizamos)
+- Un script `render_todos.R` (con el código para renderizar diferentes tipos de boletines)
+:::
+
+## Que vamos a encontrar en práctica de hoy {.title-top}
+
+<br>
+
+Dentro de la subcarpeta `R` tendremos los scripts:
+
+- `00_librerías.R` con las activaciones de los paquetes y algunas utilidades generales como formatear la salida de numeros con decimales que usan coma decimal o construir nombres de archivos.
+
+- `01_carga.R` con funciones de lectura de datos y validación de variables.
+
+- `02_limpieza.R` con funciones de depuración de datos, creación de grupos etarios y definición de semanas epidemiológicas.
+
+- `03_analisis.R` con funciones de analisis, conteo de casos, resumenes, tablas y texto automatizado que queremos incluir en el boletin.
+
+- `04_graficos.R` con funciones de generación de gráficos (curva epidemica y piramide poblacional, en este ejemplo)
